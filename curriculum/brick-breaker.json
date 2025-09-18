@@ -1,0 +1,105 @@
+{
+    "title": "Brick Breaker",
+    "description": "In this project, you'll build the classic arcade game Brick Breaker from scratch! You will learn how to control sprites with the mouse, use cloning to create lots of objects, and keep track of a score.",
+    "steps": [
+        {
+            "title": "See it in Action!",
+            "youtubeID": "wbfSNfJtPOo",
+            "content": "Before we start building, let's see what the final game looks like! Brick Breaker (also known as Breakout) is a classic arcade game where you control a paddle to bounce a ball and destroy all the bricks. <br><br> Watch the short video below to understand the main goal. Notice how the paddle moves, how the ball bounces, and what happens when it hits a brick.",
+            "hints": [
+                "There's no code for this step! Just watch the video and get excited to build your own version.",
+                "Think about all the different pieces we'll need to create: a player paddle, a moving ball, and lots of breakable bricks."
+            ]
+        },
+        {
+            "title": "Create the Paddle",
+            "content": "Every game needs a hero! Our hero is the paddle. Let's start by creating a new sprite that will act as our paddle. <br><br> First, delete the default Cat sprite. Then, choose a new sprite from the Scratch library. The 'Button 3' sprite is a great choice for a paddle, but feel free to pick any you like! Rename this sprite to 'Paddle'.",
+            "hints": [
+                "To delete a sprite, click on the small trash can icon on the sprite in the sprite list below the stage.",
+                "To create a new sprite, click the 'Choose a Sprite' button (the cat head icon) in the bottom right.",
+                "To rename a sprite, click on the 'Sprite' name box above the scripting area and type in 'Paddle'."
+            ]
+        },
+        {
+            "title": "Position the Paddle",
+            "content": "Our paddle shouldn't be flying all over the screen. It needs to stay at the bottom. We'll write our first script to lock its vertical (up and down) position. <br><br> We want this to happen as soon as the game starts. Find the `when green flag clicked` block and drag it into the script area. Then, from the blue <span class=\"cat-motion\">Motion</span> blocks, find `set y to ()` and snap it underneath. A good starting y-value is `-150`.",
+            "hints": [
+                "The `when green flag clicked` block is in the yellow <span class=\"cat-events\">Events</span> category.",
+                "The `set y to ()` block is in the blue <span class=\"cat-motion\">Motion</span> category. Y controls the up-and-down position.",
+                "A y-position of `0` is the center of the screen. A negative number like `-150` will place it near the bottom."
+            ]
+        },
+        {
+            "title": "Follow the Mouse",
+            "content": "Now for the fun part! We need the paddle to follow our mouse pointer so we can control it. Since we want this to happen continuously, we'll need a loop. <br><br> From the <span class=\"cat-control\">Control</span> category, grab a `forever` loop. Inside the loop, add a `set x to ()` block. To get the mouse's position, go to the <span class=\"cat-sensing\">Sensing</span> category and find the `mouse x` block. Place `mouse x` inside the `set x to ()` block.",
+            "hints": [
+                "A `forever` loop will run the code inside it over and over again, very quickly, until the game stops.",
+                "The `set x to ()` block controls the left-and-right position.",
+                "The `mouse x` block is a special variable that always holds the current horizontal position of the mouse pointer. It's from the <span class=\"cat-sensing\">Sensing</span> category."
+            ]
+        },
+        {
+            "title": "Add the Ball",
+            "content": "Let's add our ball! Choose a new sprite from the library (the 'Ball' sprite is a perfect choice) and rename it 'Ball'. <br><br> We want the ball to start in the middle of the screen and be ready to move. Using another `when green flag clicked` event, tell the ball to `go to x: (0) y: (0)`. Then, to give it a starting direction, use the `point in direction (45)` block.",
+            "hints": [
+                "Just like the paddle, choose a new sprite from the library and rename it.",
+                "The `go to x: () y: ()` block instantly teleports a sprite to a specific coordinate. `x:0 y:0` is the exact center of the stage.",
+                "The `point in direction ()` block sets the angle the sprite is facing. `45` degrees is a good diagonal starting angle. You'll find it in <span class=\"cat-motion\">Motion</span>."
+            ]
+        },
+        {
+            "title": "Make the Ball Move",
+            "content": "A ball isn't very useful if it's just sitting there. Let's make it move! <br><br> In the Ball's script, add a `forever` loop after the starting blocks. Inside the loop, add a `move (10) steps` block. This will make the ball move forward continuously. To stop it from getting stuck on the walls, add the special `if on edge, bounce` block inside the loop as well. ",
+            "hints": [
+                "The `move () steps` block makes the sprite move forward in the direction it is currently facing.",
+                "The `if on edge, bounce` block from <span class=\"cat-motion\">Motion</span> is a powerful one! It automatically handles changing the ball's direction when it hits any of the four edges of the screen.",
+                "Make sure both `move` and `if on edge, bounce` are inside the `forever` loop."
+            ]
+        },
+        {
+            "title": "Bounce off the Paddle",
+            "content": "Now, let's make the paddle useful. We need the ball to recognize when it hits the paddle and bounce off it. <br><br> Inside the Ball's `forever` loop, we need to add a condition. Use an `if <> then` block. For the condition, use a `touching <Paddle> ?` block from the <span class=\"cat-sensing\">Sensing</span> category. When the ball touches the paddle, we need to make it bounce. A simple way to do this is to make it turn `180` degrees.",
+            "hints": [
+                "The `if <> then` block is from the orange <span class=\"cat-control\">Control</span> category.",
+                "The `touching < > ?` block can detect if a sprite is touching the mouse pointer, an edge, or another sprite. Make sure to select 'Paddle' from its dropdown.",
+                "You can find the `turn clockwise (180) degrees` block in the <span class=\"cat-motion\">Motion</span> category. This will effectively reverse its direction."
+            ]
+        },
+        {
+            "title": "Create the Bricks",
+            "content": "Time for the main event: the bricks! Making them one by one would take forever, so we'll use clones. <br><br> First, create a new sprite. You can use the 'Button' or 'Button 2' sprite, and feel free to change its color! Rename it 'Brick'. We will write a script that creates a whole grid of these bricks automatically when the game starts. This is a bit tricky, so check the hints if you get stuck!",
+            "hints": [
+                "The main idea is to use nested loops (a loop inside another loop) from the <span class=\"cat-control\">Control</span> category.",
+                "Start the script with `when green flag clicked`. First, `hide` the original sprite. Then, set a starting x and y position for your grid.",
+                "In your loops, use `create clone of myself` to make a copy. After making a clone, `change x by ()` to move to the next position in the row. After a row is finished, `set x` back to the start and `change y by ()` to move to the next row.",
+                "You will need a `when I start as a clone` block. Under this block, simply put a `show` block. This tells every new clone to become visible."
+            ]
+        },
+        {
+            "title": "Break the Bricks",
+            "content": "Let's make those bricks breakable! When the ball touches a brick, the brick should disappear. <br><br> This code goes in the 'Brick' sprite, under the `when I start as a clone` block. Inside a `forever` loop, we'll check `if <touching (Ball)?>`. If a brick clone is touching the ball, it should be destroyed. The block for this is `delete this clone`.",
+            "hints": [
+                "Make sure this new logic is under the `when I start as a clone` block. Each clone needs to run its own check.",
+                "The `forever` and `if <> then` blocks are essential here. Find them in <span class=\"cat-control\">Control</span>.",
+                "When a clone is deleted, it's gone for good! The `delete this clone` block is found in the <span class=\"cat-control\">Control</span> category."
+            ]
+        },
+        {
+            "title": "Add a Score",
+            "content": "What's a game without a score? Let's keep track of how many bricks the player has broken. For this, we need a variable. <br><br> Go to the <span class=\"cat-variables\">Variables</span> category and click 'Make a Variable'. Name it `Score` and make sure it's 'For all sprites'. When the game starts, you should `set [Score] to (0)`. Then, in the 'Brick' sprite, right before a clone deletes itself, add the `change [Score] by (1)` block.",
+            "hints": [
+                "Variables are used to store information, like a score, health, or time.",
+                "You should always reset your score to 0 at the beginning of the game. A good place for the `set [Score] to (0)` block is in the Stage's script area, under a `when green flag clicked` event.",
+                "In the Brick's script, when the ball touches it, you `change [Score] by (1)` and then `delete this clone`."
+            ]
+        },
+        {
+            "title": "You Win!",
+            "content": "Congratulations! You've built a full Brick Breaker game. You've learned about mouse controls, cloning, variables, and collision detection. <br><br> As a final challenge, can you figure out how to display a 'You Win!' message when the score reaches a certain number? Or what about adding a 'Game Over' condition if the ball touches the bottom of the screen? <br><br> Show your game to your friends and teacher!",
+            "hints": [
+                "To check for a win, you could have a script in the Stage that checks `forever if <(Score) = (total number of bricks)>`. You'll need an operator from the green <span class=\"cat-operators\">Operators</span> category for this.",
+                "For a 'Game Over', you can add a new sprite at the very bottom of the screen, like a thin red line. In the Ball's script, check `if <touching (Red Line)?>`, then use the `stop [all]` block from <span class=\"cat-control\">Control</span>."
+            ]
+        }
+    ]
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch Project Lessons</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'dark-bg': '#000000',
+                        'dark-nav': '#111111',
+                        'dark-content': '#1a1a1a',
+                        'dark-text': '#e5e5e5',
+                        'dark-subtext': '#a0a0a0',
+                        'dark-hover': '#333333',
+                        'dark-accent': '#00aaff',
+                        'dark-code-bg': '#2b2b2b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #111111; }
+        ::-webkit-scrollbar-thumb { background: #444444; }
+        ::-webkit-scrollbar-thumb:hover { background: #666666; }
+        .active-step {
+            background-color: #2a2a2a;
+            color: #00aaff;
+            font-weight: 600;
+            border-left: 3px solid #00aaff;
+            padding-left: 0.75rem; /* 12px */
+        }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details > summary::before {
+            content: '▶';
+            margin-right: 0.5rem;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        details[open] > summary::before { transform: rotate(90deg); }
+
+        .cat-motion { color: #4C97FF; font-weight: 600; }
+        .cat-looks { color: #9966FF; font-weight: 600; }
+        .cat-sound { color: #CF63CF; font-weight: 600; }
+        .cat-events { color: #FFBF00; font-weight: 600; }
+        .cat-control { color: #FFAB19; font-weight: 600; }
+        .cat-sensing { color: #5CB1D6; font-weight: 600; }
+        .cat-operators { color: #59C059; font-weight: 600; }
+        .cat-variables { color: #FF8C1A; font-weight: 600; }
+        .cat-my-blocks { color: #FF6680; font-weight: 600; }
+
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            border-radius: 0.5rem; /* rounded-lg */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-dark-text h-full flex flex-col font-sans">
+
+    <header class="bg-dark-nav shadow-lg p-4 flex items-center z-10">
+        <h1 class="text-xl font-bold mr-6 text-white">Scratch Lessons</h1>
+        <div class="relative">
+            <select id="lesson-select" class="bg-dark-content border border-dark-hover rounded-md px-3 py-2 appearance-none focus:outline-none focus:ring-2 focus:ring-dark-accent text-white">
+                <!-- Lessons populated by JS -->
+            </select>
+        </div>
+    </header>
+
+    <main class="flex-grow grid grid-cols-1 md:grid-cols-5 h-full overflow-hidden">
+        <nav id="steps-nav" class="bg-dark-nav col-span-1 p-4 overflow-y-auto border-r border-dark-hover">
+            <h2 class="text-lg font-semibold mb-4 text-white">Project Milestones</h2>
+            <ul id="steps-list" class="space-y-1">
+                <!-- Steps populated by JS -->
+            </ul>
+        </nav>
+        <section id="content-area" class="col-span-1 md:col-span-4 p-6 md:p-10 overflow-y-auto">
+            <div class="text-center text-dark-subtext h-full flex flex-col justify-center items-center">
+                <div class="bg-dark-nav p-8 rounded-lg">
+                    <h2 class="text-2xl font-bold text-white mb-2">Welcome!</h2>
+                    <p>Select a lesson from the dropdown menu to begin your project.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lessonSelect = document.getElementById('lesson-select');
+            const stepsList = document.getElementById('steps-list');
+            const contentArea = document.getElementById('content-area');
+            const stepsNavTitle = document.querySelector('#steps-nav h2');
+            let currentLessonData = null;
+
+            const loadLessons = async () => {
+                try {
+                    const response = await fetch('./curriculum/lessons.json');
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    const lessonSlugs = await response.json();
+                    lessonSelect.innerHTML = '<option disabled selected>Choose a project...</option>';
+                    lessonSlugs.forEach(slug => {
+                        const option = document.createElement('option');
+                        option.value = slug;
+                        option.textContent = slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                        lessonSelect.appendChild(option);
+                    });
+                } catch (error) {
+                    contentArea.innerHTML = `<p class="text-red-400">Error: Could not load the lesson list. Please make sure 'curriculum/lessons.json' exists and you are using a local server.</p>`;
+                }
+            };
+
+            const loadLessonData = async (lessonSlug) => {
+                try {
+                    stepsList.innerHTML = '';
+                    contentArea.innerHTML = `<p class="text-dark-subtext">Loading lesson...</p>`;
+                    const response = await fetch(`./curriculum/${lessonSlug}.json`);
+                    if (!response.ok) throw new Error('Lesson file not found');
+                    currentLessonData = await response.json();
+                    stepsNavTitle.textContent = currentLessonData.title;
+                    populateSteps(currentLessonData.steps);
+                    displayWelcome(currentLessonData);
+                } catch (error) {
+                    contentArea.innerHTML = `<p class="text-red-400">Error: Could not load lesson '${lessonSlug}'.p>`;
+                }
+            };
+
+            const populateSteps = (steps) => {
+                steps.forEach((step, index) => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<span class="font-semibold text-dark-accent mr-2">${index + 1}.</span> ${step.title}`;
+                    li.dataset.stepIndex = index;
+                    li.className = 'cursor-pointer p-2 rounded-md hover:bg-dark-hover transition-colors text-dark-subtext';
+                    stepsList.appendChild(li);
+                });
+            };
+
+            const displayWelcome = (lesson) => {
+                contentArea.innerHTML = `
+                    <div class="bg-dark-nav p-8 rounded-lg space-y-4">
+                        <h2 class="text-4xl font-bold text-white">${lesson.title}</h2>
+                        <p class="text-lg text-dark-subtext">${lesson.description}</p>
+                        <p class="text-dark-accent font-semibold pt-4">Click on the first milestone on the left to get started!</p>
+                    </div>
+                `;
+            };
+
+            const displayStep = (stepIndex) => {
+                const step = currentLessonData.steps[stepIndex];
+                if (!step) return;
+
+                const hintsHtml = step.hints.map((hint, index) => `
+                    <details class="bg-dark-nav rounded-lg mt-2">
+                        <summary class="cursor-pointer font-semibold p-3 text-white hover:bg-dark-hover rounded-t-lg">Hint ${index + 1}</summary>
+                        <div class="p-4 border-t border-dark-hover text-dark-subtext">${hint.replace(/`([^`]+)`/g, '<code class="bg-dark-code-bg text-dark-text rounded-md px-2 py-1 text-base font-mono">\$1</code>')}</div>
+                    </details>
+                `).join('');
+                
+                let processedContent = step.content.replace(/`([^`]+)`/g, '<code class="bg-dark-code-bg text-dark-text rounded-md px-2 py-1 text-base font-mono">\$1</code>');
+                
+                if (step.youtubeID) {
+                    const videoHtml = `
+                        <div class="video-container mt-6">
+                            <iframe src="https://www.youtube.com/embed/${step.youtubeID}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <p class="text-center text-sm text-dark-subtext mt-2">
+                            If the video doesn't load, 
+                            <a href="https://www.youtube.com/watch?v=${step.youtubeID}" target="_blank" rel="noopener noreferrer" class="text-dark-accent hover:underline">
+                                watch it on YouTube
+                            </a>.
+                        </p>
+                    `;
+                    processedContent += videoHtml;
+                }
+
+                contentArea.innerHTML = `
+                    <div class="space-y-6">
+                        <div>
+                            <p class="text-sm font-semibold text-dark-accent">STEP ${parseInt(stepIndex) + 1} OF ${currentLessonData.steps.length}</p>
+                            <h2 class="text-4xl font-bold text-white mt-1">${step.title}</h2>
+                        </div>
+                        <div class="text-lg text-dark-subtext space-y-4">${processedContent}</div>
+                        <div class="pt-4">
+                            <h3 class="text-xl font-semibold mb-2 text-white">Stuck? Check the hints!</h3>
+                            ${hintsHtml}
+                        </div>
+                    </div>
+                `;
+            };
+
+            lessonSelect.addEventListener('change', () => {
+                const selectedLesson = lessonSelect.value;
+                if (selectedLesson) loadLessonData(selectedLesson);
+            });
+
+            stepsList.addEventListener('click', (e) => {
+                const stepElement = e.target.closest('li');
+                if (stepElement) {
+                    document.querySelectorAll('#steps-list li').forEach(li => li.classList.remove('active-step'));
+                    stepElement.classList.add('active-step');
+                    displayStep(stepElement.dataset.stepIndex);
+                }
+            });
+
+            loadLessons();
+        });
+    </script>
+</body>
+</html>
