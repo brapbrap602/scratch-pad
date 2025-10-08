@@ -27,6 +27,10 @@
                 "The 'x' position controls the horizontal (left and right) location of a sprite.",
                 "Negative 'x' values move the sprite to the left, and positive values move it to the right.",
                 "Make sure you have two separate `when key pressed` scripts, one for each arrow."
+            ],
+            "finishedCode": [
+                "when [left arrow v] key pressed\nchange x by (-10)",
+                "when [right arrow v] key pressed\nchange x by (10)"
             ]
         },
         {
@@ -36,6 +40,9 @@
                 "You can change the size of a sprite using the 'Size' property below the stage.",
                 "Hiding the original sprite is a very important step when you are working with clones.",
                 "The `hide` block makes the sprite invisible on the stage."
+            ],
+            "finishedCode": [
+                "when green flag clicked\nhide"
             ]
         },
         {
@@ -45,16 +52,22 @@
                 "This script goes on the 'Player' sprite, not the Laser.",
                 "This tells the Player sprite to create a copy of the hidden Laser sprite whenever the space bar is pressed.",
                 "Make sure you select 'Laser' from the dropdown menu in the `create clone of` block."
+            ],
+            "finishedCode": [
+                "// Add this new script to the Player sprite\nwhen [space v] key pressed\ncreate clone of [Laser v]"
             ]
         },
         {
             "title": "Code the Laser's Flight",
-            "content": "We've created the laser clone, but it doesn't do anything yet. We need to tell it what to do when it's created. <br><br> Go to the 'Laser' sprite's code. From <span class=\"cat-control\">Control</span>, drag in a `when I start as a clone` block. First, the laser needs to start at the player's position, so add a `go to [Player]` block. Then, it needs to become visible, so add a `show` block. Finally, it needs to fly upwards. Use a `repeat until <>` loop. For the condition, use a `touching [edge]?` block. Inside the loop, make the laser move up with `change y by (10)`. After the loop finishes, the clone must be deleted using `delete this clone`.",
+            "content": "We've created the laser clone, but it doesn't do anything yet. We need to tell it what to do when it's created. <br><br> Go to the 'Laser' sprite's code. From <span class=\"cat-control\">Control</span>, drag in a `when I start as a clone` block. First, the laser needs to start at the player's position, so add a `go to [Player]` block. Then, it needs to become visible, so add a `show` block. Finally, it needs to fly upwards. Use a `repeat until <>` loop. For the condition, use a `touching [edge]?` block. Inside the loop, make the laser move up with `change y by (10)`. After the loop finishes, the clone must be deleted using `delete this clone` from the <span class=\"cat-control\">Control</span> category.",
             "hints": [
                 "The `go to [Player]` block is in <span class=\"cat-motion\">Motion</span>.",
                 "The `repeat until <>` loop is perfect for actions that need to stop when a condition is met (like hitting the edge).",
                 "Remember to use `change y by` for vertical movement. A positive number moves it up.",
                 "If you don't use `delete this clone` at the end, you'll end up with hundreds of invisible laser clones stuck at the top of the screen, which will slow down your game!"
+            ],
+            "finishedCode": [
+                "// In the Laser sprite\nwhen I start as a clone\ngo to [Player v]\nshow\nrepeat until <touching [edge v]?>\n  change y by (10)\nend\ndelete this clone"
             ]
         },
         {
@@ -63,17 +76,24 @@
             "hints": [
                 "Use nested loops from the <span class=\"cat-control\">Control</span> category to create rows and columns.",
                 "Set a starting `x` and `y` position before the loops begin.",
-                "Inside the loops, use `create clone of myself`, then `change x by (50)` to space them out. After the inner loop, reset `x` to the start and `change y by (-40)` to move down to the next row.",
-                "Each clone needs a `when I start as a clone` script with a `show` block to become visible."
+                "Inside the loops, use `create clone of myself` from the <span class=\"cat-control\">Control</span> category, then `change x by (50)` to space them out. After the inner loop, reset `x` to the start and `change y by (-40)` to move down to the next row.",
+                "Each clone needs a `when I start as a clone` script with a `show` block to become visible. The cloning event block is at the bottom of the <span class=\"cat-control\">Control</span> section."
+            ],
+            "finishedCode": [
+                "// In the Alien sprite, to create the grid\nwhen green flag clicked\nhide\ngo to x: (-180) y: (140)\nrepeat (3)\n  repeat (8)\n    create clone of [myself v]\n    change x by (50)\n  end\n  set x to (-180)\n  change y by (-40)\nend",
+                "// Also in the Alien sprite, for clones\nwhen I start as a clone\nshow"
             ]
         },
         {
             "title": "Alien Hit Detection",
-            "content": "Let's give our laser a purpose. When a laser hits an alien, the alien should disappear. <br><br> This code goes in the 'Alien' sprite's script area. Under its `when I start as a clone` block, add a `forever` loop. Inside, check `if <touching (Laser)?>`. If an alien clone is touching a laser clone, it should disappear. The best way to do this is to have it `delete this clone`. We also need to delete the laser, which we'll handle in the next step.",
+            "content": "Let's give our laser a purpose. When a laser hits an alien, the alien should disappear. <br><br> This code goes in the 'Alien' sprite's script area. Under its `when I start as a clone` block, add a `forever` loop. Inside, check `if <touching (Laser)?>`. If an alien clone is touching a laser clone, it should disappear using the `delete this clone` block from the <span class=\"cat-control\">Control</span> category. We also need to delete the laser, which we'll handle in the next step.",
             "hints": [
                 "Each alien clone needs to constantly check if it's touching a laser.",
                 "The `touching < >?` block is in the light blue <span class=\"cat-sensing\">Sensing</span> category.",
                 "Put the `delete this clone` block from <span class=\"cat-control\">Control</span> inside the `if` statement."
+            ],
+            "finishedCode": [
+                "// In the Alien sprite\nwhen I start as a clone\nshow\nforever\n  if <touching [Laser v]?> then\n    delete this clone\n  end\nend"
             ]
         },
         {
@@ -83,6 +103,10 @@
                 "Always remember to reset your score to 0 at the start of the game.",
                 "Make sure you change the score *before* the clone is deleted, otherwise the code might not have time to run.",
                 "You can choose different sounds from the 'Sounds' tab in the editor."
+            ],
+            "finishedCode": [
+                "// In the Stage\nwhen green flag clicked\nset [Score v] to (0)",
+                "// In the Alien sprite\nwhen I start as a clone\nshow\nforever\n  if <touching [Laser v]?> then\n    change [Score v] by (1)\n    start sound [pop v]\n    delete this clone\n  end\nend"
             ]
         },
         {
@@ -91,7 +115,10 @@
             "hints": [
                 "This `if` statement should be placed inside the `repeat until` loop.",
                 "Now the laser clone will delete itself if it touches the edge OR if it touches an alien.",
-                "You could even add a sound effect here for when the laser hits!"
+                "Remember that the `delete this clone` block is in the <span class=\"cat-control\">Control</span> category."
+            ],
+            "finishedCode": [
+                "// In the Laser sprite\nwhen I start as a clone\ngo to [Player v]\nshow\nrepeat until <touching [edge v]?>\n  change y by (10)\n  if <touching [Alien v]?> then\n    delete this clone\n  end\nend\ndelete this clone"
             ]
         },
         {

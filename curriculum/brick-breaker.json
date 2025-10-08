@@ -27,6 +27,9 @@
                 "The `when green flag clicked` block is in the yellow <span class=\"cat-events\">Events</span> category.",
                 "The `set y to ()` block is in the blue <span class=\"cat-motion\">Motion</span> category. Y controls the up-and-down position.",
                 "A y-position of `0` is the center of the screen. A negative number like `-150` will place it near the bottom."
+            ],
+            "finishedCode": [
+                "when green flag clicked\nset y to (-150)"
             ]
         },
         {
@@ -36,6 +39,9 @@
                 "A `forever` loop will run the code inside it over and over again, very quickly, until the game stops.",
                 "The `set x to ()` block controls the left-and-right position.",
                 "The `mouse x` block is a special variable that always holds the current horizontal position of the mouse pointer. It's from the <span class=\"cat-sensing\">Sensing</span> category."
+            ],
+            "finishedCode": [
+                "when green flag clicked\nset y to (-150)\nforever\n  set x to (mouse x)\nend"
             ]
         },
         {
@@ -45,6 +51,9 @@
                 "Just like the paddle, choose a new sprite from the library and rename it.",
                 "The `go to x: () y: ()` block instantly teleports a sprite to a specific coordinate. `x:0 y:0` is the exact center of the stage.",
                 "The `point in direction ()` block sets the angle the sprite is facing. `45` degrees is a good diagonal starting angle. You'll find it in <span class=\"cat-motion\">Motion</span>."
+            ],
+            "finishedCode": [
+                "when green flag clicked\ngo to x: (0) y: (0)\npoint in direction (45)"
             ]
         },
         {
@@ -54,6 +63,9 @@
                 "The `move () steps` block makes the sprite move forward in the direction it is currently facing.",
                 "The `if on edge, bounce` block from <span class=\"cat-motion\">Motion</span> is a powerful one! It automatically handles changing the ball's direction when it hits any of the four edges of the screen.",
                 "Make sure both `move` and `if on edge, bounce` are inside the `forever` loop."
+            ],
+            "finishedCode": [
+                "when green flag clicked\ngo to x: (0) y: (0)\npoint in direction (45)\nforever\n  move (10) steps\n  if on edge, bounce\nend"
             ]
         },
         {
@@ -63,6 +75,9 @@
                 "The `if <> then` block is from the orange <span class=\"cat-control\">Control</span> category.",
                 "The `touching < > ?` block can detect if a sprite is touching the mouse pointer, an edge, or another sprite. Make sure to select 'Paddle' from its dropdown.",
                 "You can find the `turn clockwise (180) degrees` block in the <span class=\"cat-motion\">Motion</span> category. This will effectively reverse its direction."
+            ],
+            "finishedCode": [
+                "when green flag clicked\ngo to x: (0) y: (0)\npoint in direction (45)\nforever\n  move (10) steps\n  if on edge, bounce\n  if <touching [Paddle v]?> then\n    turn cw (180) degrees\n  end\nend"
             ]
         },
         {
@@ -71,17 +86,24 @@
             "hints": [
                 "The main idea is to use nested loops (a loop inside another loop) from the <span class=\"cat-control\">Control</span> category.",
                 "Start the script with `when green flag clicked`. First, `hide` the original sprite. Then, set a starting x and y position for your grid.",
-                "In your loops, use `create clone of myself` to make a copy. After making a clone, `change x by ()` to move to the next position in the row. After a row is finished, `set x` back to the start and `change y by ()` to move to the next row.",
-                "You will need a `when I start as a clone` block. Under this block, simply put a `show` block. This tells every new clone to become visible."
+                "In your loops, use `create clone of myself` from the <span class=\"cat-control\">Control</span> category to make a copy. After making a clone, `change x by ()` to move to the next position in the row. After a row is finished, `set x` back to the start and `change y by ()` to move to the next row.",
+                "You will need a `when I start as a clone` block. This is a hat block (like an event) that you can find at the bottom of the <span class=\"cat-control\">Control</span> section. Under this block, simply put a `show` block to make the clone visible."
+            ],
+            "finishedCode": [
+                "// This script creates the grid\nwhen green flag clicked\nhide\ngo to x: (-210) y: (140)\nrepeat (5)\n  repeat (10)\n    create clone of [myself v]\n    change x by (48)\n  end\n  set x to (-210)\n  change y by (-24)\nend",
+                "// This script makes the clones appear\nwhen I start as a clone\nshow"
             ]
         },
         {
             "title": "Break the Bricks",
-            "content": "Let's make those bricks breakable! When the ball touches a brick, the brick should disappear. <br><br> This code goes in the 'Brick' sprite, under the `when I start as a clone` block. Inside a `forever` loop, we'll check `if <touching (Ball)?>`. If a brick clone is touching the ball, it should be destroyed. The block for this is `delete this clone`.",
+            "content": "Let's make those bricks breakable! When the ball touches a brick, the brick should disappear. <br><br> This code goes in the 'Brick' sprite, under the `when I start as a clone` block. Inside a `forever` loop, we'll check `if <touching (Ball)?>`. If a brick clone is touching the ball, it should be destroyed. The block for this is `delete this clone`, which is also in the <span class=\"cat-control\">Control</span> category.",
             "hints": [
                 "Make sure this new logic is under the `when I start as a clone` block. Each clone needs to run its own check.",
                 "The `forever` and `if <> then` blocks are essential here. Find them in <span class=\"cat-control\">Control</span>.",
-                "When a clone is deleted, it's gone for good! The `delete this clone` block is found in the <span class=\"cat-control\">Control</span> category."
+                "When a clone is deleted, it's gone for good! The `delete this clone` block is found at the very bottom of the <span class=\"cat-control\">Control</span> category."
+            ],
+            "finishedCode": [
+                "when I start as a clone\nshow\nforever\n  if <touching [Ball v]?> then\n    delete this clone\n  end\nend"
             ]
         },
         {
@@ -91,6 +113,10 @@
                 "Variables are used to store information, like a score, health, or time.",
                 "You should always reset your score to 0 at the beginning of the game. A good place for the `set [Score] to (0)` block is in the Stage's script area, under a `when green flag clicked` event.",
                 "In the Brick's script, when the ball touches it, you `change [Score] by (1)` and then `delete this clone`."
+            ],
+            "finishedCode": [
+                "// In the Stage\nwhen green flag clicked\nset [Score v] to (0)",
+                "// In the Brick sprite\nwhen I start as a clone\nshow\nforever\n  if <touching [Ball v]?> then\n    change [Score v] by (1)\n    delete this clone\n  end\nend"
             ]
         },
         {

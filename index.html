@@ -183,22 +183,50 @@
                         <div class="p-4 border-t border-dark-hover text-dark-subtext">${hint.replace(/`([^`]+)`/g, '<code class="scratchblocks">$1</code>')}</div>
                     </details>
                 `).join('');
-                
+
                 let processedContent = step.content.replace(/`([^`]+)`/g, '<code class="scratchblocks">$1</code>');
-                
+
                 if (step.youtubeID) {
                     const videoHtml = `
                         <div class="video-container mt-6">
                             <iframe src="https://www.youtube.com/embed/${step.youtubeID}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <p class="text-center text-sm text-dark-subtext mt-2">
-                            If the video doesn't load, 
+                            If the video doesn't load,
                             <a href="https://www.youtube.com/watch?v=${step.youtubeID}" target="_blank" rel="noopener noreferrer" class="text-dark-accent hover:underline">
                                 watch it on YouTube
                             </a>.
                         </p>
                     `;
                     processedContent += videoHtml;
+                }
+
+                let finishedCodeHtml = '';
+                if (step.finishedCode && step.finishedCode.length > 0) {
+                    const codeBlocks = step.finishedCode.map(code => {
+                        let label = '';
+                        let script = code;
+                        if (script.startsWith('//')) {
+                            const firstLineEnd = script.indexOf('\n');
+                            label = `<p class="text-sm text-dark-subtext mb-1">${script.substring(2, firstLineEnd).trim()}</p>`;
+                            script = script.substring(firstLineEnd + 1);
+                        }
+                        return `<div class="mb-4">${label}<pre class="scratchblocks">${script}</pre></div>`;
+                    }).join('');
+
+                    finishedCodeHtml = `
+                        <div class="pt-4 mt-6 border-t border-dark-hover">
+                            <h3 class="text-xl font-semibold mb-2 text-white">Finished Code</h3>
+                            <details class="bg-dark-nav rounded-lg finished-code-details">
+                                <summary class="cursor-pointer font-semibold p-3 text-white hover:bg-dark-hover rounded-lg">
+                                    Click to reveal the final code for this step
+                                </summary>
+                                <div class="p-4 border-t border-dark-hover">
+                                    ${codeBlocks}
+                                </div>
+                            </details>
+                        </div>
+                    `;
                 }
 
                 contentArea.innerHTML = `
@@ -212,12 +240,13 @@
                             <h3 class="text-xl font-semibold mb-2 text-white">Stuck? Check the hints!</h3>
                             ${hintsHtml}
                         </div>
+                        ${finishedCodeHtml}
                     </div>
                 `;
 
-                // Render the scratch blocks after updating the content
+                // Render all visible scratch blocks initially
                 try {
-                    scratchblocks.renderMatching('code.scratchblocks');
+                    scratchblocks.renderMatching('.scratchblocks');
                 } catch (e) {
                     console.error("Scratchblocks rendering failed:", e);
                 }
@@ -236,6 +265,22 @@
                     displayStep(stepElement.dataset.stepIndex);
                 }
             });
+
+            // *** NEW: Event listener to render blocks inside a <details> tag when it's opened ***
+            contentArea.addEventListener('toggle', (event) => {
+                if (event.target.tagName === 'DETAILS' && event.target.open) {
+                    // Find any scratchblocks inside the newly opened details element
+                    const blocksInDetails = event.target.querySelectorAll('.scratchblocks');
+                    if (blocksInDetails.length > 0) {
+                        try {
+                            // Render just those blocks
+                            scratchblocks.renderMatching(blocksInDetails);
+                        } catch (e) {
+                            console.error("Scratchblocks re-rendering failed:", e);
+                        }
+                    }
+                }
+            }, true); // Use capture phase to ensure it fires reliably
 
             loadLessons();
         });
