@@ -1,20 +1,20 @@
 {
     "title": "Space Invaders",
     "description": "Build a version of the classic arcade game, Space Invaders! You'll learn how to control a spaceship with the keyboard, create projectiles using clones, and use broadcasting to make sprites communicate.",
-    "steps": [
+    "steps":[
         {
             "title": "See it in Action!",
             "youtubeID": "MU4psw3ccUI",
             "content": "Before we start coding, let's look at the original Space Invaders arcade game. Your goal is to control a ship at the bottom of the screen and shoot waves of aliens marching downwards. <br><br> Watch the video to see how the aliens move together and how the player has to hide behind shields. We will build the core parts of this game!",
-            "hints": [
-                "Notice that all the aliens move as one group. This is a key challenge we will solve.",
-                "There's no coding in this step. Just get ready to build an awesome game!"
+            "hints":[
+                "Notice that all the aliens move as one giant group. This is a key challenge we will solve.",
+                "There's no coding in this step. Just get ready to build an awesome retro game!"
             ]
         },
         {
             "title": "Create the Player Ship",
-            "content": "First, let's create our hero: the player's spaceship! As before, we'll start by deleting the default Cat sprite. <br><br> Go into the Scratch sprite library and choose a sprite that looks like a spaceship. The 'Rocketship' sprite is a great option. Rename the sprite to 'Player'.",
-            "hints": [
+            "content": "First, let's create our hero: the player's spaceship! As always, we'll start by deleting the default Cat sprite. <br><br> Go into the Scratch sprite library and choose a sprite that looks like a spaceship. The 'Rocketship' sprite is a great option. Rename the sprite to 'Player' so you don't get confused later.",
+            "hints":[
                 "You can find the 'Choose a Sprite' button in the bottom-right corner of the screen.",
                 "To rename the sprite, click the 'Sprite' name field just above the scripting area.",
                 "Drag your 'Player' sprite down so it's positioned near the bottom of the stage."
@@ -22,111 +22,126 @@
         },
         {
             "title": "Code Left-Right Movement",
-            "content": "Now let's give the player control of the ship. We want it to move left when the left arrow key is pressed, and right for the right arrow key. <br><br> From the <span class=\"cat-events\">Events</span> category, drag out two `when [space] key pressed` blocks. Change the dropdown on the first to 'left arrow' and the second to 'right arrow'. To make the ship move, use the `change x by ()` block from <span class=\"cat-motion\">Motion</span>. For the left arrow, use a negative number like `-10`. For the right arrow, use a positive number like `10`.",
-            "hints": [
-                "The 'x' position controls the horizontal (left and right) location of a sprite.",
-                "Negative 'x' values move the sprite to the left, and positive values move it to the right.",
-                "Make sure you have two separate `when key pressed` scripts, one for each arrow."
+            "content": "Now let's give the player control of the ship. We want it to move left when the left arrow key is pressed, and right for the right arrow key. <br><br> <b>Remember your X and Y coordinates!</b> X controls horizontal movement (left/right). Negative X values move you backward (Left), and positive X values move you forward (Right). <br><br> From the <span class=\"cat-events\">Events</span> category, drag out two `when [space] key pressed` blocks. Change the dropdowns to 'left arrow' and 'right arrow'. Use the `change x by ()` block from <span class=\"cat-motion\">Motion</span>. Make the left arrow change X by `-10`, and the right arrow change X by `10`.",
+            "hints":[
+                "The `change x by ()` block adds or subtracts from your current position. Don't confuse it with `set x to ()`, which teleports you to a specific spot!",
+                "Make sure you have two completely separate `when key pressed` scripts, one for each arrow."
             ],
             "finishedCode": [
-                "when [left arrow v] key pressed\nchange x by (-10)",
+                "when[left arrow v] key pressed\nchange x by (-10)",
                 "when [right arrow v] key pressed\nchange x by (10)"
             ]
         },
         {
             "title": "Create the Laser Sprite",
-            "content": "A spaceship isn't much fun without a laser! Let's create our projectile. <br><br> Choose a new sprite that can be our laser bolt. The 'Button 2' sprite is a good choice; you can make it smaller and change its color to green or yellow. Rename this sprite to 'Laser'. <br><br> We will be creating copies (clones) of this laser, so the original one should be hidden. In the Laser sprite's script area, add a `when green flag clicked` event and place a `hide` block from <span class=\"cat-looks\">Looks</span> under it.",
-            "hints": [
-                "You can change the size of a sprite using the 'Size' property below the stage.",
-                "Hiding the original sprite is a very important step when you are working with clones.",
-                "The `hide` block makes the sprite invisible on the stage."
+            "content": "A spaceship isn't much fun without a laser! Let's create our projectile. <br><br> Choose a new sprite to be our laser bolt. The 'Button 2' sprite is a good choice; make it smaller and change its color to green. Rename it to 'Laser'. <br><br> <b>Why do we need to hide the original?</b> We are going to use Clones for the lasers. Think of the original sprite as the 'Factory Blueprint' that builds the lasers. We don't want the factory floating on the screen; we just want to see the lasers it creates! Give it a `when green flag clicked` event and place a `hide` block under it.",
+            "hints":[
+                "You can change the size of a sprite using the 'Size' property box below the stage. Try setting it to 30 or 40.",
+                "Hiding the original sprite is a very important rule of thumb when you are working with clones."
             ],
-            "finishedCode": [
+            "finishedCode":[
                 "when green flag clicked\nhide"
             ]
         },
         {
             "title": "Program the Laser Firing",
-            "content": "Now, let's make the Player ship fire the laser. We want a new laser clone to be created every time the player presses the space bar. <br><br> Go back to your 'Player' sprite's code. Add a `when [space] key pressed` event. Under this, go to the <span class=\"cat-control\">Control</span> category and find the `create clone of [Laser]` block.",
-            "hints": [
-                "This script goes on the 'Player' sprite, not the Laser.",
-                "This tells the Player sprite to create a copy of the hidden Laser sprite whenever the space bar is pressed.",
+            "content": "Now, let's make the Player ship actually fire the laser. We want a new laser clone to be created every time the player presses the space bar. <br><br> Go back to your <b>Player sprite's code</b> (not the laser!). Add a `when [space] key pressed` event. Under this, go to the <span class=\"cat-control\">Control</span> category and attach the `create clone of [Laser]` block. Every time you tap space, the factory prints out a new bullet!",
+            "hints":[
+                "This tells the Player sprite to command the hidden Laser factory to make a copy whenever the space bar is pressed.",
                 "Make sure you select 'Laser' from the dropdown menu in the `create clone of` block."
             ],
-            "finishedCode": [
-                "// Add this new script to the Player sprite\nwhen [space v] key pressed\ncreate clone of [Laser v]"
+            "finishedCode":[
+                "// Add this new script to the Player sprite\nwhen [space v] key pressed\ncreate clone of[Laser v]"
             ]
         },
         {
             "title": "Code the Laser's Flight",
-            "content": "We've created the laser clone, but it doesn't do anything yet. We need to tell it what to do when it's created. <br><br> Go to the 'Laser' sprite's code. From <span class=\"cat-control\">Control</span>, drag in a `when I start as a clone` block. First, the laser needs to start at the player's position, so add a `go to [Player]` block. Then, it needs to become visible, so add a `show` block. Finally, it needs to fly upwards. Use a `repeat until <>` loop. For the condition, use a `touching [edge]?` block. Inside the loop, make the laser move up with `change y by (10)`. After the loop finishes, the clone must be deleted using `delete this clone` from the <span class=\"cat-control\">Control</span> category.",
-            "hints": [
-                "The `go to [Player]` block is in <span class=\"cat-motion\">Motion</span>.",
-                "The `repeat until <>` loop is perfect for actions that need to stop when a condition is met (like hitting the edge).",
-                "Remember to use `change y by` for vertical movement. A positive number moves it up.",
-                "If you don't use `delete this clone` at the end, you'll end up with hundreds of invisible laser clones stuck at the top of the screen, which will slow down your game!"
+            "content": "We've created the laser clone, but it doesn't do anything yet. <br><br> Go to the <b>Laser sprite's code</b>. Drag in a `when I start as a clone` block. First, the laser needs to start at the ship, so add `go to [Player]`. Then, it needs to become visible, so add `show`. <br><br> To make it fly upward, use a `repeat until <>` loop with a `touching [edge]?` block as the condition. Inside the loop, make it fly with `change y by (10)`. <br><br> <b>Why must we delete the clone at the end?</b> If we don't, the invisible lasers will pile up at the edge of the screen. Having hundreds of stuck clones will make your game super laggy! Add `delete this clone` below the loop.",
+            "hints":[
+                "The `repeat until <>` loop is perfect for actions that need to stop as soon as a condition is met (like hitting the edge of the map).",
+                "Remember to use `change y by` for vertical movement. A positive number moves it UP.",
+                "The `delete this clone` block should be placed completely outside and below the loop, so it only runs after the laser touches the edge."
             ],
-            "finishedCode": [
-                "// In the Laser sprite\nwhen I start as a clone\ngo to [Player v]\nshow\nrepeat until <touching [edge v]?>\n  change y by (10)\nend\ndelete this clone"
+            "finishedCode":[
+                "// In the Laser sprite\nwhen I start as a clone\ngo to [Player v]\nshow\nrepeat until <touching[edge v]?>\n  change y by (10)\nend\ndelete this clone"
             ]
         },
         {
             "title": "Create the Alien Swarm",
-            "content": "Time to create the enemy! Just like in Brick Breaker, we'll use one 'Alien' sprite and create a swarm of clones in a grid. <br><br> Choose a new sprite from the library (like 'Ghost' or 'Beetle') and rename it 'Alien'. In its script, start with `when green flag clicked` and `hide` the original. Then, use nested `repeat` loops to create a grid of clones. This is the exact same logic we used for creating the bricks!",
-            "hints": [
-                "Use nested loops from the <span class=\"cat-control\">Control</span> category to create rows and columns.",
-                "Set a starting `x` and `y` position before the loops begin.",
-                "Inside the loops, use `create clone of myself` from the <span class=\"cat-control\">Control</span> category, then `change x by (50)` to space them out. After the inner loop, reset `x` to the start and `change y by (-40)` to move down to the next row.",
-                "Each clone needs a `when I start as a clone` script with a `show` block to become visible. The cloning event block is at the bottom of the <span class=\"cat-control\">Control</span> section."
+            "content": "Time to create the enemy! We'll use one 'Alien' factory sprite and create a swarm of clones in a grid. <br><br> Choose a new sprite (like 'Ghost' or 'Beetle') and rename it 'Alien'. Start with `when green flag clicked` and `hide` the factory. Then, use nested `repeat` loops (a loop inside a loop!). <br><br> <b>How do nested loops work?</b> The inside loop places a row of aliens, moving to the right each time. The outside loop tells the game to move down and repeat that entire row multiple times, creating a perfect army grid!",
+            "hints":[
+                "Set a starting `x` and `y` position at the top-left of the screen before the loops begin.",
+                "Inside the loops, use `create clone of myself`, then `change x by (50)` to space them out. After the inner loop finishes a row, reset `x` to the start and `change y by (-40)` to move down.",
+                "Each clone needs a `when I start as a clone` script with a `show` block to become visible."
             ],
-            "finishedCode": [
+            "finishedCode":[
                 "// In the Alien sprite, to create the grid\nwhen green flag clicked\nhide\ngo to x: (-180) y: (140)\nrepeat (3)\n  repeat (8)\n    create clone of [myself v]\n    change x by (50)\n  end\n  set x to (-180)\n  change y by (-40)\nend",
                 "// Also in the Alien sprite, for clones\nwhen I start as a clone\nshow"
             ]
         },
         {
             "title": "Alien Hit Detection",
-            "content": "Let's give our laser a purpose. When a laser hits an alien, the alien should disappear. <br><br> This code goes in the 'Alien' sprite's script area. Under its `when I start as a clone` block, add a `forever` loop. Inside, check `if <touching (Laser)?>`. If an alien clone is touching a laser clone, it should disappear using the `delete this clone` block from the <span class=\"cat-control\">Control</span> category. We also need to delete the laser, which we'll handle in the next step.",
-            "hints": [
-                "Each alien clone needs to constantly check if it's touching a laser.",
-                "The `touching < >?` block is in the light blue <span class=\"cat-sensing\">Sensing</span> category.",
-                "Put the `delete this clone` block from <span class=\"cat-control\">Control</span> inside the `if` statement."
+            "content": "Let's give our laser a purpose. When a laser hits an alien, the alien should explode! <br><br> This code goes in the 'Alien' sprite. Under its `when I start as a clone` block, add a `forever` loop. Inside, we use an `if <> then` block to constantly ask the computer: `if <touching (Laser)?>`. <br><br> If the alien clone is touching a laser, it should instantly erase itself using the `delete this clone` block. We also need to delete the laser, which we'll handle in the next step!",
+            "hints":[
+                "Each alien clone needs to constantly check if it's touching a laser. That's why the `if` block must be inside the `forever` loop.",
+                "The `touching < >?` block is in the light blue <span class=\"cat-sensing\">Sensing</span> category."
             ],
-            "finishedCode": [
+            "finishedCode":[
                 "// In the Alien sprite\nwhen I start as a clone\nshow\nforever\n  if <touching [Laser v]?> then\n    delete this clone\n  end\nend"
             ]
         },
         {
             "title": "Add a Score and Sounds",
-            "content": "Let's reward the player with a score and a satisfying sound effect! <br><br> Go to the <span class=\"cat-variables\">Variables</span> category, make a new variable named `Score`, and make sure it's 'For all sprites'. In your Stage's script, use `when green flag clicked` to `set [Score] to (0)`. <br><br> Now, go back to the 'Alien' sprite. Inside the `if <touching (Laser)?>` block, right before you delete the clone, add a `change [Score] by (1)` block. You can also add a `start sound [pop]` block from the <span class=\"cat-sound\">Sound</span> category to make it more fun!",
-            "hints": [
-                "Always remember to reset your score to 0 at the start of the game.",
-                "Make sure you change the score *before* the clone is deleted, otherwise the code might not have time to run.",
-                "You can choose different sounds from the 'Sounds' tab in the editor."
+            "content": "Let's reward the player with a score and a satisfying sound effect! <br><br> Think of a variable as a digital sticky note the computer uses to remember a number. Make a new variable named `Score`. In your Stage's script, use `when green flag clicked` to `set [Score] to (0)`. <b>Why?</b> Because computers have great memory. If you don't reset it to 0, it will remember your score from your last game! <br><br> Now, go back to the 'Alien' sprite. Inside the `if <touching (Laser)?>` block, right before you delete the clone, add a `change [Score] by (1)` block and a `start sound [pop]` block to make it satisfying!",
+            "hints":[
+                "Make sure you change the score <i>before</i> the clone is deleted! If you delete the clone first, it ceases to exist and can't finish running the code to give you points.",
+                "You can choose different sounds from the 'Sounds' tab in the editor at the top left."
             ],
-            "finishedCode": [
+            "finishedCode":[
                 "// In the Stage\nwhen green flag clicked\nset [Score v] to (0)",
-                "// In the Alien sprite\nwhen I start as a clone\nshow\nforever\n  if <touching [Laser v]?> then\n    change [Score v] by (1)\n    start sound [pop v]\n    delete this clone\n  end\nend"
+                "// In the Alien sprite\nwhen I start as a clone\nshow\nforever\n  if <touching[Laser v]?> then\n    change [Score v] by (1)\n    start sound[pop v]\n    delete this clone\n  end\nend"
             ]
         },
         {
             "title": "Clean Up the Laser",
-            "content": "There's a small problem: when a laser hits an alien, the alien disappears, but the laser keeps flying! We need to delete the laser clone too. <br><br> Go to the 'Laser' sprite's script. Inside its `repeat until <touching [edge]?>` loop, we need to add another check. Add an `if <touching (Alien)?> then`. Inside this `if` block, we simply need to `delete this clone`.",
-            "hints": [
-                "This `if` statement should be placed inside the `repeat until` loop.",
-                "Now the laser clone will delete itself if it touches the edge OR if it touches an alien.",
-                "Remember that the `delete this clone` block is in the <span class=\"cat-control\">Control</span> category."
+            "content": "We have a glitch! When a laser hits an alien, the alien disappears, but the laser keeps flying! We call this a 'Ghost Bullet'. <br><br> <b>Why does this happen?</b> Computers execute code so incredibly fast that the laser didn't even realize the alien vanished, so it keeps flying straight through the swarm! We have to tell the laser to check for aliens too. <br><br> Go to the <b>Laser sprite's code</b>. Inside its `repeat until <touching [edge]?>` loop, add an `if <touching (Alien)?> then` block. Inside this `if` block, simply tell the laser to `delete this clone`.",
+            "hints":[
+                "This `if` statement should be placed inside the `repeat until` loop, so the laser checks for aliens on every single step of its flight.",
+                "Now the laser clone will delete itself if it touches the edge OR if it touches an alien."
             ],
-            "finishedCode": [
-                "// In the Laser sprite\nwhen I start as a clone\ngo to [Player v]\nshow\nrepeat until <touching [edge v]?>\n  change y by (10)\n  if <touching [Alien v]?> then\n    delete this clone\n  end\nend\ndelete this clone"
+            "finishedCode":[
+                "// In the Laser sprite\nwhen I start as a clone\ngo to[Player v]\nshow\nrepeat until <touching [edge v]?>\n  change y by (10)\n  if <touching [Alien v]?> then\n    delete this clone\n  end\nend\ndelete this clone"
+            ]
+        },
+        {
+            "title": "Extension: Aliens Shooting Back",
+            "content": "The aliens are completely defenseless! Let's give them lasers so they can fight back. First, create a new sprite called 'Enemy Laser'. Color it red and give it a `when green flag clicked -> hide` script.<br><br>Go back to your Alien sprite. We want each clone to randomly decide to shoot. In a new `when I start as a clone` block, add a `forever` loop. Inside, put a `wait (pick random (2) to (10)) seconds` block, and then `create clone of [Enemy Laser]`. This makes them shoot at random, unpredictable times!<br><br>Finally, go to the Enemy Laser sprite. Tell its clones to `go to [Alien]`, `show`, and then fall down by using `repeat until <touching [edge]?> -> change y by (-10)`. Don't forget to delete the clone when it hits the edge!",
+            "hints":[
+                "The Enemy Laser needs to go DOWN, not up! So make sure you use `change y by (-10)` instead of a positive number.",
+                "To make the game end if the player gets hit, check `if <touching[Player] ?>` inside the Enemy Laser's loop, and use `stop [all]` if it's true!"
+            ]
+        },
+        {
+            "title": "Extension: Defensive Bunkers",
+            "content": "Space Invaders is famous for the green bunkers the player can hide behind. Let's build them! Create a new sprite called 'Bunker' and paint a chunky green shield.<br><br>Place 3 clones of it just above the player. We want them to slowly degrade when hit by lasers. Scratch has a built-in tool for this: the 'Ghost' effect! It makes sprites slowly become transparent like a ghost.<br><br>In the Bunker's clone script, check `if <touching [Enemy Laser] ?>`. If it is, `change [ghost v] effect by (25)`. Then, check `if < (ghost effect) = (100) >`. If it reaches 100, it means it is fully destroyed and transparent, so `delete this clone`!",
+            "hints": [
+                "The `change [ghost v] effect by ()` block and the round `(ghost effect)` variable block are both found in the purple <span class=\"cat-looks\">Looks</span> category.",
+                "If the ghost effect is changing too fast, try waiting a tiny bit (like 0.1 seconds) after it gets hit to prevent double-hits!"
+            ]
+        },
+        {
+            "title": "Extension: The Bonus Mothership",
+            "content": "Let's add a rare, high-value target! Create a red UFO sprite and call it 'Mothership'. We want it to occasionally glide across the very top of the screen.<br><br>In the Mothership sprite, write a script that says `forever`: `hide`, then `wait (15) seconds`. After waiting, it should sneak out! Tell it to `go to x: (250) y: (160)`, `show`, and then `glide (3) secs to x: (-250) y: (160)`.<br><br>If the player manages to shoot it with a laser while it's passing by, reward them by changing the score by a huge amount, like 50 bonus points!",
+            "hints":[
+                "Use a separate `when green flag clicked` script for the Mothership's hit detection using a `forever -> if touching laser` block.",
+                "The `glide () secs to x: () y: ()` block is located in the <span class=\"cat-motion\">Motion</span> category and is perfect for smooth movement across the screen."
             ]
         },
         {
             "title": "You Win!",
-            "content": "Incredible work! You have built a Space Invaders game with player controls, cloning, hit detection, and scoring. You've even learned how to make sprites react to each other. <br><br> As a final challenge, can you figure out how to make the aliens move side-to-side and downwards? Or what about adding lives so the player can get hit a few times before the game is over? <br><br> Show your amazing project to your teacher and friends!",
-            "hints": [
-                "To make the aliens move, you'd need a shared variable, like `alien direction`, that all the clones can follow.",
-                "To implement a 'Game Over', you could check if an alien's `y position` gets too low. If it does, you can use the `stop [all]` block from <span class=\"cat-control\">Control</span>."
+            "content": "Incredible work! You have built a Space Invaders game with player controls, cloning, hit detection, scoring, enemy attacks, and destructible bunkers. <br><br> Show your amazing project to your teacher and friends, and see who can get the highest score before they lose all their bunkers!",
+            "hints":[
+                "To make the aliens move side to side like the real game, you'd need a shared variable, like `alien direction`, that all the clones can read and follow!"
             ]
         }
     ]
