@@ -1,0 +1,7 @@
+node_modules/
+tests/
+playwright-report/
+test-results/
+visual-results/
+md.md
+*.log

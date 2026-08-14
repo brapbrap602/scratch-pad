@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "lesson.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "title",
+    "description",
+    "objectives",
+    "prerequisites",
+    "requirements",
+    "vocabulary",
+    "chapters"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "id": { "$ref": "#/$defs/id" },
+    "title": { "$ref": "#/$defs/text" },
+    "description": { "$ref": "#/$defs/text" },
+    "objectives": { "$ref": "#/$defs/textList" },
+    "prerequisites": { "$ref": "#/$defs/textList" },
+    "requirements": { "$ref": "#/$defs/textList" },
+    "vocabulary": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["term", "meaning"],
+        "properties": {
+          "term": { "$ref": "#/$defs/text" },
+          "meaning": { "$ref": "#/$defs/text" }
+        }
+      }
+    },
+    "chapters": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/chapter" }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "textList": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/text" }
+    },
+    "richTextList": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/text" }
+    },
+    "checkpoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["task", "expectedResult", "completeWhen"],
+      "properties": {
+        "task": { "$ref": "#/$defs/text" },
+        "expectedResult": { "$ref": "#/$defs/text" },
+        "completeWhen": { "$ref": "#/$defs/textList" }
+      }
+    },
+    "finishedCode": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["target", "code"],
+      "properties": {
+        "target": { "$ref": "#/$defs/text" },
+        "code": { "$ref": "#/$defs/text" }
+      }
+    },
+    "debuggingTip": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["symptom", "checks"],
+      "properties": {
+        "symptom": { "$ref": "#/$defs/text" },
+        "checks": { "$ref": "#/$defs/textList" }
+      }
+    },
+    "step": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "title",
+        "explanation",
+        "instructions",
+        "hints",
+        "debuggingTips",
+        "checkpoint"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "kind": {
+          "enum": ["observe", "setup", "build", "debug", "checkpoint"]
+        },
+        "title": { "$ref": "#/$defs/text" },
+        "explanation": { "$ref": "#/$defs/text" },
+        "instructions": { "$ref": "#/$defs/textList" },
+        "hints": { "$ref": "#/$defs/richTextList" },
+        "debuggingTips": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/debuggingTip" }
+        },
+        "checkpoint": { "$ref": "#/$defs/checkpoint" },
+        "youtubeID": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{11}$"
+        },
+        "finishedCode": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/finishedCode" }
+        }
+      }
+    },
+    "chapter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "estimatedMinutes", "objectives", "steps"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "title": { "$ref": "#/$defs/text" },
+        "estimatedMinutes": { "type": "integer", "minimum": 90 },
+        "objectives": { "$ref": "#/$defs/textList" },
+        "steps": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/step" }
+        }
+      }
+    }
+  }
+}

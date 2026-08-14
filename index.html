@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" class="h-full">
-<head>
+<!doctype html>
+<html lang="en">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scratch Project Lessons</title>
@@ -10,359 +10,160 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Poppins', 'sans-serif'],
-                    },
-                    colors: {
-                        'dark-bg': '#000000',
-                        'dark-nav': '#111111',
-                        'dark-content': '#1a1a1a',
-                        'dark-text': '#e5e5e5',
-                        'dark-subtext': '#a0a0a0',
-                        'dark-hover': '#333333',
-                        'dark-accent': '#00aaff',
-                    }
-                }
-            }
-        }
+      if (window.tailwind) {
+        window.tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: { sans: ['Poppins', 'sans-serif'] },
+            },
+          },
+        };
+      }
     </script>
     <style>
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #111111; }
-        ::-webkit-scrollbar-thumb { background: #444444; }
-        ::-webkit-scrollbar-thumb:hover { background: #666666; }
-        .active-step {
-            background-color: #2a2a2a;
-            color: #00aaff;
-            font-weight: 600;
-            border-left: 3px solid #00aaff;
-            padding-left: 0.75rem; /* 12px */
-        }
-        details > summary { list-style: none; }
-        details > summary::-webkit-details-marker { display: none; }
-        details > summary::before {
-            content: '▶';
-            margin-right: 0.5rem;
-            display: inline-block;
-            transition: transform 0.2s;
-        }
-        details[open] > summary::before { transform: rotate(90deg); }
-
-        .cat-motion { color: #4C97FF; font-weight: 600; }
-        .cat-looks { color: #9966FF; font-weight: 600; }
-        .cat-sound { color: #CF63CF; font-weight: 600; }
-        .cat-events { color: #FFBF00; font-weight: 600; }
-        .cat-control { color: #FFAB19; font-weight: 600; }
-        .cat-sensing { color: #5CB1D6; font-weight: 600; }
-        .cat-operators { color: #59C059; font-weight: 600; }
-        .cat-variables { color: #FF8C1A; font-weight: 600; }
-        .cat-my-blocks { color: #FF6680; font-weight: 600; }
-
-        .video-container {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio */
-            border-radius: 0.5rem; /* rounded-lg */
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-        }
-        /* Make scratchblocks render inline and align with text */
-        .scratchblocks {
-            display: inline-block;
-            vertical-align: middle;
-            margin: 0 0.15em;
-        }
+      :root {
+        color-scheme: dark;
+        font-family: Poppins, system-ui, sans-serif;
+        background: #000;
+        color: #e5e5e5;
+      }
+      * { box-sizing: border-box; }
+      body { background: #000; display: flex; flex-direction: column; height: 100vh; height: 100dvh; margin: 0; overflow: hidden; }
+      button, select { font: inherit; }
+      button, summary, select { min-height: 44px; }
+      button:focus-visible, summary:focus-visible, select:focus-visible, a:focus-visible {
+        outline: 3px solid #7dd3fc;
+        outline-offset: 3px;
+      }
+      a { color: #38bdf8; }
+      .site-header {
+        align-items: center;
+        background: #111;
+        display: flex;
+        gap: 1.5rem;
+        padding: 1rem;
+      }
+      .site-header h1 { font-size: 1.25rem; margin: 0; white-space: nowrap; }
+      .project-picker { display: grid; gap: .25rem; min-width: min(22rem, 100%); }
+      .project-picker label { font-size: .8rem; font-weight: 600; }
+      #lesson-select {
+        background: #1a1a1a;
+        border: 1px solid #555;
+        border-radius: .4rem;
+        color: #fff;
+        padding: .55rem .75rem;
+        width: 100%;
+      }
+      .app-shell { display: grid; flex: 1; grid-template-columns: minmax(16rem, 1fr) minmax(0, 4fr); min-height: 0; }
+      .steps-nav { background: #111; border-right: 1px solid #444; min-height: 0; overflow-y: auto; padding: 1rem; }
+      .steps-nav > h2 { font-size: 1.05rem; margin: 0 0 1rem; }
+      .course-nav-toggle { display: none; }
+      .chapter-group { margin: 0 0 1.5rem; }
+      .chapter-group h3 { color: #fff; font-size: .9rem; margin: 0 0 .35rem; }
+      .chapter-meta { color: #a3a3a3; font-size: .75rem; margin: 0 0 .5rem; }
+      .step-list { display: grid; gap: .25rem; list-style: none; margin: 0; padding: 0; }
+      .step-button {
+        background: transparent;
+        border: 0;
+        border-left: 3px solid transparent;
+        border-radius: .3rem;
+        color: #d4d4d4;
+        cursor: pointer;
+        display: flex;
+        gap: .5rem;
+        justify-content: space-between;
+        padding: .6rem;
+        text-align: left;
+        width: 100%;
+      }
+      .step-button:hover { background: #292929; }
+      .step-button[aria-current="step"] { background: #292929; border-left-color: #38bdf8; color: #7dd3fc; font-weight: 600; }
+      .completion-mark { color: #86efac; font-weight: 700; }
+      .content-area { min-height: 0; overflow-y: auto; padding: 2rem clamp(1rem, 4vw, 3rem); scroll-behavior: smooth; }
+      .content-column { margin: 0 auto; max-width: 74ch; }
+      .card { background: #171717; border: 1px solid #333; border-radius: .65rem; padding: clamp(1rem, 4vw, 2rem); }
+      .eyebrow { color: #7dd3fc; font-size: .8rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+      h2, h3, h4 { color: #fff; }
+      .step-title { font-size: clamp(1.8rem, 5vw, 2.5rem); line-height: 1.15; margin: .25rem 0 1.5rem; }
+      .prose { color: #d4d4d4; font-size: 1.05rem; line-height: 1.7; }
+      .prose code { margin: 0 .15em; vertical-align: middle; }
+      .instruction-list, .criteria-list { padding-left: 1.4rem; }
+      .instruction-list li, .criteria-list li { margin: .5rem 0; }
+      .checkpoint { background: #082f49; border: 1px solid #0ea5e9; border-radius: .65rem; margin-top: 1.5rem; padding: 1rem; }
+      .checkpoint h3 { margin-top: 0; }
+      details { background: #171717; border: 1px solid #3f3f46; border-radius: .5rem; margin-top: .65rem; }
+      summary { cursor: pointer; display: flex; align-items: center; font-weight: 600; padding: .75rem; }
+      .details-content { border-top: 1px solid #3f3f46; padding: 1rem; }
+      .code-scroll { max-width: 100%; overflow-x: auto; }
+      .code-label { color: #d4d4d4; font-size: .85rem; font-weight: 600; }
+      .step-actions { align-items: center; border-top: 1px solid #444; display: flex; flex-wrap: wrap; gap: .75rem; justify-content: space-between; margin-top: 2rem; padding-top: 1.25rem; }
+      .button { border: 1px solid #555; border-radius: .4rem; cursor: pointer; font-weight: 600; padding: .65rem 1rem; }
+      .button-secondary { background: #171717; color: #fff; }
+      .button-primary { background: #38bdf8; border-color: #38bdf8; color: #082f49; }
+      .button-complete { background: #14532d; border-color: #4ade80; color: #f0fdf4; }
+      .status { margin: 0; padding: .5rem 1rem; }
+      .error { color: #fecaca; }
+      .video-container { aspect-ratio: 16 / 9; margin-top: 1.5rem; overflow: hidden; }
+      .video-container iframe { border: 0; height: 100%; width: 100%; }
+      .cat-motion { color: #75adff; font-weight: 600; }
+      .cat-looks { color: #b794ff; font-weight: 600; }
+      .cat-sound { color: #e68ae6; font-weight: 600; }
+      .cat-events { color: #ffd04a; font-weight: 600; }
+      .cat-control { color: #ffc15c; font-weight: 600; }
+      .cat-sensing { color: #79c9e8; font-weight: 600; }
+      .cat-operators { color: #7bd47b; font-weight: 600; }
+      .cat-variables { color: #ffad55; font-weight: 600; }
+      .cat-my-blocks { color: #ff8ca0; font-weight: 600; }
+      .visually-hidden {
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+      }
+      @media (max-width: 767px) {
+        body { height: auto; min-height: 100vh; min-height: 100dvh; overflow: visible; }
+        .site-header { align-items: stretch; flex-direction: column; gap: .75rem; }
+        .site-header h1 { white-space: normal; }
+        .app-shell { display: block; height: auto; }
+        .steps-nav { border-bottom: 1px solid #444; border-right: 0; max-height: none; overflow: visible; }
+        .steps-nav > h2 { display: inline-block; margin-right: .75rem; }
+        .course-nav-toggle { background: #171717; border: 1px solid #555; border-radius: .4rem; color: #fff; cursor: pointer; display: inline-block; padding: .45rem .75rem; }
+        #steps-list.mobile-collapsed { display: none; }
+        .content-area { overflow: visible; padding: 1rem; scroll-behavior: auto; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+      }
     </style>
-</head>
-<body class="bg-dark-bg text-dark-text h-full flex flex-col font-sans">
-
-    <header class="bg-dark-nav shadow-lg p-4 flex items-center z-10">
-        <h1 class="text-xl font-bold mr-6 text-white">Scratch Lessons</h1>
-        <div class="relative">
-            <select id="lesson-select" class="bg-dark-content border border-dark-hover rounded-md px-3 py-2 appearance-none focus:outline-none focus:ring-2 focus:ring-dark-accent text-white">
-                <!-- Lessons populated by JS -->
-            </select>
-        </div>
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Scratch Lessons</h1>
+      <div class="project-picker">
+        <label for="lesson-select">Project</label>
+        <select id="lesson-select" disabled>
+          <option selected>Loading projects...</option>
+        </select>
+      </div>
     </header>
-
-    <main class="flex-grow grid grid-cols-1 md:grid-cols-5 h-full overflow-hidden">
-        <nav id="steps-nav" class="bg-dark-nav col-span-1 p-4 overflow-y-auto border-r border-dark-hover">
-            <h2 class="text-lg font-semibold mb-4 text-white">Project Milestones</h2>
-            <ul id="steps-list" class="space-y-1">
-                <!-- Steps populated by JS -->
-            </ul>
-        </nav>
-        <section id="content-area" class="col-span-1 md:col-span-4 p-6 md:p-10 overflow-y-auto">
-            <div class="text-center text-dark-subtext h-full flex flex-col justify-center items-center">
-                <div class="bg-dark-nav p-8 rounded-lg">
-                    <h2 class="text-2xl font-bold text-white mb-2">Welcome!</h2>
-                    <p>Select a lesson from the dropdown menu to begin your project.</p>
-                </div>
-            </div>
-        </section>
+    <p id="app-status" class="status visually-hidden" role="status" aria-live="polite"></p>
+    <p id="app-error" class="status error visually-hidden" role="alert"></p>
+    <main class="app-shell">
+      <nav class="steps-nav" aria-labelledby="steps-heading">
+        <h2 id="steps-heading">Course chapters</h2>
+        <button id="course-nav-toggle" class="course-nav-toggle" type="button" aria-controls="steps-list" aria-expanded="false">Show chapters</button>
+        <div id="steps-list" class="mobile-collapsed"></div>
+      </nav>
+      <section id="content-area" class="content-area" aria-labelledby="content-heading">
+        <div class="content-column card">
+          <h2 id="content-heading">Welcome</h2>
+          <p>Select a project to begin.</p>
+        </div>
+      </section>
     </main>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const lessonSelect = document.getElementById('lesson-select');
-            const stepsList = document.getElementById('steps-list');
-            const contentArea = document.getElementById('content-area');
-            const stepsNavTitle = document.querySelector('#steps-nav h2');
-            let currentLessonData = null;
-            let currentLessonSlug = null;
-
-            // --- PROGRESS TRACKING FUNCTIONS ---
-            const getProgress = () => JSON.parse(localStorage.getItem('scratchProgress') || '{}');
-            const saveProgress = (prog) => localStorage.setItem('scratchProgress', JSON.stringify(prog));
-            const markCompleted = (slug, index) => {
-                const prog = getProgress();
-                if (!prog[slug]) prog[slug] =[];
-                if (!prog[slug].includes(index)) {
-                    prog[slug].push(index);
-                    saveProgress(prog);
-                }
-            };
-
-            // --- HELPER TO FIX THE HTML TAG BUG ---
-            const formatScratchCode = (text) => {
-                return text.replace(/`([^`]+)`/g, (match, code) => {
-                    const escapedCode = code.replace(/</g, '&lt;').replace(/>/g, '&gt;');
-                    return `<code class="scratchblocks">${escapedCode}</code>`;
-                });
-            };
-
-            const loadLessons = async () => {
-                try {
-                    const response = await fetch('./curriculum/lessons.json');
-                    if (!response.ok) throw new Error('Network response was not ok');
-                    const lessonSlugs = await response.json();
-                    lessonSelect.innerHTML = '<option disabled selected>Choose a project...</option>';
-                    lessonSlugs.forEach(slug => {
-                        const option = document.createElement('option');
-                        option.value = slug;
-                        option.textContent = slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-                        lessonSelect.appendChild(option);
-                    });
-                } catch (error) {
-                    contentArea.innerHTML = `<p class="text-red-400">Error: Could not load the lesson list. Please make sure 'curriculum/lessons.json' exists and you are using a local server.</p>`;
-                }
-            };
-
-            const loadLessonData = async (lessonSlug) => {
-                try {
-                    stepsList.innerHTML = '';
-                    contentArea.innerHTML = `<p class="text-dark-subtext">Loading lesson...</p>`;
-                    const response = await fetch(`./curriculum/${lessonSlug}.json`);
-                    if (!response.ok) throw new Error('Lesson file not found');
-                    
-                    currentLessonData = await response.json();
-                    currentLessonSlug = lessonSlug;
-                    stepsNavTitle.textContent = currentLessonData.title;
-                    
-                    populateSteps(currentLessonData.steps);
-                    displayWelcome(currentLessonData);
-                } catch (error) {
-                    // Fixed the closing </p> tag typo here
-                    contentArea.innerHTML = `<p class="text-red-400">Error: Could not load lesson '${lessonSlug}'.</p>`;
-                }
-            };
-
-            const populateSteps = (steps) => {
-                stepsList.innerHTML = ''; // Clear list before repopulating
-                const prog = getProgress()[currentLessonSlug] ||[];
-                
-                steps.forEach((step, index) => {
-                    const isCompleted = prog.includes(index);
-                    const li = document.createElement('li');
-                    
-                    li.innerHTML = `
-                        <div class="flex items-center justify-between">
-                            <span><span class="font-semibold text-dark-accent mr-2">${index + 1}.</span> ${step.title}</span>
-                            ${isCompleted ? '<span class="text-green-500 font-bold ml-2">✓</span>' : ''}
-                        </div>
-                    `;
-                    
-                    li.dataset.stepIndex = index;
-                    li.className = 'cursor-pointer p-2 rounded-md hover:bg-dark-hover transition-colors text-dark-subtext';
-                    stepsList.appendChild(li);
-                });
-            };
-
-            const displayWelcome = (lesson) => {
-                contentArea.innerHTML = `
-                    <div class="bg-dark-nav p-8 rounded-lg space-y-4">
-                        <h2 class="text-4xl font-bold text-white">${lesson.title}</h2>
-                        <p class="text-lg text-dark-subtext">${lesson.description}</p>
-                        <p class="text-dark-accent font-semibold pt-4">Click on the first milestone on the left to get started!</p>
-                    </div>
-                `;
-            };
-
-            const displayStep = (stepIndex) => {
-                stepIndex = parseInt(stepIndex);
-                const step = currentLessonData.steps[stepIndex];
-                if (!step) return;
-
-                // Fix Bug A: Format hints properly
-                const hintsHtml = step.hints.map((hint, index) => `
-                    <details class="bg-dark-nav rounded-lg mt-2">
-                        <summary class="cursor-pointer font-semibold p-3 text-white hover:bg-dark-hover rounded-t-lg">Hint ${index + 1}</summary>
-                        <div class="p-4 border-t border-dark-hover text-dark-subtext">${formatScratchCode(hint)}</div>
-                    </details>
-                `).join('');
-
-                // Fix Bug A: Format main content properly
-                let processedContent = formatScratchCode(step.content);
-
-                if (step.youtubeID) {
-                    const videoHtml = `
-                        <div class="video-container mt-6">
-                            <iframe src="https://www.youtube.com/embed/${step.youtubeID}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <p class="text-center text-sm text-dark-subtext mt-2">
-                            If the video doesn't load,
-                            <a href="https://www.youtube.com/watch?v=${step.youtubeID}" target="_blank" rel="noopener noreferrer" class="text-dark-accent hover:underline">
-                                watch it on YouTube
-                            </a>.
-                        </p>
-                    `;
-                    processedContent += videoHtml;
-                }
-
-                let finishedCodeHtml = '';
-                if (step.finishedCode && step.finishedCode.length > 0) {
-                    const codeBlocks = step.finishedCode.map(code => {
-                        let label = '';
-                        let script = code;
-                        if (script.startsWith('//')) {
-                            const firstLineEnd = script.indexOf('\n');
-                            label = `<p class="text-sm text-dark-subtext mb-1">${script.substring(2, firstLineEnd).trim()}</p>`;
-                            script = script.substring(firstLineEnd + 1);
-                        }
-                        return `<div class="mb-4">${label}<pre class="scratchblocks">${script}</pre></div>`;
-                    }).join('');
-
-                    finishedCodeHtml = `
-                        <div class="pt-4 mt-6 border-t border-dark-hover">
-                            <h3 class="text-xl font-semibold mb-2 text-white">Finished Code</h3>
-                            <details class="bg-dark-nav rounded-lg finished-code-details">
-                                <summary class="cursor-pointer font-semibold p-3 text-white hover:bg-dark-hover rounded-lg">
-                                    Click to reveal the final code for this step
-                                </summary>
-                                <div class="p-4 border-t border-dark-hover">
-                                    ${codeBlocks}
-                                </div>
-                            </details>
-                        </div>
-                    `;
-                }
-
-                // Feature: Next / Previous Buttons
-                const navigationHtml = `
-                    <div class="flex justify-between mt-10 pt-6 border-t border-dark-hover">
-                        ${stepIndex > 0 
-                            ? `<button data-target-step="${stepIndex - 1}" class="bg-dark-nav hover:bg-dark-hover text-white font-semibold py-2 px-4 rounded-md transition-colors border border-dark-hover">&larr; Previous</button>` 
-                            : '<div></div>'}
-                        ${stepIndex < currentLessonData.steps.length - 1 
-                            ? `<button data-target-step="${stepIndex + 1}" class="bg-dark-accent hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded-md transition-colors">Next Step &rarr;</button>` 
-                            : '<div></div>'}
-                    </div>
-                `;
-
-                contentArea.innerHTML = `
-                    <div class="space-y-6">
-                        <div>
-                            <p class="text-sm font-semibold text-dark-accent">STEP ${stepIndex + 1} OF ${currentLessonData.steps.length}</p>
-                            <h2 class="text-4xl font-bold text-white mt-1">${step.title}</h2>
-                        </div>
-                        <div class="text-lg text-dark-subtext space-y-4">${processedContent}</div>
-                        <div class="pt-4">
-                            <h3 class="text-xl font-semibold mb-2 text-white">Stuck? Check the hints!</h3>
-                            ${hintsHtml}
-                        </div>
-                        ${finishedCodeHtml}
-                        ${navigationHtml}
-                    </div>
-                `;
-
-                // Render all visible scratch blocks initially
-                try {
-                    scratchblocks.renderMatching('.scratchblocks');
-                } catch (e) {
-                    console.error("Scratchblocks rendering failed:", e);
-                }
-            };
-
-            const goToStep = (index) => {
-                index = parseInt(index);
-                
-                // Track completion and refresh UI
-                markCompleted(currentLessonSlug, index);
-                populateSteps(currentLessonData.steps); 
-
-                // Highlight active step
-                document.querySelectorAll('#steps-list li').forEach(li => {
-                    li.classList.remove('active-step');
-                    if (parseInt(li.dataset.stepIndex) === index) {
-                        li.classList.add('active-step');
-                    }
-                });
-
-                displayStep(index);
-
-                // Feature: Automatically scroll up on Mobile
-                if (window.innerWidth < 768) {
-                    contentArea.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                    contentArea.scrollTo({ top: 0, behavior: 'smooth' });
-                }
-            };
-
-            lessonSelect.addEventListener('change', () => {
-                const selectedLesson = lessonSelect.value;
-                if (selectedLesson) loadLessonData(selectedLesson);
-            });
-
-            // Handle clicking steps in the sidebar menu
-            stepsList.addEventListener('click', (e) => {
-                const stepElement = e.target.closest('li');
-                if (stepElement) {
-                    goToStep(stepElement.dataset.stepIndex);
-                }
-            });
-
-            // Handle Next/Prev button clicks (Event Delegation)
-            contentArea.addEventListener('click', (e) => {
-                const btn = e.target.closest('button[data-target-step]');
-                if (btn) {
-                    goToStep(btn.dataset.targetStep);
-                }
-            });
-
-            // Fix Bug B: Only render scratchblocks inside the specific `<details>` block that was opened
-            contentArea.addEventListener('toggle', (event) => {
-                if (event.target.tagName === 'DETAILS' && event.target.open) {
-                    try {
-                        scratchblocks.renderMatching('details[open] .scratchblocks');
-                    } catch (e) {
-                        console.error("Scratchblocks re-rendering failed:", e);
-                    }
-                }
-            }, true);
-
-            loadLessons();
-        });
-    </script>
-</body>
+    <script type="module" src="./js/app.js"></script>
+  </body>
 </html>

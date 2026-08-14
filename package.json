@@ -1,0 +1,21 @@
+{
+  "name": "scratch-lessons",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node tests/support/static-server.mjs",
+    "validate:content": "node tools/validate-content.mjs",
+    "test:unit": "node --test tests/unit/*.test.mjs",
+    "test:e2e": "playwright test",
+    "test:visual": "playwright test --config playwright.visual.config.mjs",
+    "test": "npm run validate:content && npm run test:unit && npm run test:e2e",
+    "check": "npm test"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.10.2",
+    "@playwright/test": "1.55.0"
+  }
+}
