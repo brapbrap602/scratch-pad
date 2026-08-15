@@ -6,3 +6,4 @@ visual-results/
 md.md
 *.log
 .agents/
+.idea/
