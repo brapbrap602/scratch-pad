@@ -8,6 +8,9 @@
   "scripts": {
     "dev": "node tests/support/static-server.mjs",
     "validate:content": "node tools/validate-content.mjs",
+    "audio:plan": "node tools/audio.js plan",
+    "audio:generate": "node tools/audio.js generate",
+    "audio:check": "node tools/audio.js check",
     "test:unit": "node --test tests/unit/*.test.mjs",
     "test:e2e": "playwright test",
     "test:visual": "playwright test --config playwright.visual.config.mjs",

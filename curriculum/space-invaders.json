@@ -19,8 +19,9 @@
   "requirements": [
     "Use Scratch 3 in a modern web browser or the Scratch desktop app.",
     "Complete all six chapters in order; this course has one required path.",
-    "Plan for 90-120 minutes per chapter and save the project after each checkpoint.",
+    "Plan for 90-120 minutes per chapter. At each chapter checkpoint, use File > Save to your computer; use File > Load from your computer to resume in a new guest session.",
     "Use the exact sprite, variable, costume, backdrop, and message names shown so the code references match.",
+    "Keep every costume centered and inside the maximum width and height given in Chapter 1 so separate targets cannot overlap.",
     "Use the green flag as the only way to start or restart the game."
   ],
   "vocabulary": [
@@ -114,13 +115,13 @@
           "title": "Create the Stage and Six Sprites",
           "explanation": "Names matter because Scratch places sprite names inside sensing and motion blocks. Set up every game object now so later instructions can use exact names.",
           "instructions": [
-            "Paint or choose a dark space backdrop and rename it `Space`.",
-            "Duplicate the backdrop twice. Name the copies `You Win` and `Game Over`, then add large readable text to each copy.",
-            "Create a small ship sprite named `Player` and size it to fit near the bottom.",
-            "Create an enemy sprite named `Alien` with one clear alien costume.",
-            "Paint a thin bright vertical sprite named `Player Laser` and a thin red vertical sprite named `Enemy Shot`.",
-            "Create a wide shield sprite named `Bunker` and a bonus ship sprite named `Mothership`.",
-            "Place the sprite centers near the middle of each costume canvas. A centered costume makes collision and coordinates easier to predict."
+            "Paint and rename the existing blank backdrop `Space`, or choose a dark space backdrop and delete the original blank backdrop before renaming. Add readable text: Arrow keys move, Space fires, green flag starts or restarts, Aliens score 10, and Mothership scores 50.",
+            "Duplicate Space twice. Name the copies `You Win` and `Game Over`, replace the control text with a large matching result, and confirm exactly three backdrops exist.",
+            "Create a ship sprite named `Player`. Center its artwork and keep its visible costume no larger than 36 pixels wide by 18 pixels high.",
+            "Create an enemy sprite named `Alien`. Center its artwork and keep its visible costume no larger than 32 pixels wide by 18 pixels high.",
+            "Paint centered vertical sprites named `Player Laser` and `Enemy Shot`. Keep each visible costume no larger than 4 pixels wide by 10 pixels high; make Player Laser bright and Enemy Shot red.",
+            "Create a centered `Bunker` no larger than 56 pixels wide by 18 pixels high and a centered `Mothership` no larger than 40 pixels wide by 12 pixels high.",
+            "Check costume selection bounds in the paint editor. Do not continue with off-center pixels or artwork outside the stated maximum boxes."
           ],
           "hints": [
             "Simple geometric art is easier to resize and test than detailed art.",
@@ -137,11 +138,11 @@
           ],
           "checkpoint": {
             "task": "Inspect the sprite list and Stage backdrop list.",
-            "expectedResult": "The project has exactly the six required named sprites and the three named backdrops.",
+            "expectedResult": "The project has exactly the six required named sprites, three named backdrops, centered bounded costumes, and visible guest instructions on Space.",
             "completeWhen": [
               "All sprite names match the lesson exactly.",
-              "The `Space`, `You Win`, and `Game Over` backdrops exist.",
-              "Player and both projectile costumes have sensible centered shapes."
+              "Only the `Space`, `You Win`, and `Game Over` backdrops exist.",
+              "Space shows controls and scoring while every sprite costume is centered and inside its maximum box."
             ]
           }
         },
@@ -155,7 +156,8 @@
             "On the Alien sprite, make `My Column`, `My Row`, and `Is Clone` for this sprite only.",
             "On the Bunker sprite, make `Health` and `Bunker Number` for this sprite only.",
             "On the Mothership sprite, make `Active` for this sprite only.",
-            "Create messages named `Reset Game`, `Start Game`, `Fire Laser`, `March Right`, `March Left`, `March Down`, `Win`, and `Lose`.",
+            "On the Stage, drag out a temporary `broadcast` block. Open its message menu, choose New message, and create `Reset Game`, `Start Game`, `Fire Laser`, `March Right`, `March Left`, `March Down`, `Win`, `Lose`, and `End Cleanup`.",
+            "Keep the temporary broadcast block only while creating the names, then delete it. Confirm no unused `message1` remains.",
             "Hide every variable monitor except `Score` and `Aliens Left`."
           ],
           "hints": [
@@ -179,10 +181,10 @@
           ],
           "checkpoint": {
             "task": "Sort the variables into shared and sprite-local groups.",
-            "expectedResult": "Nine global variables, three Alien-local variables, two Bunker-local variables, one Mothership-local variable, and eight messages exist.",
+            "expectedResult": "Nine global variables, three Alien-local variables, two Bunker-local variables, one Mothership-local variable, and nine messages exist.",
             "completeWhen": [
               "Only `Score` and `Aliens Left` are visible on the Stage.",
-              "All eight message names appear in a broadcast menu.",
+              "All nine message names, and no unused message1, appear in a broadcast menu.",
               "Each local variable was created on the correct sprite."
             ]
           }
@@ -252,7 +254,7 @@
           "title": "Checkpoint: Reliable Launch",
           "explanation": "This checkpoint protects every later chapter. The green flag must be the sole reset, and all names must be exact before clones and projectiles are added.",
           "instructions": [
-            "Save the project with a clear name such as `Space Invaders - Chapter 1`.",
+            "Use File > Save to your computer and keep the download as `space-invaders-chapter-1.sb3`.",
             "Click the green flag, move Player, then click the green flag again while Player is moving.",
             "Confirm Player returns to x 0, y -150 and the Space backdrop returns.",
             "Compare the Stage and Player scripts with the cumulative reference below.",
@@ -315,7 +317,7 @@
           "explanation": "The original Alien is a hidden factory. Before each clone is created, the factory changes local row and column values. Scratch copies those values into the new clone, giving every alien a permanent grid address.",
           "instructions": [
             "Select Alien and confirm `My Column`, `My Row`, and `Is Clone` say `For this sprite only`.",
-            "Size the Alien costume so eight copies fit across the Stage. About 30 to 38 pixels wide works well.",
+            "Confirm the centered Alien costume is no larger than 32 pixels wide by 18 pixels high so rows and columns cannot overlap.",
             "Add the `Reset Game` factory script shown below.",
             "Set `Is Clone` to 1 before creating clones and back to 0 afterward. This distinguishes the hidden original from its clones.",
             "Increment `Aliens Left` once for each clone, producing exactly 24."
@@ -404,12 +406,14 @@
           "instructions": [
             "Add a `when I receive March Right` script to Alien and guard it with `Is Clone = 1`.",
             "Inside the guard, use the same x and y position formula as clone placement.",
-            "Duplicate that script for `March Left` and `March Down`; only the event message changes.",
+            "Duplicate that script for `March Left`; only the event message changes.",
+            "Duplicate it again for `March Down`. After `go to x y`, if `y position < -60` and `Game State = playing`, set Game State to lost and broadcast Lose.",
             "Do not change fleet coordinates in Alien. The Stage owns `Fleet X` and `Fleet Y`.",
-            "Keep the `Is Clone` guard so the hidden factory does not act like a fleet member."
+            "Keep the `Is Clone` guard so the hidden factory does not act like a fleet member.",
+            "To test, make a temporary Stage stack for each march message using `broadcast and wait`, click each broadcast block, then delete all three temporary stacks."
           ],
           "hints": [
-            "All three receiver scripts deliberately use the same coordinate formula.",
+            "All three receiver scripts use the same coordinate formula; March Down alone adds the invasion check.",
             "The message name describes what the Stage changed, not a separate movement rule inside Alien."
           ],
           "debuggingTips": [
@@ -422,18 +426,19 @@
             }
           ],
           "checkpoint": {
-            "task": "Click each Alien receiver stack while the project is running after changing a fleet coordinate manually.",
+            "task": "Use temporary Stage broadcast-and-wait stacks to test each Alien receiver after changing a fleet coordinate manually.",
             "expectedResult": "Every Alien snaps to the position described by the shared origin and its local row and column.",
             "completeWhen": [
               "All three messages have receiver scripts.",
               "Each receiver checks `Is Clone = 1`.",
-              "No Alien receiver changes `Fleet X` or `Fleet Y`."
+              "No Alien receiver changes `Fleet X` or `Fleet Y`.",
+              "The temporary Stage test stacks have been deleted."
             ]
           },
           "finishedCode": [
             {
               "target": "Alien march receivers",
-              "code": "when I receive [March Right v]\nif <(Is Clone) = (1)> then\n  go to x: ((Fleet X) + ((My Column) * (45))) y: ((Fleet Y) - ((My Row) * (35)))\nend\n\nwhen I receive [March Left v]\nif <(Is Clone) = (1)> then\n  go to x: ((Fleet X) + ((My Column) * (45))) y: ((Fleet Y) - ((My Row) * (35)))\nend\n\nwhen I receive [March Down v]\nif <(Is Clone) = (1)> then\n  go to x: ((Fleet X) + ((My Column) * (45))) y: ((Fleet Y) - ((My Row) * (35)))\n  if <<(y position) < (-105)> and <(Game State) = [playing]>> then\n    set [Game State v] to [lost]\n    broadcast [Lose v]\n  end\nend"
+              "code": "when I receive [March Right v]\nif <(Is Clone) = (1)> then\n  go to x: ((Fleet X) + ((My Column) * (45))) y: ((Fleet Y) - ((My Row) * (35)))\nend\n\nwhen I receive [March Left v]\nif <(Is Clone) = (1)> then\n  go to x: ((Fleet X) + ((My Column) * (45))) y: ((Fleet Y) - ((My Row) * (35)))\nend\n\nwhen I receive [March Down v]\nif <(Is Clone) = (1)> then\n  go to x: ((Fleet X) + ((My Column) * (45))) y: ((Fleet Y) - ((My Row) * (35)))\n  if <<(y position) < (-60)> and <(Game State) = [playing]>> then\n    set [Game State v] to [lost]\n    broadcast [Lose v]\n  end\nend"
             }
           ]
         },
@@ -472,7 +477,7 @@
           ],
           "checkpoint": {
             "task": "Watch at least three complete horizontal phases.",
-            "expectedResult": "All 24 aliens move as one shape, step down only at an edge, and eventually trigger loss below y -105.",
+            "expectedResult": "All 24 aliens move as one shape, step down only at an edge, and eventually trigger loss below y -60 before reaching the bunkers.",
             "completeWhen": [
               "No alien moves early or late.",
               "`Fleet X`, `Fleet Y`, and `Stage` change only from Stage code.",
@@ -492,7 +497,7 @@
           "title": "Checkpoint: One Synchronized Fleet",
           "explanation": "The fleet now has a single source of truth. The Stage changes shared coordinates through finite phases, and every clone uses its private address to find the correct place.",
           "instructions": [
-            "Save the project as the Chapter 2 version.",
+            "Use File > Save to your computer and keep the download as `space-invaders-chapter-2.sb3`.",
             "Start the game and verify `Aliens Left` reaches 24 before movement starts.",
             "Count eight aliens across and three down.",
             "Watch the Stage 1, Stage 2, and Stage 3 sequence.",
@@ -517,13 +522,13 @@
             "completeWhen": [
               "The count is exactly 24 after every green-flag restart.",
               "Only three Stage-controlled march messages move the fleet.",
-              "A clone below y -105 changes the game to `lost`."
+              "A clone below y -60 changes the game to `lost` before it can overlap a bunker."
             ]
           },
           "finishedCode": [
             {
               "target": "Alien, cumulative through Chapter 2",
-              "code": "when I receive [Reset Game v]\nhide\nset [My Row v] to (0)\nset [Is Clone v] to (1)\nrepeat (3)\n  set [My Column v] to (0)\n  repeat (8)\n    create clone of [myself v]\n    change [Aliens Left v] by (1)\n    change [My Column v] by (1)\n  end\n  change [My Row v] by (1)\nend\nset [Is Clone v] to (0)\n\nwhen I start as a clone\ngo to x: ((Fleet X) + ((My Column) * (45))) y: ((Fleet Y) - ((My Row) * (35)))\nshow\n\nwhen I receive [March Right v]\nif <(Is Clone) = (1)> then\n  go to x: ((Fleet X) + ((My Column) * (45))) y: ((Fleet Y) - ((My Row) * (35)))\nend\n\nwhen I receive [March Left v]\nif <(Is Clone) = (1)> then\n  go to x: ((Fleet X) + ((My Column) * (45))) y: ((Fleet Y) - ((My Row) * (35)))\nend\n\nwhen I receive [March Down v]\nif <(Is Clone) = (1)> then\n  go to x: ((Fleet X) + ((My Column) * (45))) y: ((Fleet Y) - ((My Row) * (35)))\n  if <<(y position) < (-105)> and <(Game State) = [playing]>> then\n    set [Game State v] to [lost]\n    broadcast [Lose v]\n  end\nend"
+              "code": "when I receive [Reset Game v]\nhide\nset [My Row v] to (0)\nset [Is Clone v] to (1)\nrepeat (3)\n  set [My Column v] to (0)\n  repeat (8)\n    create clone of [myself v]\n    change [Aliens Left v] by (1)\n    change [My Column v] by (1)\n  end\n  change [My Row v] by (1)\nend\nset [Is Clone v] to (0)\n\nwhen I start as a clone\ngo to x: ((Fleet X) + ((My Column) * (45))) y: ((Fleet Y) - ((My Row) * (35)))\nshow\n\nwhen I receive [March Right v]\nif <(Is Clone) = (1)> then\n  go to x: ((Fleet X) + ((My Column) * (45))) y: ((Fleet Y) - ((My Row) * (35)))\nend\n\nwhen I receive [March Left v]\nif <(Is Clone) = (1)> then\n  go to x: ((Fleet X) + ((My Column) * (45))) y: ((Fleet Y) - ((My Row) * (35)))\nend\n\nwhen I receive [March Down v]\nif <(Is Clone) = (1)> then\n  go to x: ((Fleet X) + ((My Column) * (45))) y: ((Fleet Y) - ((My Row) * (35)))\n  if <<(y position) < (-60)> and <(Game State) = [playing]>> then\n    set [Game State v] to [lost]\n    broadcast [Lose v]\n  end\nend"
             },
             {
               "target": "Stage fleet conductor, cumulative through Chapter 2",
@@ -552,7 +557,7 @@
           "instructions": [
             "Select Player Laser and remove any clone blocks if you experimented earlier.",
             "Add a `Reset Game` script that hides Player Laser and sets `Laser Active` to 0.",
-            "Keep the costume narrow enough to pass between aliens but tall enough to see.",
+            "Confirm Player Laser is centered and no larger than 4 pixels wide by 10 pixels high. This is visible, cannot skip an 18-pixel target while moving by 10, and cannot bridge two target rows.",
             "On Player, add a second, separate `when I receive Start Game` stack for firing. Use `repeat until Game State is not playing`; do not put firing inside the movement stack.",
             "When space is pressed and `Laser Active` is 0, set it to 1, broadcast `Fire Laser`, and wait until Space is released or Game State is not playing."
           ],
@@ -743,7 +748,7 @@
           "title": "Checkpoint: Reusable Player Attack",
           "explanation": "The player attack now has one input owner, one projectile owner, and one collision owner. Player starts a shot, Player Laser moves it, and the hit Alien resolves the score and count exactly once.",
           "instructions": [
-            "Save the Chapter 3 version.",
+            "Use File > Save to your computer and keep the download as `space-invaders-chapter-3.sb3`.",
             "Compare Player firing, Player Laser, and Alien collision with the cumulative reference.",
             "Start fresh and destroy a complete column of three aliens.",
             "Confirm the remaining 21 aliens still march in formation.",
@@ -805,11 +810,11 @@
           "title": "Prepare Enemy Shot and Bunker Damage",
           "explanation": "Enemy Shot will be one reusable sprite. Bunker will be a three-clone factory with three visual health levels. Costume changes make damage readable without adding another monitor.",
           "instructions": [
-            "On Bunker, create or rename three costumes exactly `Full`, `Damaged`, and `Critical`.",
+            "On Bunker, create or rename three centered costumes exactly `Full`, `Damaged`, and `Critical`; keep each visible costume no larger than 56 pixels wide by 18 pixels high.",
             "Keep the outside shape in the same position on all three costume canvases.",
             "Erase a few chunks in `Damaged` and more chunks in `Critical`.",
             "Confirm `Health` and `Bunker Number` are Bunker variables for this sprite only.",
-            "On Enemy Shot, add a reset script that hides it and sets `Enemy Shot Active` to 0.",
+            "On Enemy Shot, confirm its centered costume is no larger than 4 pixels wide by 10 pixels high, then add a reset script that hides it and sets `Enemy Shot Active` to 0.",
             "Make sure no `create clone` block exists on Enemy Shot or Player Laser."
           ],
           "hints": [
@@ -845,7 +850,7 @@
           "id": "launch-lane-enemy-shot",
           "kind": "build",
           "title": "Launch a Shot from a Fleet Lane",
-          "explanation": "A random lane from 0 through 7 maps to an alien column. Enemy Shot calculates x from `Fleet X + Shot Lane * 45` and y from `Fleet Y - 75`. It never uses `go to Alien`, which would target the hidden original instead of a chosen clone.",
+          "explanation": "A random lane from 0 through 7 maps to a fleet column. Enemy Shot calculates x from `Fleet X + Shot Lane * 45` and y from `Fleet Y - 75`. This is an abstract fleet launcher, so a cleared lane may still fire. It never uses `go to Alien`, which would target the hidden original instead of a chosen clone.",
           "instructions": [
             "On Enemy Shot, add the `Start Game` script shown below.",
             "Wait a random 1.5 to 3 seconds before each launch attempt.",
@@ -853,7 +858,8 @@
             "Set x to `Fleet X + Shot Lane * 45` and y to `Fleet Y - 75`, then show and activate the shot.",
             "Move down by 7 until the shot is inactive, below y -175, or the game is no longer playing.",
             "After every flight, set the guard to 0 and hide the same sprite for reuse.",
-            "Do not use `go to Alien` anywhere in Enemy Shot."
+            "Do not use `go to Alien` anywhere in Enemy Shot.",
+            "After clearing one complete column, wait until its lane fires and confirm a shot from that empty lane is expected fleet behavior rather than a hidden Alien."
           ],
           "hints": [
             "Lane 0 lines up with the left fleet column and lane 7 with the right fleet column.",
@@ -877,7 +883,7 @@
           ],
           "checkpoint": {
             "task": "Watch at least eight enemy launches while showing `Shot Lane` temporarily.",
-            "expectedResult": "One red shot at a time starts in different fleet columns and follows the descending fleet origin.",
+            "expectedResult": "One red shot at a time starts in different fleet lanes, including possibly cleared lanes, and follows the descending fleet origin.",
             "completeWhen": [
               "Every lane value is between 0 and 7.",
               "The shot never teleports to the Alien sprite.",
@@ -989,7 +995,7 @@
           "title": "Checkpoint: Lane Fire and Independent Cover",
           "explanation": "The return-fire system now has one calculated projectile and three independent shields. Shared fleet coordinates place the shot; local Health protects each bunker from changes meant for another clone.",
           "instructions": [
-            "Save the Chapter 4 version.",
+            "Use File > Save to your computer and keep the download as `space-invaders-chapter-4.sb3`.",
             "Compare Enemy Shot and Bunker with the cumulative code below.",
             "Run one test where Enemy Shot misses everything, one where each projectile type hits a bunker, and one where Enemy Shot hits Player.",
             "Confirm a bunker hit does not cause Player loss.",
@@ -1048,7 +1054,7 @@
           "explanation": "Mothership is one sprite, never a clone. Its sprite-local `Active` guard is 1 only during a visible pass. Collision can score only while that guard is 1.",
           "instructions": [
             "Select Mothership and confirm `Active` was made for this sprite only.",
-            "Size its costume to fit above the top alien row.",
+            "Confirm its centered costume is no larger than 40 pixels wide by 12 pixels high so it cannot overlap the 18-pixel Alien costume below it.",
             "Add a `Reset Game` script that hides Mothership and sets Active to 0.",
             "Remove any clone blocks or separate always-running collision script from Mothership.",
             "Place both motion and hit checking in the one pass script built next."
@@ -1135,18 +1141,21 @@
           "id": "detect-win-and-finish-loss",
           "kind": "build",
           "title": "Detect Win and Finish Both Endings",
-          "explanation": "A Stage monitor watches `Aliens Left`, the direct measure of the win. Loss causes already change the state before broadcasting. The ending receivers switch backdrop and stop every script. Nothing restarts until the player clicks the green flag.",
+          "explanation": "A Stage monitor watches `Aliens Left`, the direct measure of the win. The first valid terminal handler to change Game State claims the result. Before the Stage shows that result and stops every script, End Cleanup hides gameplay objects and deactivates reusable sprites. Nothing restarts until the player clicks the green flag.",
           "instructions": [
             "On the Stage, add a `Start Game` monitor that checks for `Aliens Left = 0` while Game State is `playing`.",
             "On a win, set Game State to `won` before broadcasting `Win`.",
-            "Add a Stage `when I receive Win` script: switch to the You Win backdrop, then stop all immediately.",
-            "Add a matching Lose receiver that switches to Game Over, then stops all immediately.",
+            "Add `when I receive End Cleanup` to Player, Alien, and Bunker with `hide`.",
+            "Add `when I receive End Cleanup` to Player Laser and Enemy Shot. Set the matching Active guard to 0, then hide.",
+            "Add `when I receive End Cleanup` to Mothership. Set Active to 0, then hide.",
+            "Add a Stage `when I receive Win` script: broadcast End Cleanup and wait, switch to You Win, then stop all.",
+            "Add a matching Lose receiver that broadcasts End Cleanup and waits, switches to Game Over, then stops all.",
             "Do not broadcast Reset Game from either ending. Do not add a Restart key or button.",
-            "Test loss by Player hit and by letting the fleet invade. Test win by destroying all 24 aliens."
+            "Test loss by Player hit and by letting the fleet invade. Test win by destroying all 24 aliens. In every result, Score and Aliens Left may remain visible but no gameplay sprite may cover the backdrop."
           ],
           "hints": [
             "The startup state is `starting`, so a temporary count of zero during reset cannot cause a win.",
-            "`Stop all` freezes the finished result; the next green-flag click performs the only restart."
+            "End Cleanup finishes before `stop all`, so the result backdrop is unobstructed; the next green-flag click performs the only restart."
           ],
           "debuggingTips": [
             {
@@ -1166,17 +1175,34 @@
           ],
           "checkpoint": {
             "task": "Trigger all three terminal cases: clear fleet, Player hit, and invasion.",
-            "expectedResult": "Fleet clear shows You Win; either loss cause shows Game Over; all cases stop until the green flag.",
+            "expectedResult": "Fleet clear shows an unobstructed You Win; either loss cause shows an unobstructed Game Over; all cases stop until the green flag.",
             "completeWhen": [
               "`Aliens Left = 0` is the win rule.",
               "Player hit and alien invasion are both loss rules.",
+              "No gameplay sprite remains visible on an ending backdrop.",
               "No ending performs an in-game restart."
             ]
           },
           "finishedCode": [
             {
               "target": "Stage win monitor and ending receivers",
-              "code": "when I receive [Start Game v]\nrepeat until <not <(Game State) = [playing]>>\n  if <(Aliens Left) = (0)> then\n    set [Game State v] to [won]\n    broadcast [Win v]\n  end\nend\n\nwhen I receive [Win v]\nswitch backdrop to [You Win v]\nstop [all v]\n\nwhen I receive [Lose v]\nswitch backdrop to [Game Over v]\nstop [all v]"
+              "code": "when I receive [Start Game v]\nrepeat until <not <(Game State) = [playing]>>\n  if <(Aliens Left) = (0)> then\n    set [Game State v] to [won]\n    broadcast [Win v]\n  end\nend\n\nwhen I receive [Win v]\nbroadcast [End Cleanup v] and wait\nswitch backdrop to [You Win v]\nstop [all v]\n\nwhen I receive [Lose v]\nbroadcast [End Cleanup v] and wait\nswitch backdrop to [Game Over v]\nstop [all v]"
+            },
+            {
+              "target": "Player, Alien, and Bunker ending cleanup",
+              "code": "when I receive [End Cleanup v]\nhide"
+            },
+            {
+              "target": "Player Laser ending cleanup",
+              "code": "when I receive [End Cleanup v]\nset [Laser Active v] to (0)\nhide"
+            },
+            {
+              "target": "Enemy Shot ending cleanup",
+              "code": "when I receive [End Cleanup v]\nset [Enemy Shot Active v] to (0)\nhide"
+            },
+            {
+              "target": "Mothership ending cleanup",
+              "code": "when I receive [End Cleanup v]\nset [Active v] to (0)\nhide"
             }
           ]
         },
@@ -1186,7 +1212,7 @@
           "title": "Checkpoint: Complete Game Rules",
           "explanation": "Every required game rule is now connected. The Active guards make singleton objects reusable, `Aliens Left` decides victory, and `Game State` allows exactly one ending.",
           "instructions": [
-            "Save the Chapter 5 version before final polish.",
+            "Use File > Save to your computer and keep the download as `space-invaders-chapter-5.sb3` before final polish.",
             "Score a normal Alien and a Mothership in one game; confirm they add 10 and 50.",
             "Clear the final Alien and confirm the You Win backdrop appears.",
             "Click the green flag and lose by Enemy Shot, then restart and lose by invasion.",
@@ -1210,18 +1236,18 @@
             "expectedResult": "The game has one clear start path, one win rule, two loss causes, and guarded scoring.",
             "completeWhen": [
               "A Mothership pass awards no more than 50 points.",
-              "The last Alien always triggers the win.",
+              "The final Alien triggers the win when no loss handler has already claimed Game State.",
               "Only the green flag begins another game after an ending."
             ]
           },
           "finishedCode": [
             {
               "target": "Mothership, cumulative through Chapter 5",
-              "code": "when I receive [Reset Game v]\nhide\nset [Active v] to (0)\n\nwhen I receive [Start Game v]\nforever\n  wait (pick random (8) to (14)) seconds\n  if <(Game State) = [playing]> then\n    go to x: (-230) y: (160)\n    set [Active v] to (1)\n    show\n    repeat until <<<(Active) = (0)> or <(x position) > (230)>> or <not <(Game State) = [playing]>>>\n      change x by (5)\n      if <<<(Active) = (1)> and <(Laser Active) = (1)>> and <touching [Player Laser v]?>> then\n        set [Active v] to (0)\n        set [Laser Active v] to (0)\n        change [Score v] by (50)\n      end\n      wait (0.03) seconds\n    end\n    hide\n    set [Active v] to (0)\n  end\nend"
+              "code": "when I receive [Reset Game v]\nhide\nset [Active v] to (0)\n\nwhen I receive [End Cleanup v]\nset [Active v] to (0)\nhide\n\nwhen I receive [Start Game v]\nforever\n  wait (pick random (8) to (14)) seconds\n  if <(Game State) = [playing]> then\n    go to x: (-230) y: (160)\n    set [Active v] to (1)\n    show\n    repeat until <<<(Active) = (0)> or <(x position) > (230)>> or <not <(Game State) = [playing]>>>\n      change x by (5)\n      if <<<(Active) = (1)> and <(Laser Active) = (1)>> and <touching [Player Laser v]?>> then\n        set [Active v] to (0)\n        set [Laser Active v] to (0)\n        change [Score v] by (50)\n      end\n      wait (0.03) seconds\n    end\n    hide\n    set [Active v] to (0)\n  end\nend"
             },
             {
               "target": "Stage endings, cumulative through Chapter 5",
-              "code": "when I receive [Start Game v]\nrepeat until <not <(Game State) = [playing]>>\n  if <(Aliens Left) = (0)> then\n    set [Game State v] to [won]\n    broadcast [Win v]\n  end\nend\n\nwhen I receive [Win v]\nswitch backdrop to [You Win v]\nstop [all v]\n\nwhen I receive [Lose v]\nswitch backdrop to [Game Over v]\nstop [all v]"
+              "code": "when I receive [Start Game v]\nrepeat until <not <(Game State) = [playing]>>\n  if <(Aliens Left) = (0)> then\n    set [Game State v] to [won]\n    broadcast [Win v]\n  end\nend\n\nwhen I receive [Win v]\nbroadcast [End Cleanup v] and wait\nswitch backdrop to [You Win v]\nstop [all v]\n\nwhen I receive [Lose v]\nbroadcast [End Cleanup v] and wait\nswitch backdrop to [Game Over v]\nstop [all v]"
             }
           ]
         }
@@ -1284,8 +1310,9 @@
             "Inspect Enemy Shot and confirm it uses `Fleet X`, `Fleet Y`, and `Shot Lane`, never `go to Alien`.",
             "Inspect Mothership and confirm Active becomes 0 before its 50-point score can repeat.",
             "Inspect Alien collision and confirm `Aliens Left` decreases before clone deletion.",
+            "Add `Game State = playing` to the collision conditions on Alien, both Bunker projectile checks, and Mothership. Keep Enemy Shot and Mothership using their taught outer `forever` loops; only their inner work is guarded.",
             "Inspect every loss source and confirm it requires the playing state and sets lost before broadcasting Lose.",
-            "Inspect endings and confirm there is no in-game restart. The green flag is the sole restart."
+            "Inspect all six sprites for a finite End Cleanup receiver, then inspect endings and confirm cleanup finishes before `stop all` and no in-game restart exists. The green flag is the sole restart."
           ],
           "hints": [
             "Right-click a script and add a comment if its ownership is not obvious to you.",
@@ -1309,10 +1336,12 @@
           ],
           "checkpoint": {
             "task": "Complete the six-point architecture audit.",
-            "expectedResult": "Every system has one clear owner and all required restrictions are visible in code.",
+            "expectedResult": "Every system has one clear owner, terminal collisions are guarded, cleanup is finite, and all required restrictions are visible in code.",
             "completeWhen": [
               "Only Alien and Bunker create clones.",
               "All singleton guards are ordered before scoring or damage.",
+              "Alien, Bunker, and Mothership collisions require Game State to be playing.",
+              "Every sprite responds to End Cleanup without a forever loop.",
               "No sprite, message, or key restarts the game during play."
             ]
           }
@@ -1329,11 +1358,11 @@
             "Defense test: let shots miss, hit each bunker, and hit Player; expect one reusable lane shot, local bunker damage, and loss only on Player hit.",
             "Bonus test: hit one Mothership pass; expect exactly 50 bonus points once.",
             "Win test: clear all 24 aliens; expect `Aliens Left` 0, You Win, and stopped play.",
-            "Invasion test: let a live Alien pass y -105; expect Game Over and stopped play.",
+            "Invasion test: let a live Alien pass y -60; expect unobstructed Game Over and stopped play before any Alien overlaps a bunker.",
             "Restart test: after every terminal case, click only the green flag and expect a complete clean game."
           ],
           "hints": [
-            "Save before changing timing for a test, and restore the required timing afterward.",
+            "Use the required timing for release tests; do not create a test-only export with changed delays.",
             "If a test fails, show only the related guard and coordinate monitors while diagnosing it."
           ],
           "debuggingTips": [
@@ -1366,13 +1395,13 @@
           "id": "final-release-checkpoint",
           "kind": "checkpoint",
           "title": "Checkpoint: Release Space Invaders",
-          "explanation": "The finished project has one required path from green-flag reset to win or loss. It demonstrates clone identity, shared coordinates, finite Stage phases, reusable projectiles, local health, guarded bonus scoring, and deterministic endings.",
+          "explanation": "The finished project has one required path from green-flag reset to win or loss. It demonstrates clone identity, shared coordinates, finite Stage phases, reusable projectiles, local health, guarded scoring, and a single terminal result claimed through Game State.",
           "instructions": [
-            "Save the final project with a title and short instructions: arrow keys move, space fires, and green flag starts or restarts.",
-            "Add project notes that state Aliens score 10 and Mothership scores 50.",
+            "Use File > Save to your computer and keep the download as `space-invaders-final.sb3`.",
+            "Confirm the Space backdrop visibly states that arrow keys move, Space fires, the green flag starts or restarts, Aliens score 10, and Mothership scores 50.",
             "Play one final game without opening the code area or changing variables.",
             "Confirm the final project matches the release checklist below.",
-            "Share or export the project only after the final clean green-flag restart passes."
+            "In a fresh guest editor, use File > Load from your computer to load the final export and repeat the clean green-flag start before release."
           ],
           "hints": [
             "Good player instructions explain controls and goals, not internal code.",
@@ -1382,14 +1411,14 @@
             {
               "symptom": "A new player does not know how to begin again.",
               "checks": [
-                "State clearly in project instructions that the green flag starts and restarts.",
+                "State clearly on the Space backdrop that the green flag starts and restarts.",
                 "Do not solve this with an in-game Restart control."
               ]
             }
           ],
           "checkpoint": {
             "task": "Release the final tested Space Invaders project.",
-            "expectedResult": "A beginner can start, play, win or lose, and restart using only the published controls, while every blueprint rule remains true.",
+            "expectedResult": "A beginner can start, play, win or lose, and restart using only the visible controls on the Space backdrop, while every blueprint rule remains true.",
             "completeWhen": [
               "The Stage startup resets every shared value, waits for Reset Game, then starts play.",
               "The Stage conducts the fleet and owns immediate win and loss screens.",
@@ -1413,11 +1442,11 @@
             },
             {
               "target": "Stage - win and endings",
-              "code": "when I receive [Start Game v]\nrepeat until <not <(Game State) = [playing]>>\n  if <(Aliens Left) = (0)> then\n    set [Game State v] to [won]\n    broadcast [Win v]\n  end\nend\n\nwhen I receive [Win v]\nswitch backdrop to [You Win v]\nstop [all v]\n\nwhen I receive [Lose v]\nswitch backdrop to [Game Over v]\nstop [all v]"
+              "code": "when I receive [Start Game v]\nrepeat until <not <(Game State) = [playing]>>\n  if <(Aliens Left) = (0)> then\n    set [Game State v] to [won]\n    broadcast [Win v]\n  end\nend\n\nwhen I receive [Win v]\nbroadcast [End Cleanup v] and wait\nswitch backdrop to [You Win v]\nstop [all v]\n\nwhen I receive [Lose v]\nbroadcast [End Cleanup v] and wait\nswitch backdrop to [Game Over v]\nstop [all v]"
             },
             {
               "target": "Player - reset and movement",
-              "code": "when I receive [Reset Game v]\ngo to x: (0) y: (-150)\nshow\n\nwhen I receive [Start Game v]\nrepeat until <not <(Game State) = [playing]>>\n  if <key [left arrow v] pressed?> then\n    change x by (-6)\n  end\n  if <key [right arrow v] pressed?> then\n    change x by (6)\n  end\n  if <(x position) < (-210)> then\n    set x to (-210)\n  end\n  if <(x position) > (210)> then\n    set x to (210)\n  end\nend"
+              "code": "when I receive [Reset Game v]\ngo to x: (0) y: (-150)\nshow\n\nwhen I receive [End Cleanup v]\nhide\n\nwhen I receive [Start Game v]\nrepeat until <not <(Game State) = [playing]>>\n  if <key [left arrow v] pressed?> then\n    change x by (-6)\n  end\n  if <key [right arrow v] pressed?> then\n    change x by (6)\n  end\n  if <(x position) < (-210)> then\n    set x to (-210)\n  end\n  if <(x position) > (210)> then\n    set x to (210)\n  end\nend"
             },
             {
               "target": "Player - firing",
@@ -1425,27 +1454,27 @@
             },
             {
               "target": "Alien - factory and collision",
-              "code": "when I receive [Reset Game v]\nhide\nset [My Row v] to (0)\nset [Is Clone v] to (1)\nrepeat (3)\n  set [My Column v] to (0)\n  repeat (8)\n    create clone of [myself v]\n    change [Aliens Left v] by (1)\n    change [My Column v] by (1)\n  end\n  change [My Row v] by (1)\nend\nset [Is Clone v] to (0)\n\nwhen I start as a clone\ngo to x: ((Fleet X) + ((My Column) * (45))) y: ((Fleet Y) - ((My Row) * (35)))\nshow\nforever\n  if <<<(Game State) = [playing]> and <(Laser Active) = (1)>> and <touching [Player Laser v]?>> then\n    set [Laser Active v] to (0)\n    change [Score v] by (10)\n    change [Aliens Left v] by (-1)\n    start sound [alien hit v]\n    delete this clone\n  end\nend"
+              "code": "when I receive [Reset Game v]\nhide\nset [My Row v] to (0)\nset [Is Clone v] to (1)\nrepeat (3)\n  set [My Column v] to (0)\n  repeat (8)\n    create clone of [myself v]\n    change [Aliens Left v] by (1)\n    change [My Column v] by (1)\n  end\n  change [My Row v] by (1)\nend\nset [Is Clone v] to (0)\n\nwhen I receive [End Cleanup v]\nhide\n\nwhen I start as a clone\ngo to x: ((Fleet X) + ((My Column) * (45))) y: ((Fleet Y) - ((My Row) * (35)))\nshow\nforever\n  if <<<(Game State) = [playing]> and <(Laser Active) = (1)>> and <touching [Player Laser v]?>> then\n    set [Laser Active v] to (0)\n    change [Score v] by (10)\n    change [Aliens Left v] by (-1)\n    start sound [alien hit v]\n    delete this clone\n  end\nend"
             },
             {
               "target": "Alien - fleet march and invasion",
-              "code": "when I receive [March Right v]\nif <(Is Clone) = (1)> then\n  go to x: ((Fleet X) + ((My Column) * (45))) y: ((Fleet Y) - ((My Row) * (35)))\nend\n\nwhen I receive [March Left v]\nif <(Is Clone) = (1)> then\n  go to x: ((Fleet X) + ((My Column) * (45))) y: ((Fleet Y) - ((My Row) * (35)))\nend\n\nwhen I receive [March Down v]\nif <(Is Clone) = (1)> then\n  go to x: ((Fleet X) + ((My Column) * (45))) y: ((Fleet Y) - ((My Row) * (35)))\n  if <<(y position) < (-105)> and <(Game State) = [playing]>> then\n    set [Game State v] to [lost]\n    broadcast [Lose v]\n  end\nend"
+              "code": "when I receive [March Right v]\nif <(Is Clone) = (1)> then\n  go to x: ((Fleet X) + ((My Column) * (45))) y: ((Fleet Y) - ((My Row) * (35)))\nend\n\nwhen I receive [March Left v]\nif <(Is Clone) = (1)> then\n  go to x: ((Fleet X) + ((My Column) * (45))) y: ((Fleet Y) - ((My Row) * (35)))\nend\n\nwhen I receive [March Down v]\nif <(Is Clone) = (1)> then\n  go to x: ((Fleet X) + ((My Column) * (45))) y: ((Fleet Y) - ((My Row) * (35)))\n  if <<(y position) < (-60)> and <(Game State) = [playing]>> then\n    set [Game State v] to [lost]\n    broadcast [Lose v]\n  end\nend"
             },
             {
               "target": "Player Laser",
-              "code": "when I receive [Reset Game v]\nhide\nset [Laser Active v] to (0)\n\nwhen I receive [Fire Laser v]\nif <(Game State) = [playing]> then\n  go to [Player v]\n  change y by (15)\n  show\n  start sound [laser v]\n  repeat until <<<(Laser Active) = (0)> or <(y position) > (175)>> or <not <(Game State) = [playing]>>>\n    change y by (10)\n    wait (0.02) seconds\n  end\nend\nhide\nset [Laser Active v] to (0)"
+              "code": "when I receive [Reset Game v]\nhide\nset [Laser Active v] to (0)\n\nwhen I receive [End Cleanup v]\nset [Laser Active v] to (0)\nhide\n\nwhen I receive [Fire Laser v]\nif <(Game State) = [playing]> then\n  go to [Player v]\n  change y by (15)\n  show\n  start sound [laser v]\n  repeat until <<<(Laser Active) = (0)> or <(y position) > (175)>> or <not <(Game State) = [playing]>>>\n    change y by (10)\n    wait (0.02) seconds\n  end\nend\nhide\nset [Laser Active v] to (0)"
             },
             {
               "target": "Enemy Shot",
-              "code": "when I receive [Reset Game v]\nhide\nset [Enemy Shot Active v] to (0)\n\nwhen I receive [Start Game v]\nrepeat until <not <(Game State) = [playing]>>\n  wait (pick random (1.5) to (3)) seconds\n  if <(Game State) = [playing]> then\n    set [Shot Lane v] to (pick random (0) to (7))\n    set x to ((Fleet X) + ((Shot Lane) * (45)))\n    set y to ((Fleet Y) - (75))\n    show\n    set [Enemy Shot Active v] to (1)\n    repeat until <<<(Enemy Shot Active) = (0)> or <(y position) < (-175)>> or <not <(Game State) = [playing]>>>\n      change y by (-7)\n      if <<(Enemy Shot Active) = (1)> and <touching [Player v]?>> then\n        set [Enemy Shot Active v] to (0)\n        if <(Game State) = [playing]> then\n          set [Game State v] to [lost]\n          broadcast [Lose v]\n        end\n      end\n      wait (0.03) seconds\n    end\n    set [Enemy Shot Active v] to (0)\n    hide\n  end\nend"
+              "code": "when I receive [Reset Game v]\nhide\nset [Enemy Shot Active v] to (0)\n\nwhen I receive [End Cleanup v]\nset [Enemy Shot Active v] to (0)\nhide\n\nwhen I receive [Start Game v]\nforever\n  wait (pick random (1.5) to (3)) seconds\n  if <(Game State) = [playing]> then\n    set [Shot Lane v] to (pick random (0) to (7))\n    set x to ((Fleet X) + ((Shot Lane) * (45)))\n    set y to ((Fleet Y) - (75))\n    show\n    set [Enemy Shot Active v] to (1)\n    repeat until <<<(Enemy Shot Active) = (0)> or <(y position) < (-175)>> or <not <(Game State) = [playing]>>>\n      change y by (-7)\n      if <<(Enemy Shot Active) = (1)> and <touching [Player v]?>> then\n        set [Enemy Shot Active v] to (0)\n        if <(Game State) = [playing]> then\n          set [Game State v] to [lost]\n          broadcast [Lose v]\n        end\n      end\n      wait (0.03) seconds\n    end\n    set [Enemy Shot Active v] to (0)\n    hide\n  end\nend"
             },
             {
               "target": "Bunker",
-              "code": "when I receive [Reset Game v]\nhide\nset [Bunker Number v] to (0)\nrepeat (3)\n  create clone of [myself v]\n  change [Bunker Number v] by (1)\nend\n\nwhen I start as a clone\ngo to x: ((-130) + ((Bunker Number) * (130))) y: (-105)\nset [Health v] to (3)\nswitch costume to [Full v]\nshow\nforever\n  if <<<(Game State) = [playing]> and <(Laser Active) = (1)>> and <touching [Player Laser v]?>> then\n    set [Laser Active v] to (0)\n    change [Health v] by (-1)\n    if <(Health) = (2)> then\n      switch costume to [Damaged v]\n    end\n    if <(Health) = (1)> then\n      switch costume to [Critical v]\n    end\n    if <(Health) = (0)> then\n      delete this clone\n    end\n  end\n  if <<<(Game State) = [playing]> and <(Enemy Shot Active) = (1)>> and <touching [Enemy Shot v]?>> then\n    set [Enemy Shot Active v] to (0)\n    change [Health v] by (-1)\n    if <(Health) = (2)> then\n      switch costume to [Damaged v]\n    end\n    if <(Health) = (1)> then\n      switch costume to [Critical v]\n    end\n    if <(Health) = (0)> then\n      delete this clone\n    end\n  end\nend"
+              "code": "when I receive [Reset Game v]\nhide\nset [Bunker Number v] to (0)\nrepeat (3)\n  create clone of [myself v]\n  change [Bunker Number v] by (1)\nend\n\nwhen I receive [End Cleanup v]\nhide\n\nwhen I start as a clone\ngo to x: ((-130) + ((Bunker Number) * (130))) y: (-105)\nset [Health v] to (3)\nswitch costume to [Full v]\nshow\nforever\n  if <<<(Game State) = [playing]> and <(Laser Active) = (1)>> and <touching [Player Laser v]?>> then\n    set [Laser Active v] to (0)\n    change [Health v] by (-1)\n    if <(Health) = (2)> then\n      switch costume to [Damaged v]\n    end\n    if <(Health) = (1)> then\n      switch costume to [Critical v]\n    end\n    if <(Health) = (0)> then\n      delete this clone\n    end\n  end\n  if <<<(Game State) = [playing]> and <(Enemy Shot Active) = (1)>> and <touching [Enemy Shot v]?>> then\n    set [Enemy Shot Active v] to (0)\n    change [Health v] by (-1)\n    if <(Health) = (2)> then\n      switch costume to [Damaged v]\n    end\n    if <(Health) = (1)> then\n      switch costume to [Critical v]\n    end\n    if <(Health) = (0)> then\n      delete this clone\n    end\n  end\nend"
             },
             {
               "target": "Mothership",
-              "code": "when I receive [Reset Game v]\nhide\nset [Active v] to (0)\n\nwhen I receive [Start Game v]\nrepeat until <not <(Game State) = [playing]>>\n  wait (pick random (8) to (14)) seconds\n  if <(Game State) = [playing]> then\n    go to x: (-230) y: (160)\n    set [Active v] to (1)\n    show\n    repeat until <<<(Active) = (0)> or <(x position) > (230)>> or <not <(Game State) = [playing]>>>\n      change x by (5)\n      if <<<(Active) = (1)> and <(Laser Active) = (1)>> and <touching [Player Laser v]?>> then\n        set [Active v] to (0)\n        set [Laser Active v] to (0)\n        change [Score v] by (50)\n        start sound [bonus v]\n      end\n      wait (0.03) seconds\n    end\n    hide\n    set [Active v] to (0)\n  end\nend"
+              "code": "when I receive [Reset Game v]\nhide\nset [Active v] to (0)\n\nwhen I receive [End Cleanup v]\nset [Active v] to (0)\nhide\n\nwhen I receive [Start Game v]\nforever\n  wait (pick random (8) to (14)) seconds\n  if <(Game State) = [playing]> then\n    go to x: (-230) y: (160)\n    set [Active v] to (1)\n    show\n    repeat until <<<(Active) = (0)> or <(x position) > (230)>> or <not <(Game State) = [playing]>>>\n      change x by (5)\n      if <<<<(Game State) = [playing]> and <(Active) = (1)>> and <(Laser Active) = (1)>> and <touching [Player Laser v]?>> then\n        set [Active v] to (0)\n        set [Laser Active v] to (0)\n        change [Score v] by (50)\n        start sound [bonus v]\n      end\n      wait (0.03) seconds\n    end\n    hide\n    set [Active v] to (0)\n  end\nend"
             }
           ]
         }

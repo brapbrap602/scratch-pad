@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "narration-manifest.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "lessonId", "profile", "sections"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "lessonId": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["voice", "normalizerVersion", "splitterVersion", "synthesisRevision"],
+      "properties": {
+        "voice": { "const": "en-US-BrianNeural" },
+        "normalizerVersion": { "const": 1 },
+        "splitterVersion": { "const": 1 },
+        "synthesisRevision": { "const": 1 }
+      }
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "sourcePaths", "sentences"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "sourcePaths": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+          "sentences": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["sourcePath", "speech", "requestHash", "src", "sha256", "bytes", "durationMs"],
+              "properties": {
+                "sourcePath": { "type": "string", "minLength": 1 },
+                "speech": { "type": "string", "minLength": 1 },
+                "requestHash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+                "src": { "type": "string", "pattern": "^audio/assets/[0-9a-f]{2}/[0-9a-f]{64}\\.mp3$" },
+                "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+                "bytes": { "type": "integer", "minimum": 1 },
+                "durationMs": { "type": "integer", "minimum": 1 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

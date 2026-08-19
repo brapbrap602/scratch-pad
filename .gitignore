@@ -1,10 +1,9 @@
 node_modules/
-tests/
 playwright-report/
 test-results/
 visual-results/
 md.md
 *.log
+.audio-work/
 .agents/
 .idea/
-*.mjs
