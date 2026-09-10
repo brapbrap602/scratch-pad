@@ -66,7 +66,7 @@ test('captures real desktop and mobile course states', async ({ page }) => {
   await page.screenshot({ path: `${output}/02-brick-code-desktop.png`, fullPage: true });
 
   await page.getByLabel('Project').selectOption('space-invaders');
-  await page.getByRole('button', { name: /Checkpoint: Release Space Invaders/ }).click();
+  await page.getByRole('button', { name: /Checkpoint: Finish Space Invaders/ }).click();
   const invadersCode = page.getByText('Show finished code').locator('..');
   await invadersCode.locator('summary').first().click();
   for (const [target, filename] of [

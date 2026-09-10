@@ -20,7 +20,7 @@ const loadLesson = async (id) =>
 test('extracts every visible learner-prose section exactly once', async () => {
   const expected = new Map([
     ['brick-breaker', 298],
-    ['space-invaders', 394],
+    ['space-invaders', 436],
   ]);
   let sentenceCount = 0;
   const speech = [];
@@ -36,8 +36,8 @@ test('extracts every visible learner-prose section exactly once', async () => {
     speech.push(...sections.flatMap((section) => section.sentences.map((sentence) => sentence.speech)));
   }
 
-  assert.equal(sentenceCount, 1340);
-  assert.equal(new Set(speech).size, 1333);
+  assert.equal(sentenceCount, 1433);
+  assert.equal(new Set(speech).size, 1426);
 });
 
 test('verbalizes current Scratch syntax without leaking markup', () => {

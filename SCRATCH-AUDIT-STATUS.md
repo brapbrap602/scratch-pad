@@ -121,8 +121,8 @@ loaded March Right/Left parentage before runtime tests.
 |---|---|
 | `curriculum/space-invaders.json` | All of SS3, including just-in-time message creation |
 | `tests/unit/space-invaders-curriculum.test.mjs` | 10 contract tests, including just-in-time messages, both safe Bunker deletion branches, exact Chapter 4 paths, and collision-safe Player Laser blueprints/win testing |
-| `tools/validate-content.mjs` | Snapshot updated to 692 sections / 1,340 sentences |
-| `tests/unit/narration-content.test.mjs` | Space Invaders 394 sections; totals 1,340 / 1,333 unique speech |
+| `tools/validate-content.mjs` | Narration inventory snapshot kept in sync with the curriculum |
+| `tests/unit/narration-content.test.mjs` | Per-lesson sections plus total and unique speech are checked |
 | `tools/verify-scratch-audit-hashes.mjs` | Verifies feasibility, accepted Chapters 1-5, and the final export against all four final reports, including policy fields, clean roots, nested march parentage, terminal Bunker resets, and required subcase passes |
 | `tools/recover-scratch-live.py` | Recovers the complete ignored driver set only from sessions rooted at this workspace, resolves candidate paths against the repo, validates in staging, and refuses to overwrite live files |
 | `playwright.config.mjs` | Uses `test-results/playwright` so normal site tests cannot erase sibling `scratch-live` evidence |
@@ -133,7 +133,7 @@ loaded March Right/Left parentage before runtime tests.
 Latest local regression (all green):
 
 ```powershell
-npm run validate:content   # 2 lessons, 52 steps, 692 sections, 1,340 sentences
+npm run validate:content   # validates lesson structure and the current narration inventory
 npm run test:unit          # 26 tests passed
 npm test                   # validate + unit + 33 e2e (chromium/firefox/webkit), passed
 npm run test:visual        # 1 visual test passed; scratch-live remained intact

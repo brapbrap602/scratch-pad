@@ -291,7 +291,7 @@ test('keeps the lesson reachable without horizontal page overflow on a phone', a
 test('keeps desktop navigation fixed while lesson content scrolls independently', async ({ page }) => {
   await page.setViewportSize({ width: 1280, height: 500 });
   await page.getByLabel('Project').selectOption('space-invaders');
-  await page.getByRole('button', { name: /Checkpoint: Release Space Invaders/ }).click();
+  await page.getByRole('button', { name: /Checkpoint: Finish Space Invaders/ }).click();
 
   const nav = page.locator('.steps-nav');
   const navTopBefore = (await nav.boundingBox()).y;
