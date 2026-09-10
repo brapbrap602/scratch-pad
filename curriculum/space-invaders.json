@@ -156,8 +156,8 @@
             "On the Alien sprite, make `My Column`, `My Row`, and `Is Clone` for this sprite only.",
             "On the Bunker sprite, make `Health` and `Bunker Number` for this sprite only.",
             "On the Mothership sprite, make `Active` for this sprite only.",
-            "On the Stage, drag out a temporary `broadcast` block. Open its message menu, choose New message, and create `Reset Game`, `Start Game`, `Fire Laser`, `March Right`, `March Left`, `March Down`, `Win`, `Lose`, and `End Cleanup`.",
-            "Keep the temporary broadcast block only while creating the names, then delete it. Confirm no unused `message1` remains.",
+            "On the Stage, drag out a temporary `broadcast` block. Open its message menu, choose New message, and create `Reset Game` and `Start Game`. Later chapters create each new message when its first real script is built, so unused message blocks do not clutter this checkpoint.",
+            "Delete the temporary broadcast block after the two real startup messages are selected in the Stage scripts. After the checkpoint reload, confirm no unused `message1` remains.",
             "Hide every variable monitor except `Score` and `Aliens Left`."
           ],
           "hints": [
@@ -181,10 +181,10 @@
           ],
           "checkpoint": {
             "task": "Sort the variables into shared and sprite-local groups.",
-            "expectedResult": "Nine global variables, three Alien-local variables, two Bunker-local variables, one Mothership-local variable, and nine messages exist.",
+            "expectedResult": "Nine global variables, three Alien-local variables, two Bunker-local variables, one Mothership-local variable, and the two Chapter 1 messages exist.",
             "completeWhen": [
               "Only `Score` and `Aliens Left` are visible on the Stage.",
-              "All nine message names, and no unused message1, appear in a broadcast menu.",
+              "`Reset Game` and `Start Game`, and no unused message1, appear in a broadcast menu after reload.",
               "Each local variable was created on the correct sprite."
             ]
           }
@@ -404,10 +404,10 @@
           "title": "Make Every Alien Follow Fleet Coordinates",
           "explanation": "The Stage will change the fleet origin and then broadcast one of three march messages. Each live clone recomputes its exact position. This prevents drift and keeps surviving aliens locked together even after other clones are destroyed.",
           "instructions": [
-            "Add a `when I receive March Right` script to Alien and guard it with `Is Clone = 1`.",
+            "Add a `when I receive` script to Alien, choose New message, name it `March Right`, and guard it with `Is Clone = 1`.",
             "Inside the guard, use the same x and y position formula as clone placement.",
-            "Duplicate that script for `March Left`; only the event message changes.",
-            "Duplicate it again for `March Down`. After `go to x y`, if `y position < -60` and `Game State = playing`, set Game State to lost and broadcast Lose.",
+            "Duplicate that script for `March Left`; choose New message and create that exact name when changing the event dropdown.",
+            "Duplicate it again, choose New message, and create `March Down`. After `go to x y`, if `y position < -60` and `Game State = playing`, set Game State to lost, then choose New message in the broadcast block and create `Lose`.",
             "Do not change fleet coordinates in Alien. The Stage owns `Fleet X` and `Fleet Y`.",
             "Keep the `Is Clone` guard so the hidden factory does not act like a fleet member.",
             "To test, make a temporary Stage stack for each march message using `broadcast and wait`, click each broadcast block, then delete all three temporary stacks."
@@ -559,7 +559,7 @@
             "Add a `Reset Game` script that hides Player Laser and sets `Laser Active` to 0.",
             "Confirm Player Laser is centered and no larger than 4 pixels wide by 10 pixels high. This is visible, cannot skip an 18-pixel target while moving by 10, and cannot bridge two target rows.",
             "On Player, add a second, separate `when I receive Start Game` stack for firing. Use `repeat until Game State is not playing`; do not put firing inside the movement stack.",
-            "When space is pressed and `Laser Active` is 0, set it to 1, broadcast `Fire Laser`, and wait until Space is released or Game State is not playing."
+            "When space is pressed and `Laser Active` is 0, set it to 1, choose New message in the broadcast block to create `Fire Laser`, broadcast it, and wait until Space is released or Game State is not playing."
           ],
           "hints": [
             "Waiting for key release prevents one long press from behaving like many separate presses.",
@@ -808,17 +808,23 @@
           "id": "prepare-shots-and-bunkers",
           "kind": "setup",
           "title": "Prepare Enemy Shot and Bunker Damage",
-          "explanation": "Enemy Shot will be one reusable sprite. Bunker will be a three-clone factory with three visual health levels. Costume changes make damage readable without adding another monitor.",
+          "explanation": "Enemy Shot will be one reusable sprite. Bunker will be a three-clone factory with three visual health levels. Start every damaged costume as an exact copy of Full so the Bunker does not jump when its costume changes. You will also extend the Reset Game stack from Chapter 1 instead of creating a second reset path.",
           "instructions": [
-            "On Bunker, create or rename three centered costumes exactly `Full`, `Damaged`, and `Critical`; keep each visible costume no larger than 56 pixels wide by 18 pixels high.",
-            "Keep the outside shape in the same position on all three costume canvases.",
-            "Erase a few chunks in `Damaged` and more chunks in `Critical`.",
-            "Confirm `Health` and `Bunker Number` are Bunker variables for this sprite only.",
-            "On Enemy Shot, confirm its centered costume is no larger than 4 pixels wide by 10 pixels high, then add a reset script that hides it and sets `Enemy Shot Active` to 0.",
+            "Select Bunker in the sprite list, then click the `Costumes` tab at the top of the editor.",
+            "Click the costume-name box above the paint canvas, type `Full`, and press Enter so the new name is saved on the costume thumbnail.",
+            "In the costume thumbnail list, right-click `Full`, choose `duplicate`, click the copy's name box, type `Damaged`, and press Enter.",
+            "Right-click `Full` again, choose `duplicate`, rename this second copy `Critical`, and press Enter. Duplicate Full both times; do not copy a costume that is already damaged.",
+            "Select the Eraser tool and change its size box from 40 to 10. Remove two small chunks from the upper edge of `Damaged` and three small chunks from the upper edge of `Critical`; leave a solid path through the center and across the lower edge so a straight projectile can still touch every damage level.",
+            "Click each costume thumbnail and check the size printed beside its name. `Full`, `Damaged`, and `Critical` must each stay centered and no larger than 56 pixels wide by 18 pixels high.",
+            "Click the `Code` tab, open Variables, and confirm `Health` and `Bunker Number` were made for this sprite only on Bunker.",
+            "Select Enemy Shot and find the existing `Reset Game` stack from Chapter 1. Snap `set Enemy Shot Active to 0` directly under its `hide` block; do not add a second `when I receive Reset Game` hat.",
+            "Click the green flag once, select Enemy Shot, and confirm the sprite is hidden and `Enemy Shot Active` is 0 before continuing.",
             "Make sure no `create clone` block exists on Enemy Shot or Player Laser."
           ],
           "hints": [
-            "Duplicate the Full costume before erasing damage so all costume centers stay aligned.",
+            "On a mouse, right-click means use the right mouse button. On a trackpad, use the two-finger click that opens the small menu, then choose `duplicate`.",
+            "If a thumbnail still says `costume1` or `Full2`, click its name box again, type the exact required name, and press Enter.",
+            "Do not drag the costume artwork while using the Eraser. Duplicating Full keeps the center mark and outside shape aligned automatically.",
             "Health 3 uses Full, Health 2 uses Damaged, and Health 1 uses Critical."
           ],
           "debuggingTips": [
@@ -828,6 +834,20 @@
                 "Align the costume center marks in the Costumes editor.",
                 "Start each damage costume by duplicating `Full`."
               ]
+            },
+            {
+              "symptom": "Right-clicking does not show duplicate.",
+              "checks": [
+                "Right-click the costume thumbnail in the list on the left, not the large paint canvas.",
+                "On a trackpad, use a two-finger click or the secondary-click gesture configured on the computer."
+              ]
+            },
+            {
+              "symptom": "The costume name changes back or still shows Full2.",
+              "checks": [
+                "Type the name in the box above the paint canvas.",
+                "Press Enter before selecting another costume."
+              ]
             }
           ],
           "checkpoint": {
@@ -835,8 +855,9 @@
             "expectedResult": "Bunker damage stays aligned, and Enemy Shot is a hidden reusable singleton after reset.",
             "completeWhen": [
               "All three costume names match exactly.",
+              "All three costumes keep the same centered 56-by-18-or-smaller outside shape.",
               "Both Bunker variables are sprite-local.",
-              "Enemy Shot has no clone code."
+              "Enemy Shot has one Reset Game receiver and no clone code."
             ]
           },
           "finishedCode": [
@@ -850,20 +871,32 @@
           "id": "launch-lane-enemy-shot",
           "kind": "build",
           "title": "Launch a Shot from a Fleet Lane",
-          "explanation": "A random lane from 0 through 7 maps to a fleet column. Enemy Shot calculates x from `Fleet X + Shot Lane * 45` and y from `Fleet Y - 75`. This is an abstract fleet launcher, so a cleared lane may still fire. It never uses `go to Alien`, which would target the hidden original instead of a chosen clone.",
+          "explanation": "A lane is an imaginary vertical firing line under one fleet column. The lane numbers run from 0 on the left to 7 on the right. Enemy Shot calculates x from `Fleet X + Shot Lane * 45` and y from `Fleet Y - 75`, so it can launch without trying to select one of the Alien clones. This is an abstract fleet launcher, so a cleared lane may still fire. Build the arithmetic and three-part stop condition one reporter at a time; the exact hole used for every reporter matters.",
           "instructions": [
-            "On Enemy Shot, add the `Start Game` script shown below.",
-            "Wait a random 1.5 to 3 seconds before each launch attempt.",
-            "Choose `Shot Lane` randomly from 0 to 7.",
-            "Set x to `Fleet X + Shot Lane * 45` and y to `Fleet Y - 75`, then show and activate the shot.",
-            "Move down by 7 until the shot is inactive, below y -175, or the game is no longer playing.",
-            "After every flight, set the guard to 0 and hide the same sprite for reuse.",
+            "Select Enemy Shot and click `Code`. Open Events, drag `when I receive` to empty workspace, choose `Start Game` from its menu, then open Control and snap a `forever` block under the hat.",
+            "Inside `forever`, add `wait 1 seconds`. Open Operators, drag `pick random 1 to 10` into the wait block's round number hole, then change the random block's left number to 1.5 and its right number to 3.",
+            "Directly below that wait, add `if then`. Put an `=` reporter in the if's diamond hole, place `Game State` in the left side of `=`, and type `playing` in the right side.",
+            "Inside that `Game State = playing` if, add `set Shot Lane to 0`. Replace 0 with `pick random 1 to 10`, then change the random block's left number to 0 and its right number to 7.",
+            "Below `set Shot Lane`, add `set x to 0`. Put a plus reporter in its round hole. In the plus reporter's left hole, place `Fleet X`. Put a multiply reporter in its right hole, then place `Shot Lane` on the multiply reporter's left and 45 on its right.",
+            "Below `set x`, add `set y to 0`. Put a minus reporter in its round hole, place `Fleet Y` on the minus reporter's left, and type 75 on its right.",
+            "Below `set y`, add `show`, then add `set Enemy Shot Active to 1`, then add `repeat until`.",
+            "Build the stop condition away from the script so there is room: drag one outer `or` reporter to empty workspace, then drag a second `or` reporter into the outer reporter's left hole.",
+            "In the second or inner `or`, put `Enemy Shot Active = 0` in the left hole and `y position < -175` in the right hole.",
+            "In the outer `or` reporter's right hole, place `not`; inside `not`, place `Game State = playing`. This makes the third stop reason mean the game is not playing.",
+            "Grab the completed outer `or` by the word `or` and drag the completed outer `or` into the diamond hole of `repeat until`.",
+            "Build `change y by -7` followed by `wait 0.03 seconds` as a two-block stack in empty workspace, then drag that entire stack inside the body of `repeat until`.",
+            "After `repeat until`, but still inside the `Game State = playing` if, add `set Enemy Shot Active to 0` followed by `hide`. These two cleanup blocks must not be inside the repeat loop.",
+            "Read the finished stack from top to bottom: `forever` contains the random wait and the playing if; the playing if contains launch, flight, and cleanup; `repeat until` contains only the two movement blocks for now.",
             "Do not use `go to Alien` anywhere in Enemy Shot.",
+            "Open Variables and turn on the `Shot Lane` checkbox temporarily. Watch at least eight launches and confirm every displayed lane number is from 0 through 7; turn the checkbox off after the test.",
             "After clearing one complete column, wait until its lane fires and confirm a shot from that empty lane is expected fleet behavior rather than a hidden Alien."
           ],
           "hints": [
             "Lane 0 lines up with the left fleet column and lane 7 with the right fleet column.",
-            "The launch y is just below the original bottom row and follows `Fleet Y` as the fleet descends."
+            "The multiply reporter belongs inside the right hole of plus. If multiply sits beside plus, the x formula is not connected.",
+            "The launch y is just below the original bottom row and follows `Fleet Y` as the fleet descends.",
+            "The inner or handles `inactive` and `below the Stage`. The outer or adds `not playing` as the third reason to stop.",
+            "Building the Boolean tree and movement stack in empty workspace keeps Scratch from snapping a small block into the wrong tall C-shaped block."
           ],
           "debuggingTips": [
             {
@@ -878,6 +911,27 @@
               "checks": [
                 "Use one Enemy Shot sprite and no clones.",
                 "Keep the launch, flight, cleanup, and wait in one forever script."
+              ]
+            },
+            {
+              "symptom": "The shot starts in the wrong horizontal lane.",
+              "checks": [
+                "Open the `set x` formula and confirm `Fleet X` is on the left side of plus.",
+                "Confirm `Shot Lane * 45` fills the right side of plus, with Shot Lane on the left side of multiply."
+              ]
+            },
+            {
+              "symptom": "The shot never hides or never launches again.",
+              "checks": [
+                "Confirm the completed outer or fills the `repeat until` condition hole.",
+                "Place `set Enemy Shot Active to 0` and `hide` after the repeat block but inside the playing if."
+              ]
+            },
+            {
+              "symptom": "A reporter or movement block will not snap into the tall script.",
+              "checks": [
+                "Move the partly built reporter tree or movement stack to empty workspace.",
+                "Finish the small stack there, then drag the completed piece into its final hole."
               ]
             }
           ],
@@ -901,24 +955,46 @@
           "id": "enemy-shot-hits-player",
           "kind": "build",
           "title": "Lose When Player Is Hit",
-          "explanation": "Enemy Shot owns Player collision because there is only one shot to check. On contact it turns itself off, changes the state before broadcasting, and sends `Lose`. The state guard ensures only the first loss cause can win the race.",
+          "explanation": "Enemy Shot owns Player collision because there is only one enemy projectile to check. The collision test belongs inside the flight loop, immediately after each downward move, so every new shot checks for contact while it travels. On contact the shot turns itself off first, then a nested state guard lets only the first valid loss cause change the game to lost and broadcast Lose.",
           "instructions": [
-            "Inside Enemy Shot's flight loop, after `change y by -7`, add the Player collision condition shown below.",
-            "Require both `Enemy Shot Active = 1` and `touching Player`.",
-            "Set `Enemy Shot Active` to 0 first.",
-            "If `Game State` is still `playing`, set it to `lost` and broadcast `Lose`.",
-            "For now, inspect the state after being hit. Chapter 5 will display and stop the finished loss screen."
+            "Find `change y by -7` inside Enemy Shot's `repeat until`. Drag a Control `if then` block onto the thin connection between `change y by -7` and `wait 0.03 seconds`; when it snaps correctly, the wait block moves below the new if.",
+            "Put an `and` reporter in the new if's diamond hole. In the `and` reporter's left hole, build `Enemy Shot Active = 1`; in its right hole, add Sensing `touching Player` and choose Player from the menu.",
+            "Inside the collision if, the first block must be `set Enemy Shot Active to 0`. Clearing the guard first prevents the same shot from counting again during another loop pass.",
+            "Under that set block, add a nested `if then`. Build `Game State = playing` in the nested if's diamond hole.",
+            "Inside the nested state if, add `set Game State to lost`, then snap `broadcast Lose` directly underneath it. Set the state before broadcasting so another ending cannot claim the same game.",
+            "Read the flight-loop body from top to bottom and check this order: `change y by -7`, Player collision if, then `wait 0.03 seconds`.",
+            "For a miss test, show the `Game State` and `Enemy Shot Active` monitors, move Player away from the falling shot, and let one shot leave the Stage. A miss must leave Game State as playing and return Enemy Shot Active to 0.",
+            "For a hit test, click the green flag, move Player under an incoming shot, and watch the monitors. A hit must change Game State to lost and Enemy Shot Active to 0; click the green flag again and confirm the reset returns Game State to playing.",
+            "The `Lose` broadcast will not show the final Game Over backdrop yet. Chapter 5 adds that receiver; in this chapter, the `lost` monitor value and hidden shot prove the collision works.",
+            "Turn off the temporary variable monitors after both tests."
           ],
           "hints": [
             "Changing `Game State` before the broadcast prevents another loss cause from starting a second ending.",
-            "Place collision before the short wait so a visible overlap is noticed promptly."
+            "Place collision before the short wait so a visible overlap is noticed promptly.",
+            "The first if asks whether this active shot touches Player. The smaller nested if asks whether the game is still allowed to lose.",
+            "If the new if attaches below `wait 0.03`, drag it by its top edge onto the connection above the wait until the wait moves underneath it."
           ],
           "debuggingTips": [
             {
               "symptom": "The shot passes through Player.",
               "checks": [
                 "Put collision inside the repeat-until loop.",
-                "Make sure Player and Enemy Shot costumes have solid pixels near their costume centers."
+                "Make sure Player and Enemy Shot costumes have solid pixels near their costume centers.",
+                "Check that `touching Player` is in the same `and` reporter as `Enemy Shot Active = 1`."
+              ]
+            },
+            {
+              "symptom": "A hit hides the shot but Game State stays playing.",
+              "checks": [
+                "Put the `Game State = playing` if below `set Enemy Shot Active to 0` inside the collision if.",
+                "Put both `set Game State to lost` and `broadcast Lose` inside that nested state if."
+              ]
+            },
+            {
+              "symptom": "A miss changes Game State to lost.",
+              "checks": [
+                "Confirm the loss blocks are inside the `Enemy Shot Active = 1 and touching Player` collision if.",
+                "Move Player clear of the shot's x position and repeat the miss test after a green-flag reset."
               ]
             }
           ],
@@ -942,19 +1018,29 @@
           "id": "build-three-bunkers",
           "kind": "build",
           "title": "Build Three Independent Bunkers",
-          "explanation": "The hidden Bunker original creates exactly three clones. Each clone receives a number, calculates its x position, and sets its own local Health to 3. A touching active Player Laser or Enemy Shot spends itself and removes one health point from only that clone.",
+          "explanation": "The hidden Bunker original creates exactly three clones. Each clone copies the current local Bunker Number before the original increases it, so the three copies remember 0, 1, and 2. Every clone calculates its own x position and starts its own local Health at 3. A touching active Player Laser or Enemy Shot spends itself first, then removes one health point from only the clone it touched.",
           "instructions": [
-            "Add the Bunker factory script shown below under `Reset Game`.",
-            "Start `Bunker Number` at 0 and create three clones, increasing the number after each clone.",
-            "In the clone-start script, set x to `-130 + Bunker Number * 130`, y to -105, Health to 3, and costume to Full.",
-            "Inside a forever loop, check separately for an active Player Laser and an active Enemy Shot touching the clone.",
-            "Set the touching projectile's active guard to 0, subtract one Health, and switch costume for Health 2 or 1.",
-            "Delete the Bunker clone when Health reaches 0.",
-            "Test each bunker separately to prove health is sprite-local."
+            "Select Bunker, click Code, and find its existing `when I receive Reset Game` stack. Under `hide`, add `set Bunker Number to 0`, then add `repeat 3`; do not make a second Reset Game hat.",
+            "Inside the repeat, add `create clone of myself`. Directly under that block but still inside the repeat, add `change Bunker Number by 1`. Keep this order: each clone must copy its number before the hidden original increases it.",
+            "In an empty part of the workspace, start `when I start as a clone` and add a Motion `go to x: y:` block. Build a plus reporter in x: put -130 in its left hole and `Bunker Number * 130` in its right hole; set y to -105.",
+            "Under the clone's position block, add `set Health to 3`, `switch costume to Full`, `show`, and `forever` in that exact order.",
+            "Inside forever, add the first `if then` for Player Laser damage. Put an `and` in its diamond hole; in the and's left hole build `Laser Active = 1`, and in its right hole choose Sensing `touching Player Laser`.",
+            "Inside that collision if, the first block must be `set Laser Active to 0`; directly under it add `change Health by -1`. Spending the projectile before changing Health prevents one shot from taking several points.",
+            "Still inside the Player Laser collision if, add three separate sibling checks in this order: if `Health = 2`, switch to Damaged; if `Health = 1`, switch to Critical; if `Health = 0`, hide and then attach `delete this clone` directly under hide.",
+            "Add the second projectile `if then` below the first collision if in the same forever loop, not inside the first if. Build `Enemy Shot Active = 1 and touching Enemy Shot`, then repeat the same clear-first, Health, costume, hide, and delete sequence using `set Enemy Shot Active to 0`.",
+            "Read the forever body from top to bottom. It must contain two large sibling collision ifs: Player Laser first and Enemy Shot second. Each large if owns its own three smaller Health checks.",
+            "Click the green flag and confirm exactly three Full bunkers appear at x -130, 0, and 130. If a clone appears in the wrong place, recheck the plus and multiply holes before testing damage.",
+            "For the costume and independence test, hit the left bunker twice with Player Laser, then hit the right bunker once. The left bunker must be Critical, the middle must still be Full, and the right must be Damaged.",
+            "Hit the left bunker a third time to delete it. Fire a fourth laser through the empty left position, then fire at the middle; the fourth left shot must pass through while the middle still absorbs its shot.",
+            "Restart with the green flag, move Player aside, and watch Enemy Shot. A shot that misses through a gap is valid and must leave Game State playing; keep watching until a lane reaches a Bunker, clears Enemy Shot Active to 0, and damages only that clone.",
+            "Click the green flag once more and check that all three Bunkers return at Full. Turn off any temporary variable monitors after the test."
           ],
           "hints": [
             "Bunker numbers 0, 1, and 2 produce x positions -130, 0, and 130.",
-            "Turning off each projectile before changing Health prevents one shot from damaging the same bunker repeatedly."
+            "Turning off each projectile before changing Health prevents one shot from damaging the same bunker repeatedly.",
+            "Build the `-130 + Bunker Number * 130` reporter in empty workspace if it will not fit into x, then drag the completed reporter into the x hole.",
+            "You can finish the whole Player Laser collision if, right-click its top edge, choose duplicate, and place the copy below it. In the copy, change both Laser Active menus to Enemy Shot Active and change touching Player Laser to touching Enemy Shot.",
+            "Cap-shaped `delete this clone` must glow at the connection directly under hide before you release it. A loose block that only looks close will not run."
           ],
           "debuggingTips": [
             {
@@ -969,6 +1055,27 @@
               "checks": [
                 "Set the touching projectile's active guard to 0 before subtracting Health.",
                 "Require `Laser Active = 1` or `Enemy Shot Active = 1` in its matching collision condition."
+              ]
+            },
+            {
+              "symptom": "Critical has a tunnel and a straight shot passes through it.",
+              "checks": [
+                "Set the Eraser size to 10 instead of leaving it at 40.",
+                "Erase small notches from the upper edge and keep solid pixels through the center and lower edge."
+              ]
+            },
+            {
+              "symptom": "Health reaches 0 but the Bunker stays on the Stage.",
+              "checks": [
+                "Put both hide and `delete this clone` inside the `Health = 0` if.",
+                "Snap `delete this clone` directly under hide; do not leave the cap block loose in the workspace."
+              ]
+            },
+            {
+              "symptom": "Only Player Laser damage works, or only Enemy Shot damage works.",
+              "checks": [
+                "Keep the two large projectile collision ifs as siblings inside forever.",
+                "In the second copy, change the active variable and the touching menu to Enemy Shot in both required places."
               ]
             }
           ],
@@ -985,7 +1092,7 @@
           "finishedCode": [
             {
               "target": "Bunker factory and clone health",
-              "code": "when I receive [Reset Game v]\nhide\nset [Bunker Number v] to (0)\nrepeat (3)\n  create clone of [myself v]\n  change [Bunker Number v] by (1)\nend\n\nwhen I start as a clone\ngo to x: ((-130) + ((Bunker Number) * (130))) y: (-105)\nset [Health v] to (3)\nswitch costume to [Full v]\nshow\nforever\n  if <<(Laser Active) = (1)> and <touching [Player Laser v]?>> then\n    set [Laser Active v] to (0)\n    change [Health v] by (-1)\n    if <(Health) = (2)> then\n      switch costume to [Damaged v]\n    end\n    if <(Health) = (1)> then\n      switch costume to [Critical v]\n    end\n    if <(Health) = (0)> then\n      delete this clone\n    end\n  end\n  if <<(Enemy Shot Active) = (1)> and <touching [Enemy Shot v]?>> then\n    set [Enemy Shot Active v] to (0)\n    change [Health v] by (-1)\n    if <(Health) = (2)> then\n      switch costume to [Damaged v]\n    end\n    if <(Health) = (1)> then\n      switch costume to [Critical v]\n    end\n    if <(Health) = (0)> then\n      delete this clone\n    end\n  end\nend"
+              "code": "when I receive [Reset Game v]\nhide\nset [Bunker Number v] to (0)\nrepeat (3)\n  create clone of [myself v]\n  change [Bunker Number v] by (1)\nend\n\nwhen I start as a clone\ngo to x: ((-130) + ((Bunker Number) * (130))) y: (-105)\nset [Health v] to (3)\nswitch costume to [Full v]\nshow\nforever\n  if <<(Laser Active) = (1)> and <touching [Player Laser v]?>> then\n    set [Laser Active v] to (0)\n    change [Health v] by (-1)\n    if <(Health) = (2)> then\n      switch costume to [Damaged v]\n    end\n    if <(Health) = (1)> then\n      switch costume to [Critical v]\n    end\n    if <(Health) = (0)> then\n      hide\n      delete this clone\n    end\n  end\n  if <<(Enemy Shot Active) = (1)> and <touching [Enemy Shot v]?>> then\n    set [Enemy Shot Active v] to (0)\n    change [Health v] by (-1)\n    if <(Health) = (2)> then\n      switch costume to [Damaged v]\n    end\n    if <(Health) = (1)> then\n      switch costume to [Critical v]\n    end\n    if <(Health) = (0)> then\n      hide\n      delete this clone\n    end\n  end\nend"
             }
           ]
         },
@@ -1030,7 +1137,7 @@
             },
             {
               "target": "Bunker, cumulative through Chapter 4",
-              "code": "when I receive [Reset Game v]\nhide\nset [Bunker Number v] to (0)\nrepeat (3)\n  create clone of [myself v]\n  change [Bunker Number v] by (1)\nend\n\nwhen I start as a clone\ngo to x: ((-130) + ((Bunker Number) * (130))) y: (-105)\nset [Health v] to (3)\nswitch costume to [Full v]\nshow\nforever\n  if <<(Laser Active) = (1)> and <touching [Player Laser v]?>> then\n    set [Laser Active v] to (0)\n    change [Health v] by (-1)\n    if <(Health) = (2)> then\n      switch costume to [Damaged v]\n    end\n    if <(Health) = (1)> then\n      switch costume to [Critical v]\n    end\n    if <(Health) = (0)> then\n      delete this clone\n    end\n  end\n  if <<(Enemy Shot Active) = (1)> and <touching [Enemy Shot v]?>> then\n    set [Enemy Shot Active v] to (0)\n    change [Health v] by (-1)\n    if <(Health) = (2)> then\n      switch costume to [Damaged v]\n    end\n    if <(Health) = (1)> then\n      switch costume to [Critical v]\n    end\n    if <(Health) = (0)> then\n      delete this clone\n    end\n  end\nend"
+              "code": "when I receive [Reset Game v]\nhide\nset [Bunker Number v] to (0)\nrepeat (3)\n  create clone of [myself v]\n  change [Bunker Number v] by (1)\nend\n\nwhen I start as a clone\ngo to x: ((-130) + ((Bunker Number) * (130))) y: (-105)\nset [Health v] to (3)\nswitch costume to [Full v]\nshow\nforever\n  if <<(Laser Active) = (1)> and <touching [Player Laser v]?>> then\n    set [Laser Active v] to (0)\n    change [Health v] by (-1)\n    if <(Health) = (2)> then\n      switch costume to [Damaged v]\n    end\n    if <(Health) = (1)> then\n      switch costume to [Critical v]\n    end\n    if <(Health) = (0)> then\n      hide\n      delete this clone\n    end\n  end\n  if <<(Enemy Shot Active) = (1)> and <touching [Enemy Shot v]?>> then\n    set [Enemy Shot Active v] to (0)\n    change [Health v] by (-1)\n    if <(Health) = (2)> then\n      switch costume to [Damaged v]\n    end\n    if <(Health) = (1)> then\n      switch costume to [Critical v]\n    end\n    if <(Health) = (0)> then\n      hide\n      delete this clone\n    end\n  end\nend"
             }
           ]
         }
@@ -1144,7 +1251,8 @@
           "explanation": "A Stage monitor watches `Aliens Left`, the direct measure of the win. The first valid terminal handler to change Game State claims the result. Before the Stage shows that result and stops every script, End Cleanup hides gameplay objects and deactivates reusable sprites. Nothing restarts until the player clicks the green flag.",
           "instructions": [
             "On the Stage, add a `Start Game` monitor that checks for `Aliens Left = 0` while Game State is `playing`.",
-            "On a win, set Game State to `won` before broadcasting `Win`.",
+            "On a win, set Game State to `won`, then choose New message in the broadcast block and create `Win`.",
+            "When adding the first cleanup receiver, choose New message and create `End Cleanup`; reuse that exact message everywhere else.",
             "Add `when I receive End Cleanup` to Player, Alien, and Bunker with `hide`.",
             "Add `when I receive End Cleanup` to Player Laser and Enemy Shot. Set the matching Active guard to 0, then hide.",
             "Add `when I receive End Cleanup` to Mothership. Set Active to 0, then hide.",
@@ -1219,7 +1327,7 @@
             "Confirm every restart returns the Space backdrop, 24 aliens, three Full bunkers, Score 0, and hidden projectiles."
           ],
           "hints": [
-            "To shorten a test, temporarily move Player Laser by 20 instead of 10, then restore 10 afterward.",
+            "For a focused win test, temporarily change each of the Stage's three `wait 0.35 seconds` blocks to `wait 99 seconds`, Enemy Shot's `pick random 1.5 to 3` to `pick random 99 to 99`, and Mothership's `pick random 8 to 14` to `pick random 99 to 99`; keep Player Laser moving by 10 so it cannot skip through a target, then restore all five original waits afterward.",
             "Do not change `Aliens Left` manually during the final test."
           ],
           "debuggingTips": [
@@ -1470,7 +1578,7 @@
             },
             {
               "target": "Bunker",
-              "code": "when I receive [Reset Game v]\nhide\nset [Bunker Number v] to (0)\nrepeat (3)\n  create clone of [myself v]\n  change [Bunker Number v] by (1)\nend\n\nwhen I receive [End Cleanup v]\nhide\n\nwhen I start as a clone\ngo to x: ((-130) + ((Bunker Number) * (130))) y: (-105)\nset [Health v] to (3)\nswitch costume to [Full v]\nshow\nforever\n  if <<<(Game State) = [playing]> and <(Laser Active) = (1)>> and <touching [Player Laser v]?>> then\n    set [Laser Active v] to (0)\n    change [Health v] by (-1)\n    if <(Health) = (2)> then\n      switch costume to [Damaged v]\n    end\n    if <(Health) = (1)> then\n      switch costume to [Critical v]\n    end\n    if <(Health) = (0)> then\n      delete this clone\n    end\n  end\n  if <<<(Game State) = [playing]> and <(Enemy Shot Active) = (1)>> and <touching [Enemy Shot v]?>> then\n    set [Enemy Shot Active v] to (0)\n    change [Health v] by (-1)\n    if <(Health) = (2)> then\n      switch costume to [Damaged v]\n    end\n    if <(Health) = (1)> then\n      switch costume to [Critical v]\n    end\n    if <(Health) = (0)> then\n      delete this clone\n    end\n  end\nend"
+              "code": "when I receive [Reset Game v]\nhide\nset [Bunker Number v] to (0)\nrepeat (3)\n  create clone of [myself v]\n  change [Bunker Number v] by (1)\nend\n\nwhen I receive [End Cleanup v]\nhide\n\nwhen I start as a clone\ngo to x: ((-130) + ((Bunker Number) * (130))) y: (-105)\nset [Health v] to (3)\nswitch costume to [Full v]\nshow\nforever\n  if <<<(Game State) = [playing]> and <(Laser Active) = (1)>> and <touching [Player Laser v]?>> then\n    set [Laser Active v] to (0)\n    change [Health v] by (-1)\n    if <(Health) = (2)> then\n      switch costume to [Damaged v]\n    end\n    if <(Health) = (1)> then\n      switch costume to [Critical v]\n    end\n    if <(Health) = (0)> then\n      hide\n      delete this clone\n    end\n  end\n  if <<<(Game State) = [playing]> and <(Enemy Shot Active) = (1)>> and <touching [Enemy Shot v]?>> then\n    set [Enemy Shot Active v] to (0)\n    change [Health v] by (-1)\n    if <(Health) = (2)> then\n      switch costume to [Damaged v]\n    end\n    if <(Health) = (1)> then\n      switch costume to [Critical v]\n    end\n    if <(Health) = (0)> then\n      hide\n      delete this clone\n    end\n  end\nend"
             },
             {
               "target": "Mothership",

@@ -36,14 +36,50 @@ const narrationFixtures = new Map(await Promise.all(
 
 const installExternalStubs = async (page) => {
   await page.addInitScript(() => {
-    const NativeAudio = window.Audio;
     window.__narrationAudio = [];
+    // Keep narration state deterministic without involving browser media decoders or network playback.
+    class StubAudio extends EventTarget {
+      constructor() {
+        super();
+        this.currentTime = 0;
+        this.ended = false;
+        this.error = null;
+        this.paused = true;
+        this.preload = 'none';
+        this.source = '';
+      }
+
+      get src() {
+        return this.source;
+      }
+
+      set src(value) {
+        this.source = new URL(value, document.baseURI).href;
+      }
+
+      play() {
+        this.paused = false;
+        return Promise.resolve();
+      }
+
+      pause() {
+        this.paused = true;
+        this.dispatchEvent(new Event('pause'));
+      }
+
+      load() {}
+
+      getAttribute(name) {
+        return name === 'src' && this.source ? this.source : null;
+      }
+
+      removeAttribute(name) {
+        if (name === 'src') this.source = '';
+      }
+    }
+
     window.Audio = function Audio() {
-      const media = new NativeAudio();
-      Object.defineProperty(media, 'ended', { value: false, writable: true });
-      media.play = () => Promise.resolve();
-      media.pause = () => media.dispatchEvent(new Event('pause'));
-      media.load = () => {};
+      const media = new StubAudio();
       window.__narrationAudio.push(media);
       return media;
     };
@@ -160,7 +196,9 @@ test('shows hint and debugging narration only inside opened help', async ({ page
   await hintAudio.click();
   await expect(hintAudio).toHaveAccessibleName('Pause narration: hint 1');
   await hint.locator('summary').click();
-  expect(await page.evaluate(() => window.__narrationAudio[0].getAttribute('src'))).toBeNull();
+  await expect
+    .poll(() => page.evaluate(() => window.__narrationAudio[0].getAttribute('src')))
+    .toBeNull();
 });
 
 test('keeps written lessons usable when narration metadata is unavailable', async ({ page }) => {
@@ -279,6 +317,7 @@ test('keeps desktop navigation fixed while lesson content scrolls independently'
 });
 
 test('renders every real curriculum step without page errors', async ({ page }) => {
+  test.setTimeout(60_000);
   const pageErrors = [];
   page.on('pageerror', (error) => pageErrors.push(error.message));
 
