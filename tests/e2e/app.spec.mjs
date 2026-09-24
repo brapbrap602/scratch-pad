@@ -31,7 +31,7 @@ const narrationManifest = async (lessonId) => {
 };
 
 const narrationFixtures = new Map(await Promise.all(
-  ['brick-breaker', 'space-invaders'].map(async (id) => [id, await narrationManifest(id)]),
+  ['brick-breaker', 'space-invaders', 'tower-defense'].map(async (id) => [id, await narrationManifest(id)]),
 ));
 
 const installExternalStubs = async (page) => {
@@ -120,7 +120,7 @@ test.beforeEach(async ({ page }) => {
 test('loads chaptered lessons and uses semantic milestone controls', async ({ page }) => {
   const selector = page.getByLabel('Project');
   await expect(selector).toBeEnabled();
-  await expect(selector.locator('option')).toHaveCount(3);
+  await expect(selector.locator('option')).toHaveCount(4);
 
   await selector.selectOption('brick-breaker');
   await expect(page.getByRole('heading', { name: 'Brick Breaker', exact: true })).toBeVisible();
@@ -321,7 +321,7 @@ test('renders every real curriculum step without page errors', async ({ page }) 
   const pageErrors = [];
   page.on('pageerror', (error) => pageErrors.push(error.message));
 
-  for (const lessonId of ['brick-breaker', 'space-invaders']) {
+  for (const lessonId of narrationFixtures.keys()) {
     await page.getByLabel('Project').selectOption(lessonId);
     await expect(page.locator('.step-button').first()).toBeVisible();
     await expect(page.locator('.narration-button').first()).toBeAttached();

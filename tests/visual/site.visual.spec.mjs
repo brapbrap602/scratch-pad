@@ -6,7 +6,7 @@ import { NARRATION_PROFILE, extractNarrationSections } from '../../js/narration-
 
 const output = 'visual-results';
 const manifests = new Map(await Promise.all(
-  ['brick-breaker', 'space-invaders'].map(async (lessonId) => {
+  ['brick-breaker', 'space-invaders', 'tower-defense'].map(async (lessonId) => {
     const lesson = validateLessonDocument(
       JSON.parse(await readFile(new URL(`../../curriculum/${lessonId}.json`, import.meta.url), 'utf8')),
       lessonId,
@@ -103,4 +103,60 @@ test('captures real desktop and mobile course states', async ({ page }) => {
   await page.screenshot({ path: `${output}/04-invaders-mobile.png`, fullPage: true });
 
   expect(pageErrors).toEqual([]);
+});
+
+test('captures tower defense lists, My Blocks, level settings, and mobile challenge', async ({ page }) => {
+  const errors = [];
+  page.on('pageerror', (error) => errors.push(error.message));
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.goto('/');
+  await page.getByLabel('Project').selectOption('tower-defense');
+  await expect(page.getByRole('heading', { name: 'Tower Defense', exact: true })).toBeVisible();
+  await page.screenshot({ path: `${output}/05-tower-defense-desktop.png` });
+
+  for (const [stepId, filename, expectedText] of [
+    ['check-a-numbered-shot', '06-tower-defense-shot-blocks.png', 'slot'],
+    ['level-two-settings', '07-tower-defense-level-settings.png', 'Load level settings'],
+  ]) {
+    await page.locator(`.step-button[data-step-id="${stepId}"]`).click();
+    const code = page.getByText('Show finished code').locator('..');
+    await code.locator('summary').first().click();
+    const nested = code.locator(':scope > .details-content > details').first();
+    const entry = await nested.count() ? nested : code.locator(':scope > .details-content');
+    if (await nested.count()) await nested.locator('summary').click();
+    await expect(entry.locator('svg').first()).toBeVisible();
+    await expect(entry.locator('svg').first()).toContainText(new RegExp(expectedText.split(' ').join('\\s*')));
+    if (stepId === 'check-a-numbered-shot') {
+      await expect(entry.locator('.sb3-custom-arg').first()).toHaveCSS('fill', 'rgb(255, 102, 128)');
+    }
+    await entry.evaluate((node) => {
+      const area = node.closest('.content-area');
+      area.scrollTo({
+        top: area.scrollTop + node.getBoundingClientRect().top - area.getBoundingClientRect().top - 16,
+        behavior: 'instant',
+      });
+    });
+    await page.screenshot({ path: `${output}/${filename}` });
+    if (stepId === 'check-a-numbered-shot') {
+      const scroll = entry.locator('.code-scroll');
+      await scroll.evaluate((node) => { node.scrollLeft = node.scrollWidth; });
+      expect(await scroll.evaluate((node) => node.scrollLeft)).toBeGreaterThan(0);
+      await page.screenshot({ path: `${output}/06b-tower-defense-shot-blocks-right.png` });
+    } else {
+      await entry.locator('svg text').last().scrollIntoViewIfNeeded();
+      await page.screenshot({ path: `${output}/07b-tower-defense-level-settings-bottom.png` });
+    }
+  }
+
+  await page.setViewportSize({ width: 320, height: 800 });
+  await page.getByRole('button', { name: 'Show chapters' }).click();
+  await page.locator('.step-button[data-step-id="design-your-own-level"]').click();
+  await expect(page.getByRole('heading', { name: 'Your Challenge: Design Level 3' })).toBeFocused();
+  const referenceSave = page.locator('.instruction-list > li').filter({ hasText: 'tower-defense-two-levels.sb3' });
+  await expect(referenceSave.locator('svg')).toHaveCount(0);
+  const levelBranch = page.locator('.instruction-list > li').filter({ hasText: 'Load level settings' });
+  await expect(levelBranch.locator('svg .sb3-control').first()).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
+  await page.screenshot({ path: `${output}/08-tower-defense-mobile-challenge.png`, fullPage: true });
+  expect(errors).toEqual([]);
 });

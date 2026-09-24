@@ -22,7 +22,7 @@ test('the real lesson index and curricula satisfy the runtime contract', async (
 });
 
 test('all chapter and step IDs are unique and every chapter ends in a checkpoint', async () => {
-  for (const slug of ['brick-breaker', 'space-invaders']) {
+  for (const slug of await loadJson('../../curriculum/lessons.json')) {
     const lesson = await loadJson(`../../curriculum/${slug}.json`);
     const chapterIds = lesson.chapters.map(({ id }) => id);
     const steps = lesson.chapters.flatMap(({ steps }) => steps);

@@ -21,6 +21,7 @@ test('extracts every visible learner-prose section exactly once', async () => {
   const expected = new Map([
     ['brick-breaker', 298],
     ['space-invaders', 436],
+    ['tower-defense', 415],
   ]);
   let sentenceCount = 0;
   const speech = [];
@@ -36,8 +37,8 @@ test('extracts every visible learner-prose section exactly once', async () => {
     speech.push(...sections.flatMap((section) => section.sentences.map((sentence) => sentence.speech)));
   }
 
-  assert.equal(sentenceCount, 1433);
-  assert.equal(new Set(speech).size, 1426);
+  assert.equal(sentenceCount, 2288);
+  assert.equal(new Set(speech).size, 2275);
 });
 
 test('verbalizes current Scratch syntax without leaking markup', () => {
