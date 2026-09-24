@@ -235,6 +235,7 @@ const generate = async () => {
     console.log(`Reusing ${assets.size} request(s); generating ${pending.length}.`);
     if (pending.length > 0) {
       const results = await runWorker(pending);
+      console.log(`Verifying and publishing ${results.length} audio assets...`);
       const returned = new Set();
       for (const result of results) {
         if (!jobs.has(result.requestHash) || returned.has(result.requestHash)) {
@@ -242,12 +243,16 @@ const generate = async () => {
         }
         returned.add(result.requestHash);
         assets.set(result.requestHash, await promoteWorkerResult(result));
+        if (returned.size % 100 === 0 || returned.size === results.length) {
+          console.log(`Verified and published ${returned.size}/${results.length} audio assets.`);
+        }
       }
       for (const job of pending) {
         if (!returned.has(job.requestHash)) throw new Error(`Worker omitted ${job.requestHash}`);
       }
     }
 
+    console.log(`Building and validating ${lessons.length} lesson manifests...`);
     const manifests = lessons.map((entry) => {
       const manifest = buildManifest(entry, assets);
       validateNarrationManifest(manifest, entry.lesson);
@@ -255,6 +260,7 @@ const generate = async () => {
     });
     for (const { entry, manifest } of manifests) {
       await writeJsonAtomic(path.join(manifestDirectory, `${entry.lesson.id}.json`), manifest);
+      console.log(`Wrote narration manifest: ${entry.lesson.id}`);
     }
     console.log('Narration generation complete.');
   } finally {

@@ -4,6 +4,7 @@ import hashlib
 import json
 import os
 import re
+import time
 from pathlib import Path
 
 import edge_tts
@@ -44,7 +45,7 @@ def inspect_mp3(path: Path) -> tuple[str, int, int]:
     return hashlib.sha256(data).hexdigest(), len(data), duration_ms
 
 
-async def synthesize(job: dict[str, str], work_dir: Path, semaphore: asyncio.Semaphore) -> dict:
+async def synthesize(job: dict[str, str], work_dir: Path, semaphore: asyncio.Semaphore, progress) -> dict:
     request_hash = job["requestHash"]
     staged_dir = work_dir / "staged"
     receipt_dir = work_dir / "receipts"
@@ -64,6 +65,7 @@ async def synthesize(job: dict[str, str], work_dir: Path, semaphore: asyncio.Sem
                 "stagedPath": staged.relative_to(work_dir).as_posix(),
             }
             write_json_atomic(receipt, result)
+            progress("reused")
             return result
         except Exception:
             staged.unlink(missing_ok=True)
@@ -84,14 +86,20 @@ async def synthesize(job: dict[str, str], work_dir: Path, semaphore: asyncio.Sem
                 "stagedPath": staged.relative_to(work_dir).as_posix(),
             }
             write_json_atomic(receipt, result)
+            progress("generated")
             return result
         except asyncio.CancelledError:
             temporary.unlink(missing_ok=True)
             raise
-        except Exception:
+        except Exception as error:
             temporary.unlink(missing_ok=True)
             if attempt == RETRY_ATTEMPTS:
                 raise
+            print(
+                f"Retry {attempt + 1}/{RETRY_ATTEMPTS} for {request_hash[:12]}: "
+                f"{type(error).__name__}: {error}",
+                flush=True,
+            )
             await asyncio.sleep(RETRY_BASE_DELAY * (2 ** (attempt - 1)))
 
     raise RuntimeError(f"Unable to synthesize {request_hash}")
@@ -112,7 +120,33 @@ async def main() -> None:
         raise ValueError("Jobs contain duplicate requestHash values")
 
     semaphore = asyncio.Semaphore(CONCURRENCY)
-    tasks = [asyncio.create_task(synthesize(job, args.work_dir, semaphore)) for job in validated]
+    started = time.monotonic()
+    last_completion = started
+    counts = {"generated": 0, "reused": 0}
+
+    def elapsed() -> str:
+        minutes, seconds = divmod(int(time.monotonic() - started), 60)
+        return f"{minutes}m {seconds:02d}s"
+
+    def progress(kind: str) -> None:
+        nonlocal last_completion
+        counts[kind] += 1
+        last_completion = time.monotonic()
+        label = "Generated" if kind == "generated" else "Reused staged clip"
+        print(f"[{sum(counts.values())}/{len(validated)}] {label} | elapsed {elapsed()}", flush=True)
+
+    async def heartbeat() -> None:
+        while True:
+            await asyncio.sleep(15)
+            if time.monotonic() - last_completion >= 15:
+                print(
+                    f"[{sum(counts.values())}/{len(validated)}] Still working; "
+                    f"waiting for audio service | elapsed {elapsed()}",
+                    flush=True,
+                )
+
+    heartbeat_task = asyncio.create_task(heartbeat())
+    tasks = [asyncio.create_task(synthesize(job, args.work_dir, semaphore, progress)) for job in validated]
     try:
         results = await asyncio.gather(*tasks)
     except BaseException:
@@ -120,7 +154,15 @@ async def main() -> None:
             task.cancel()
         await asyncio.gather(*tasks, return_exceptions=True)
         raise
+    finally:
+        heartbeat_task.cancel()
+        await asyncio.gather(heartbeat_task, return_exceptions=True)
     write_json_atomic(args.results, results)
+    print(
+        f"Audio synthesis complete: {counts['generated']} generated, "
+        f"{counts['reused']} reused staged clips | elapsed {elapsed()}",
+        flush=True,
+    )
 
 
 if __name__ == "__main__":
