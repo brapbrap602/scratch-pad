@@ -4,6 +4,7 @@ import { readFile } from 'node:fs/promises';
 
 import { validateLessonDocument } from '../../js/content.js';
 import { NARRATION_PROFILE, extractNarrationSections } from '../../js/narration-content.js';
+import { createNarrationGroups } from '../../js/narration-groups.js';
 
 const narrationManifest = async (lessonId) => {
   const lesson = validateLessonDocument(
@@ -11,6 +12,7 @@ const narrationManifest = async (lessonId) => {
     lessonId,
   );
   const digest = 'a'.repeat(64);
+  let clipIndex = 0;
   return {
     schemaVersion: 1,
     lessonId,
@@ -21,8 +23,8 @@ const narrationManifest = async (lessonId) => {
       sentences: section.sentences.map((sentence) => ({
         ...sentence,
         requestHash: digest,
-        src: `audio/assets/aa/${digest}.mp3`,
-        sha256: digest,
+        src: `audio/assets/aa/aa${(++clipIndex).toString(16).padStart(62, '0')}.mp3`,
+        sha256: `aa${clipIndex.toString(16).padStart(62, '0')}`,
         bytes: 1,
         durationMs: 1,
       })),
@@ -182,6 +184,98 @@ test('plays, pauses, advances, and resets a sentence narration queue', async ({ 
   await page.getByRole('button', { name: /Next step/ }).click();
   await expect(page.getByRole('heading', { name: 'Create the Sprites, Backdrops, and Shared Data' })).toBeFocused();
   expect(await page.evaluate(() => window.__narrationAudio[0].getAttribute('src'))).toBeNull();
+});
+
+test('Build it plays all instructions in order alongside individual controls', async ({ page }) => {
+  await page.getByLabel('Project').selectOption('tower-defense');
+  await page.locator('.step-button').first().click();
+  const build = page.getByRole('button', { name: 'Play narration: Build it', exact: true });
+  await expect(build).toHaveCount(1);
+  await expect(page.locator('.instruction-list .narration-button')).toHaveCount(
+    await page.locator('article > .instruction-list > li').count(),
+  );
+  const groupId = await build.getAttribute('data-narration-section-id');
+  const sentences = narrationFixtures.get('tower-defense').sections
+    .filter(({ id }) => id.startsWith(`${groupId}/`))
+    .flatMap(({ sentences }) => sentences);
+  expect(sentences.length).toBeGreaterThan(1);
+  await build.click();
+  const control = page.locator(`button[data-narration-section-id="${groupId}"]`);
+  for (const [index, sentence] of sentences.entries()) {
+    await expect.poll(() => page.evaluate(() => window.__narrationAudio[0].src))
+      .toContain(sentence.src);
+    await expect(control).toHaveAccessibleName('Pause narration: Build it');
+    if (index === 1) {
+      await control.click();
+      await expect(control).toHaveAccessibleName('Play narration: Build it');
+      await control.click();
+      expect(await page.evaluate(() => window.__narrationAudio[0].src)).toContain(sentence.src);
+    }
+    await page.evaluate(() => {
+      const audio = window.__narrationAudio[0];
+      audio.ended = true;
+      audio.dispatchEvent(new Event('ended'));
+      audio.ended = false;
+    });
+  }
+  await expect(control).toHaveAccessibleName('Play narration: Build it');
+  expect(await page.evaluate(() => window.__narrationAudio[0].getAttribute('src'))).toBeNull();
+
+  await control.click();
+  await page.locator('button[data-narration-section-id$="/overview"]').click();
+  await expect(control).toHaveAccessibleName('Play narration: Build it');
+  await expect(page.locator('button[data-narration-section-id$="/overview"]'))
+    .toHaveAttribute('aria-label', /Pause narration/);
+});
+
+test('individual instruction playback stops at its boundary and switches cleanly with play all', async ({ page }) => {
+  const section = narrationFixtures.get('tower-defense').sections.find(({ id, sentences }) =>
+    id.includes('/instruction/') && sentences.length > 1,
+  );
+  expect(section).toBeTruthy();
+  await page.getByLabel('Project').selectOption('tower-defense');
+  await page.locator(`.step-button[data-step-id="${section.id.split('/')[1]}"]`).click();
+  const group = page.locator('button[data-narration-section-id$="/instruction"]');
+  const item = page.locator(`button[data-narration-section-id="${section.id}"]`);
+  await group.click();
+  await item.click();
+  await expect(group).toHaveAccessibleName('Play narration: Build it');
+  for (const sentence of section.sentences) {
+    await expect.poll(() => page.evaluate(() => window.__narrationAudio[0].src)).toContain(sentence.src);
+    await expect(item).toHaveAttribute('aria-label', /^Pause narration:/);
+    await page.evaluate(() => {
+      const audio = window.__narrationAudio[0];
+      audio.ended = true;
+      audio.paused = true;
+      audio.dispatchEvent(new Event('pause'));
+      audio.dispatchEvent(new Event('ended'));
+      audio.ended = false;
+    });
+  }
+  await expect(item).toHaveAttribute('aria-label', /^Play narration:/);
+  expect(await page.evaluate(() => window.__narrationAudio[0].getAttribute('src'))).toBeNull();
+  await item.click();
+  await group.click();
+  await expect(item).toHaveAttribute('aria-label', /^Play narration:/);
+  await expect(group).toHaveAccessibleName('Pause narration: Build it');
+});
+
+test('welcome narration groups lists and stops vocabulary when collapsed', async ({ page }) => {
+  await page.getByLabel('Project').selectOption('tower-defense');
+  for (const title of ['What you will learn', 'Before you start', 'What you need']) {
+    await expect(page.getByRole('button', { name: `Play narration: ${title}`, exact: true })).toBeVisible();
+  }
+  await expect(page.getByRole('button', { name: 'Play narration: objective 1', exact: true })).toBeVisible();
+  const vocabulary = page.getByRole('button', { name: 'Play narration: Course vocabulary', exact: true });
+  await expect(vocabulary).toBeHidden();
+  await page.locator('summary').filter({ hasText: 'Course vocabulary' }).click();
+  await vocabulary.click();
+  await page.locator('summary').filter({ hasText: 'Course vocabulary' }).click();
+  await expect.poll(() => page.evaluate(() => window.__narrationAudio[0].getAttribute('src'))).toBeNull();
+  await page.locator('summary').filter({ hasText: 'Course vocabulary' }).click();
+  await page.locator('button[data-narration-section-id="welcome/vocabulary/000"]').click();
+  await page.locator('summary').filter({ hasText: 'Course vocabulary' }).click();
+  await expect.poll(() => page.evaluate(() => window.__narrationAudio[0].getAttribute('src'))).toBeNull();
 });
 
 test('shows hint and debugging narration only inside opened help', async ({ page }) => {
@@ -352,7 +446,10 @@ test('renders every real curriculum step without page errors', async ({ page }) 
         }
       }
     }
-    const expectedIds = narrationFixtures.get(lessonId).sections.map(({ id }) => id).sort();
+    const sections = narrationFixtures.get(lessonId).sections;
+    const expectedIds = [...new Set([
+      ...createNarrationGroups(sections).keys(), ...sections.map(({ id }) => id),
+    ])].sort();
     expect([...narrationIds].sort()).toEqual(expectedIds);
   }
 

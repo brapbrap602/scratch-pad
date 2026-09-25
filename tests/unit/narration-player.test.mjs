@@ -64,6 +64,26 @@ test('plays an ordered sentence queue and returns to idle at the end', async () 
   assert.equal(states.at(-1).state, 'idle');
 });
 
+test('natural end pause events do not interrupt the next sentence', async () => {
+  const audio = new FakeAudio();
+  const player = createNarrationPlayer({ audioFactory: () => audio });
+  player.toggle('build', [{ src: 'one.mp3' }, { src: 'two.mp3' }]);
+  await flush();
+
+  // Native media emits pause with ended=true before it dispatches ended.
+  audio.ended = true;
+  audio.pause();
+  audio.emit('ended');
+  await flush();
+  assert.equal(audio.src, 'two.mp3');
+  assert.equal(audio.paused, false);
+  assert.equal(player.getState().state, 'playing');
+
+  // An actual external pause in the middle of a clip still pauses the queue.
+  audio.pause();
+  assert.equal(player.getState().state, 'paused');
+});
+
 test('pauses and resumes the current sentence without resetting time', async () => {
   const audio = new FakeAudio();
   const player = createNarrationPlayer({ audioFactory: () => audio });

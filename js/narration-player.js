@@ -130,6 +130,8 @@ export const createNarrationPlayer = ({
   };
 
   const handlePause = () => {
+    // Natural completion emits pause before ended. Let ended advance the queue.
+    if (audio.ended) return;
     if (activeSectionId === null || !desiredPlaying || state !== 'playing' || !audio.paused) return;
     desiredPlaying = false;
     state = 'paused';

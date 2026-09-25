@@ -6,6 +6,7 @@ import {
 } from './content.js';
 import { validateNarrationManifest } from './narration-content.js';
 import { createNarrationPlayer } from './narration-player.js';
+import { createNarrationGroups } from './narration-groups.js';
 import { createProgressStore } from './progress.js';
 
 const lessonSelect = document.querySelector('#lesson-select');
@@ -36,9 +37,9 @@ const element = (tag, options = {}) => {
   return node;
 };
 
-const setStatus = (message) => {
+const setStatus = (message, { visible = false } = {}) => {
   status.textContent = message;
-  status.classList.toggle('visually-hidden', message === '');
+  status.classList.toggle('visually-hidden', !visible || message === '');
 };
 
 const setError = (message) => {
@@ -179,21 +180,32 @@ const renderPendingScratch = (root, includeDisplay = false) => {
   }
 };
 
+const appendNarratedHeading = (parent, title, sectionId) => {
+  const row = element('div', { className: 'narrated-heading section-heading' });
+  row.append(element('h3', { text: title }), createNarrationSlot(sectionId, title));
+  parent.append(row);
+};
+
+const createNarratedItem = (text, sectionId, label) => {
+  const row = element('div', { className: 'narrated-list-row' });
+  row.append(createNarrationSlot(sectionId, label), text);
+  return row;
+};
+
 const appendTextList = (parent, items, className = '', narration = null) => {
   const list = element('ul', { className });
   items.forEach((item, index) => {
-    const listItem = element('li');
+    const li = element('li');
     if (narration) {
-      const row = element('div', { className: 'narrated-list-row' });
-      row.append(
-        createNarrationSlot(`${narration.prefix}/${String(index).padStart(3, '0')}`, `${narration.label} ${index + 1}`),
+      li.append(createNarratedItem(
         element('span', { text: item }),
-      );
-      listItem.append(row);
+        `${narration.prefix}/${String(index).padStart(3, '0')}`,
+        `${narration.label} ${index + 1}`,
+      ));
     } else {
-      listItem.textContent = item;
+      li.textContent = item;
     }
-    list.append(listItem);
+    list.append(li);
   });
   parent.append(list);
 };
@@ -235,7 +247,10 @@ const renderNavigation = () => {
         className: 'step-button',
         attrs: { type: 'button', 'data-step-id': step.id },
       });
-      button.append(element('span', { text: `${stepNumber}. ${step.title}` }));
+      button.append(
+        element('span', { className: 'step-number', text: `${stepNumber}. ` }),
+        element('span', { className: 'step-label', text: step.title }),
+      );
       button.append(
         element('span', {
           className: `completion-mark ${lessonProgress.completedStepIds.includes(step.id) ? '' : 'visually-hidden'}`,
@@ -261,39 +276,39 @@ const renderWelcome = () => {
     element('p', { className: 'prose', text: currentLesson.description }),
   );
   card.append(description);
-  card.append(element('h3', { text: 'What you will learn' }));
+  appendNarratedHeading(card, 'What you will learn', 'welcome/objective');
   appendTextList(card, currentLesson.objectives, 'criteria-list', {
-    prefix: 'welcome/objective',
-    label: 'objective',
+    prefix: 'welcome/objective', label: 'objective',
   });
-  card.append(element('h3', { text: 'Before you start' }));
+  appendNarratedHeading(card, 'Before you start', 'welcome/prerequisite');
   appendTextList(card, currentLesson.prerequisites, 'criteria-list', {
-    prefix: 'welcome/prerequisite',
-    label: 'prerequisite',
+    prefix: 'welcome/prerequisite', label: 'prerequisite',
   });
-  card.append(element('h3', { text: 'What you need' }));
+  appendNarratedHeading(card, 'What you need', 'welcome/requirement');
   appendTextList(card, currentLesson.requirements, 'criteria-list', {
-    prefix: 'welcome/requirement',
-    label: 'requirement',
+    prefix: 'welcome/requirement', label: 'requirement',
   });
 
   const vocabulary = element('details');
   vocabulary.append(element('summary', { text: 'Course vocabulary' }));
-  const definitions = element('dl', { className: 'details-content' });
+  const vocabularyBody = element('div', { className: 'details-content' });
+  vocabularyBody.append(createNarrationSlot('welcome/vocabulary', 'Course vocabulary'));
+  const definitions = element('dl');
   currentLesson.vocabulary.forEach((entry, index) => {
     definitions.append(element('dt', { text: entry.term }));
     const meaning = element('dd');
-    const row = element('div', { className: 'narrated-list-row' });
-    row.append(
-      createNarrationSlot(`welcome/vocabulary/${String(index).padStart(3, '0')}`, `vocabulary term ${entry.term}`),
+    meaning.append(createNarratedItem(
       element('span', { text: entry.meaning }),
-    );
-    meaning.append(row);
+      `welcome/vocabulary/${String(index).padStart(3, '0')}`,
+      `vocabulary term ${entry.term}`,
+    ));
     definitions.append(meaning);
   });
-  vocabulary.append(definitions);
+  vocabularyBody.append(definitions);
+  vocabulary.append(vocabularyBody);
   vocabulary.addEventListener('toggle', () => {
-    if (!vocabulary.open && narrationPlayer.getState().sectionId?.startsWith('welcome/vocabulary/')) {
+    const activeId = narrationPlayer.getState().sectionId;
+    if (!vocabulary.open && (activeId === 'welcome/vocabulary' || activeId?.startsWith('welcome/vocabulary/'))) {
       narrationPlayer.stop();
     }
   });
@@ -308,7 +323,9 @@ const renderWelcome = () => {
     text: lessonProgress.lastViewedStepId ? 'Resume course' : 'Start course',
     attrs: { type: 'button', 'data-step-id': startId },
   });
-  card.append(start);
+  const startActions = element('div', { className: 'course-start-actions' });
+  startActions.append(start);
+  card.append(startActions);
   contentArea.replaceChildren(card);
   updateNavigationState();
 };
@@ -349,10 +366,12 @@ const appendHints = (parent, step) => {
     step.hints.forEach((hint, index) => {
       const details = element('details');
       details.append(element('summary', { text: `Hint ${index + 1}` }));
-      const body = element('div', { className: 'details-content prose' });
+      const body = element('div', { className: 'details-content narrated-help' });
       const sectionId = `${sectionRoot}/hint/${String(index).padStart(3, '0')}`;
+      const text = element('div', { className: 'prose' });
       body.append(createNarrationSlot(sectionId, `hint ${index + 1}`));
-      appendRichText(body, hint);
+      appendRichText(text, hint);
+      body.append(text);
       details.append(body);
       details.addEventListener('toggle', () => {
         if (!details.open && narrationPlayer.getState().sectionId === sectionId) narrationPlayer.stop();
@@ -367,10 +386,10 @@ const appendHints = (parent, step) => {
     step.debuggingTips.forEach((tip, index) => {
       const details = element('details');
       details.append(element('summary', { text: tip.symptom }));
-      const body = element('div', { className: 'details-content prose' });
+      const body = element('div', { className: 'details-content narrated-help' });
       const sectionId = `${sectionRoot}/debug/${String(index).padStart(3, '0')}`;
       body.append(createNarrationSlot(sectionId, `debugging help for ${tip.symptom}`));
-      const list = element('ol', { className: 'instruction-list' });
+      const list = element('ol', { className: 'instruction-list prose' });
       for (const check of tip.checks) {
         const item = element('li');
         appendRichText(item, check);
@@ -451,20 +470,26 @@ const navigateToStep = (stepId, { focus = true } = {}) => {
   appendRichText(explanation, step.explanation);
   article.append(explanation);
 
-  article.append(element('h3', { text: 'Build it' }));
-  const instructions = element('ol', { className: 'instruction-list prose' });
-  step.instructions.forEach((instruction, instructionIndex) => {
+  appendNarratedHeading(article, 'Build it', `${sectionRoot}/instruction`);
+  const instructions = element('ol', {
+    className: 'instruction-list build-instructions prose',
+    attrs: { role: 'list' },
+  });
+  step.instructions.forEach((instruction, index) => {
     const item = element('li');
-    const row = element('div', { className: 'narrated-list-row' });
-    row.append(
-      createNarrationSlot(
-        `${sectionRoot}/instruction/${String(instructionIndex).padStart(3, '0')}`,
-        `instruction ${instructionIndex + 1}`,
-      ),
-    );
+    const number = element('span', {
+      className: 'instruction-number',
+      text: `${index + 1}.`,
+      attrs: { 'aria-hidden': 'true' },
+    });
     const text = element('span');
     appendRichText(text, instruction);
-    row.append(text);
+    const row = createNarratedItem(
+      text,
+      `${sectionRoot}/instruction/${String(index).padStart(3, '0')}`,
+      `instruction ${index + 1}`,
+    );
+    row.insertBefore(number, text);
     item.append(row);
     instructions.append(item);
   });
@@ -478,8 +503,10 @@ const navigateToStep = (stepId, { focus = true } = {}) => {
     createNarrationSlot(`${sectionRoot}/checkpoint`, `${step.title} checkpoint`),
   );
   checkpoint.append(checkpointHeading);
-  checkpoint.append(element('p', { text: step.checkpoint.task }));
-  checkpoint.append(element('p', { text: `Expected: ${step.checkpoint.expectedResult}` }));
+  checkpoint.append(element('p', { className: 'checkpoint-task', text: step.checkpoint.task }));
+  checkpoint.append(element('h4', { text: 'Expected result' }));
+  checkpoint.append(element('p', { text: step.checkpoint.expectedResult }));
+  checkpoint.append(element('h4', { text: 'You’re done when' }));
   appendTextList(checkpoint, step.checkpoint.completeWhen, 'criteria-list');
   article.append(checkpoint);
   appendHints(article, step);
@@ -567,7 +594,7 @@ const loadLesson = async (lessonId) => {
     renderNavigation();
     renderWelcome();
     setStatus(`${lesson.title} loaded.`);
-    if (!progress.isPersistent()) setStatus(`${lesson.title} loaded. Progress will not be saved.`);
+    if (!progress.isPersistent()) setStatus(`${lesson.title} loaded. Progress will not be saved.`, { visible: true });
     void (async () => {
       const result = await narrationRequest;
       if (version !== requestVersion) return;
@@ -576,7 +603,8 @@ const loadLesson = async (lessonId) => {
         if (!result.response.ok) throw new Error(`Narration request failed with ${result.response.status}`);
         const manifest = validateNarrationManifest(await result.response.json(), lesson);
         if (version !== requestVersion) return;
-        narrationSections = new Map(manifest.sections.map((section) => [section.id, section]));
+        narrationSections = createNarrationGroups(manifest.sections);
+        for (const section of manifest.sections) narrationSections.set(section.id, section);
         attachNarrationControls(contentArea);
       } catch (narrationError) {
         if (narrationError.name === 'AbortError' || version !== requestVersion) return;
