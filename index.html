@@ -54,16 +54,19 @@
         --notice: #c3c8d4;
         --error: #fecaca;
         --focus: var(--butter);
+        --game-brick-breaker: #f6ad6b; --game-brick-breaker-tint: #3a2a1c;
+        --game-space-invaders: #7fd99a; --game-space-invaders-tint: #1b3626;
+        --game-tower-defense: #c2aefc; --game-tower-defense-tint: #2c2547;
         --accent: var(--blue);
         --accent-tint: var(--blue-tint);
-        --glow: rgb(142 202 230 / 8%);
+        --glow: color-mix(in srgb, var(--accent) 9%, transparent);
         background: var(--canvas);
         color: var(--text);
       }
       /* Each game gets its own accent so learners always know which project is open. */
-      :root[data-lesson="brick-breaker"] { --accent: #f6ad6b; --accent-tint: #3a2a1c; --glow: rgb(246 173 107 / 9%); }
-      :root[data-lesson="space-invaders"] { --accent: #7fd99a; --accent-tint: #1b3626; --glow: rgb(127 217 154 / 9%); }
-      :root[data-lesson="tower-defense"] { --accent: #c2aefc; --accent-tint: #2c2547; --glow: rgb(194 174 252 / 9%); }
+      :root[data-lesson="brick-breaker"], [data-lesson-card="brick-breaker"] { --accent: var(--game-brick-breaker); --accent-tint: var(--game-brick-breaker-tint); }
+      :root[data-lesson="space-invaders"], [data-lesson-card="space-invaders"] { --accent: var(--game-space-invaders); --accent-tint: var(--game-space-invaders-tint); }
+      :root[data-lesson="tower-defense"], [data-lesson-card="tower-defense"] { --accent: var(--game-tower-defense); --accent-tint: var(--game-tower-defense-tint); }
       @media (prefers-color-scheme: light) {
         :root:not([data-theme="dark"]) {
           color-scheme: light;
@@ -73,11 +76,8 @@
           --sage: #2c7a52; --sage-tint: #e2f3e9; --butter: #7d5900; --butter-tint: #fff5d9; --peach: #a3443d;
           --header-bg: linear-gradient(115deg, #ffffff 0%, #eef3fb 100%);
           --checkpoint-text: #3d2f00; --complete-text: #153d29; --complete-hover: #cfeadb;
-          --notice: #44506a; --error: #9b1c1c; --focus: #1b6a9e; --glow: rgb(27 106 158 / 6%);
+          --notice: #44506a; --error: #9b1c1c; --focus: #1b6a9e; --game-brick-breaker: #b4560f; --game-brick-breaker-tint: #fdebdc; --game-space-invaders: #23783f; --game-space-invaders-tint: #e0f4e6; --game-tower-defense: #6447c2; --game-tower-defense-tint: #ece7fd;
         }
-        :root:not([data-theme="dark"])[data-lesson="brick-breaker"] { --accent: #b4560f; --accent-tint: #fdebdc; --glow: rgb(180 86 15 / 6%); }
-        :root:not([data-theme="dark"])[data-lesson="space-invaders"] { --accent: #23783f; --accent-tint: #e0f4e6; --glow: rgb(35 120 63 / 6%); }
-        :root:not([data-theme="dark"])[data-lesson="tower-defense"] { --accent: #6447c2; --accent-tint: #ece7fd; --glow: rgb(100 71 194 / 6%); }
       }
       :root[data-theme="light"] {
           color-scheme: light;
@@ -87,11 +87,8 @@
           --sage: #2c7a52; --sage-tint: #e2f3e9; --butter: #7d5900; --butter-tint: #fff5d9; --peach: #a3443d;
           --header-bg: linear-gradient(115deg, #ffffff 0%, #eef3fb 100%);
           --checkpoint-text: #3d2f00; --complete-text: #153d29; --complete-hover: #cfeadb;
-          --notice: #44506a; --error: #9b1c1c; --focus: #1b6a9e; --glow: rgb(27 106 158 / 6%);
+          --notice: #44506a; --error: #9b1c1c; --focus: #1b6a9e; --game-brick-breaker: #b4560f; --game-brick-breaker-tint: #fdebdc; --game-space-invaders: #23783f; --game-space-invaders-tint: #e0f4e6; --game-tower-defense: #6447c2; --game-tower-defense-tint: #ece7fd;
       }
-        :root[data-theme="light"][data-lesson="brick-breaker"] { --accent: #b4560f; --accent-tint: #fdebdc; --glow: rgb(180 86 15 / 6%); }
-        :root[data-theme="light"][data-lesson="space-invaders"] { --accent: #23783f; --accent-tint: #e0f4e6; --glow: rgb(35 120 63 / 6%); }
-        :root[data-theme="light"][data-lesson="tower-defense"] { --accent: #6447c2; --accent-tint: #ece7fd; --glow: rgb(100 71 194 / 6%); }
       h1, h2, h3, h4, .step-button, .button, summary, .eyebrow, .chapter-meta { font-family: var(--heading-font); }
       * { box-sizing: border-box; }
       body { background: var(--canvas); display: flex; flex-direction: column; height: 100vh; height: 100dvh; margin: 0; overflow: hidden; }
@@ -228,6 +225,23 @@
       .narrated-list-row .narration-button:hover { background: var(--surface-raised); }
       .narrated-list-row .narration-button svg { height: 12px; width: 12px; }
       .course-start-actions { display: flex; margin-top: 1.5rem; }
+      .home-intro { color: var(--text-muted); font-size: 1.15rem; margin: 0 0 1.75rem; max-width: 60ch; }
+      .game-grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); list-style: none; margin: 0; padding: 0; }
+      .game-card { background: var(--surface-raised); border: 1px solid var(--border-subtle); border-radius: .85rem; display: flex; flex-direction: column; overflow: hidden; }
+      .game-card-art { background: var(--accent-tint); border-bottom: 3px solid var(--accent); color: var(--accent); }
+      .game-card-art svg { display: block; height: auto; width: 100%; }
+      .game-card-body { display: flex; flex: 1; flex-direction: column; gap: .6rem; padding: 1.1rem 1.2rem 1.25rem; }
+      .game-card h3 { font-size: 1.35rem; margin: 0; }
+      .game-card-description { -webkit-box-orient: vertical; color: var(--text-muted); display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; margin: 0; overflow: hidden; }
+      .game-card-meta { color: var(--text-muted); font-size: .9rem; margin: 0; }
+      .progress-track { background: var(--surface-hover); border-radius: 999px; height: .55rem; overflow: hidden; }
+      .progress-fill { background: var(--accent); border-radius: inherit; height: 100%; }
+      .game-card .button { background: var(--accent); border-color: var(--accent); color: var(--canvas); margin-top: auto; }
+      /* The home page has no chapters, so it uses the full width. */
+      .is-home .steps-nav { display: none; }
+      .is-home .app-shell { grid-template-columns: minmax(0, 1fr); }
+      .home-link { color: inherit; text-decoration: none; }
+      .home-link:hover { color: var(--accent); }
       .prose { color: var(--text-muted); font-size: 1.1rem; line-height: 1.7; max-width: 100%; overflow-x: auto; }
       /* Keep reading lines near 75 characters on wide screens. */
       .content-column > .prose, .content-column > .narrated-section, .build-instructions, .checkpoint { max-width: 78ch; }
@@ -356,7 +370,7 @@
   </head>
   <body>
     <header class="site-header">
-      <h1>Scratch Lessons</h1>
+      <h1><a class="home-link" href="./">Scratch Lessons</a></h1>
       <div class="project-picker">
         <label for="lesson-select">Project</label>
         <select id="lesson-select" disabled>

@@ -4,6 +4,7 @@ import {
   validateLessonDocument,
   validateLessonIndex,
 } from './content.js';
+import { gameArt } from './game-art.js';
 import { CATEGORY_LABELS, collectLessonNames, inlineCategory } from './inline-blocks.js';
 import { validateNarrationManifest } from './narration-content.js';
 import { createNarrationPlayer } from './narration-player.js';
@@ -29,6 +30,7 @@ let scratchSourceId = 0;
 let lessonLoading = false;
 let narrationSections = new Map();
 let lessonNames = { myBlocks: new Set(), variables: new Set() };
+let lessonSummaries = [];
 
 const element = (tag, options = {}) => {
   const node = document.createElement(tag);
@@ -347,6 +349,78 @@ const renderWelcome = () => {
   updateNavigationState();
 };
 
+const stepCount = (lesson) => lesson.chapters.reduce((total, chapter) => total + chapter.steps.length, 0);
+
+// Home: one card per game with its picture, size, progress, and a start or continue button.
+const renderHome = () => {
+  narrationPlayer.stop();
+  requestController?.abort();
+  requestVersion += 1;
+  lessonLoading = false;
+  currentLesson = null;
+  currentSteps = [];
+  currentStepId = null;
+  delete document.documentElement.dataset.lesson;
+  lessonSelect.value = '';
+  document.body.classList.add('is-home');
+  setNarrationStatus('');
+  stepsList.replaceChildren(element('p', { className: 'chapter-meta', text: 'Pick a game to see its chapters.' }));
+
+  const card = element('div', { className: 'content-column card' });
+  card.append(element('h2', { text: 'Pick a game to build', attrs: { id: 'content-heading', tabindex: '-1' } }));
+  card.append(element('p', {
+    className: 'home-intro',
+    text: 'Each game is built step by step in Scratch, and each one teaches new skills. Your progress is saved in this browser.',
+  }));
+  const grid = element('ul', { className: 'game-grid' });
+  for (const lesson of lessonSummaries) {
+    const lessonProgress = progress.getLesson(lesson.id);
+    const total = stepCount(lesson);
+    const steps = flattenLessonSteps(lesson);
+    const done = steps.filter(({ id }) => lessonProgress.completedStepIds.includes(id)).length;
+    const resumeStep = steps.find(({ id }) => id === lessonProgress.lastViewedStepId);
+    const minutes = lesson.chapters.reduce((sum, chapter) => sum + chapter.estimatedMinutes, 0);
+
+    const item = element('li', { className: 'game-card', attrs: { 'data-lesson-card': lesson.id } });
+    const art = element('div', { className: 'game-card-art' });
+    art.append(gameArt(lesson.id));
+    const body = element('div', { className: 'game-card-body' });
+    body.append(
+      element('h3', { text: lesson.title }),
+      element('p', { className: 'game-card-description', text: lesson.description }),
+      element('p', {
+        className: 'game-card-meta',
+        text: `${lesson.chapters.length} chapters · about ${Math.round(minutes / 60)} hours · ${done} of ${total} steps done`,
+      }),
+    );
+    const track = element('div', {
+      className: 'progress-track',
+      attrs: {
+        role: 'progressbar',
+        'aria-label': `${lesson.title} progress`,
+        'aria-valuemin': '0',
+        'aria-valuemax': String(total),
+        'aria-valuenow': String(done),
+      },
+    });
+    const fill = element('div', { className: 'progress-fill' });
+    fill.style.width = `${Math.round((done / total) * 100)}%`;
+    track.append(fill);
+    body.append(track);
+    const open = element('button', {
+      className: 'button',
+      text: resumeStep ? `Continue: ${resumeStep.title}` : `Start ${lesson.title}`,
+      attrs: { type: 'button', 'data-open-lesson': lesson.id, ...(resumeStep ? { 'data-resume-step': resumeStep.id } : {}) },
+    });
+    body.append(open);
+    item.append(art, body);
+    grid.append(item);
+  }
+  card.append(grid);
+  contentArea.replaceChildren(card);
+  contentArea.scrollTop = 0;
+};
+
 const appendVideo = (parent, step) => {
   if (!step.youtubeID) return;
   const wrapper = element('div', { className: 'video-container' });
@@ -577,7 +651,8 @@ const navigateToStep = (stepId, { focus = true } = {}) => {
   if (focus) heading.focus({ preventScroll: false });
 };
 
-const loadLesson = async (lessonId) => {
+const loadLesson = async (lessonId, { resumeStepId = null } = {}) => {
+  document.body.classList.remove('is-home');
   narrationPlayer.stop();
   requestController?.abort();
   requestController = new AbortController();
@@ -615,6 +690,7 @@ const loadLesson = async (lessonId) => {
     currentSteps = flattenLessonSteps(lesson);
     renderNavigation();
     renderWelcome();
+    if (resumeStepId && currentSteps.some(({ id }) => id === resumeStepId)) navigateToStep(resumeStepId);
     setStatus(`${lesson.title} loaded.`);
     if (!progress.isPersistent()) setStatus(`${lesson.title} loaded. Progress will not be saved.`, { visible: true });
     void (async () => {
@@ -670,6 +746,17 @@ const loadLessonIndex = async () => {
     }
     lessonSelect.disabled = false;
     setStatus('Projects loaded.');
+    const summaries = await Promise.all(ids.map(async (id) => {
+      try {
+        const lessonResponse = await fetch(`./curriculum/${id}.json`);
+        if (!lessonResponse.ok) return null;
+        return validateLessonDocument(await lessonResponse.json(), id);
+      } catch {
+        return null;
+      }
+    }));
+    lessonSummaries = summaries.filter(Boolean);
+    if (!currentLesson && !lessonLoading && lessonSelect.value === '') renderHome();
   } catch (indexError) {
     lessonSelect.replaceChildren(element('option', { text: 'Projects unavailable' }));
     setError('Could not load the project list. Serve this site over HTTP and try again.');
@@ -680,6 +767,7 @@ const loadLessonIndex = async () => {
 lessonSelect.addEventListener('change', () => {
   narrationPlayer.stop();
   if (lessonSelect.value) loadLesson(lessonSelect.value);
+  else renderHome();
 });
 
 stepsList.addEventListener('click', (event) => {
@@ -708,6 +796,12 @@ contentArea.addEventListener('click', (event) => {
         })),
       );
     }
+    return;
+  }
+  const opener = event.target.closest('button[data-open-lesson]');
+  if (opener) {
+    lessonSelect.value = opener.dataset.openLesson;
+    loadLesson(opener.dataset.openLesson, { resumeStepId: opener.dataset.resumeStep ?? null });
     return;
   }
   const navigation = event.target.closest('button[data-step-id]');

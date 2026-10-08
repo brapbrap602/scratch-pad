@@ -484,3 +484,19 @@ test('remembers the light or dark choice and colours each game differently', asy
   const towerAccent = await page.locator('.site-header').evaluate((node) => getComputedStyle(node).borderBottomColor);
   expect(towerAccent).not.toBe(spaceAccent);
 });
+
+test('home cards start a game and later continue from the last step viewed', async ({ page }) => {
+  const card = page.locator('[data-lesson-card="tower-defense"]');
+  await expect(page.getByRole('heading', { name: 'Pick a game to build' })).toBeVisible();
+  await expect(page.locator('[data-lesson-card]')).toHaveCount(3);
+  await expect(card.getByRole('progressbar')).toHaveAttribute('aria-valuenow', '0');
+  await card.getByRole('button', { name: 'Start Tower Defense' }).click();
+  await expect(page.getByRole('heading', { name: 'Tower Defense', exact: true })).toBeVisible();
+  await page.locator('.step-button[data-step-id="draw-the-battlefield"]').click();
+  await page.getByRole('button', { name: 'Mark step complete' }).click();
+
+  await page.getByRole('link', { name: 'Scratch Lessons' }).click();
+  await expect(card.getByRole('progressbar')).toHaveAttribute('aria-valuenow', '1');
+  await card.getByRole('button', { name: 'Continue: Draw the Battlefield' }).click();
+  await expect(page.getByRole('heading', { name: 'Draw the Battlefield' })).toBeFocused();
+});
