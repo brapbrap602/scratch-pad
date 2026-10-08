@@ -177,7 +177,30 @@
       .narrated-list-row .narration-button svg { height: 12px; width: 12px; }
       .course-start-actions { display: flex; margin-top: 1.5rem; }
       .prose { color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; max-width: 100%; overflow-x: auto; }
-      .prose code { margin: 0 .15em; vertical-align: middle; }
+      .inline-chip {
+        --chip: var(--text-muted);
+        background: color-mix(in srgb, var(--chip) 20%, var(--surface));
+        border: 1px solid color-mix(in srgb, var(--chip) 75%, transparent);
+        border-radius: .45em;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        color: var(--text);
+        font-family: inherit;
+        font-size: .92em;
+        font-weight: 600;
+        margin: 0 .1em;
+        padding: .05em .45em;
+      }
+      .chip-name { background: var(--surface-raised); border-color: var(--border-subtle); border-style: dashed; }
+      .chip-motion { --chip: #4c97ff; }
+      .chip-looks { --chip: #9966ff; }
+      .chip-sound { --chip: #cf63cf; }
+      .chip-events { --chip: #ffbf00; }
+      .chip-control { --chip: #ffab19; }
+      .chip-sensing { --chip: #5cb1d6; }
+      .chip-operators { --chip: #59c059; }
+      .chip-variables { --chip: #ff8c1a; }
+      .chip-my-blocks { --chip: #ff6680; }
       .instruction-list, .criteria-list { padding-left: 1.4rem; }
       .instruction-list li, .criteria-list li { margin: .5rem 0; }
       .build-instructions { display: grid; gap: 1rem; list-style: none; margin: .75rem 0 0; padding-left: 0; }

@@ -4,6 +4,7 @@ import {
   validateLessonDocument,
   validateLessonIndex,
 } from './content.js';
+import { CATEGORY_LABELS, collectLessonNames, inlineCategory } from './inline-blocks.js';
 import { validateNarrationManifest } from './narration-content.js';
 import { createNarrationPlayer } from './narration-player.js';
 import { createNarrationGroups } from './narration-groups.js';
@@ -26,6 +27,7 @@ let requestVersion = 0;
 let scratchSourceId = 0;
 let lessonLoading = false;
 let narrationSections = new Map();
+let lessonNames = { myBlocks: new Set(), variables: new Set() };
 
 const element = (tag, options = {}) => {
   const node = document.createElement(tag);
@@ -52,17 +54,28 @@ const setNarrationStatus = (message) => {
   narrationStatus.classList.toggle('visually-hidden', message === '');
 };
 
+// Inline items are blocks or names written in plain words; show them as chips
+// coloured by the Scratch category where the learner finds them.
+const inlineChip = (source) => {
+  const category = inlineCategory(source, lessonNames);
+  const chip = element('code', {
+    className: `inline-chip ${category ? `chip-${category}` : 'chip-name'}`,
+    text: source,
+  });
+  if (category) {
+    chip.dataset.category = category;
+    chip.title = `Find it in ${CATEGORY_LABELS[category]}`;
+  }
+  return chip;
+};
+
 const appendRichText = (container, source) => {
   const stack = [container];
   for (const token of parseRichText(source)) {
     const parent = stack.at(-1);
     if (token.type === 'text') parent.append(document.createTextNode(token.value));
     if (token.type === 'break') parent.append(element('br'));
-    if (token.type === 'scratch') {
-      const code = element('code', { className: 'scratch-source scratch-inline-source' });
-      code.textContent = token.value;
-      parent.append(code);
-    }
+    if (token.type === 'scratch') parent.append(inlineChip(token.value));
     if (token.type === 'open') {
       const child = element(token.tag, { className: token.className || '' });
       parent.append(child);
@@ -173,11 +186,8 @@ const renderScratchNode = (node, inline) => {
   }
 };
 
-const renderPendingScratch = (root, includeDisplay = false) => {
-  root.querySelectorAll('.scratch-inline-source').forEach((node) => renderScratchNode(node, true));
-  if (includeDisplay) {
-    root.querySelectorAll('.scratch-display-source').forEach((node) => renderScratchNode(node, false));
-  }
+const renderPendingScratch = (root) => {
+  root.querySelectorAll('.scratch-display-source').forEach((node) => renderScratchNode(node, false));
 };
 
 const appendNarratedHeading = (parent, title, sectionId) => {
@@ -333,7 +343,6 @@ const renderWelcome = () => {
   startActions.append(start);
   card.append(startActions);
   contentArea.replaceChildren(card);
-  renderPendingScratch(card);
   updateNavigationState();
 };
 
@@ -433,7 +442,7 @@ const appendFinishedCode = (parent, step) => {
       entryBody.append(scroll);
       entryContainer.append(entryBody);
       entryContainer.addEventListener('toggle', () => {
-        if (entryContainer.open) renderPendingScratch(entryContainer, true);
+        if (entryContainer.open) renderPendingScratch(entryContainer);
       });
       body.append(entryContainer);
     } else {
@@ -442,7 +451,7 @@ const appendFinishedCode = (parent, step) => {
   }
   details.append(body);
   details.addEventListener('toggle', () => {
-    if (details.open && step.finishedCode.length === 1) renderPendingScratch(details, true);
+    if (details.open && step.finishedCode.length === 1) renderPendingScratch(details);
   });
   parent.append(details);
 };
@@ -552,7 +561,6 @@ const navigateToStep = (stepId, { focus = true } = {}) => {
   }
   article.append(actions);
   contentArea.replaceChildren(article);
-  renderPendingScratch(article);
   updateNavigationState();
   contentArea.scrollTop = 0;
   if (window.matchMedia('(max-width: 767px)').matches) {
@@ -597,6 +605,7 @@ const loadLesson = async (lessonId) => {
     const lesson = validateLessonDocument(await response.json(), lessonId);
     if (version !== requestVersion) return;
     currentLesson = lesson;
+    lessonNames = collectLessonNames(lesson);
     currentSteps = flattenLessonSteps(lesson);
     renderNavigation();
     renderWelcome();
