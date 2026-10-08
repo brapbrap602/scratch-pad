@@ -131,18 +131,18 @@ test('loads chaptered lessons and uses semantic milestone controls', async ({ pa
   const firstStep = page.locator('.step-button[data-step-id="observe-complete-game"]');
   await firstStep.focus();
   await page.keyboard.press('Enter');
-  await expect(page.getByRole('heading', { name: 'Read the Game Like a Developer' })).toBeFocused();
+  await expect(page.getByRole('heading', { name: 'Watch the Finished Game' })).toBeFocused();
   await expect(firstStep).toHaveAttribute('aria-current', 'step');
 });
 
 test('navigation does not complete work and explicit completion persists', async ({ page }) => {
   await page.getByLabel('Project').selectOption('brick-breaker');
-  await page.getByRole('button', { name: /Read the Game Like a Developer/ }).click();
+  await page.getByRole('button', { name: /Watch the Finished Game/ }).click();
 
   const completion = page.getByRole('button', { name: /Mark step complete/ });
   await expect(completion).toHaveAttribute('aria-pressed', 'false');
   await page.getByRole('button', { name: /Next step/ }).click();
-  await page.getByRole('button', { name: /Read the Game Like a Developer/ }).click();
+  await page.getByRole('button', { name: /Watch the Finished Game/ }).click();
   await expect(completion).toHaveAttribute('aria-pressed', 'false');
 
   await completion.click();
@@ -152,7 +152,7 @@ test('navigation does not complete work and explicit completion persists', async
   );
   await page.reload();
   await page.getByLabel('Project').selectOption('brick-breaker');
-  await page.getByRole('button', { name: /Read the Game Like a Developer/ }).click();
+  await page.getByRole('button', { name: /Watch the Finished Game/ }).click();
   await expect(page.getByRole('button', { name: /Mark step incomplete/ })).toHaveAttribute(
     'aria-pressed',
     'true',
@@ -161,25 +161,25 @@ test('navigation does not complete work and explicit completion persists', async
 
 test('plays, pauses, advances, and resets a sentence narration queue', async ({ page }) => {
   await page.getByLabel('Project').selectOption('brick-breaker');
-  await page.getByRole('button', { name: /Read the Game Like a Developer/ }).click();
+  await page.getByRole('button', { name: /Watch the Finished Game/ }).click();
 
   const control = page.locator(
     'button[data-narration-section-id="project-foundations/observe-complete-game/overview"]',
   );
   await control.click();
-  await expect(control).toHaveAccessibleName('Pause narration: Read the Game Like a Developer overview');
+  await expect(control).toHaveAccessibleName('Pause narration: Watch the Finished Game overview');
   const firstSource = await page.evaluate(() => window.__narrationAudio[0].src);
   expect(firstSource).toContain('/audio/assets/aa/');
 
   await control.click();
-  await expect(control).toHaveAccessibleName('Play narration: Read the Game Like a Developer overview');
+  await expect(control).toHaveAccessibleName('Play narration: Watch the Finished Game overview');
   await control.click();
   await page.evaluate(() => {
     window.__narrationAudio[0].ended = true;
     window.__narrationAudio[0].dispatchEvent(new Event('ended'));
     window.__narrationAudio[0].ended = false;
   });
-  await expect(control).toHaveAccessibleName('Pause narration: Read the Game Like a Developer overview');
+  await expect(control).toHaveAccessibleName('Pause narration: Watch the Finished Game overview');
 
   await page.getByRole('button', { name: /Next step/ }).click();
   await expect(page.getByRole('heading', { name: 'Create the Sprites, Backdrops, and Shared Data' })).toBeFocused();
@@ -280,7 +280,7 @@ test('welcome narration groups lists and stops vocabulary when collapsed', async
 
 test('shows hint and debugging narration only inside opened help', async ({ page }) => {
   await page.getByLabel('Project').selectOption('brick-breaker');
-  await page.getByRole('button', { name: /Read the Game Like a Developer/ }).click();
+  await page.getByRole('button', { name: /Watch the Finished Game/ }).click();
 
   const hint = page.getByText('Hint 1').locator('..');
   const hintAudio = hint.locator('button[data-narration-section-id$="/hint/000"]');
