@@ -8,13 +8,17 @@
     <script src="https://cdn.jsdelivr.net/npm/scratchblocks@3.6.4/build/scratchblocks.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
     <script>
+      try {
+        const savedTheme = localStorage.getItem('scratchLessonsTheme');
+        if (savedTheme === 'light' || savedTheme === 'dark') document.documentElement.dataset.theme = savedTheme;
+      } catch {}
       if (window.tailwind) {
         window.tailwind.config = {
           theme: {
             extend: {
-              fontFamily: { sans: ['Poppins', 'sans-serif'] },
+              fontFamily: { sans: ['Nunito', 'sans-serif'] },
             },
           },
         };
@@ -23,7 +27,8 @@
     <style>
       :root {
         color-scheme: dark;
-        font-family: Poppins, system-ui, sans-serif;
+        font-family: Nunito, system-ui, sans-serif;
+        --heading-font: Poppins, system-ui, sans-serif;
         --canvas: #060a12;
         --sidebar: #111b30;
         --surface: #182338;
@@ -42,30 +47,76 @@
         --butter: #f3d58a;
         --butter-tint: #302919;
         --peach: #e8a6a6;
+        --header-bg: linear-gradient(115deg, #1a2a4a 0%, #243755 100%);
+        --checkpoint-text: #fff6dc;
+        --complete-text: #f2fff7;
+        --complete-hover: #244a39;
+        --notice: #c3c8d4;
+        --error: #fecaca;
+        --focus: var(--butter);
+        --accent: var(--blue);
+        --accent-tint: var(--blue-tint);
+        --glow: rgb(142 202 230 / 8%);
         background: var(--canvas);
         color: var(--text);
       }
+      /* Each game gets its own accent so learners always know which project is open. */
+      :root[data-lesson="brick-breaker"] { --accent: #f6ad6b; --accent-tint: #3a2a1c; --glow: rgb(246 173 107 / 9%); }
+      :root[data-lesson="space-invaders"] { --accent: #7fd99a; --accent-tint: #1b3626; --glow: rgb(127 217 154 / 9%); }
+      :root[data-lesson="tower-defense"] { --accent: #c2aefc; --accent-tint: #2c2547; --glow: rgb(194 174 252 / 9%); }
+      @media (prefers-color-scheme: light) {
+        :root:not([data-theme="dark"]) {
+          color-scheme: light;
+          --canvas: #eef2f8; --sidebar: #ffffff; --surface: #ffffff; --surface-raised: #f2f5fa; --surface-hover: #e4eaf3;
+          --text: #172033; --text-muted: #44506a; --border: #8692a8; --border-subtle: #d3dae6;
+          --blue: #1b6a9e; --blue-hover: #13557f; --blue-ink: #ffffff; --blue-tint: #e2eff9;
+          --sage: #2c7a52; --sage-tint: #e2f3e9; --butter: #7d5900; --butter-tint: #fff5d9; --peach: #a3443d;
+          --header-bg: linear-gradient(115deg, #ffffff 0%, #eef3fb 100%);
+          --checkpoint-text: #3d2f00; --complete-text: #153d29; --complete-hover: #cfeadb;
+          --notice: #44506a; --error: #9b1c1c; --focus: #1b6a9e; --glow: rgb(27 106 158 / 6%);
+        }
+        :root:not([data-theme="dark"])[data-lesson="brick-breaker"] { --accent: #b4560f; --accent-tint: #fdebdc; --glow: rgb(180 86 15 / 6%); }
+        :root:not([data-theme="dark"])[data-lesson="space-invaders"] { --accent: #23783f; --accent-tint: #e0f4e6; --glow: rgb(35 120 63 / 6%); }
+        :root:not([data-theme="dark"])[data-lesson="tower-defense"] { --accent: #6447c2; --accent-tint: #ece7fd; --glow: rgb(100 71 194 / 6%); }
+      }
+      :root[data-theme="light"] {
+          color-scheme: light;
+          --canvas: #eef2f8; --sidebar: #ffffff; --surface: #ffffff; --surface-raised: #f2f5fa; --surface-hover: #e4eaf3;
+          --text: #172033; --text-muted: #44506a; --border: #8692a8; --border-subtle: #d3dae6;
+          --blue: #1b6a9e; --blue-hover: #13557f; --blue-ink: #ffffff; --blue-tint: #e2eff9;
+          --sage: #2c7a52; --sage-tint: #e2f3e9; --butter: #7d5900; --butter-tint: #fff5d9; --peach: #a3443d;
+          --header-bg: linear-gradient(115deg, #ffffff 0%, #eef3fb 100%);
+          --checkpoint-text: #3d2f00; --complete-text: #153d29; --complete-hover: #cfeadb;
+          --notice: #44506a; --error: #9b1c1c; --focus: #1b6a9e; --glow: rgb(27 106 158 / 6%);
+      }
+        :root[data-theme="light"][data-lesson="brick-breaker"] { --accent: #b4560f; --accent-tint: #fdebdc; --glow: rgb(180 86 15 / 6%); }
+        :root[data-theme="light"][data-lesson="space-invaders"] { --accent: #23783f; --accent-tint: #e0f4e6; --glow: rgb(35 120 63 / 6%); }
+        :root[data-theme="light"][data-lesson="tower-defense"] { --accent: #6447c2; --accent-tint: #ece7fd; --glow: rgb(100 71 194 / 6%); }
+      h1, h2, h3, h4, .step-button, .button, summary, .eyebrow, .chapter-meta { font-family: var(--heading-font); }
       * { box-sizing: border-box; }
       body { background: var(--canvas); display: flex; flex-direction: column; height: 100vh; height: 100dvh; margin: 0; overflow: hidden; }
       button, select { font: inherit; }
       button, summary, select { min-height: 44px; }
       button:focus-visible, summary:focus-visible, select:focus-visible, a:focus-visible {
-        outline: 3px solid var(--butter);
-        outline-offset: 3px;
+        box-shadow: 0 0 0 6px color-mix(in srgb, var(--focus) 30%, transparent);
+        outline: 3px solid var(--focus);
+        outline-offset: 2px;
       }
       a { color: var(--blue); }
       a:hover { color: var(--blue-hover); }
       .site-header {
         align-items: center;
-        background: linear-gradient(115deg, #1a2a4a 0%, #243755 100%);
-        border-bottom: 1px solid var(--border-subtle);
+        background: var(--header-bg);
+        border-bottom: 3px solid var(--accent);
         display: grid;
         flex-shrink: 0;
         gap: 1.5rem;
         grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
         padding: .85rem 1.5rem;
       }
-      .site-header h1 { border-left: .2rem solid var(--blue); color: var(--text); font-size: 1.25rem; margin: 0; padding-left: .6rem; white-space: nowrap; }
+      .site-header h1 { border-left: .2rem solid var(--accent); color: var(--text); font-size: 1.25rem; margin: 0; padding-left: .6rem; white-space: nowrap; }
+      .header-tools { display: flex; justify-content: flex-end; }
+      .theme-toggle { align-items: center; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; color: var(--text); cursor: pointer; display: inline-flex; gap: .45rem; padding: .35rem .85rem; }
       .project-picker { align-items: center; display: grid; gap: .75rem; grid-template-columns: auto minmax(0, 16.25rem); min-width: 0; }
       .project-picker label { color: var(--text-muted); font-size: .8rem; font-weight: 600; }
       #lesson-select {
@@ -106,13 +157,13 @@
         text-align: left;
         width: 100%;
       }
-      .step-button[aria-current="step"] { background: var(--blue-tint); border-left-color: var(--blue); color: var(--text); font-weight: 600; }
+      .step-button[aria-current="step"] { background: var(--accent-tint); border-left-color: var(--accent); color: var(--text); font-weight: 600; }
       .step-number { font-variant-numeric: tabular-nums; text-align: right; }
       .step-label { min-width: 0; }
       .completion-mark { color: var(--sage); font-size: .7rem; font-weight: 600; grid-column: 2; }
       .content-area {
         background:
-          radial-gradient(circle at 92% 2%, rgb(142 202 230 / 8%), transparent 24rem),
+          radial-gradient(circle at 92% 2%, var(--glow), transparent 24rem),
           var(--canvas);
         min-height: 0;
         overflow-y: auto;
@@ -127,9 +178,10 @@
         box-shadow: 0 1rem 3rem rgb(0 0 0 / 24%);
         padding: clamp(1rem, 4vw, 2rem);
       }
-      .card > h2, .eyebrow { border-left: .2rem solid var(--blue); padding-left: .6rem; }
+      .card > h2 { border-left: .2rem solid var(--accent); padding-left: .6rem; }
       .card > h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 700; line-height: 1.2; margin: 0 0 1.25rem; }
-      .eyebrow { color: var(--blue); font-size: .8rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+      .eyebrow { align-items: center; color: var(--text-muted); display: flex; flex-wrap: wrap; font-size: .85rem; font-weight: 600; gap: .6rem; margin: 0; }
+      .step-badge { background: var(--accent); border-radius: 999px; color: var(--canvas); font-size: .8rem; font-weight: 700; padding: .2rem .7rem; white-space: nowrap; }
       h2, h3, h4 { color: var(--text); }
       .content-column > h3 { font-size: 1.15rem; font-weight: 600; margin: 1.75rem 0 .65rem; }
       .content-column > .section-heading { margin: 1.75rem 0 .65rem; }
@@ -176,7 +228,9 @@
       .narrated-list-row .narration-button:hover { background: var(--surface-raised); }
       .narrated-list-row .narration-button svg { height: 12px; width: 12px; }
       .course-start-actions { display: flex; margin-top: 1.5rem; }
-      .prose { color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; max-width: 100%; overflow-x: auto; }
+      .prose { color: var(--text-muted); font-size: 1.1rem; line-height: 1.7; max-width: 100%; overflow-x: auto; }
+      /* Keep reading lines near 75 characters on wide screens. */
+      .content-column > .prose, .content-column > .narrated-section, .build-instructions, .checkpoint { max-width: 78ch; }
       .inline-chip {
         --chip: var(--text-muted);
         background: color-mix(in srgb, var(--chip) 20%, var(--surface));
@@ -209,7 +263,7 @@
       .build-instructions .narrated-list-row { align-items: baseline; column-gap: .5rem; display: grid; grid-template-columns: 28px 2.5ch minmax(0, 1fr); min-width: 0; }
       .build-instructions .narrated-list-row:has(> .narration-slot:empty) { grid-template-columns: 2.5ch minmax(0, 1fr); }
       .build-instructions .narration-slot:empty { display: none; }
-      .checkpoint { background: var(--butter-tint); border: 1px solid var(--butter); border-radius: .65rem; color: #fff6dc; margin-top: 1.5rem; padding: 1rem; }
+      .checkpoint { background: var(--butter-tint); border: 1px solid var(--butter); border-radius: .65rem; color: var(--checkpoint-text); margin-top: 1.5rem; padding: 1rem; }
       .checkpoint h3 { color: var(--butter); margin-top: 0; }
       .checkpoint p { line-height: 1.6; margin: 0; }
       .checkpoint .checkpoint-task { margin-top: .75rem; }
@@ -243,9 +297,10 @@
       .button { border: 1px solid var(--border); border-radius: .55rem; cursor: pointer; font-weight: 600; padding: .65rem 1rem; }
       .button-secondary { background: var(--surface-raised); color: var(--text); }
       .button-primary { background: var(--blue); border-color: var(--blue); color: var(--blue-ink); }
-      .button-complete { background: var(--sage-tint); border-color: var(--sage); color: #f2fff7; }
+      .button-complete { background: var(--sage-tint); border-color: var(--sage); color: var(--complete-text); }
       .status { margin: 0; padding: .5rem 1rem; }
-      .error { color: #fecaca; }
+      .error { color: var(--error); }
+      .notice { color: var(--notice); font-size: .9rem; }
       .video-container { aspect-ratio: 16 / 9; margin-top: 1.5rem; overflow: hidden; }
       .video-container iframe { border: 0; height: 100%; width: 100%; }
       .cat-motion { color: #75adff; font-weight: 600; }
@@ -268,16 +323,17 @@
       }
       @media (hover: hover) {
         .step-button:hover { background: var(--surface-hover); color: var(--text); }
-        .step-button[aria-current="step"]:hover { background: #29445d; }
+        .step-button[aria-current="step"]:hover { background: color-mix(in srgb, var(--accent) 20%, var(--accent-tint)); }
         summary:hover { color: var(--blue-hover); }
         summary:hover::after { border-color: var(--blue-hover); }
         .button-secondary:hover { background: var(--surface-hover); }
         .button-primary:hover { background: var(--blue-hover); border-color: var(--blue-hover); }
-        .button-complete:hover { background: #244a39; }
+        .button-complete:hover { background: var(--complete-hover); }
       }
       @media (max-width: 767px) {
         body { height: auto; min-height: 100vh; min-height: 100dvh; overflow: visible; }
-        .site-header { align-items: stretch; grid-template-columns: minmax(0, 1fr); gap: .75rem; padding: 1rem; }
+        .site-header { align-items: center; grid-template-columns: minmax(0, 1fr) auto; gap: .75rem; padding: 1rem; }
+        .project-picker { grid-column: 1 / -1; grid-row: 2; }
         .site-header h1 { white-space: normal; }
         .project-picker { grid-template-columns: auto minmax(0, 1fr); }
         .app-shell { display: block; height: auto; }
@@ -307,10 +363,13 @@
           <option selected>Loading projects...</option>
         </select>
       </div>
+      <div class="header-tools">
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">Light mode</button>
+      </div>
     </header>
     <p id="app-status" class="status visually-hidden" role="status" aria-live="polite"></p>
     <p id="app-error" class="status error visually-hidden" role="alert"></p>
-    <p id="narration-status" class="status error visually-hidden" role="status" aria-live="polite"></p>
+    <p id="narration-status" class="status notice visually-hidden" role="status" aria-live="polite"></p>
     <main class="app-shell">
       <nav class="steps-nav" aria-labelledby="steps-heading">
         <h2 id="steps-heading">Course chapters</h2>

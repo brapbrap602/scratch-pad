@@ -17,6 +17,7 @@ const contentArea = document.querySelector('#content-area');
 const status = document.querySelector('#app-status');
 const error = document.querySelector('#app-error');
 const narrationStatus = document.querySelector('#narration-status');
+const themeToggle = document.querySelector('#theme-toggle');
 const progress = createProgressStore();
 
 let currentLesson = null;
@@ -468,12 +469,16 @@ const navigateToStep = (stepId, { focus = true } = {}) => {
   renderNavigation();
 
   const article = element('article', { className: 'content-column' });
-  article.append(
-    element('p', {
-      className: 'eyebrow',
-      text: `${step.chapterTitle} - Step ${index + 1} of ${currentSteps.length}`,
+  const chapterSteps = currentSteps.filter(({ chapterId }) => chapterId === step.chapterId);
+  const eyebrow = element('p', { className: 'eyebrow' });
+  eyebrow.append(
+    element('span', {
+      className: 'step-badge',
+      text: `Step ${chapterSteps.indexOf(step) + 1} of ${chapterSteps.length}`,
     }),
+    element('span', { text: step.chapterTitle }),
   );
+  article.append(eyebrow);
   const heading = element('h2', {
     className: 'step-title',
     text: step.title,
@@ -605,6 +610,7 @@ const loadLesson = async (lessonId) => {
     const lesson = validateLessonDocument(await response.json(), lessonId);
     if (version !== requestVersion) return;
     currentLesson = lesson;
+    document.documentElement.dataset.lesson = lesson.id;
     lessonNames = collectLessonNames(lesson);
     currentSteps = flattenLessonSteps(lesson);
     renderNavigation();
@@ -624,7 +630,7 @@ const loadLesson = async (lessonId) => {
         attachNarrationControls(contentArea);
       } catch (narrationError) {
         if (narrationError.name === 'AbortError' || version !== requestVersion) return;
-        setNarrationStatus('Narration is unavailable for this lesson.');
+        setNarrationStatus('Read-aloud is not available for this lesson right now. The written steps work as usual.');
         console.warn(narrationError);
       }
     })();
@@ -719,6 +725,24 @@ contentArea.addEventListener('click', (event) => {
   renderNavigation();
   updateNavigationState();
 });
+
+// Light or dark: follow the device until the learner chooses, then remember the choice.
+const THEME_KEY = 'scratchLessonsTheme';
+const prefersLight = window.matchMedia('(prefers-color-scheme: light)');
+const activeTheme = () => document.documentElement.dataset.theme ?? (prefersLight.matches ? 'light' : 'dark');
+const showTheme = () => themeToggle.setAttribute('aria-pressed', String(activeTheme() === 'light'));
+themeToggle.addEventListener('click', () => {
+  const next = activeTheme() === 'light' ? 'dark' : 'light';
+  document.documentElement.dataset.theme = next;
+  try {
+    localStorage.setItem(THEME_KEY, next);
+  } catch {
+    // The choice still applies for this visit.
+  }
+  showTheme();
+});
+prefersLight.addEventListener('change', showTheme);
+showTheme();
 
 window.addEventListener('pagehide', () => narrationPlayer.stop());
 

@@ -301,7 +301,7 @@ test('keeps written lessons usable when narration metadata is unavailable', asyn
 
   await page.getByLabel('Project').selectOption('space-invaders');
   await expect(page.getByRole('heading', { name: 'Space Invaders', exact: true })).toBeVisible();
-  await expect(page.getByText('Narration is unavailable for this lesson.')).toBeVisible();
+  await expect(page.getByText('Read-aloud is not available for this lesson right now.')).toBeVisible();
   await expect(page.locator('.narration-button')).toHaveCount(0);
   await expect(page.getByRole('button', { name: 'Start course' })).toBeEnabled();
 });
@@ -464,4 +464,23 @@ test('renders every real curriculum step without page errors', async ({ page }) 
   }
 
   expect(pageErrors).toEqual([]);
+});
+
+test('remembers the light or dark choice and colours each game differently', async ({ page }) => {
+  await page.emulateMedia({ colorScheme: 'dark' });
+  const toggle = page.getByRole('button', { name: 'Light mode' });
+  await expect(toggle).toHaveAttribute('aria-pressed', 'false');
+  await toggle.click();
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
+  await page.reload();
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
+  await expect(page.getByRole('button', { name: 'Light mode' })).toHaveAttribute('aria-pressed', 'true');
+
+  await page.getByLabel('Project').selectOption('space-invaders');
+  await expect(page.locator('html')).toHaveAttribute('data-lesson', 'space-invaders');
+  const spaceAccent = await page.locator('.site-header').evaluate((node) => getComputedStyle(node).borderBottomColor);
+  await page.getByLabel('Project').selectOption('tower-defense');
+  await expect(page.locator('html')).toHaveAttribute('data-lesson', 'tower-defense');
+  const towerAccent = await page.locator('.site-header').evaluate((node) => getComputedStyle(node).borderBottomColor);
+  expect(towerAccent).not.toBe(spaceAccent);
 });
