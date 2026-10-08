@@ -67,10 +67,10 @@
           "id": "draw-the-battlefield",
           "kind": "setup",
           "title": "Draw the Battlefield",
-          "explanation": "Coordinates give the game a shared map. The three road centers are y 90, y 0, and y -90. We will use the top road first. Simple shapes make positions easy to check.",
+          "explanation": "Every sprite uses the same x and y numbers to find places on the Stage. The three road centers are y 90, y 0, and y -90. We will use the top road first. Simple shapes make positions easy to check.",
           "instructions": [
             "Select the Stage and rename its blank backdrop `Battlefield`.",
-            "Draw three horizontal roads centered at y 90, y 0, and y -90. Keep the top and bottom edges free for displays and buttons.",
+            "Draw three horizontal roads centered at y 90, y 0, and y -90, each about 20 pixels tall. Keep the top and bottom edges free for displays and buttons.",
             "Draw a base boundary at x -210. Enemies will enter at x 220.",
             "Paint a sprite named `Enemy` with one costume named `Enemy`.",
             "Center Enemy's rectangle on the costume center mark. Keep it no larger than 24 pixels wide and 20 pixels high, and use size 100.",
@@ -173,15 +173,16 @@
           "explanation": "A My Block gives a task a name. Try to build will check the rules, spend coins, and change the spot into a tower. Keeping those blocks together makes the same task easy to reuse later.",
           "instructions": [
             "Select Tower, open My Blocks, and click Make a Block. Name it `Try to build` with no inputs.",
-            "Tick `Run without screen refresh` and click OK. We use this only for this short task with no waits: finish the checks and purchase before another click can spend the same coins.",
+            "Tick `Run without screen refresh` and click OK. This block has no loops or waits, so Scratch runs it all at once either way. The tick is a good habit for short My Blocks like this one.",
             "Under `define Try to build`, add an if containing an or: Game State equals ready OR Game State equals combat.",
             "Inside that if, add another if with an `and` block. Put `Built = 0` in its left side.",
-            "Put a `not` block in the right side of the and, then put `Coins < 30` inside not. Both halves of the and must be true; not less than 30 lets exactly 30 coins buy a tower.",
+            "Put a `not` block in the right side of the `and`.",
+            "Put `Coins < 30` inside the `not`. `not Coins < 30` means 30 or more, so exactly 30 coins can still buy a tower.",
             "Inside the inner if, change Coins by -30, set Built to 1, and switch costume to Built, in that order.",
             "Add a separate `when this sprite clicked` script. Attach the new `Try to build` block from the My Blocks category.",
             "Do not put a wait, glide, broadcast, or timed say block inside Try to build."
           ],
-          "hints": ["The define block explains the task; the smaller Try to build block calls it.", "The My Block belongs to Tower. You will not find it in the Stage's My Blocks category."],
+          "hints": ["The define block holds the task's blocks; the smaller Try to build block runs them.", "The My Block belongs to Tower. You will not find it in the Stage's My Blocks category."],
           "debuggingTips": [{ "symptom": "The purchase works only with more than 30 coins.", "checks": ["Use not Coins less than 30, rather than Coins greater than 30."] }, { "symptom": "Every click charges another 30 coins.", "checks": ["Keep the Built equals 0 check around the purchase.", "Set Built to 1 immediately after deducting coins."] }],
           "checkpoint": { "task": "Explain the purchase checks before running them.", "expectedResult": "The tower can be bought only while building is allowed, while the spot is empty, and with at least 30 coins.", "completeWhen": ["Both if blocks are nested as shown.", "The click script calls the My Block rather than duplicating its contents."] },
           "finishedCode": [{ "target": "Tower purchase; select Run without screen refresh for this definition", "code": "when this sprite clicked\nTry to build :: custom\n\ndefine Try to build\nif <<(Game State) = [ready]> or <(Game State) = [combat]>> then\n  if <<(Built) = (0)> and <not <(Coins) < (30)>>> then\n    change [Coins v] by (-30)\n    set [Built v] to (1)\n    switch costume to [Built v]\n  end\nend" }]
@@ -291,10 +292,12 @@
             "Open My Blocks and click Make a Block. Type `Check shot` as its name.",
             "Click Add an input number or text and name the input `slot`.",
             "Select `Run without screen refresh` and click OK.",
-            "Build the Check shot definition below. Drag the round slot input from its define block into the list item inputs. Do not make a variable named slot.",
+            "As you build the definition below, drag the round `slot` input from its define block into each list item input. Do not make a variable named slot.",
             "Under define Check shot, add an if with `HP > 0` as its condition.",
             "Inside that if, add another if: item slot of Shot Active equals 1.",
-            "Inside that, put the position check shown below. Its two halves are joined by and, and each half has a not around its comparison.",
+            "Inside that, add a third if. Put an `and` block in its condition.",
+            "In the left side of the `and`, put a `not` block. Inside it, build `item slot of Shot X < x position - 12`.",
+            "In the right side of the `and`, put another `not` block. Inside it, build `item slot of Shot X - 10 > x position + 14`. The next step explains these numbers.",
             "Inside the position check, first replace item slot of Shot Active with 0, then change HP by -1. Do not put a wait between them.",
             "Read the position example in the next step before connecting this block to Enemy Step."
           ],
@@ -314,7 +317,7 @@
             "Try a shot whose current x is 90. Its previous x was 80. The current shot is not left of 88, and its previous position is not right of 114: a hit.",
             "Try a shot whose current x is 70. It has not reached 88 yet: no hit.",
             "Try a shot whose current x is 130. Its previous x was 120, already beyond 114: no hit.",
-            "Match 12, 10, and 14 in your Check shot block to the enemy half-width, shot movement, and previous enemy edge. Keep the movement speeds fixed in this course.",
+            "Match the numbers in your Check shot block: 12 is the enemy's half-width, 10 is how far the shot moved this update, and 14 is 12 plus the 2 pixels the enemy moved this update. Keep the movement speeds fixed in this course.",
             "Now draw two enemies overlapping at x 100, each with HP 2. Give shot 1 an x value of 90 and an active value of 1.",
             "Trace the first enemy's Check shot 1 call: the position check passes, Shot Active item 1 becomes 0, then that enemy's HP becomes 1.",
             "Trace the other enemy's call: the active item is already 0, so its HP stays 2. One shot caused only one damage event. Scratch may check either enemy first; our game does not promise which one."
@@ -333,7 +336,7 @@
             "After moving left by 2, call Check shot with input 1.",
             "Use if HP less than 1 then else. In the first branch, add 10 coins, set Game State to ready, and hide.",
             "Inside else, put the original escape check. It still removes one base health, sets ready, and hides.",
-            "Restart and buy the tower promptly. Watch HP reach 1 after one hit and 0 after the next. Coins should go from 90 to 60 to 70.",
+            "If the HP display is not on the Stage, select Enemy and tick the checkbox next to HP in the Variables category. Restart and buy the tower promptly. Watch HP reach 1 after one hit and 0 after the next. Coins should go from 90 to 60 to 70.",
             "Wait after the enemy disappears. Coins must stay at 70 and base health at 5.",
             "Restart without buying. The enemy should escape, leaving 90 coins and 4 base health."
           ],
@@ -375,7 +378,7 @@
           "explanation": "The top lane uses shot numbers 1 and 2, the middle lane 3 and 4, and the bottom lane 5 and 6. Each tower and shot clone remembers its own ID. The hidden original uses ID 0, which is not a shot number.",
           "instructions": [
             "Save Chapter 3 before changing it. Write this map: lane 1 uses IDs 1 and 2; lane 2 uses 3 and 4; lane 3 uses 5 and 6.",
-            "On Tower, create `Lane` with `For this sprite only`. Each tower clone needs to remember its own lane.",
+            "On Tower, create `Lane` with `For this sprite only`. Tower's code stores each spot's lane but does not use it yet. Showing it helps you check which lane a spot belongs to.",
             "On Shot, create a separate `Lane` with `For this sprite only`. Each shot clone needs its own lane too.",
             "On Enemy, create `Lane`, `Is Clone`, and `First Slot` with `For this sprite only`. Keep its existing HP variable.",
             "Create `Spawn Lane` and `Enemies Alive` with `For all sprites`.",
@@ -385,7 +388,8 @@
             "On Tower, add `when I receive Clear Clones`. Attach an if with `ID > 0` as its condition, and put `delete this clone` inside it. Attach `hide` after the if so the original stays hidden.",
             "On Shot, add the same Clear Clones script, including hide after the if.",
             "On Enemy, add `when I receive Clear Clones`. Use `Is Clone = 1` for its if, put `delete this clone` inside, and attach `hide` after the if.",
-            "These two messages have different jobs. Initialize Originals is for the green flag, after Scratch has removed old clones. Clear Clones will remove copies when changing levels."
+            "These two messages have different jobs. When the green flag is clicked, Scratch deletes all clones for you, so Initialize Originals only resets the original sprites.",
+            "Going to the next level does not use the green flag, so Clear Clones must delete the old copies itself."
           ],
           "hints": ["Create each new message from its first event block's New message option.", "Hiding a clone does not delete it. Its scripts still receive messages until it is deleted."],
           "debuggingTips": [{ "symptom": "Old copies remain after a later level reset.", "checks": ["Clear Clones must delete copies, not only hide them.", "Never reset clone IDs to 0 before trying to delete them."] }],
@@ -396,7 +400,7 @@
           "id": "make-six-towers",
           "kind": "build",
           "title": "Make Six Tower Spots",
-          "explanation": "The original Tower sets ID, Lane, and Built before making a clone. Because these variables were made For this sprite only, the clone gets its own copies of the values. Make spot repeats this task using three inputs: the spot number, its lane, and its height.",
+          "explanation": "The original Tower sets ID, Lane, and Built before making a clone. Because these variables were made For this sprite only, the clone gets its own copies of the values. For example, if the original has ID 3 when it makes a clone, that spot keeps ID 3 even after the original sets its own ID back to 0. Make spot repeats this task using three inputs: the spot number, its lane, and its height.",
           "instructions": [
             "On Tower, make `Make spot` with three number-or-text inputs named `number`, `lane`, and `height`. Select Run without screen refresh.",
             "Build the definition below. Use the round input blocks from define when assigning ID, Lane, and y. Create the clone only after setting its values and costume.",
@@ -405,7 +409,8 @@
             "Replace Tower's `when I receive Tower Step` script with the version below. Its `ID > 0` check lets clones update their shots and keeps the hidden original out.",
             "Keep the existing Update my shot definition unchanged.",
             "In Try to build, put its existing two if blocks inside a new if ID greater than 0. Keep the purchase contents and Run without screen refresh setting unchanged.",
-            "Do not add a when I start as a clone script: the values are already copied, and Present Level will show the spots after setup finishes."
+            "Do not add a when I start as a clone script: the values are already copied, and Present Level will show the spots after setup finishes.",
+            "Do not click the green flag again until the Chapter 4 checkpoint. The Stage does not send Initialize Originals until then, so no spots would appear."
           ],
           "hints": ["Each call sets the original's ID back to 0 after making the copy. That does not change the clone's copied ID.", "Both spots in a lane fire from the same lane-center point, so either spot is useful."],
           "debuggingTips": [{ "symptom": "Buying one tower changes every tower's costume.", "checks": ["Built must be For this sprite only on Tower.", "The purchase runs on the clicked clone; do not broadcast a message to change every costume."] }],
@@ -494,10 +499,11 @@
             "On Tower, make a variable named `Reload` with `For this sprite only`. Each tower clone counts down its own Reload.",
             "Replace the blocks under `define Update my shot` with the reload version shown below. A tower now launches a new shot only when its old shot is finished and its Reload has counted down to 0. Then it sets Reload to Reload Time.",
             "Reload Time 30 means a tower waits 30 game updates, about one second, between launches. Level 1 enemies need only 2 hits, so Level 1 still feels the same.",
+            "Do not click the green flag again until the Chapter 5 checkpoint. Until Reset level loads the settings, Enemy HP is 0, so every enemy would be defeated on its first step.",
             "Show Level and Wave beside the resource displays at the top of the Stage. Move displays away from build spots and roads.",
             "Keep the movement speeds fixed. The settings here change enemy counts and gaps, not the hit calculation."
           ],
-          "hints": ["If you create a variable with the Stage selected, Scratch makes it For all sprites and does not offer For this sprite only.", "Level settings run once for a fresh battlefield. Wave settings run whenever a wave starts.", "Spawn Gap counts game updates, not seconds. A gap of 18 means the Stage keeps moving the game while counting 18 updates."],
+          "hints": ["If you create a variable with the Stage selected, Scratch makes it For all sprites and does not offer For this sprite only.", "Level settings run once for a fresh battlefield. Wave settings run whenever a wave starts.", "Spawn Gap counts game updates, not seconds. One update is one trip around the Stage's forever loop, so 18 updates is a little more than half a second."],
           "debuggingTips": [{ "symptom": "Every wave contains six enemies.", "checks": ["Set Enemy Count to 3 before the if, then change it to 6 only when Wave equals 3."] }],
           "checkpoint": { "task": "Read the settings and predict the three enemy counts.", "expectedResult": "The three waves contain 3, 3, and 6 enemies; every fresh level starts with 90 coins and 5 health.", "completeWhen": ["Settings are grouped on the Stage.", "Make enemy reads Enemy HP."] },
           "finishedCode": [{ "target": "Stage settings for Level 1", "code": "define Load level settings\nset [Starting Coins v] to (90)\nset [Starting Health v] to (5)\nset [Enemy HP v] to (2)\nset [Reload Time v] to (30)\nset [Waves in Level v] to (3)\n\ndefine Load wave settings\nset [Spawn Gap v] to (18)\nset [Enemy Count v] to (3)\nif <(Wave) = (3)> then\n  set [Enemy Count v] to (6)\nend" }, { "target": "Tower Update my shot with reload, replacing the Chapter 3 definition", "code": "define Update my shot\nif <(Built) = (1)> then\n  if <<(item (ID) of [Shot Active v]) = (1)> and <(item (ID) of [Shot X v]) > (230)>> then\n    replace item (ID) of [Shot Active v] with (0)\n  end\n  if <(Reload) > (0)> then\n    change [Reload v] by (-1)\n  end\n  if <<(item (ID) of [Shot Active v]) = (0)> and <(Reload) = (0)>> then\n    replace item (ID) of [Shot X v] with (-135)\n    replace item (ID) of [Shot Active v] with (1)\n    set [Reload v] to (Reload Time)\n  end\n  replace item (ID) of [Shot X v] with ((item (ID) of [Shot X v]) + (10))\nend" }]
@@ -509,7 +515,7 @@
           "explanation": "Reset level will be useful both for a new game and for the next level. It removes old copies before creating new ones, clears shot data, and gives the player time to build.",
           "instructions": [
             "On the Stage, make Reset level with no inputs. Leave Run without screen refresh unticked: this block waits for other sprites to finish setup.",
-            "Build Reset level below using the setup blocks you already know. It begins with resetting and Clear Clones and wait.",
+            "Build Reset level below using the setup blocks you already know. It begins with `set Game State to resetting`, `set Start Requested to 0`, and `broadcast Clear Clones and wait`.",
             "After Load level settings, add `set Coins to Starting Coins` and `set Base Health to Starting Health`.",
             "Attach `set Wave to 1`, followed by the zero-setting blocks in the code panel. Keep `set Start Requested to 0` near the beginning, before Clear Clones.",
             "Clear both shot lists and add six zeroes to each before making towers and shots.",
@@ -526,13 +532,13 @@
           "id": "start-wave-button",
           "kind": "build",
           "title": "Let the Player Start Each Wave",
-          "explanation": "The button asks for a wave by setting Start Requested to 1. The Stage will accept that request once. Repeated clicks cannot add multiple waves because the request is just 0 or 1.",
+          "explanation": "The button only sets Start Requested to 1. The Stage's forever loop sees the 1, starts the wave, and sets it back to 0. Clicking twice cannot start two waves, because the value is only ever 0 or 1.",
           "instructions": [
             "Paint a sprite named Start Wave with a readable Start Wave label, no larger than 130 by 30 pixels.",
             "Place it at x 90, y -155 using its Refresh Controls script below.",
             "Add its click script: if Game State is ready, set Start Requested to 1. Do not spawn enemies from this button.",
             "Make Stage My Blocks Start this wave and Clear shots, without inputs and without Run without screen refresh.",
-            "Create a variable named `Slot` on the Stage for Clear shots. It counts through list items 1 to 6; it is not the Check shot input named slot or a clone's ID.",
+            "Create a variable named `Slot` on the Stage for Clear shots. It counts through list items 1 to 6. It is a different thing from the `slot` input of Check shot: one is a Stage variable, the other is an input that only exists inside Check shot.",
             "Build the two definitions below. Start this wave immediately changes the state to combat, clears the request, loads the wave settings, and resets the wave counters.",
             "Clear shots replaces six existing list entries with zero and asks the displays to hide. It must not delete items from either list."
           ],
@@ -639,10 +645,11 @@
             "In the Stage's Reset level definition, insert `set Next Requested to 0` immediately after `set Start Requested to 0`.",
             "Immediately after the new set block, insert `broadcast Refresh Controls and wait`. This hides the old buttons before the new battlefield is built.",
             "Replace only the Stage's green-flag script with the final version below. Keep all its existing My Block definitions and its Refresh Controls script.",
-            "Check the new first if in forever: Game State must be cleared AND Next Requested must be 1. Inside it, set Game State to resetting first, change Level by 1, then call Reset level.",
+            "Check the new first if in forever: it needs `Game State = cleared` and `Next Requested = 1`.",
+            "Inside it, set Game State to resetting first, so a second click cannot count. Then change Level by 1 and call Reset level.",
             "Do not add a second forever loop for Next Level. The existing loop handles both requests in order."
           ],
-          "hints": ["Keep Next Level in the center and Start Wave at the bottom-right. A second click in the old Next Level position must not accidentally start a wave.", "Reset level sets both request variables to 0 before Game State becomes ready. Next Level accepts clicks only while Game State is cleared, so repeated clicks cannot advance twice."],
+          "hints": ["Keep Next Level in the center and Start Wave at the bottom-right. If the player double-clicks Next Level, the second click lands where Next Level was, far from Start Wave, so it cannot start a wave by accident.", "Reset level sets both request variables to 0 before Game State becomes ready. Next Level accepts clicks only while Game State is cleared, so repeated clicks cannot advance twice."],
           "debuggingTips": [{ "symptom": "Level 2 keeps the old towers or coins.", "checks": ["The Next Level branch must call Reset level, not Start this wave.", "Reset level must wait for Clear Clones before creating new copies."] }],
           "checkpoint": { "task": "Explain the path from the final Level 1 enemy to the first Level 2 wave.", "expectedResult": "Finish wave sets cleared, Next Level requests reset, the Stage builds Level 2, and Start Wave still waits for the player.", "completeWhen": ["There is one main Stage loop.", "Both request values are cleared during reset."] },
           "finishedCode": [{ "target": "Next Level", "code": "when I receive [Refresh Controls v]\ngo to x: (0) y: (0)\nif <(Game State) = [cleared]> then\n  show\nelse\n  hide\nend\n\nwhen this sprite clicked\nif <(Game State) = [cleared]> then\n  set [Next Requested v] to (1)\nend" }, { "target": "Stage final main controller", "code": "when green flag clicked\nset [Game State v] to [resetting]\nset [Level v] to (1)\nset [Final Level v] to (2)\nbroadcast [Initialize Originals v] and wait\nReset level :: custom\nforever\n  if <<(Game State) = [cleared]> and <(Next Requested) = (1)>> then\n    set [Game State v] to [resetting]\n    change [Level v] by (1)\n    Reset level :: custom\n  end\n  if <<(Game State) = [ready]> and <(Start Requested) = (1)>> then\n    Start this wave :: custom\n  end\n  if <(Game State) = [combat]> then\n    Combat step :: custom\n  end\n  broadcast [Draw Shots v] and wait\n  wait (0.03) seconds\nend" }]
