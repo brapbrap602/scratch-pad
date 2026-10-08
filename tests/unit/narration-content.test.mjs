@@ -37,8 +37,8 @@ test('extracts every visible learner-prose section exactly once', async () => {
     speech.push(...sections.flatMap((section) => section.sentences.map((sentence) => sentence.speech)));
   }
 
-  assert.equal(sentenceCount, 2434);
-  assert.equal(new Set(speech).size, 2415);
+  assert.equal(sentenceCount, 2442);
+  assert.equal(new Set(speech).size, 2421);
 });
 
 test('verbalizes current Scratch syntax without leaking markup', () => {

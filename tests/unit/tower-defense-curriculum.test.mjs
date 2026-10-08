@@ -184,3 +184,21 @@ test('reload time and Level 2 settings make tower placement matter', async () =>
   assert.equal(playLevel(levelTwo, twoLanes), 0, 'leaving a lane open loses Level 2');
   assert.equal(playLevel({ ...levelTwo, reload: 0 }, oneEachLane), common.health, 'without reload, placement would not matter');
 });
+
+test('Chapters 4 and 5 open with a clone warm-up and end every step with something to run', async () => {
+  const lesson = JSON.parse(await readFile(new URL('../../curriculum/tower-defense.json', import.meta.url), 'utf8'));
+  const [chapterFour, chapterFive] = lesson.chapters.slice(3, 5);
+  const warmUp = chapterFour.steps[0];
+  assert.equal(warmUp.id, 'try-a-clone');
+  assert.match(warmUp.finishedCode[0].code, /set \[My Number v\] to \(1\)[\s\S]*create clone[\s\S]*set \[My Number v\] to \(0\)/);
+  assert.match(warmUp.instructions.at(-1), /delete/i);
+
+  for (const step of [...chapterFour.steps, ...chapterFive.steps].filter(({ kind }) => kind !== 'checkpoint')) {
+    assert.doesNotMatch(step.checkpoint.task, /trace|explain|on paper|work out|read the/i, `${step.id} checkpoint should be run, not traced on paper`);
+  }
+  // Each Chapter 4 step that adds a Stage message shows the green-flag script that sends it.
+  for (const [id, message] of [['number-the-spots', 'Initialize Originals'], ['make-six-towers', 'Present Level'], ['enemies-in-three-lanes', 'Spawn Enemy']]) {
+    const stage = chapterFour.steps.find((step) => step.id === id).finishedCode.find(({ code }) => code.startsWith('when green flag clicked'));
+    assert.ok(stage?.code.includes(`broadcast [${message} v] and wait`), `${id} should show the Stage sending ${message}`);
+  }
+});
