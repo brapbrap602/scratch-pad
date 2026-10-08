@@ -153,9 +153,11 @@ test('captures tower defense lists, My Blocks, level settings, and mobile challe
   await page.locator('.step-button[data-step-id="design-your-own-level"]').click();
   await expect(page.getByRole('heading', { name: 'Your Challenge: Design Level 3' })).toBeFocused();
   const referenceSave = page.locator('.instruction-list > li').filter({ hasText: 'tower-defense-two-levels.sb3' });
-  await expect(referenceSave.locator('svg')).toHaveCount(0);
+  // The narration play button also draws an svg icon; only inline Scratch code matters here.
+  await expect(referenceSave.locator('.scratch-inline-source')).toHaveCount(0);
   const levelBranch = page.locator('.instruction-list > li').filter({ hasText: 'Load level settings' });
   await expect(levelBranch.locator('svg .sb3-control').first()).toBeVisible();
+  await expect(levelBranch.locator('.scratch-inline-source svg .sb3-control').first()).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
   await page.screenshot({ path: `${output}/08-tower-defense-mobile-challenge.png`, fullPage: true });
   expect(errors).toEqual([]);
