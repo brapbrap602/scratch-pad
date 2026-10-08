@@ -133,9 +133,40 @@
       .chapter-group:nth-of-type(4n + 2) { --chapter-accent: var(--sage); }
       .chapter-group:nth-of-type(4n + 3) { --chapter-accent: var(--butter); }
       .chapter-group:nth-of-type(4n) { --chapter-accent: var(--peach); }
-      .chapter-group { margin: 0 0 1.75rem; }
-      .chapter-group h3 { border-left: .2rem solid var(--chapter-accent); color: var(--text); font-size: .95rem; font-weight: 600; line-height: 1.4; margin: 0 0 .3rem; padding-left: .65rem; }
-      .chapter-meta { color: var(--text-muted); font-size: .72rem; line-height: 1.5; margin: 0 0 .65rem .85rem; }
+      .chapter-group { margin: 0 0 .5rem; }
+      .chapter-heading { margin: 0; }
+      .chapter-toggle {
+        background: transparent;
+        border: 0;
+        border-left: .2rem solid var(--chapter-accent);
+        color: var(--text);
+        cursor: pointer;
+        display: grid;
+        gap: .15rem;
+        padding: .5rem 2rem .5rem .65rem;
+        position: relative;
+        text-align: left;
+        width: 100%;
+      }
+      .chapter-toggle::after {
+        border-bottom: 2px solid var(--text-muted);
+        border-right: 2px solid var(--text-muted);
+        content: '';
+        height: .45rem;
+        position: absolute;
+        right: .6rem;
+        top: 50%;
+        transform: translateY(-70%) rotate(45deg);
+        width: .45rem;
+      }
+      .chapter-toggle[aria-expanded="false"]::after { transform: translateY(-50%) rotate(-45deg); }
+      .chapter-title { font-size: .95rem; font-weight: 600; line-height: 1.35; }
+      .chapter-meta { color: var(--text-muted); font-size: .75rem; line-height: 1.5; }
+      .chapter-group.is-complete .chapter-meta { color: var(--sage); font-weight: 700; }
+      .step-list:not([hidden]) { margin: .35rem 0 .75rem; }
+      .step-list[hidden] { display: none; }
+      .course-progress { display: grid; gap: .4rem; margin: 0 0 1.25rem; }
+      .course-progress-label { color: var(--text-muted); font-size: .85rem; font-weight: 600; margin: 0; }
       .step-list { display: grid; gap: .125rem; list-style: none; margin: 0; padding: 0; }
       .step-button {
         background: transparent;
@@ -148,7 +179,7 @@
         display: grid;
         font-size: .9rem;
         column-gap: .5rem;
-        grid-template-columns: 2.5ch minmax(0, 1fr);
+        grid-template-columns: 1rem 2.5ch minmax(0, 1fr);
         line-height: 1.5;
         padding: .45rem .6rem;
         text-align: left;
@@ -157,7 +188,10 @@
       .step-button[aria-current="step"] { background: var(--accent-tint); border-left-color: var(--accent); color: var(--text); font-weight: 600; }
       .step-number { font-variant-numeric: tabular-nums; text-align: right; }
       .step-label { min-width: 0; }
-      .completion-mark { color: var(--sage); font-size: .7rem; font-weight: 600; grid-column: 2; }
+      .step-dot { align-self: center; border: 2px solid var(--border); border-radius: 50%; height: .8rem; width: .8rem; }
+      .step-button[aria-current="step"] .step-dot { border-color: var(--accent); }
+      .step-button.is-complete .step-dot { background: var(--sage); border-color: var(--sage); box-shadow: inset 0 0 0 2px var(--sidebar); }
+      .step-button.is-complete .step-label { color: var(--text); }
       .content-area {
         background:
           radial-gradient(circle at 92% 2%, var(--glow), transparent 24rem),

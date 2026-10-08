@@ -6,6 +6,13 @@ import { validateLessonDocument } from '../../js/content.js';
 import { NARRATION_PROFILE, extractNarrationSections } from '../../js/narration-content.js';
 import { createNarrationGroups } from '../../js/narration-groups.js';
 
+// Chapters other than the current one are folded; open the step's chapter before clicking it.
+const showStep = async (page, stepId) => {
+  const toggle = page.locator(`[data-chapter-for-step~="${stepId}"]`);
+  if ((await toggle.getAttribute('aria-expanded')) === 'false') await toggle.click();
+  return page.locator(`.step-button[data-step-id="${stepId}"]`);
+};
+
 const narrationManifest = async (lessonId) => {
   const lesson = validateLessonDocument(
     JSON.parse(await readFile(new URL(`../../curriculum/${lessonId}.json`, import.meta.url), 'utf8')),
@@ -308,7 +315,7 @@ test('keeps written lessons usable when narration metadata is unavailable', asyn
 
 test('finished Scratch code preserves angle-bracket predicates and renders once', async ({ page }) => {
   await page.getByLabel('Project').selectOption('brick-breaker');
-  await page.getByRole('button', { name: /Move, Detect a Miss, Then Bounce/ }).click();
+  await (await showStep(page, 'build-ordered-ball-loop')).click();
   const details = page.getByText('Show finished code').locator('..');
   await details.click();
   const codeEntries = details.locator(':scope > .details-content > details');
@@ -385,7 +392,7 @@ test('keeps the lesson reachable without horizontal page overflow on a phone', a
 test('keeps desktop navigation fixed while lesson content scrolls independently', async ({ page }) => {
   await page.setViewportSize({ width: 1280, height: 500 });
   await page.getByLabel('Project').selectOption('space-invaders');
-  await page.getByRole('button', { name: /Checkpoint: Finish Space Invaders/ }).click();
+  await (await showStep(page, 'final-release-checkpoint')).click();
 
   const nav = page.locator('.steps-nav');
   const navTopBefore = (await nav.boundingBox()).y;
@@ -417,7 +424,7 @@ test('renders every real curriculum step without page errors', async ({ page }) 
 
   for (const lessonId of narrationFixtures.keys()) {
     await page.getByLabel('Project').selectOption(lessonId);
-    await expect(page.locator('.step-button').first()).toBeVisible();
+    await expect(page.locator('.step-button').first()).toBeAttached();
     await expect(page.locator('.narration-button').first()).toBeAttached();
     const narrationIds = new Set(await page.locator('[data-narration-slot-id]').evaluateAll((slots) =>
       slots.map((slot) => slot.dataset.narrationSlotId),
@@ -427,7 +434,7 @@ test('renders every real curriculum step without page errors', async ({ page }) 
     );
 
     for (const stepId of stepIds) {
-      await page.locator(`.step-button[data-step-id="${stepId}"]`).click();
+      await (await showStep(page, stepId)).click();
       await expect(page.locator('#content-heading')).toBeFocused();
       await expect(page.getByRole('heading', { name: 'Test your work' })).toBeVisible();
       await expect(page.getByRole('button', { name: /Mark step (complete|incomplete)/ })).toBeVisible();
@@ -499,4 +506,25 @@ test('home cards start a game and later continue from the last step viewed', asy
   await expect(card.getByRole('progressbar')).toHaveAttribute('aria-valuenow', '1');
   await card.getByRole('button', { name: 'Continue: Draw the Battlefield' }).click();
   await expect(page.getByRole('heading', { name: 'Draw the Battlefield' })).toBeFocused();
+});
+
+test('the sidebar folds other chapters and shows overall progress', async ({ page }) => {
+  await page.getByLabel('Project').selectOption('brick-breaker');
+  const first = page.locator('[data-chapter-toggle="project-foundations"]');
+  const second = page.locator('[data-chapter-toggle="ball-and-lives"]');
+  await expect(first).toHaveAttribute('aria-expanded', 'true');
+  await expect(second).toHaveAttribute('aria-expanded', 'false');
+  await expect(page.locator('.step-button[data-step-id="setup-singleton-ball"]')).toBeHidden();
+
+  await second.click();
+  await page.locator('.step-button[data-step-id="setup-singleton-ball"]').click();
+  await page.getByRole('button', { name: 'Mark step complete' }).click();
+  await expect(page.locator('.course-progress-label')).toHaveText('1 of 24 steps done');
+  await expect(page.locator('.step-button[data-step-id="setup-singleton-ball"]')).toHaveClass(/is-complete/);
+  await expect(page.locator('#steps-list').getByRole('progressbar')).toHaveAttribute('aria-valuenow', '1');
+
+  // Going to a step leaves only that step's chapter open.
+  await expect(first).toHaveAttribute('aria-expanded', 'false');
+  await first.click();
+  await expect(page.locator('.step-button[data-step-id="observe-complete-game"]')).toBeVisible();
 });

@@ -5,6 +5,13 @@ import { validateLessonDocument } from '../../js/content.js';
 import { NARRATION_PROFILE, extractNarrationSections } from '../../js/narration-content.js';
 
 const output = 'visual-results';
+
+// Chapters other than the current one are folded; open the step's chapter before clicking it.
+const showStep = async (page, stepId) => {
+  const toggle = page.locator(`[data-chapter-for-step~="${stepId}"]`);
+  if ((await toggle.getAttribute('aria-expanded')) === 'false') await toggle.click();
+  return page.locator(`.step-button[data-step-id="${stepId}"]`);
+};
 const manifests = new Map(await Promise.all(
   ['brick-breaker', 'space-invaders', 'tower-defense'].map(async (lessonId) => {
     const lesson = validateLessonDocument(
@@ -53,7 +60,7 @@ test('captures real desktop and mobile course states', async ({ page }) => {
   await page.screenshot({ path: `${output}/01-home-desktop.png`, fullPage: true });
 
   await page.getByLabel('Project').selectOption('brick-breaker');
-  await page.getByRole('button', { name: /Move, Detect a Miss, Then Bounce/ }).click();
+  await (await showStep(page, 'build-ordered-ball-loop')).click();
   await expect(page.locator('button[data-narration-section-id$="build-ordered-ball-loop/overview"]')).toBeVisible();
   await page.getByText('Show finished code').click();
   const brickCodeEntry = page
@@ -66,7 +73,7 @@ test('captures real desktop and mobile course states', async ({ page }) => {
   await page.screenshot({ path: `${output}/02-brick-code-desktop.png`, fullPage: true });
 
   await page.getByLabel('Project').selectOption('space-invaders');
-  await page.getByRole('button', { name: /Checkpoint: Finish Space Invaders/ }).click();
+  await (await showStep(page, 'final-release-checkpoint')).click();
   const invadersCode = page.getByText('Show finished code').locator('..');
   await invadersCode.locator('summary').first().click();
   for (const [target, filename] of [
@@ -93,7 +100,7 @@ test('captures real desktop and mobile course states', async ({ page }) => {
 
   await page.setViewportSize({ width: 390, height: 844 });
   await page.getByRole('button', { name: 'Show chapters' }).click();
-  await page.getByRole('button', { name: /Map the Complete Game/ }).click();
+  await (await showStep(page, 'map-the-game')).click();
   const heading = page.getByRole('heading', { name: 'Map the Complete Game' });
   await expect(heading).toBeFocused();
   const box = await heading.boundingBox();
@@ -118,7 +125,7 @@ test('captures tower defense lists, My Blocks, level settings, and mobile challe
     ['check-a-numbered-shot', '06-tower-defense-shot-blocks.png', 'slot'],
     ['level-two-settings', '07-tower-defense-level-settings.png', 'Load level settings'],
   ]) {
-    await page.locator(`.step-button[data-step-id="${stepId}"]`).click();
+    await (await showStep(page, stepId)).click();
     const code = page.getByText('Show finished code').locator('..');
     await code.locator('summary').first().click();
     const nested = code.locator(':scope > .details-content > details').first();
@@ -150,7 +157,7 @@ test('captures tower defense lists, My Blocks, level settings, and mobile challe
 
   await page.setViewportSize({ width: 320, height: 800 });
   await page.getByRole('button', { name: 'Show chapters' }).click();
-  await page.locator('.step-button[data-step-id="design-your-own-level"]').click();
+  await (await showStep(page, 'design-your-own-level')).click();
   await expect(page.getByRole('heading', { name: 'Your Challenge: Design Level 3' })).toBeFocused();
   const referenceSave = page.locator('.instruction-list > li').filter({ hasText: 'File > Save as a copy' });
   await expect(referenceSave.locator('.inline-chip')).toHaveCount(0);

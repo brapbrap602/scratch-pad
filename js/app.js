@@ -31,6 +31,8 @@ let lessonLoading = false;
 let narrationSections = new Map();
 let lessonNames = { myBlocks: new Set(), variables: new Set() };
 let lessonSummaries = [];
+// Chapters the learner has opened in the sidebar; the current step's chapter is always open.
+let openChapterIds = new Set();
 
 const element = (tag, options = {}) => {
   const node = document.createElement(tag);
@@ -236,29 +238,75 @@ const updateNavigationState = () => {
     const completed = lessonProgress.completedStepIds.includes(button.dataset.stepId);
     if (button.dataset.stepId === currentStepId) button.setAttribute('aria-current', 'step');
     else button.removeAttribute('aria-current');
+    button.classList.toggle('is-complete', completed);
     const mark = button.querySelector('.completion-mark');
     mark.textContent = completed ? 'Completed' : '';
-    mark.classList.toggle('visually-hidden', !completed);
   }
+};
+
+const progressBar = (done, total, label) => {
+  const track = element('div', {
+    className: 'progress-track',
+    attrs: {
+      role: 'progressbar',
+      'aria-label': label,
+      'aria-valuemin': '0',
+      'aria-valuemax': String(total),
+      'aria-valuenow': String(done),
+    },
+  });
+  const fill = element('div', { className: 'progress-fill' });
+  fill.style.width = `${total ? Math.round((done / total) * 100) : 0}%`;
+  track.append(fill);
+  return track;
 };
 
 const renderNavigation = () => {
   stepsList.replaceChildren();
   const lessonProgress = progress.getLesson(currentLesson.id);
+  const completedIds = new Set(lessonProgress.completedStepIds);
+  const focusStepId = currentStepId ?? lessonProgress.lastViewedStepId ?? currentSteps[0]?.id;
+  const focusChapter = currentSteps.find(({ id }) => id === focusStepId)?.chapterId;
+  if (focusChapter) openChapterIds.add(focusChapter);
+
+  const totalDone = currentSteps.filter(({ id }) => completedIds.has(id)).length;
+  const overview = element('div', { className: 'course-progress' });
+  overview.append(
+    element('p', { className: 'course-progress-label', text: `${totalDone} of ${currentSteps.length} steps done` }),
+    progressBar(totalDone, currentSteps.length, `${currentLesson.title} progress`),
+  );
+  stepsList.append(overview);
+
   let stepNumber = 0;
   for (const chapter of currentLesson.chapters) {
+    const open = openChapterIds.has(chapter.id);
+    const completedCount = chapter.steps.filter((step) => completedIds.has(step.id)).length;
     const group = element('section', { className: 'chapter-group' });
-    group.append(element('h3', { text: chapter.title }));
-    const completedCount = chapter.steps.filter((step) =>
-      lessonProgress.completedStepIds.includes(step.id),
-    ).length;
-    group.append(
-      element('p', {
+    const listId = `chapter-steps-${chapter.id}`;
+    const toggle = element('button', {
+      className: 'chapter-toggle',
+      attrs: {
+        type: 'button',
+        'aria-expanded': String(open),
+        'aria-controls': listId,
+        'data-chapter-toggle': chapter.id,
+        'data-chapter-for-step': chapter.steps.map(({ id }) => id).join(' '),
+      },
+    });
+    const done = completedCount === chapter.steps.length;
+    toggle.append(
+      element('span', { className: 'chapter-title', text: chapter.title }),
+      element('span', {
         className: 'chapter-meta',
-        text: `${completedCount} of ${chapter.steps.length} complete - ${chapter.estimatedMinutes} minutes`,
+        text: `${done ? 'All done' : `${completedCount} of ${chapter.steps.length} done`} · ${chapter.estimatedMinutes} min`,
       }),
     );
-    const list = element('ul', { className: 'step-list' });
+    group.append(element('h3', { className: 'chapter-heading' }));
+    group.querySelector('.chapter-heading').append(toggle);
+    if (done) group.classList.add('is-complete');
+
+    const list = element('ul', { className: 'step-list', attrs: { id: listId } });
+    list.hidden = !open;
     for (const step of chapter.steps) {
       stepNumber += 1;
       const item = element('li');
@@ -267,14 +315,10 @@ const renderNavigation = () => {
         attrs: { type: 'button', 'data-step-id': step.id },
       });
       button.append(
+        element('span', { className: 'step-dot', attrs: { 'aria-hidden': 'true' } }),
         element('span', { className: 'step-number', text: `${stepNumber}. ` }),
         element('span', { className: 'step-label', text: step.title }),
-      );
-      button.append(
-        element('span', {
-          className: `completion-mark ${lessonProgress.completedStepIds.includes(step.id) ? '' : 'visually-hidden'}`,
-          text: lessonProgress.completedStepIds.includes(step.id) ? 'Completed' : '',
-        }),
+        element('span', { className: 'completion-mark visually-hidden' }),
       );
       item.append(button);
       list.append(item);
@@ -393,20 +437,7 @@ const renderHome = () => {
         text: `${lesson.chapters.length} chapters · about ${Math.round(minutes / 60)} hours · ${done} of ${total} steps done`,
       }),
     );
-    const track = element('div', {
-      className: 'progress-track',
-      attrs: {
-        role: 'progressbar',
-        'aria-label': `${lesson.title} progress`,
-        'aria-valuemin': '0',
-        'aria-valuemax': String(total),
-        'aria-valuenow': String(done),
-      },
-    });
-    const fill = element('div', { className: 'progress-fill' });
-    fill.style.width = `${Math.round((done / total) * 100)}%`;
-    track.append(fill);
-    body.append(track);
+    body.append(progressBar(done, total, `${lesson.title} progress`));
     const open = element('button', {
       className: 'button',
       text: resumeStep ? `Continue: ${resumeStep.title}` : `Start ${lesson.title}`,
@@ -540,6 +571,7 @@ const navigateToStep = (stepId, { focus = true } = {}) => {
   const sectionRoot = `${step.chapterId}/${step.id}`;
   currentStepId = step.id;
   progress.markViewed(currentLesson.id, step.id);
+  openChapterIds = new Set([step.chapterId]);
   renderNavigation();
 
   const article = element('article', { className: 'content-column' });
@@ -685,6 +717,7 @@ const loadLesson = async (lessonId, { resumeStepId = null } = {}) => {
     const lesson = validateLessonDocument(await response.json(), lessonId);
     if (version !== requestVersion) return;
     currentLesson = lesson;
+    openChapterIds = new Set();
     document.documentElement.dataset.lesson = lesson.id;
     lessonNames = collectLessonNames(lesson);
     currentSteps = flattenLessonSteps(lesson);
@@ -772,6 +805,16 @@ lessonSelect.addEventListener('change', () => {
 
 stepsList.addEventListener('click', (event) => {
   if (lessonLoading) return;
+  const chapterToggle = event.target.closest('button[data-chapter-toggle]');
+  if (chapterToggle) {
+    const id = chapterToggle.dataset.chapterToggle;
+    const open = chapterToggle.getAttribute('aria-expanded') !== 'true';
+    if (open) openChapterIds.add(id);
+    else openChapterIds.delete(id);
+    chapterToggle.setAttribute('aria-expanded', String(open));
+    document.getElementById(chapterToggle.getAttribute('aria-controls')).hidden = !open;
+    return;
+  }
   const button = event.target.closest('button[data-step-id]');
   if (button) navigateToStep(button.dataset.stepId);
 });
