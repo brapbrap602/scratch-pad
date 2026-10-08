@@ -188,7 +188,9 @@ const buildManifest = (entry, assets) => ({
       const requestHash = requestHashFor(speech);
       const asset = assets.get(requestHash);
       if (!asset) throw new Error(`No generated asset for ${requestHash}`);
-      return { sourcePath, speech, ...asset, requestHash };
+      // Reused assets are old manifest sentences; take only their clip fields, not their old sourcePath.
+      const { src, sha256: digest, bytes, durationMs } = asset;
+      return { sourcePath, speech, requestHash, src, sha256: digest, bytes, durationMs };
     }),
   })),
 });
