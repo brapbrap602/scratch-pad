@@ -129,7 +129,7 @@
           "instructions": [
             "Start a new Scratch project and delete the Cat.",
             "Add or paint four sprites and name them exactly Paddle, Ball, Brick, and Apple.",
-            "Make Ball small and round. Paint Paddle as a wide, short rectangle. Paint Brick about 40 pixels wide and 18 pixels tall.",
+            "Make Ball round and no wider than 20 pixels. Paint Paddle about 80 pixels wide and 10 pixels tall. Paint Brick about 40 pixels wide and 18 pixels tall.",
             "Create three Stage backdrops named Play, You Win, and Game Over. Keep the ending backdrops simple and readable.",
             "Make three variables for all sprites named Lives, Bricks Left, and Hit Claimed.",
             "Create six messages named Build Bricks, Start Ball, Hit Brick, Apple Caught, Win, and Game Over.",
@@ -137,7 +137,8 @@
           ],
           "hints": [
             "Use the paint editor if a library sprite is too large or detailed.",
-            "Variable and message names must include the spaces shown here."
+            "Variable and message names must include the spaces shown here.",
+            "Keep Ball no wider than 20 pixels. A bigger Ball touches the bottom edge and bounces before the miss check can see it."
           ],
           "debuggingTips": [
             {
@@ -216,7 +217,8 @@
           "title": "Checkpoint: A Repeatable Starting State",
           "explanation": "A dependable game begins the same way every time. This checkpoint verifies the project structure and the first complete control before motion and collisions are added.",
           "instructions": [
-            "Move Paddle to one side and change all three variable monitors by double-clicking them.",
+            "Stop the project. Drag Paddle to one side and type 150 into the size box in the sprite info below the Stage.",
+            "In the Variables category, choose Lives in the `set to` block, type 9, and click the block. Lives now shows 9. Do the same for Bricks Left and Hit Claimed.",
             "Click the green flag once.",
             "Confirm the backdrop, variables, Paddle position, and Paddle size all reset.",
             "Compare your scripts with the cumulative code below before continuing."
@@ -274,7 +276,7 @@
           "explanation": "Ball is a singleton: the original sprite is the only Ball that ever exists. Its main script starts only when it receives Start Ball. The Stage sends that message after Build Bricks has finished, so Ball never depends on guessing a long enough delay.",
           "instructions": [
             "Select Ball and remove any clone blocks if you experimented with them.",
-            "Set Ball to a useful size, about 25-35 percent if you chose the library Ball.",
+            "Keep Ball no wider than 20 pixels. If you chose the library Ball, a size of about 25-35 percent works.",
             "Add a short green-flag script that hides Ball while the Stage coordinates setup.",
             "Begin Ball's main script with `when I receive Start Ball`, then set rotation style to all around.",
             "Go to x 0 y -100, point in a random direction from -45 to 45, and show.",
@@ -294,8 +296,8 @@
             }
           ],
           "checkpoint": {
-            "task": "Click the green flag several times and inspect Ball before adding movement.",
-            "expectedResult": "Exactly one Ball appears at x 0 y -100 after Start Ball and faces upward at a changing angle.",
+            "task": "Click the green flag several times. Each time, look at Ball and at the direction in its sprite info.",
+            "expectedResult": "Exactly one Ball appears at x 0, y -100 after Start Ball. Its direction is a different number from -45 to 45 each time.",
             "completeWhen": [
               "Ball is hidden until Start Ball is received.",
               "Ball always begins from the same position.",
@@ -380,7 +382,7 @@
           ],
           "hints": [
             "A wider random range creates more varied shots while still pointing upward.",
-            "If Ball is large, shrink it instead of increasing the separation move too far."
+            "If Ball is wider than 20 pixels, shrink it instead of increasing the separation move."
           ],
           "debuggingTips": [
             {
@@ -552,12 +554,13 @@
             "In Ball's forever loop, add a touching-Brick condition after the Paddle condition.",
             "Inside it, set Hit Claimed to 0, then use `broadcast Hit Brick and wait`, not ordinary broadcast.",
             "After the message returns, check whether Bricks Left equals 0. If so, broadcast Win and wait, then stop all.",
-            "If play continues, point in direction `direction + 180` and move 12 steps to separate from the brick.",
+            "If play continues, point in direction `direction + 180 + pick random -20 to 20` and move 12 steps to separate from the brick.",
             "Do not put the broadcast in its own forever script and do not broadcast repeatedly while Ball is not touching Brick."
           ],
           "hints": [
             "The `direction` reporter is in Motion and can be placed in the addition operator. Scratch keeps the result in its valid direction range.",
-            "The receiver built next must end quickly so broadcast-and-wait can return."
+            "The receiver built next must end quickly so broadcast-and-wait can return.",
+            "The small random turn changes Ball's path after each brick, so it does not fly straight back to the same spot on Paddle."
           ],
           "debuggingTips": [
             {
@@ -576,14 +579,24 @@
             }
           ],
           "checkpoint": {
-            "task": "Trace Ball's collision order with your finger on the blocks.",
-            "expectedResult": "Ball detects Brick, clears Hit Claimed, waits for one clone to claim the hit, checks Bricks Left, turns around, and separates.",
+            "task": "Click the green flag, keep Ball in play, and watch it reach the bricks.",
+            "expectedResult": "Ball turns back each time it touches a brick. No brick cracks yet, because Brick does not answer Hit Brick until the next step.",
             "completeWhen": [
               "Ball contains the only touching-Brick sensing block.",
               "Hit Claimed is set to 0 immediately before broadcast and wait.",
               "The win check uses Bricks Left."
             ]
-          }
+          },
+          "finishedCode": [
+            {
+              "target": "Ball",
+              "code": "when green flag clicked\nhide"
+            },
+            {
+              "target": "Ball",
+              "code": "when I receive [Start Ball v]\nset rotation style [all around v]\ngo to x: (0) y: (-100)\npoint in direction (pick random (-45) to (45))\nshow\nforever\n  move (8) steps\n  if <(y position) < (-165)> then\n    change [Lives v] by (-1)\n    if <(Lives) = (0)> then\n      broadcast [Game Over v] and wait\n      stop [all v]\n    else\n      hide\n      go to x: (0) y: (-100)\n      point in direction (pick random (-45) to (45))\n      wait (1) seconds\n      show\n    end\n  end\n  if on edge, bounce\n  if <touching [Paddle v]?> then\n    point in direction (pick random (-60) to (60))\n    move (12) steps\n  end\n  if <touching [Brick v]?> then\n    set [Hit Claimed v] to (0)\n    broadcast [Hit Brick v] and wait\n    if <(Bricks Left) = (0)> then\n      broadcast [Win v] and wait\n      stop [all v]\n    end\n    point in direction (((direction) + (180)) + (pick random (-20) to (20)))\n    move (12) steps\n  end\nend"
+            }
+          ]
         },
         {
           "id": "build-finite-brick-response",
@@ -678,7 +691,7 @@
             },
             {
               "target": "Ball",
-              "code": "when I receive [Start Ball v]\nset rotation style [all around v]\ngo to x: (0) y: (-100)\npoint in direction (pick random (-45) to (45))\nshow\nforever\n  move (8) steps\n  if <(y position) < (-165)> then\n    change [Lives v] by (-1)\n    if <(Lives) = (0)> then\n      broadcast [Game Over v] and wait\n      stop [all v]\n    else\n      hide\n      go to x: (0) y: (-100)\n      point in direction (pick random (-45) to (45))\n      wait (1) seconds\n      show\n    end\n  end\n  if on edge, bounce\n  if <touching [Paddle v]?> then\n    point in direction (pick random (-60) to (60))\n    move (12) steps\n  end\n  if <touching [Brick v]?> then\n    set [Hit Claimed v] to (0)\n    broadcast [Hit Brick v] and wait\n    if <(Bricks Left) = (0)> then\n      broadcast [Win v] and wait\n      stop [all v]\n    end\n    point in direction ((direction) + (180))\n    move (12) steps\n  end\nend"
+              "code": "when I receive [Start Ball v]\nset rotation style [all around v]\ngo to x: (0) y: (-100)\npoint in direction (pick random (-45) to (45))\nshow\nforever\n  move (8) steps\n  if <(y position) < (-165)> then\n    change [Lives v] by (-1)\n    if <(Lives) = (0)> then\n      broadcast [Game Over v] and wait\n      stop [all v]\n    else\n      hide\n      go to x: (0) y: (-100)\n      point in direction (pick random (-45) to (45))\n      wait (1) seconds\n      show\n    end\n  end\n  if on edge, bounce\n  if <touching [Paddle v]?> then\n    point in direction (pick random (-60) to (60))\n    move (12) steps\n  end\n  if <touching [Brick v]?> then\n    set [Hit Claimed v] to (0)\n    broadcast [Hit Brick v] and wait\n    if <(Bricks Left) = (0)> then\n      broadcast [Win v] and wait\n      stop [all v]\n    end\n    point in direction (((direction) + (180)) + (pick random (-20) to (20)))\n    move (12) steps\n  end\nend"
             },
             {
               "target": "Brick",
@@ -769,7 +782,7 @@
           "title": "Create Apples Only on Second Hits",
           "explanation": "Power-ups belong to destroyed bricks, so the chance runs only in the Cracked branch just before deletion. The one clone that claimed the hit may run this chance. A random result of 1 from 1 to 5 gives each broken brick a one-in-five chance. After creation, a finite zero-second wait yields to the new clone's start script while Hit Brick is still being handled and Ball is still paused.",
           "instructions": [
-            "Return to Brick's finite Hit Brick receiver, after the Hit Claimed check and claim block.",
+            "Return to Brick's Hit Brick receiver and find its else branch. That branch runs on a brick's second hit.",
             "In the else branch, before changing Bricks Left, test whether `pick random 1 to 5` equals 1.",
             "If true, create a clone of Apple, then wait 0 seconds so its start script can go to the paused Ball.",
             "After the chance, change Bricks Left by -1 and delete the Brick clone.",
@@ -872,9 +885,10 @@
           "instructions": [
             "Run the game until you see an Apple created.",
             "Watch whether it begins at the brick collision instead of at a fixed corner.",
-            "Catch Apples until Paddle reaches 160 percent and confirm it stops growing.",
+            "Select Paddle and tick the `size` checkbox in Looks. Each caught Apple adds 10 to size.",
+            "To test the limit quickly, type 150 into Paddle's size box during play, then catch two more Apples. Size reaches 160 and stays there.",
             "Click the green flag and confirm Paddle returns to 100 percent and old Apple clones disappear.",
-            "Compare the cumulative code for Brick, Apple, and Paddle below."
+            "Compare Paddle, Apple, and Brick's Hit Brick script with the code below. Ball, the Stage, and Brick's other scripts have not changed since Chapter 3."
           ],
           "hints": [
             "Scratch removes all existing clones when the green flag starts the project again."
@@ -1028,11 +1042,12 @@
           "instructions": [
             "Confirm there is no Restart sprite, Restart message, click-to-restart script, or key-to-restart script.",
             "After Game Over, click the Stage and press several keys. Nothing should restart.",
-            "Click the green flag and confirm old clones disappear, Build Bricks creates one new 50-brick grid, and only then Start Ball launches Ball.",
+            "Click the green flag and confirm Build Bricks creates one new 50-brick grid, and only then Start Ball launches Ball.",
             "Confirm Paddle size returns to 100, Apple original hides, Brick original hides, and one Ball resets.",
             "Repeat the same green-flag test after a Win."
           ],
           "hints": [
+            "When `stop all` runs, Scratch deletes every clone, so the bricks and Apples vanish when the game ends. That is expected.",
             "The red stop button may stop a test, but it is not an in-game restart.",
             "Do not simulate restart by broadcasting messages from a key."
           ],
@@ -1114,7 +1129,7 @@
             },
             {
               "target": "Ball",
-              "code": "when I receive [Start Ball v]\nset rotation style [all around v]\ngo to x: (0) y: (-100)\npoint in direction (pick random (-45) to (45))\nshow\nforever\n  move (8) steps\n  if <(y position) < (-165)> then\n    change [Lives v] by (-1)\n    if <(Lives) = (0)> then\n      broadcast [Game Over v] and wait\n      stop [all v]\n    else\n      hide\n      go to x: (0) y: (-100)\n      point in direction (pick random (-45) to (45))\n      wait (1) seconds\n      show\n    end\n  end\n  if on edge, bounce\n  if <touching [Paddle v]?> then\n    point in direction (pick random (-60) to (60))\n    move (12) steps\n  end\n  if <touching [Brick v]?> then\n    set [Hit Claimed v] to (0)\n    broadcast [Hit Brick v] and wait\n    if <(Bricks Left) = (0)> then\n      broadcast [Win v] and wait\n      stop [all v]\n    end\n    point in direction ((direction) + (180))\n    move (12) steps\n  end\nend"
+              "code": "when I receive [Start Ball v]\nset rotation style [all around v]\ngo to x: (0) y: (-100)\npoint in direction (pick random (-45) to (45))\nshow\nforever\n  move (8) steps\n  if <(y position) < (-165)> then\n    change [Lives v] by (-1)\n    if <(Lives) = (0)> then\n      broadcast [Game Over v] and wait\n      stop [all v]\n    else\n      hide\n      go to x: (0) y: (-100)\n      point in direction (pick random (-45) to (45))\n      wait (1) seconds\n      show\n    end\n  end\n  if on edge, bounce\n  if <touching [Paddle v]?> then\n    point in direction (pick random (-60) to (60))\n    move (12) steps\n  end\n  if <touching [Brick v]?> then\n    set [Hit Claimed v] to (0)\n    broadcast [Hit Brick v] and wait\n    if <(Bricks Left) = (0)> then\n      broadcast [Win v] and wait\n      stop [all v]\n    end\n    point in direction (((direction) + (180)) + (pick random (-20) to (20)))\n    move (12) steps\n  end\nend"
             }
           ]
         }
@@ -1143,11 +1158,11 @@
             "Inspect Paddle and confirm it never checks touching Ball or Brick.",
             "Inspect Apple and confirm only Apple clones check touching Paddle.",
             "Run contacts near the border between two bricks and watch exactly one clone change costume or delete.",
-            "Confirm Ball points in direction `direction + 180` and moves 12 steps after each hit response."
+            "Confirm Ball points in direction `direction + 180 + pick random -20 to 20` and moves 12 steps after each hit response."
           ],
           "hints": [
             "A receiver can use conditions and still be finite; it becomes non-finite only if it repeats without reaching the end.",
-            "The 180-degree turn and 12-step move send Ball back out along its incoming path, so separation works from any impact direction."
+            "The turn of about 180 degrees and the 12-step move send Ball back out the way it came in, so it leaves the brick from any impact direction. The random part is at most 20 degrees, so the move still clears the brick."
           ],
           "debuggingTips": [
             {
@@ -1167,7 +1182,7 @@
             {
               "symptom": "Ball stays inside a brick after a side or angled hit.",
               "checks": [
-                "Use direction plus 180, not 180 minus direction.",
+                "Use direction plus 180 plus the small random turn, not 180 minus direction.",
                 "Move Ball 12 steps after changing direction."
               ]
             }
@@ -1236,7 +1251,7 @@
             "Verify Stage broadcasts Build Bricks and waits, then broadcasts Start Ball; Brick builds on Build Bricks and Ball runs on Start Ball.",
             "Verify Ball checks y below -165 before `if on edge, bounce` and loses exactly one life per miss.",
             "Verify Paddle bounce, exactly one claimed Brick response per contact, Healthy-to-Cracked first hits, and Cracked-to-deleted second hits.",
-            "Verify every brick impact turns Ball by direction plus 180 and moves it 12 steps away.",
+            "Verify every brick impact turns Ball by direction plus 180 plus a small random turn and moves it 12 steps away.",
             "Verify some broken bricks create Apples at paused Ball and caught Apples widen Paddle no further than 160.",
             "Verify Lives 0 shows Game Over and Bricks Left 0 shows You Win.",
             "Verify keys, sprite clicks, and ending messages cannot restart; use only the green flag.",
@@ -1286,7 +1301,7 @@
               "symptom": "Your code looks similar but behaves differently.",
               "checks": [
                 "Compare the nesting of every if, else, and forever block.",
-                "Compare message type: ordinary broadcast for Apple Caught, broadcast-and-wait for Hit Brick, Win, and Game Over where shown.",
+                "Compare message type: ordinary broadcast for Start Ball and Apple Caught, broadcast-and-wait for Build Bricks, Hit Brick, Win, and Game Over.",
                 "Compare the order of startup messages, hit claiming, miss detection, and edge bounce."
               ]
             }
@@ -1327,7 +1342,7 @@
             },
             {
               "target": "Ball",
-              "code": "when I receive [Start Ball v]\nset rotation style [all around v]\ngo to x: (0) y: (-100)\npoint in direction (pick random (-45) to (45))\nshow\nforever\n  move (8) steps\n  if <(y position) < (-165)> then\n    change [Lives v] by (-1)\n    if <(Lives) = (0)> then\n      broadcast [Game Over v] and wait\n      stop [all v]\n    else\n      hide\n      go to x: (0) y: (-100)\n      point in direction (pick random (-45) to (45))\n      wait (1) seconds\n      show\n    end\n  end\n  if on edge, bounce\n  if <touching [Paddle v]?> then\n    point in direction (pick random (-60) to (60))\n    move (12) steps\n  end\n  if <touching [Brick v]?> then\n    set [Hit Claimed v] to (0)\n    broadcast [Hit Brick v] and wait\n    if <(Bricks Left) = (0)> then\n      broadcast [Win v] and wait\n      stop [all v]\n    end\n    point in direction ((direction) + (180))\n    move (12) steps\n  end\nend"
+              "code": "when I receive [Start Ball v]\nset rotation style [all around v]\ngo to x: (0) y: (-100)\npoint in direction (pick random (-45) to (45))\nshow\nforever\n  move (8) steps\n  if <(y position) < (-165)> then\n    change [Lives v] by (-1)\n    if <(Lives) = (0)> then\n      broadcast [Game Over v] and wait\n      stop [all v]\n    else\n      hide\n      go to x: (0) y: (-100)\n      point in direction (pick random (-45) to (45))\n      wait (1) seconds\n      show\n    end\n  end\n  if on edge, bounce\n  if <touching [Paddle v]?> then\n    point in direction (pick random (-60) to (60))\n    move (12) steps\n  end\n  if <touching [Brick v]?> then\n    set [Hit Claimed v] to (0)\n    broadcast [Hit Brick v] and wait\n    if <(Bricks Left) = (0)> then\n      broadcast [Win v] and wait\n      stop [all v]\n    end\n    point in direction (((direction) + (180)) + (pick random (-20) to (20)))\n    move (12) steps\n  end\nend"
             },
             {
               "target": "Brick",
