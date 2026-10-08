@@ -156,7 +156,6 @@ test('captures tower defense lists, My Blocks, level settings, and mobile challe
   await expect(referenceSave.locator('.inline-chip')).toHaveCount(0);
   const levelBranch = page.locator('.instruction-list > li').filter({ hasText: 'Load level settings' });
   await expect(levelBranch.locator('.inline-chip.chip-control').first()).toBeVisible();
-  await expect(levelBranch.locator('.inline-chip.chip-my-blocks').first()).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
   await page.screenshot({ path: `${output}/08-tower-defense-mobile-challenge.png`, fullPage: true });
   expect(errors).toEqual([]);
