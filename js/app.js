@@ -192,18 +192,24 @@ const createNarratedItem = (text, sectionId, label) => {
   return row;
 };
 
+const richElement = (tag, source, className = '') => {
+  const node = element(tag, { className });
+  appendRichText(node, source);
+  return node;
+};
+
 const appendTextList = (parent, items, className = '', narration = null) => {
   const list = element('ul', { className });
   items.forEach((item, index) => {
     const li = element('li');
     if (narration) {
       li.append(createNarratedItem(
-        element('span', { text: item }),
+        richElement('span', item),
         `${narration.prefix}/${String(index).padStart(3, '0')}`,
         `${narration.label} ${index + 1}`,
       ));
     } else {
-      li.textContent = item;
+      appendRichText(li, item);
     }
     list.append(li);
   });
@@ -298,7 +304,7 @@ const renderWelcome = () => {
     definitions.append(element('dt', { text: entry.term }));
     const meaning = element('dd');
     meaning.append(createNarratedItem(
-      element('span', { text: entry.meaning }),
+      richElement('span', entry.meaning),
       `welcome/vocabulary/${String(index).padStart(3, '0')}`,
       `vocabulary term ${entry.term}`,
     ));
@@ -327,6 +333,7 @@ const renderWelcome = () => {
   startActions.append(start);
   card.append(startActions);
   contentArea.replaceChildren(card);
+  renderPendingScratch(card);
   updateNavigationState();
 };
 
@@ -385,7 +392,7 @@ const appendHints = (parent, step) => {
     parent.append(heading);
     step.debuggingTips.forEach((tip, index) => {
       const details = element('details');
-      details.append(element('summary', { text: tip.symptom }));
+      details.append(richElement('summary', tip.symptom));
       const body = element('div', { className: 'details-content narrated-help' });
       const sectionId = `${sectionRoot}/debug/${String(index).padStart(3, '0')}`;
       body.append(createNarrationSlot(sectionId, `debugging help for ${tip.symptom}`));
@@ -503,9 +510,9 @@ const navigateToStep = (stepId, { focus = true } = {}) => {
     createNarrationSlot(`${sectionRoot}/checkpoint`, `${step.title} checkpoint`),
   );
   checkpoint.append(checkpointHeading);
-  checkpoint.append(element('p', { className: 'checkpoint-task', text: step.checkpoint.task }));
+  checkpoint.append(richElement('p', step.checkpoint.task, 'checkpoint-task'));
   checkpoint.append(element('h4', { text: 'Expected result' }));
-  checkpoint.append(element('p', { text: step.checkpoint.expectedResult }));
+  checkpoint.append(richElement('p', step.checkpoint.expectedResult));
   checkpoint.append(element('h4', { text: 'You’re done when' }));
   appendTextList(checkpoint, step.checkpoint.completeWhen, 'criteria-list');
   article.append(checkpoint);

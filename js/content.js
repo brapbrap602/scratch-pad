@@ -155,8 +155,10 @@ const validateCheckpoint = (value, path) => {
   expectObject(value, path);
   expectExactKeys(value, ['task', 'expectedResult', 'completeWhen'], [], path);
   expectText(value.task, `${path}.task`);
+  parseRichText(value.task);
   expectText(value.expectedResult, `${path}.expectedResult`);
-  validateTextList(value.completeWhen, `${path}.completeWhen`);
+  parseRichText(value.expectedResult);
+  validateTextList(value.completeWhen, `${path}.completeWhen`, { rich: true });
 };
 
 const validateStep = (step, path) => {
@@ -225,9 +227,9 @@ export const validateLessonDocument = (lesson, expectedId) => {
   }
   expectText(lesson.title, 'lesson.title');
   expectText(lesson.description, 'lesson.description');
-  validateTextList(lesson.objectives, 'lesson.objectives');
-  validateTextList(lesson.prerequisites, 'lesson.prerequisites');
-  validateTextList(lesson.requirements, 'lesson.requirements');
+  validateTextList(lesson.objectives, 'lesson.objectives', { rich: true });
+  validateTextList(lesson.prerequisites, 'lesson.prerequisites', { rich: true });
+  validateTextList(lesson.requirements, 'lesson.requirements', { rich: true });
 
   expectArray(lesson.vocabulary, 'lesson.vocabulary');
   lesson.vocabulary.forEach((entry, index) => {
@@ -236,6 +238,7 @@ export const validateLessonDocument = (lesson, expectedId) => {
     expectExactKeys(entry, ['term', 'meaning'], [], path);
     expectText(entry.term, `${path}.term`);
     expectText(entry.meaning, `${path}.meaning`);
+    parseRichText(entry.meaning);
   });
 
   expectArray(lesson.chapters, 'lesson.chapters');
@@ -252,7 +255,7 @@ export const validateLessonDocument = (lesson, expectedId) => {
     if (!Number.isInteger(chapter.estimatedMinutes) || chapter.estimatedMinutes < 90) {
       fail(`${path}.estimatedMinutes must be an integer of at least 90`);
     }
-    validateTextList(chapter.objectives, `${path}.objectives`);
+    validateTextList(chapter.objectives, `${path}.objectives`, { rich: true });
     expectArray(chapter.steps, `${path}.steps`);
     chapter.steps.forEach((step, stepIndex) => {
       validateStep(step, `${path}.steps[${stepIndex}]`);

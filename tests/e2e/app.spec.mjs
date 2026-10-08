@@ -445,6 +445,16 @@ test('renders every real curriculum step without page errors', async ({ page }) 
           });
         }
       }
+      // Backtick markup must become formatted names or blocks, never literal characters on screen.
+      const strayBackticks = await page.locator('article').evaluate((article) => {
+        const walker = document.createTreeWalker(article, NodeFilter.SHOW_TEXT);
+        const found = [];
+        for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+          if (node.textContent.includes('`') && !node.parentElement.closest('.scratch-source')) found.push(node.textContent);
+        }
+        return found;
+      });
+      expect(strayBackticks, `${lessonId}/${stepId}`).toEqual([]);
     }
     const sections = narrationFixtures.get(lessonId).sections;
     const expectedIds = [...new Set([
