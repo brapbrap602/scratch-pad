@@ -199,3 +199,13 @@ test('Chapter 5 win testing preserves collision-safe laser movement', () => {
     assert.doesNotMatch(code, /change y by \(20\)/);
   }
 });
+
+test('later sprites extend their Chapter 1 Reset Game script instead of adding another', () => {
+  for (const id of ['prepare-alien-factory', 'prepare-single-player-laser', 'prepare-mothership-singleton']) {
+    const instructions = step(id).instructions.join('\n');
+    assert.match(instructions, /existing `when I receive Reset Game` script/, id);
+    assert.doesNotMatch(instructions, /add (?:a|the) `Reset Game`/i, id);
+  }
+  const learnerText = steps.map((entry) => entry.instructions.join('\n')).join('\n');
+  assert.doesNotMatch(learnerText, /add (?:a|the) `Reset Game`(?: cloning)? script/i);
+});

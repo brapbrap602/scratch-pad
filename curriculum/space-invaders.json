@@ -323,7 +323,7 @@
           "instructions": [
             "Select Alien and confirm `My Column`, `My Row`, and `Is Clone` say `For this sprite only`.",
             "Confirm the centered Alien costume is no larger than 32 pixels wide by 18 pixels high so rows and columns cannot overlap.",
-            "Add the `Reset Game` cloning script shown below.",
+            "Find Alien's existing `when I receive Reset Game` script from Chapter 1. Under its `hide` block, add the cloning blocks shown below. Do not add a second `when I receive Reset Game` event block.",
             "Set `Is Clone` to 1 before creating clones and back to 0 afterward. This tells the hidden original apart from its clones.",
             "Change `Aliens Left` by 1 for each clone so the final count is exactly 24."
           ],
@@ -564,7 +564,7 @@
           "explanation": "Player Laser is one reusable sprite and does not create clones. `Laser Active` is 0 while the laser is ready and hidden, then 1 while it is flying. Checking this variable prevents a second shot from moving the sprite before the first shot ends. Player firing runs separately from Player movement, so waiting for the Space key to be released cannot block the arrow keys.",
           "instructions": [
             "Select Player Laser and remove any clone blocks if you experimented earlier.",
-            "Add a `Reset Game` script that hides Player Laser and sets `Laser Active` to 0.",
+            "Find Player Laser's existing `when I receive Reset Game` script from Chapter 1. Snap `set Laser Active to 0` directly under its `hide` block.",
             "Confirm Player Laser is centered and no larger than 4 pixels wide by 10 pixels high. This is visible, cannot skip an 18-pixel target while moving by 10, and cannot bridge two target rows.",
             "On Player, add a second, separate `when I receive Start Game` script for firing. Use `repeat until Game State is not playing`. Do not put firing inside the movement script.",
             "Inside the firing loop, add a condition that checks whether Space is pressed and `Laser Active` is 0.",
@@ -1197,7 +1197,7 @@
           "instructions": [
             "Select Mothership and confirm `Active` was made `For this sprite only`.",
             "Confirm its centered costume is no larger than 40 pixels wide by 12 pixels high so it cannot overlap the 18-pixel Alien costume below it.",
-            "Add a `Reset Game` script that hides Mothership and sets Active to 0.",
+            "Find Mothership's existing `when I receive Reset Game` script from Chapter 1. Snap `set Active to 0` directly under its `hide` block.",
             "Remove any clone blocks or separate always-running collision script from Mothership.",
             "Place both motion and hit checking in the one pass script built next."
           ],
