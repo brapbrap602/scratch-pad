@@ -5466,13 +5466,419 @@
       ]
     },
     {
-      "id": "six-spots/number-the-spots/overview",
+      "id": "six-spots/try-a-clone/overview",
       "sourcePaths": [
         "chapters/3/steps/0/explanation"
       ],
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/0/explanation",
+          "speech": "A clone is a copy of a sprite that Scratch makes while the project runs.",
+          "requestHash": "5e39e5aee2cf690822d2f363579b67fa2657530c941b1e48f25671b4762e3cac",
+          "src": "audio/assets/31/31ef5a1156322ca7f711eed8ec97b5f0d7abe2ef3aaaf8bd560ec128100c2f5d.mp3",
+          "sha256": "31ef5a1156322ca7f711eed8ec97b5f0d7abe2ef3aaaf8bd560ec128100c2f5d",
+          "bytes": 27504,
+          "durationMs": 4584
+        },
+        {
+          "sourcePath": "chapters/3/steps/0/explanation",
+          "speech": "When a clone is made, it copies the sprite's For this sprite only variables at that moment.",
+          "requestHash": "83c5ad0be7214179dbc438f815250d545d87e1d07f6eafde904581bfc79ba4f2",
+          "src": "audio/assets/50/50546d02fdc839819312eb39738aa6d9664cd4b91f6935413334b2966254fd43.mp3",
+          "sha256": "50546d02fdc839819312eb39738aa6d9664cd4b91f6935413334b2966254fd43",
+          "bytes": 31824,
+          "durationMs": 5304
+        },
+        {
+          "sourcePath": "chapters/3/steps/0/explanation",
+          "speech": "This short test shows that rule on a throwaway sprite before you use it for six tower spots.",
+          "requestHash": "34f1410ef7ed78803802beb800b91de7b7ef565b1404010373f527a93b04be87",
+          "src": "audio/assets/cc/cc066f41236c9b8e4920296d752c5d2c4ccc522c5872022dc40b9c24cc6935ab.mp3",
+          "sha256": "cc066f41236c9b8e4920296d752c5d2c4ccc522c5872022dc40b9c24cc6935ab",
+          "bytes": 32256,
+          "durationMs": 5376
+        }
+      ]
+    },
+    {
+      "id": "six-spots/try-a-clone/instruction/000",
+      "sourcePaths": [
+        "chapters/3/steps/0/instructions/0"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/0/instructions/0",
+          "speech": "Load tower-defense-chapter-3.sb3.",
+          "requestHash": "4d28b4215eefe8d491fbb38b9aa2e323f9b04086d3b784545a06deeda3fea4e1",
+          "src": "audio/assets/59/591f0dd98784dd70742292f35ff6b639de99d2b0beff3d6ab4e71e52d32029fe.mp3",
+          "sha256": "591f0dd98784dd70742292f35ff6b639de99d2b0beff3d6ab4e71e52d32029fe",
+          "bytes": 24048,
+          "durationMs": 4008
+        }
+      ]
+    },
+    {
+      "id": "six-spots/try-a-clone/instruction/001",
+      "sourcePaths": [
+        "chapters/3/steps/0/instructions/1"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/0/instructions/1",
+          "speech": "Paint a small new sprite named Clone Test.",
+          "requestHash": "ae21d6d56bdc8236cbb7632f937f7c2dd5b753b505908774f1c117de32673c37",
+          "src": "audio/assets/7f/7fe12b53344d345e87fc9036d0bc86b6a18e49f5c2d1266261fbb2fdbfc2a972.mp3",
+          "sha256": "7fe12b53344d345e87fc9036d0bc86b6a18e49f5c2d1266261fbb2fdbfc2a972",
+          "bytes": 17568,
+          "durationMs": 2928
+        },
+        {
+          "sourcePath": "chapters/3/steps/0/instructions/1",
+          "speech": "Any simple shape works.",
+          "requestHash": "fca9410d879fb31afd5a3863b5de756273edec50346b35c38f7b1558cfc176cb",
+          "src": "audio/assets/4d/4db284dd71fbf36b368e6d66596f8a7f4240502f949f6c90de367fcf2593aed7.mp3",
+          "sha256": "4db284dd71fbf36b368e6d66596f8a7f4240502f949f6c90de367fcf2593aed7",
+          "bytes": 11520,
+          "durationMs": 1920
+        }
+      ]
+    },
+    {
+      "id": "six-spots/try-a-clone/instruction/002",
+      "sourcePaths": [
+        "chapters/3/steps/0/instructions/2"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/0/instructions/2",
+          "speech": "On Clone Test, make a variable named My Number with For this sprite only.",
+          "requestHash": "088d4ef2e90b9471e7b74a9ad2b5c05fd62e262340c3dd8de32c4d9ff1a2eee1",
+          "src": "audio/assets/f7/f75720210179a8b3b0a5ce7c31a7f3b57ae22bdbf04038f6b11884721cc182de.mp3",
+          "sha256": "f75720210179a8b3b0a5ce7c31a7f3b57ae22bdbf04038f6b11884721cc182de",
+          "bytes": 28656,
+          "durationMs": 4776
+        }
+      ]
+    },
+    {
+      "id": "six-spots/try-a-clone/instruction/003",
+      "sourcePaths": [
+        "chapters/3/steps/0/instructions/3"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/0/instructions/3",
+          "speech": "Build the green-flag script shown below.",
+          "requestHash": "fa624304ce41652aa4591952dc265003ce072d8ac747d67a6cce6205f40a329b",
+          "src": "audio/assets/fa/fa3f2626c5bd68421ae8126282d92c1e1275886b109bf226b899c7e396a6385e.mp3",
+          "sha256": "fa3f2626c5bd68421ae8126282d92c1e1275886b109bf226b899c7e396a6385e",
+          "bytes": 15984,
+          "durationMs": 2664
+        },
+        {
+          "sourcePath": "chapters/3/steps/0/instructions/3",
+          "speech": "Three times, it sets My Number, moves, and creates a clone.",
+          "requestHash": "2cb4573d3e414a909c8f5116cbf99832d28c5a31c7dfa9d6093b1ba8276bb705",
+          "src": "audio/assets/30/305e8c2026d98ffd7ec949afb906edcbadfcd77a289a6b2b3860c56f9740346a.mp3",
+          "sha256": "305e8c2026d98ffd7ec949afb906edcbadfcd77a289a6b2b3860c56f9740346a",
+          "bytes": 24768,
+          "durationMs": 4128
+        },
+        {
+          "sourcePath": "chapters/3/steps/0/instructions/3",
+          "speech": "At the end it sets My Number back to 0.",
+          "requestHash": "b65a449805a6e18c6760de9ad65bd4c3bdd32f799d8728e1f299aa6a16ada464",
+          "src": "audio/assets/d2/d274292a65c50b93218a9cd29d35da4bf8d28457244d07ee747e915848a1fdd3.mp3",
+          "sha256": "d274292a65c50b93218a9cd29d35da4bf8d28457244d07ee747e915848a1fdd3",
+          "bytes": 17712,
+          "durationMs": 2952
+        }
+      ]
+    },
+    {
+      "id": "six-spots/try-a-clone/instruction/004",
+      "sourcePaths": [
+        "chapters/3/steps/0/instructions/4"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/0/instructions/4",
+          "speech": "Add when I start as a clone, then show and say My Number.",
+          "requestHash": "4e965cfa5036119be8dd487b770654a718cb593f74c62b632397ed237753836e",
+          "src": "audio/assets/fa/fa2f9fd3a4e872c2f4ce52b89a09d867ccc4ef4014362b606cd5c08292a54c2e.mp3",
+          "sha256": "fa2f9fd3a4e872c2f4ce52b89a09d867ccc4ef4014362b606cd5c08292a54c2e",
+          "bytes": 24624,
+          "durationMs": 4104
+        }
+      ]
+    },
+    {
+      "id": "six-spots/try-a-clone/instruction/005",
+      "sourcePaths": [
+        "chapters/3/steps/0/instructions/5"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/0/instructions/5",
+          "speech": "Click the green flag.",
+          "requestHash": "9b836dd95fad30e09886385373505bc134e314547c73a9cd1ba94baac6b08d26",
+          "src": "audio/assets/13/13a8f6796d4fa3ba590c88fac3ce599990e2147b3f19f12464c78e1f4c9ff350.mp3",
+          "sha256": "13a8f6796d4fa3ba590c88fac3ce599990e2147b3f19f12464c78e1f4c9ff350",
+          "bytes": 11232,
+          "durationMs": 1872
+        },
+        {
+          "sourcePath": "chapters/3/steps/0/instructions/5",
+          "speech": "Three copies appear at x negative 100, 0, and 100, saying 1, 2, and 3.",
+          "requestHash": "79cfb11c07aab0af606083b0b0dc2270a3200439a47c296c1d8152d2d963a438",
+          "src": "audio/assets/03/03a6ca57088579446af010014cb62303f99dd2f0eae77672c7ea248cb9273e60.mp3",
+          "sha256": "03a6ca57088579446af010014cb62303f99dd2f0eae77672c7ea248cb9273e60",
+          "bytes": 43776,
+          "durationMs": 7296
+        }
+      ]
+    },
+    {
+      "id": "six-spots/try-a-clone/instruction/006",
+      "sourcePaths": [
+        "chapters/3/steps/0/instructions/6"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/0/instructions/6",
+          "speech": "Each copy kept the number the original had at the moment the copy was made, even though the original changed it afterward and ended at 0.",
+          "requestHash": "d408c8ba348189adb6261e3e7b6e2391465f161834dc57108041d14245e0a4da",
+          "src": "audio/assets/36/362e8087a67bcb0b877e070c2b1f9bece02c5f2a2ba96aa5a03ff7c6dfd54df7.mp3",
+          "sha256": "362e8087a67bcb0b877e070c2b1f9bece02c5f2a2ba96aa5a03ff7c6dfd54df7",
+          "bytes": 47376,
+          "durationMs": 7896
+        }
+      ]
+    },
+    {
+      "id": "six-spots/try-a-clone/instruction/007",
+      "sourcePaths": [
+        "chapters/3/steps/0/instructions/7"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/0/instructions/7",
+          "speech": "Click the green flag again.",
+          "requestHash": "efec0494f6ed7445c73108884abda54c1cf43b545f5598aaddadc723a7a0e81e",
+          "src": "audio/assets/ec/ec462aaf0c0aa8fc733d649239a48c0d6fd16c5251ee1a7a47cd147b15727270.mp3",
+          "sha256": "ec462aaf0c0aa8fc733d649239a48c0d6fd16c5251ee1a7a47cd147b15727270",
+          "bytes": 12384,
+          "durationMs": 2064
+        },
+        {
+          "sourcePath": "chapters/3/steps/0/instructions/7",
+          "speech": "There are still exactly three copies, because Scratch deletes all clones when the green flag is clicked.",
+          "requestHash": "896283571facb4d143b606aafd3fdd87f8d4c8ebd9ca9924defdbac6567506e1",
+          "src": "audio/assets/e4/e4fcb66668e40c665c047f8e083d9c1b8c4ee40a3e3257883bc2b65cfd5716cd.mp3",
+          "sha256": "e4fcb66668e40c665c047f8e083d9c1b8c4ee40a3e3257883bc2b65cfd5716cd",
+          "bytes": 35424,
+          "durationMs": 5904
+        }
+      ]
+    },
+    {
+      "id": "six-spots/try-a-clone/instruction/008",
+      "sourcePaths": [
+        "chapters/3/steps/0/instructions/8"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/0/instructions/8",
+          "speech": "Right-click Clone Test in the sprite list and choose delete before you continue.",
+          "requestHash": "4695bbb70fa76f7f6d41f7d1b64aac6473375723c38cf128545ee3b4df4b3651",
+          "src": "audio/assets/c4/c4fa5ffac500eaac0c5dd63a55d0a1a25221131e3a56ce1947e0972fb07debbb.mp3",
+          "sha256": "c4fa5ffac500eaac0c5dd63a55d0a1a25221131e3a56ce1947e0972fb07debbb",
+          "bytes": 27792,
+          "durationMs": 4632
+        }
+      ]
+    },
+    {
+      "id": "six-spots/try-a-clone/hint/000",
+      "sourcePaths": [
+        "chapters/3/steps/0/hints/0"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/0/hints/0",
+          "speech": "A clone runs when I start as a clone scripts.",
+          "requestHash": "366be6736ef41fcb7b66a7fbf399cec42a70e665b1a996611aad423751b17d2b",
+          "src": "audio/assets/9d/9d162865fdf4ef03ffe3e80973b28adf32d4f4d8c705c8d6cdfbe04fce11a734.mp3",
+          "sha256": "9d162865fdf4ef03ffe3e80973b28adf32d4f4d8c705c8d6cdfbe04fce11a734",
+          "bytes": 19440,
+          "durationMs": 3240
+        },
+        {
+          "sourcePath": "chapters/3/steps/0/hints/0",
+          "speech": "It does not run when green flag clicked scripts.",
+          "requestHash": "eb6949d0b60986796564937104a747bf169806898c838cbfab3e27be0e5acb61",
+          "src": "audio/assets/46/46ac32d536af25b45263983305bcc08e35f8106ae0844ce68fe3dd493dc59246.mp3",
+          "sha256": "46ac32d536af25b45263983305bcc08e35f8106ae0844ce68fe3dd493dc59246",
+          "bytes": 18576,
+          "durationMs": 3096
+        }
+      ]
+    },
+    {
+      "id": "six-spots/try-a-clone/hint/001",
+      "sourcePaths": [
+        "chapters/3/steps/0/hints/1"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/0/hints/1",
+          "speech": "Make spot in this chapter uses the same pattern: set the values, create the clone, then change the original's values again.",
+          "requestHash": "4bf3ce33fe18b8a80c21df621ebf159dd567608240ed31a610df6adc1ea99b07",
+          "src": "audio/assets/cb/cb834aa8341648cecb0cfbd7b45895e974276e326ab53334883e3536ef6fecbf.mp3",
+          "sha256": "cb834aa8341648cecb0cfbd7b45895e974276e326ab53334883e3536ef6fecbf",
+          "bytes": 47664,
+          "durationMs": 7944
+        }
+      ]
+    },
+    {
+      "id": "six-spots/try-a-clone/debug/000",
+      "sourcePaths": [
+        "chapters/3/steps/0/debuggingTips/0/symptom",
+        "chapters/3/steps/0/debuggingTips/0/checks/0",
+        "chapters/3/steps/0/debuggingTips/0/checks/1"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/0/debuggingTips/0/symptom",
+          "speech": "All three copies say 0.",
+          "requestHash": "345c4b3110b525563e284368f5ea4ee0bd4ff02d16aea6ca120d212413731a34",
+          "src": "audio/assets/ed/ed41d104499c88714d72ac422f015c8e60767d70d0d6963b15c211b89aa0a65a.mp3",
+          "sha256": "ed41d104499c88714d72ac422f015c8e60767d70d0d6963b15c211b89aa0a65a",
+          "bytes": 12816,
+          "durationMs": 2136
+        },
+        {
+          "sourcePath": "chapters/3/steps/0/debuggingTips/0/checks/0",
+          "speech": "Make My Number with For this sprite only, not For all sprites.",
+          "requestHash": "e73672570a1e37e465b52e03e0bc614231cc0e4252f1da8e927d598e7fb6212c",
+          "src": "audio/assets/8d/8d826160c0aa31f09a5eeee677b947ad8981ad2fe59d6e4e80fbc474413ed4f4.mp3",
+          "sha256": "8d826160c0aa31f09a5eeee677b947ad8981ad2fe59d6e4e80fbc474413ed4f4",
+          "bytes": 25056,
+          "durationMs": 4176
+        },
+        {
+          "sourcePath": "chapters/3/steps/0/debuggingTips/0/checks/0",
+          "speech": "A shared variable is 0 by the time the copies speak.",
+          "requestHash": "3c0fca4913c2dd5f88d266614eacb69a080e6beec25982b460fe9adcb11e466d",
+          "src": "audio/assets/d5/d5ffb952fdcfeafec2191c4c03660391919d362c194711e1e73fdbb3f7927dd2.mp3",
+          "sha256": "d5ffb952fdcfeafec2191c4c03660391919d362c194711e1e73fdbb3f7927dd2",
+          "bytes": 22752,
+          "durationMs": 3792
+        },
+        {
+          "sourcePath": "chapters/3/steps/0/debuggingTips/0/checks/1",
+          "speech": "Put each set My Number block before its create clone of myself block.",
+          "requestHash": "4d2ab47994c912dd8965c64e658c33addf037b9c718bd58b552073614e440400",
+          "src": "audio/assets/c9/c9b580261d5be5bf0c4d108d8a621289c653cdeec9560009fc3200c2e9b44ad6.mp3",
+          "sha256": "c9b580261d5be5bf0c4d108d8a621289c653cdeec9560009fc3200c2e9b44ad6",
+          "bytes": 27504,
+          "durationMs": 4584
+        }
+      ]
+    },
+    {
+      "id": "six-spots/try-a-clone/debug/001",
+      "sourcePaths": [
+        "chapters/3/steps/0/debuggingTips/1/symptom",
+        "chapters/3/steps/0/debuggingTips/1/checks/0",
+        "chapters/3/steps/0/debuggingTips/1/checks/1"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/0/debuggingTips/1/symptom",
+          "speech": "The original also shows on the Stage.",
+          "requestHash": "5ea15bf21c206c8ec7583d84aaf8d9f6a9fce7092ba74f1e8027db457194900b",
+          "src": "audio/assets/6d/6dd031487ec4b5e457e6cd65a219da56ce6a4a4d2a2de831d2f1df97b37cb944.mp3",
+          "sha256": "6dd031487ec4b5e457e6cd65a219da56ce6a4a4d2a2de831d2f1df97b37cb944",
+          "bytes": 16704,
+          "durationMs": 2784
+        },
+        {
+          "sourcePath": "chapters/3/steps/0/debuggingTips/1/checks/0",
+          "speech": "Put hide at the top of the green-flag script.",
+          "requestHash": "7d84092bf13b7e7847576d35c8b7beafd100d6aadf05528e81a7bbb756a7e762",
+          "src": "audio/assets/4b/4b87c74b6a421e0c84689a591627c451354cf7cdd0476a4b0904f63ddf3a9a16.mp3",
+          "sha256": "4b87c74b6a421e0c84689a591627c451354cf7cdd0476a4b0904f63ddf3a9a16",
+          "bytes": 18576,
+          "durationMs": 3096
+        },
+        {
+          "sourcePath": "chapters/3/steps/0/debuggingTips/1/checks/1",
+          "speech": "Put show only in the when I start as a clone script.",
+          "requestHash": "5e0bd0580808a1105ff8177a50e81ca45c1de55c96069861ef54ffd1ee773e23",
+          "src": "audio/assets/6f/6f0b4beb278a31437639f2c4ccc4d837ea368ac15b4d2278b09ab6147ae297bc.mp3",
+          "sha256": "6f0b4beb278a31437639f2c4ccc4d837ea368ac15b4d2278b09ab6147ae297bc",
+          "bytes": 21888,
+          "durationMs": 3648
+        }
+      ]
+    },
+    {
+      "id": "six-spots/try-a-clone/checkpoint",
+      "sourcePaths": [
+        "chapters/3/steps/0/checkpoint/task",
+        "chapters/3/steps/0/checkpoint/expectedResult",
+        "chapters/3/steps/0/checkpoint/completeWhen/0",
+        "chapters/3/steps/0/checkpoint/completeWhen/1"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/0/checkpoint/task",
+          "speech": "Click the green flag twice.",
+          "requestHash": "40e61b07bb1dd8c2709b859e7717174510c3235e3f05087c455eb42b0f59187f",
+          "src": "audio/assets/67/67595abdbbee5ec48fe4821eaa4b0da9028383609ba2e8a9236d62494152b8ed.mp3",
+          "sha256": "67595abdbbee5ec48fe4821eaa4b0da9028383609ba2e8a9236d62494152b8ed",
+          "bytes": 12672,
+          "durationMs": 2112
+        },
+        {
+          "sourcePath": "chapters/3/steps/0/checkpoint/expectedResult",
+          "speech": "Each time, exactly three copies say 1, 2, and 3, and the original stays hidden.",
+          "requestHash": "3e041250443b675c30e8d813a976e22aca4dbe94e2f095df445142948365c7a9",
+          "src": "audio/assets/32/32fbc376c9a3576aea9e17fb5798f05e2ac36638b39aad891feaaa755edeea7c.mp3",
+          "sha256": "32fbc376c9a3576aea9e17fb5798f05e2ac36638b39aad891feaaa755edeea7c",
+          "bytes": 33408,
+          "durationMs": 5568
+        },
+        {
+          "sourcePath": "chapters/3/steps/0/checkpoint/completeWhen/0",
+          "speech": "My Number was made For this sprite only.",
+          "requestHash": "52d2b8622adfe31e6042030cb59997f497b86523f0baaf41f317e25ee25e9ad4",
+          "src": "audio/assets/f6/f6e7c5f4a8fb48a96d990e8bf2b09986bc2ea8365bd9ee31b1bf051487528e1a.mp3",
+          "sha256": "f6e7c5f4a8fb48a96d990e8bf2b09986bc2ea8365bd9ee31b1bf051487528e1a",
+          "bytes": 15840,
+          "durationMs": 2640
+        },
+        {
+          "sourcePath": "chapters/3/steps/0/checkpoint/completeWhen/1",
+          "speech": "You deleted the Clone Test sprite before the next step.",
+          "requestHash": "559192fe0c0ce32ff3b0f89d0ac2c95e1a99d285989b11318353a37aecab157b",
+          "src": "audio/assets/d5/d59183281c1c1624048df8aadf914069b5abf95e6fde336e069c47ba6dfbcdff.mp3",
+          "sha256": "d59183281c1c1624048df8aadf914069b5abf95e6fde336e069c47ba6dfbcdff",
+          "bytes": 21024,
+          "durationMs": 3504
+        }
+      ]
+    },
+    {
+      "id": "six-spots/number-the-spots/overview",
+      "sourcePaths": [
+        "chapters/3/steps/1/explanation"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/1/explanation",
           "speech": "The top lane uses shot numbers 1 and 2, the middle lane 3 and 4, and the bottom lane 5 and 6.",
           "requestHash": "abd54c5b452a2e381123252604df55c794ddd41d9d83dc6ab3d1c38409c248b7",
           "src": "audio/assets/07/07eb5e668eeb3d2562832be2baf7088a5e20916d4857309425989afacd5ea895.mp3",
@@ -5481,7 +5887,7 @@
           "durationMs": 6864
         },
         {
-          "sourcePath": "chapters/3/steps/0/explanation",
+          "sourcePath": "chapters/3/steps/1/explanation",
           "speech": "Each tower and shot clone remembers its own ID.",
           "requestHash": "9b29760d4553bbbef6881228874ce973d793de17c18327b32ff53a046848254a",
           "src": "audio/assets/c9/c929402a3f125a7399043f1aa6a486bbf96a8fadf6851edbb8a53ebe4d59d14d.mp3",
@@ -5490,7 +5896,7 @@
           "durationMs": 3576
         },
         {
-          "sourcePath": "chapters/3/steps/0/explanation",
+          "sourcePath": "chapters/3/steps/1/explanation",
           "speech": "The hidden original uses ID 0, which is not a shot number.",
           "requestHash": "f10a37cd16b79cda188ea1f46dd393bda2f55bed0db043ade488643c035f2e0a",
           "src": "audio/assets/64/648a176d2fc2dd4f2bea48bd3991854ccf5877630ce8e62460f4d5f93968f2d8.mp3",
@@ -5503,20 +5909,11 @@
     {
       "id": "six-spots/number-the-spots/instruction/000",
       "sourcePaths": [
-        "chapters/3/steps/0/instructions/0"
+        "chapters/3/steps/1/instructions/0"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/0/instructions/0",
-          "speech": "Save Chapter 3 before changing it.",
-          "requestHash": "0f3317c7a088f7418d7ad5af9f7b0dbeb0aa7a31d147b2ed83a84af46bcd09a2",
-          "src": "audio/assets/47/476ec4c1576ae57bc081dfc3b9ead4cfb0617b295f13bf1b74eeb9546d828044.mp3",
-          "sha256": "476ec4c1576ae57bc081dfc3b9ead4cfb0617b295f13bf1b74eeb9546d828044",
-          "bytes": 16704,
-          "durationMs": 2784
-        },
-        {
-          "sourcePath": "chapters/3/steps/0/instructions/0",
+          "sourcePath": "chapters/3/steps/1/instructions/0",
           "speech": "Write this map: lane 1 uses IDs 1 and 2; lane 2 uses 3 and 4; lane 3 uses 5 and 6.",
           "requestHash": "ceeb3d1443398b29b606b6260ca983e37706dade69ea59e8e136df8bf4f6652a",
           "src": "audio/assets/5a/5a8a70601ae238ef4c75e3a173000222b5e78582102aa9ddd2374d5ead3cc4db.mp3",
@@ -5529,11 +5926,11 @@
     {
       "id": "six-spots/number-the-spots/instruction/001",
       "sourcePaths": [
-        "chapters/3/steps/0/instructions/1"
+        "chapters/3/steps/1/instructions/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/0/instructions/1",
+          "sourcePath": "chapters/3/steps/1/instructions/1",
           "speech": "On Tower, create Lane with For this sprite only.",
           "requestHash": "75cb1ff537645bbd538f3fa85b64c7105506bb5c97c736b579f760b45731810a",
           "src": "audio/assets/b1/b19a4e4300d42626ca66c8441bdd114e50744eb90bffc111a1e2e7723cbf35fc.mp3",
@@ -5542,7 +5939,7 @@
           "durationMs": 3240
         },
         {
-          "sourcePath": "chapters/3/steps/0/instructions/1",
+          "sourcePath": "chapters/3/steps/1/instructions/1",
           "speech": "Tower's code stores each spot's lane but does not use it yet.",
           "requestHash": "b3bc881e9674d26221457fcb279d36a39531bac0f618d012d5d6ce1197f21946",
           "src": "audio/assets/6f/6fc4077e0d6680ab9e0fa506b1983a8ca2ed44bcb394e16945fd11a857d734ef.mp3",
@@ -5551,7 +5948,7 @@
           "durationMs": 4056
         },
         {
-          "sourcePath": "chapters/3/steps/0/instructions/1",
+          "sourcePath": "chapters/3/steps/1/instructions/1",
           "speech": "Showing it helps you check which lane a spot belongs to.",
           "requestHash": "e2458ada41427de2cb1bb30b13ec2c04b2f89342bf0d679605a330a4047670c3",
           "src": "audio/assets/28/284dfaf72bd3c468666a27091243cc03cbda265bd70b2dbf182f4a2a775eb335.mp3",
@@ -5564,11 +5961,11 @@
     {
       "id": "six-spots/number-the-spots/instruction/002",
       "sourcePaths": [
-        "chapters/3/steps/0/instructions/2"
+        "chapters/3/steps/1/instructions/2"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/0/instructions/2",
+          "sourcePath": "chapters/3/steps/1/instructions/2",
           "speech": "On Shot, create a separate Lane with For this sprite only.",
           "requestHash": "5a555330dc6a98c4c983c19d66b3efde02ecf269a399a3a2f626b38011be3e9f",
           "src": "audio/assets/db/dbef453a8290e220f0efb59767cfb31061e656fb65df81c8b3a32380a2a9403d.mp3",
@@ -5577,7 +5974,7 @@
           "durationMs": 3600
         },
         {
-          "sourcePath": "chapters/3/steps/0/instructions/2",
+          "sourcePath": "chapters/3/steps/1/instructions/2",
           "speech": "Each shot clone needs its own lane too.",
           "requestHash": "e32143466c6da739a78d65e3e14211634c5873b6a4734d62e67ae2150a83b90c",
           "src": "audio/assets/6a/6ac6f7a64d96194cb1e2a17e49413910d040c0a171219fabfcbbce200950bf39.mp3",
@@ -5590,11 +5987,11 @@
     {
       "id": "six-spots/number-the-spots/instruction/003",
       "sourcePaths": [
-        "chapters/3/steps/0/instructions/3"
+        "chapters/3/steps/1/instructions/3"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/0/instructions/3",
+          "sourcePath": "chapters/3/steps/1/instructions/3",
           "speech": "On Enemy, create Lane, Is Clone, and First Slot with For this sprite only.",
           "requestHash": "c6be9d42cb22600394f186fc7556f8a33d358449bb794b32c6527b560114f663",
           "src": "audio/assets/2f/2f7c00a17590dc04450f512278424111702f54d91ddacd020056b3f6c84a742b.mp3",
@@ -5603,7 +6000,7 @@
           "durationMs": 4632
         },
         {
-          "sourcePath": "chapters/3/steps/0/instructions/3",
+          "sourcePath": "chapters/3/steps/1/instructions/3",
           "speech": "Keep its existing HP variable.",
           "requestHash": "8a470a90b83e6a8f6b467dc9907332d71cf79f8cb9bf583d002ff5c599c48b52",
           "src": "audio/assets/a9/a907ffabc2d369c91436ef39894001755928b22045bdd61327ff667577e3cbcb.mp3",
@@ -5616,11 +6013,11 @@
     {
       "id": "six-spots/number-the-spots/instruction/004",
       "sourcePaths": [
-        "chapters/3/steps/0/instructions/4"
+        "chapters/3/steps/1/instructions/4"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/0/instructions/4",
+          "sourcePath": "chapters/3/steps/1/instructions/4",
           "speech": "Create Spawn Lane and Enemies Alive with For all sprites.",
           "requestHash": "cdcc1b1619618fd6d55891d9b0bc6950e32e181569e92496c0bc70d3143a3385",
           "src": "audio/assets/c2/c2d58611e4477b1ca90864f48b135e9727d3851f5fd985d2d39a8244d99662bf.mp3",
@@ -5633,11 +6030,11 @@
     {
       "id": "six-spots/number-the-spots/instruction/005",
       "sourcePaths": [
-        "chapters/3/steps/0/instructions/5"
+        "chapters/3/steps/1/instructions/5"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/0/instructions/5",
+          "sourcePath": "chapters/3/steps/1/instructions/5",
           "speech": "On Tower, add when I receive Initialize Originals, followed by set ID to 0 and hide.",
           "requestHash": "f6b8d4e634f09f974cc25ca31ab6478b81913df7d47875df72ccc701d347a7f0",
           "src": "audio/assets/5d/5dac60733d1eb10ec4cd7fe3e929873d7512caf934913dc068848d0bdd2770d8.mp3",
@@ -5650,11 +6047,11 @@
     {
       "id": "six-spots/number-the-spots/instruction/006",
       "sourcePaths": [
-        "chapters/3/steps/0/instructions/6"
+        "chapters/3/steps/1/instructions/6"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/0/instructions/6",
+          "sourcePath": "chapters/3/steps/1/instructions/6",
           "speech": "On Shot, add the same Initialize Originals script: set ID to 0 and hide.",
           "requestHash": "a82956ed251eeb7bc04d615af3593f9b6e7ad6a49445343ec87f95babfe030f5",
           "src": "audio/assets/c9/c99ee5c174836ffcb168fabe5372d5558870c23dc4f096752fa1e9734ea41efb.mp3",
@@ -5667,11 +6064,11 @@
     {
       "id": "six-spots/number-the-spots/instruction/007",
       "sourcePaths": [
-        "chapters/3/steps/0/instructions/7"
+        "chapters/3/steps/1/instructions/7"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/0/instructions/7",
+          "sourcePath": "chapters/3/steps/1/instructions/7",
           "speech": "On Enemy, add when I receive Initialize Originals, followed by set Is Clone to 0 and hide.",
           "requestHash": "702520bbb8cc18bc12bffc8709b4f3fea869dc673930025b04edcaea86335278",
           "src": "audio/assets/bc/bc68b45e73d4d14860b9b383f4a528b0ecbc1a43dcd90bc204ad191a0ca7e0c7.mp3",
@@ -5684,11 +6081,11 @@
     {
       "id": "six-spots/number-the-spots/instruction/008",
       "sourcePaths": [
-        "chapters/3/steps/0/instructions/8"
+        "chapters/3/steps/1/instructions/8"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/0/instructions/8",
+          "sourcePath": "chapters/3/steps/1/instructions/8",
           "speech": "On Tower, add when I receive Clear Clones.",
           "requestHash": "07e1916684f4f7f2128609e21e0b512219dd4ec303955f6f87844009e6863264",
           "src": "audio/assets/8a/8aa41a99c1b139909fd22cb740bc36cd15dc2f5b5c2b3ea082295ee9bad747f6.mp3",
@@ -5697,7 +6094,7 @@
           "durationMs": 3384
         },
         {
-          "sourcePath": "chapters/3/steps/0/instructions/8",
+          "sourcePath": "chapters/3/steps/1/instructions/8",
           "speech": "Attach an if with ID greater than 0 as its condition, and put delete this clone inside it.",
           "requestHash": "e59466a3581e917e0d8825ff788923b311c3734da853f529c9ede39a542d0d7a",
           "src": "audio/assets/83/839e799e298489e8b12216c76cdf19d5e3d72bebe4e51e11512c7086e6333350.mp3",
@@ -5706,7 +6103,7 @@
           "durationMs": 6312
         },
         {
-          "sourcePath": "chapters/3/steps/0/instructions/8",
+          "sourcePath": "chapters/3/steps/1/instructions/8",
           "speech": "Attach hide after the if so the original stays hidden.",
           "requestHash": "07815b372eaa064011b145308221f1a0473de3a5f7b59d35da06062ef4ddfb13",
           "src": "audio/assets/3f/3f4eaa265baa119547f86d86a6cbae4d2f5019e684e3bb719f757d401ee099a3.mp3",
@@ -5719,11 +6116,11 @@
     {
       "id": "six-spots/number-the-spots/instruction/009",
       "sourcePaths": [
-        "chapters/3/steps/0/instructions/9"
+        "chapters/3/steps/1/instructions/9"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/0/instructions/9",
+          "sourcePath": "chapters/3/steps/1/instructions/9",
           "speech": "On Shot, add the same Clear Clones script, including hide after the if.",
           "requestHash": "2d4785079664f61fb8747f66f9c939e5c06bfb95d25f3fc86b01b174a2bdec46",
           "src": "audio/assets/a4/a44805474c3ed14b00d6d8d9d7ee4c9df24bb969e16d09ecc574e3e1437d9ba7.mp3",
@@ -5736,11 +6133,11 @@
     {
       "id": "six-spots/number-the-spots/instruction/010",
       "sourcePaths": [
-        "chapters/3/steps/0/instructions/10"
+        "chapters/3/steps/1/instructions/10"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/0/instructions/10",
+          "sourcePath": "chapters/3/steps/1/instructions/10",
           "speech": "On Enemy, add when I receive Clear Clones.",
           "requestHash": "ba398d8486bd62bd5f7472b9f0b0bca967d06a554d0698eca5a8a2e295f31a9c",
           "src": "audio/assets/48/48740f204eae78e71dae10398ed313869db05c1b802cbb66be192cfdb49c4955.mp3",
@@ -5749,7 +6146,7 @@
           "durationMs": 3432
         },
         {
-          "sourcePath": "chapters/3/steps/0/instructions/10",
+          "sourcePath": "chapters/3/steps/1/instructions/10",
           "speech": "Use Is Clone equals 1 for its if, put delete this clone inside, and attach hide after the if.",
           "requestHash": "64e51faa7945af75327cd9cb6b103e34bb9edab38c8c5ae8a1b6bac1deb21856",
           "src": "audio/assets/c3/c32bfa641e4423db55d3941e5089ed1bdf7f17aff56219dabd4b2b00a5539a15.mp3",
@@ -5762,11 +6159,11 @@
     {
       "id": "six-spots/number-the-spots/instruction/011",
       "sourcePaths": [
-        "chapters/3/steps/0/instructions/11"
+        "chapters/3/steps/1/instructions/11"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/0/instructions/11",
+          "sourcePath": "chapters/3/steps/1/instructions/11",
           "speech": "These two messages have different jobs.",
           "requestHash": "61d16157804f3e17f8ecfb304f7d79e559d2e96a3a40e41de694432b60613ade",
           "src": "audio/assets/e2/e29e05f4c16409c76db627856c6cec934c3ceba54a97af7c0dfa5996fd10a5ee.mp3",
@@ -5775,7 +6172,7 @@
           "durationMs": 2664
         },
         {
-          "sourcePath": "chapters/3/steps/0/instructions/11",
+          "sourcePath": "chapters/3/steps/1/instructions/11",
           "speech": "When the green flag is clicked, Scratch deletes all clones for you, so Initialize Originals only resets the original sprites.",
           "requestHash": "1894c6ce0c22d4b7ac5112e742b01a13c313c2d40593328a79305c5a20cce2b6",
           "src": "audio/assets/97/97784fb774a291202097d31d046adef8d9557e5fe7339b1cc67e12d5c3220ab3.mp3",
@@ -5788,11 +6185,11 @@
     {
       "id": "six-spots/number-the-spots/instruction/012",
       "sourcePaths": [
-        "chapters/3/steps/0/instructions/12"
+        "chapters/3/steps/1/instructions/12"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/0/instructions/12",
+          "sourcePath": "chapters/3/steps/1/instructions/12",
           "speech": "Going to the next level does not use the green flag, so Clear Clones must delete the old copies itself.",
           "requestHash": "dd7714d2045b3de61f287c7b7bebe2d04ecbf042ac398c5f508edf7c69086486",
           "src": "audio/assets/43/432a3687f455f578ba683305484339709c0d3711520480a30bff720539b43893.mp3",
@@ -5803,13 +6200,30 @@
       ]
     },
     {
-      "id": "six-spots/number-the-spots/hint/000",
+      "id": "six-spots/number-the-spots/instruction/013",
       "sourcePaths": [
-        "chapters/3/steps/0/hints/0"
+        "chapters/3/steps/1/instructions/13"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/0/hints/0",
+          "sourcePath": "chapters/3/steps/1/instructions/13",
+          "speech": "On the Stage, insert broadcast Initialize Originals and wait directly below set Game State to resetting.",
+          "requestHash": "ccbded3a2062b8a8964242add0baba7b1897c65b5785f3c12ae1ea3d70eccc26",
+          "src": "audio/assets/ae/aef645d7a5a1759dcaaaef8892163e52de77eb7131e8cfcdcc41e8219df949bd.mp3",
+          "sha256": "aef645d7a5a1759dcaaaef8892163e52de77eb7131e8cfcdcc41e8219df949bd",
+          "bytes": 39744,
+          "durationMs": 6624
+        }
+      ]
+    },
+    {
+      "id": "six-spots/number-the-spots/hint/000",
+      "sourcePaths": [
+        "chapters/3/steps/1/hints/0"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/1/hints/0",
           "speech": "Create each new message from its first event block's New message option.",
           "requestHash": "9385f7f65c469f7eb356be866fb595fc380974aa0f7cbd4708ebb23d0bd0f650",
           "src": "audio/assets/d1/d1c2fb1db2e10857a5753cf73bcd4084bd3eb6e28ea6d87b245264edcb27dd6e.mp3",
@@ -5822,11 +6236,11 @@
     {
       "id": "six-spots/number-the-spots/hint/001",
       "sourcePaths": [
-        "chapters/3/steps/0/hints/1"
+        "chapters/3/steps/1/hints/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/0/hints/1",
+          "sourcePath": "chapters/3/steps/1/hints/1",
           "speech": "Hiding a clone does not delete it.",
           "requestHash": "a01991d46a68486e4efda4313e97db365058c4f75de88ffe01cc1242cc16aebe",
           "src": "audio/assets/ad/ad280cd26261d2ae30a46393fda4210e7a41c8918c8f0a78b0dd882d08f56d01.mp3",
@@ -5835,7 +6249,7 @@
           "durationMs": 2568
         },
         {
-          "sourcePath": "chapters/3/steps/0/hints/1",
+          "sourcePath": "chapters/3/steps/1/hints/1",
           "speech": "Its scripts still receive messages until it is deleted.",
           "requestHash": "726f9512f1ae452c79c5b0da40d3b703be35d70b70de5a2211fdab93d1d6d8c7",
           "src": "audio/assets/b8/b83644226061f62a57943b11e3a4a99723041ac6c4b896e36b1239a2e051e80b.mp3",
@@ -5848,13 +6262,13 @@
     {
       "id": "six-spots/number-the-spots/debug/000",
       "sourcePaths": [
-        "chapters/3/steps/0/debuggingTips/0/symptom",
-        "chapters/3/steps/0/debuggingTips/0/checks/0",
-        "chapters/3/steps/0/debuggingTips/0/checks/1"
+        "chapters/3/steps/1/debuggingTips/0/symptom",
+        "chapters/3/steps/1/debuggingTips/0/checks/0",
+        "chapters/3/steps/1/debuggingTips/0/checks/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/0/debuggingTips/0/symptom",
+          "sourcePath": "chapters/3/steps/1/debuggingTips/0/symptom",
           "speech": "Old copies remain after a later level reset.",
           "requestHash": "8f9ee97551b797a876401b103c9b2710cd4129f241cd765075f9afd5e293d9c0",
           "src": "audio/assets/cd/cd476568d6bae8f33d6edfa636969345d0732815d1ce58b42d6613e614103bfb.mp3",
@@ -5863,7 +6277,7 @@
           "durationMs": 3456
         },
         {
-          "sourcePath": "chapters/3/steps/0/debuggingTips/0/checks/0",
+          "sourcePath": "chapters/3/steps/1/debuggingTips/0/checks/0",
           "speech": "Clear Clones must delete copies, not only hide them.",
           "requestHash": "d057568de5749ac3c19516f71f1783e20c116abf91449ef638143366154a998f",
           "src": "audio/assets/c3/c3cd250d9f42f408dff489150a3ebb1ff9942faa31f73be70bd17bf888807940.mp3",
@@ -5872,7 +6286,7 @@
           "durationMs": 3936
         },
         {
-          "sourcePath": "chapters/3/steps/0/debuggingTips/0/checks/1",
+          "sourcePath": "chapters/3/steps/1/debuggingTips/0/checks/1",
           "speech": "Never reset clone IDs to 0 before trying to delete them.",
           "requestHash": "15462a6162d13ed23ec8d712c534de9d0488dfb7e80b98834e20c152a7d58823",
           "src": "audio/assets/bb/bba7f336a8abb7262bbde8c57c7a0461e915748582bb64a62b7dda0047c8a8c0.mp3",
@@ -5885,41 +6299,41 @@
     {
       "id": "six-spots/number-the-spots/checkpoint",
       "sourcePaths": [
-        "chapters/3/steps/0/checkpoint/task",
-        "chapters/3/steps/0/checkpoint/expectedResult",
-        "chapters/3/steps/0/checkpoint/completeWhen/0",
-        "chapters/3/steps/0/checkpoint/completeWhen/1"
+        "chapters/3/steps/1/checkpoint/task",
+        "chapters/3/steps/1/checkpoint/expectedResult",
+        "chapters/3/steps/1/checkpoint/completeWhen/0",
+        "chapters/3/steps/1/checkpoint/completeWhen/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/0/checkpoint/task",
-          "speech": "Explain ID 0 and the two setup messages.",
-          "requestHash": "3bcd1e0a7ef1090e8e40fa2b7211d6b1758fa8caba8e81f8150e522d0ee1ef20",
-          "src": "audio/assets/e2/e2c97d05f1ac31888351de106ef2a9bdc2938e1824374f2c6687b99c366c5c57.mp3",
-          "sha256": "e2c97d05f1ac31888351de106ef2a9bdc2938e1824374f2c6687b99c366c5c57",
-          "bytes": 20304,
-          "durationMs": 3384
+          "sourcePath": "chapters/3/steps/1/checkpoint/task",
+          "speech": "Click the green flag, buy the tower, and play one round.",
+          "requestHash": "c5d81737a5f5837fe15bf485a4d2559eca34355f22d84b110a67802bbf541dfa",
+          "src": "audio/assets/30/30ab7ac796e3aeb4260fde50a359cb430c75ee5117107cf624eb81731db474e5.mp3",
+          "sha256": "30ab7ac796e3aeb4260fde50a359cb430c75ee5117107cf624eb81731db474e5",
+          "bytes": 21600,
+          "durationMs": 3600
         },
         {
-          "sourcePath": "chapters/3/steps/0/checkpoint/expectedResult",
-          "speech": "ID 0 marks an original; positive IDs mark tower and shot copies.",
-          "requestHash": "fa53a58c255a764de3f593e591e09ea1132cfde40ff33e966d678f2159e9a531",
-          "src": "audio/assets/97/97780f644f9ae336d5e7384628985fe9a9bd7328420d5be4a8df1c1f028baeb3.mp3",
-          "sha256": "97780f644f9ae336d5e7384628985fe9a9bd7328420d5be4a8df1c1f028baeb3",
-          "bytes": 33408,
-          "durationMs": 5568
+          "sourcePath": "chapters/3/steps/1/checkpoint/expectedResult",
+          "speech": "The game plays exactly as in Chapter 3.",
+          "requestHash": "b9da7e56cddd2c2fd112d834240f357b217b0c11f591ac8ca418e8a2c8100376",
+          "src": "audio/assets/9b/9bedf2b3a270784ca77c20ef8a3c168ee1a621bf0831800625e2cdd7d7365233.mp3",
+          "sha256": "9bedf2b3a270784ca77c20ef8a3c168ee1a621bf0831800625e2cdd7d7365233",
+          "bytes": 19152,
+          "durationMs": 3192
         },
         {
-          "sourcePath": "chapters/3/steps/0/checkpoint/expectedResult",
-          "speech": "Enemy uses its separate Is Clone value.",
-          "requestHash": "c041a1b69f58b71380ff8ab481c6b6a3fc89eea45c36b08aea38bc6fc4de03b3",
-          "src": "audio/assets/68/6827bc8d6f3a4b49e0007cb4bde87eab99f829920126cc81af3891fb64fe1b83.mp3",
-          "sha256": "6827bc8d6f3a4b49e0007cb4bde87eab99f829920126cc81af3891fb64fe1b83",
-          "bytes": 17712,
-          "durationMs": 2952
+          "sourcePath": "chapters/3/steps/1/checkpoint/expectedResult",
+          "speech": "Initialize Originals sets each ID to 0 first, then Prepare Tower and Prepare Shot set it back to 1.",
+          "requestHash": "9961136a584bba2ac46e47af09dac37ba896b7fb73d6a91c662c82121e863faa",
+          "src": "audio/assets/5c/5c90d0c19c6d50e3a8b0a9f81e8e6af4ba54a1dd41992bf1e82c0072d846977b.mp3",
+          "sha256": "5c90d0c19c6d50e3a8b0a9f81e8e6af4ba54a1dd41992bf1e82c0072d846977b",
+          "bytes": 41760,
+          "durationMs": 6960
         },
         {
-          "sourcePath": "chapters/3/steps/0/checkpoint/completeWhen/0",
+          "sourcePath": "chapters/3/steps/1/checkpoint/completeWhen/0",
           "speech": "Each variable was made on the correct sprite.",
           "requestHash": "0e023d4f86e63e4c2fd7f67b48a049ed68c53cd91512b3757deae3122c803bb4",
           "src": "audio/assets/9c/9c7cf3bb3ade942852a34abedbdfd0ac3c79d13d7d0b9cb429f21a634c6c8f08.mp3",
@@ -5928,7 +6342,7 @@
           "durationMs": 3048
         },
         {
-          "sourcePath": "chapters/3/steps/0/checkpoint/completeWhen/1",
+          "sourcePath": "chapters/3/steps/1/checkpoint/completeWhen/1",
           "speech": "Every cloned sprite has a Clear Clones receiver.",
           "requestHash": "14bba2a4d3ab2466e177a52875eb5b7381659987f04f8fbb380f859cb5c7fe6d",
           "src": "audio/assets/92/923823ef28e942de006853c7cc8f9d24d8eb89cd68c17c6444a16f6b1ea5b633.mp3",
@@ -5941,11 +6355,11 @@
     {
       "id": "six-spots/make-six-towers/overview",
       "sourcePaths": [
-        "chapters/3/steps/1/explanation"
+        "chapters/3/steps/2/explanation"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/1/explanation",
+          "sourcePath": "chapters/3/steps/2/explanation",
           "speech": "The original Tower sets ID, Lane, and Built before making a clone.",
           "requestHash": "d2255f52a61266a6ec94d7df83345d6ab324794be8906483b67b863e76436691",
           "src": "audio/assets/6f/6f3fd14cdc19384cbcd39970b90c2a8c1071bedb8a86bfc0f5bdafb67fef3be7.mp3",
@@ -5954,7 +6368,7 @@
           "durationMs": 4488
         },
         {
-          "sourcePath": "chapters/3/steps/1/explanation",
+          "sourcePath": "chapters/3/steps/2/explanation",
           "speech": "Because these variables were made For this sprite only, the clone gets its own copies of the values.",
           "requestHash": "ce570146bad5b912fc8f26c17a84b3fae4687cb120bd7550f1f346d872be5bcb",
           "src": "audio/assets/f0/f0ec83f4605366047ce9222293322dccd5856c4f73436a2d6e1ef17ab249cfbe.mp3",
@@ -5963,7 +6377,7 @@
           "durationMs": 5664
         },
         {
-          "sourcePath": "chapters/3/steps/1/explanation",
+          "sourcePath": "chapters/3/steps/2/explanation",
           "speech": "For example, if the original has ID 3 when it makes a clone, that spot keeps ID 3 even after the original sets its own ID back to 0.",
           "requestHash": "9995b8ccbaf744caf0af007bc6f5975b62cf205784cd8783cb10424edcfefdee",
           "src": "audio/assets/c3/c3d102b9e0dd3d1c588a3c134c44738045c934eee4dc39b6316f4db1aff9124f.mp3",
@@ -5972,7 +6386,7 @@
           "durationMs": 8616
         },
         {
-          "sourcePath": "chapters/3/steps/1/explanation",
+          "sourcePath": "chapters/3/steps/2/explanation",
           "speech": "Make spot repeats this task using three inputs: the spot number, its lane, and its height.",
           "requestHash": "f888b7c65f69649949378817971a3028fec7f94ba2f7f977ffdd7298d769d553",
           "src": "audio/assets/00/00a8707ab668715864e475ceaed7b15c81dcbd8a98a986067d795d6d453fe81d.mp3",
@@ -5985,11 +6399,11 @@
     {
       "id": "six-spots/make-six-towers/instruction/000",
       "sourcePaths": [
-        "chapters/3/steps/1/instructions/0"
+        "chapters/3/steps/2/instructions/0"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/1/instructions/0",
+          "sourcePath": "chapters/3/steps/2/instructions/0",
           "speech": "On Tower, make Make spot with three number-or-text inputs named number, lane, and height.",
           "requestHash": "461092fc24c8f27b82faedbf23cf8d6d8d7f800321df35fdb1729eeaccca2a69",
           "src": "audio/assets/ff/ff3e82fa8389cef40d43f9375931437fd6216878d0df8dddc64ed47a33bf43e2.mp3",
@@ -5998,7 +6412,7 @@
           "durationMs": 6816
         },
         {
-          "sourcePath": "chapters/3/steps/1/instructions/0",
+          "sourcePath": "chapters/3/steps/2/instructions/0",
           "speech": "Select Run without screen refresh.",
           "requestHash": "37661330a1dedc8e48d177ba7977c12176e1bd5efb39202855907d28ffdfcddf",
           "src": "audio/assets/0e/0e88489ad6d7fc37db1bdb1916aee0acea114e3ddf77129166c6bfcb3e8d60fc.mp3",
@@ -6011,11 +6425,11 @@
     {
       "id": "six-spots/make-six-towers/instruction/001",
       "sourcePaths": [
-        "chapters/3/steps/1/instructions/1"
+        "chapters/3/steps/2/instructions/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/1/instructions/1",
+          "sourcePath": "chapters/3/steps/2/instructions/1",
           "speech": "Build the definition below.",
           "requestHash": "3233c5e3246c28a7a74a65e8ef65fb8eb08c7137dd2e8ec4e646078f7cf3796b",
           "src": "audio/assets/98/98a574f6c365aedf81d66148de30a14e6ea94c7c544c5dc4da8c2795cbe63959.mp3",
@@ -6024,7 +6438,7 @@
           "durationMs": 2088
         },
         {
-          "sourcePath": "chapters/3/steps/1/instructions/1",
+          "sourcePath": "chapters/3/steps/2/instructions/1",
           "speech": "Use the round input blocks from define when assigning ID, Lane, and y.",
           "requestHash": "ed1f55ba8205c9e56630b4720a728c4aca3cd9eaded17050d79e5da58c304936",
           "src": "audio/assets/c6/c6da3e0c1f8cbff61db612447081faa9c1cc996299817f46ba60ef116f491a51.mp3",
@@ -6033,7 +6447,7 @@
           "durationMs": 5040
         },
         {
-          "sourcePath": "chapters/3/steps/1/instructions/1",
+          "sourcePath": "chapters/3/steps/2/instructions/1",
           "speech": "Create the clone only after setting its values and costume.",
           "requestHash": "31c758936d4906c4a6c557de3847644779e4745e55918488a249ea12de89b54c",
           "src": "audio/assets/80/80a04559aa947f65bc31442ce186cb537e63a5bd49a36f11ec14b777b38160e6.mp3",
@@ -6046,11 +6460,11 @@
     {
       "id": "six-spots/make-six-towers/instruction/002",
       "sourcePaths": [
-        "chapters/3/steps/1/instructions/2"
+        "chapters/3/steps/2/instructions/2"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/1/instructions/2",
+          "sourcePath": "chapters/3/steps/2/instructions/2",
           "speech": "Replace Tower's old Prepare Tower script with the six-call version below.",
           "requestHash": "a8d07ace8abdb96209c50d2c810f5580f98ccd47dfe0ea64accea6d3dc6a8bd4",
           "src": "audio/assets/d2/d27b02efd6f27c75b5e2cbe18d9216247c09151a8377e7f898de20d0c6db8e46.mp3",
@@ -6059,7 +6473,7 @@
           "durationMs": 4464
         },
         {
-          "sourcePath": "chapters/3/steps/1/instructions/2",
+          "sourcePath": "chapters/3/steps/2/instructions/2",
           "speech": "Do not leave the earlier script that set ID to 1.",
           "requestHash": "a71a618238576bc3eb4f10ec6082313c7f876ccbc3af8cbd27ed767393719a39",
           "src": "audio/assets/9b/9b0123515810b1e0fda668a9fea6d2d76435c342a6412a010c43045f21a4a434.mp3",
@@ -6072,11 +6486,11 @@
     {
       "id": "six-spots/make-six-towers/instruction/003",
       "sourcePaths": [
-        "chapters/3/steps/1/instructions/3"
+        "chapters/3/steps/2/instructions/3"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/1/instructions/3",
+          "sourcePath": "chapters/3/steps/2/instructions/3",
           "speech": "Add when I receive Present Level: if ID is greater than 0, show.",
           "requestHash": "f0f3c302cf1f37833cdb8713d842ef930727f56a548f6c88b3ff9c80d867d923",
           "src": "audio/assets/63/630133a989fafc28bf2deb30d35c6cd72fb143e9a3113d26be42f5f58edd9383.mp3",
@@ -6085,7 +6499,7 @@
           "durationMs": 5400
         },
         {
-          "sourcePath": "chapters/3/steps/1/instructions/3",
+          "sourcePath": "chapters/3/steps/2/instructions/3",
           "speech": "Create the new message from this event.",
           "requestHash": "78b812807ec2dbe0b0e201ca7f692bd9fa87454d77a0daf53c495d1d454e8908",
           "src": "audio/assets/68/68a7fde8e12aa2e6d5089dcd826b930748b7c87b96d3053bfe8803ca30168d6c.mp3",
@@ -6098,11 +6512,11 @@
     {
       "id": "six-spots/make-six-towers/instruction/004",
       "sourcePaths": [
-        "chapters/3/steps/1/instructions/4"
+        "chapters/3/steps/2/instructions/4"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/1/instructions/4",
+          "sourcePath": "chapters/3/steps/2/instructions/4",
           "speech": "Replace Tower's when I receive Tower Step script with the version below.",
           "requestHash": "5a48f165b42f98616cdec446c34df1500e637eb05239efe6923274c750b27d04",
           "src": "audio/assets/5c/5cd52c40238c239acc136f1723e0ea22789dc5f0070b096d6e0924d0e314f4a6.mp3",
@@ -6111,7 +6525,7 @@
           "durationMs": 4368
         },
         {
-          "sourcePath": "chapters/3/steps/1/instructions/4",
+          "sourcePath": "chapters/3/steps/2/instructions/4",
           "speech": "Its ID greater than 0 check lets clones update their shots and keeps the hidden original out.",
           "requestHash": "70942fd2fc3acbdd2edbbb24d1b94952a402594cd777e84d78476876c9305589",
           "src": "audio/assets/cf/cf30f34fa67cfed8175616f49fc889afabdd696e174d408f5d90d3ef401a4533.mp3",
@@ -6124,11 +6538,11 @@
     {
       "id": "six-spots/make-six-towers/instruction/005",
       "sourcePaths": [
-        "chapters/3/steps/1/instructions/5"
+        "chapters/3/steps/2/instructions/5"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/1/instructions/5",
+          "sourcePath": "chapters/3/steps/2/instructions/5",
           "speech": "Keep the existing Update my shot definition unchanged.",
           "requestHash": "0b8219842a24b159e140871ad213c688784bb7fc33e689ababaf4119f8e8ac96",
           "src": "audio/assets/18/18a633309273270bf76636abb5be88726c61048faa86ce53a0fa23808a0db55b.mp3",
@@ -6141,11 +6555,11 @@
     {
       "id": "six-spots/make-six-towers/instruction/006",
       "sourcePaths": [
-        "chapters/3/steps/1/instructions/6"
+        "chapters/3/steps/2/instructions/6"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/1/instructions/6",
+          "sourcePath": "chapters/3/steps/2/instructions/6",
           "speech": "In Try to build, put its existing two if blocks inside a new if ID greater than 0.",
           "requestHash": "e48fd66a5227c69b7a49d7855062ad4690432485a6c8187c7266ae42ac340df3",
           "src": "audio/assets/5a/5a7ef6ba033cc8b5f5eeb41d343e355f1e54fbdc2927ea42ba481e4e6c8f76d8.mp3",
@@ -6154,7 +6568,7 @@
           "durationMs": 5856
         },
         {
-          "sourcePath": "chapters/3/steps/1/instructions/6",
+          "sourcePath": "chapters/3/steps/2/instructions/6",
           "speech": "Keep the purchase contents and Run without screen refresh setting unchanged.",
           "requestHash": "fdafa9f9c17ddeb9136b2c09a2ff53aaff386be53038fdab3b108418db433866",
           "src": "audio/assets/ae/ae5b2760c1f99350f59c21586c8fcdadba447976c6480f9d8c4961f0fac7dfa3.mp3",
@@ -6167,11 +6581,11 @@
     {
       "id": "six-spots/make-six-towers/instruction/007",
       "sourcePaths": [
-        "chapters/3/steps/1/instructions/7"
+        "chapters/3/steps/2/instructions/7"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/1/instructions/7",
+          "sourcePath": "chapters/3/steps/2/instructions/7",
           "speech": "Do not add a when I start as a clone script: the values are already copied, and Present Level will show the spots after setup finishes.",
           "requestHash": "63199dc7142f396c6df95bef25e78b953eec31f95a7cc8a1e50f33540321ed4b",
           "src": "audio/assets/b8/b8008f30f9db8d446da265b0a9b0bd351c120e4bd54457d345c83b6532fc36ac.mp3",
@@ -6184,37 +6598,28 @@
     {
       "id": "six-spots/make-six-towers/instruction/008",
       "sourcePaths": [
-        "chapters/3/steps/1/instructions/8"
+        "chapters/3/steps/2/instructions/8"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/1/instructions/8",
-          "speech": "Do not click the green flag again until the Chapter 4 checkpoint.",
-          "requestHash": "ca94fa86c5fc2beee3b7dd494b61a3b6ef48242f2af748635a664d9413e303ce",
-          "src": "audio/assets/59/5925e38ca92446bad564e29be9a3e8c69861cc2cb79577b6c4570a94b82868d0.mp3",
-          "sha256": "5925e38ca92446bad564e29be9a3e8c69861cc2cb79577b6c4570a94b82868d0",
-          "bytes": 25200,
-          "durationMs": 4200
-        },
-        {
-          "sourcePath": "chapters/3/steps/1/instructions/8",
-          "speech": "The Stage does not send Initialize Originals until then, so no spots would appear.",
-          "requestHash": "9664991cf25afc6220aed73a99807ab8a8f56e0573e9a4d2dfffb7edaaaf4483",
-          "src": "audio/assets/9e/9e2f45c9a13ced63754012f41ca85ad89fdccfc9487a62b1eb5e124469110130.mp3",
-          "sha256": "9e2f45c9a13ced63754012f41ca85ad89fdccfc9487a62b1eb5e124469110130",
-          "bytes": 34128,
-          "durationMs": 5688
+          "sourcePath": "chapters/3/steps/2/instructions/8",
+          "speech": "On the Stage, insert broadcast Present Level and wait directly below broadcast Prepare Shot and wait.",
+          "requestHash": "14d54be4af9230aea557daf03b1a9afb27f306d525e8bb138893fc313c2e9478",
+          "src": "audio/assets/e6/e6bdf0ec55902dd276a47e0c5e3a2b2474124eb6e1d098d1cf1f6e0c5deefbe2.mp3",
+          "sha256": "e6bdf0ec55902dd276a47e0c5e3a2b2474124eb6e1d098d1cf1f6e0c5deefbe2",
+          "bytes": 39456,
+          "durationMs": 6576
         }
       ]
     },
     {
       "id": "six-spots/make-six-towers/hint/000",
       "sourcePaths": [
-        "chapters/3/steps/1/hints/0"
+        "chapters/3/steps/2/hints/0"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/1/hints/0",
+          "sourcePath": "chapters/3/steps/2/hints/0",
           "speech": "Each call sets the original's ID back to 0 after making the copy.",
           "requestHash": "f8df4ccd69175e7e8c0ad6f78aa6fa41b78f5a69d55679178948aa1fc6308769",
           "src": "audio/assets/5c/5c7f3152ef196942b59204a5b55c0155daf0d6716ca1b9d26a68e84ec5c53c77.mp3",
@@ -6223,7 +6628,7 @@
           "durationMs": 4536
         },
         {
-          "sourcePath": "chapters/3/steps/1/hints/0",
+          "sourcePath": "chapters/3/steps/2/hints/0",
           "speech": "That does not change the clone's copied ID.",
           "requestHash": "a4b5df1828d68f8993e193b75446758eb825253bc7dea30b8d369ef025a5bb8e",
           "src": "audio/assets/33/3332c2c900f2dc6397fd17f3a2aae54cfbb386bd893e9daaa8e05c9d01bf136a.mp3",
@@ -6236,11 +6641,11 @@
     {
       "id": "six-spots/make-six-towers/hint/001",
       "sourcePaths": [
-        "chapters/3/steps/1/hints/1"
+        "chapters/3/steps/2/hints/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/1/hints/1",
+          "sourcePath": "chapters/3/steps/2/hints/1",
           "speech": "Both spots in a lane fire from the same lane-center point, so either spot is useful.",
           "requestHash": "24ad94d76d93a542d7b2ec37bb0c6bcd7c9e58b4bd8b444536eab77d921c8485",
           "src": "audio/assets/5a/5aa1ce59dbdd251e71652f476cf5e8e6d7dcf6ef9900e3ca691ba8e97a4d5710.mp3",
@@ -6253,13 +6658,13 @@
     {
       "id": "six-spots/make-six-towers/debug/000",
       "sourcePaths": [
-        "chapters/3/steps/1/debuggingTips/0/symptom",
-        "chapters/3/steps/1/debuggingTips/0/checks/0",
-        "chapters/3/steps/1/debuggingTips/0/checks/1"
+        "chapters/3/steps/2/debuggingTips/0/symptom",
+        "chapters/3/steps/2/debuggingTips/0/checks/0",
+        "chapters/3/steps/2/debuggingTips/0/checks/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/1/debuggingTips/0/symptom",
+          "sourcePath": "chapters/3/steps/2/debuggingTips/0/symptom",
           "speech": "Buying one tower changes every tower's costume.",
           "requestHash": "eccd094d7899a226c89b1ae1a3c4d827f76216cc9eef70d65973335a4cbd9c34",
           "src": "audio/assets/2d/2db8f684651bbe207e1606effff326b298b99d540f54a6e5f3493bd752c850a7.mp3",
@@ -6268,7 +6673,7 @@
           "durationMs": 3336
         },
         {
-          "sourcePath": "chapters/3/steps/1/debuggingTips/0/checks/0",
+          "sourcePath": "chapters/3/steps/2/debuggingTips/0/checks/0",
           "speech": "Built must be For this sprite only on Tower.",
           "requestHash": "a715d704ebe3d4084c10251047ccff4ab01180100310ab4e7986fc0b597b9ec3",
           "src": "audio/assets/de/de1c74912813573353e78e52f5b93089289dae44b1d21660719a39e68902bc02.mp3",
@@ -6277,7 +6682,7 @@
           "durationMs": 3096
         },
         {
-          "sourcePath": "chapters/3/steps/1/debuggingTips/0/checks/1",
+          "sourcePath": "chapters/3/steps/2/debuggingTips/0/checks/1",
           "speech": "The purchase runs on the clicked clone; do not broadcast a message to change every costume.",
           "requestHash": "91dc87dffb15e21a63d10ef369379a3003a873384dc9ea4614a3b56d0a5284d2",
           "src": "audio/assets/0a/0a63d08734ca217b3ec998570970669908ff4352ad2c42f6bffb2f0fdff3c36e.mp3",
@@ -6290,32 +6695,60 @@
     {
       "id": "six-spots/make-six-towers/checkpoint",
       "sourcePaths": [
-        "chapters/3/steps/1/checkpoint/task",
-        "chapters/3/steps/1/checkpoint/expectedResult",
-        "chapters/3/steps/1/checkpoint/completeWhen/0",
-        "chapters/3/steps/1/checkpoint/completeWhen/1"
+        "chapters/3/steps/2/checkpoint/task",
+        "chapters/3/steps/2/checkpoint/expectedResult",
+        "chapters/3/steps/2/checkpoint/completeWhen/0",
+        "chapters/3/steps/2/checkpoint/completeWhen/1",
+        "chapters/3/steps/2/checkpoint/completeWhen/2"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/1/checkpoint/task",
-          "speech": "Trace Make spot 3, 2, 22 on paper.",
-          "requestHash": "160699702dbbe7973793130d46f5ce7545acc3449e6ec884e9c74a33775c25ac",
-          "src": "audio/assets/1d/1d1e91b13297eb9b142fc92ab2fb98220a272c498851a168205ff93580c39237.mp3",
-          "sha256": "1d1e91b13297eb9b142fc92ab2fb98220a272c498851a168205ff93580c39237",
-          "bytes": 23040,
-          "durationMs": 3840
+          "sourcePath": "chapters/3/steps/2/checkpoint/task",
+          "speech": "Click the green flag.",
+          "requestHash": "9b836dd95fad30e09886385373505bc134e314547c73a9cd1ba94baac6b08d26",
+          "src": "audio/assets/13/13a8f6796d4fa3ba590c88fac3ce599990e2147b3f19f12464c78e1f4c9ff350.mp3",
+          "sha256": "13a8f6796d4fa3ba590c88fac3ce599990e2147b3f19f12464c78e1f4c9ff350",
+          "bytes": 11232,
+          "durationMs": 1872
         },
         {
-          "sourcePath": "chapters/3/steps/1/checkpoint/expectedResult",
-          "speech": "It creates an empty spot with ID 3 and Lane 2 at x negative 155, y 22, then restores the original's ID to 0.",
-          "requestHash": "b45a44609ca78576afe281de31d6e4ff7b0de1193ba8e24a1db2c80abbcadf3a",
-          "src": "audio/assets/7e/7ebf0d21a3867593d2ac7663ff6e2241ff025fc501170374023c199fb8258e98.mp3",
-          "sha256": "7ebf0d21a3867593d2ac7663ff6e2241ff025fc501170374023c199fb8258e98",
-          "bytes": 61776,
-          "durationMs": 10296
+          "sourcePath": "chapters/3/steps/2/checkpoint/task",
+          "speech": "Buy the top spot, then one spot beside the middle road.",
+          "requestHash": "a2dfe691d63e7a35876ab740fbf3b9c774896e8e09bdb33a02c39378fc17a6db",
+          "src": "audio/assets/36/36ea6fa8cc0897149b5d319cd31506a743eb0f3613e22b84b346f877ea909b74.mp3",
+          "sha256": "36ea6fa8cc0897149b5d319cd31506a743eb0f3613e22b84b346f877ea909b74",
+          "bytes": 24048,
+          "durationMs": 4008
         },
         {
-          "sourcePath": "chapters/3/steps/1/checkpoint/completeWhen/0",
+          "sourcePath": "chapters/3/steps/2/checkpoint/expectedResult",
+          "speech": "Six empty spots appear, two beside each road.",
+          "requestHash": "ae792fd5cded151b3e6bbabcfc0b92b9dcbf5153a7c59139c0b74dcfb83e3744",
+          "src": "audio/assets/81/8123360ab42e510e3a41a68d69aa8975284445733af83eb363b0f6c01381d800.mp3",
+          "sha256": "8123360ab42e510e3a41a68d69aa8975284445733af83eb363b0f6c01381d800",
+          "bytes": 23472,
+          "durationMs": 3912
+        },
+        {
+          "sourcePath": "chapters/3/steps/2/checkpoint/expectedResult",
+          "speech": "The top spot shoots the enemy as before.",
+          "requestHash": "8647b290a98c36b79e4d34e4c076a8cd97cfd628c3b926d408c853dfae7c773b",
+          "src": "audio/assets/b3/b3dad980e1fd4d71076b251e583d0fccd42eb80cec40ea36d5a8527bf83ca4ae.mp3",
+          "sha256": "b3dad980e1fd4d71076b251e583d0fccd42eb80cec40ea36d5a8527bf83ca4ae",
+          "bytes": 17712,
+          "durationMs": 2952
+        },
+        {
+          "sourcePath": "chapters/3/steps/2/checkpoint/expectedResult",
+          "speech": "The middle spot turns Built but does not shoot yet, because the lists still have only one shot.",
+          "requestHash": "f25013be68b1691de5d6deb94876c771e7c9c77fe7c2c2827445f9d9532d3555",
+          "src": "audio/assets/c7/c7a04259823dda376d69d268774a6bbfe4d4dbd3692944c496b200446087926a.mp3",
+          "sha256": "c7a04259823dda376d69d268774a6bbfe4d4dbd3692944c496b200446087926a",
+          "bytes": 31248,
+          "durationMs": 5208
+        },
+        {
+          "sourcePath": "chapters/3/steps/2/checkpoint/completeWhen/0",
           "speech": "The six calls use different numbers.",
           "requestHash": "b9ada2f48748b411773e68c43e2dde3e90c2fc08f567ee6212326507cf0b315b",
           "src": "audio/assets/1a/1a584138a67a8576d276b35aef37af529aa48cb087f8c106b5848a8d4a7d24bf.mp3",
@@ -6324,24 +6757,33 @@
           "durationMs": 2448
         },
         {
-          "sourcePath": "chapters/3/steps/1/checkpoint/completeWhen/1",
+          "sourcePath": "chapters/3/steps/2/checkpoint/completeWhen/1",
           "speech": "The old one-tower setup script is replaced.",
           "requestHash": "1ecce192d2c3eddb43c69b293481b3bb7f22b2d4a8318a6f8914d849c5fd74be",
           "src": "audio/assets/08/08cae012033eef1616c9d25da11ca6600bc138a1630cd04a898be7b67d03e0ec.mp3",
           "sha256": "08cae012033eef1616c9d25da11ca6600bc138a1630cd04a898be7b67d03e0ec",
           "bytes": 18864,
           "durationMs": 3144
+        },
+        {
+          "sourcePath": "chapters/3/steps/2/checkpoint/completeWhen/2",
+          "speech": "Make spot 3, 2, 22 gives the spot ID 3 and Lane 2 at x negative 155, y 22.",
+          "requestHash": "08a834e1b67251f0a2913b6dae31d29a1fd5f24ee626dd4b11afa6bf2c482044",
+          "src": "audio/assets/0f/0fd00b41a1f7f0179fba7b3a0cf48ac01e8964348c06d79e880488ddfde3a04c.mp3",
+          "sha256": "0fd00b41a1f7f0179fba7b3a0cf48ac01e8964348c06d79e880488ddfde3a04c",
+          "bytes": 53424,
+          "durationMs": 8904
         }
       ]
     },
     {
       "id": "six-spots/make-six-shot-displays/overview",
       "sourcePaths": [
-        "chapters/3/steps/2/explanation"
+        "chapters/3/steps/3/explanation"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/2/explanation",
+          "sourcePath": "chapters/3/steps/3/explanation",
           "speech": "Each Shot clone reads one item from each list.",
           "requestHash": "6870e81e3b58db777e96f8253536eeb868320e3f75da6410be9aca2b14cf851a",
           "src": "audio/assets/b0/b0396948bb69883c269cbc8ba92300c9ed9a23385c3e3ce9bfa0b4f3bdbe0e79.mp3",
@@ -6350,7 +6792,7 @@
           "durationMs": 3336
         },
         {
-          "sourcePath": "chapters/3/steps/2/explanation",
+          "sourcePath": "chapters/3/steps/3/explanation",
           "speech": "It does not need a new movement script.",
           "requestHash": "e63d73883665aeb6c9065c2f2ccd7e83a8416916a8194cafde6436873d21a95b",
           "src": "audio/assets/be/be8ea0c5fa9d2448df08395befdbb71962df15a40b852bf31af271d48f8c128c.mp3",
@@ -6359,7 +6801,7 @@
           "durationMs": 2592
         },
         {
-          "sourcePath": "chapters/3/steps/2/explanation",
+          "sourcePath": "chapters/3/steps/3/explanation",
           "speech": "Tower already changes the numbered position, so the shot only needs its number and lane.",
           "requestHash": "b9f7c22198219b959bfb66c2ba7106ac8549c32b3f826899a484c2d6320c6f27",
           "src": "audio/assets/00/008e577f086044b9e6f40625ea4a4949f6b50db50901686c3243184e0961fa72.mp3",
@@ -6372,11 +6814,11 @@
     {
       "id": "six-spots/make-six-shot-displays/instruction/000",
       "sourcePaths": [
-        "chapters/3/steps/2/instructions/0"
+        "chapters/3/steps/3/instructions/0"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/2/instructions/0",
+          "sourcePath": "chapters/3/steps/3/instructions/0",
           "speech": "On Shot, make Make shot with number-or-text inputs number and lane, and select Run without screen refresh.",
           "requestHash": "aca794e7f77d6ee51695dff6dff170d421756a4011e9cb337f5f30341d505237",
           "src": "audio/assets/37/376b715e3fa942d846c9b2d9e4a6bfc9d0dbcaf816f937dea127ca84f7f37033.mp3",
@@ -6389,11 +6831,11 @@
     {
       "id": "six-spots/make-six-shot-displays/instruction/001",
       "sourcePaths": [
-        "chapters/3/steps/2/instructions/1"
+        "chapters/3/steps/3/instructions/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/2/instructions/1",
+          "sourcePath": "chapters/3/steps/3/instructions/1",
           "speech": "Replace Prepare Shot with the six-call version below, and add its Make shot definition.",
           "requestHash": "58e3204c5b8f1b5e21b10c08ffd4eb3b916680aa71a16e6731a25638074a4b7a",
           "src": "audio/assets/84/84fb8bd9480fc6e94293b9f8abae6649474f5dbd7ab4ba1ea145459009570445.mp3",
@@ -6406,11 +6848,11 @@
     {
       "id": "six-spots/make-six-shot-displays/instruction/002",
       "sourcePaths": [
-        "chapters/3/steps/2/instructions/2"
+        "chapters/3/steps/3/instructions/2"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/2/instructions/2",
+          "sourcePath": "chapters/3/steps/3/instructions/2",
           "speech": "Replace Draw Shots with the version below.",
           "requestHash": "8c6b74d99bcc54cc414339fcf304b9405a371e8cc439c41c11f01d413d9d3dd9",
           "src": "audio/assets/8d/8d0db2b2674b5a772d2d51c2d555715f1370f44ab709a411d9ec3d66acd3e30a.mp3",
@@ -6419,7 +6861,7 @@
           "durationMs": 2880
         },
         {
-          "sourcePath": "chapters/3/steps/2/instructions/2",
+          "sourcePath": "chapters/3/steps/3/instructions/2",
           "speech": "The outer if keeps the hidden original out of the list checks.",
           "requestHash": "d9932adc79677199b5fd2d75632b05e0a65d491a9aa1f340d595ba05b27c1ca8",
           "src": "audio/assets/3a/3a8231b449519a87f6ec98383c333e870083fd3eefae235e83c957d92bab65d4.mp3",
@@ -6432,11 +6874,11 @@
     {
       "id": "six-spots/make-six-shot-displays/instruction/003",
       "sourcePaths": [
-        "chapters/3/steps/2/instructions/3"
+        "chapters/3/steps/3/instructions/3"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/2/instructions/3",
+          "sourcePath": "chapters/3/steps/3/instructions/3",
           "speech": "Build its y calculation inside-out: multiply Lane by 90, then subtract that result from 180.",
           "requestHash": "5b9fcd3e628c38b1e9295b0b6655963684a6368a0bec41bc985203ef80425482",
           "src": "audio/assets/a5/a520c2ec02a204847890693dcaa1247a01dc8bb13adb2a0354523d64d370ed3f.mp3",
@@ -6445,7 +6887,7 @@
           "durationMs": 7488
         },
         {
-          "sourcePath": "chapters/3/steps/2/instructions/3",
+          "sourcePath": "chapters/3/steps/3/instructions/3",
           "speech": "Lane 1 gives y 90, lane 2 gives 0, and lane 3 gives -90.",
           "requestHash": "8c6b6cf41c07e462c14b769e75030c5f0f5c8606b63476407d35d37f92846cc7",
           "src": "audio/assets/52/526d51283f72fa71e208c9003b8697efb578c54ea933c03ec3bec5d28c8f33f2.mp3",
@@ -6458,11 +6900,11 @@
     {
       "id": "six-spots/make-six-shot-displays/instruction/004",
       "sourcePaths": [
-        "chapters/3/steps/2/instructions/4"
+        "chapters/3/steps/3/instructions/4"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/2/instructions/4",
+          "sourcePath": "chapters/3/steps/3/instructions/4",
           "speech": "On the Stage, replace the two one-item list setups with delete all of both lists, followed by repeat 6 containing add 0 to Shot X and add 0 to Shot Active.",
           "requestHash": "2d7acbc5eed5c14f207ffc736de0b081d30d2ef8d529e8bf9f06ab7bff3fac24",
           "src": "audio/assets/ac/ac8d588406111f0d2559ae355c6567edc2c8a835caae28ae09788b402d15138b.mp3",
@@ -6475,11 +6917,11 @@
     {
       "id": "six-spots/make-six-shot-displays/instruction/005",
       "sourcePaths": [
-        "chapters/3/steps/2/instructions/5"
+        "chapters/3/steps/3/instructions/5"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/2/instructions/5",
+          "sourcePath": "chapters/3/steps/3/instructions/5",
           "speech": "Do not create a new clone whenever a tower fires.",
           "requestHash": "cdff258d8df7b18b67e03d7585b89ccf7cd56f7e22c7cce135aee07c15678cbf",
           "src": "audio/assets/61/61912bc8037283c7dad4b7156560cc65c7c914f905085f35cfb734cf233e2cf7.mp3",
@@ -6488,7 +6930,7 @@
           "durationMs": 3504
         },
         {
-          "sourcePath": "chapters/3/steps/2/instructions/5",
+          "sourcePath": "chapters/3/steps/3/instructions/5",
           "speech": "These six shot displays are made once and reused.",
           "requestHash": "737085efd287fdba3e6a2e6f3c38b41bbdf46a3ecb8695e1bb46b40de4d03205",
           "src": "audio/assets/6c/6ca98335ab721eb225cecd26be9d43de858d9707584fca7845d210b6c0171a2d.mp3",
@@ -6501,11 +6943,11 @@
     {
       "id": "six-spots/make-six-shot-displays/hint/000",
       "sourcePaths": [
-        "chapters/3/steps/2/hints/0"
+        "chapters/3/steps/3/hints/0"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/2/hints/0",
+          "sourcePath": "chapters/3/steps/3/hints/0",
           "speech": "A hidden shot still exists, ready to display its next flight.",
           "requestHash": "977b28094b590f4e2be69d536c0f243b3380911c2b96f7df94a826edc1d83d13",
           "src": "audio/assets/1e/1ef86209afe92ab1466ecd8ca6242648a210fd12b9187345e6584b245bb7897b.mp3",
@@ -6518,11 +6960,11 @@
     {
       "id": "six-spots/make-six-shot-displays/hint/001",
       "sourcePaths": [
-        "chapters/3/steps/2/hints/1"
+        "chapters/3/steps/3/hints/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/2/hints/1",
+          "sourcePath": "chapters/3/steps/3/hints/1",
           "speech": "Changing the number of list items does not require changing Update my shot: each tower already uses its own ID.",
           "requestHash": "f7fb37c5eb6b2b4393070aea35e1b259893d6c565897221eb6d1507eba002b82",
           "src": "audio/assets/be/be6028b6824c7206862c0cec3481339b061072e382223f574a4ba41fb80d00a5.mp3",
@@ -6535,13 +6977,13 @@
     {
       "id": "six-spots/make-six-shot-displays/debug/000",
       "sourcePaths": [
-        "chapters/3/steps/2/debuggingTips/0/symptom",
-        "chapters/3/steps/2/debuggingTips/0/checks/0",
-        "chapters/3/steps/2/debuggingTips/0/checks/1"
+        "chapters/3/steps/3/debuggingTips/0/symptom",
+        "chapters/3/steps/3/debuggingTips/0/checks/0",
+        "chapters/3/steps/3/debuggingTips/0/checks/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/2/debuggingTips/0/symptom",
+          "sourcePath": "chapters/3/steps/3/debuggingTips/0/symptom",
           "speech": "A bottom-lane shot appears on the top road.",
           "requestHash": "ca4d9babc3b92c5df66c599c549a4a2ec2b1dc77395c2e5edc96d00eead53b9e",
           "src": "audio/assets/d2/d2007c9a3eac4e53de072b69d32de68c1b9cd426c39aa085e349cad65c690994.mp3",
@@ -6550,7 +6992,7 @@
           "durationMs": 2904
         },
         {
-          "sourcePath": "chapters/3/steps/2/debuggingTips/0/checks/0",
+          "sourcePath": "chapters/3/steps/3/debuggingTips/0/checks/0",
           "speech": "The calls for shots 5 and 6 must pass lane 3.",
           "requestHash": "cb94d6b3b8ea5ce63b0f8de4d33d38adffa4f4b85175ce20ed5a4f20078a2221",
           "src": "audio/assets/5a/5a20a0e3ab54607bc236639afe4b754729aa81c022d5b25695956cbab66ef0de.mp3",
@@ -6559,7 +7001,7 @@
           "durationMs": 3552
         },
         {
-          "sourcePath": "chapters/3/steps/2/debuggingTips/0/checks/1",
+          "sourcePath": "chapters/3/steps/3/debuggingTips/0/checks/1",
           "speech": "Draw Shots must use Lane in its y calculation, not ID.",
           "requestHash": "ebaef668b5f991f16fb24cadec5bb384a42d876a6a2622f4f9aed6b2784c4423",
           "src": "audio/assets/92/92c2b2d6f3a87b34090bbda94dd4a3c38ee8a48a176eed1af22fa3c3b7286763.mp3",
@@ -6572,32 +7014,51 @@
     {
       "id": "six-spots/make-six-shot-displays/checkpoint",
       "sourcePaths": [
-        "chapters/3/steps/2/checkpoint/task",
-        "chapters/3/steps/2/checkpoint/expectedResult",
-        "chapters/3/steps/2/checkpoint/completeWhen/0",
-        "chapters/3/steps/2/checkpoint/completeWhen/1"
+        "chapters/3/steps/3/checkpoint/task",
+        "chapters/3/steps/3/checkpoint/expectedResult",
+        "chapters/3/steps/3/checkpoint/completeWhen/0",
+        "chapters/3/steps/3/checkpoint/completeWhen/1",
+        "chapters/3/steps/3/checkpoint/completeWhen/2"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/2/checkpoint/task",
-          "speech": "Work out the y values for all three lanes.",
-          "requestHash": "36c3ce207a8a9493d60fe0c3af82f99661231ed26a920ebf38f8d1a4d0c7c005",
-          "src": "audio/assets/26/260ea80b67f04f3e2529952924155429f8bbe9d5f0cbb2ed0d3d778c91cb9bf3.mp3",
-          "sha256": "260ea80b67f04f3e2529952924155429f8bbe9d5f0cbb2ed0d3d778c91cb9bf3",
-          "bytes": 18144,
-          "durationMs": 3024
+          "sourcePath": "chapters/3/steps/3/checkpoint/task",
+          "speech": "Click the green flag and buy one spot beside each road.",
+          "requestHash": "b7c5e1068cd1ebe8124c997bab8b57c766882de44217d842a9fb63ed12ac60ac",
+          "src": "audio/assets/dd/ddfc8231decc353355a436ec1a90cb58394839294a3ef5e380c114e920dc0cc3.mp3",
+          "sha256": "ddfc8231decc353355a436ec1a90cb58394839294a3ef5e380c114e920dc0cc3",
+          "bytes": 22464,
+          "durationMs": 3744
         },
         {
-          "sourcePath": "chapters/3/steps/2/checkpoint/expectedResult",
-          "speech": "Each pair of shot IDs shares a lane center, and both lists are prepared for six items.",
-          "requestHash": "d4c057c256687cbd9ece1cd53bfa2bbfff4a5b125fb83bab8090124ac4aa2cc8",
-          "src": "audio/assets/d6/d607ce6bce69f921259d103d6457035655233dbe43b194eab6d9f8e3d543db11.mp3",
-          "sha256": "d607ce6bce69f921259d103d6457035655233dbe43b194eab6d9f8e3d543db11",
-          "bytes": 34848,
-          "durationMs": 5808
+          "sourcePath": "chapters/3/steps/3/checkpoint/expectedResult",
+          "speech": "Each built spot fires along its own road.",
+          "requestHash": "caaa48ccebdf2bfc1d8ee9cf27c552de01e067f378e23f0ab782bee2e137352f",
+          "src": "audio/assets/b1/b100615c32615fe5350e6054e7cf4ff141644aea75144fd8ba058aa09da6cadd.mp3",
+          "sha256": "b100615c32615fe5350e6054e7cf4ff141644aea75144fd8ba058aa09da6cadd",
+          "bytes": 18576,
+          "durationMs": 3096
         },
         {
-          "sourcePath": "chapters/3/steps/2/checkpoint/completeWhen/0",
+          "sourcePath": "chapters/3/steps/3/checkpoint/expectedResult",
+          "speech": "The top shots still defeat the enemy; the middle and bottom shots cross empty roads until the next step adds enemies there.",
+          "requestHash": "e3acd6ef46c7fdc701f5ea956dd337862f4662798044bf194fc661d9f6814384",
+          "src": "audio/assets/12/122a19b7ccb09a641382cf80549cc8018481947cc1bb633eba3f37fa8ec1b8a0.mp3",
+          "sha256": "122a19b7ccb09a641382cf80549cc8018481947cc1bb633eba3f37fa8ec1b8a0",
+          "bytes": 44640,
+          "durationMs": 7440
+        },
+        {
+          "sourcePath": "chapters/3/steps/3/checkpoint/completeWhen/0",
+          "speech": "Both lists show six items.",
+          "requestHash": "ef078c59937e52d68a5b8b7e4c7e06e11fd87c14e2d02619a61a0637a45d4a18",
+          "src": "audio/assets/5d/5d5ff2ad9058608bf77aa26ccba7159a21e912752702c8362297563650774798.mp3",
+          "sha256": "5d5ff2ad9058608bf77aa26ccba7159a21e912752702c8362297563650774798",
+          "bytes": 13536,
+          "durationMs": 2256
+        },
+        {
+          "sourcePath": "chapters/3/steps/3/checkpoint/completeWhen/1",
           "speech": "The previous one-shot preparation and drawing scripts are replaced.",
           "requestHash": "20067a7c58a3d71d92d99eb7afebadc9a22b34077380d8c72037f99b9b5b3cfe",
           "src": "audio/assets/28/287c4836a28ab3dd960a7771499a5ae7f8dc500a3a533802396d9e66b89ea2ef.mp3",
@@ -6606,7 +7067,7 @@
           "durationMs": 4200
         },
         {
-          "sourcePath": "chapters/3/steps/2/checkpoint/completeWhen/1",
+          "sourcePath": "chapters/3/steps/3/checkpoint/completeWhen/2",
           "speech": "Only Make shot creates Shot clones.",
           "requestHash": "feb1311005950d44336436abff11b56adf76cddc664d82236f12d8d787221964",
           "src": "audio/assets/c2/c2c5ef5bf0e89f9038d91d520e178469a50902fa5081ede5bfd9762ff3831e06.mp3",
@@ -6619,11 +7080,11 @@
     {
       "id": "six-spots/enemies-in-three-lanes/overview",
       "sourcePaths": [
-        "chapters/3/steps/3/explanation"
+        "chapters/3/steps/4/explanation"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/3/explanation",
+          "sourcePath": "chapters/3/steps/4/explanation",
           "speech": "Enemy clones use the same movement and hit check you already built.",
           "requestHash": "4d341f2ac5a05eb139c2801f78f988b8481078c3c3a52c51da6e24cfb84d3cbd",
           "src": "audio/assets/2a/2a1123c5a844c22cacba395e4db19e8a6cb62030c3b9cd8d102d10de3acdd966.mp3",
@@ -6632,7 +7093,7 @@
           "durationMs": 4056
         },
         {
-          "sourcePath": "chapters/3/steps/3/explanation",
+          "sourcePath": "chapters/3/steps/4/explanation",
           "speech": "A top-lane enemy checks shots 1 and 2; a middle-lane enemy checks 3 and 4.",
           "requestHash": "968ab41f1ebf520a42992f889b6eb0b7e12fea57bd9e2a108e770ee2fb990daa",
           "src": "audio/assets/6c/6cd66afc847243bfcf9c41cff95281d913f3458435327cf20c8ecc7b806a993f.mp3",
@@ -6641,7 +7102,7 @@
           "durationMs": 5592
         },
         {
-          "sourcePath": "chapters/3/steps/3/explanation",
+          "sourcePath": "chapters/3/steps/4/explanation",
           "speech": "The Stage will count how many enemies remain.",
           "requestHash": "3a1416ac069b3bd0c2c0fe5851f28a1470d042d9e903cad6c8ef4e56e4f4e13d",
           "src": "audio/assets/3f/3ffe5570db74020c42d546e7691a7dce439b4e238d06ee702ee264fb16a199bd.mp3",
@@ -6654,11 +7115,11 @@
     {
       "id": "six-spots/enemies-in-three-lanes/instruction/000",
       "sourcePaths": [
-        "chapters/3/steps/3/instructions/0"
+        "chapters/3/steps/4/instructions/0"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/3/instructions/0",
+          "sourcePath": "chapters/3/steps/4/instructions/0",
           "speech": "On Enemy, delete the old when I receive Prepare Enemy script and its attached blocks.",
           "requestHash": "1beb9e605a1b000333901bc7be08046e997f9550277fc43bb4e4e6f3f602f4ee",
           "src": "audio/assets/19/1931f724689e1ac1d303f713985aa436462644b13e31ae4244d92dc2bcff322c.mp3",
@@ -6671,11 +7132,11 @@
     {
       "id": "six-spots/enemies-in-three-lanes/instruction/001",
       "sourcePaths": [
-        "chapters/3/steps/3/instructions/1"
+        "chapters/3/steps/4/instructions/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/3/instructions/1",
+          "sourcePath": "chapters/3/steps/4/instructions/1",
           "speech": "Make a My Block named Make enemy with no inputs.",
           "requestHash": "72f7bf515c2565eeae794eda9c912d7fdaa35f88007036eaad7db37f6943c2d7",
           "src": "audio/assets/60/60302064e53a0b768d6dfbbfb51d94431f7c3fdffc73c864ac471410b1039a6f.mp3",
@@ -6684,7 +7145,7 @@
           "durationMs": 3552
         },
         {
-          "sourcePath": "chapters/3/steps/3/instructions/1",
+          "sourcePath": "chapters/3/steps/4/instructions/1",
           "speech": "Select Run without screen refresh.",
           "requestHash": "37661330a1dedc8e48d177ba7977c12176e1bd5efb39202855907d28ffdfcddf",
           "src": "audio/assets/0e/0e88489ad6d7fc37db1bdb1916aee0acea114e3ddf77129166c6bfcb3e8d60fc.mp3",
@@ -6697,11 +7158,11 @@
     {
       "id": "six-spots/enemies-in-three-lanes/instruction/002",
       "sourcePaths": [
-        "chapters/3/steps/3/instructions/2"
+        "chapters/3/steps/4/instructions/2"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/3/instructions/2",
+          "sourcePath": "chapters/3/steps/4/instructions/2",
           "speech": "Add when I receive Spawn Enemy.",
           "requestHash": "ba84a5250fd4645591f9ed05dc3304541885808d6100295038b6974439ee47c2",
           "src": "audio/assets/2b/2b773ad49a752e76979b927799da1ca8a67553a9857bb6746e9441962242244f.mp3",
@@ -6710,7 +7171,7 @@
           "durationMs": 2472
         },
         {
-          "sourcePath": "chapters/3/steps/3/instructions/2",
+          "sourcePath": "chapters/3/steps/4/instructions/2",
           "speech": "Inside if Is Clone equals 0, put a Make enemy block so only the original creates enemies.",
           "requestHash": "cf13b1f6ff17139f9d56e6fce621c0ad6b6e62dc769e3d7a9dfc17f4b73920e9",
           "src": "audio/assets/f0/f05f6946877f62868a0d26ea57185d430eadcbffd00539f1b3bcb1a03f7e5037.mp3",
@@ -6723,11 +7184,11 @@
     {
       "id": "six-spots/enemies-in-three-lanes/instruction/003",
       "sourcePaths": [
-        "chapters/3/steps/3/instructions/3"
+        "chapters/3/steps/4/instructions/3"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/3/instructions/3",
+          "sourcePath": "chapters/3/steps/4/instructions/3",
           "speech": "Build the Make enemy definition below.",
           "requestHash": "38eb7edeada6b79ce32639211cbddd194a2da4b14087a71355ba66aebe000ef4",
           "src": "audio/assets/a8/a8f59c11dea61f0a437b5e0b8aa235bad095d28c6d58f3eb43b763253ab67565.mp3",
@@ -6736,7 +7197,7 @@
           "durationMs": 2784
         },
         {
-          "sourcePath": "chapters/3/steps/3/instructions/3",
+          "sourcePath": "chapters/3/steps/4/instructions/3",
           "speech": "Set position, HP, Lane, and First Slot before creating the clone.",
           "requestHash": "4abf26893d5df659086300a9d901d4328f2b971fe44dac446df16131499c2172",
           "src": "audio/assets/99/99ef1f67b8a7d0dfeba25f43e035aecbda03b110d1fb518e3bb3bce057931e24.mp3",
@@ -6749,11 +7210,11 @@
     {
       "id": "six-spots/enemies-in-three-lanes/instruction/004",
       "sourcePaths": [
-        "chapters/3/steps/3/instructions/4"
+        "chapters/3/steps/4/instructions/4"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/3/instructions/4",
+          "sourcePath": "chapters/3/steps/4/instructions/4",
           "speech": "Work out First Slot as Lane times 2 minus 1.",
           "requestHash": "4edeb1c3d2d1a90e2fd0ffd99442ced2f59f2daffa6cb18fae0b3ba6f400b45a",
           "src": "audio/assets/17/1737405424d75fc8ca74390e3ab9f83aa0a150e0703af7e6915590b61050e8c7.mp3",
@@ -6762,7 +7223,7 @@
           "durationMs": 3408
         },
         {
-          "sourcePath": "chapters/3/steps/3/instructions/4",
+          "sourcePath": "chapters/3/steps/4/instructions/4",
           "speech": "The results for lanes 1, 2, and 3 are 1, 3, and 5.",
           "requestHash": "c3bd875fca923a8cb341f4817d25675f0d7167f3183f8c25eb22901be0d57a13",
           "src": "audio/assets/ff/ff2998e97b8d82ba8d106c5bbaac42e04439b0d91faca5ccf076d5c42cec76e6.mp3",
@@ -6775,11 +7236,11 @@
     {
       "id": "six-spots/enemies-in-three-lanes/instruction/005",
       "sourcePaths": [
-        "chapters/3/steps/3/instructions/5"
+        "chapters/3/steps/4/instructions/5"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/3/instructions/5",
+          "sourcePath": "chapters/3/steps/4/instructions/5",
           "speech": "Replace Enemy Step with the version below.",
           "requestHash": "3764cc84e6b1844ff6d0857a5a0d06d95b23f728442c63f608c33caa3344eaca",
           "src": "audio/assets/54/540c2cd87e7145599940280c4d4fcb1c73ac33a13c5dc2b99c79293f6de4b5fa.mp3",
@@ -6788,7 +7249,7 @@
           "durationMs": 2928
         },
         {
-          "sourcePath": "chapters/3/steps/3/instructions/5",
+          "sourcePath": "chapters/3/steps/4/instructions/5",
           "speech": "It checks both First Slot and First Slot plus 1 using the existing Check shot definition.",
           "requestHash": "6aee5add48a877df644cb69480287e88917c896749ae2dfafba9e902f797d201",
           "src": "audio/assets/02/02304f1664165c8b82cf0dc1b5afe2e276361338b50f69580fbe94513cab7029.mp3",
@@ -6797,7 +7258,7 @@
           "durationMs": 5376
         },
         {
-          "sourcePath": "chapters/3/steps/3/instructions/5",
+          "sourcePath": "chapters/3/steps/4/instructions/5",
           "speech": "Keep that definition unchanged.",
           "requestHash": "5441a932f03ac446f9b955883832434068dd6c78e6c2db661ad3572b20ed136b",
           "src": "audio/assets/dd/ddf3671818d5976d68c7da80813068c4eb067754762c802c846d54f1d87bc6ce.mp3",
@@ -6810,11 +7271,11 @@
     {
       "id": "six-spots/enemies-in-three-lanes/instruction/006",
       "sourcePaths": [
-        "chapters/3/steps/3/instructions/6"
+        "chapters/3/steps/4/instructions/6"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/3/instructions/6",
+          "sourcePath": "chapters/3/steps/4/instructions/6",
           "speech": "On defeat or escape, decrease Enemies Alive before deleting the clone.",
           "requestHash": "4ab780bad802125797f80618a6f30a08b46c247f52d89cffb338074a0fda2727",
           "src": "audio/assets/b3/b380cd6692a980f76d2492cdaca48864befe905eea8812f9ba04db583d0b0c45.mp3",
@@ -6823,7 +7284,7 @@
           "durationMs": 4896
         },
         {
-          "sourcePath": "chapters/3/steps/3/instructions/6",
+          "sourcePath": "chapters/3/steps/4/instructions/6",
           "speech": "Do not set Game State from Enemy anymore; the Stage will decide when all enemies are finished.",
           "requestHash": "cd49480250ca5099d3a833ecf8236c78aa8fb45afe952107a1a09052bc2154d4",
           "src": "audio/assets/0a/0ab9379559c5a475d11795da9d65a48bd0049c9cb0dedf50154201fdf6a54840.mp3",
@@ -6836,28 +7297,54 @@
     {
       "id": "six-spots/enemies-in-three-lanes/instruction/007",
       "sourcePaths": [
-        "chapters/3/steps/3/instructions/7"
+        "chapters/3/steps/4/instructions/7"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/3/instructions/7",
-          "speech": "Keep Initialize Originals and Clear Clones from the first step of this chapter.",
-          "requestHash": "1b3e4b7b2217ef1949344111c69582800d7ad81c12763d4e7ecdcce0c418df57",
-          "src": "audio/assets/f5/f5209a53bd9f9164335ba201de70ffc01cbea8cd6a1aa405c85a1fc450708b62.mp3",
-          "sha256": "f5209a53bd9f9164335ba201de70ffc01cbea8cd6a1aa405c85a1fc450708b62",
-          "bytes": 29088,
-          "durationMs": 4848
+          "sourcePath": "chapters/3/steps/4/instructions/7",
+          "speech": "Keep Initialize Originals and Clear Clones from the start of this chapter.",
+          "requestHash": "127a8890c1b56aa9a45426a6c19b21f45cb23022c894f76a5d8ec7c34b65da89",
+          "src": "audio/assets/b9/b93981553013128474dc3afb4b82cfba3cea0ca94eba2c52cc449348d9565d16.mp3",
+          "sha256": "b93981553013128474dc3afb4b82cfba3cea0ca94eba2c52cc449348d9565d16",
+          "bytes": 27792,
+          "durationMs": 4632
+        }
+      ]
+    },
+    {
+      "id": "six-spots/enemies-in-three-lanes/instruction/008",
+      "sourcePaths": [
+        "chapters/3/steps/4/instructions/8"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/4/instructions/8",
+          "speech": "Replace the Stage's green-flag script with the complete Chapter 4 version below.",
+          "requestHash": "ae63be55fbd92f0e06c2bd63e3e68758ad88918dbc338b691787b76f775ce3fc",
+          "src": "audio/assets/94/94171523fe08041e2413b80f76998bcc5017c328259b740bcabec3f29eb8b813.mp3",
+          "sha256": "94171523fe08041e2413b80f76998bcc5017c328259b740bcabec3f29eb8b813",
+          "bytes": 29664,
+          "durationMs": 4944
+        },
+        {
+          "sourcePath": "chapters/3/steps/4/instructions/8",
+          "speech": "It sends Spawn Enemy three times instead of Prepare Enemy, and it decides when the group is finished.",
+          "requestHash": "f6e3b9639261ccca4e868e10c7d65807f5869c7369253815e66bad14d4d93e5a",
+          "src": "audio/assets/69/69006bcaf08cf5f86cc7f5c3092a2d9351dfa01ebb1d6714afa15522143b2f4c.mp3",
+          "sha256": "69006bcaf08cf5f86cc7f5c3092a2d9351dfa01ebb1d6714afa15522143b2f4c",
+          "bytes": 36720,
+          "durationMs": 6120
         }
       ]
     },
     {
       "id": "six-spots/enemies-in-three-lanes/hint/000",
       "sourcePaths": [
-        "chapters/3/steps/3/hints/0"
+        "chapters/3/steps/4/hints/0"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/3/hints/0",
+          "sourcePath": "chapters/3/steps/4/hints/0",
           "speech": "The original changes Is Clone to 1 before creating the copy and back to 0 afterward.",
           "requestHash": "d22ab44dfa89891832ed994ff50bbeabc141250254d9a0394b7c0e80c41b0cff",
           "src": "audio/assets/67/6760540848624fb0632c8e269ddedaa4f61c51b66bcf7657dba5030b189797b3.mp3",
@@ -6870,11 +7357,11 @@
     {
       "id": "six-spots/enemies-in-three-lanes/hint/001",
       "sourcePaths": [
-        "chapters/3/steps/3/hints/1"
+        "chapters/3/steps/4/hints/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/3/hints/1",
+          "sourcePath": "chapters/3/steps/4/hints/1",
           "speech": "The first hit check may defeat the enemy.",
           "requestHash": "5f7c8e01a7d6497955e32d342f999f534a2fb80652c3012f7e1fb909c6457a23",
           "src": "audio/assets/66/66758fb0f0cc3d5d1ffe1d5a0e79fbf11aee91adb6e9ee1f3e6d3c3f7d3243f4.mp3",
@@ -6883,7 +7370,7 @@
           "durationMs": 2664
         },
         {
-          "sourcePath": "chapters/3/steps/3/hints/1",
+          "sourcePath": "chapters/3/steps/4/hints/1",
           "speech": "The HP check inside Check shot prevents the second call from consuming another shot unnecessarily.",
           "requestHash": "9c224982375664c428d781bd39cce9d2df5e00052057ada56d97d84aff8ae1be",
           "src": "audio/assets/b3/b3b37b87b852679a2e3b67a56f134144ae56fa9f5307bfb6e7a0e455014109a2.mp3",
@@ -6896,12 +7383,12 @@
     {
       "id": "six-spots/enemies-in-three-lanes/debug/000",
       "sourcePaths": [
-        "chapters/3/steps/3/debuggingTips/0/symptom",
-        "chapters/3/steps/3/debuggingTips/0/checks/0"
+        "chapters/3/steps/4/debuggingTips/0/symptom",
+        "chapters/3/steps/4/debuggingTips/0/checks/0"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/3/debuggingTips/0/symptom",
+          "sourcePath": "chapters/3/steps/4/debuggingTips/0/symptom",
           "speech": "Enemies disappear but the game never finishes.",
           "requestHash": "603a385e1b3491ee8abf5e37a6f9295e7a683f661201f9871faa1c2e1d410064",
           "src": "audio/assets/12/1252c9352ea6bb38ec719a06e7d594f45a39e1867f31b25bb93d82878810b5be.mp3",
@@ -6910,7 +7397,7 @@
           "durationMs": 3264
         },
         {
-          "sourcePath": "chapters/3/steps/3/debuggingTips/0/checks/0",
+          "sourcePath": "chapters/3/steps/4/debuggingTips/0/checks/0",
           "speech": "Change Enemies Alive by -1 before delete this clone in both outcomes.",
           "requestHash": "0de5d6e1c81b828e52595fb8a8f3d66595f21ae072f46396e9f9e614762bfd5a",
           "src": "audio/assets/dc/dc2dba9f47f55cbdcf49b3972d0ec4dbbeee83a8344e450cf9738d174459791c.mp3",
@@ -6923,32 +7410,42 @@
     {
       "id": "six-spots/enemies-in-three-lanes/checkpoint",
       "sourcePaths": [
-        "chapters/3/steps/3/checkpoint/task",
-        "chapters/3/steps/3/checkpoint/expectedResult",
-        "chapters/3/steps/3/checkpoint/completeWhen/0",
-        "chapters/3/steps/3/checkpoint/completeWhen/1"
+        "chapters/3/steps/4/checkpoint/task",
+        "chapters/3/steps/4/checkpoint/expectedResult",
+        "chapters/3/steps/4/checkpoint/completeWhen/0",
+        "chapters/3/steps/4/checkpoint/completeWhen/1",
+        "chapters/3/steps/4/checkpoint/completeWhen/2"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/3/checkpoint/task",
-          "speech": "Trace a middle-lane enemy through both shot checks.",
-          "requestHash": "6be6130dfedeae27911e0a6244672596abccbf283255b6f599de5183884ef502",
-          "src": "audio/assets/7d/7de226a58ef66b52a0de6a3c6ca242514180cc676f68c3ca0182e7b5e1bbdbfe.mp3",
-          "sha256": "7de226a58ef66b52a0de6a3c6ca242514180cc676f68c3ca0182e7b5e1bbdbfe",
-          "bytes": 20160,
-          "durationMs": 3360
+          "sourcePath": "chapters/3/steps/4/checkpoint/task",
+          "speech": "Click the green flag and quickly buy one spot beside each road.",
+          "requestHash": "215a33b9894bda3fbc61e44e4aeaa3da1acd5b7f79e1d68c66fbfb4631be0860",
+          "src": "audio/assets/ee/ee6769ade2836a29d6b20778b348766a04c1460cf1218bb34ae35ffe6e03eaed.mp3",
+          "sha256": "ee6769ade2836a29d6b20778b348766a04c1460cf1218bb34ae35ffe6e03eaed",
+          "bytes": 25056,
+          "durationMs": 4176
         },
         {
-          "sourcePath": "chapters/3/steps/3/checkpoint/expectedResult",
-          "speech": "It checks slots 3 and 4, and its removal changes Enemies Alive exactly once.",
-          "requestHash": "17d2331ba5045dac7bd58dd91ca8620b10af7b965d9e20323ad27617992b4e0f",
-          "src": "audio/assets/3a/3ad24b205a5de24320365e911647ddce0a79ceec9d0bd6e5b95195d35e2ebe90.mp3",
-          "sha256": "3ad24b205a5de24320365e911647ddce0a79ceec9d0bd6e5b95195d35e2ebe90",
-          "bytes": 34272,
-          "durationMs": 5712
+          "sourcePath": "chapters/3/steps/4/checkpoint/expectedResult",
+          "speech": "Three enemies enter together, one on each road.",
+          "requestHash": "5f5e7ac869c9b67c13d2d2af88fe48cbbd11e0c501c0846772260fbd63c39a53",
+          "src": "audio/assets/bb/bb7bc3a509954eecccb0d5da434a4f68e12226d853316c3493ea72a7120132b1.mp3",
+          "sha256": "bb7bc3a509954eecccb0d5da434a4f68e12226d853316c3493ea72a7120132b1",
+          "bytes": 21024,
+          "durationMs": 3504
         },
         {
-          "sourcePath": "chapters/3/steps/3/checkpoint/completeWhen/0",
+          "sourcePath": "chapters/3/steps/4/checkpoint/expectedResult",
+          "speech": "Each lane's tower defeats its own enemy.",
+          "requestHash": "40e409d8e8c107a67d722b21eba7cd82cd1aba1c128b54e58fb2daadc527b7cf",
+          "src": "audio/assets/28/28a78dd4cece05accc7869b6076b935529ea563c1f430759591041805114f5d6.mp3",
+          "sha256": "28a78dd4cece05accc7869b6076b935529ea563c1f430759591041805114f5d6",
+          "bytes": 17856,
+          "durationMs": 2976
+        },
+        {
+          "sourcePath": "chapters/3/steps/4/checkpoint/completeWhen/0",
           "speech": "No Enemy script changes Game State anymore.",
           "requestHash": "1119e604dd27793f4f46707271d2ffcd338d0993a9c6e0b9b371eb83a271ee5f",
           "src": "audio/assets/5a/5a35b59d24f23b9c3557cc370faafbefa13740df346de5c9f55309dc54658601.mp3",
@@ -6957,24 +7454,33 @@
           "durationMs": 3120
         },
         {
-          "sourcePath": "chapters/3/steps/3/checkpoint/completeWhen/1",
+          "sourcePath": "chapters/3/steps/4/checkpoint/completeWhen/1",
           "speech": "The old single-enemy preparation and movement scripts are replaced.",
           "requestHash": "d2a3967647734371432b3ee1ae36f8d5b6493764e8e1af5717f6818d1d15b5dc",
           "src": "audio/assets/13/136cca5fbde5f9bea7512b6587542517ec888824b43f56ec95c0243be5b49376.mp3",
           "sha256": "136cca5fbde5f9bea7512b6587542517ec888824b43f56ec95c0243be5b49376",
           "bytes": 25920,
           "durationMs": 4320
+        },
+        {
+          "sourcePath": "chapters/3/steps/4/checkpoint/completeWhen/2",
+          "speech": "A middle-lane enemy checks shots 3 and 4.",
+          "requestHash": "e8a30f275837df2774de0590d973730dfb052e8dba44d5e49aff0db7cc966776",
+          "src": "audio/assets/49/49ce7d445308a0a139e790c7a052b08e383bc8e6ae478bb9f24d10c22413e41c.mp3",
+          "sha256": "49ce7d445308a0a139e790c7a052b08e383bc8e6ae478bb9f24d10c22413e41c",
+          "bytes": 19008,
+          "durationMs": 3168
         }
       ]
     },
     {
       "id": "six-spots/six-spots-checkpoint/overview",
       "sourcePaths": [
-        "chapters/3/steps/4/explanation"
+        "chapters/3/steps/5/explanation"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/4/explanation",
+          "sourcePath": "chapters/3/steps/5/explanation",
           "speech": "This checkpoint starts three enemies together, one per lane.",
           "requestHash": "a897f52e19c2243ebf03feceb9e6d5ef21dcac1c76a3bc20019c2a6d4945bf63",
           "src": "audio/assets/ae/aec11150cd9c7ad02cdb3b410ee96f7b0a7f961b466b37d812c735709492bda8.mp3",
@@ -6983,7 +7489,7 @@
           "durationMs": 4056
         },
         {
-          "sourcePath": "chapters/3/steps/4/explanation",
+          "sourcePath": "chapters/3/steps/5/explanation",
           "speech": "The next chapter will replace that temporary group with waves.",
           "requestHash": "9755ad838b0e0f49d759c11ca53293c9c72f3799d518fdfd668a9c97fc2f411f",
           "src": "audio/assets/08/0871f92a7c3d1a78c1b535ed8c7701fe56af4e9c13c5e07bd01d6da7a9583d7e.mp3",
@@ -6992,7 +7498,7 @@
           "durationMs": 3912
         },
         {
-          "sourcePath": "chapters/3/steps/4/explanation",
+          "sourcePath": "chapters/3/steps/5/explanation",
           "speech": "Your tower and shot code already works for every numbered spot.",
           "requestHash": "cfcc2fee4c618edb9a37120102b4e193987c9ffebd1c355d37618a80070e3f9d",
           "src": "audio/assets/90/9013fe9527022d4ae70dc6718825cd6f4a2544f4f92cc4ceceb3284c4a6fde80.mp3",
@@ -7005,37 +7511,37 @@
     {
       "id": "six-spots/six-spots-checkpoint/instruction/000",
       "sourcePaths": [
-        "chapters/3/steps/4/instructions/0"
+        "chapters/3/steps/5/instructions/0"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/4/instructions/0",
-          "speech": "Replace the Stage's green-flag script with the complete Chapter 4 version below.",
-          "requestHash": "ae63be55fbd92f0e06c2bd63e3e68758ad88918dbc338b691787b76f775ce3fc",
-          "src": "audio/assets/94/94171523fe08041e2413b80f76998bcc5017c328259b740bcabec3f29eb8b813.mp3",
-          "sha256": "94171523fe08041e2413b80f76998bcc5017c328259b740bcabec3f29eb8b813",
-          "bytes": 29664,
-          "durationMs": 4944
+          "sourcePath": "chapters/3/steps/5/instructions/0",
+          "speech": "Check that the Stage's green-flag script matches the complete Chapter 4 version below.",
+          "requestHash": "15d86bef2a0cafcef1e1bd84f546d741a54bbce924d1eb7d67eb5b05ee16b3c1",
+          "src": "audio/assets/e8/e8c476cc42c6bd47254dddb2e65c27d2cfd1c905bd14eb5dd2f2a799212b5214.mp3",
+          "sha256": "e8c476cc42c6bd47254dddb2e65c27d2cfd1c905bd14eb5dd2f2a799212b5214",
+          "bytes": 31248,
+          "durationMs": 5208
         },
         {
-          "sourcePath": "chapters/3/steps/4/instructions/0",
-          "speech": "Delete the old version; do not run both.",
-          "requestHash": "862291bef47f7199a41c3973da6def190abbe467821621c226c8c5083b69f962",
-          "src": "audio/assets/97/97eee5fffcb4983eac57010653a36a907e0b4a78cfa2e991717a4aa53cdb09a6.mp3",
-          "sha256": "97eee5fffcb4983eac57010653a36a907e0b4a78cfa2e991717a4aa53cdb09a6",
-          "bytes": 19584,
-          "durationMs": 3264
+          "sourcePath": "chapters/3/steps/5/instructions/0",
+          "speech": "There must be only one green-flag script on the Stage.",
+          "requestHash": "2274679c4acb7ac687e9756237de3b049229fd909defc3a0e294aa1be11f3d07",
+          "src": "audio/assets/2a/2aced1ace4e320ffcad59f5837ad380763b6f68e664265debd040636a479fef8.mp3",
+          "sha256": "2aced1ace4e320ffcad59f5837ad380763b6f68e664265debd040636a479fef8",
+          "bytes": 22464,
+          "durationMs": 3744
         }
       ]
     },
     {
       "id": "six-spots/six-spots-checkpoint/instruction/001",
       "sourcePaths": [
-        "chapters/3/steps/4/instructions/1"
+        "chapters/3/steps/5/instructions/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/4/instructions/1",
+          "sourcePath": "chapters/3/steps/5/instructions/1",
           "speech": "Notice the setup order: initialize originals, clear and fill lists, make towers and shot displays, show spots, then make three enemies.",
           "requestHash": "29ca64eee2a5b1ab0a08c074f8277a3977fd0dd0a167e61418c3394e9678b9c0",
           "src": "audio/assets/57/578300f14785eaa9bb4ad5f51705c9af33f0944bf39021b79a0b0632a7e0236c.mp3",
@@ -7048,11 +7554,11 @@
     {
       "id": "six-spots/six-spots-checkpoint/instruction/002",
       "sourcePaths": [
-        "chapters/3/steps/4/instructions/2"
+        "chapters/3/steps/5/instructions/2"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/4/instructions/2",
+          "sourcePath": "chapters/3/steps/5/instructions/2",
           "speech": "Restart and buy one tower in each lane.",
           "requestHash": "fb814e880ccf4b5607f2aa9eadcc109e749d25c884367c83e51906a2179e2236",
           "src": "audio/assets/eb/eb225162ba51844bd4ae729e493aa1ef68291234f503ea5b8364a9cb3f26f0ee.mp3",
@@ -7061,7 +7567,7 @@
           "durationMs": 2904
         },
         {
-          "sourcePath": "chapters/3/steps/4/instructions/2",
+          "sourcePath": "chapters/3/steps/5/instructions/2",
           "speech": "Three purchases cost 90; three defeats should earn 30 coins and leave all 5 base health.",
           "requestHash": "0a65f20350897506fa535a767caf65a1bb81ab5d9e2fc1bf527f66f347d67ea0",
           "src": "audio/assets/9b/9b001861135da9ab7b0431e1f706576660b0faa46900399dcc42299c409c6f32.mp3",
@@ -7074,11 +7580,11 @@
     {
       "id": "six-spots/six-spots-checkpoint/instruction/003",
       "sourcePaths": [
-        "chapters/3/steps/4/instructions/3"
+        "chapters/3/steps/5/instructions/3"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/4/instructions/3",
+          "sourcePath": "chapters/3/steps/5/instructions/3",
           "speech": "Restart and buy both top-lane spots.",
           "requestHash": "292448d46ad43a9a847d3fb01173d54cb5901ad92d6616ff54ea295eb10f466c",
           "src": "audio/assets/3f/3f0cdd81f661f5bbc28fa4f248588234be03ea4ec61c42886b3e6405b9bd2d2d.mp3",
@@ -7087,7 +7593,7 @@
           "durationMs": 2784
         },
         {
-          "sourcePath": "chapters/3/steps/4/instructions/3",
+          "sourcePath": "chapters/3/steps/5/instructions/3",
           "speech": "Both should fire independently; other lanes still have empty spots.",
           "requestHash": "fa562cc1dc23fbb8a766746520b45d2a29cf736a315ca36abda363283fd4a40f",
           "src": "audio/assets/23/23d3877d8bfd74179242bb97b8b1a1446d3e85619752a5dd68757ea434abc4f4.mp3",
@@ -7100,11 +7606,11 @@
     {
       "id": "six-spots/six-spots-checkpoint/instruction/004",
       "sourcePaths": [
-        "chapters/3/steps/4/instructions/4"
+        "chapters/3/steps/5/instructions/4"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/4/instructions/4",
+          "sourcePath": "chapters/3/steps/5/instructions/4",
           "speech": "Check both lists have six items after repeated restarts.",
           "requestHash": "7d9b1f63ec2b58e3fee6f277d59f54e9899d38160fec3c876ea36be8596d3919",
           "src": "audio/assets/e2/e224e5a4a8b491db5b1757ff4cea79065015e8bda3471020988f2559c041d4fa.mp3",
@@ -7113,7 +7619,7 @@
           "durationMs": 4008
         },
         {
-          "sourcePath": "chapters/3/steps/4/instructions/4",
+          "sourcePath": "chapters/3/steps/5/instructions/4",
           "speech": "Hide Built, ID, Lane, and the lists when finished checking them.",
           "requestHash": "a7f082f03dfddd84b0c2f97202885028f1e75cb9a37dcb0f1cd820fd817fdc11",
           "src": "audio/assets/76/7665f5c09b25ab82e7c1b84895d1cc8dc675889243feb4fe2aec59f01813f89b.mp3",
@@ -7126,11 +7632,11 @@
     {
       "id": "six-spots/six-spots-checkpoint/instruction/005",
       "sourcePaths": [
-        "chapters/3/steps/4/instructions/5"
+        "chapters/3/steps/5/instructions/5"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/4/instructions/5",
+          "sourcePath": "chapters/3/steps/5/instructions/5",
           "speech": "Save as tower-defense-chapter-4.sb3, reopen it, and repeat the one-tower-per-lane test.",
           "requestHash": "44529dcfc298c9bc766a8924c4cdee4bbbbbf1f4feb445c84178212b880c357f",
           "src": "audio/assets/58/58029c50cc439e986eac2ff789d3823db6d2a72546fe6a526f3a9e2ddbcddd2e.mp3",
@@ -7143,11 +7649,11 @@
     {
       "id": "six-spots/six-spots-checkpoint/hint/000",
       "sourcePaths": [
-        "chapters/3/steps/4/hints/0"
+        "chapters/3/steps/5/hints/0"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/4/hints/0",
+          "sourcePath": "chapters/3/steps/5/hints/0",
           "speech": "Click promptly while this temporary three-enemy group is moving.",
           "requestHash": "5815c8ea5a0301ab3cd6e1e1ce6d9f32c9eaf2894dfb5b1e3dc213d53ea91e3c",
           "src": "audio/assets/63/63a220369afd3f0dfe1a6ddffd612e5641a49341e8f753fd9cd4d81190c89cfb.mp3",
@@ -7156,7 +7662,7 @@
           "durationMs": 4056
         },
         {
-          "sourcePath": "chapters/3/steps/4/hints/0",
+          "sourcePath": "chapters/3/steps/5/hints/0",
           "speech": "The next chapter adds a preparation phase and Start Wave button.",
           "requestHash": "366ad6db29439623902fb09d76347293b7365f97af2c45f2442756501791de63",
           "src": "audio/assets/3e/3eb700d5253ee7c6b0a4084e26cb180f8d4fee250cf9048ff8b6628223e24a96.mp3",
@@ -7169,11 +7675,11 @@
     {
       "id": "six-spots/six-spots-checkpoint/hint/001",
       "sourcePaths": [
-        "chapters/3/steps/4/hints/1"
+        "chapters/3/steps/5/hints/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/4/hints/1",
+          "sourcePath": "chapters/3/steps/5/hints/1",
           "speech": "Two top-lane shots can overlap visually because they share a firing point; their separate list items show that both are being used.",
           "requestHash": "3c36ee6261bbb9727b388594010651ac9bb41a35456938f1b9cccca0f0216940",
           "src": "audio/assets/ca/ca77de04e8428aaafd0c3d398ed90e0d9de8e3f0e250ebf29d1ba99ff3f10bbd.mp3",
@@ -7186,14 +7692,14 @@
     {
       "id": "six-spots/six-spots-checkpoint/debug/000",
       "sourcePaths": [
-        "chapters/3/steps/4/debuggingTips/0/symptom",
-        "chapters/3/steps/4/debuggingTips/0/checks/0",
-        "chapters/3/steps/4/debuggingTips/0/checks/1",
-        "chapters/3/steps/4/debuggingTips/0/checks/2"
+        "chapters/3/steps/5/debuggingTips/0/symptom",
+        "chapters/3/steps/5/debuggingTips/0/checks/0",
+        "chapters/3/steps/5/debuggingTips/0/checks/1",
+        "chapters/3/steps/5/debuggingTips/0/checks/2"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/4/debuggingTips/0/symptom",
+          "sourcePath": "chapters/3/steps/5/debuggingTips/0/symptom",
           "speech": "The game has more than six tower spots after restart.",
           "requestHash": "411adcd12c03304a0ac7a348c0f45bcaf10312d6329e54d899d12008049bc0cb",
           "src": "audio/assets/49/49a4a3b80430f97a5ffb50e3029723fea9054c09fb037cb432948c265a0cfc10.mp3",
@@ -7202,7 +7708,7 @@
           "durationMs": 3672
         },
         {
-          "sourcePath": "chapters/3/steps/4/debuggingTips/0/checks/0",
+          "sourcePath": "chapters/3/steps/5/debuggingTips/0/checks/0",
           "speech": "Only the Stage has the main green-flag script.",
           "requestHash": "a2651ae03ec14395c75f8f06a17055089f1603f15f3d3a8ce066e8d093df7b83",
           "src": "audio/assets/9c/9c96cc30c2ec57e3fe80e7ca45883189abd92383c0626a094db3f57664af1402.mp3",
@@ -7211,7 +7717,7 @@
           "durationMs": 3216
         },
         {
-          "sourcePath": "chapters/3/steps/4/debuggingTips/0/checks/1",
+          "sourcePath": "chapters/3/steps/5/debuggingTips/0/checks/1",
           "speech": "Prepare Tower creates spots only when ID equals 0.",
           "requestHash": "b231190094fe7b498c9e8b33fbb07b487e4365b26a6156467d7e1b19ee43918d",
           "src": "audio/assets/86/8601dd45780f81e90613b8a50ae806fa1b1b9555482e7e6475663e443dae93f7.mp3",
@@ -7220,7 +7726,7 @@
           "durationMs": 3936
         },
         {
-          "sourcePath": "chapters/3/steps/4/debuggingTips/0/checks/2",
+          "sourcePath": "chapters/3/steps/5/debuggingTips/0/checks/2",
           "speech": "Remove the previous one-tower setup rather than keeping both versions.",
           "requestHash": "f2096e144a8e0ca2e2cec25163916174935ca1cec70e4c8cf74584c126773060",
           "src": "audio/assets/fc/fc21b0f5edeb9510dc4d9d04fdb2778a8b4a3d419e5703437a060ae0317869b4.mp3",
@@ -7233,16 +7739,16 @@
     {
       "id": "six-spots/six-spots-checkpoint/checkpoint",
       "sourcePaths": [
-        "chapters/3/steps/4/checkpoint/task",
-        "chapters/3/steps/4/checkpoint/expectedResult",
-        "chapters/3/steps/4/checkpoint/completeWhen/0",
-        "chapters/3/steps/4/checkpoint/completeWhen/1",
-        "chapters/3/steps/4/checkpoint/completeWhen/2",
-        "chapters/3/steps/4/checkpoint/completeWhen/3"
+        "chapters/3/steps/5/checkpoint/task",
+        "chapters/3/steps/5/checkpoint/expectedResult",
+        "chapters/3/steps/5/checkpoint/completeWhen/0",
+        "chapters/3/steps/5/checkpoint/completeWhen/1",
+        "chapters/3/steps/5/checkpoint/completeWhen/2",
+        "chapters/3/steps/5/checkpoint/completeWhen/3"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/3/steps/4/checkpoint/task",
+          "sourcePath": "chapters/3/steps/5/checkpoint/task",
           "speech": "Pass the three-lane, paired-tower, and reload tests.",
           "requestHash": "246110f583ac49ecdba171ce8c6d9f28b3c51a93ac1ebe62acaa7a624e199bc5",
           "src": "audio/assets/22/22dbcc0643fa0efd5d0c9b03fb19ee17c34efd26ad25aa6c28363604682cf2b4.mp3",
@@ -7251,7 +7757,7 @@
           "durationMs": 3336
         },
         {
-          "sourcePath": "chapters/3/steps/4/checkpoint/expectedResult",
+          "sourcePath": "chapters/3/steps/5/checkpoint/expectedResult",
           "speech": "Six distinct spots share the same purchase code.",
           "requestHash": "16e0166f5b055f2c540626d0ab59c0df8f55c6e6e1fd7372ac73e0ba04dd9570",
           "src": "audio/assets/a7/a79cb42c1a468052539f80ac374322ef487837e3468a40134f9d38d7db584328.mp3",
@@ -7260,7 +7766,7 @@
           "durationMs": 3384
         },
         {
-          "sourcePath": "chapters/3/steps/4/checkpoint/expectedResult",
+          "sourcePath": "chapters/3/steps/5/checkpoint/expectedResult",
           "speech": "One tower per lane defeats all three enemies, leaves 30 coins, and keeps base health at 5.",
           "requestHash": "36e6b68f299683cbec6ae083bd36c421594899acabc8db1d3009c6656e1e2ca6",
           "src": "audio/assets/98/98fb1487ae745a9db4cc4dfd50d71d91d6b777049ad5b5caa2e2d14ddfa9e805.mp3",
@@ -7269,7 +7775,7 @@
           "durationMs": 6888
         },
         {
-          "sourcePath": "chapters/3/steps/4/checkpoint/completeWhen/0",
+          "sourcePath": "chapters/3/steps/5/checkpoint/completeWhen/0",
           "speech": "Both shot lists contain six entries.",
           "requestHash": "d36a0a2811fa86525ceb3551eaf7278d62bf250bad5c131e35f4dce7170500e7",
           "src": "audio/assets/75/7568a58575b04662f7ec20a23adf6edbf7d5a64ba0ccc9a4321ee4998694f686.mp3",
@@ -7278,7 +7784,7 @@
           "durationMs": 2832
         },
         {
-          "sourcePath": "chapters/3/steps/4/checkpoint/completeWhen/1",
+          "sourcePath": "chapters/3/steps/5/checkpoint/completeWhen/1",
           "speech": "Purchasing one spot does not build another.",
           "requestHash": "97a97ac71b1f42691aa18f0cf84d195f10b6c6131fc01ec65b9d876d9127d429",
           "src": "audio/assets/62/6238ae33183dbaec446c133491bba0d9ec606d60a18ccc5fa75bb3346435047f.mp3",
@@ -7287,7 +7793,7 @@
           "durationMs": 3024
         },
         {
-          "sourcePath": "chapters/3/steps/4/checkpoint/completeWhen/2",
+          "sourcePath": "chapters/3/steps/5/checkpoint/completeWhen/2",
           "speech": "Each enemy checks only its own lane's two shots.",
           "requestHash": "cc3a2c4f3effd7c0db660f7db20b6e80f6ae0fd66cce7fbaad9ecb1b3e9bf99d",
           "src": "audio/assets/46/463624d5cee379a92be1011d48bbfde4164bbbf6390e23dd669e3575d7f2ee11.mp3",
@@ -7296,7 +7802,7 @@
           "durationMs": 3312
         },
         {
-          "sourcePath": "chapters/3/steps/4/checkpoint/completeWhen/3",
+          "sourcePath": "chapters/3/steps/5/checkpoint/completeWhen/3",
           "speech": "The reopened project behaves the same.",
           "requestHash": "acaea8cf47713458d4e08fc289597adf4d15ef71f8369ec3d7cda540e62c124f",
           "src": "audio/assets/c3/c365ffb8686ce508250370c103ba3fc049016acd1b0bdee3da4fc4ceedce6d24.mp3",
@@ -7652,21 +8158,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/4/steps/0/instructions/12",
-          "speech": "Do not click the green flag again until the Chapter 5 checkpoint.",
-          "requestHash": "19c08983bb75e9fefbc04a9fa91c2d55f2b133c8c7db129fc5641d30a2be4b4f",
-          "src": "audio/assets/fe/fedfd7fdce7fb08033a8e2f0a7c38f76d79fbc900c6673a62f3d2ffe01f2bf90.mp3",
-          "sha256": "fedfd7fdce7fb08033a8e2f0a7c38f76d79fbc900c6673a62f3d2ffe01f2bf90",
-          "bytes": 25344,
-          "durationMs": 4224
+          "speech": "On the Stage, insert Load level settings directly below broadcast Initialize Originals and wait in the green-flag script.",
+          "requestHash": "161491787f6dfd384e39850b684fab85f6c58ccc94720cccf05a423b79699784",
+          "src": "audio/assets/6b/6b815fc68b067954eac8b6f8df59658167a75b62a792efbfa541eae3c3dbfdbf.mp3",
+          "sha256": "6b815fc68b067954eac8b6f8df59658167a75b62a792efbfa541eae3c3dbfdbf",
+          "bytes": 44352,
+          "durationMs": 7392
         },
         {
           "sourcePath": "chapters/4/steps/0/instructions/12",
-          "speech": "Until Reset level loads the settings, Enemy HP is 0, so every enemy would be defeated on its first step.",
-          "requestHash": "39c2df7fe8066461366f474a0abb2557107443b0c083215615a0915576395424",
-          "src": "audio/assets/19/19a8f98e96e972ad690cae13e8a419c1a4fdb5007807493201aecd39d05e91aa.mp3",
-          "sha256": "19a8f98e96e972ad690cae13e8a419c1a4fdb5007807493201aecd39d05e91aa",
-          "bytes": 44064,
-          "durationMs": 7344
+          "speech": "This lets you test now; a later step replaces the whole green-flag script.",
+          "requestHash": "b1212703256f606104e02e95eac0e98442d33a141835c2bc050ae0e40a07a845",
+          "src": "audio/assets/bc/bc6642eeaa366b64444a53f7644ed2d7453059efbf9821073365d46a1d902a23.mp3",
+          "sha256": "bc6642eeaa366b64444a53f7644ed2d7453059efbf9821073365d46a1d902a23",
+          "bytes": 30960,
+          "durationMs": 5160
         }
       ]
     },
@@ -7824,26 +8330,36 @@
         "chapters/4/steps/0/checkpoint/task",
         "chapters/4/steps/0/checkpoint/expectedResult",
         "chapters/4/steps/0/checkpoint/completeWhen/0",
-        "chapters/4/steps/0/checkpoint/completeWhen/1"
+        "chapters/4/steps/0/checkpoint/completeWhen/1",
+        "chapters/4/steps/0/checkpoint/completeWhen/2"
       ],
       "sentences": [
         {
           "sourcePath": "chapters/4/steps/0/checkpoint/task",
-          "speech": "Read the settings and predict the three enemy counts.",
-          "requestHash": "200534e4d9b7b3de85aa94b18a97360b7b5b952ff61af5b24f2523a5ce36ec21",
-          "src": "audio/assets/3a/3a80b0033f8e9496822916c0fdbcd3fc5142e24d8d9894f2150afa2f99363172.mp3",
-          "sha256": "3a80b0033f8e9496822916c0fdbcd3fc5142e24d8d9894f2150afa2f99363172",
-          "bytes": 21168,
-          "durationMs": 3528
+          "speech": "Click the green flag and quickly buy one spot beside each road.",
+          "requestHash": "215a33b9894bda3fbc61e44e4aeaa3da1acd5b7f79e1d68c66fbfb4631be0860",
+          "src": "audio/assets/ee/ee6769ade2836a29d6b20778b348766a04c1460cf1218bb34ae35ffe6e03eaed.mp3",
+          "sha256": "ee6769ade2836a29d6b20778b348766a04c1460cf1218bb34ae35ffe6e03eaed",
+          "bytes": 25056,
+          "durationMs": 4176
         },
         {
           "sourcePath": "chapters/4/steps/0/checkpoint/expectedResult",
-          "speech": "The three waves contain 3, 3, and 6 enemies; every fresh level starts with 90 coins and 5 health.",
-          "requestHash": "e9ce1c9b6126dae0e53f95ed0cbfd8f8156bd467879a7dc139d4f7cb4cb7363f",
-          "src": "audio/assets/de/de39c8664034f652e0ba9660bb695eafd89407ada5b878d793143a0676b61781.mp3",
-          "sha256": "de39c8664034f652e0ba9660bb695eafd89407ada5b878d793143a0676b61781",
-          "bytes": 48960,
-          "durationMs": 8160
+          "speech": "The Chapter 4 game still works.",
+          "requestHash": "45a21a8280d5f6aa99ff8968274013a7fc4d8846a8602aacbd52441d71cf5942",
+          "src": "audio/assets/95/956a34ae6e6b83e7af7be4b4b0bf5436ea1546ab83a17d2cd6a0ad86b422730f.mp3",
+          "sha256": "956a34ae6e6b83e7af7be4b4b0bf5436ea1546ab83a17d2cd6a0ad86b422730f",
+          "bytes": 14400,
+          "durationMs": 2400
+        },
+        {
+          "sourcePath": "chapters/4/steps/0/checkpoint/expectedResult",
+          "speech": "Each tower now waits about a second between shots, and one tower per lane still defeats all three enemies.",
+          "requestHash": "10b484de1f30f2bbf005dc5457b7208d8ca78a6ec2b4cc881f4275c69519acba",
+          "src": "audio/assets/d7/d7666b3d06b275aa65fda93149033536eb8f6918f813f3f3d965430c8801354f.mp3",
+          "sha256": "d7666b3d06b275aa65fda93149033536eb8f6918f813f3f3d965430c8801354f",
+          "bytes": 39168,
+          "durationMs": 6528
         },
         {
           "sourcePath": "chapters/4/steps/0/checkpoint/completeWhen/0",
@@ -7862,6 +8378,15 @@
           "sha256": "cd6a53ca50fa1d94683db4a16b71d776ea2101a5945e413b826beb1adfda9e27",
           "bytes": 15408,
           "durationMs": 2568
+        },
+        {
+          "sourcePath": "chapters/4/steps/0/checkpoint/completeWhen/2",
+          "speech": "You can predict the three Level 1 waves: 3, 3, and 6 enemies.",
+          "requestHash": "758b96fa47284acb6d084dd20a3e055256860648337a2936ffebea0752acb242",
+          "src": "audio/assets/f7/f7265dbb03ce69564be12893bd2940c83c68cc1d9c9cee17706aae235368cac6.mp3",
+          "sha256": "f7265dbb03ce69564be12893bd2940c83c68cc1d9c9cee17706aae235368cac6",
+          "bytes": 30240,
+          "durationMs": 5040
         }
       ]
     },
@@ -8150,26 +8675,45 @@
         "chapters/4/steps/1/checkpoint/task",
         "chapters/4/steps/1/checkpoint/expectedResult",
         "chapters/4/steps/1/checkpoint/completeWhen/0",
-        "chapters/4/steps/1/checkpoint/completeWhen/1"
+        "chapters/4/steps/1/checkpoint/completeWhen/1",
+        "chapters/4/steps/1/checkpoint/completeWhen/2"
       ],
       "sentences": [
         {
           "sourcePath": "chapters/4/steps/1/checkpoint/task",
-          "speech": "Trace the reset order without running the unfinished Stage scripts yet.",
-          "requestHash": "943c68eb52d463f5efb15bcc3f37e976b3b5779ac99a94b382d77764f3cd9c3b",
-          "src": "audio/assets/83/83efb0e7ad5e17680c65234eb0e9a466b693d164b699340165acaa6642d77966.mp3",
-          "sha256": "83efb0e7ad5e17680c65234eb0e9a466b693d164b699340165acaa6642d77966",
-          "bytes": 26496,
-          "durationMs": 4416
+          "speech": "Stop the project.",
+          "requestHash": "958d5ea8a73f8a6e812f4bd5549bf1c27770c05803d5f0bcec82f10389bd87a0",
+          "src": "audio/assets/77/776580f7861d5a26946fa5508aaf25370e549180842d0605e3f9a2d08e51424f.mp3",
+          "sha256": "776580f7861d5a26946fa5508aaf25370e549180842d0605e3f9a2d08e51424f",
+          "bytes": 11232,
+          "durationMs": 1872
+        },
+        {
+          "sourcePath": "chapters/4/steps/1/checkpoint/task",
+          "speech": "Then click the define Reset level block in the Code area to run it once.",
+          "requestHash": "0c409649988e4d1cec739c70b3d1c3ff56d083aa8691cd8faac1da52fd7f04a3",
+          "src": "audio/assets/2f/2f527bd2444d4bf4d7073dfde4e254fc37a53aeac71a840432ab5de5205f721c.mp3",
+          "sha256": "2f527bd2444d4bf4d7073dfde4e254fc37a53aeac71a840432ab5de5205f721c",
+          "bytes": 27360,
+          "durationMs": 4560
         },
         {
           "sourcePath": "chapters/4/steps/1/checkpoint/expectedResult",
-          "speech": "Old copies are removed before lists and new copies are created; ready is set only after setup finishes.",
-          "requestHash": "636458eca7921328e804f4636bc41f9b1e968b1eb8c34ede5fed6572af54e900",
-          "src": "audio/assets/a9/a914e2e8e1e13274457a43763fc98f0a9793e050634799eddaea9c8e31648f40.mp3",
-          "sha256": "a914e2e8e1e13274457a43763fc98f0a9793e050634799eddaea9c8e31648f40",
-          "bytes": 43056,
-          "durationMs": 7176
+          "speech": "Six empty spots appear, Coins shows 90, Base Health shows 5, and Game State is ready.",
+          "requestHash": "8cb2b04db8b87ee3391590f392de3c16e8cf46c968a78ae4631f880a41998563",
+          "src": "audio/assets/cd/cd02ecb22c0ec1e0bd92a075ee23ec6e056a08238a5383dc827ec33afe539fec.mp3",
+          "sha256": "cd02ecb22c0ec1e0bd92a075ee23ec6e056a08238a5383dc827ec33afe539fec",
+          "bytes": 42768,
+          "durationMs": 7128
+        },
+        {
+          "sourcePath": "chapters/4/steps/1/checkpoint/expectedResult",
+          "speech": "Nothing moves, because no main loop is running yet.",
+          "requestHash": "49b6c47a4e0067aa377eee162a5d9153ac1e4684049d788f4e771ea652b4af4f",
+          "src": "audio/assets/12/12ef364471f800d70795ef740fff763358ff1b37734d1375d009710eb41db0f8.mp3",
+          "sha256": "12ef364471f800d70795ef740fff763358ff1b37734d1375d009710eb41db0f8",
+          "bytes": 19296,
+          "durationMs": 3216
         },
         {
           "sourcePath": "chapters/4/steps/1/checkpoint/completeWhen/0",
@@ -8188,6 +8732,15 @@
           "sha256": "f3ec688f72f47cb81c0952a652a64b4cc09bd8ca1dbba2fb4e1855abda0006fb",
           "bytes": 15696,
           "durationMs": 2616
+        },
+        {
+          "sourcePath": "chapters/4/steps/1/checkpoint/completeWhen/2",
+          "speech": "Old copies are removed before lists and new copies are created.",
+          "requestHash": "05da449dd4606ba7596293732cafec916317a77394cc3b8884a3baa7b64548ff",
+          "src": "audio/assets/40/40b0a970789962aa94ff0a396d96d8b03285fe2b47595d0b4c518b919f4c4842.mp3",
+          "sha256": "40b0a970789962aa94ff0a396d96d8b03285fe2b47595d0b4c518b919f4c4842",
+          "bytes": 25488,
+          "durationMs": 4248
         }
       ]
     },
@@ -8464,30 +9017,57 @@
       "sentences": [
         {
           "sourcePath": "chapters/4/steps/2/checkpoint/task",
-          "speech": "Explain what happens if Start Wave is clicked twice quickly.",
-          "requestHash": "d5624facc7dfb44c84a89b1fc89e73bc81c04bf2e61ee975666f14be35a0bb07",
-          "src": "audio/assets/46/463f546e66fd1d82a88a51e3a880b350451d68c60b2f6372c84661b725751324.mp3",
-          "sha256": "463f546e66fd1d82a88a51e3a880b350451d68c60b2f6372c84661b725751324",
-          "bytes": 22176,
-          "durationMs": 3696
+          "speech": "Stop the project and click define Reset level again.",
+          "requestHash": "35691ccfdba5d8f221bd9eb0f8aad12c1ca61bf51f01d226ac544527657b79e5",
+          "src": "audio/assets/42/4274bc1097807fc059645d336609f507f88d4e7913f1ab54dae9a9e7bc4474aa.mp3",
+          "sha256": "4274bc1097807fc059645d336609f507f88d4e7913f1ab54dae9a9e7bc4474aa",
+          "bytes": 22464,
+          "durationMs": 3744
+        },
+        {
+          "sourcePath": "chapters/4/steps/2/checkpoint/task",
+          "speech": "Start Wave appears at the bottom right.",
+          "requestHash": "21b091a82477103101fe4ddce852a2cf8a1ba5ced3e24b8a1ab69f3b27e56ebc",
+          "src": "audio/assets/7e/7e7cbedaa5ae10d50088728ed7313f0224106c192305cc1931902e67477d7c23.mp3",
+          "sha256": "7e7cbedaa5ae10d50088728ed7313f0224106c192305cc1931902e67477d7c23",
+          "bytes": 15840,
+          "durationMs": 2640
+        },
+        {
+          "sourcePath": "chapters/4/steps/2/checkpoint/task",
+          "speech": "Click it twice.",
+          "requestHash": "5bc6db932681c54ae7a69c9331c20a43d90db9cefe5e5b39370d186b43f17e46",
+          "src": "audio/assets/33/3327fdb16a8915319a7d530a4b4d7f478786af5f329ad5ffe0dd677c7f6ce741.mp3",
+          "sha256": "3327fdb16a8915319a7d530a4b4d7f478786af5f329ad5ffe0dd677c7f6ce741",
+          "bytes": 11232,
+          "durationMs": 1872
         },
         {
           "sourcePath": "chapters/4/steps/2/checkpoint/expectedResult",
-          "speech": "The button sets Start Requested to 1, not 2.",
-          "requestHash": "d1ca9d87746f8ca7f55a457a5001ac0d859b751fafde64b68ad699d15ae0343b",
-          "src": "audio/assets/fc/fc94d7e89930e91113a35fbd9cfcb6667b736cd3bdebe39a036ddc625aa7e6c6.mp3",
-          "sha256": "fc94d7e89930e91113a35fbd9cfcb6667b736cd3bdebe39a036ddc625aa7e6c6",
-          "bytes": 22320,
-          "durationMs": 3720
+          "speech": "Start Requested shows 1, not 2.",
+          "requestHash": "f4de1e4a3389909c86349ae984114b7e3e1c731280e095e4ac7a845b5dec99c7",
+          "src": "audio/assets/d3/d339feff93ed254d94a93c14e52bea5657657f54bc186fc8a6f65333499a55e6.mp3",
+          "sha256": "d339feff93ed254d94a93c14e52bea5657657f54bc186fc8a6f65333499a55e6",
+          "bytes": 19152,
+          "durationMs": 3192
         },
         {
           "sourcePath": "chapters/4/steps/2/checkpoint/expectedResult",
-          "speech": "When the Stage starts the wave, it sets Game State to combat and Start Requested back to 0, so another click cannot start a second wave.",
-          "requestHash": "12e2654d5b182404e88a9c77ae92664524a51950000f0a23a2f36d527a5dd170",
-          "src": "audio/assets/12/1208726d052eedf2edf9356fdf589df90053b0d6afd43b548f09b96158525004.mp3",
-          "sha256": "1208726d052eedf2edf9356fdf589df90053b0d6afd43b548f09b96158525004",
-          "bytes": 46800,
-          "durationMs": 7800
+          "speech": "No wave starts yet, because the Stage loop that reads Start Requested comes in the next step.",
+          "requestHash": "5d3d0aab94923f7fc7aee79485b2527e4374d7388467b4da70e50099bb91dd61",
+          "src": "audio/assets/99/99b4386e29ffe5f764b8b72666e74b12d9c58faeb4fc14b4d99d3deccfb19bae.mp3",
+          "sha256": "99b4386e29ffe5f764b8b72666e74b12d9c58faeb4fc14b4d99d3deccfb19bae",
+          "bytes": 33552,
+          "durationMs": 5592
+        },
+        {
+          "sourcePath": "chapters/4/steps/2/checkpoint/expectedResult",
+          "speech": "That loop sets it back to 0 when the wave starts, so a second click cannot start a second wave.",
+          "requestHash": "abf1285e1141bb62ee310ac92f02b0be3e6092884f1dd13dcd0cb460c2760016",
+          "src": "audio/assets/5c/5cecf2fc4eacdd637a0e83afd0c7307d4efcfc2c6a27d7c39bb2f88aab0bc230.mp3",
+          "sha256": "5cecf2fc4eacdd637a0e83afd0c7307d4efcfc2c6a27d7c39bb2f88aab0bc230",
+          "bytes": 33840,
+          "durationMs": 5640
         },
         {
           "sourcePath": "chapters/4/steps/2/checkpoint/completeWhen/0",
