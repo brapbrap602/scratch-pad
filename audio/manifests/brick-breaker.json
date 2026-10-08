@@ -204,12 +204,21 @@
       "sentences": [
         {
           "sourcePath": "requirements/0",
-          "speech": "Use Scratch 3 in a browser or the Scratch 3 desktop app.",
-          "requestHash": "2918093b4441c5dbcfb89faeadd44a855c510902bb6b6f00e076c68d2605f0fa",
-          "src": "audio/assets/c2/c2b198538b38aff46fcaa0b799e7019a0d1b762fe25d2192e2d04bdaa117ef45.mp3",
-          "sha256": "c2b198538b38aff46fcaa0b799e7019a0d1b762fe25d2192e2d04bdaa117ef45",
-          "bytes": 25488,
-          "durationMs": 4248
+          "speech": "Use Scratch online at scratch.mit.edu, signed in to your Scratch account.",
+          "requestHash": "1524b1c753115f57154a235fdd21a0ecdc825d64892f208a428e2b9a85793fa1",
+          "src": "audio/assets/9b/9ba499c77e2dbab46d7eadbbd06a9409f4f1a4367e18c52f2ec91d5513a11449.mp3",
+          "sha256": "9ba499c77e2dbab46d7eadbbd06a9409f4f1a4367e18c52f2ec91d5513a11449",
+          "bytes": 36144,
+          "durationMs": 6024
+        },
+        {
+          "sourcePath": "requirements/0",
+          "speech": "You will not download or upload project files.",
+          "requestHash": "66fa0ade66667b005149f42c0ba7dd45a52e8dd0eb526dfed035b124fbc203a3",
+          "src": "audio/assets/9c/9c4e901e53f377f4656a29379450d8540ecaa9c8de0478fd217dd5950b4894c7.mp3",
+          "sha256": "9c4e901e53f377f4656a29379450d8540ecaa9c8de0478fd217dd5950b4894c7",
+          "bytes": 19152,
+          "durationMs": 3192
         }
       ]
     },
@@ -1094,12 +1103,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/1/instructions/0",
-          "speech": "Start a new Scratch project and delete the Cat.",
-          "requestHash": "039d3dc6e71fc3647b80e7660a9e92bc2d2f719aa09754da55e891d05c114e80",
-          "src": "audio/assets/f0/f092df4fc208641ed24709b12412ed466c94606738ab6eaec082c764a8d26e99.mp3",
-          "sha256": "f092df4fc208641ed24709b12412ed466c94606738ab6eaec082c764a8d26e99",
-          "bytes": 20016,
-          "durationMs": 3336
+          "speech": "Sign in to Scratch, click Create, and delete the Cat.",
+          "requestHash": "7b7becdd0d4877e27367715f186a0fdd1aa1b5c5729b21e3008f39b499515fdf",
+          "src": "audio/assets/70/704283d205f0d47adfe56ac453e030486e8e419897620e8f3fd172a0fe64977c.mp3",
+          "sha256": "704283d205f0d47adfe56ac453e030486e8e419897620e8f3fd172a0fe64977c",
+          "bytes": 25488,
+          "durationMs": 4248
         }
       ]
     },
@@ -1111,12 +1120,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/1/instructions/1",
-          "speech": "Add or paint four sprites and name them exactly Paddle, Ball, Brick, and Apple.",
-          "requestHash": "8510a15402ecf87e4ec15c7874f1ae0b41a459e6c14ffad1ec3e818a251650ff",
-          "src": "audio/assets/97/97bffb8569fdb95dada03bb0b5d91cbb66f41098042efcd932c6eb9ca6ab3470.mp3",
-          "sha256": "97bffb8569fdb95dada03bb0b5d91cbb66f41098042efcd932c6eb9ca6ab3470",
-          "bytes": 35280,
-          "durationMs": 5880
+          "speech": "Type Brick Breaker in the project title box at the top of the editor.",
+          "requestHash": "9de547ce5d85884fa6eca1868d7ce7423d3a21c0ec71b23ced5a0aef41932afa",
+          "src": "audio/assets/b5/b5b2d9f36e86e836f388d721fa088099e9c0e73921da48d85225f2476b9caeb3.mp3",
+          "sha256": "b5b2d9f36e86e836f388d721fa088099e9c0e73921da48d85225f2476b9caeb3",
+          "bytes": 25488,
+          "durationMs": 4248
         }
       ]
     },
@@ -1128,30 +1137,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/1/instructions/2",
-          "speech": "Make Ball round and no wider than 20 pixels.",
-          "requestHash": "d5bb9c5fec1e91ede8f49140c9cfa8112304286ef9dcde34409c50068a766d95",
-          "src": "audio/assets/2f/2f03ec1e790b89f9a46ca4d5882abf30c5ca6ef06a135cfeb781ff703fbab666.mp3",
-          "sha256": "2f03ec1e790b89f9a46ca4d5882abf30c5ca6ef06a135cfeb781ff703fbab666",
-          "bytes": 20304,
-          "durationMs": 3384
-        },
-        {
-          "sourcePath": "chapters/0/steps/1/instructions/2",
-          "speech": "Paint Paddle about 80 pixels wide and 10 pixels tall.",
-          "requestHash": "01a20385d78a8e6fad396ef17abeef378663bc17516af638a30e038748421ad7",
-          "src": "audio/assets/83/838ff878026cab5b08550d2cb9d4d2d4a52bab3a046f81e78b0820fd6ab2032f.mp3",
-          "sha256": "838ff878026cab5b08550d2cb9d4d2d4a52bab3a046f81e78b0820fd6ab2032f",
-          "bytes": 23472,
-          "durationMs": 3912
-        },
-        {
-          "sourcePath": "chapters/0/steps/1/instructions/2",
-          "speech": "Paint Brick about 40 pixels wide and 18 pixels tall.",
-          "requestHash": "dea0a7da74fa2ee47a20293022694a65a63a5d3327681c6cdac995a7bb6059fc",
-          "src": "audio/assets/95/95566faca7d09333d7a6a9a77f80a66edb1b43721b5243761809a5c312a553df.mp3",
-          "sha256": "95566faca7d09333d7a6a9a77f80a66edb1b43721b5243761809a5c312a553df",
-          "bytes": 24048,
-          "durationMs": 4008
+          "speech": "Add or paint four sprites and name them exactly Paddle, Ball, Brick, and Apple.",
+          "requestHash": "8510a15402ecf87e4ec15c7874f1ae0b41a459e6c14ffad1ec3e818a251650ff",
+          "src": "audio/assets/97/97bffb8569fdb95dada03bb0b5d91cbb66f41098042efcd932c6eb9ca6ab3470.mp3",
+          "sha256": "97bffb8569fdb95dada03bb0b5d91cbb66f41098042efcd932c6eb9ca6ab3470",
+          "bytes": 35280,
+          "durationMs": 5880
         }
       ]
     },
@@ -1163,21 +1154,30 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/1/instructions/3",
-          "speech": "Create three Stage backdrops named Play, You Win, and Game Over.",
-          "requestHash": "cb788afbf9e39902199dd89bc251e97b65e5dc1bf4f87f1b6851eb0867a60598",
-          "src": "audio/assets/81/81f9a26e7d807cdb797830650723c68c64f034fcd2bb19b17da9c61ab57a9e33.mp3",
-          "sha256": "81f9a26e7d807cdb797830650723c68c64f034fcd2bb19b17da9c61ab57a9e33",
-          "bytes": 25344,
-          "durationMs": 4224
+          "speech": "Make Ball round and no wider than 20 pixels.",
+          "requestHash": "d5bb9c5fec1e91ede8f49140c9cfa8112304286ef9dcde34409c50068a766d95",
+          "src": "audio/assets/2f/2f03ec1e790b89f9a46ca4d5882abf30c5ca6ef06a135cfeb781ff703fbab666.mp3",
+          "sha256": "2f03ec1e790b89f9a46ca4d5882abf30c5ca6ef06a135cfeb781ff703fbab666",
+          "bytes": 20304,
+          "durationMs": 3384
         },
         {
           "sourcePath": "chapters/0/steps/1/instructions/3",
-          "speech": "Keep the ending backdrops simple and readable.",
-          "requestHash": "7cd2c2f3ecdbe8852680ebb3a2f96e34b5e7bf5c22ae9daec513c4cb7992687f",
-          "src": "audio/assets/f9/f9b3f3692ea7d7fc906e8e68aa110408cdca091e6892fc339aa1cdeafa67f5db.mp3",
-          "sha256": "f9b3f3692ea7d7fc906e8e68aa110408cdca091e6892fc339aa1cdeafa67f5db",
-          "bytes": 18144,
-          "durationMs": 3024
+          "speech": "Paint Paddle about 80 pixels wide and 10 pixels tall.",
+          "requestHash": "01a20385d78a8e6fad396ef17abeef378663bc17516af638a30e038748421ad7",
+          "src": "audio/assets/83/838ff878026cab5b08550d2cb9d4d2d4a52bab3a046f81e78b0820fd6ab2032f.mp3",
+          "sha256": "838ff878026cab5b08550d2cb9d4d2d4a52bab3a046f81e78b0820fd6ab2032f",
+          "bytes": 23472,
+          "durationMs": 3912
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/instructions/3",
+          "speech": "Paint Brick about 40 pixels wide and 18 pixels tall.",
+          "requestHash": "dea0a7da74fa2ee47a20293022694a65a63a5d3327681c6cdac995a7bb6059fc",
+          "src": "audio/assets/95/95566faca7d09333d7a6a9a77f80a66edb1b43721b5243761809a5c312a553df.mp3",
+          "sha256": "95566faca7d09333d7a6a9a77f80a66edb1b43721b5243761809a5c312a553df",
+          "bytes": 24048,
+          "durationMs": 4008
         }
       ]
     },
@@ -1189,12 +1189,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/1/instructions/4",
-          "speech": "Make three variables for all sprites named Lives, Bricks Left, and Hit Claimed.",
-          "requestHash": "beb63d396fa11934dd0a812fa4b0d7645aecc5260dafd9127091721ab8c89c58",
-          "src": "audio/assets/a4/a4b282554c8253ce83564944c8cf042ff6637f83578a4cc073f785f534eef84a.mp3",
-          "sha256": "a4b282554c8253ce83564944c8cf042ff6637f83578a4cc073f785f534eef84a",
-          "bytes": 33552,
-          "durationMs": 5592
+          "speech": "Create three Stage backdrops named Play, You Win, and Game Over.",
+          "requestHash": "cb788afbf9e39902199dd89bc251e97b65e5dc1bf4f87f1b6851eb0867a60598",
+          "src": "audio/assets/81/81f9a26e7d807cdb797830650723c68c64f034fcd2bb19b17da9c61ab57a9e33.mp3",
+          "sha256": "81f9a26e7d807cdb797830650723c68c64f034fcd2bb19b17da9c61ab57a9e33",
+          "bytes": 25344,
+          "durationMs": 4224
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/instructions/4",
+          "speech": "Keep the ending backdrops simple and readable.",
+          "requestHash": "7cd2c2f3ecdbe8852680ebb3a2f96e34b5e7bf5c22ae9daec513c4cb7992687f",
+          "src": "audio/assets/f9/f9b3f3692ea7d7fc906e8e68aa110408cdca091e6892fc339aa1cdeafa67f5db.mp3",
+          "sha256": "f9b3f3692ea7d7fc906e8e68aa110408cdca091e6892fc339aa1cdeafa67f5db",
+          "bytes": 18144,
+          "durationMs": 3024
         }
       ]
     },
@@ -1206,12 +1215,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/1/instructions/5",
-          "speech": "Create six messages named Build Bricks, Start Ball, Hit Brick, Apple Caught, Win, and Game Over.",
-          "requestHash": "44c7b1371c8782abe7a70b778549a526bdae98425d279e63626c906a1ce06440",
-          "src": "audio/assets/ad/ada30598d59c5503041e5e40cf7bc86dd2db0c120c28ff990aea6daa8d8e47c7.mp3",
-          "sha256": "ada30598d59c5503041e5e40cf7bc86dd2db0c120c28ff990aea6daa8d8e47c7",
-          "bytes": 42768,
-          "durationMs": 7128
+          "speech": "Make three variables for all sprites named Lives, Bricks Left, and Hit Claimed.",
+          "requestHash": "beb63d396fa11934dd0a812fa4b0d7645aecc5260dafd9127091721ab8c89c58",
+          "src": "audio/assets/a4/a4b282554c8253ce83564944c8cf042ff6637f83578a4cc073f785f534eef84a.mp3",
+          "sha256": "a4b282554c8253ce83564944c8cf042ff6637f83578a4cc073f785f534eef84a",
+          "bytes": 33552,
+          "durationMs": 5592
         }
       ]
     },
@@ -1223,6 +1232,23 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/1/instructions/6",
+          "speech": "Create six messages named Build Bricks, Start Ball, Hit Brick, Apple Caught, Win, and Game Over.",
+          "requestHash": "44c7b1371c8782abe7a70b778549a526bdae98425d279e63626c906a1ce06440",
+          "src": "audio/assets/ad/ada30598d59c5503041e5e40cf7bc86dd2db0c120c28ff990aea6daa8d8e47c7.mp3",
+          "sha256": "ada30598d59c5503041e5e40cf7bc86dd2db0c120c28ff990aea6daa8d8e47c7",
+          "bytes": 42768,
+          "durationMs": 7128
+        }
+      ]
+    },
+    {
+      "id": "project-foundations/setup-sprites-and-data/instruction/007",
+      "sourcePaths": [
+        "chapters/0/steps/1/instructions/7"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/0/steps/1/instructions/7",
           "speech": "Do not make a Restart sprite, Restart message, restart key, or Ball clone.",
           "requestHash": "991947c42832e3adb6eabcba64b73de035458d1277cb9db90aeeaa759ceff945",
           "src": "audio/assets/e2/e2de574eb70a48cd9d752c9574f2f6efffc426848ba47d17b79ef0f387f98ec1.mp3",
@@ -1850,6 +1876,23 @@
           "sha256": "e256f88fbdfe02c2165eae9feeaffa03b580778bbb48389cc2d793b2e8870fe9",
           "bytes": 34704,
           "durationMs": 5784
+        }
+      ]
+    },
+    {
+      "id": "project-foundations/checkpoint-foundations/instruction/005",
+      "sourcePaths": [
+        "chapters/0/steps/3/instructions/5"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/0/steps/3/instructions/5",
+          "speech": "Choose File > Save now.",
+          "requestHash": "9a29adf15409100b352b1d99f9e7539bac9f68042eb18e564a655c8eed7fa422",
+          "src": "audio/assets/27/2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be.mp3",
+          "sha256": "2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be",
+          "bytes": 11664,
+          "durationMs": 1944
         }
       ]
     },
@@ -3023,6 +3066,23 @@
           "sha256": "e30585092cdcaa338a347f48537ec2524366a408fca56980cc9551b9867ac1bc",
           "bytes": 26784,
           "durationMs": 4464
+        }
+      ]
+    },
+    {
+      "id": "ball-and-lives/checkpoint-ball-and-lives/instruction/005",
+      "sourcePaths": [
+        "chapters/1/steps/3/instructions/5"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/1/steps/3/instructions/5",
+          "speech": "Choose File > Save now.",
+          "requestHash": "9a29adf15409100b352b1d99f9e7539bac9f68042eb18e564a655c8eed7fa422",
+          "src": "audio/assets/27/2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be.mp3",
+          "sha256": "2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be",
+          "bytes": 11664,
+          "durationMs": 1944
         }
       ]
     },
@@ -4447,6 +4507,23 @@
       ]
     },
     {
+      "id": "two-hit-bricks/checkpoint-two-hit-bricks/instruction/005",
+      "sourcePaths": [
+        "chapters/2/steps/3/instructions/5"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/2/steps/3/instructions/5",
+          "speech": "Choose File > Save now.",
+          "requestHash": "9a29adf15409100b352b1d99f9e7539bac9f68042eb18e564a655c8eed7fa422",
+          "src": "audio/assets/27/2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be.mp3",
+          "sha256": "2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be",
+          "bytes": 11664,
+          "durationMs": 1944
+        }
+      ]
+    },
+    {
       "id": "two-hit-bricks/checkpoint-two-hit-bricks/hint/000",
       "sourcePaths": [
         "chapters/2/steps/3/hints/0"
@@ -5660,6 +5737,23 @@
       ]
     },
     {
+      "id": "apple-power-up/checkpoint-apple-power-up/instruction/006",
+      "sourcePaths": [
+        "chapters/3/steps/3/instructions/6"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/3/instructions/6",
+          "speech": "Choose File > Save now.",
+          "requestHash": "9a29adf15409100b352b1d99f9e7539bac9f68042eb18e564a655c8eed7fa422",
+          "src": "audio/assets/27/2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be.mp3",
+          "sha256": "2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be",
+          "bytes": 11664,
+          "durationMs": 1944
+        }
+      ]
+    },
+    {
       "id": "apple-power-up/checkpoint-apple-power-up/hint/000",
       "sourcePaths": [
         "chapters/3/steps/3/hints/0"
@@ -6740,6 +6834,23 @@
           "sha256": "1dfebc600224fa326c9ae57efee70aa359e15fbaf62fa9e6e24bf0547f00f7e7",
           "bytes": 21168,
           "durationMs": 3528
+        }
+      ]
+    },
+    {
+      "id": "endings-and-restart/checkpoint-endings-and-restart/instruction/005",
+      "sourcePaths": [
+        "chapters/4/steps/3/instructions/5"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/4/steps/3/instructions/5",
+          "speech": "Choose File > Save now.",
+          "requestHash": "9a29adf15409100b352b1d99f9e7539bac9f68042eb18e564a655c8eed7fa422",
+          "src": "audio/assets/27/2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be.mp3",
+          "sha256": "2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be",
+          "bytes": 11664,
+          "durationMs": 1944
         }
       ]
     },
@@ -8010,6 +8121,23 @@
           "sha256": "53e01a591aa025795486996aacf7a8050117e53c64374fb9fe34ace52e2fc680",
           "bytes": 28224,
           "durationMs": 4704
+        }
+      ]
+    },
+    {
+      "id": "systematic-debugging/checkpoint-systematic-debugging/instruction/005",
+      "sourcePaths": [
+        "chapters/5/steps/3/instructions/5"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/5/steps/3/instructions/5",
+          "speech": "Choose File > Save now.",
+          "requestHash": "9a29adf15409100b352b1d99f9e7539bac9f68042eb18e564a655c8eed7fa422",
+          "src": "audio/assets/27/2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be.mp3",
+          "sha256": "2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be",
+          "bytes": 11664,
+          "durationMs": 1944
         }
       ]
     },

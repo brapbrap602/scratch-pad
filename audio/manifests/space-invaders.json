@@ -204,12 +204,21 @@
       "sentences": [
         {
           "sourcePath": "requirements/0",
-          "speech": "Use Scratch 3 in a modern web browser or the Scratch desktop app.",
-          "requestHash": "48fcecdeae1b791927d02ece663589c049832895dd394f0a054faecfc525ea40",
-          "src": "audio/assets/6c/6cfed97bb0a717c6895113a779352e9b3e1bec522c1fb481a32758c60e03ec10.mp3",
-          "sha256": "6cfed97bb0a717c6895113a779352e9b3e1bec522c1fb481a32758c60e03ec10",
-          "bytes": 26640,
-          "durationMs": 4440
+          "speech": "Use Scratch online at scratch.mit.edu, signed in to your Scratch account.",
+          "requestHash": "1524b1c753115f57154a235fdd21a0ecdc825d64892f208a428e2b9a85793fa1",
+          "src": "audio/assets/9b/9ba499c77e2dbab46d7eadbbd06a9409f4f1a4367e18c52f2ec91d5513a11449.mp3",
+          "sha256": "9ba499c77e2dbab46d7eadbbd06a9409f4f1a4367e18c52f2ec91d5513a11449",
+          "bytes": 36144,
+          "durationMs": 6024
+        },
+        {
+          "sourcePath": "requirements/0",
+          "speech": "You will not download or upload project files.",
+          "requestHash": "66fa0ade66667b005149f42c0ba7dd45a52e8dd0eb526dfed035b124fbc203a3",
+          "src": "audio/assets/9c/9c4e901e53f377f4656a29379450d8540ecaa9c8de0478fd217dd5950b4894c7.mp3",
+          "sha256": "9c4e901e53f377f4656a29379450d8540ecaa9c8de0478fd217dd5950b4894c7",
+          "bytes": 19152,
+          "durationMs": 3192
         }
       ]
     },
@@ -247,21 +256,21 @@
         },
         {
           "sourcePath": "requirements/2",
-          "speech": "At each chapter checkpoint, use File > Save to your computer.",
-          "requestHash": "1f56d6195e190a6a4184048b09844451dc0c9e62dfefaef6cb3f4b0aad2a950d",
-          "src": "audio/assets/e1/e1c16fa18a39aedfe72ceecf95d961f471ac9f0c4a73d062f242c295ac1bd133.mp3",
-          "sha256": "e1c16fa18a39aedfe72ceecf95d961f471ac9f0c4a73d062f242c295ac1bd133",
-          "bytes": 24624,
-          "durationMs": 4104
+          "speech": "Scratch saves your project to your account; also choose File > Save now at each chapter checkpoint.",
+          "requestHash": "6b0496b010c9cdf3f6ece0ebeb7e65272b48f5405bfc2a9150408ffa9be96277",
+          "src": "audio/assets/a5/a596e48b1576a141badd7a5c4f753b4135bd422a721d340dc4c67e6254deb5db.mp3",
+          "sha256": "a596e48b1576a141badd7a5c4f753b4135bd422a721d340dc4c67e6254deb5db",
+          "bytes": 41904,
+          "durationMs": 6984
         },
         {
           "sourcePath": "requirements/2",
-          "speech": "To continue later, open Scratch and use File > Load from your computer.",
-          "requestHash": "d70a48848f4f355ec366d0847ce689040c66a79f1aa9f70ca7be5f975af0cf84",
-          "src": "audio/assets/45/45aaa6549dd336746080686048e52bffd997c0ed763b0519c3e8ee71aed81778.mp3",
-          "sha256": "45aaa6549dd336746080686048e52bffd997c0ed763b0519c3e8ee71aed81778",
-          "bytes": 28368,
-          "durationMs": 4728
+          "speech": "To continue later, sign in, open My Stuff, and click See inside on your project.",
+          "requestHash": "ce66774226176124c34b7625e48ee8d4fb9ba1d46675c6f69dfe64f1349b98af",
+          "src": "audio/assets/50/509c3fc249f3cf2660f00e1f8dee46e1d20dc0091c2419fd3f631da7e24ed3d3.mp3",
+          "sha256": "509c3fc249f3cf2660f00e1f8dee46e1d20dc0091c2419fd3f631da7e24ed3d3",
+          "bytes": 33552,
+          "durationMs": 5592
         }
       ]
     },
@@ -656,12 +665,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/0/instructions/0",
-          "speech": "Open a new Scratch 3 project and delete the Cat sprite.",
-          "requestHash": "751fbdaf6a7c29e54ab896e2b0073415895b53b9b1df5d9743ae35ff76f79c8d",
-          "src": "audio/assets/e8/e8f3aafae9ecb41ec5cf27cf1c0273a85f50669121c2915df07e35a8150ac417.mp3",
-          "sha256": "e8f3aafae9ecb41ec5cf27cf1c0273a85f50669121c2915df07e35a8150ac417",
-          "bytes": 22896,
-          "durationMs": 3816
+          "speech": "Sign in to Scratch, click Create, and delete the Cat sprite.",
+          "requestHash": "3fe3a64f440e3ece58e4bb7ea68158be53c2b14829b10a1f75026ff292c96961",
+          "src": "audio/assets/53/53e7efac28400b04431f60fdd9bc11ca2ccb8cf0a9e819672ae60eb6c2aec5c8.mp3",
+          "sha256": "53e7efac28400b04431f60fdd9bc11ca2ccb8cf0a9e819672ae60eb6c2aec5c8",
+          "bytes": 24912,
+          "durationMs": 4152
         }
       ]
     },
@@ -673,12 +682,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/0/instructions/1",
-          "speech": "Write down the required sprites: Player, Alien, Player Laser, Enemy Shot, Bunker, and Mothership.",
-          "requestHash": "85191c77d962cda6dded7175e3271e1fa7530943ca9721521afa64ec387c4332",
-          "src": "audio/assets/bb/bbec53c01b42dba750e5f7758b18fe63e45926d7df0591b474f9fb6967385c9d.mp3",
-          "sha256": "bbec53c01b42dba750e5f7758b18fe63e45926d7df0591b474f9fb6967385c9d",
-          "bytes": 45936,
-          "durationMs": 7656
+          "speech": "Type Space Invaders in the project title box at the top of the editor.",
+          "requestHash": "a68144210be041767361bc823f152ba8792075ab5190a59dd4843b1fc7371cb2",
+          "src": "audio/assets/39/3943fc61a253ddbe8ef9b286ddde3417c6a8eec8f8323503e234cf53a9ed62ff.mp3",
+          "sha256": "3943fc61a253ddbe8ef9b286ddde3417c6a8eec8f8323503e234cf53a9ed62ff",
+          "bytes": 26784,
+          "durationMs": 4464
         }
       ]
     },
@@ -690,21 +699,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/0/instructions/2",
-          "speech": "Picture an 8-column by 3-row alien fleet.",
-          "requestHash": "3aaa7a62a907cdcf3e664a322d63a9570960e148fd4d8243d5aeb89e75a0f6ee",
-          "src": "audio/assets/ab/abb4bdc7c5adc164a6e84e90b7476a2e1d4063aa5128f68bebdd3bc60bceb54b.mp3",
-          "sha256": "abb4bdc7c5adc164a6e84e90b7476a2e1d4063aa5128f68bebdd3bc60bceb54b",
-          "bytes": 19872,
-          "durationMs": 3312
-        },
-        {
-          "sourcePath": "chapters/0/steps/0/instructions/2",
-          "speech": "That is 24 aliens, so Aliens Left starts at 24 and the player wins when it reaches 0.",
-          "requestHash": "729646ed91505e97a3fa58fe51ad5b8ff95365aa03d1d79a983547f8dab4585e",
-          "src": "audio/assets/98/986a6b7ff75ee8c8bc3dd66f3e6a39a17157dcb9937045d9dab9dcd99f106e1d.mp3",
-          "sha256": "986a6b7ff75ee8c8bc3dd66f3e6a39a17157dcb9937045d9dab9dcd99f106e1d",
-          "bytes": 36288,
-          "durationMs": 6048
+          "speech": "Write down the required sprites: Player, Alien, Player Laser, Enemy Shot, Bunker, and Mothership.",
+          "requestHash": "85191c77d962cda6dded7175e3271e1fa7530943ca9721521afa64ec387c4332",
+          "src": "audio/assets/bb/bbec53c01b42dba750e5f7758b18fe63e45926d7df0591b474f9fb6967385c9d.mp3",
+          "sha256": "bbec53c01b42dba750e5f7758b18fe63e45926d7df0591b474f9fb6967385c9d",
+          "bytes": 45936,
+          "durationMs": 7656
         }
       ]
     },
@@ -716,12 +716,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/0/instructions/3",
-          "speech": "Trace the two ways to lose: an Enemy Shot touches Player, or an Alien reaches the invasion line.",
-          "requestHash": "ba02dff2b4b7b34c5fc8c0a810491f971788c2a62510a8e59f47e5653ed390bc",
-          "src": "audio/assets/f0/f0a54c0922502a9da2923b5b3d426172a13ef511d1968e71ebe0eef53b74eea9.mp3",
-          "sha256": "f0a54c0922502a9da2923b5b3d426172a13ef511d1968e71ebe0eef53b74eea9",
-          "bytes": 38736,
-          "durationMs": 6456
+          "speech": "Picture an 8-column by 3-row alien fleet.",
+          "requestHash": "3aaa7a62a907cdcf3e664a322d63a9570960e148fd4d8243d5aeb89e75a0f6ee",
+          "src": "audio/assets/ab/abb4bdc7c5adc164a6e84e90b7476a2e1d4063aa5128f68bebdd3bc60bceb54b.mp3",
+          "sha256": "abb4bdc7c5adc164a6e84e90b7476a2e1d4063aa5128f68bebdd3bc60bceb54b",
+          "bytes": 19872,
+          "durationMs": 3312
+        },
+        {
+          "sourcePath": "chapters/0/steps/0/instructions/3",
+          "speech": "That is 24 aliens, so Aliens Left starts at 24 and the player wins when it reaches 0.",
+          "requestHash": "729646ed91505e97a3fa58fe51ad5b8ff95365aa03d1d79a983547f8dab4585e",
+          "src": "audio/assets/98/986a6b7ff75ee8c8bc3dd66f3e6a39a17157dcb9937045d9dab9dcd99f106e1d.mp3",
+          "sha256": "986a6b7ff75ee8c8bc3dd66f3e6a39a17157dcb9937045d9dab9dcd99f106e1d",
+          "bytes": 36288,
+          "durationMs": 6048
         }
       ]
     },
@@ -733,6 +742,23 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/0/instructions/4",
+          "speech": "Trace the two ways to lose: an Enemy Shot touches Player, or an Alien reaches the invasion line.",
+          "requestHash": "ba02dff2b4b7b34c5fc8c0a810491f971788c2a62510a8e59f47e5653ed390bc",
+          "src": "audio/assets/f0/f0a54c0922502a9da2923b5b3d426172a13ef511d1968e71ebe0eef53b74eea9.mp3",
+          "sha256": "f0a54c0922502a9da2923b5b3d426172a13ef511d1968e71ebe0eef53b74eea9",
+          "bytes": 38736,
+          "durationMs": 6456
+        }
+      ]
+    },
+    {
+      "id": "launch-pad/map-the-game/instruction/005",
+      "sourcePaths": [
+        "chapters/0/steps/0/instructions/5"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/0/steps/0/instructions/5",
           "speech": "Remember the restart rule: after a win or loss, click the green flag.",
           "requestHash": "0c82bcb3fac2e102a6c72a82a4ec78aa3807520af429c15ed6baf69ee3c22adf",
           "src": "audio/assets/02/025e2c52d570ae8cbaedeea5e2fa166a228fd7d87fbd898ec297c7e06ea075dc.mp3",
@@ -741,7 +767,7 @@
           "durationMs": 5280
         },
         {
-          "sourcePath": "chapters/0/steps/0/instructions/4",
+          "sourcePath": "chapters/0/steps/0/instructions/5",
           "speech": "Do not build a Restart button or an in-game restart message.",
           "requestHash": "c0b57344a7f3c38f81d2f0375ebf807d5438900f0a494836535cd3ea0d836834",
           "src": "audio/assets/2c/2c8b0bb7b4faceea4d2049aadadad9e67d5c8cbd4e2bec63624ba895a3c3cdcf.mp3",
@@ -2061,12 +2087,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/4/instructions/0",
-          "speech": "Use File > Save to your computer and keep the download as space-invaders-chapter-1.sb3.",
-          "requestHash": "04cd65451975cd8800774ce17a109b6cfff9a62ecb37268018e20e1cd084caf8",
-          "src": "audio/assets/03/0352b6a96aa018419e827250726cc09c479135547b02bd4ceb276e6339823656.mp3",
-          "sha256": "0352b6a96aa018419e827250726cc09c479135547b02bd4ceb276e6339823656",
-          "bytes": 48528,
-          "durationMs": 8088
+          "speech": "Choose File > Save now.",
+          "requestHash": "9a29adf15409100b352b1d99f9e7539bac9f68042eb18e564a655c8eed7fa422",
+          "src": "audio/assets/27/2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be.mp3",
+          "sha256": "2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be",
+          "bytes": 11664,
+          "durationMs": 1944
         }
       ]
     },
@@ -2078,12 +2104,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/4/instructions/1",
-          "speech": "Load the saved file with File > Load from your computer.",
-          "requestHash": "900b2b22352f9ea093cbc253b344e292d55dfcbaec8d90a2fc1afad78a767c35",
-          "src": "audio/assets/4c/4c492a18e98a24eb159651813129f6b3d5503251c3312327a0d7a253d42f7c7f.mp3",
-          "sha256": "4c492a18e98a24eb159651813129f6b3d5503251c3312327a0d7a253d42f7c7f",
-          "bytes": 23184,
-          "durationMs": 3864
+          "speech": "Click My Stuff at the top of the page, then click See inside on Space Invaders.",
+          "requestHash": "35467cdd3ff6ac7328ace6f114773bb1d692f1065513777715d5f81af7f245bd",
+          "src": "audio/assets/14/14e1830cf00b91149aaab4d7b178a75d49884c9df42b3a74c73630dc032a10b7.mp3",
+          "sha256": "14e1830cf00b91149aaab4d7b178a75d49884c9df42b3a74c73630dc032a10b7",
+          "bytes": 31680,
+          "durationMs": 5280
         },
         {
           "sourcePath": "chapters/0/steps/4/instructions/1",
@@ -3788,12 +3814,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/1/steps/4/instructions/0",
-          "speech": "Use File > Save to your computer and keep the download as space-invaders-chapter-2.sb3.",
-          "requestHash": "d76a9265bb3dfa2d40b751bad6f561ec2b0b42053c99f35b216af105e9878cea",
-          "src": "audio/assets/88/8896d8208eb787337cd1186d78f77a14a35300ab1e8c731387381758c12fb7a9.mp3",
-          "sha256": "8896d8208eb787337cd1186d78f77a14a35300ab1e8c731387381758c12fb7a9",
-          "bytes": 48096,
-          "durationMs": 8016
+          "speech": "Choose File > Save now.",
+          "requestHash": "9a29adf15409100b352b1d99f9e7539bac9f68042eb18e564a655c8eed7fa422",
+          "src": "audio/assets/27/2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be.mp3",
+          "sha256": "2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be",
+          "bytes": 11664,
+          "durationMs": 1944
         }
       ]
     },
@@ -5395,12 +5421,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/2/steps/4/instructions/0",
-          "speech": "Use File > Save to your computer and keep the download as space-invaders-chapter-3.sb3.",
-          "requestHash": "0b7e4fac9a565234bd4aa108c58c0833b2af7673442d6cc7037bd4154a9b316d",
-          "src": "audio/assets/da/da1986175c04de9acdf6c9a7181573f123fd9d3f57b893d3270290c3babaf0b7.mp3",
-          "sha256": "da1986175c04de9acdf6c9a7181573f123fd9d3f57b893d3270290c3babaf0b7",
-          "bytes": 49680,
-          "durationMs": 8280
+          "speech": "Choose File > Save now.",
+          "requestHash": "9a29adf15409100b352b1d99f9e7539bac9f68042eb18e564a655c8eed7fa422",
+          "src": "audio/assets/27/2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be.mp3",
+          "sha256": "2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be",
+          "bytes": 11664,
+          "durationMs": 1944
         }
       ]
     },
@@ -8875,12 +8901,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/4/instructions/0",
-          "speech": "Use File > Save to your computer and keep the download as space-invaders-chapter-4.sb3.",
-          "requestHash": "ba4f7c0b4bbcca9a8d9e239f7d2350d3456ebcd90dd225aea5c7bab0e5b4083e",
-          "src": "audio/assets/c1/c1475197cc8919c8251792effcd0ad65f39f41668d5fb2754a4d7d5464f7b3de.mp3",
-          "sha256": "c1475197cc8919c8251792effcd0ad65f39f41668d5fb2754a4d7d5464f7b3de",
-          "bytes": 51408,
-          "durationMs": 8568
+          "speech": "Choose File > Save now.",
+          "requestHash": "9a29adf15409100b352b1d99f9e7539bac9f68042eb18e564a655c8eed7fa422",
+          "src": "audio/assets/27/2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be.mp3",
+          "sha256": "2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be",
+          "bytes": 11664,
+          "durationMs": 1944
         }
       ]
     },
@@ -10283,12 +10309,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/4/steps/3/instructions/0",
-          "speech": "Use File > Save to your computer and keep the download as space-invaders-chapter-5.sb3 before final polish.",
-          "requestHash": "ea8170915dc15ba27fec45b75b644f03752093ffad2e0581dd8c3e9bd0bcbc77",
-          "src": "audio/assets/00/00a0a10b2551903e9df76e68c659fe212f238d01cbc9704c4555b7a0c918e320.mp3",
-          "sha256": "00a0a10b2551903e9df76e68c659fe212f238d01cbc9704c4555b7a0c918e320",
-          "bytes": 53424,
-          "durationMs": 8904
+          "speech": "Choose File > Save now before final polish.",
+          "requestHash": "74e8f5a3adcd072a208763fdaef74903197a68c4ef45c4054fb5eaa812c353cb",
+          "src": "audio/assets/14/1421fb152927c57fdc57a484ad848644f91f6fc58c570758527486ce40bbf6e6.mp3",
+          "sha256": "1421fb152927c57fdc57a484ad848644f91f6fc58c570758527486ce40bbf6e6",
+          "bytes": 19440,
+          "durationMs": 3240
         }
       ]
     },
@@ -11698,12 +11724,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/3/instructions/0",
-          "speech": "Use File > Save to your computer and keep the download as space-invaders-final.sb3.",
-          "requestHash": "e06ad1e8c76ea3b293f2bfafab968b6f4d6d3aaddcfc493f323be4b4cfd5d2bc",
-          "src": "audio/assets/c9/c9c4f2ba1327ed2882edd77633de1a27d32dc1b16f3b7bf0092352f059da96c5.mp3",
-          "sha256": "c9c4f2ba1327ed2882edd77633de1a27d32dc1b16f3b7bf0092352f059da96c5",
-          "bytes": 38592,
-          "durationMs": 6432
+          "speech": "Choose File > Save now.",
+          "requestHash": "9a29adf15409100b352b1d99f9e7539bac9f68042eb18e564a655c8eed7fa422",
+          "src": "audio/assets/27/2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be.mp3",
+          "sha256": "2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be",
+          "bytes": 11664,
+          "durationMs": 1944
         }
       ]
     },
@@ -11766,12 +11792,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/3/instructions/4",
-          "speech": "Open a new Scratch editor, use File > Load from your computer to load space-invaders-final.sb3, and repeat the clean green-flag start.",
-          "requestHash": "95c9079bcd89f1411260b8094342fc8abcd2a2ba77f038556cf51853d3de6c3d",
-          "src": "audio/assets/40/402c2d161979a28590841e06d7f5cd682659b108e91c357c1fdbfb0b092f17ab.mp3",
-          "sha256": "402c2d161979a28590841e06d7f5cd682659b108e91c357c1fdbfb0b092f17ab",
-          "bytes": 57312,
-          "durationMs": 9552
+          "speech": "Click My Stuff at the top of the page, then click See inside on Space Invaders.",
+          "requestHash": "35467cdd3ff6ac7328ace6f114773bb1d692f1065513777715d5f81af7f245bd",
+          "src": "audio/assets/14/14e1830cf00b91149aaab4d7b178a75d49884c9df42b3a74c73630dc032a10b7.mp3",
+          "sha256": "14e1830cf00b91149aaab4d7b178a75d49884c9df42b3a74c73630dc032a10b7",
+          "bytes": 31680,
+          "durationMs": 5280
+        },
+        {
+          "sourcePath": "chapters/5/steps/3/instructions/4",
+          "speech": "Repeat the clean green-flag start.",
+          "requestHash": "5c53967c708b5f08367916d9135a1f23cbbaff2e93902f84b6b71c9bf160dcd2",
+          "src": "audio/assets/81/8156ba43cfe8791bed5dff614ccc8da5833cbf1db3df3ef8da3a5f0149867004.mp3",
+          "sha256": "8156ba43cfe8791bed5dff614ccc8da5833cbf1db3df3ef8da3a5f0149867004",
+          "bytes": 14976,
+          "durationMs": 2496
         }
       ]
     },

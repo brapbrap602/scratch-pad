@@ -204,12 +204,21 @@
       "sentences": [
         {
           "sourcePath": "requirements/0",
-          "speech": "Use Scratch 3 in a modern desktop browser or the Scratch desktop app.",
-          "requestHash": "9657f1cbfe4b9c3c861605846fe965e70bf00097613298cfa657d7b14c2b8c6c",
-          "src": "audio/assets/07/07bbd485ac5f0136e15bbfb583aeebef69e69c78660a34e11018fa1fa8926631.mp3",
-          "sha256": "07bbd485ac5f0136e15bbfb583aeebef69e69c78660a34e11018fa1fa8926631",
-          "bytes": 28224,
-          "durationMs": 4704
+          "speech": "Use Scratch online at scratch.mit.edu in a desktop browser, signed in to your Scratch account.",
+          "requestHash": "3da6c45f1a0f31ad39238e1c6a83b316f8ddada2f918da55844c1aa3c339f4c6",
+          "src": "audio/assets/7d/7d883561038b406e2dfa44c0da9fe2c12cef2033cf054b94e7f1014937975fce.mp3",
+          "sha256": "7d883561038b406e2dfa44c0da9fe2c12cef2033cf054b94e7f1014937975fce",
+          "bytes": 42192,
+          "durationMs": 7032
+        },
+        {
+          "sourcePath": "requirements/0",
+          "speech": "You will not download or upload project files.",
+          "requestHash": "66fa0ade66667b005149f42c0ba7dd45a52e8dd0eb526dfed035b124fbc203a3",
+          "src": "audio/assets/9c/9c4e901e53f377f4656a29379450d8540ecaa9c8de0478fd217dd5950b4894c7.mp3",
+          "sha256": "9c4e901e53f377f4656a29379450d8540ecaa9c8de0478fd217dd5950b4894c7",
+          "bytes": 19152,
+          "durationMs": 3192
         }
       ]
     },
@@ -221,12 +230,21 @@
       "sentences": [
         {
           "sourcePath": "requirements/1",
-          "speech": "Work through the chapters in order, keeping a separate saved project at each checkpoint.",
-          "requestHash": "14b0e483227bdda7fd9ca60463fc20580f01b3a44484bdf4371e9d304faa92d6",
-          "src": "audio/assets/c3/c3360c6ba628702945ed8e4747cedf550602d6ea6f705a3470a00609f3f24b83.mp3",
-          "sha256": "c3360c6ba628702945ed8e4747cedf550602d6ea6f705a3470a00609f3f24b83",
-          "bytes": 32544,
-          "durationMs": 5424
+          "speech": "Work through the chapters in order in one Tower Defense project.",
+          "requestHash": "3dffa333a3f1fc57ae7b2e29216ac0bc3612bdd005abb12be70078ac342fa045",
+          "src": "audio/assets/4d/4d03f201629be113f39fc566a40cdea0901141d7286d16013996f8e76d1dbe3f.mp3",
+          "sha256": "4d03f201629be113f39fc566a40cdea0901141d7286d16013996f8e76d1dbe3f",
+          "bytes": 25056,
+          "durationMs": 4176
+        },
+        {
+          "sourcePath": "requirements/1",
+          "speech": "Choose File > Save now at each checkpoint.",
+          "requestHash": "c476466c01cb28fb5ca9489cc3d63a9c30f511da56dd5bfb12f75ce9b09cc07a",
+          "src": "audio/assets/0c/0cae78434c55bbdb2a09194ea35d7d600d31359519c4cd38123ed75116c0a5bd.mp3",
+          "sha256": "0cae78434c55bbdb2a09194ea35d7d600d31359519c4cd38123ed75116c0a5bd",
+          "bytes": 20016,
+          "durationMs": 3336
         }
       ]
     },
@@ -576,12 +594,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/0/instructions/0",
-          "speech": "Start a blank Scratch project and delete the Cat.",
-          "requestHash": "ffeb981e4a741b973545288b9e2d380737dd6d151c333683c76593ffba619550",
-          "src": "audio/assets/95/952445e5a33f3cb76e349221e223505499d864cbd9e22bafd5879c4482390f7c.mp3",
-          "sha256": "952445e5a33f3cb76e349221e223505499d864cbd9e22bafd5879c4482390f7c",
-          "bytes": 20304,
-          "durationMs": 3384
+          "speech": "Sign in to Scratch, click Create, and delete the Cat.",
+          "requestHash": "7b7becdd0d4877e27367715f186a0fdd1aa1b5c5729b21e3008f39b499515fdf",
+          "src": "audio/assets/70/704283d205f0d47adfe56ac453e030486e8e419897620e8f3fd172a0fe64977c.mp3",
+          "sha256": "704283d205f0d47adfe56ac453e030486e8e419897620e8f3fd172a0fe64977c",
+          "bytes": 25488,
+          "durationMs": 4248
         }
       ]
     },
@@ -593,12 +611,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/0/instructions/1",
-          "speech": "Sketch three horizontal roads with a base on their left ends.",
-          "requestHash": "a1f4f6e3c83d8d1a68a10ad9866bf030a5a3bb9a8a9d9546c1f2fa50045623ee",
-          "src": "audio/assets/69/69b6d154993aa74949418fc147bf1a7756481d35fb508406310a6f02bb83a240.mp3",
-          "sha256": "69b6d154993aa74949418fc147bf1a7756481d35fb508406310a6f02bb83a240",
-          "bytes": 24192,
-          "durationMs": 4032
+          "speech": "Type Tower Defense in the project title box at the top of the editor.",
+          "requestHash": "61cf1fb654ca9a4820986bb48986b9e8ee2101eea30f460e72be4feb65f870b1",
+          "src": "audio/assets/28/28ade52439dd84e400bb90761a121a172d50bb7390f98df35f243cf990649329.mp3",
+          "sha256": "28ade52439dd84e400bb90761a121a172d50bb7390f98df35f243cf990649329",
+          "bytes": 26208,
+          "durationMs": 4368
         }
       ]
     },
@@ -610,12 +628,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/0/instructions/2",
-          "speech": "Mark two tower spots beside each road, near its left end: one above the road and one below it.",
-          "requestHash": "c79231b81fb162d7d2a40f04b10dd042341fd4e9ddbe3db3814c1dbf27524f20",
-          "src": "audio/assets/21/2175b2a7fe55667f18373bdd04fc530002aea57096fadfeb4f8f2773a808f63f.mp3",
-          "sha256": "2175b2a7fe55667f18373bdd04fc530002aea57096fadfeb4f8f2773a808f63f",
-          "bytes": 40320,
-          "durationMs": 6720
+          "speech": "Sketch three horizontal roads with a base on their left ends.",
+          "requestHash": "a1f4f6e3c83d8d1a68a10ad9866bf030a5a3bb9a8a9d9546c1f2fa50045623ee",
+          "src": "audio/assets/69/69b6d154993aa74949418fc147bf1a7756481d35fb508406310a6f02bb83a240.mp3",
+          "sha256": "69b6d154993aa74949418fc147bf1a7756481d35fb508406310a6f02bb83a240",
+          "bytes": 24192,
+          "durationMs": 4032
         }
       ]
     },
@@ -627,12 +645,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/0/instructions/3",
-          "speech": "Trace what happens when an enemy is defeated: the player earns coins.",
-          "requestHash": "b406e18ba9db7d4745ec72759032cda9c96cd6f55bb96ba41660cccbee5b2041",
-          "src": "audio/assets/7d/7dfbfb5b1fd3768f8411ddec4a902e473c54d413286200005f16ce124e39aeda.mp3",
-          "sha256": "7dfbfb5b1fd3768f8411ddec4a902e473c54d413286200005f16ce124e39aeda",
-          "bytes": 31248,
-          "durationMs": 5208
+          "speech": "Mark two tower spots beside each road, near its left end: one above the road and one below it.",
+          "requestHash": "c79231b81fb162d7d2a40f04b10dd042341fd4e9ddbe3db3814c1dbf27524f20",
+          "src": "audio/assets/21/2175b2a7fe55667f18373bdd04fc530002aea57096fadfeb4f8f2773a808f63f.mp3",
+          "sha256": "2175b2a7fe55667f18373bdd04fc530002aea57096fadfeb4f8f2773a808f63f",
+          "bytes": 40320,
+          "durationMs": 6720
         }
       ]
     },
@@ -644,6 +662,23 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/0/instructions/4",
+          "speech": "Trace what happens when an enemy is defeated: the player earns coins.",
+          "requestHash": "b406e18ba9db7d4745ec72759032cda9c96cd6f55bb96ba41660cccbee5b2041",
+          "src": "audio/assets/7d/7dfbfb5b1fd3768f8411ddec4a902e473c54d413286200005f16ce124e39aeda.mp3",
+          "sha256": "7dfbfb5b1fd3768f8411ddec4a902e473c54d413286200005f16ce124e39aeda",
+          "bytes": 31248,
+          "durationMs": 5208
+        }
+      ]
+    },
+    {
+      "id": "one-lane/picture-the-defense/instruction/005",
+      "sourcePaths": [
+        "chapters/0/steps/0/instructions/5"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/0/steps/0/instructions/5",
           "speech": "Trace what happens when an enemy gets through: the base loses health.",
           "requestHash": "61c0c3d1fef0ecadbcfd7caab4ca72b82521e7d0b679b3cb37269b4d8d464c36",
           "src": "audio/assets/5d/5d3a5a0b5f02e6531b03d69e8c3196af62933d1bcd60bcaf8fb7e4151ffe731d.mp3",
@@ -1534,12 +1569,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/3/instructions/3",
-          "speech": "Use File > Save to your computer and name the file tower-defense-chapter-1.sb3.",
-          "requestHash": "fc23d3de55f345082488986a8e87cded85b9e2bd280fcffc9698ce20b92e954a",
-          "src": "audio/assets/dc/dc1bdb1971328b1b2167ac12b38399432f23f09b01386b0a1dccada18471d211.mp3",
-          "sha256": "dc1bdb1971328b1b2167ac12b38399432f23f09b01386b0a1dccada18471d211",
-          "bytes": 41040,
-          "durationMs": 6840
+          "speech": "Choose File > Save now.",
+          "requestHash": "9a29adf15409100b352b1d99f9e7539bac9f68042eb18e564a655c8eed7fa422",
+          "src": "audio/assets/27/2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be.mp3",
+          "sha256": "2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be",
+          "bytes": 11664,
+          "durationMs": 1944
         }
       ]
     },
@@ -1551,12 +1586,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/3/instructions/4",
-          "speech": "Open a fresh Scratch editor and use File > Load from your computer to open that file.",
-          "requestHash": "e57852f99bacb7edd70b91a5008b08f6ba3a9606d5b69ef47ac98bcfa1d9294f",
-          "src": "audio/assets/f5/f57113f9ac11e64d3d10ccbe58ee2cda273fc70a895700b77561fa087d56db75.mp3",
-          "sha256": "f57113f9ac11e64d3d10ccbe58ee2cda273fc70a895700b77561fa087d56db75",
-          "bytes": 30240,
-          "durationMs": 5040
+          "speech": "Click My Stuff at the top of the page, then click See inside on Tower Defense.",
+          "requestHash": "9b12693c5776171d30fce0bf45c719f92be101e77ea9223ba933430c0e3e669e",
+          "src": "audio/assets/34/347c2faac9b6c669bcb65acae1705c7e865bb7a83866390020c351a47c54ba01.mp3",
+          "sha256": "347c2faac9b6c669bcb65acae1705c7e865bb7a83866390020c351a47c54ba01",
+          "bytes": 31680,
+          "durationMs": 5280
         },
         {
           "sourcePath": "chapters/0/steps/3/instructions/4",
@@ -1594,12 +1629,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/3/hints/0",
-          "speech": "Loading your saved file checks what you actually saved, not just the project still open in the editor.",
-          "requestHash": "527ea5274a0b40d7251dbd7403c7f56053c31b37db07d24b623cc299f1f1cf2b",
-          "src": "audio/assets/03/038500d67b7a8777049cb78a5c287eaeed8a8cab536b7d8980cc4bb0d498c484.mp3",
-          "sha256": "038500d67b7a8777049cb78a5c287eaeed8a8cab536b7d8980cc4bb0d498c484",
-          "bytes": 36288,
-          "durationMs": 6048
+          "speech": "Reopening from My Stuff checks what Scratch actually saved, not just the project still open in the editor.",
+          "requestHash": "cf5f05a99e2cb98b19a79887e3110137f44371249ac6e027966462513ad34f27",
+          "src": "audio/assets/8b/8b20f772f9f9d1b3483d050d86bcc3d78c8898d3a2e62ad77ac8bb1d3ef59766.mp3",
+          "sha256": "8b20f772f9f9d1b3483d050d86bcc3d78c8898d3a2e62ad77ac8bb1d3ef59766",
+          "bytes": 37872,
+          "durationMs": 6312
         }
       ]
     },
@@ -1651,12 +1686,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/3/checkpoint/task",
-          "speech": "Pass the restart and saved-file escape tests.",
-          "requestHash": "d6207fcf4a41f8e7f183f0ea44cec1b8b202b02efd0a0d89142eef735ca718dd",
-          "src": "audio/assets/37/377e9d59c48ed650690cd55bc5ddfd38915790e58d6a54134737552ce63e308e.mp3",
-          "sha256": "377e9d59c48ed650690cd55bc5ddfd38915790e58d6a54134737552ce63e308e",
-          "bytes": 18720,
-          "durationMs": 3120
+          "speech": "Pass the restart and saved-project escape tests.",
+          "requestHash": "8e4235a20eb626427a3bf7a8db2e761a692de7b2494224db7a33b5d174f2649d",
+          "src": "audio/assets/f1/f1d24028febe5bbe712a06c56f42d7c5fb4dba58cfce37018e90425b4c54cee8.mp3",
+          "sha256": "f1d24028febe5bbe712a06c56f42d7c5fb4dba58cfce37018e90425b4c54cee8",
+          "bytes": 19440,
+          "durationMs": 3240
         },
         {
           "sourcePath": "chapters/0/steps/3/checkpoint/expectedResult",
@@ -1678,12 +1713,12 @@
         },
         {
           "sourcePath": "chapters/0/steps/3/checkpoint/completeWhen/1",
-          "speech": "The chapter file is saved and can be reopened.",
-          "requestHash": "dced89cb3c3c435d43879b3951659bca4e2309263509698bd9574355fd7a64d2",
-          "src": "audio/assets/14/143967762f1aa16e3faec3f177dee1e6c6d5e21b168d705ceb204465300df742.mp3",
-          "sha256": "143967762f1aa16e3faec3f177dee1e6c6d5e21b168d705ceb204465300df742",
-          "bytes": 18576,
-          "durationMs": 3096
+          "speech": "The project is saved and reopens from My Stuff.",
+          "requestHash": "fc00c7397ed5f4b57457594cf2024ee1c48ad1008defd556b65b50139365797f",
+          "src": "audio/assets/bc/bc024773a71f561aaa4a3039821227946567cba97e54d24914acdc7a928a5289.mp3",
+          "sha256": "bc024773a71f561aaa4a3039821227946567cba97e54d24914acdc7a928a5289",
+          "bytes": 19584,
+          "durationMs": 3264
         }
       ]
     },
@@ -1730,12 +1765,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/1/steps/0/instructions/0",
-          "speech": "Load your Chapter 1 project and paint a new sprite named Tower.",
-          "requestHash": "c9438b3e2d0f5aafdd277eae77c48b2682cf9fd2c7851dff4d2520169a4193d4",
-          "src": "audio/assets/a8/a86b85eb4dc92961b3c995e6e7567b8677e8751eece19559e5c60f0a57d1ac1c.mp3",
-          "sha256": "a86b85eb4dc92961b3c995e6e7567b8677e8751eece19559e5c60f0a57d1ac1c",
-          "bytes": 24192,
-          "durationMs": 4032
+          "speech": "Continue in your Tower Defense project.",
+          "requestHash": "c8cfe9547ebadacd5791994c52683d62bbcf49f9ef89f14a702a376be66389dc",
+          "src": "audio/assets/6d/6db9ec457644b1f32e3a31911f464f2afeb4535b71901e6b0407a7de13b0c49e.mp3",
+          "sha256": "6db9ec457644b1f32e3a31911f464f2afeb4535b71901e6b0407a7de13b0c49e",
+          "bytes": 17280,
+          "durationMs": 2880
+        },
+        {
+          "sourcePath": "chapters/1/steps/0/instructions/0",
+          "speech": "Paint a new sprite named Tower.",
+          "requestHash": "c21c011f763cd41d68658f24f94f0e631009435c21577920a97034b9a224781f",
+          "src": "audio/assets/ce/cefb485358e7cb0ae2c86b7c212491d33c6a836b43954150bac7a3b68db9dd95.mp3",
+          "sha256": "cefb485358e7cb0ae2c86b7c212491d33c6a836b43954150bac7a3b68db9dd95",
+          "bytes": 13968,
+          "durationMs": 2328
         }
       ]
     },
@@ -2856,12 +2900,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/1/steps/3/instructions/2",
-          "speech": "Save as tower-defense-chapter-2.sb3 using File > Save to your computer.",
-          "requestHash": "1a91c500259e4bdc19d09408fd667f4bb79504224722caee2579a689853ad958",
-          "src": "audio/assets/fd/fd097e9936f5156259a491158422625c416b9c24f78abaef6fe01507d2406640.mp3",
-          "sha256": "fd097e9936f5156259a491158422625c416b9c24f78abaef6fe01507d2406640",
-          "bytes": 37152,
-          "durationMs": 6192
+          "speech": "Choose File > Save now.",
+          "requestHash": "9a29adf15409100b352b1d99f9e7539bac9f68042eb18e564a655c8eed7fa422",
+          "src": "audio/assets/27/2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be.mp3",
+          "sha256": "2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be",
+          "bytes": 11664,
+          "durationMs": 1944
         }
       ]
     },
@@ -2873,12 +2917,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/1/steps/3/instructions/3",
-          "speech": "Use File > Load from your computer in a fresh editor.",
-          "requestHash": "dc786dfca04799781824fb1d720b039070422f2e62528201b4a182529e247232",
-          "src": "audio/assets/c8/c88bce4e8b54a89be3fa463e57d7eb7e7f2202991d406f47a35169650779651f.mp3",
-          "sha256": "c88bce4e8b54a89be3fa463e57d7eb7e7f2202991d406f47a35169650779651f",
-          "bytes": 22032,
-          "durationMs": 3672
+          "speech": "Reopen the project from My Stuff with See inside.",
+          "requestHash": "4665046eda8cc687826e223bc2e39db56f2b3ef8bee37a2cd76062e9bee7c74d",
+          "src": "audio/assets/4f/4f6803db21e08e3cd24c46d7f53174b5bb8ef8336ec96f8adfab801c66949fba.mp3",
+          "sha256": "4f6803db21e08e3cd24c46d7f53174b5bb8ef8336ec96f8adfab801c66949fba",
+          "bytes": 19872,
+          "durationMs": 3312
         },
         {
           "sourcePath": "chapters/1/steps/3/instructions/3",
@@ -2899,12 +2943,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/1/steps/3/hints/0",
-          "speech": "Keep the Chapter 1 download too, so you have a working earlier version.",
-          "requestHash": "ca731934805c840e6876e81a99a182382e83da25acc9d9a397f8bcae92026299",
-          "src": "audio/assets/9d/9d9a7ae23a7f2f5ee52f379349da957ae0dd99bf4902de678c377e93e182047d.mp3",
-          "sha256": "9d9a7ae23a7f2f5ee52f379349da957ae0dd99bf4902de678c377e93e182047d",
-          "bytes": 25056,
-          "durationMs": 4176
+          "speech": "Scratch also saves on its own, but File > Save now makes sure your latest change is saved before you test.",
+          "requestHash": "d8b096e68506f2984a538445b984a2678c53188026d33be29f4e7ab589c7694e",
+          "src": "audio/assets/b4/b4052d39e5a0100e9ee171589abe011c40f7b10d668ac391f6aeb40366938490.mp3",
+          "sha256": "b4052d39e5a0100e9ee171589abe011c40f7b10d668ac391f6aeb40366938490",
+          "bytes": 41184,
+          "durationMs": 6864
         }
       ]
     },
@@ -2956,12 +3000,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/1/steps/3/checkpoint/task",
-          "speech": "Buy once in both allowed game states and repeat after reloading.",
-          "requestHash": "56e381907e9133dc45062ca4f3ae715ff267ecd491ecea93644d8358cc8f3346",
-          "src": "audio/assets/9e/9e7ad7f39ed4cb868e649bcd5c365a4fc4070286107a8441a982f94023226a3a.mp3",
-          "sha256": "9e7ad7f39ed4cb868e649bcd5c365a4fc4070286107a8441a982f94023226a3a",
-          "bytes": 25488,
-          "durationMs": 4248
+          "speech": "Buy once in both allowed game states and repeat after reopening.",
+          "requestHash": "060416392e767b21ea0db1d09b42a63627145c424a6d6d50dd3660cef65c76fe",
+          "src": "audio/assets/d6/d622d40510fca65d9046e10bf8ea5c6448a33241908b49b70da0233536390f29.mp3",
+          "sha256": "d622d40510fca65d9046e10bf8ea5c6448a33241908b49b70da0233536390f29",
+          "bytes": 25632,
+          "durationMs": 4272
         },
         {
           "sourcePath": "chapters/1/steps/3/checkpoint/expectedResult",
@@ -3051,15 +3095,6 @@
         "chapters/2/steps/0/instructions/0"
       ],
       "sentences": [
-        {
-          "sourcePath": "chapters/2/steps/0/instructions/0",
-          "speech": "Load Chapter 2.",
-          "requestHash": "4eccd5089905796a0abb89a1a160a9eb414fe7aaed1d6d10aec02cce9e89697d",
-          "src": "audio/assets/db/db24f6905d72b7601c1362928892ac76454adc18f5806ed59b2ed2806f5b90c5.mp3",
-          "sha256": "db24f6905d72b7601c1362928892ac76454adc18f5806ed59b2ed2806f5b90c5",
-          "bytes": 11232,
-          "durationMs": 1872
-        },
         {
           "sourcePath": "chapters/2/steps/0/instructions/0",
           "speech": "In Variables, click Make a List and create Shot X with For all sprites.",
@@ -5310,12 +5345,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/2/steps/5/instructions/4",
-          "speech": "Save as tower-defense-chapter-3.sb3, reopen it in a fresh editor, and repeat the defended and undefended runs.",
-          "requestHash": "ca43b3ea47f6bb0c7c335320c01513dca1945bec119119fe96a98a89043f73f2",
-          "src": "audio/assets/d3/d388d8479fcf1c1cff4d6ccf4f4b9f5769b2b8545554586d927e86292f91b049.mp3",
-          "sha256": "d388d8479fcf1c1cff4d6ccf4f4b9f5769b2b8545554586d927e86292f91b049",
-          "bytes": 52848,
-          "durationMs": 8808
+          "speech": "Choose File > Save now, reopen the project from My Stuff with See inside, and repeat the defended and undefended runs.",
+          "requestHash": "cb7bc4cd13076a0e803a3e98d517438c8b9fbd4925978b2f8849ea108945cf9a",
+          "src": "audio/assets/5a/5a176267bb529b0368a4d196e05c26049e814720a96081652408cba37fda462b.mp3",
+          "sha256": "5a176267bb529b0368a4d196e05c26049e814720a96081652408cba37fda462b",
+          "bytes": 49248,
+          "durationMs": 8208
         }
       ]
     },
@@ -5508,12 +5543,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/0/instructions/0",
-          "speech": "Load tower-defense-chapter-3.sb3.",
-          "requestHash": "4d28b4215eefe8d491fbb38b9aa2e323f9b04086d3b784545a06deeda3fea4e1",
-          "src": "audio/assets/59/591f0dd98784dd70742292f35ff6b639de99d2b0beff3d6ab4e71e52d32029fe.mp3",
-          "sha256": "591f0dd98784dd70742292f35ff6b639de99d2b0beff3d6ab4e71e52d32029fe",
-          "bytes": 24048,
-          "durationMs": 4008
+          "speech": "Continue in your Tower Defense project.",
+          "requestHash": "c8cfe9547ebadacd5791994c52683d62bbcf49f9ef89f14a702a376be66389dc",
+          "src": "audio/assets/6d/6db9ec457644b1f32e3a31911f464f2afeb4535b71901e6b0407a7de13b0c49e.mp3",
+          "sha256": "6db9ec457644b1f32e3a31911f464f2afeb4535b71901e6b0407a7de13b0c49e",
+          "bytes": 17280,
+          "durationMs": 2880
         }
       ]
     },
@@ -7637,12 +7672,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/5/instructions/5",
-          "speech": "Save as tower-defense-chapter-4.sb3, reopen it, and repeat the one-tower-per-lane test.",
-          "requestHash": "44529dcfc298c9bc766a8924c4cdee4bbbbbf1f4feb445c84178212b880c357f",
-          "src": "audio/assets/58/58029c50cc439e986eac2ff789d3823db6d2a72546fe6a526f3a9e2ddbcddd2e.mp3",
-          "sha256": "58029c50cc439e986eac2ff789d3823db6d2a72546fe6a526f3a9e2ddbcddd2e",
-          "bytes": 44928,
-          "durationMs": 7488
+          "speech": "Choose File > Save now, reopen the project from My Stuff with See inside, and repeat the one-tower-per-lane test.",
+          "requestHash": "b94cbb564b8bba09ec20465630d7eed4d7ee5e11c6867ea2c3d2eb0a1e0c2cfd",
+          "src": "audio/assets/3e/3ebf278ee350e9dda31e9136768c9f47668797f4c265a8f2d4e6f3310d219aa1.mp3",
+          "sha256": "3ebf278ee350e9dda31e9136768c9f47668797f4c265a8f2d4e6f3310d219aa1",
+          "bytes": 48528,
+          "durationMs": 8088
         }
       ]
     },
@@ -7853,15 +7888,6 @@
         "chapters/4/steps/0/instructions/0"
       ],
       "sentences": [
-        {
-          "sourcePath": "chapters/4/steps/0/instructions/0",
-          "speech": "Load Chapter 4.",
-          "requestHash": "0b6ef159a1c5b1dab33464ed42bd608cd982d12593058d9a5f2293a64d2ba29f",
-          "src": "audio/assets/10/10bb61f089e9df4f3033e6ba331c8ae5f5f03fdd60fa4f5e4df3bd82736d2ac3.mp3",
-          "sha256": "10bb61f089e9df4f3033e6ba331c8ae5f5f03fdd60fa4f5e4df3bd82736d2ac3",
-          "bytes": 11232,
-          "durationMs": 1872
-        },
         {
           "sourcePath": "chapters/4/steps/0/instructions/0",
           "speech": "Create the variables in the next four instructions with For all sprites.",
@@ -10028,12 +10054,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/4/steps/5/instructions/5",
-          "speech": "Save as tower-defense-chapter-5.sb3, reopen it, and play all three waves using the normal settings.",
-          "requestHash": "a42696d47b1b6a65611bf757015417de30b9bcf941464aa888f2673b4dc68164",
-          "src": "audio/assets/8a/8aa2aa11673a9695716304b25761d9e322638533df52cd8c4c4b70015f57ded5.mp3",
-          "sha256": "8aa2aa11673a9695716304b25761d9e322638533df52cd8c4c4b70015f57ded5",
-          "bytes": 46368,
-          "durationMs": 7728
+          "speech": "Choose File > Save now, reopen the project from My Stuff with See inside, and play all three waves using the normal settings.",
+          "requestHash": "5130c0deb52e4c6567b5214c591a53dc530fd8118a9e01956cc15fb5937d2d70",
+          "src": "audio/assets/1c/1c784d93ed7350aea2067b2f1183b29ea8b753794596ed02d4d7d116e891879c.mp3",
+          "sha256": "1c784d93ed7350aea2067b2f1183b29ea8b753794596ed02d4d7d116e891879c",
+          "bytes": 49824,
+          "durationMs": 8304
         }
       ]
     },
@@ -10232,15 +10258,6 @@
         "chapters/5/steps/0/instructions/0"
       ],
       "sentences": [
-        {
-          "sourcePath": "chapters/5/steps/0/instructions/0",
-          "speech": "Load Chapter 5.",
-          "requestHash": "de4222d533848fa4afe30a8cf6ef56d3dfd17a328d5d949905325a8a8da217ab",
-          "src": "audio/assets/89/89b79a71ca46caa62bdcb12004951dfa37f65da539000bb7415884cb4d24dad5.mp3",
-          "sha256": "89b79a71ca46caa62bdcb12004951dfa37f65da539000bb7415884cb4d24dad5",
-          "bytes": 11232,
-          "durationMs": 1872
-        },
         {
           "sourcePath": "chapters/5/steps/0/instructions/0",
           "speech": "On the Stage, change Final Level from 1 to 2 in the green-flag script.",
@@ -11336,21 +11353,30 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/3/instructions/0",
-          "speech": "Save the working two-level game first as tower-defense-two-levels.sb3.",
-          "requestHash": "92f15b2aa28b6d90ef887899202841ad7867d65da7db870eb893d4d1a2698383",
-          "src": "audio/assets/85/859b098fd53e901daf919ccc5c37245efebfe5fdfabdf9c8037e71666f0e5183.mp3",
-          "sha256": "859b098fd53e901daf919ccc5c37245efebfe5fdfabdf9c8037e71666f0e5183",
-          "bytes": 30672,
-          "durationMs": 5112
+          "speech": "Choose File > Save now.",
+          "requestHash": "9a29adf15409100b352b1d99f9e7539bac9f68042eb18e564a655c8eed7fa422",
+          "src": "audio/assets/27/2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be.mp3",
+          "sha256": "2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be",
+          "bytes": 11664,
+          "durationMs": 1944
         },
         {
           "sourcePath": "chapters/5/steps/3/instructions/0",
-          "speech": "Keep that file as your reference.",
-          "requestHash": "28b5b3dcc69136c4964691768c60903f03677e5d9fca7adc9982664bddaabdb8",
-          "src": "audio/assets/eb/ebbb3a697eb722985a8e42a8ae06537442349611e72d1abffe69b9736749bf49.mp3",
-          "sha256": "ebbb3a697eb722985a8e42a8ae06537442349611e72d1abffe69b9736749bf49",
-          "bytes": 13824,
-          "durationMs": 2304
+          "speech": "Your Tower Defense project now holds the working two-level game.",
+          "requestHash": "503830434047fd3f1fe9029a8bf898f8f42f1783fa06b62212c8ce596a68bec7",
+          "src": "audio/assets/a9/a9ace85881850688a1ccd553b6fcfa2cb70645c63ae6873f85e4c7eed63622b3.mp3",
+          "sha256": "a9ace85881850688a1ccd553b6fcfa2cb70645c63ae6873f85e4c7eed63622b3",
+          "bytes": 24480,
+          "durationMs": 4080
+        },
+        {
+          "sourcePath": "chapters/5/steps/3/instructions/0",
+          "speech": "Keep it unchanged as your reference.",
+          "requestHash": "97b2f24260c95ff390d3897650a9109f925a8c335bffa2b72e1fc14d6e91dbc0",
+          "src": "audio/assets/ba/bafc267f9b844d020ea40d6ed84bc6081854f0fdc06709960cd36f493064aeb2.mp3",
+          "sha256": "bafc267f9b844d020ea40d6ed84bc6081854f0fdc06709960cd36f493064aeb2",
+          "bytes": 15408,
+          "durationMs": 2568
         }
       ]
     },
@@ -11362,21 +11388,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/3/instructions/1",
-          "speech": "Choose one goal for Level 3: a gentler introduction, more decisions about where to spend coins, or a harder final wave.",
-          "requestHash": "f7abd542252102858b3f894fd39933db862d10f8e7bbf369a591d7f28edeab8d",
-          "src": "audio/assets/51/5113519d642a04fbbe96c49f9037d2003d6cec72d8f0300ec33e121d5c48c094.mp3",
-          "sha256": "5113519d642a04fbbe96c49f9037d2003d6cec72d8f0300ec33e121d5c48c094",
-          "bytes": 46368,
-          "durationMs": 7728
+          "speech": "Choose File > Save as a copy.",
+          "requestHash": "ce0bb1f1fe0ba3641ce7c3cf48746769026a3aec3546acfccae8e48959566e8a",
+          "src": "audio/assets/ec/ecd4a19d01a1767964d1945b05c7d4643ba28466626bd290097cfd3456bbf9c7.mp3",
+          "sha256": "ecd4a19d01a1767964d1945b05c7d4643ba28466626bd290097cfd3456bbf9c7",
+          "bytes": 14256,
+          "durationMs": 2376
         },
         {
           "sourcePath": "chapters/5/steps/3/instructions/1",
-          "speech": "Write what you expect players to do.",
-          "requestHash": "2e5ffa6adfebb304eec8b9f1db36af526620269456a4ded507adee94c6d6b569",
-          "src": "audio/assets/49/4961e904c7f30b4dc10e370fe9241e21b0553ecc1b1f642a09f89105379f675d.mp3",
-          "sha256": "4961e904c7f30b4dc10e370fe9241e21b0553ecc1b1f642a09f89105379f675d",
-          "bytes": 14688,
-          "durationMs": 2448
+          "speech": "Scratch opens the copy, and its title ends with copy.",
+          "requestHash": "74becd96b24af5e7f941a59b31a5f46087fce2940b592ce8ac22148532b56790",
+          "src": "audio/assets/e7/e7cabfad2de5916b3e8056e4754a20dc499c54e3bb382066b17247e47998a3bd.mp3",
+          "sha256": "e7cabfad2de5916b3e8056e4754a20dc499c54e3bb382066b17247e47998a3bd",
+          "bytes": 25056,
+          "durationMs": 4176
         }
       ]
     },
@@ -11388,12 +11414,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/3/instructions/2",
-          "speech": "On the Stage, add a separate if Level equals 3 then after the Level 2 if in Load level settings.",
-          "requestHash": "0a6c8472b462a8c6d9941ee9e900cb1f393bdca3587b97e2f8f89a31478046d2",
-          "src": "audio/assets/b2/b22881c38825e019b340633ac849866562b25a121ca0774421fb485ae326a715.mp3",
-          "sha256": "b22881c38825e019b340633ac849866562b25a121ca0774421fb485ae326a715",
-          "bytes": 35424,
-          "durationMs": 5904
+          "speech": "Change the copy's title to Tower Defense My Levels.",
+          "requestHash": "c845fe3a08b3839405c6a783e63e9fe3e395cbf113668b386f90ab638c527af5",
+          "src": "audio/assets/13/1321f8d95016159689740aa8459f01ddee46162ec3fe7cfa5f28f12392f7b9ca.mp3",
+          "sha256": "1321f8d95016159689740aa8459f01ddee46162ec3fe7cfa5f28f12392f7b9ca",
+          "bytes": 21456,
+          "durationMs": 3576
+        },
+        {
+          "sourcePath": "chapters/5/steps/3/instructions/2",
+          "speech": "Build Level 3 only in this copy.",
+          "requestHash": "da2921cdb352be982c9c28133c4078b70bbdee6e4b2e0e7c262532364d712a9d",
+          "src": "audio/assets/bd/bd86c58f83af4e85709d81cdc6813353ae81df8c2e62ff9c662e19df0e10cac5.mp3",
+          "sha256": "bd86c58f83af4e85709d81cdc6813353ae81df8c2e62ff9c662e19df0e10cac5",
+          "bytes": 16416,
+          "durationMs": 2736
         }
       ]
     },
@@ -11405,21 +11440,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/3/instructions/3",
-          "speech": "Inside the new if, set Waves in Level to two or three.",
-          "requestHash": "e23a96308a63101230b90f35f6888def30a60dc5fd5f3752e70d21534238e85d",
-          "src": "audio/assets/48/48cec423c5668f6e6b7f937433efe4168c47d5a824ef3f7577f30eb33b26d32c.mp3",
-          "sha256": "48cec423c5668f6e6b7f937433efe4168c47d5a824ef3f7577f30eb33b26d32c",
-          "bytes": 21744,
-          "durationMs": 3624
+          "speech": "Choose one goal for Level 3: a gentler introduction, more decisions about where to spend coins, or a harder final wave.",
+          "requestHash": "f7abd542252102858b3f894fd39933db862d10f8e7bbf369a591d7f28edeab8d",
+          "src": "audio/assets/51/5113519d642a04fbbe96c49f9037d2003d6cec72d8f0300ec33e121d5c48c094.mp3",
+          "sha256": "5113519d642a04fbbe96c49f9037d2003d6cec72d8f0300ec33e121d5c48c094",
+          "bytes": 46368,
+          "durationMs": 7728
         },
         {
           "sourcePath": "chapters/5/steps/3/instructions/3",
-          "speech": "You may also set different Starting Coins, Enemy HP, or Reload Time here.",
-          "requestHash": "51687768dc26dee8d54e3b36c8002f71f722f7645c121bd142ec32822051aae8",
-          "src": "audio/assets/c4/c47496180ecd66d0676f0861b990875555e537ac84421e4ab0994ac055da03ef.mp3",
-          "sha256": "c47496180ecd66d0676f0861b990875555e537ac84421e4ab0994ac055da03ef",
-          "bytes": 30816,
-          "durationMs": 5136
+          "speech": "Write what you expect players to do.",
+          "requestHash": "2e5ffa6adfebb304eec8b9f1db36af526620269456a4ded507adee94c6d6b569",
+          "src": "audio/assets/49/4961e904c7f30b4dc10e370fe9241e21b0553ecc1b1f642a09f89105379f675d.mp3",
+          "sha256": "4961e904c7f30b4dc10e370fe9241e21b0553ecc1b1f642a09f89105379f675d",
+          "bytes": 14688,
+          "durationMs": 2448
         }
       ]
     },
@@ -11431,12 +11466,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/3/instructions/4",
-          "speech": "Add a separate if Level equals 3 then after the Level 2 if in Load wave settings.",
-          "requestHash": "e6df855296b0d1e74713289038bf3cb24127f0e08c4db53d8360e09ddbe5f4f2",
-          "src": "audio/assets/e6/e6066c00db58c1a9fb886472bbde806f96df39238851e30c2babf2a23d5c2163.mp3",
-          "sha256": "e6066c00db58c1a9fb886472bbde806f96df39238851e30c2babf2a23d5c2163",
-          "bytes": 31248,
-          "durationMs": 5208
+          "speech": "On the Stage, add a separate if Level equals 3 then after the Level 2 if in Load level settings.",
+          "requestHash": "0a6c8472b462a8c6d9941ee9e900cb1f393bdca3587b97e2f8f89a31478046d2",
+          "src": "audio/assets/b2/b22881c38825e019b340633ac849866562b25a121ca0774421fb485ae326a715.mp3",
+          "sha256": "b22881c38825e019b340633ac849866562b25a121ca0774421fb485ae326a715",
+          "bytes": 35424,
+          "durationMs": 5904
         }
       ]
     },
@@ -11448,21 +11483,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/3/instructions/5",
-          "speech": "Inside this new if, set a positive Enemy Count and Spawn Gap for every wave.",
-          "requestHash": "c9e40bf49da8213d34fd058422c1552e964a9c72a8dbf1be532ef645eb924e85",
-          "src": "audio/assets/3f/3f05b9a09b85f2fd6d7ad572b9cd750736ee82a69db4034840febf9e1adebe46.mp3",
-          "sha256": "3f05b9a09b85f2fd6d7ad572b9cd750736ee82a69db4034840febf9e1adebe46",
-          "bytes": 31392,
-          "durationMs": 5232
+          "speech": "Inside the new if, set Waves in Level to two or three.",
+          "requestHash": "e23a96308a63101230b90f35f6888def30a60dc5fd5f3752e70d21534238e85d",
+          "src": "audio/assets/48/48cec423c5668f6e6b7f937433efe4168c47d5a824ef3f7577f30eb33b26d32c.mp3",
+          "sha256": "48cec423c5668f6e6b7f937433efe4168c47d5a824ef3f7577f30eb33b26d32c",
+          "bytes": 21744,
+          "durationMs": 3624
         },
         {
           "sourcePath": "chapters/5/steps/3/instructions/5",
-          "speech": "Start with counts of 3 or 6 and a gap of at least 15; change one thing first.",
-          "requestHash": "515fdfa37e5b2b2c98b899848485955df7433618f8b198c64a06207834ae4da0",
-          "src": "audio/assets/d4/d498801ba07fd815b90c70d8bff67d73e3a3decf37ece8b937ccd3689678b71f.mp3",
-          "sha256": "d498801ba07fd815b90c70d8bff67d73e3a3decf37ece8b937ccd3689678b71f",
-          "bytes": 35424,
-          "durationMs": 5904
+          "speech": "You may also set different Starting Coins, Enemy HP, or Reload Time here.",
+          "requestHash": "51687768dc26dee8d54e3b36c8002f71f722f7645c121bd142ec32822051aae8",
+          "src": "audio/assets/c4/c47496180ecd66d0676f0861b990875555e537ac84421e4ab0994ac055da03ef.mp3",
+          "sha256": "c47496180ecd66d0676f0861b990875555e537ac84421e4ab0994ac055da03ef",
+          "bytes": 30816,
+          "durationMs": 5136
         }
       ]
     },
@@ -11474,21 +11509,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/3/instructions/6",
-          "speech": "Change Final Level from 2 to 3.",
-          "requestHash": "02eb77688de0d8b58f3eb2b516a2def9db0c30529c64f899be2b7fe9a4bb7b41",
-          "src": "audio/assets/76/76d7add2683fc61742e64d48c3e5d2649ce86517f3903608356fcbef4969fa38.mp3",
-          "sha256": "76d7add2683fc61742e64d48c3e5d2649ce86517f3903608356fcbef4969fa38",
-          "bytes": 15408,
-          "durationMs": 2568
-        },
-        {
-          "sourcePath": "chapters/5/steps/3/instructions/6",
-          "speech": "Reuse the existing movement, shooting, purchase, and reset code.",
-          "requestHash": "cd54418f6bf670c6dc87386f8edd33ec1961a0548f4343e08645e6232deea146",
-          "src": "audio/assets/57/57d2472b77983dbfb9630862b43d4dc3cb385ff757588ec6815761a8144c14a1.mp3",
-          "sha256": "57d2472b77983dbfb9630862b43d4dc3cb385ff757588ec6815761a8144c14a1",
-          "bytes": 29232,
-          "durationMs": 4872
+          "speech": "Add a separate if Level equals 3 then after the Level 2 if in Load wave settings.",
+          "requestHash": "e6df855296b0d1e74713289038bf3cb24127f0e08c4db53d8360e09ddbe5f4f2",
+          "src": "audio/assets/e6/e6066c00db58c1a9fb886472bbde806f96df39238851e30c2babf2a23d5c2163.mp3",
+          "sha256": "e6066c00db58c1a9fb886472bbde806f96df39238851e30c2babf2a23d5c2163",
+          "bytes": 31248,
+          "durationMs": 5208
         }
       ]
     },
@@ -11500,21 +11526,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/3/instructions/7",
-          "speech": "Play from Level 2 into your new level.",
-          "requestHash": "f9336cdd814379e2127a47596545603d4e4252c226742c12b3d3437fb3f8d948",
-          "src": "audio/assets/1f/1ff870671026fc5b81faf464f8fd2c0fe96a2c9f4cc3337a731ea228e06644e4.mp3",
-          "sha256": "1ff870671026fc5b81faf464f8fd2c0fe96a2c9f4cc3337a731ea228e06644e4",
-          "bytes": 16416,
-          "durationMs": 2736
+          "speech": "Inside this new if, set a positive Enemy Count and Spawn Gap for every wave.",
+          "requestHash": "c9e40bf49da8213d34fd058422c1552e964a9c72a8dbf1be532ef645eb924e85",
+          "src": "audio/assets/3f/3f05b9a09b85f2fd6d7ad572b9cd750736ee82a69db4034840febf9e1adebe46.mp3",
+          "sha256": "3f05b9a09b85f2fd6d7ad572b9cd750736ee82a69db4034840febf9e1adebe46",
+          "bytes": 31392,
+          "durationMs": 5232
         },
         {
           "sourcePath": "chapters/5/steps/3/instructions/7",
-          "speech": "Check the fresh resources, manual starts, every wave, and the final win.",
-          "requestHash": "285131aa5c59fd5f9da89b732369049073e7889a269e00e5e93089385f4d7cdc",
-          "src": "audio/assets/b5/b5a82b023dee1c56a3d84ee88feed211dc454ef7453c05f03c7f3f046e69d625.mp3",
-          "sha256": "b5a82b023dee1c56a3d84ee88feed211dc454ef7453c05f03c7f3f046e69d625",
-          "bytes": 27936,
-          "durationMs": 4656
+          "speech": "Start with counts of 3 or 6 and a gap of at least 15; change one thing first.",
+          "requestHash": "515fdfa37e5b2b2c98b899848485955df7433618f8b198c64a06207834ae4da0",
+          "src": "audio/assets/d4/d498801ba07fd815b90c70d8bff67d73e3a3decf37ece8b937ccd3689678b71f.mp3",
+          "sha256": "d498801ba07fd815b90c70d8bff67d73e3a3decf37ece8b937ccd3689678b71f",
+          "bytes": 35424,
+          "durationMs": 5904
         }
       ]
     },
@@ -11526,21 +11552,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/3/instructions/8",
-          "speech": "Try a sensible strategy and a poor one.",
-          "requestHash": "b9735a9b7a69d396ec4f24a78dd7eb241d11515affe6422ff48f2e11c5c0d87e",
-          "src": "audio/assets/6a/6a678d07085d2e846ba8fe54ae7f2678fe70cb7455b211e5562a036039d6473a.mp3",
-          "sha256": "6a678d07085d2e846ba8fe54ae7f2678fe70cb7455b211e5562a036039d6473a",
-          "bytes": 18144,
-          "durationMs": 3024
+          "speech": "Change Final Level from 2 to 3.",
+          "requestHash": "02eb77688de0d8b58f3eb2b516a2def9db0c30529c64f899be2b7fe9a4bb7b41",
+          "src": "audio/assets/76/76d7add2683fc61742e64d48c3e5d2649ce86517f3903608356fcbef4969fa38.mp3",
+          "sha256": "76d7add2683fc61742e64d48c3e5d2649ce86517f3903608356fcbef4969fa38",
+          "bytes": 15408,
+          "durationMs": 2568
         },
         {
           "sourcePath": "chapters/5/steps/3/instructions/8",
-          "speech": "Record the remaining health and explain whether your design goal was met.",
-          "requestHash": "754a96795e23e20e79a38fb5d6694d8ede1820376f56bcb19232dfede600c1cf",
-          "src": "audio/assets/0f/0f0d9730bf00015e4df95157a9523700dde7f7dcc332b2bf4157505cc0e27ed5.mp3",
-          "sha256": "0f0d9730bf00015e4df95157a9523700dde7f7dcc332b2bf4157505cc0e27ed5",
-          "bytes": 26928,
-          "durationMs": 4488
+          "speech": "Reuse the existing movement, shooting, purchase, and reset code.",
+          "requestHash": "cd54418f6bf670c6dc87386f8edd33ec1961a0548f4343e08645e6232deea146",
+          "src": "audio/assets/57/57d2472b77983dbfb9630862b43d4dc3cb385ff757588ec6815761a8144c14a1.mp3",
+          "sha256": "57d2472b77983dbfb9630862b43d4dc3cb385ff757588ec6815761a8144c14a1",
+          "bytes": 29232,
+          "durationMs": 4872
         }
       ]
     },
@@ -11552,6 +11578,58 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/3/instructions/9",
+          "speech": "Play from Level 2 into your new level.",
+          "requestHash": "f9336cdd814379e2127a47596545603d4e4252c226742c12b3d3437fb3f8d948",
+          "src": "audio/assets/1f/1ff870671026fc5b81faf464f8fd2c0fe96a2c9f4cc3337a731ea228e06644e4.mp3",
+          "sha256": "1ff870671026fc5b81faf464f8fd2c0fe96a2c9f4cc3337a731ea228e06644e4",
+          "bytes": 16416,
+          "durationMs": 2736
+        },
+        {
+          "sourcePath": "chapters/5/steps/3/instructions/9",
+          "speech": "Check the fresh resources, manual starts, every wave, and the final win.",
+          "requestHash": "285131aa5c59fd5f9da89b732369049073e7889a269e00e5e93089385f4d7cdc",
+          "src": "audio/assets/b5/b5a82b023dee1c56a3d84ee88feed211dc454ef7453c05f03c7f3f046e69d625.mp3",
+          "sha256": "b5a82b023dee1c56a3d84ee88feed211dc454ef7453c05f03c7f3f046e69d625",
+          "bytes": 27936,
+          "durationMs": 4656
+        }
+      ]
+    },
+    {
+      "id": "make-another-level/design-your-own-level/instruction/010",
+      "sourcePaths": [
+        "chapters/5/steps/3/instructions/10"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/5/steps/3/instructions/10",
+          "speech": "Try a sensible strategy and a poor one.",
+          "requestHash": "b9735a9b7a69d396ec4f24a78dd7eb241d11515affe6422ff48f2e11c5c0d87e",
+          "src": "audio/assets/6a/6a678d07085d2e846ba8fe54ae7f2678fe70cb7455b211e5562a036039d6473a.mp3",
+          "sha256": "6a678d07085d2e846ba8fe54ae7f2678fe70cb7455b211e5562a036039d6473a",
+          "bytes": 18144,
+          "durationMs": 3024
+        },
+        {
+          "sourcePath": "chapters/5/steps/3/instructions/10",
+          "speech": "Record the remaining health and explain whether your design goal was met.",
+          "requestHash": "754a96795e23e20e79a38fb5d6694d8ede1820376f56bcb19232dfede600c1cf",
+          "src": "audio/assets/0f/0f0d9730bf00015e4df95157a9523700dde7f7dcc332b2bf4157505cc0e27ed5.mp3",
+          "sha256": "0f0d9730bf00015e4df95157a9523700dde7f7dcc332b2bf4157505cc0e27ed5",
+          "bytes": 26928,
+          "durationMs": 4488
+        }
+      ]
+    },
+    {
+      "id": "make-another-level/design-your-own-level/instruction/011",
+      "sourcePaths": [
+        "chapters/5/steps/3/instructions/11"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/5/steps/3/instructions/11",
           "speech": "Revise one setting based on the result, then retest.",
           "requestHash": "26869b38f26c9181a9bb63ba438e673948ffbae89270b7ab34be147f63e618ab",
           "src": "audio/assets/fe/fe7cd832e6776b7456fb02f18fd2c797ad53c2590fa58d2645ad449d4019dfda.mp3",
@@ -11560,7 +11638,7 @@
           "durationMs": 4104
         },
         {
-          "sourcePath": "chapters/5/steps/3/instructions/9",
+          "sourcePath": "chapters/5/steps/3/instructions/11",
           "speech": "If possible, ask another student to play without explaining your strategy.",
           "requestHash": "6acb248c0cd8bd536a4b92b4c1e2ebe72ec7d0b625fa2e87d13a3a9143b73bd1",
           "src": "audio/assets/b0/b0b669981d6b4245d7762640313a554e9151b8a79a391f64d8885cc2c8342849.mp3",
@@ -11595,30 +11673,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/3/hints/1",
-          "speech": "Reload Time, Enemy HP, and Starting Coins change difficulty the most.",
-          "requestHash": "5e4ad394beebbd6980d8e7cde7d0cf84acb6171fabd6d158603076e4c7555235",
-          "src": "audio/assets/52/52eee7dba8977d09e82cfcc977e47f363cb838dd00d485095b29bea218180549.mp3",
-          "sha256": "52eee7dba8977d09e82cfcc977e47f363cb838dd00d485095b29bea218180549",
-          "bytes": 31392,
-          "durationMs": 5232
+          "speech": "If the title does not end with copy, you are still in the original.",
+          "requestHash": "4374c2abe1d88002d2004fddcf0ce7d6d0981d79977e5385ddef7e60bff3e171",
+          "src": "audio/assets/c4/c46cee2931a14b0c71b7689ad38a7411b54372bc63039245b3d4a52fcb218b05.mp3",
+          "sha256": "c46cee2931a14b0c71b7689ad38a7411b54372bc63039245b3d4a52fcb218b05",
+          "bytes": 26352,
+          "durationMs": 4392
         },
         {
           "sourcePath": "chapters/5/steps/3/hints/1",
-          "speech": "A bigger Reload Time or Enemy HP makes towers weaker; more coins let players build more towers.",
-          "requestHash": "f06da07ef3c465ca2eaa3621cc5ac3e97a66733e5c663822e83b7ffa38346e31",
-          "src": "audio/assets/ee/ee56cfd557dd2b455c52e7200771c67babadbb8615fb73d1a705ab8670f1e9df.mp3",
-          "sha256": "ee56cfd557dd2b455c52e7200771c67babadbb8615fb73d1a705ab8670f1e9df",
-          "bytes": 40464,
-          "durationMs": 6744
-        },
-        {
-          "sourcePath": "chapters/5/steps/3/hints/1",
-          "speech": "Test one change at a time.",
-          "requestHash": "9673fb5a254780ed335688cbbbad64ee0a66c956eb3fd767f78f533bfe173961",
-          "src": "audio/assets/69/69d60bc97a4f2a7e50ef0912864349745d06cd095186ff14579ee50c2fb1d653.mp3",
-          "sha256": "69d60bc97a4f2a7e50ef0912864349745d06cd095186ff14579ee50c2fb1d653",
-          "bytes": 13248,
-          "durationMs": 2208
+          "speech": "Open My Stuff and click See inside on the copy.",
+          "requestHash": "1bdc1cf4fa4b3abbcf427d5b948f500052828132697eb589a13a4d93cb4921f1",
+          "src": "audio/assets/96/96e192c8263d8e5513bbdfa7fdd2bae719c8cf5467ecb205a14bd814569d9692.mp3",
+          "sha256": "96e192c8263d8e5513bbdfa7fdd2bae719c8cf5467ecb205a14bd814569d9692",
+          "bytes": 19872,
+          "durationMs": 3312
         }
       ]
     },
@@ -11630,6 +11699,41 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/3/hints/2",
+          "speech": "Reload Time, Enemy HP, and Starting Coins change difficulty the most.",
+          "requestHash": "5e4ad394beebbd6980d8e7cde7d0cf84acb6171fabd6d158603076e4c7555235",
+          "src": "audio/assets/52/52eee7dba8977d09e82cfcc977e47f363cb838dd00d485095b29bea218180549.mp3",
+          "sha256": "52eee7dba8977d09e82cfcc977e47f363cb838dd00d485095b29bea218180549",
+          "bytes": 31392,
+          "durationMs": 5232
+        },
+        {
+          "sourcePath": "chapters/5/steps/3/hints/2",
+          "speech": "A bigger Reload Time or Enemy HP makes towers weaker; more coins let players build more towers.",
+          "requestHash": "f06da07ef3c465ca2eaa3621cc5ac3e97a66733e5c663822e83b7ffa38346e31",
+          "src": "audio/assets/ee/ee56cfd557dd2b455c52e7200771c67babadbb8615fb73d1a705ab8670f1e9df.mp3",
+          "sha256": "ee56cfd557dd2b455c52e7200771c67babadbb8615fb73d1a705ab8670f1e9df",
+          "bytes": 40464,
+          "durationMs": 6744
+        },
+        {
+          "sourcePath": "chapters/5/steps/3/hints/2",
+          "speech": "Test one change at a time.",
+          "requestHash": "9673fb5a254780ed335688cbbbad64ee0a66c956eb3fd767f78f533bfe173961",
+          "src": "audio/assets/69/69d60bc97a4f2a7e50ef0912864349745d06cd095186ff14579ee50c2fb1d653.mp3",
+          "sha256": "69d60bc97a4f2a7e50ef0912864349745d06cd095186ff14579ee50c2fb1d653",
+          "bytes": 13248,
+          "durationMs": 2208
+        }
+      ]
+    },
+    {
+      "id": "make-another-level/design-your-own-level/hint/003",
+      "sourcePaths": [
+        "chapters/5/steps/3/hints/3"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/5/steps/3/hints/3",
           "speech": "Keep movement speeds, lane positions, list lengths, and hit-check arithmetic unchanged for this challenge.",
           "requestHash": "69429b4f691cba4606d80b96f42dc77113fba9d50bf59ba4eab496f688b9d464",
           "src": "audio/assets/72/72dc26f1ca5833f693cff19530a975b80a49781b11430d651bb5496d5af0c6dc.mp3",
@@ -11751,12 +11855,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/4/explanation",
-          "speech": "A finished game includes readable feedback, dependable controls, and a saved file that works outside the editor session where you built it.",
-          "requestHash": "30542b24adec660719dbfa0d3fce8a0afd0126b4906cb9fbb87ba89327073fb8",
-          "src": "audio/assets/9c/9ca1a295ed32f17eee35e5e689344961908afe3d5b3e057e7ff820d1f7b59c29.mp3",
-          "sha256": "9ca1a295ed32f17eee35e5e689344961908afe3d5b3e057e7ff820d1f7b59c29",
-          "bytes": 50544,
-          "durationMs": 8424
+          "speech": "A finished game includes readable feedback, dependable controls, and a saved project that still works when you reopen it from My Stuff.",
+          "requestHash": "34fffa7db63c3add0d227643b1e95d6b7d6e1b0893dc0d8ddcd4c77783692c7d",
+          "src": "audio/assets/4e/4eff2a8989bdc6c73c5daa1ea879d21c4dd659a7e893ecf9127aefcbd3a96a71.mp3",
+          "sha256": "4eff2a8989bdc6c73c5daa1ea879d21c4dd659a7e893ecf9127aefcbd3a96a71",
+          "bytes": 50256,
+          "durationMs": 8376
         },
         {
           "sourcePath": "chapters/5/steps/4/explanation",
@@ -11846,21 +11950,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/4/instructions/3",
-          "speech": "Save the currently open independent extension under a different filename, such as tower-defense-my-levels.sb3.",
-          "requestHash": "ea359e00e4be5ee6bbb26b7d00e2409cc3f97bf0249bd38a2b126cd7c02c43db",
-          "src": "audio/assets/57/576ac9251c27d021ca866dd52e87922888b8df0c89181554bbdceecbec5cb787.mp3",
-          "sha256": "576ac9251c27d021ca866dd52e87922888b8df0c89181554bbdceecbec5cb787",
-          "bytes": 45648,
-          "durationMs": 7608
-        },
-        {
-          "sourcePath": "chapters/5/steps/4/instructions/3",
-          "speech": "Do not use the preserved two-level reference's filename.",
-          "requestHash": "e8a2232b32d68649bd28c53cd5d2cbf259dfe9fc4ddf0423e0a5c82b279709a4",
-          "src": "audio/assets/c1/c14c056f264b4d115f6985bf109f7933d9ea3ba3205371926b823fb205b940b6.mp3",
-          "sha256": "c14c056f264b4d115f6985bf109f7933d9ea3ba3205371926b823fb205b940b6",
-          "bytes": 22608,
-          "durationMs": 3768
+          "speech": "In Tower Defense My Levels, choose File > Save now.",
+          "requestHash": "ed6c294758fe3fd407cc9bd59f2bf63294ea01620cea88aadd03dd9ca3ca9b3d",
+          "src": "audio/assets/ab/abcd6e7832eb42f45af21d7b35feb6e68554cc0b06117a2dfa2563bb4bcd5d16.mp3",
+          "sha256": "abcd6e7832eb42f45af21d7b35feb6e68554cc0b06117a2dfa2563bb4bcd5d16",
+          "bytes": 23328,
+          "durationMs": 3888
         }
       ]
     },
@@ -11872,12 +11967,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/4/instructions/4",
-          "speech": "Open a fresh editor and load tower-defense-two-levels.sb3, the file you saved before adding Level 3.",
-          "requestHash": "186551bcc7566585b240aa1921ad35e6b6bf81a9442f400cb75bd1843423d9f7",
-          "src": "audio/assets/87/873c59a1528be3c548168c2476b65786ff1b47ea0a83b0cbf3d76eab1bba78a4.mp3",
-          "sha256": "873c59a1528be3c548168c2476b65786ff1b47ea0a83b0cbf3d76eab1bba78a4",
-          "bytes": 42192,
-          "durationMs": 7032
+          "speech": "Click My Stuff and click See inside on Tower Defense, the two-level project you kept before adding Level 3.",
+          "requestHash": "b8b67155a65f253e4dc3837e885f28d053c724cb2ea7cd2fc1a711f4b7af6059",
+          "src": "audio/assets/6a/6af02a3f393557b38bcf3f8429e06af65620b38c36713eb6c9950fd1c4d3e802.mp3",
+          "sha256": "6af02a3f393557b38bcf3f8429e06af65620b38c36713eb6c9950fd1c4d3e802",
+          "bytes": 40464,
+          "durationMs": 6744
         }
       ]
     },
@@ -11898,12 +11993,12 @@
         },
         {
           "sourcePath": "chapters/5/steps/4/instructions/5",
-          "speech": "Test purchases, one-shot reuse, wave pauses, the level transition, win, loss, and restart in this reopened file.",
-          "requestHash": "989ede76d132ff20b2100dc2af508fedeb0c6ce0f30a8ff19a5d50b0c2629783",
-          "src": "audio/assets/f2/f22ebe5233f102691d610855075bca2d16a512c26a57bfaef7423d57d5b79bc3.mp3",
-          "sha256": "f22ebe5233f102691d610855075bca2d16a512c26a57bfaef7423d57d5b79bc3",
-          "bytes": 47808,
-          "durationMs": 7968
+          "speech": "Test purchases, one-shot reuse, wave pauses, the level transition, win, loss, and restart in this reopened project.",
+          "requestHash": "4a20fbe912563a213477a74b1604bba9034bb297d507b395b02c14c5307dd896",
+          "src": "audio/assets/98/98a1248c2e816e8746e303fddce63f5e5be45d71898048c27a932b2503f063d6.mp3",
+          "sha256": "98a1248c2e816e8746e303fddce63f5e5be45d71898048c27a932b2503f063d6",
+          "bytes": 49824,
+          "durationMs": 8304
         }
       ]
     },
@@ -11915,12 +12010,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/4/instructions/6",
-          "speech": "In another fresh editor, load your separately saved extension and repeat those checks through its final level.",
-          "requestHash": "0cd7e49f617ee5b2b3bb00031e95ef447fac7c589c2eb8e855aa836ab1b407b6",
-          "src": "audio/assets/31/313658500c0ddb161dc2caeb97c6c996ace28be0c6b538d675c04e3def467c38.mp3",
-          "sha256": "313658500c0ddb161dc2caeb97c6c996ace28be0c6b538d675c04e3def467c38",
-          "bytes": 39168,
-          "durationMs": 6528
+          "speech": "Open My Stuff again, click See inside on Tower Defense My Levels, and repeat those checks through its final level.",
+          "requestHash": "f1f30e7b5f6d0b57ea90a3eb94a45ec9812f94cb82c3fd0782a7c38b07f359da",
+          "src": "audio/assets/b7/b7eb68113416d6801ced2f44e7210ef762b6d6ef3f068bf02410771964fe3a1a.mp3",
+          "sha256": "b7eb68113416d6801ced2f44e7210ef762b6d6ef3f068bf02410771964fe3a1a",
+          "bytes": 42912,
+          "durationMs": 7152
         }
       ]
     },
@@ -12011,21 +12106,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/4/debuggingTips/0/symptom",
-          "speech": "A project works in the old tab but not after loading its file.",
-          "requestHash": "c65175eb77406a863265398a4dbe50be273ed86c9d0a733f1bfc8037cc3ebe09",
-          "src": "audio/assets/b0/b0e943a872155702eda6525e1bed34ce363b0ce6fa0d77f5d88238bb6c9fe57a.mp3",
-          "sha256": "b0e943a872155702eda6525e1bed34ce363b0ce6fa0d77f5d88238bb6c9fe57a",
-          "bytes": 24336,
-          "durationMs": 4056
+          "speech": "A project works before saving but not after reopening it from My Stuff.",
+          "requestHash": "f1c7e472643a86f34e52b19b8d0ddb842ae692b140c5cb9f54b344b4d8d65a5e",
+          "src": "audio/assets/8b/8bb7f9e220ce6c0304cbaf85537e0bd81ca265506d9d7c986bc86653f1970144.mp3",
+          "sha256": "8bb7f9e220ce6c0304cbaf85537e0bd81ca265506d9d7c986bc86653f1970144",
+          "bytes": 28368,
+          "durationMs": 4728
         },
         {
           "sourcePath": "chapters/5/steps/4/debuggingTips/0/checks/0",
-          "speech": "Save again after the final edits and reload that exact file.",
-          "requestHash": "90aa1e74643ec4ebda2c624d886a84fceb6469666b7686854b2c963490679dec",
-          "src": "audio/assets/9a/9a6a828ee85b8e8fbf3aa56b8f38060c898a0d4ea9343dfb21c41e76db29283f.mp3",
-          "sha256": "9a6a828ee85b8e8fbf3aa56b8f38060c898a0d4ea9343dfb21c41e76db29283f",
-          "bytes": 25488,
-          "durationMs": 4248
+          "speech": "Choose File > Save now after the final edits, then reopen the project from My Stuff.",
+          "requestHash": "e53015a35658199207559b981edb46ea3eeea543a6a1b7160529e89c85b65b8e",
+          "src": "audio/assets/96/96f7db42fd88645a47f4d5463e3181dfe8af4094a17019b6ab0f9a557e307f45.mp3",
+          "sha256": "96f7db42fd88645a47f4d5463e3181dfe8af4094a17019b6ab0f9a557e307f45",
+          "bytes": 38304,
+          "durationMs": 6384
         },
         {
           "sourcePath": "chapters/5/steps/4/debuggingTips/0/checks/1",
