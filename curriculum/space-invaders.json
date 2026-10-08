@@ -161,7 +161,6 @@
             "Later chapters create each new message when its first real script is built. This keeps unused message blocks out of this checkpoint.",
             "Keep the temporary broadcast block until you build the startup script on the Stage in the next step and select `Reset Game` and `Start Game` in its broadcast blocks.",
             "After both messages are used in the startup script, delete the temporary broadcast block.",
-            "At the Chapter 1 checkpoint, save the project, load the saved file with File > Load from your computer, and confirm that no unused `message1` remains.",
             "Hide every variable monitor except `Score` and `Aliens Left`."
           ],
           "hints": [
@@ -188,7 +187,7 @@
             "expectedResult": "Nine `For all sprites` variables, three Alien `For this sprite only` variables, two Bunker `For this sprite only` variables, one Mothership `For this sprite only` variable, and the two Chapter 1 messages exist.",
             "completeWhen": [
               "Only `Score` and `Aliens Left` are visible on the Stage.",
-              "After loading the saved project, `Reset Game` and `Start Game`, but no unused message1, appear in a broadcast menu.",
+              "`Reset Game` and `Start Game` appear in a broadcast menu.",
               "Each `For this sprite only` variable was created on the correct sprite."
             ]
           }
@@ -260,6 +259,7 @@
           "explanation": "This checkpoint prevents problems in later chapters. The green flag must be the only reset, and all names must be exact before you add clones and shots.",
           "instructions": [
             "Use File > Save to your computer and keep the download as `space-invaders-chapter-1.sb3`.",
+            "Load the saved file with File > Load from your computer. Open a broadcast menu and check that it shows `Reset Game` and `Start Game` but no unused `message1`.",
             "Click the green flag, move Player, then click the green flag again while Player is moving.",
             "Confirm Player returns to x 0, y -150 and the Space backdrop returns.",
             "Compare the Stage and Player scripts with the complete Chapter 1 code below.",
@@ -312,7 +312,7 @@
         "Build exactly 24 Alien clones in an 8 by 3 grid.",
         "Store each clone's row and column in `For this sprite only` variables.",
         "Move all live aliens from shared fleet coordinates.",
-        "Use scripts on the Stage that finish each movement phase and detect an invasion loss."
+        "Use scripts on the Stage that finish each movement phase, and let Alien clones detect an invasion loss."
       ],
       "steps": [
         {
@@ -362,8 +362,8 @@
           "title": "Place the 8 by 3 Grid",
           "explanation": "Every clone works out its position from the fleet's starting coordinates and its own row and column. Columns are 45 pixels apart and rows are 35 pixels apart. The same formula keeps working when the Stage changes `Fleet X` and `Fleet Y`.",
           "instructions": [
-            "Under `when I start as a clone`, set x to `Fleet X + My Column * 45`.",
-            "Set y to `Fleet Y - My Row * 35`.",
+            "Under `when I start as a clone`, add the Motion block `go to x: y:`. For x, build `Fleet X + My Column * 45`.",
+            "For y, build `Fleet Y - My Row * 35`.",
             "Show the clone after both coordinates are set.",
             "Click the green flag and count eight aliens in each of three rows.",
             "If aliens overlap, make the Alien costume smaller instead of changing the shared spacing yet."
@@ -456,16 +456,19 @@
           "title": "Control the Fleet in Three Movement Phases",
           "explanation": "The Stage controls the fleet with scripts that finish each phase instead of letting 24 clones choose their own movement. In phase 1, the fleet moves right five times. In phase 2, it moves left nine times. In phase 3, it moves right nine times. Each side-to-side phase ends with one move down. The `Stage` variable then switches between 2 and 3.",
           "instructions": [
-            "On the Stage, add the `Start Game` march script shown below.",
-            "For phase 1, repeat five times: add 10 to `Fleet X`, use `broadcast March Right and wait`, and then wait 0.35 seconds.",
+            "On the Stage, start a new script with `when I receive Start Game`. The steps below build the march script shown at the end.",
+            "Add `repeat until`. For its condition, put `Game State = playing` inside a `not` block.",
+            "Inside the repeat, add an `if then else` that checks `Stage = 1`. Inside its `else`, add a second `if then else` that checks `Stage = 2`. The three open spaces will hold phase 1, phase 2, and phase 3.",
+            "In the `Stage = 1` space, build phase 1. Repeat five times: add 10 to `Fleet X`, use `broadcast March Right and wait`, and then wait 0.35 seconds.",
             "After phase 1, subtract 10 from `Fleet Y`, use `broadcast March Down and wait`, and set the `Stage` variable to 2.",
-            "Build phase 2 with nine left moves and one down move. Then set the `Stage` variable to 3.",
-            "Build phase 3 with nine right moves and one down move. Then set the `Stage` variable to 2.",
+            "In the `Stage = 2` space, build phase 2 with nine left moves and one down move. Then set the `Stage` variable to 3.",
+            "In the last `else` space, build phase 3 with nine right moves and one down move. Then set the `Stage` variable to 2.",
+            "Wrap the blocks of every sideways move in `if Game State = playing`. Wrap every down move the same way. This makes the fleet stop as soon as the game ends.",
             "Keep every coordinate change and march broadcast on the Stage."
           ],
           "hints": [
             "`Broadcast and wait` lets all clones finish positioning before the next fleet step.",
-            "The first five-step phase starts the fleet near the left side; later nine-step phases travel the full safe width."
+            "The fleet starts in the center. Phase 1 moves it five steps to the right edge. The nine-step phases then travel the full width from edge to edge."
           ],
           "debuggingTips": [
             {
@@ -485,9 +488,9 @@
           ],
           "checkpoint": {
             "task": "Watch at least three complete horizontal phases.",
-            "expectedResult": "All 24 aliens move as one shape, step down only at an edge, and eventually trigger loss below y -60 before reaching the bunkers.",
+            "expectedResult": "All 24 aliens move as one shape, step down only at an edge, and set `Game State` to `lost` once an alien drops below y -60.",
             "completeWhen": [
-              "No alien moves early or late.",
+              "The spaces between aliens never change size while the fleet moves.",
               "Only scripts on the Stage change `Fleet X`, `Fleet Y`, and the `Stage` variable.",
               "A low alien sets `Game State` to `lost` and broadcasts `Lose`."
             ]
@@ -530,7 +533,7 @@
             "completeWhen": [
               "The count is exactly 24 after every green-flag restart.",
               "Only the three march messages controlled by the Stage move the fleet.",
-              "A clone below y -60 changes the game to `lost` before it can overlap a bunker."
+              "A clone below y -60 changes `Game State` to `lost`."
             ]
           },
           "finishedCode": [
@@ -593,8 +596,8 @@
             }
           ],
           "checkpoint": {
-            "task": "Press and hold space while watching `Laser Active`.",
-            "expectedResult": "One press changes `Laser Active` from 0 to 1 only once; no clones are created.",
+            "task": "Turn on the `Laser Active` variable display. Click the green flag, then press and hold Space.",
+            "expectedResult": "`Laser Active` changes from 0 to 1 once and stays 1, because the script that sets it back to 0 comes in the next step. No clones are created. Turn the display off again after the test.",
             "completeWhen": [
               "Player contains no `create clone` block.",
               "Player Laser contains no clone event.",
@@ -619,10 +622,10 @@
           "explanation": "When the `Fire Laser` message arrives, Player Laser moves to Player, starts a little above the ship, and travels upward. The loop stops when the laser reaches the top, a collision sets `Laser Active` to 0, or play ends. The same sprite then hides and becomes ready again.",
           "instructions": [
             "On Player Laser, add the `when I receive Fire Laser` script shown below.",
-            "Use `go to Player`, then change y by 15 so the shot begins above the ship costume.",
-            "Show the sprite and repeat while it is active, below y 175, and the game is playing.",
+            "Add `if Game State = playing`. Inside it, use `go to Player`, then change y by 15 so the shot begins above the ship costume.",
+            "Still inside the if, show the sprite and add `repeat until`. It stops when `Laser Active = 0`, when y position is over 175, or when Game State is not playing.",
             "Move upward by 10 and wait 0.02 seconds each loop pass.",
-            "After the loop, hide and set `Laser Active` back to 0.",
+            "Below the `if` block, not inside it, hide and set `Laser Active` back to 0. These blocks run even when the game has ended, so the laser is always ready for the next shot.",
             "Fire several separate shots and confirm the same sprite is reused."
           ],
           "hints": [
@@ -1061,11 +1064,12 @@
             "Check the forever loop from top to bottom. It must contain two separate collision ifs at the same level: Player Laser first and Enemy Shot second.",
             "Each collision if must contain its own three separate Health checks.",
             "Click the green flag and confirm exactly three Full bunkers appear at x -130, 0, and 130. If a clone appears in the wrong place, recheck the plus and multiply holes before testing damage.",
+            "Before the damage test, temporarily change Enemy Shot's `pick random 1.5 to 3` to `pick random 99 to 99`. This stops enemy fire from changing the bunkers while you test.",
             "Test the costumes and separate Health values. Hit the left bunker twice with Player Laser, then hit the right bunker once.",
             "The left bunker must be Critical, the middle must still be Full, and the right must be Damaged.",
             "Hit the left bunker a third time to delete it. Fire a fourth laser through the empty left position.",
             "Then fire at the middle bunker. The fourth shot on the left must pass through, while the middle bunker must still absorb its shot.",
-            "Restart with the green flag, move Player aside, and watch Enemy Shot.",
+            "Change Enemy Shot's wait back to `pick random 1.5 to 3`. Restart with the green flag, move Player aside, and watch Enemy Shot.",
             "A shot that misses through a gap is valid and must leave Game State playing.",
             "Keep watching until a lane reaches a Bunker. It must set Enemy Shot Active to 0 and damage only that clone.",
             "Click the green flag once more and check that all three Bunkers return at Full. Turn off any temporary variable monitors after the test."
@@ -1237,11 +1241,11 @@
           "explanation": "After a random delay, Mothership begins one pass. During that pass it checks for an active Player Laser. On a hit, it first sets `Active` and `Laser Active` to 0, so every script sees that the hit was handled. Then it adds exactly 50 points. Setting `Active` to 0 ends the pass and prevents another score from the same appearance.",
           "instructions": [
             "Add the Mothership `Start Game` script shown below.",
-            "Wait a random 8 to 14 seconds, then continue only if the game is playing.",
+            "Inside forever, wait a random 8 to 14 seconds. Then add `if Game State = playing` and build the rest of the pass inside it.",
             "Go to x -230, y 160, set Active to 1, and show.",
-            "Move right by 5 until Active is 0, x is over 230, or play ends.",
+            "Add `repeat until`. It stops when Active is 0, x is over 230, or Game State is not playing. Inside it, move right by 5 and wait 0.03 seconds.",
             "On an active laser touch, set Active to 0 and `Laser Active` to 0 before adding 50 to Score.",
-            "After the pass, hide and set Active to 0. Then let the forever loop wait for another pass."
+            "After the repeat, but still inside the if, hide and set Active to 0. Then the forever loop waits for another pass."
           ],
           "hints": [
             "A laser hit makes the Player Laser loop end and hide because `Laser Active` becomes 0.",
@@ -1294,7 +1298,10 @@
             "On the Stage, add a `when I receive Win` script. Use `broadcast End Cleanup and wait`, switch to You Win, and then stop all.",
             "Add a matching `when I receive Lose` script. Use `broadcast End Cleanup and wait`, switch to Game Over, and then stop all.",
             "Do not broadcast Reset Game from either ending. Do not add a Restart key or button.",
-            "Test loss by Player hit and by letting the fleet invade. Test win by destroying all 24 aliens. In every result, Score and Aliens Left may remain visible but no gameplay sprite may cover the backdrop."
+            "Test a loss by letting Enemy Shot hit Player.",
+            "Test the other loss by letting the fleet invade.",
+            "Test a win by destroying all 24 aliens.",
+            "In every result, Score and Aliens Left may stay visible, but no gameplay sprite may cover the backdrop."
           ],
           "hints": [
             "The startup state is `starting`, so a temporary count of zero during reset cannot cause a win.",
@@ -1571,7 +1578,7 @@
             "expectedResult": "An advanced beginner can start, play, win or lose, and restart using only the visible instructions on the Space backdrop, while every required game rule remains true.",
             "completeWhen": [
               "The startup script on the Stage resets every shared value, waits for Reset Game, and then starts play.",
-              "The Stage controls the fleet and shows the win and loss backdrops immediately.",
+              "The Stage controls the fleet. On a win or loss, it waits for End Cleanup and then shows the result backdrop.",
               "Exactly 24 Alien clones begin in an 8 by 3 synchronized fleet.",
               "Player movement and firing use separate `when I receive Start Game` scripts with the required conditions.",
               "Player Laser and the lane-based Enemy Shot are reusable sprites with no clones.",
