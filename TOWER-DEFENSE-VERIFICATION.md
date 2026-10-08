@@ -202,3 +202,14 @@ Run the website E2E and visual suites sequentially: they share port 4173. Audio 
 - Audit artifacts remain ignored local files. Retain `test-results/scratch-live/` alongside this record to retain the projects, reports, and screenshots.
 
 No narration audio was generated and no commit was made.
+
+## 2026-10-07: balance change after this verification
+
+A later audit found that every recorded playthrough ended at full health: a tower relaunched on the update after any hit, so one tower per lane won every wave and the Level 2 and Level 3 design lessons had no observable effect. The curriculum now:
+
+- gives each Tower clone a `For this sprite only` `Reload` countdown, set from a new `Reload Time` setting (30) whenever it launches a shot (Chapter 5, `put-settings-together`);
+- makes Level 2 start with 120 coins, use 4-HP enemies, and send waves of 6 and 9.
+
+`tests/unit/tower-defense-curriculum.test.mjs` replays the finished update order with these settings: one tower per lane keeps full health on Level 1, barely survives Level 2, filling extra spots keeps full health, and leaving a lane open loses Level 2.
+
+The editor-built `.sb3` files, reports, and curriculum hashes above predate this change. They were not rebuilt in the Scratch editor, so the reload rule and Level 2 numbers are checked only by that unit-test model.

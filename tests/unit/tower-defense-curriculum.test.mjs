@@ -99,3 +99,88 @@ test('Next Level cannot turn into Start Wave under a repeated click at the same 
   const separatedVertically = Math.abs(start.y - next.y) > (30 + 32) / 2;
   assert.ok(separatedHorizontally || separatedVertically, 'Button bounds must not overlap across the level transition');
 });
+
+// Mirrors the finished game's update order: spawn, Tower Step, Enemy Step, countdown.
+const playWave = ({ count, gap, hp, built, reload, health }) => {
+  const shotX = Array(7).fill(0); const active = Array(7).fill(0); const wait = Array(7).fill(0);
+  let spawned = 0; let countdown = 0; let coins = 0; const enemies = [];
+  for (let update = 0; update < 10000; update += 1) {
+    if (spawned < count && countdown === 0) {
+      const lane = (spawned % 3) + 1;
+      spawned += 1;
+      enemies.push({ firstSlot: lane * 2 - 1, hp, x: 220 });
+      countdown = gap;
+    }
+    for (let id = 1; id <= 6; id += 1) {
+      if (!built.includes(id)) continue;
+      if (active[id] === 1 && shotX[id] > 230) active[id] = 0;
+      if (wait[id] > 0) wait[id] -= 1;
+      if (active[id] === 0 && wait[id] === 0) { shotX[id] = -135; active[id] = 1; wait[id] = reload; }
+      shotX[id] += 10;
+    }
+    for (const enemy of [...enemies]) {
+      enemy.x -= 2;
+      for (const slot of [enemy.firstSlot, enemy.firstSlot + 1]) {
+        if (enemy.hp > 0 && active[slot] === 1 && !(shotX[slot] < enemy.x - 12) && !(shotX[slot] - 10 > enemy.x + 14)) {
+          active[slot] = 0;
+          enemy.hp -= 1;
+        }
+      }
+      if (enemy.hp < 1) { coins += 10; enemies.splice(enemies.indexOf(enemy), 1); }
+      else if (enemy.x < -209) { health -= 1; enemies.splice(enemies.indexOf(enemy), 1); }
+    }
+    if (health < 1) return { health, coins };
+    if (spawned === count && enemies.length === 0) return { health, coins };
+    if (countdown > 0) countdown -= 1;
+  }
+  throw new Error('wave did not finish');
+};
+
+const playLevel = (settings, order) => {
+  let { coins, health } = settings;
+  const built = [];
+  for (const wave of settings.waves) {
+    while (built.length < order.length && coins >= 30) { built.push(order[built.length]); coins -= 30; }
+    const result = playWave({ ...wave, hp: settings.hp, reload: settings.reload, built, health });
+    coins += result.coins;
+    health = result.health;
+    if (health < 1) return 0;
+  }
+  return health;
+};
+
+test('reload time and Level 2 settings make tower placement matter', async () => {
+  const lesson = JSON.parse(await readFile(new URL('../../curriculum/tower-defense.json', import.meta.url), 'utf8'));
+  const reference = lesson.chapters.at(-1).steps.at(-1).finishedCode;
+  const tower = reference.find(({ target }) => target.startsWith('Tower - shooting')).code;
+  assert.match(tower, /if <\(Reload\) > \(0\)> then\n\s+change \[Reload v\] by \(-1\)/);
+  assert.match(tower, /if <<\(item \(ID\) of \[Shot Active v\]\) = \(0\)> and <\(Reload\) = \(0\)>> then/);
+  assert.match(tower, /set \[Reload v\] to \(Reload Time\)/);
+
+  const stage = reference.find(({ target }) => target.startsWith('Stage - two-level')).code;
+  const value = (pattern) => Number(stage.match(pattern)[1]);
+  const common = {
+    coins: value(/define Load level settings\nset \[Starting Coins v\] to \((\d+)\)/),
+    health: value(/set \[Starting Health v\] to \((\d+)\)/),
+    hp: value(/set \[Enemy HP v\] to \((\d+)\)\nset \[Reload Time/),
+    reload: value(/set \[Reload Time v\] to \((\d+)\)/),
+  };
+  const levelOne = { ...common, waves: [3, 3, 6].map((count) => ({ count, gap: 18 })) };
+  const levelTwo = {
+    ...common,
+    coins: value(/if <\(Level\) = \(2\)> then\n  set \[Waves in Level v\] to \(2\)\n  set \[Starting Coins v\] to \((\d+)\)/),
+    hp: value(/set \[Starting Coins v\] to \(\d+\)\n  set \[Enemy HP v\] to \((\d+)\)/),
+    waves: [6, 9].map((count) => ({ count, gap: 15 })),
+  };
+  const oneEachLane = [1, 3, 5];
+  const everyLaneThenExtras = [1, 3, 5, 2, 4, 6];
+  const twoLanes = [1, 2, 3, 4];
+
+  assert.equal(playLevel(levelOne, oneEachLane), common.health, 'Level 1 is a fair first level');
+  assert.ok(playLevel(levelOne, twoLanes) < common.health, 'Level 1 still shows an unguarded lane');
+  const thin = playLevel(levelTwo, oneEachLane);
+  assert.ok(thin > 0 && thin < common.health, `one tower per lane should barely survive Level 2 (health ${thin})`);
+  assert.equal(playLevel(levelTwo, everyLaneThenExtras), common.health, 'spending coins on extra towers pays off');
+  assert.equal(playLevel(levelTwo, twoLanes), 0, 'leaving a lane open loses Level 2');
+  assert.equal(playLevel({ ...levelTwo, reload: 0 }, oneEachLane), common.health, 'without reload, placement would not matter');
+});
