@@ -54,3 +54,31 @@ test('corrupt or unavailable storage never prevents session progress', () => {
   assert.equal(store.getLesson('space-invaders').lastViewedStepId, 'map-the-game');
   assert.equal(store.isPersistent(), false);
 });
+
+test('ticked instructions are saved per step and survive a reload', () => {
+  const storage = memoryStorage();
+  const store = createProgressStore(storage);
+  store.setInstructionChecked('brick-breaker', 'place-paddle', 2, true);
+  store.setInstructionChecked('brick-breaker', 'place-paddle', 0, true);
+  store.setInstructionChecked('brick-breaker', 'place-paddle', 2, true);
+  assert.deepEqual(store.getCheckedInstructions('brick-breaker', 'place-paddle'), [0, 2]);
+
+  const reloaded = createProgressStore(storage);
+  assert.deepEqual(reloaded.getCheckedInstructions('brick-breaker', 'place-paddle'), [0, 2]);
+  reloaded.setInstructionChecked('brick-breaker', 'place-paddle', 0, false);
+  reloaded.setInstructionChecked('brick-breaker', 'place-paddle', 2, false);
+  assert.deepEqual(reloaded.getCheckedInstructions('brick-breaker', 'place-paddle'), []);
+  assert.deepEqual(reloaded.getLesson('brick-breaker'), { completedStepIds: [], lastViewedStepId: null });
+});
+
+test('malformed ticked-instruction data is dropped, not trusted', () => {
+  const storage = memoryStorage({
+    [PROGRESS_KEY]: JSON.stringify({
+      version: 1,
+      lessons: { 'brick-breaker': { completedStepIds: [], checkedInstructions: { 'Bad Id': [1], 'ok-step': [1, -1, 'x', 1.5, 3] } } },
+    }),
+  });
+  const store = createProgressStore(storage);
+  assert.deepEqual(store.getCheckedInstructions('brick-breaker', 'ok-step'), [1, 3]);
+  assert.deepEqual(store.getCheckedInstructions('brick-breaker', 'Bad Id'), []);
+});

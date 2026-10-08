@@ -308,8 +308,24 @@
       .build-instructions { display: grid; gap: 1rem; list-style: none; margin: .75rem 0 0; padding-left: 0; }
       .build-instructions > li { margin: 0; }
       .instruction-number { color: var(--text-muted); font-variant-numeric: tabular-nums; text-align: right; }
-      .build-instructions .narrated-list-row { align-items: baseline; column-gap: .5rem; display: grid; grid-template-columns: 28px 2.5ch minmax(0, 1fr); min-width: 0; }
-      .build-instructions .narrated-list-row:has(> .narration-slot:empty) { grid-template-columns: 2.5ch minmax(0, 1fr); }
+      .build-instructions .narrated-list-row { align-items: baseline; column-gap: .5rem; display: grid; grid-template-columns: 28px 1.25rem 2.5ch minmax(0, 1fr); min-width: 0; }
+      .build-instructions .narrated-list-row:has(> .narration-slot:empty) { grid-template-columns: 1.25rem 2.5ch minmax(0, 1fr); }
+      .instruction-check { accent-color: var(--accent); cursor: pointer; height: 1.15rem; margin: 0; min-height: 0; position: relative; top: .15rem; width: 1.15rem; }
+      .build-instructions > li.is-checked .instruction-number,
+      .build-instructions > li.is-checked .instruction-number + span { opacity: .6; }
+      .tick-count { background: var(--surface-raised); border: 1px solid var(--border-subtle); border-radius: 999px; color: var(--text-muted); font-size: .8rem; font-weight: 700; padding: .15rem .65rem; }
+      .tick-count.is-done { background: var(--sage-tint); border-color: var(--sage); color: var(--complete-text); }
+      .button-complete[aria-pressed="true"] { background: var(--sage); border-color: var(--sage); color: var(--canvas); }
+      .button-complete[aria-pressed="true"]::before { content: '\2713  '; font-weight: 700; }
+      .celebration { background: var(--sage-tint); border: 1px solid var(--sage); border-radius: .75rem; color: var(--complete-text); margin-top: 1.5rem; overflow: hidden; padding: 1rem 1.25rem; position: relative; }
+      .celebration p { margin: .2rem 0; position: relative; }
+      .celebration-title { font-family: var(--heading-font); font-size: 1.25rem; font-weight: 700; }
+      .confetti { inset: 0; pointer-events: none; position: absolute; }
+      .confetti span { animation: confetti-fall 1.4s ease-in var(--delay) forwards; background: hsl(var(--hue) 85% 62%); border-radius: 2px; height: .55rem; left: var(--x); opacity: 0; position: absolute; top: -1rem; width: .35rem; }
+      @keyframes confetti-fall {
+        0% { opacity: 1; transform: translateY(0) rotate(0deg); }
+        100% { opacity: 0; transform: translateY(9rem) rotate(540deg); }
+      }
       .build-instructions .narration-slot:empty { display: none; }
       .checkpoint { background: var(--butter-tint); border: 1px solid var(--butter); border-radius: .65rem; color: var(--checkpoint-text); margin-top: 1.5rem; padding: 1rem; }
       .checkpoint h3 { color: var(--butter); margin-top: 0; }
@@ -399,6 +415,7 @@
       }
       @media (prefers-reduced-motion: reduce) {
         *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+        .confetti { display: none; }
       }
     </style>
   </head>

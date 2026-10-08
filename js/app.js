@@ -562,6 +562,38 @@ const appendFinishedCode = (parent, step) => {
   parent.append(details);
 };
 
+const showTickCount = (node, done, total) => {
+  node.textContent = done === total ? `All ${total} ticked` : `${done} of ${total} ticked`;
+  node.classList.toggle('is-done', done === total);
+};
+
+// A short celebration when the step just completed finishes its chapter or the whole game.
+const celebrate = (chapterId) => {
+  const chapter = currentLesson.chapters.find(({ id }) => id === chapterId);
+  const completed = new Set(progress.getLesson(currentLesson.id).completedStepIds);
+  if (!chapter.steps.every(({ id }) => completed.has(id))) return;
+  const lessonDone = currentSteps.every(({ id }) => completed.has(id));
+  const banner = element('div', { className: 'celebration', attrs: { role: 'status' } });
+  const confetti = element('div', { className: 'confetti', attrs: { 'aria-hidden': 'true' } });
+  for (let piece = 0; piece < 18; piece += 1) {
+    const bit = element('span');
+    bit.style.setProperty('--x', `${(piece * 37) % 100}%`);
+    bit.style.setProperty('--delay', `${(piece % 6) * 0.08}s`);
+    bit.style.setProperty('--hue', String((piece * 47) % 360));
+    confetti.append(bit);
+  }
+  banner.append(
+    confetti,
+    element('p', { className: 'celebration-title', text: lessonDone ? `You finished ${currentLesson.title}!` : 'Chapter complete!' }),
+    element('p', {
+      text: lessonDone
+        ? 'Every step is done. Play your game, then show it to someone.'
+        : `You finished "${chapter.title}". Keep going when you are ready.`,
+    }),
+  );
+  contentArea.querySelector('.step-actions')?.before(banner);
+};
+
 const navigateToStep = (stepId, { focus = true } = {}) => {
   const index = currentSteps.findIndex((step) => step.id === stepId);
   if (index === -1) return;
@@ -598,6 +630,9 @@ const navigateToStep = (stepId, { focus = true } = {}) => {
   article.append(explanation);
 
   appendNarratedHeading(article, 'Build it', `${sectionRoot}/instruction`);
+  const ticked = new Set(progress.getCheckedInstructions(currentLesson.id, step.id));
+  const tickCount = element('span', { className: 'tick-count', attrs: { 'aria-live': 'polite' } });
+  article.lastElementChild.append(tickCount);
   const instructions = element('ol', {
     className: 'instruction-list build-instructions prose',
     attrs: { role: 'list' },
@@ -616,11 +651,19 @@ const navigateToStep = (stepId, { focus = true } = {}) => {
       `${sectionRoot}/instruction/${String(index).padStart(3, '0')}`,
       `instruction ${index + 1}`,
     );
+    const check = element('input', {
+      className: 'instruction-check',
+      attrs: { type: 'checkbox', 'data-instruction-index': String(index), 'aria-label': `Done: instruction ${index + 1}` },
+    });
+    check.checked = ticked.has(index);
+    item.classList.toggle('is-checked', check.checked);
+    row.insertBefore(check, text);
     row.insertBefore(number, text);
     item.append(row);
     instructions.append(item);
   });
   article.append(instructions);
+  showTickCount(tickCount, ticked.size, step.instructions.length);
   appendVideo(article, step);
 
   const checkpoint = element('section', { className: 'checkpoint' });
@@ -861,6 +904,8 @@ contentArea.addEventListener('click', (event) => {
   completion.textContent = !completed ? 'Mark step incomplete' : 'Mark step complete';
   renderNavigation();
   updateNavigationState();
+  contentArea.querySelector('.celebration')?.remove();
+  if (!completed) celebrate(currentSteps.find(({ id }) => id === stepId).chapterId);
 });
 
 // Light or dark: follow the device until the learner chooses, then remember the choice.
@@ -880,6 +925,19 @@ themeToggle.addEventListener('click', () => {
 });
 prefersLight.addEventListener('change', showTheme);
 showTheme();
+
+contentArea.addEventListener('change', (event) => {
+  const check = event.target.closest('input[data-instruction-index]');
+  if (!check || !currentLesson || !currentStepId) return;
+  progress.setInstructionChecked(currentLesson.id, currentStepId, Number(check.dataset.instructionIndex), check.checked);
+  check.closest('li').classList.toggle('is-checked', check.checked);
+  const step = currentSteps.find(({ id }) => id === currentStepId);
+  showTickCount(
+    contentArea.querySelector('.tick-count'),
+    progress.getCheckedInstructions(currentLesson.id, currentStepId).length,
+    step.instructions.length,
+  );
+});
 
 window.addEventListener('pagehide', () => narrationPlayer.stop());
 

@@ -528,3 +528,25 @@ test('the sidebar folds other chapters and shows overall progress', async ({ pag
   await first.click();
   await expect(page.locator('.step-button[data-step-id="observe-complete-game"]')).toBeVisible();
 });
+
+test('instruction ticks are remembered and finishing a chapter is celebrated', async ({ page }) => {
+  await page.getByLabel('Project').selectOption('brick-breaker');
+  await page.locator('.step-button[data-step-id="build-stage-and-paddle"]').click();
+  const boxes = page.getByRole('checkbox', { name: /^Done: instruction/ });
+  const total = await boxes.count();
+  expect(total).toBeGreaterThan(1);
+  await page.getByRole('checkbox', { name: 'Done: instruction 1' }).check();
+  await expect(page.locator('.tick-count')).toHaveText(`1 of ${total} ticked`);
+  await page.reload();
+  await page.getByLabel('Project').selectOption('brick-breaker');
+  await page.locator('.step-button[data-step-id="build-stage-and-paddle"]').click();
+  await expect(page.getByRole('checkbox', { name: 'Done: instruction 1' })).toBeChecked();
+
+  for (const stepId of ['observe-complete-game', 'setup-sprites-and-data', 'build-stage-and-paddle', 'checkpoint-foundations']) {
+    await page.locator(`.step-button[data-step-id="${stepId}"]`).click();
+    await expect(page.locator('.celebration')).toHaveCount(0);
+    await page.getByRole('button', { name: 'Mark step complete' }).click();
+  }
+  await expect(page.locator('.celebration')).toContainText('Chapter complete!');
+  await expect(page.getByRole('button', { name: 'Mark step incomplete' })).toHaveAttribute('aria-pressed', 'true');
+});

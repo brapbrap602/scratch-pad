@@ -1,6 +1,6 @@
 export const PROGRESS_KEY = 'scratchLessonsProgress:v1';
 
-const EMPTY_LESSON = () => ({ completedStepIds: [], lastViewedStepId: null });
+const EMPTY_LESSON = () => ({ completedStepIds: [], lastViewedStepId: null, checkedInstructions: {} });
 const ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 const normalize = (value) => {
@@ -21,7 +21,16 @@ const normalize = (value) => {
       typeof lesson.lastViewedStepId === 'string' && ID_PATTERN.test(lesson.lastViewedStepId)
         ? lesson.lastViewedStepId
         : null;
-    normalized.lessons[lessonId] = { completedStepIds: completed, lastViewedStepId };
+    // Ticked "Build it" instructions, by step ID and zero-based instruction index.
+    const checkedInstructions = {};
+    if (lesson.checkedInstructions !== null && typeof lesson.checkedInstructions === 'object') {
+      for (const [stepId, indexes] of Object.entries(lesson.checkedInstructions)) {
+        if (!ID_PATTERN.test(stepId) || !Array.isArray(indexes)) continue;
+        const valid = [...new Set(indexes.filter((index) => Number.isInteger(index) && index >= 0 && index < 200))];
+        if (valid.length) checkedInstructions[stepId] = valid.sort((a, b) => a - b);
+      }
+    }
+    normalized.lessons[lessonId] = { completedStepIds: completed, lastViewedStepId, checkedInstructions };
   }
   return normalized;
 };
@@ -69,6 +78,20 @@ export const createProgressStore = (storage = globalThis.localStorage) => {
       const lesson = ensureLesson(lessonId);
       lesson.completedStepIds = lesson.completedStepIds.filter((id) => id !== stepId);
       if (completed) lesson.completedStepIds.push(stepId);
+      save();
+    },
+    getCheckedInstructions(lessonId, stepId) {
+      return [...(ensureLesson(lessonId).checkedInstructions[stepId] ?? [])];
+    },
+    setInstructionChecked(lessonId, stepId, index, checked) {
+      if (!ID_PATTERN.test(stepId)) throw new TypeError('Invalid step ID');
+      if (!Number.isInteger(index) || index < 0) throw new TypeError('Invalid instruction index');
+      const lesson = ensureLesson(lessonId);
+      const current = new Set(lesson.checkedInstructions[stepId] ?? []);
+      if (checked) current.add(index);
+      else current.delete(index);
+      if (current.size) lesson.checkedInstructions[stepId] = [...current].sort((a, b) => a - b);
+      else delete lesson.checkedInstructions[stepId];
       save();
     },
     isPersistent: () => persistent,
