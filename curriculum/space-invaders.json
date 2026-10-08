@@ -82,7 +82,7 @@
           "instructions": [
             "Open a new Scratch 3 project and delete the Cat sprite.",
             "Write down the required sprites: `Player`, `Alien`, `Player Laser`, `Enemy Shot`, `Bunker`, and `Mothership`.",
-            "Picture an 8-column by 3-row alien fleet. Eight times three is 24, so `Aliens Left` can tell the Stage when the player wins.",
+            "Picture an 8-column by 3-row alien fleet. That is 24 aliens, so `Aliens Left` starts at 24 and the player wins when it reaches 0.",
             "Trace the two ways to lose: an Enemy Shot touches Player, or an Alien reaches the invasion line.",
             "Remember the restart rule: after a win or loss, click the green flag. Do not build a Restart button or an in-game restart message."
           ],
@@ -116,7 +116,9 @@
           "explanation": "Names matter because Scratch places sprite names inside sensing and motion blocks. Set up every game object now so later instructions can use exact names.",
           "instructions": [
             "Create the `Space` backdrop. Paint and rename the existing blank backdrop, or choose a dark space backdrop, delete the original blank backdrop, and rename the chosen one `Space`.",
-            "Add readable player instructions to `Space`: Arrow keys move, Space fires, destroy all Aliens to win, avoid Enemy Shots and stop the Aliens from reaching the invasion line, the green flag starts or restarts, Aliens score 10, and Mothership scores 50.",
+            "Write the controls on `Space`: Arrow keys move, Space fires, and the green flag starts or restarts.",
+            "Write the goal and scoring on `Space`: destroy all Aliens to win, avoid Enemy Shots, stop the Aliens from reaching the invasion line, Aliens score 10, and Mothership scores 50.",
+            "Draw a thin, faint line across `Space` at y -60 and label it as the invasion line. An alien that drops below this line ends the game.",
             "Duplicate Space twice. Name the copies `You Win` and `Game Over`, replace the control text with a large matching result, and confirm exactly three backdrops exist.",
             "Create a ship sprite named `Player`. Center its artwork and keep its visible costume no larger than 36 pixels wide by 18 pixels high.",
             "Create an enemy sprite named `Alien`. Center its artwork and keep its visible costume no larger than 32 pixels wide by 18 pixels high.",
@@ -202,7 +204,7 @@
             "On Player, reset its position to x 0, y -150 and show it when `Reset Game` arrives.",
             "On Alien, Player Laser, Enemy Shot, Bunker, and Mothership, add a `when I receive Reset Game` script with `hide`.",
             "This hides every non-Player sprite during Chapter 1 setup and every reset. In later chapters, add each sprite's other reset blocks to this same script.",
-            "On Player, start a movement script when `Start Game` arrives. Use `repeat until Game State is not playing` so movement stops when the game ends.",
+            "On Player, start a movement script when `Start Game` arrives. Add `repeat until`, and for its condition put `Game State = playing` inside a `not` block. Movement then stops when the game ends.",
             "Move left or right by 6 while the matching arrow key is pressed.",
             "Keep Player between x -210 and x 210 so it cannot leave the Stage.",
             "Click the green flag and test both edges."
@@ -568,8 +570,8 @@
           "instructions": [
             "Select Player Laser and remove any clone blocks if you experimented earlier.",
             "Find Player Laser's existing `when I receive Reset Game` script from Chapter 1. Snap `set Laser Active to 0` directly under its `hide` block.",
-            "Confirm Player Laser is centered and no larger than 4 pixels wide by 10 pixels high. This is visible, cannot skip an 18-pixel target while moving by 10, and cannot bridge two target rows.",
-            "On Player, add a second, separate `when I receive Start Game` script for firing. Use `repeat until Game State is not playing`. Do not put firing inside the movement script.",
+            "Confirm Player Laser is centered and no larger than 4 pixels wide by 10 pixels high. A 10-pixel laser that moves 10 pixels at a time cannot jump over an 18-pixel alien, and it cannot touch two rows at once.",
+            "On Player, add a second, separate `when I receive Start Game` script for firing. Use the same `repeat until not Game State = playing` loop. Do not put firing inside the movement script.",
             "Inside the firing loop, add a condition that checks whether Space is pressed and `Laser Active` is 0.",
             "Inside that condition, set `Laser Active` to 1 first so the next loop pass sees that a shot has started.",
             "Choose New message in a broadcast block, create `Fire Laser`, and broadcast it.",
@@ -828,7 +830,10 @@
             "Click the costume-name box above the paint canvas, type `Full`, and press Enter so the new name is saved on the costume thumbnail.",
             "In the costume thumbnail list, right-click `Full`, choose `duplicate`, click the copy's name box, type `Damaged`, and press Enter.",
             "Right-click `Full` again, choose `duplicate`, rename this second copy `Critical`, and press Enter. Duplicate Full both times; do not copy a costume that is already damaged.",
-            "Select the Eraser tool and change its size box from 40 to 10. Remove two small chunks from the upper edge of `Damaged` and three small chunks from the upper edge of `Critical`; leave a solid path through the center and across the lower edge so a straight laser or shot can still touch every damage level.",
+            "Select the Eraser tool and change its size box from 40 to 10.",
+            "On `Damaged`, erase two small chunks from the upper edge.",
+            "On `Critical`, erase three small chunks from the upper edge.",
+            "Leave the center and the lower edge solid, so a straight laser or shot can still touch every damage level.",
             "Click each costume thumbnail and check the size printed beside its name. `Full`, `Damaged`, and `Critical` must each stay centered and no larger than 56 pixels wide by 18 pixels high.",
             "Click the `Code` tab, open Variables, and confirm `Health` and `Bunker Number` were made `For this sprite only` on Bunker.",
             "Select Enemy Shot and find the existing `when I receive Reset Game` script from Chapter 1. Snap `set Enemy Shot Active to 0` directly under its `hide` block. Do not add a second `when I receive Reset Game` event block.",
@@ -981,7 +986,8 @@
           "title": "Lose When Player Is Hit",
           "explanation": "Enemy Shot checks for contact with Player because there is only one enemy shot. Put the collision check inside the flight loop, immediately after each downward move, so the shot checks for contact as it travels. On contact, set `Enemy Shot Active` to 0 first. Then a nested `Game State = playing` check allows only the first valid loss to set the state to `lost` and broadcast `Lose`.",
           "instructions": [
-            "Find `change y by -7` inside Enemy Shot's `repeat until`. Drag a Control `if then` block onto the thin connection between `change y by -7` and `wait 0.03 seconds`; when it snaps correctly, the wait block moves below the new if.",
+            "Find `change y by -7` inside Enemy Shot's `repeat until`. Drag a Control `if then` block onto the thin connection between `change y by -7` and `wait 0.03 seconds`.",
+            "When it snaps correctly, the wait block moves below the new if.",
             "Put an `and` operator in the new if's condition space. On its left, build `Enemy Shot Active = 1`. On its right, add the Sensing block `touching Player` and choose Player from the menu.",
             "Inside the collision if, the first block must be `set Enemy Shot Active to 0`. Set it first so another loop pass sees that the hit was already handled.",
             "Under that set block, add a nested `if then`. Build `Game State = playing` in its condition space.",
@@ -1063,7 +1069,7 @@
             "Inside it, set `Enemy Shot Active` to 0 first. Then repeat the same Health, costume, hide, and delete blocks.",
             "Check the forever loop from top to bottom. It must contain two separate collision ifs at the same level: Player Laser first and Enemy Shot second.",
             "Each collision if must contain its own three separate Health checks.",
-            "Click the green flag and confirm exactly three Full bunkers appear at x -130, 0, and 130. If a clone appears in the wrong place, recheck the plus and multiply holes before testing damage.",
+            "Click the green flag and confirm exactly three Full bunkers appear at x -130, 0, and 130. If a clone appears in the wrong place, recheck the number spaces in the `+` and `*` blocks before testing damage.",
             "Before the damage test, temporarily change Enemy Shot's `pick random 1.5 to 3` to `pick random 99 to 99`. This stops enemy fire from changing the bunkers while you test.",
             "Test the costumes and separate Health values. Hit the left bunker twice with Player Laser, then hit the right bunker once.",
             "The left bunker must be Critical, the middle must still be Full, and the right must be Damaged.",
@@ -1207,6 +1213,7 @@
           ],
           "hints": [
             "One script makes it easy to prove one pass can award the bonus once.",
+            "To hit Mothership in a test, first clear one column of aliens so your laser has an open path upward.",
             "The sprite will cross at y 160, above the starting fleet."
           ],
           "debuggingTips": [
@@ -1555,7 +1562,7 @@
           "explanation": "The finished project starts with the green flag and ends with a win or loss. Alien clones remember their rows and columns, Bunker clones remember their own Health, and the Stage controls three fleet movement phases. The game also reuses one laser and one enemy shot, counts each score once, and uses Game State to show only one ending.",
           "instructions": [
             "Use File > Save to your computer and keep the download as `space-invaders-final.sb3`.",
-            "Confirm the Space backdrop shows the controls, goal, dangers, and scoring: Arrow keys move, Space fires, destroy all Aliens to win, avoid Enemy Shots and stop Aliens from reaching the invasion line, the green flag starts or restarts, Aliens score 10, and Mothership scores 50.",
+            "Confirm the Space backdrop still shows the controls, goal, scoring, and invasion line you added in Chapter 1.",
             "Play one final game without opening the code area or changing variables.",
             "Confirm the final project matches the checklist below.",
             "Open a new Scratch editor, use File > Load from your computer to load `space-invaders-final.sb3`, and repeat the clean green-flag start."

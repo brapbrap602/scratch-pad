@@ -107,7 +107,12 @@ test('Chapter 4 setup gives preteens the exact proven costume and reset UI path'
   assert.match(instructions, /type `Full`.*press Enter/i);
   assert.match(instructions, /right-click.*`Full`.*duplicate.*`Damaged`/i);
   assert.match(instructions, /right-click.*`Full`.*duplicate.*`Critical`/i);
-  assert.match(instructions, /Eraser.*size.*10.*two.*upper edge.*`Damaged`.*three.*upper edge.*`Critical`.*solid.*center/i);
+  assertInstructionsInOrder(setup.instructions, [
+    /Eraser.*size.*10/i,
+    /`Damaged`.*two.*upper edge/i,
+    /`Critical`.*three.*upper edge/i,
+    /center.*lower edge solid/i,
+  ]);
   assert.match(instructions, /existing `when I receive Reset Game` script.*under.*`hide`/i);
   assert.doesNotMatch(learnerText, /add a reset script/i);
   assert.match(learnerText, /trackpad.*two-finger/i);
