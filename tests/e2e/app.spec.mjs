@@ -550,3 +550,19 @@ test('instruction ticks are remembered and finishing a chapter is celebrated', a
   await expect(page.locator('.celebration')).toContainText('Chapter complete!');
   await expect(page.getByRole('button', { name: 'Mark step incomplete' })).toHaveAttribute('aria-pressed', 'true');
 });
+
+test('wide screens keep finished code open beside the steps, with a block colour key', async ({ page }) => {
+  await page.setViewportSize({ width: 1680, height: 1000 });
+  await page.getByLabel('Project').selectOption('space-invaders');
+  await (await showStep(page, 'conduct-finite-march')).click();
+  const code = page.locator('details.finished-code');
+  await expect(code).toHaveAttribute('open', '');
+  const codeBox = await code.boundingBox();
+  const stepsBox = await page.locator('.build-instructions').boundingBox();
+  expect(codeBox.x).toBeGreaterThan(stepsBox.x + stepsBox.width);
+  await expect(page.locator('.block-legend')).toContainText('Control');
+
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await (await showStep(page, 'place-alien-grid')).click();
+  await expect(page.locator('details.finished-code')).not.toHaveAttribute('open', '');
+});

@@ -354,6 +354,24 @@
       summary::-webkit-details-marker { display: none; }
       .details-content { border-top: 1px solid var(--border-subtle); padding: 1rem; }
       .code-scroll { max-width: 100%; overflow-x: auto; }
+      .block-legend { align-items: center; color: var(--text-muted); display: flex; flex-wrap: wrap; font-size: .85rem; gap: .35rem; margin: .25rem 0 .75rem; }
+      .block-legend .inline-chip { font-size: .8rem; }
+      /* Wide screens: finished code stays beside the steps instead of at the bottom. */
+      @media (min-width: 1500px) {
+        .content-column:has(> .finished-code) { max-width: 1500px; }
+        article.has-finished-code { column-gap: 2rem; display: grid; grid-template-columns: minmax(0, 78ch) minmax(22rem, 1fr); }
+        article.has-finished-code > * { grid-column: 1; }
+        article.has-finished-code > .finished-code {
+          align-self: start;
+          grid-column: 2;
+          grid-row: 1 / span 40;
+          margin-top: 0;
+          max-height: calc(100dvh - 9rem);
+          overflow: auto;
+          position: sticky;
+          top: 0;
+        }
+      }
       .code-label { color: var(--text-muted); font-size: .85rem; font-weight: 600; }
       /* The pinned Scratchblocks build leaves My Block inputs unstyled. */
       svg.scratchblocks-style-scratch3 .sb3-custom-arg { fill: #ff6680; stroke: #ff3355; }

@@ -527,9 +527,11 @@ const appendHints = (parent, step) => {
   }
 };
 
+const WIDE_LAYOUT = window.matchMedia('(min-width: 1500px)');
+
 const appendFinishedCode = (parent, step) => {
   if (!step.finishedCode) return;
-  const details = element('details');
+  const details = element('details', { className: 'finished-code' });
   details.append(element('summary', { text: 'Show finished code' }));
   const body = element('div', { className: 'details-content' });
   for (const entry of step.finishedCode) {
@@ -560,6 +562,12 @@ const appendFinishedCode = (parent, step) => {
     if (details.open && step.finishedCode.length === 1) renderPendingScratch(details);
   });
   parent.append(details);
+  parent.classList.add('has-finished-code');
+  if (WIDE_LAYOUT.matches) {
+    // Open now; the blocks are drawn once the step is on the page.
+    details.open = true;
+    body.querySelector(':scope > details')?.setAttribute('open', '');
+  }
 };
 
 const showTickCount = (node, done, total) => {
@@ -663,6 +671,16 @@ const navigateToStep = (stepId, { focus = true } = {}) => {
     instructions.append(item);
   });
   article.append(instructions);
+  const usedCategories = Object.keys(CATEGORY_LABELS).filter((category) =>
+    instructions.querySelector(`.inline-chip[data-category="${category}"]`));
+  if (usedCategories.length) {
+    const legend = element('p', { className: 'block-legend' });
+    legend.append(element('span', { text: 'Find these blocks in:' }));
+    for (const category of usedCategories) {
+      legend.append(element('span', { className: `inline-chip chip-${category}`, text: CATEGORY_LABELS[category] }));
+    }
+    instructions.before(legend);
+  }
   showTickCount(tickCount, ticked.size, step.instructions.length);
   appendVideo(article, step);
 
@@ -715,6 +733,7 @@ const navigateToStep = (stepId, { focus = true } = {}) => {
   }
   article.append(actions);
   contentArea.replaceChildren(article);
+  article.querySelectorAll('details[open]').forEach((open) => renderPendingScratch(open));
   updateNavigationState();
   contentArea.scrollTop = 0;
   if (window.matchMedia('(max-width: 767px)').matches) {
