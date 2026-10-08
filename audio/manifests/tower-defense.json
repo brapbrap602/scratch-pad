@@ -725,12 +725,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/1/explanation",
-          "speech": "Coordinates give the game a shared map.",
-          "requestHash": "ffef194ee524972276f22aae8d055d69951b7aaca6e2c7caa2169d23085ed652",
-          "src": "audio/assets/1c/1cdc50c113baca4340e4ba37223f9301f23b415d92bf106d57074a3e8b8cbcbf.mp3",
-          "sha256": "1cdc50c113baca4340e4ba37223f9301f23b415d92bf106d57074a3e8b8cbcbf",
-          "bytes": 16272,
-          "durationMs": 2712
+          "speech": "Every sprite uses the same x and y numbers to find places on the Stage.",
+          "requestHash": "f85ee29626ae1a246d6c4a75f4f325e9b6bf8091712adb8ccead0e882b645103",
+          "src": "audio/assets/7a/7a8782c3fc5e54f5649c8131651cde9d945b0859033320bb3877d975b4772bbc.mp3",
+          "sha256": "7a8782c3fc5e54f5649c8131651cde9d945b0859033320bb3877d975b4772bbc",
+          "bytes": 29376,
+          "durationMs": 4896
         },
         {
           "sourcePath": "chapters/0/steps/1/explanation",
@@ -786,12 +786,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/1/instructions/1",
-          "speech": "Draw three horizontal roads centered at y 90, y 0, and y negative 90.",
-          "requestHash": "3450222b0b5336c5e64af3f161b07436c839e39433cabf4762cf6728387f80c2",
-          "src": "audio/assets/80/80010a879b2118ad203f569cfd77e4dca80d21b3847ae7ba9b7509b0c983821c.mp3",
-          "sha256": "80010a879b2118ad203f569cfd77e4dca80d21b3847ae7ba9b7509b0c983821c",
-          "bytes": 37872,
-          "durationMs": 6312
+          "speech": "Draw three horizontal roads centered at y 90, y 0, and y negative 90, each about 20 pixels tall.",
+          "requestHash": "ed4529bc9122d54b322ac437c0c4b8d402f6665cff3c4a848e273ea3680146b2",
+          "src": "audio/assets/8e/8eb62b6a6a1f0e13089b45fc9fcee30625e6558ff4d37dab56c287759308fe16.mp3",
+          "sha256": "8eb62b6a6a1f0e13089b45fc9fcee30625e6558ff4d37dab56c287759308fe16",
+          "bytes": 51120,
+          "durationMs": 8520
         },
         {
           "sourcePath": "chapters/0/steps/1/instructions/1",
@@ -2098,12 +2098,21 @@
         },
         {
           "sourcePath": "chapters/1/steps/1/instructions/1",
-          "speech": "We use this only for this short task with no waits: finish the checks and purchase before another click can spend the same coins.",
-          "requestHash": "4487e9d327cfea5aa5f5563fd1ed0e970b3cb7b05c76173a7725b114b820dd8a",
-          "src": "audio/assets/09/09afbdd9fab4f6d54b1a9aca8cae5164219c67fb8311f50c1f85aaf6e768eec5.mp3",
-          "sha256": "09afbdd9fab4f6d54b1a9aca8cae5164219c67fb8311f50c1f85aaf6e768eec5",
-          "bytes": 45648,
-          "durationMs": 7608
+          "speech": "This block has no loops or waits, so Scratch runs it all at once either way.",
+          "requestHash": "ece3825bb51ef7cdb91670db797144e1b3c87c8fb5d0cffa6ad7ff58cda552f5",
+          "src": "audio/assets/9b/9baf610f169772bc4c95d3fc231c6912db906a9d4fd675ba196a0ad2f2673a2d.mp3",
+          "sha256": "9baf610f169772bc4c95d3fc231c6912db906a9d4fd675ba196a0ad2f2673a2d",
+          "bytes": 27936,
+          "durationMs": 4656
+        },
+        {
+          "sourcePath": "chapters/1/steps/1/instructions/1",
+          "speech": "The tick is a good habit for short My Blocks like this one.",
+          "requestHash": "14a1c9e2666be551ed646ddb3c8ed851877874543a7692602ab226d6043c9725",
+          "src": "audio/assets/c1/c1b7390c6e043409240b7f5506fe55e633da808643bdc897d4e8d520ace13038.mp3",
+          "sha256": "c1b7390c6e043409240b7f5506fe55e633da808643bdc897d4e8d520ace13038",
+          "bytes": 21456,
+          "durationMs": 3576
         }
       ]
     },
@@ -2158,21 +2167,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/1/steps/1/instructions/4",
-          "speech": "Put a not block in the right side of the and, then put Coins less than 30 inside not.",
-          "requestHash": "7625fc2b9f91be00197fd5939946c4c4a8aa21a613962bdd053345ce09b79398",
-          "src": "audio/assets/88/885cef7dec38d2aa07978988671129b4b21b16e6d68d0e963a6383bbda481f1b.mp3",
-          "sha256": "885cef7dec38d2aa07978988671129b4b21b16e6d68d0e963a6383bbda481f1b",
-          "bytes": 33264,
-          "durationMs": 5544
-        },
-        {
-          "sourcePath": "chapters/1/steps/1/instructions/4",
-          "speech": "Both halves of the and must be true; not less than 30 lets exactly 30 coins buy a tower.",
-          "requestHash": "d61c710f6ffa5319db768ec9163d5d4103755e300b144adbccca6f40e90cb694",
-          "src": "audio/assets/e4/e43c33a957aff99db7257b501b201c4c32223875c912ea7cbf83496e4612be5a.mp3",
-          "sha256": "e43c33a957aff99db7257b501b201c4c32223875c912ea7cbf83496e4612be5a",
-          "bytes": 37872,
-          "durationMs": 6312
+          "speech": "Put a not block in the right side of the and.",
+          "requestHash": "4ec1397ee592835c007733f5d62e86882bdda1e4c158223da4aa3a7c9c567e92",
+          "src": "audio/assets/df/dfa8cb1600da3a7d224889cc90265832ebe95c09873f65ef0881ec82ab39eaa5.mp3",
+          "sha256": "dfa8cb1600da3a7d224889cc90265832ebe95c09873f65ef0881ec82ab39eaa5",
+          "bytes": 17136,
+          "durationMs": 2856
         }
       ]
     },
@@ -2184,12 +2184,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/1/steps/1/instructions/5",
-          "speech": "Inside the inner if, change Coins by -30, set Built to 1, and switch costume to Built, in that order.",
-          "requestHash": "c246eec175ac33401d25688181c8af472f40dfb6d00a6e235302848df10c740b",
-          "src": "audio/assets/35/35e8ad2a43437f6761f2bbe0e734aea6aa7dd531fa6f4f3305686346e3a3e72f.mp3",
-          "sha256": "35e8ad2a43437f6761f2bbe0e734aea6aa7dd531fa6f4f3305686346e3a3e72f",
-          "bytes": 41616,
-          "durationMs": 6936
+          "speech": "Put Coins less than 30 inside the not.",
+          "requestHash": "0e91daf41062a0cb7ea5a151f840a7c6bd78ad9f2fdc474491ed9a6ec7a2ffe8",
+          "src": "audio/assets/23/232f64c67006ae3f7a026105f5d2c0e6447113a6dfc19df2945778a8ae945b76.mp3",
+          "sha256": "232f64c67006ae3f7a026105f5d2c0e6447113a6dfc19df2945778a8ae945b76",
+          "bytes": 18000,
+          "durationMs": 3000
+        },
+        {
+          "sourcePath": "chapters/1/steps/1/instructions/5",
+          "speech": "not Coins less than 30 means 30 or more, so exactly 30 coins can still buy a tower.",
+          "requestHash": "aa6767c8119c606e289994c82ed13fbb6c7b152ad23ba7dac1455a87ff07819e",
+          "src": "audio/assets/85/85f8bad6ab6f850346daffa340f72a2befb8abd9e7b738825f297503cc407c78.mp3",
+          "sha256": "85f8bad6ab6f850346daffa340f72a2befb8abd9e7b738825f297503cc407c78",
+          "bytes": 35856,
+          "durationMs": 5976
         }
       ]
     },
@@ -2201,21 +2210,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/1/steps/1/instructions/6",
-          "speech": "Add a separate when this sprite clicked script.",
-          "requestHash": "323ae0b99be46999505bc8e0db8fe6e0d26666b1d3feef4484e7cccbc03f547a",
-          "src": "audio/assets/99/9931ff7024e930b016a478442df8da8634509f067843104a53e0cb0b51d10fd4.mp3",
-          "sha256": "9931ff7024e930b016a478442df8da8634509f067843104a53e0cb0b51d10fd4",
-          "bytes": 17280,
-          "durationMs": 2880
-        },
-        {
-          "sourcePath": "chapters/1/steps/1/instructions/6",
-          "speech": "Attach the new Try to build block from the My Blocks category.",
-          "requestHash": "a92e48e8deb26978ef91944a93ee2c9cba0faa2f9b0fd8105a6bc22b2705ab4c",
-          "src": "audio/assets/e4/e45f39e3ba72170f9f91d58a3ddf72650029a333167d156923fd1d246c6b9508.mp3",
-          "sha256": "e45f39e3ba72170f9f91d58a3ddf72650029a333167d156923fd1d246c6b9508",
-          "bytes": 23328,
-          "durationMs": 3888
+          "speech": "Inside the inner if, change Coins by -30, set Built to 1, and switch costume to Built, in that order.",
+          "requestHash": "c246eec175ac33401d25688181c8af472f40dfb6d00a6e235302848df10c740b",
+          "src": "audio/assets/35/35e8ad2a43437f6761f2bbe0e734aea6aa7dd531fa6f4f3305686346e3a3e72f.mp3",
+          "sha256": "35e8ad2a43437f6761f2bbe0e734aea6aa7dd531fa6f4f3305686346e3a3e72f",
+          "bytes": 41616,
+          "durationMs": 6936
         }
       ]
     },
@@ -2227,6 +2227,32 @@
       "sentences": [
         {
           "sourcePath": "chapters/1/steps/1/instructions/7",
+          "speech": "Add a separate when this sprite clicked script.",
+          "requestHash": "323ae0b99be46999505bc8e0db8fe6e0d26666b1d3feef4484e7cccbc03f547a",
+          "src": "audio/assets/99/9931ff7024e930b016a478442df8da8634509f067843104a53e0cb0b51d10fd4.mp3",
+          "sha256": "9931ff7024e930b016a478442df8da8634509f067843104a53e0cb0b51d10fd4",
+          "bytes": 17280,
+          "durationMs": 2880
+        },
+        {
+          "sourcePath": "chapters/1/steps/1/instructions/7",
+          "speech": "Attach the new Try to build block from the My Blocks category.",
+          "requestHash": "a92e48e8deb26978ef91944a93ee2c9cba0faa2f9b0fd8105a6bc22b2705ab4c",
+          "src": "audio/assets/e4/e45f39e3ba72170f9f91d58a3ddf72650029a333167d156923fd1d246c6b9508.mp3",
+          "sha256": "e45f39e3ba72170f9f91d58a3ddf72650029a333167d156923fd1d246c6b9508",
+          "bytes": 23328,
+          "durationMs": 3888
+        }
+      ]
+    },
+    {
+      "id": "one-tower/teach-try-build/instruction/008",
+      "sourcePaths": [
+        "chapters/1/steps/1/instructions/8"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/1/steps/1/instructions/8",
           "speech": "Do not put a wait, glide, broadcast, or timed say block inside Try to build.",
           "requestHash": "968bce2761561c049c527678729c060e527ae452061c404d02061e591b093b4a",
           "src": "audio/assets/b4/b4d803ff5ac2b98990a8a0bad84c30ff18598db987f8e5ce181a0113b0f0402f.mp3",
@@ -2244,12 +2270,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/1/steps/1/hints/0",
-          "speech": "The define block explains the task; the smaller Try to build block calls it.",
-          "requestHash": "7906e81fbb923d867590352e9091dbc84a8bd484641f6b3edabb38c332998e62",
-          "src": "audio/assets/df/df4edfbeae7b48e4dc48bb0bd7720e9fe6c17622f9cab194276be02551ac169c.mp3",
-          "sha256": "df4edfbeae7b48e4dc48bb0bd7720e9fe6c17622f9cab194276be02551ac169c",
-          "bytes": 30384,
-          "durationMs": 5064
+          "speech": "The define block holds the task's blocks; the smaller Try to build block runs them.",
+          "requestHash": "62bffeba3fc6dc455907a7874f6b68018cd83fb9e2a9a593762965c48fbdd5cd",
+          "src": "audio/assets/d7/d71949d073aa6cf9ad45056b212f720af47fb81909e228dff84cfcede401f8d1.mp3",
+          "sha256": "d71949d073aa6cf9ad45056b212f720af47fb81909e228dff84cfcede401f8d1",
+          "bytes": 33696,
+          "durationMs": 5616
         }
       ]
     },
@@ -4017,21 +4043,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/2/steps/2/instructions/5",
-          "speech": "Build the Check shot definition below.",
-          "requestHash": "0f49a95ed370514790325374560e095be3b05c48fb0871fd212bf6e3143f9e01",
-          "src": "audio/assets/28/28a8cfedc2d32cf57ef3d784204e040e2ba0e44f39b6393ba14c9b2d2bcc0ef2.mp3",
-          "sha256": "28a8cfedc2d32cf57ef3d784204e040e2ba0e44f39b6393ba14c9b2d2bcc0ef2",
-          "bytes": 15984,
-          "durationMs": 2664
-        },
-        {
-          "sourcePath": "chapters/2/steps/2/instructions/5",
-          "speech": "Drag the round slot input from its define block into the list item inputs.",
-          "requestHash": "8a3bebeb63fd782f8c327561a94f64d5a654586870187e75be5d45ce14323fb5",
-          "src": "audio/assets/2e/2e0639ae36c49cc1a9092e4f791102a3709b077ccce94a545080bf632eea3b86.mp3",
-          "sha256": "2e0639ae36c49cc1a9092e4f791102a3709b077ccce94a545080bf632eea3b86",
-          "bytes": 29952,
-          "durationMs": 4992
+          "speech": "As you build the definition below, drag the round slot input from its define block into each list item input.",
+          "requestHash": "b4b1f26af8cc6235585153a1d53fe16b081ec38393331e14ac5253d75d3aa9a2",
+          "src": "audio/assets/cc/cc12140337fd9ab528e9886238ae0dc0c378f0bd82ff77debc8bf278f878d367.mp3",
+          "sha256": "cc12140337fd9ab528e9886238ae0dc0c378f0bd82ff77debc8bf278f878d367",
+          "bytes": 40752,
+          "durationMs": 6792
         },
         {
           "sourcePath": "chapters/2/steps/2/instructions/5",
@@ -4086,21 +4103,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/2/steps/2/instructions/8",
-          "speech": "Inside that, put the position check shown below.",
-          "requestHash": "50ed50a45eda3b50a23bc8ce92eca724453621637edce0f9222b0e7187d12fca",
-          "src": "audio/assets/36/36ae373a597c0ec5837b7ce935476e1269d053ddd9884cdf00b2597982e0449c.mp3",
-          "sha256": "36ae373a597c0ec5837b7ce935476e1269d053ddd9884cdf00b2597982e0449c",
-          "bytes": 19296,
-          "durationMs": 3216
+          "speech": "Inside that, add a third if.",
+          "requestHash": "04b0bdd54ee71c00ed1df4078308ffd8db92f80c01eaf20c205bfd6e3e94e648",
+          "src": "audio/assets/6e/6ebb085d55662f4673cf49cd488db0489a2c5e7ab1a6be33744c2df680497385.mp3",
+          "sha256": "6ebb085d55662f4673cf49cd488db0489a2c5e7ab1a6be33744c2df680497385",
+          "bytes": 13392,
+          "durationMs": 2232
         },
         {
           "sourcePath": "chapters/2/steps/2/instructions/8",
-          "speech": "Its two halves are joined by and, and each half has a not around its comparison.",
-          "requestHash": "9668204ac162f80669316d5e76d13d7f599a033028fe2ae8d9c719d4d40ac22b",
-          "src": "audio/assets/92/924fbe2f2c3c664a4caecbff0a87659b0b6c2d6184ccfe0d1c0f39b7344b998a.mp3",
-          "sha256": "924fbe2f2c3c664a4caecbff0a87659b0b6c2d6184ccfe0d1c0f39b7344b998a",
-          "bytes": 32400,
-          "durationMs": 5400
+          "speech": "Put an and block in its condition.",
+          "requestHash": "bf860a5e026c14e84dbf07da79674fbcf99a1cd0ffe241b4dff872154204026d",
+          "src": "audio/assets/be/be12eb86d9ee975cbb26e5afde18472d45e77ae32e125ac02bb3d885134a07fe.mp3",
+          "sha256": "be12eb86d9ee975cbb26e5afde18472d45e77ae32e125ac02bb3d885134a07fe",
+          "bytes": 14688,
+          "durationMs": 2448
         }
       ]
     },
@@ -4112,21 +4129,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/2/steps/2/instructions/9",
-          "speech": "Inside the position check, first replace item slot of Shot Active with 0, then change HP by -1.",
-          "requestHash": "10c45d2bd04cbfd8cdcde698aaf6cae01a6dbe2fec0b161c5abf58ed21675998",
-          "src": "audio/assets/c2/c29520b28400ae1cf0a452c2b12236c998dd8d808846f818cb80ad32c2b1b6d6.mp3",
-          "sha256": "c29520b28400ae1cf0a452c2b12236c998dd8d808846f818cb80ad32c2b1b6d6",
-          "bytes": 46512,
-          "durationMs": 7752
+          "speech": "In the left side of the and, put a not block.",
+          "requestHash": "2855f666226aef478d240dbdae159814a38b5150064d5bb2cb36ae952accd1b8",
+          "src": "audio/assets/5a/5af25167daa3c4e191dc9596d0e693a41c278a90be1e2b922e65b7ad7003394d.mp3",
+          "sha256": "5af25167daa3c4e191dc9596d0e693a41c278a90be1e2b922e65b7ad7003394d",
+          "bytes": 20304,
+          "durationMs": 3384
         },
         {
           "sourcePath": "chapters/2/steps/2/instructions/9",
-          "speech": "Do not put a wait between them.",
-          "requestHash": "d22b57b2c58eadec8cf0c850de226c7e19cd1435a4a14de649d42062e6d6e58a",
-          "src": "audio/assets/9f/9f85910cbc512a49645847918fbf074002ac26c43c09d59af133b3337de89dd5.mp3",
-          "sha256": "9f85910cbc512a49645847918fbf074002ac26c43c09d59af133b3337de89dd5",
-          "bytes": 12960,
-          "durationMs": 2160
+          "speech": "Inside it, build item slot of Shot X less than x position minus 12.",
+          "requestHash": "8347539489ab4efa6aabdd6fe017c704a4ebcbdf183034d9c742329801060536",
+          "src": "audio/assets/11/11281e8d3721d045627967750c4f581c7ab3777af2cb6a2f51f22745f22ed0af.mp3",
+          "sha256": "11281e8d3721d045627967750c4f581c7ab3777af2cb6a2f51f22745f22ed0af",
+          "bytes": 31392,
+          "durationMs": 5232
         }
       ]
     },
@@ -4138,6 +4155,67 @@
       "sentences": [
         {
           "sourcePath": "chapters/2/steps/2/instructions/10",
+          "speech": "In the right side of the and, put another not block.",
+          "requestHash": "40fc78a0abc70945a445d8894dc0034edae42e15caebbf116a11e894961d36ac",
+          "src": "audio/assets/c3/c36c62c8ddd795a367fd25f16f523ebe6838a78f477fa138d07554967a657ae4.mp3",
+          "sha256": "c36c62c8ddd795a367fd25f16f523ebe6838a78f477fa138d07554967a657ae4",
+          "bytes": 21888,
+          "durationMs": 3648
+        },
+        {
+          "sourcePath": "chapters/2/steps/2/instructions/10",
+          "speech": "Inside it, build item slot of Shot X minus 10 greater than x position plus 14.",
+          "requestHash": "bec31f3ae849efd438929be2c3e64fb5da178cbf85d6817b249e8a217f72d855",
+          "src": "audio/assets/64/6464f01438c0a1c2d4b3ce44649aec9bdadde35cf1918b96e7680640a0485213.mp3",
+          "sha256": "6464f01438c0a1c2d4b3ce44649aec9bdadde35cf1918b96e7680640a0485213",
+          "bytes": 35568,
+          "durationMs": 5928
+        },
+        {
+          "sourcePath": "chapters/2/steps/2/instructions/10",
+          "speech": "The next step explains these numbers.",
+          "requestHash": "7d86036c016e7ef2da6111fff03d29fa53355ce39c8f99f058db3a43b6051559",
+          "src": "audio/assets/9d/9dbeb5978936c44de002e3c2e3bbc9b60142e38cfd47bc9f86c0eca106df604f.mp3",
+          "sha256": "9dbeb5978936c44de002e3c2e3bbc9b60142e38cfd47bc9f86c0eca106df604f",
+          "bytes": 16128,
+          "durationMs": 2688
+        }
+      ]
+    },
+    {
+      "id": "one-shot/check-a-numbered-shot/instruction/011",
+      "sourcePaths": [
+        "chapters/2/steps/2/instructions/11"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/2/steps/2/instructions/11",
+          "speech": "Inside the position check, first replace item slot of Shot Active with 0, then change HP by -1.",
+          "requestHash": "10c45d2bd04cbfd8cdcde698aaf6cae01a6dbe2fec0b161c5abf58ed21675998",
+          "src": "audio/assets/c2/c29520b28400ae1cf0a452c2b12236c998dd8d808846f818cb80ad32c2b1b6d6.mp3",
+          "sha256": "c29520b28400ae1cf0a452c2b12236c998dd8d808846f818cb80ad32c2b1b6d6",
+          "bytes": 46512,
+          "durationMs": 7752
+        },
+        {
+          "sourcePath": "chapters/2/steps/2/instructions/11",
+          "speech": "Do not put a wait between them.",
+          "requestHash": "d22b57b2c58eadec8cf0c850de226c7e19cd1435a4a14de649d42062e6d6e58a",
+          "src": "audio/assets/9f/9f85910cbc512a49645847918fbf074002ac26c43c09d59af133b3337de89dd5.mp3",
+          "sha256": "9f85910cbc512a49645847918fbf074002ac26c43c09d59af133b3337de89dd5",
+          "bytes": 12960,
+          "durationMs": 2160
+        }
+      ]
+    },
+    {
+      "id": "one-shot/check-a-numbered-shot/instruction/012",
+      "sourcePaths": [
+        "chapters/2/steps/2/instructions/12"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/2/steps/2/instructions/12",
           "speech": "Read the position example in the next step before connecting this block to Enemy Step.",
           "requestHash": "262d2a223c6320206c144eebe69e2940041ab0eb65419ca5b67e4bdeaca4dc3c",
           "src": "audio/assets/20/20170c84dd7aa94798aad207df4fbfaa2cc6c92db89740be9329da03664d1fd1.mp3",
@@ -4473,12 +4551,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/2/steps/3/instructions/5",
-          "speech": "Match 12, 10, and 14 in your Check shot block to the enemy half-width, shot movement, and previous enemy edge.",
-          "requestHash": "13e8822ba5fdaaeb3d2c61aa86b7d4a0df7c7455dde91ea8c981214b09cf8f7e",
-          "src": "audio/assets/f2/f2dcc3161c9c9fb66e95a69010e184afd19e4640d9818503556cc7fa568fe992.mp3",
-          "sha256": "f2dcc3161c9c9fb66e95a69010e184afd19e4640d9818503556cc7fa568fe992",
-          "bytes": 40464,
-          "durationMs": 6744
+          "speech": "Match the numbers in your Check shot block: 12 is the enemy's half-width, 10 is how far the shot moved this update, and 14 is 12 plus the 2 pixels the enemy moved this update.",
+          "requestHash": "01c232827b7b4a2f2cc0fce8bfb51b800c52c2e8cdfbfb99ee8982173ff889ff",
+          "src": "audio/assets/ba/baac4fdc9d7357d0974895a72432524c5f4b68bd5f9b810717ac8a0f7a8fd7ee.mp3",
+          "sha256": "baac4fdc9d7357d0974895a72432524c5f4b68bd5f9b810717ac8a0f7a8fd7ee",
+          "bytes": 67680,
+          "durationMs": 11280
         },
         {
           "sourcePath": "chapters/2/steps/3/instructions/5",
@@ -4867,6 +4945,15 @@
         "chapters/2/steps/4/instructions/4"
       ],
       "sentences": [
+        {
+          "sourcePath": "chapters/2/steps/4/instructions/4",
+          "speech": "If the HP display is not on the Stage, select Enemy and tick the checkbox next to HP in the Variables category.",
+          "requestHash": "1fe5201983c430f3f117719fff6756485c7873969f4b4c993ab64fd7f1d2ad24",
+          "src": "audio/assets/7d/7dec531e4392b3c32a6e7b4e1983c90414679000185f8142fa39c6780649ed67.mp3",
+          "sha256": "7dec531e4392b3c32a6e7b4e1983c90414679000185f8142fa39c6780649ed67",
+          "bytes": 46944,
+          "durationMs": 7824
+        },
         {
           "sourcePath": "chapters/2/steps/4/instructions/4",
           "speech": "Restart and buy the tower promptly.",
@@ -5456,12 +5543,21 @@
         },
         {
           "sourcePath": "chapters/3/steps/0/instructions/1",
-          "speech": "Each tower clone needs to remember its own lane.",
-          "requestHash": "ba6110431dd2a1820501c587c007c4aa2a629f930ad604109ae57eb5c389b9e0",
-          "src": "audio/assets/f8/f82dd86435329eb67815ac338e034db30585dbe869c2ee0a07d25d88c6b3a515.mp3",
-          "sha256": "f82dd86435329eb67815ac338e034db30585dbe869c2ee0a07d25d88c6b3a515",
-          "bytes": 20304,
-          "durationMs": 3384
+          "speech": "Tower's code stores each spot's lane but does not use it yet.",
+          "requestHash": "b3bc881e9674d26221457fcb279d36a39531bac0f618d012d5d6ce1197f21946",
+          "src": "audio/assets/6f/6fc4077e0d6680ab9e0fa506b1983a8ca2ed44bcb394e16945fd11a857d734ef.mp3",
+          "sha256": "6fc4077e0d6680ab9e0fa506b1983a8ca2ed44bcb394e16945fd11a857d734ef",
+          "bytes": 24336,
+          "durationMs": 4056
+        },
+        {
+          "sourcePath": "chapters/3/steps/0/instructions/1",
+          "speech": "Showing it helps you check which lane a spot belongs to.",
+          "requestHash": "e2458ada41427de2cb1bb30b13ec2c04b2f89342bf0d679605a330a4047670c3",
+          "src": "audio/assets/28/284dfaf72bd3c468666a27091243cc03cbda265bd70b2dbf182f4a2a775eb335.mp3",
+          "sha256": "284dfaf72bd3c468666a27091243cc03cbda265bd70b2dbf182f4a2a775eb335",
+          "bytes": 21600,
+          "durationMs": 3600
         }
       ]
     },
@@ -5680,21 +5776,29 @@
         },
         {
           "sourcePath": "chapters/3/steps/0/instructions/11",
-          "speech": "Initialize Originals is for the green flag, after Scratch has removed old clones.",
-          "requestHash": "8c9b1d3fc9306e8427c8f795bfb472ac18a3a0150e247b296b280b32e1527ec8",
-          "src": "audio/assets/8f/8fe192dc0d738443572e81882067e4ff48f6f43f7c2462b30eae7ee781478713.mp3",
-          "sha256": "8fe192dc0d738443572e81882067e4ff48f6f43f7c2462b30eae7ee781478713",
-          "bytes": 34560,
-          "durationMs": 5760
-        },
+          "speech": "When the green flag is clicked, Scratch deletes all clones for you, so Initialize Originals only resets the original sprites.",
+          "requestHash": "1894c6ce0c22d4b7ac5112e742b01a13c313c2d40593328a79305c5a20cce2b6",
+          "src": "audio/assets/97/97784fb774a291202097d31d046adef8d9557e5fe7339b1cc67e12d5c3220ab3.mp3",
+          "sha256": "97784fb774a291202097d31d046adef8d9557e5fe7339b1cc67e12d5c3220ab3",
+          "bytes": 49104,
+          "durationMs": 8184
+        }
+      ]
+    },
+    {
+      "id": "six-spots/number-the-spots/instruction/012",
+      "sourcePaths": [
+        "chapters/3/steps/0/instructions/12"
+      ],
+      "sentences": [
         {
-          "sourcePath": "chapters/3/steps/0/instructions/11",
-          "speech": "Clear Clones will remove copies when changing levels.",
-          "requestHash": "29b438ce84f03f91996ce3da327569a8c8d3bb9116d95c3a8535db9f2a712cc0",
-          "src": "audio/assets/7f/7f4f4f376ab2480c6055998f0d27deecd01e03daf14c164e91ef037e81f246b1.mp3",
-          "sha256": "7f4f4f376ab2480c6055998f0d27deecd01e03daf14c164e91ef037e81f246b1",
-          "bytes": 21744,
-          "durationMs": 3624
+          "sourcePath": "chapters/3/steps/0/instructions/12",
+          "speech": "Going to the next level does not use the green flag, so Clear Clones must delete the old copies itself.",
+          "requestHash": "dd7714d2045b3de61f287c7b7bebe2d04ecbf042ac398c5f508edf7c69086486",
+          "src": "audio/assets/43/432a3687f455f578ba683305484339709c0d3711520480a30bff720539b43893.mp3",
+          "sha256": "432a3687f455f578ba683305484339709c0d3711520480a30bff720539b43893",
+          "bytes": 38304,
+          "durationMs": 6384
         }
       ]
     },
@@ -5857,6 +5961,15 @@
           "sha256": "f0ec83f4605366047ce9222293322dccd5856c4f73436a2d6e1ef17ab249cfbe",
           "bytes": 33984,
           "durationMs": 5664
+        },
+        {
+          "sourcePath": "chapters/3/steps/1/explanation",
+          "speech": "For example, if the original has ID 3 when it makes a clone, that spot keeps ID 3 even after the original sets its own ID back to 0.",
+          "requestHash": "9995b8ccbaf744caf0af007bc6f5975b62cf205784cd8783cb10424edcfefdee",
+          "src": "audio/assets/c3/c3d102b9e0dd3d1c588a3c134c44738045c934eee4dc39b6316f4db1aff9124f.mp3",
+          "sha256": "c3d102b9e0dd3d1c588a3c134c44738045c934eee4dc39b6316f4db1aff9124f",
+          "bytes": 51696,
+          "durationMs": 8616
         },
         {
           "sourcePath": "chapters/3/steps/1/explanation",
@@ -6065,6 +6178,32 @@
           "sha256": "b8008f30f9db8d446da265b0a9b0bd351c120e4bd54457d345c83b6532fc36ac",
           "bytes": 50976,
           "durationMs": 8496
+        }
+      ]
+    },
+    {
+      "id": "six-spots/make-six-towers/instruction/008",
+      "sourcePaths": [
+        "chapters/3/steps/1/instructions/8"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/1/instructions/8",
+          "speech": "Do not click the green flag again until the Chapter 4 checkpoint.",
+          "requestHash": "ca94fa86c5fc2beee3b7dd494b61a3b6ef48242f2af748635a664d9413e303ce",
+          "src": "audio/assets/59/5925e38ca92446bad564e29be9a3e8c69861cc2cb79577b6c4570a94b82868d0.mp3",
+          "sha256": "5925e38ca92446bad564e29be9a3e8c69861cc2cb79577b6c4570a94b82868d0",
+          "bytes": 25200,
+          "durationMs": 4200
+        },
+        {
+          "sourcePath": "chapters/3/steps/1/instructions/8",
+          "speech": "The Stage does not send Initialize Originals until then, so no spots would appear.",
+          "requestHash": "9664991cf25afc6220aed73a99807ab8a8f56e0573e9a4d2dfffb7edaaaf4483",
+          "src": "audio/assets/9e/9e2f45c9a13ced63754012f41ca85ad89fdccfc9487a62b1eb5e124469110130.mp3",
+          "sha256": "9e2f45c9a13ced63754012f41ca85ad89fdccfc9487a62b1eb5e124469110130",
+          "bytes": 34128,
+          "durationMs": 5688
         }
       ]
     },
@@ -7190,6 +7329,15 @@
           "sha256": "d35dc57eeb2c626e7b0d9955a9854d505c3a5375e922e93630486038f88d0708",
           "bytes": 45360,
           "durationMs": 7560
+        },
+        {
+          "sourcePath": "chapters/4/steps/0/explanation",
+          "speech": "We will also add one rule that makes towers more interesting: after a tower launches a shot, it must wait before it can launch another.",
+          "requestHash": "7d45c3f6d6d07389bd5a0ab2c708ace44d9e92699026804019507e5327bb21c6",
+          "src": "audio/assets/3b/3b4d56a7c9994a807ab7b5ac23491c23c6fa894cb40c99f953a0a5c2ea2bd4f8.mp3",
+          "sha256": "3b4d56a7c9994a807ab7b5ac23491c23c6fa894cb40c99f953a0a5c2ea2bd4f8",
+          "bytes": 50112,
+          "durationMs": 8352
         }
       ]
     },
@@ -7244,12 +7392,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/4/steps/0/instructions/2",
-          "speech": "Create Starting Coins, Starting Health, and Enemy HP for the values a new level gives the player and enemies.",
-          "requestHash": "5a193a5579e17521bfe8d91d0d7451e274edd5ef100bc19b73007b6414c26ee4",
-          "src": "audio/assets/6e/6e2ac4c62af4a41c4ef688a00dcd7c95d31e3d97266638ab04ee55e3a8194671.mp3",
-          "sha256": "6e2ac4c62af4a41c4ef688a00dcd7c95d31e3d97266638ab04ee55e3a8194671",
-          "bytes": 38304,
-          "durationMs": 6384
+          "speech": "Create Starting Coins, Starting Health, Enemy HP, and Reload Time for the values a new level gives the player, the enemies, and the towers.",
+          "requestHash": "0b2109afa8db94c940c5b76874ac2fc9efc2b8f33f70eed17067d06cc96e8fa9",
+          "src": "audio/assets/64/6493f52c37e401369c3998f8ae8d9428124da2451596ab3cc1da8ef4dd0ecc49.mp3",
+          "sha256": "6493f52c37e401369c3998f8ae8d9428124da2451596ab3cc1da8ef4dd0ecc49",
+          "bytes": 48240,
+          "durationMs": 8040
         }
       ]
     },
@@ -7417,21 +7565,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/4/steps/0/instructions/9",
-          "speech": "Show Level and Wave beside the resource displays at the top of the Stage.",
-          "requestHash": "c0a0059f6d022cf1581394ca8e0fbe0b0acbe8b0a50f457d85a5443ff007a7b0",
-          "src": "audio/assets/d7/d7891e3b5ba9fbcc4dc5ee20cc9b499fa8ef844bc846ddb91051d7774edffd23.mp3",
-          "sha256": "d7891e3b5ba9fbcc4dc5ee20cc9b499fa8ef844bc846ddb91051d7774edffd23",
-          "bytes": 27216,
-          "durationMs": 4536
+          "speech": "On Tower, make a variable named Reload with For this sprite only.",
+          "requestHash": "ad8ea74f0a17e0a5b76e663c54ff5e9cced170d4a0fdb6e1df1fb4834b596438",
+          "src": "audio/assets/88/884bd70064611d266c0887923f28636e8d173246c8b901caf47cc63795eb32df.mp3",
+          "sha256": "884bd70064611d266c0887923f28636e8d173246c8b901caf47cc63795eb32df",
+          "bytes": 24912,
+          "durationMs": 4152
         },
         {
           "sourcePath": "chapters/4/steps/0/instructions/9",
-          "speech": "Move displays away from build spots and roads.",
-          "requestHash": "92ff85e7458ef3ddee680b3b08855605492e0369b9f3c97ce6be93240f983322",
-          "src": "audio/assets/16/16e2e0af4aab7064a31d97a6eac77fe0207ed94cab06979551e2d2e8fc75c795.mp3",
-          "sha256": "16e2e0af4aab7064a31d97a6eac77fe0207ed94cab06979551e2d2e8fc75c795",
-          "bytes": 20304,
-          "durationMs": 3384
+          "speech": "Each tower clone counts down its own Reload.",
+          "requestHash": "d8fb6f85c8154cb68e022ab6d369634797746a81e3a5ad3096829193510d35b1",
+          "src": "audio/assets/01/01fdda0068b97c143ed834cb7e7af4fdb05020590781d9a4a2481219349efcc2.mp3",
+          "sha256": "01fdda0068b97c143ed834cb7e7af4fdb05020590781d9a4a2481219349efcc2",
+          "bytes": 19296,
+          "durationMs": 3216
         }
       ]
     },
@@ -7443,6 +7591,119 @@
       "sentences": [
         {
           "sourcePath": "chapters/4/steps/0/instructions/10",
+          "speech": "Replace the blocks under define Update my shot with the reload version shown below.",
+          "requestHash": "c26d8ddb980b05f8c8efa17b41d196038f27e5f76877f896ea640a37b3105c29",
+          "src": "audio/assets/ee/ee8be6368f8c671733d32ac9de6f0fd7eac24126ff7743e3fad3a3be691744d4.mp3",
+          "sha256": "ee8be6368f8c671733d32ac9de6f0fd7eac24126ff7743e3fad3a3be691744d4",
+          "bytes": 30816,
+          "durationMs": 5136
+        },
+        {
+          "sourcePath": "chapters/4/steps/0/instructions/10",
+          "speech": "A tower now launches a new shot only when its old shot is finished and its Reload has counted down to 0.",
+          "requestHash": "9815b61e6f664a5cd0734377cb68fd3969a5d3aeff17b35993ed2f55cd517c29",
+          "src": "audio/assets/61/61def2de543b56fdd6d6db16dc12dbe606048940c3499ab7f66aa5db9d5e4e60.mp3",
+          "sha256": "61def2de543b56fdd6d6db16dc12dbe606048940c3499ab7f66aa5db9d5e4e60",
+          "bytes": 37728,
+          "durationMs": 6288
+        },
+        {
+          "sourcePath": "chapters/4/steps/0/instructions/10",
+          "speech": "Then it sets Reload to Reload Time.",
+          "requestHash": "399911889b7e6636237e59d1cdd58a78e19f4c87581a5b3a69408754ea0c97c4",
+          "src": "audio/assets/40/4099b2e7715dc257e06714c9fa94adffb8112806fac345aad3e853cbba1a89a9.mp3",
+          "sha256": "4099b2e7715dc257e06714c9fa94adffb8112806fac345aad3e853cbba1a89a9",
+          "bytes": 15408,
+          "durationMs": 2568
+        }
+      ]
+    },
+    {
+      "id": "waves-and-endings/put-settings-together/instruction/011",
+      "sourcePaths": [
+        "chapters/4/steps/0/instructions/11"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/4/steps/0/instructions/11",
+          "speech": "Reload Time 30 means a tower waits 30 game updates, about one second, between launches.",
+          "requestHash": "c0b12f0c8e6eef07c6ff8fedb9739831b0321e0ce7d3f49f3a81a4fb9571522f",
+          "src": "audio/assets/53/538a0bc859422c3d044d39d21e6944c49b472cafd19bb1bdb458969c9698b303.mp3",
+          "sha256": "538a0bc859422c3d044d39d21e6944c49b472cafd19bb1bdb458969c9698b303",
+          "bytes": 38592,
+          "durationMs": 6432
+        },
+        {
+          "sourcePath": "chapters/4/steps/0/instructions/11",
+          "speech": "Level 1 enemies need only 2 hits, so Level 1 still feels the same.",
+          "requestHash": "512238132fd3e5ed5567447a1b66e50012437eeac9f598e8b9f47f63215bd6c6",
+          "src": "audio/assets/5c/5ce7b2a5621c12ebd0c646318556aa499a46deb2dae097f3fbb19a35c389f67e.mp3",
+          "sha256": "5ce7b2a5621c12ebd0c646318556aa499a46deb2dae097f3fbb19a35c389f67e",
+          "bytes": 28368,
+          "durationMs": 4728
+        }
+      ]
+    },
+    {
+      "id": "waves-and-endings/put-settings-together/instruction/012",
+      "sourcePaths": [
+        "chapters/4/steps/0/instructions/12"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/4/steps/0/instructions/12",
+          "speech": "Do not click the green flag again until the Chapter 5 checkpoint.",
+          "requestHash": "19c08983bb75e9fefbc04a9fa91c2d55f2b133c8c7db129fc5641d30a2be4b4f",
+          "src": "audio/assets/fe/fedfd7fdce7fb08033a8e2f0a7c38f76d79fbc900c6673a62f3d2ffe01f2bf90.mp3",
+          "sha256": "fedfd7fdce7fb08033a8e2f0a7c38f76d79fbc900c6673a62f3d2ffe01f2bf90",
+          "bytes": 25344,
+          "durationMs": 4224
+        },
+        {
+          "sourcePath": "chapters/4/steps/0/instructions/12",
+          "speech": "Until Reset level loads the settings, Enemy HP is 0, so every enemy would be defeated on its first step.",
+          "requestHash": "39c2df7fe8066461366f474a0abb2557107443b0c083215615a0915576395424",
+          "src": "audio/assets/19/19a8f98e96e972ad690cae13e8a419c1a4fdb5007807493201aecd39d05e91aa.mp3",
+          "sha256": "19a8f98e96e972ad690cae13e8a419c1a4fdb5007807493201aecd39d05e91aa",
+          "bytes": 44064,
+          "durationMs": 7344
+        }
+      ]
+    },
+    {
+      "id": "waves-and-endings/put-settings-together/instruction/013",
+      "sourcePaths": [
+        "chapters/4/steps/0/instructions/13"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/4/steps/0/instructions/13",
+          "speech": "Show Level and Wave beside the resource displays at the top of the Stage.",
+          "requestHash": "c0a0059f6d022cf1581394ca8e0fbe0b0acbe8b0a50f457d85a5443ff007a7b0",
+          "src": "audio/assets/d7/d7891e3b5ba9fbcc4dc5ee20cc9b499fa8ef844bc846ddb91051d7774edffd23.mp3",
+          "sha256": "d7891e3b5ba9fbcc4dc5ee20cc9b499fa8ef844bc846ddb91051d7774edffd23",
+          "bytes": 27216,
+          "durationMs": 4536
+        },
+        {
+          "sourcePath": "chapters/4/steps/0/instructions/13",
+          "speech": "Move displays away from build spots and roads.",
+          "requestHash": "92ff85e7458ef3ddee680b3b08855605492e0369b9f3c97ce6be93240f983322",
+          "src": "audio/assets/16/16e2e0af4aab7064a31d97a6eac77fe0207ed94cab06979551e2d2e8fc75c795.mp3",
+          "sha256": "16e2e0af4aab7064a31d97a6eac77fe0207ed94cab06979551e2d2e8fc75c795",
+          "bytes": 20304,
+          "durationMs": 3384
+        }
+      ]
+    },
+    {
+      "id": "waves-and-endings/put-settings-together/instruction/014",
+      "sourcePaths": [
+        "chapters/4/steps/0/instructions/14"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/4/steps/0/instructions/14",
           "speech": "Keep the movement speeds fixed.",
           "requestHash": "83273147cc3c2fd6944cb925c0435e548ef7cb4e6bf5855d3299da12b81db575",
           "src": "audio/assets/e3/e32582abbb74a6f03701d4d7fffb84bf5fccadb62c1c822dd2e03b2c94c40b55.mp3",
@@ -7451,7 +7712,7 @@
           "durationMs": 2184
         },
         {
-          "sourcePath": "chapters/4/steps/0/instructions/10",
+          "sourcePath": "chapters/4/steps/0/instructions/14",
           "speech": "The settings here change enemy counts and gaps, not the hit calculation.",
           "requestHash": "89bffc33e4a266dd08049b1db886f194d08b2ecbd7f62f87939a904a03a94bf2",
           "src": "audio/assets/4b/4ba606fc49de131f9d1f13095cf94be9f9c78aa3b4646c5bb5523ebe7499553c.mp3",
@@ -7521,12 +7782,12 @@
         },
         {
           "sourcePath": "chapters/4/steps/0/hints/2",
-          "speech": "A gap of 18 means the Stage keeps moving the game while counting 18 updates.",
-          "requestHash": "7749d2b2cf644c5465cfcd6d8914cc898fbe0e3b29ff64f231793b62e0e35d4a",
-          "src": "audio/assets/df/dfaec10375750df5ab54c5536dcff05a4f5d8939e149177ac358765a00d39a1c.mp3",
-          "sha256": "dfaec10375750df5ab54c5536dcff05a4f5d8939e149177ac358765a00d39a1c",
-          "bytes": 30384,
-          "durationMs": 5064
+          "speech": "One update is one trip around the Stage's forever loop, so 18 updates is a little more than half a second.",
+          "requestHash": "3f3c4d405f226cd3912440676e3a373e86820b4562b7be28754c332ee04f9788",
+          "src": "audio/assets/6f/6f9c8639b0bd4eef86826783129716cda8c9f17d295af9a9345ebf7f8ab3d077.mp3",
+          "sha256": "6f9c8639b0bd4eef86826783129716cda8c9f17d295af9a9345ebf7f8ab3d077",
+          "bytes": 40608,
+          "durationMs": 6768
         }
       ]
     },
@@ -7673,12 +7934,12 @@
         },
         {
           "sourcePath": "chapters/4/steps/1/instructions/1",
-          "speech": "It begins with resetting and Clear Clones and wait.",
-          "requestHash": "2a9a2cc393bdec0d54608125ca233ee820b85121938e83515dab0bf2a5477ab7",
-          "src": "audio/assets/73/73c49ac93e7aeb76faa9879d19d3be4722a6b68019aeb6c58060942650e592b3.mp3",
-          "sha256": "73c49ac93e7aeb76faa9879d19d3be4722a6b68019aeb6c58060942650e592b3",
-          "bytes": 20016,
-          "durationMs": 3336
+          "speech": "It begins with set Game State to resetting, set Start Requested to 0, and broadcast Clear Clones and wait.",
+          "requestHash": "292c282d330212354188b8e151798fea80a7b41ac9fe614604a00b0905b1b116",
+          "src": "audio/assets/82/823a361cbd0222dd8c5208b3743b128f40a39fff4b1120835599a3744b88755b.mp3",
+          "sha256": "823a361cbd0222dd8c5208b3743b128f40a39fff4b1120835599a3744b88755b",
+          "bytes": 45360,
+          "durationMs": 7560
         }
       ]
     },
@@ -7938,30 +8199,30 @@
       "sentences": [
         {
           "sourcePath": "chapters/4/steps/2/explanation",
-          "speech": "The button asks for a wave by setting Start Requested to 1.",
-          "requestHash": "6e6aa83a02bab1b7f929b5bf3dcff382db417d0793df96b0367f87f140a79796",
-          "src": "audio/assets/f6/f60185cdf9b736e1e61da29b342c4242d5eb057056943ec121aa1d3cb81e3221.mp3",
-          "sha256": "f60185cdf9b736e1e61da29b342c4242d5eb057056943ec121aa1d3cb81e3221",
-          "bytes": 23328,
-          "durationMs": 3888
+          "speech": "The button only sets Start Requested to 1.",
+          "requestHash": "3ee2fd578f8a6f64737d52b1ada30959934d2512cd82370585c003a177779ca3",
+          "src": "audio/assets/55/559c34c0c40fd54f99e75f0c48afca73a9b7882314febae7f8e388b7cfef65a6.mp3",
+          "sha256": "559c34c0c40fd54f99e75f0c48afca73a9b7882314febae7f8e388b7cfef65a6",
+          "bytes": 18576,
+          "durationMs": 3096
         },
         {
           "sourcePath": "chapters/4/steps/2/explanation",
-          "speech": "The Stage will accept that request once.",
-          "requestHash": "586b11f1d8231e2cc8d7ff88a53936f91758423e822c6a90ac4ff6345ef19c9e",
-          "src": "audio/assets/b5/b5558f764530c8a7b1e702a60b2a7bd46360c70d3689b8d2d22651f588d9b348.mp3",
-          "sha256": "b5558f764530c8a7b1e702a60b2a7bd46360c70d3689b8d2d22651f588d9b348",
-          "bytes": 17280,
-          "durationMs": 2880
+          "speech": "The Stage's forever loop sees the 1, starts the wave, and sets it back to 0.",
+          "requestHash": "192ad60a318142ead75951f85cf70f49503595f06eb7d74042ade36c8cfe491e",
+          "src": "audio/assets/33/33acfab4ab4f99c599aad0d39a5ab5e94d8b44ffef6bd24e37aa82033fe7c31a.mp3",
+          "sha256": "33acfab4ab4f99c599aad0d39a5ab5e94d8b44ffef6bd24e37aa82033fe7c31a",
+          "bytes": 32976,
+          "durationMs": 5496
         },
         {
           "sourcePath": "chapters/4/steps/2/explanation",
-          "speech": "Repeated clicks cannot add multiple waves because the request is just 0 or 1.",
-          "requestHash": "275e4da597b78ec15f45009008fbb0cdd671074b603b394a6efa3ca245680ecb",
-          "src": "audio/assets/ad/adbb95e522cf486ed6abc3f8e3aecc997c8b469ca836c13dfe2d7903eae23ce3.mp3",
-          "sha256": "adbb95e522cf486ed6abc3f8e3aecc997c8b469ca836c13dfe2d7903eae23ce3",
-          "bytes": 32112,
-          "durationMs": 5352
+          "speech": "Clicking twice cannot start two waves, because the value is only ever 0 or 1.",
+          "requestHash": "e9db23aa235c63ce5f91334ffa0ffb68854f46117e18cdae893be884828d4619",
+          "src": "audio/assets/0d/0d7a4d47c617eb5182140e6579e8aaeb03b76f4fb4c5b5ba7bfd89b39d657adb.mp3",
+          "sha256": "0d7a4d47c617eb5182140e6579e8aaeb03b76f4fb4c5b5ba7bfd89b39d657adb",
+          "bytes": 30816,
+          "durationMs": 5136
         }
       ]
     },
@@ -8059,12 +8320,21 @@
         },
         {
           "sourcePath": "chapters/4/steps/2/instructions/4",
-          "speech": "It counts through list items 1 to 6; it is not the Check shot input named slot or a clone's ID.",
-          "requestHash": "d31beb49a800eb14be903233f452269da7a4b855594bb370ae0159d838e46c9f",
-          "src": "audio/assets/24/24103ac3384b213abdb2cb9ca2e4c8170350ea0053e0608354caf68af756c8d8.mp3",
-          "sha256": "24103ac3384b213abdb2cb9ca2e4c8170350ea0053e0608354caf68af756c8d8",
-          "bytes": 39888,
-          "durationMs": 6648
+          "speech": "It counts through list items 1 to 6.",
+          "requestHash": "b04bdc2917bb32f058c883b44ab20967f2d1243c2cc17d88095cb11465fd25cf",
+          "src": "audio/assets/0f/0f872f6d6af68f12ab40f7bfb036e771d8b0e9e7b5e40c2e2f9e39d0e9aa8ff7.mp3",
+          "sha256": "0f872f6d6af68f12ab40f7bfb036e771d8b0e9e7b5e40c2e2f9e39d0e9aa8ff7",
+          "bytes": 17424,
+          "durationMs": 2904
+        },
+        {
+          "sourcePath": "chapters/4/steps/2/instructions/4",
+          "speech": "It is a different thing from the slot input of Check shot: one is a Stage variable, the other is an input that only exists inside Check shot.",
+          "requestHash": "704789356a2ff5c6ab95efeb0a1ac250c0e90df52b28381808824a027759f3b8",
+          "src": "audio/assets/91/911831bd0bd0c620513100f3bc7043a3e20e3e333a55ea37d965b8e78e2aea54.mp3",
+          "sha256": "911831bd0bd0c620513100f3bc7043a3e20e3e333a55ea37d965b8e78e2aea54",
+          "bytes": 48240,
+          "durationMs": 8040
         }
       ]
     },
@@ -9358,21 +9628,21 @@
         },
         {
           "sourcePath": "chapters/5/steps/0/explanation",
-          "speech": "We will change the grouping and spacing of enemies: two waves of six, with a slightly shorter gap.",
-          "requestHash": "1f33715f1fc128a22eee5256363de712a11db1a8940898b248aa6f6e901b2009",
-          "src": "audio/assets/78/780577e649e6ead66e0f688378d7e5cc6edc988aed269cfcc79b6f46eeb139d8.mp3",
-          "sha256": "780577e649e6ead66e0f688378d7e5cc6edc988aed269cfcc79b6f46eeb139d8",
-          "bytes": 37152,
-          "durationMs": 6192
+          "speech": "Only the numbers change: enemies need 4 hits instead of 2, the player starts with 120 coins, and the second wave has nine enemies.",
+          "requestHash": "5705b078ad6f14eb69cfebd8d8494dbdad723bb8dfd8c0d6ba56b78d41d8384b",
+          "src": "audio/assets/3a/3af400933cc8857a4bd1a3b9088ef45747d4b94ea35fe905820509b73fc21acb.mp3",
+          "sha256": "3af400933cc8857a4bd1a3b9088ef45747d4b94ea35fe905820509b73fc21acb",
+          "bytes": 54864,
+          "durationMs": 9144
         },
         {
           "sourcePath": "chapters/5/steps/0/explanation",
-          "speech": "It is a different pattern, not a new game system.",
-          "requestHash": "dc6ed289c29f778ebfa9862a7f046f3065205a21fc409bab8add55ce63d0b591",
-          "src": "audio/assets/51/514785325062915005fe912de91edfe64899e4cc458fa0dbb46e8b34809d6b8a.mp3",
-          "sha256": "514785325062915005fe912de91edfe64899e4cc458fa0dbb46e8b34809d6b8a",
-          "bytes": 18432,
-          "durationMs": 3072
+          "speech": "It is a harder challenge, not a new game system.",
+          "requestHash": "f2b83147b468118fa51fef1f98c066fe9440386e98060594a9318d8cff8272fe",
+          "src": "audio/assets/cc/cc57911c4fc0ce230a23520a40c51c18a1a6edf43317137bf53f4e892ff14466.mp3",
+          "sha256": "cc57911c4fc0ce230a23520a40c51c18a1a6edf43317137bf53f4e892ff14466",
+          "bytes": 20016,
+          "durationMs": 3336
         }
       ]
     },
@@ -9436,21 +9706,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/0/instructions/2",
-          "speech": "Check that the common starting coins, health, and enemy HP stay the same.",
-          "requestHash": "153a714d4a58425f291adb24031506daeb153bd5a809f9fa9a6de555be9edfb9",
-          "src": "audio/assets/6d/6dee67f5f3bac6ef1fd0ed490d338e6ad9e450331b22a828de91b5a79092a91c.mp3",
-          "sha256": "6dee67f5f3bac6ef1fd0ed490d338e6ad9e450331b22a828de91b5a79092a91c",
-          "bytes": 28224,
-          "durationMs": 4704
+          "speech": "The blocks above the two Level checks set the values every level starts with.",
+          "requestHash": "561de9a7443ec8fa198379b09f6b910343364ca387a636db6b87db9ad39b09e6",
+          "src": "audio/assets/3b/3b2c8fb3d58fea83f2f24c18f37455919ba7780da29d15e693b2752218dde0fe.mp3",
+          "sha256": "3b2c8fb3d58fea83f2f24c18f37455919ba7780da29d15e693b2752218dde0fe",
+          "bytes": 28656,
+          "durationMs": 4776
         },
         {
           "sourcePath": "chapters/5/steps/0/instructions/2",
-          "speech": "The two separate Level checks choose the number of waves.",
-          "requestHash": "100e98d044b01c141d018b345d4d9bab362105ede52ba96819fb636b7c592cb9",
-          "src": "audio/assets/f2/f2a1536481a583eeac4249fd9acc14970cba50db5cce2b75b2372a36618e1d9d.mp3",
-          "sha256": "f2a1536481a583eeac4249fd9acc14970cba50db5cce2b75b2372a36618e1d9d",
-          "bytes": 20736,
-          "durationMs": 3456
+          "speech": "The Level 2 check then changes Waves in Level, Starting Coins, and Enemy HP for Level 2 only.",
+          "requestHash": "65c44974dfbc9ecf1a8b727ada2d05ecb406d91f73a403c95d11abafb2bbbe5a",
+          "src": "audio/assets/9d/9d7f5e94b8d20629e71880ede3a1ced847090cbf5beda884453f736a7929d3f7.mp3",
+          "sha256": "9d7f5e94b8d20629e71880ede3a1ced847090cbf5beda884453f736a7929d3f7",
+          "bytes": 38736,
+          "durationMs": 6456
         }
       ]
     },
@@ -9488,12 +9758,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/0/instructions/4",
-          "speech": "Check the two wave patterns: Level 1 keeps 3, 3, 6; Level 2 has six enemies per wave and Spawn Gap 15.",
-          "requestHash": "105c2051d678a5b36a0d5167053b60046965a0dc0ee27ef953ee12b32e90b1d5",
-          "src": "audio/assets/02/02dc5e1ed474aa0f3b959d437a2107a373a5d0b559666340a0e4b8e4e6905aaa.mp3",
-          "sha256": "02dc5e1ed474aa0f3b959d437a2107a373a5d0b559666340a0e4b8e4e6905aaa",
-          "bytes": 57312,
-          "durationMs": 9552
+          "speech": "Check the two wave patterns: Level 1 keeps 3, 3, 6; Level 2 has 6 and then 9 enemies, with Spawn Gap 15.",
+          "requestHash": "dab49b7abd78a45798b06da94b4991ddf3db1df219dfa4b7c1ed088af07929ad",
+          "src": "audio/assets/50/504882b7740d289b86ab37bf7680fa96eaada6d4bb7d94eaf3ba5f72e238bc76.mp3",
+          "sha256": "504882b7740d289b86ab37bf7680fa96eaada6d4bb7d94eaf3ba5f72e238bc76",
+          "bytes": 52560,
+          "durationMs": 8760
         }
       ]
     },
@@ -9531,12 +9801,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/0/instructions/6",
-          "speech": "Predict how six enemies in the opening wave will feel compared with three.",
-          "requestHash": "01ad09484dd2bf57d38a182d4f26ce74a2429bac1c9453b28c715893f2ddc3a1",
-          "src": "audio/assets/56/566bfc4d3b0ebd22f90f8a9ca33750e24e5c6da8bc7ba54d74f3999c1cdf32c9.mp3",
-          "sha256": "566bfc4d3b0ebd22f90f8a9ca33750e24e5c6da8bc7ba54d74f3999c1cdf32c9",
-          "bytes": 27072,
-          "durationMs": 4512
+          "speech": "Predict whether one tower in each lane will be enough for enemies that need 4 hits.",
+          "requestHash": "4e9e187c242c6c6a28bb66b0858ecdda1b6a7b48c786ead7326f0742cd08c250",
+          "src": "audio/assets/01/01c1b10d20ba0411e8af510bbf652b778e989289dab390997b59dea84be0c586.mp3",
+          "sha256": "01c1b10d20ba0411e8af510bbf652b778e989289dab390997b59dea84be0c586",
+          "bytes": 30384,
+          "durationMs": 5064
         },
         {
           "sourcePath": "chapters/5/steps/0/instructions/6",
@@ -9557,21 +9827,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/0/hints/0",
-          "speech": "There are still twelve enemies in each level.",
-          "requestHash": "fab12643ed998475b994a3edbfb1104f7a61145555764f1cf58cb6ef1c455a77",
-          "src": "audio/assets/4f/4f150f41feee616ea99ff073848c694a2883e8584e580bb335dae5e268b238b0.mp3",
-          "sha256": "4f150f41feee616ea99ff073848c694a2883e8584e580bb335dae5e268b238b0",
-          "bytes": 17136,
-          "durationMs": 2856
+          "speech": "Level 1 has 12 enemies that need 2 hits each.",
+          "requestHash": "66228b370eddb8cf63443c435f5604db582ec309e39a1870453d80b61650b002",
+          "src": "audio/assets/af/af1a76d114fe6d3edce2b52d7596881b8783c93747fba04d477ba9114c63342f.mp3",
+          "sha256": "af1a76d114fe6d3edce2b52d7596881b8783c93747fba04d477ba9114c63342f",
+          "bytes": 21744,
+          "durationMs": 3624
         },
         {
           "sourcePath": "chapters/5/steps/0/hints/0",
-          "speech": "Their grouping and timing have changed.",
-          "requestHash": "b09ab15d00f6e1aa94810bee7a981b6f6bdc11fe41bfe1494e87ebe63dc1cc29",
-          "src": "audio/assets/65/650c927b8a8b349e980045abf1045b4185dda6ff2a2c24ae43e00eb0ff365315.mp3",
-          "sha256": "650c927b8a8b349e980045abf1045b4185dda6ff2a2c24ae43e00eb0ff365315",
-          "bytes": 14976,
-          "durationMs": 2496
+          "speech": "Level 2 has 15 enemies that need 4 hits each, so towers must land many more hits.",
+          "requestHash": "06963bbe01fad5b89dce0c0efdb378a37e51017d7c3c698a80ebca5f8e83ddf6",
+          "src": "audio/assets/79/791ff2c382762676c6d866ac1d74b4c64a18e314f594b6b936f61863191fef68.mp3",
+          "sha256": "791ff2c382762676c6d866ac1d74b4c64a18e314f594b6b936f61863191fef68",
+          "bytes": 36000,
+          "durationMs": 6000
         }
       ]
     },
@@ -9658,12 +9928,21 @@
         },
         {
           "sourcePath": "chapters/5/steps/0/checkpoint/expectedResult",
-          "speech": "Level 1 remains three waves of 3, 3, 6; Level 2 is two waves of 6, 6 with a shorter gap.",
-          "requestHash": "64f04fc5adb54cdc515737dd48c49f56db61c478eb60742d1030013b15ad89f4",
-          "src": "audio/assets/92/927927b42184b6ac0e3092a38d3bc85895103c14eb664cc37ae680406a555b8b.mp3",
-          "sha256": "927927b42184b6ac0e3092a38d3bc85895103c14eb664cc37ae680406a555b8b",
-          "bytes": 47520,
-          "durationMs": 7920
+          "speech": "Level 1 remains three waves of 3, 3, 6.",
+          "requestHash": "3d8450b1822374d4db2730d41aba2547384e385239351ac2a33ba2fa5a1d1138",
+          "src": "audio/assets/5a/5ad4a396d2d913c009e590caec17b65c7a99fb54c2ddc683b4436209e899a6bf.mp3",
+          "sha256": "5ad4a396d2d913c009e590caec17b65c7a99fb54c2ddc683b4436209e899a6bf",
+          "bytes": 23328,
+          "durationMs": 3888
+        },
+        {
+          "sourcePath": "chapters/5/steps/0/checkpoint/expectedResult",
+          "speech": "Level 2 is two waves of 6 and 9, with a shorter gap, 4-hit enemies, and 120 starting coins.",
+          "requestHash": "c73cc59b67afe58dbeb6e8279c24d3b496287412ff5d5f7c6160197bc238a770",
+          "src": "audio/assets/1c/1c86a020ff5f8ae8c8298a6f7d9fe144aeb407e62bce8dddff6fcc950e09ec18.mp3",
+          "sha256": "1c86a020ff5f8ae8c8298a6f7d9fe144aeb407e62bce8dddff6fcc950e09ec18",
+          "bytes": 41184,
+          "durationMs": 6864
         },
         {
           "sourcePath": "chapters/5/steps/0/checkpoint/completeWhen/0",
@@ -9875,21 +10154,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/1/instructions/6",
-          "speech": "Check the new first if in forever: Game State must be cleared AND Next Requested must be 1.",
-          "requestHash": "2158fd27dd2c94e8ccbd6419da72a1dbaa5eb0ad5f19d286e3a0ea6b7a05c7bc",
-          "src": "audio/assets/a4/a4573b02c10a67121f4f82d346585e3ae73bdf09279129885ccf33240be6bc96.mp3",
-          "sha256": "a4573b02c10a67121f4f82d346585e3ae73bdf09279129885ccf33240be6bc96",
-          "bytes": 37440,
-          "durationMs": 6240
-        },
-        {
-          "sourcePath": "chapters/5/steps/1/instructions/6",
-          "speech": "Inside it, set Game State to resetting first, change Level by 1, then call Reset level.",
-          "requestHash": "47955fe7c5a1d686973cec3fa87058b5754589b7c215d92bcc1465e23d465f09",
-          "src": "audio/assets/96/96eeb4a8fd88a95c2b492fdb995be0b67a6ca4a37136044ae90433e34864ce5a.mp3",
-          "sha256": "96eeb4a8fd88a95c2b492fdb995be0b67a6ca4a37136044ae90433e34864ce5a",
-          "bytes": 39744,
-          "durationMs": 6624
+          "speech": "Check the new first if in forever: it needs Game State equals cleared and Next Requested equals 1.",
+          "requestHash": "d1a424147301bfc4d86cf6c89d00b0601483c082eb578f73b777e9ecc7436f5e",
+          "src": "audio/assets/02/0207cc8636774f7b7c001092234a49867c5939080b3fb59ae6bd2882245cb3dc.mp3",
+          "sha256": "0207cc8636774f7b7c001092234a49867c5939080b3fb59ae6bd2882245cb3dc",
+          "bytes": 39168,
+          "durationMs": 6528
         }
       ]
     },
@@ -9901,6 +10171,32 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/1/instructions/7",
+          "speech": "Inside it, set Game State to resetting first, so a second click cannot count.",
+          "requestHash": "b69af599a8396a0884eec152353654421284f4152ed2b37d06374ceb51da165c",
+          "src": "audio/assets/da/daaa9db4355faac16579e697c74056b220e85df49d0a92c751fcde9276712a35.mp3",
+          "sha256": "daaa9db4355faac16579e697c74056b220e85df49d0a92c751fcde9276712a35",
+          "bytes": 31104,
+          "durationMs": 5184
+        },
+        {
+          "sourcePath": "chapters/5/steps/1/instructions/7",
+          "speech": "Then change Level by 1 and call Reset level.",
+          "requestHash": "8bf688a094bfd719d3cfbd6e13e2c963479f60e23fc11d728b7b56215ea37102",
+          "src": "audio/assets/cf/cf12771752292fd0e4108065f0df632618e8c104f2ecf400d892329ea80bf58a.mp3",
+          "sha256": "cf12771752292fd0e4108065f0df632618e8c104f2ecf400d892329ea80bf58a",
+          "bytes": 19584,
+          "durationMs": 3264
+        }
+      ]
+    },
+    {
+      "id": "make-another-level/next-level-control/instruction/008",
+      "sourcePaths": [
+        "chapters/5/steps/1/instructions/8"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/5/steps/1/instructions/8",
           "speech": "Do not add a second forever loop for Next Level.",
           "requestHash": "9c0b6f8ba5e7a84001151a7c7b9fd8c903b49a77af74d4f0b1013ade148ab93f",
           "src": "audio/assets/95/9588da3105f606963fe1b39f57d08701789a4e297cfc7623ee027ecd9cb444f3.mp3",
@@ -9909,7 +10205,7 @@
           "durationMs": 3336
         },
         {
-          "sourcePath": "chapters/5/steps/1/instructions/7",
+          "sourcePath": "chapters/5/steps/1/instructions/8",
           "speech": "The existing loop handles both requests in order.",
           "requestHash": "d51e3700637ed875abb544c604e00456a62df168aecef8787840c485ec716b73",
           "src": "audio/assets/fa/fa650a67629e6d45cdd1bce0e55ba56a1259f26ad47b513ea01fea1618cede8c.mp3",
@@ -9936,12 +10232,12 @@
         },
         {
           "sourcePath": "chapters/5/steps/1/hints/0",
-          "speech": "A second click in the old Next Level position must not accidentally start a wave.",
-          "requestHash": "3ef6345ebe22eec854af6e305330774e77f6d7c21356b308a2b38fbfe7f865cc",
-          "src": "audio/assets/fd/fd02b6a4c99f5c8da794390e2117bd74556c83f29fd78036d0807628de735da0.mp3",
-          "sha256": "fd02b6a4c99f5c8da794390e2117bd74556c83f29fd78036d0807628de735da0",
-          "bytes": 31680,
-          "durationMs": 5280
+          "speech": "If the player double-clicks Next Level, the second click lands where Next Level was, far from Start Wave, so it cannot start a wave by accident.",
+          "requestHash": "c281d3f1c9c84a1fb01caf4f127b92144ffb8690a79c84648dce645fe50da372",
+          "src": "audio/assets/c2/c26c5b3df07e4b72464e09d256341eda30a978af92083a1cca61fc0df83438f6.mp3",
+          "sha256": "c26c5b3df07e4b72464e09d256341eda30a978af92083a1cca61fc0df83438f6",
+          "bytes": 48096,
+          "durationMs": 8016
         }
       ]
     },
@@ -10141,12 +10437,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/2/instructions/2",
-          "speech": "Check Level is 2, Wave is 1, Coins is 90, and Base Health is 5.",
-          "requestHash": "f7563c8a9b597126a465c33ca1eac83104a9179f7e07bbd00b0da99c8126db30",
-          "src": "audio/assets/5a/5a1e062471c60e7f7d42aa231bbf30aec432b1b6fe0c9cd7fe76b73bfe4c603d.mp3",
-          "sha256": "5a1e062471c60e7f7d42aa231bbf30aec432b1b6fe0c9cd7fe76b73bfe4c603d",
-          "bytes": 34848,
-          "durationMs": 5808
+          "speech": "Check Level is 2, Wave is 1, Coins is 120, and Base Health is 5.",
+          "requestHash": "38e894f801841d3c7a6cfd41291c15cb0b2f196fa988709f4ee34a2720b37a17",
+          "src": "audio/assets/d2/d2702aa0d29f45ae8c79879b66b45b4ad2261582c17991be298b6aef5647a12b.mp3",
+          "sha256": "d2702aa0d29f45ae8c79879b66b45b4ad2261582c17991be298b6aef5647a12b",
+          "bytes": 39744,
+          "durationMs": 6624
         },
         {
           "sourcePath": "chapters/5/steps/2/instructions/2",
@@ -10228,21 +10524,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/2/instructions/5",
-          "speech": "Restart during Level 2 combat and from You Win.",
-          "requestHash": "dbb777864f93ff5ecde9f4d33e433d09e72e6c9b4abd9094eb1ffee5acd93a16",
-          "src": "audio/assets/40/40e001dbbbf00df24443e586bc3f7695957c5f84a1a17faeaf52e42b258e2b64.mp3",
-          "sha256": "40e001dbbbf00df24443e586bc3f7695957c5f84a1a17faeaf52e42b258e2b64",
-          "bytes": 19728,
-          "durationMs": 3288
+          "speech": "Play Level 2 again with only one tower in each lane, then once more using all your coins for extra towers.",
+          "requestHash": "a7d5fbebb7eb489ed734950fa07b980efcdd0239d0c22345150386a64a1b0848",
+          "src": "audio/assets/9a/9ae02a288a9588509a856fe9fcb474e1328d20d6eb6e5305c007ce831f742ae5.mp3",
+          "sha256": "9ae02a288a9588509a856fe9fcb474e1328d20d6eb6e5305c007ce831f742ae5",
+          "bytes": 41760,
+          "durationMs": 6960
         },
         {
           "sourcePath": "chapters/5/steps/2/instructions/5",
-          "speech": "Both times the game must return to a fresh Level 1.",
-          "requestHash": "79a50266ba66ffba6747719597c73f2c284072262a970e9c6371cb135b4e10b8",
-          "src": "audio/assets/ad/ade9444f1e2b29fd9266e1dfd8b377a4282648987a759e291956931544838593.mp3",
-          "sha256": "ade9444f1e2b29fd9266e1dfd8b377a4282648987a759e291956931544838593",
-          "bytes": 21888,
-          "durationMs": 3648
+          "speech": "Compare the Base Health left at the end each time.",
+          "requestHash": "166cb3e047bf98ee80a4fd7282997ed0dd3be2bdbb0dfbafcab06c82f48cd551",
+          "src": "audio/assets/fa/faf03fb3d4754bd9c4e65fcc15484491fd77b85a781179e2d2487893eb629c0e.mp3",
+          "sha256": "faf03fb3d4754bd9c4e65fcc15484491fd77b85a781179e2d2487893eb629c0e",
+          "bytes": 19296,
+          "durationMs": 3216
         }
       ]
     },
@@ -10254,6 +10550,32 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/2/instructions/6",
+          "speech": "Restart during Level 2 combat and from You Win.",
+          "requestHash": "dbb777864f93ff5ecde9f4d33e433d09e72e6c9b4abd9094eb1ffee5acd93a16",
+          "src": "audio/assets/40/40e001dbbbf00df24443e586bc3f7695957c5f84a1a17faeaf52e42b258e2b64.mp3",
+          "sha256": "40e001dbbbf00df24443e586bc3f7695957c5f84a1a17faeaf52e42b258e2b64",
+          "bytes": 19728,
+          "durationMs": 3288
+        },
+        {
+          "sourcePath": "chapters/5/steps/2/instructions/6",
+          "speech": "Both times the game must return to a fresh Level 1.",
+          "requestHash": "79a50266ba66ffba6747719597c73f2c284072262a970e9c6371cb135b4e10b8",
+          "src": "audio/assets/ad/ade9444f1e2b29fd9266e1dfd8b377a4282648987a759e291956931544838593.mp3",
+          "sha256": "ade9444f1e2b29fd9266e1dfd8b377a4282648987a759e291956931544838593",
+          "bytes": 21888,
+          "durationMs": 3648
+        }
+      ]
+    },
+    {
+      "id": "make-another-level/verify-level-transition/instruction/007",
+      "sourcePaths": [
+        "chapters/5/steps/2/instructions/7"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/5/steps/2/instructions/7",
           "speech": "Compare Level 2 with your prediction.",
           "requestHash": "a49ebf5a56cdb9551fe964fab8502aeb6ab84e16dcacbf964e953ccee9d93a88",
           "src": "audio/assets/48/482419e9f1303c79c63de4827a1315137b69e8bebaea4b0f296bc739f62feed5.mp3",
@@ -10262,13 +10584,13 @@
           "durationMs": 2544
         },
         {
-          "sourcePath": "chapters/5/steps/2/instructions/6",
-          "speech": "Record what the shorter gap and larger opening wave actually changed.",
-          "requestHash": "72a1e572feab94a2343da47180e96696024906e7f1da82ba5f3a65ed1b02eebc",
-          "src": "audio/assets/da/da5da473292a20788f0a50eb5c2766f54e68c242e5fd8d86bcd6d02286ad36ab.mp3",
-          "sha256": "da5da473292a20788f0a50eb5c2766f54e68c242e5fd8d86bcd6d02286ad36ab",
-          "bytes": 27072,
-          "durationMs": 4512
+          "sourcePath": "chapters/5/steps/2/instructions/7",
+          "speech": "Record how the tougher enemies changed where you placed towers.",
+          "requestHash": "78a6e8a628e056ac99fa8b29463cfabe3829cbfb5e4091d1e3bd763af43d75d7",
+          "src": "audio/assets/65/656f15dd368f2d21046a322a079aacf62281ead571bc5e8a7bd78e0ad91f8412.mp3",
+          "sha256": "656f15dd368f2d21046a322a079aacf62281ead571bc5e8a7bd78e0ad91f8412",
+          "bytes": 23040,
+          "durationMs": 3840
         }
       ]
     },
@@ -10512,12 +10834,12 @@
         },
         {
           "sourcePath": "chapters/5/steps/3/instructions/3",
-          "speech": "You may also choose different starting coins or health here.",
-          "requestHash": "d4af0d5a38828173c9bd777e938d0936da242e43bf755f96549aa2f9f88634b8",
-          "src": "audio/assets/92/9282cac1025fda5d95adcb6039e453e94cf09c03db40115a612dcb89b3b6aee9.mp3",
-          "sha256": "9282cac1025fda5d95adcb6039e453e94cf09c03db40115a612dcb89b3b6aee9",
-          "bytes": 21024,
-          "durationMs": 3504
+          "speech": "You may also set different Starting Coins, Enemy HP, or Reload Time here.",
+          "requestHash": "51687768dc26dee8d54e3b36c8002f71f722f7645c121bd142ec32822051aae8",
+          "src": "audio/assets/c4/c47496180ecd66d0676f0861b990875555e537ac84421e4ab0994ac055da03ef.mp3",
+          "sha256": "c47496180ecd66d0676f0861b990875555e537ac84421e4ab0994ac055da03ef",
+          "bytes": 30816,
+          "durationMs": 5136
         }
       ]
     },
@@ -10693,21 +11015,30 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/3/hints/1",
-          "speech": "Later ideas include a tougher enemy by changing Enemy HP or a different starting budget.",
-          "requestHash": "e5ffd12299e814e1f177eb0bef254504cf0353d073613f5fbac4aaa4dce7772a",
-          "src": "audio/assets/31/3109fe13a7bdf4ab4dc082148c58e5a9d560d17c03c797fcb5539020adbc7061.mp3",
-          "sha256": "3109fe13a7bdf4ab4dc082148c58e5a9d560d17c03c797fcb5539020adbc7061",
-          "bytes": 34416,
-          "durationMs": 5736
+          "speech": "Reload Time, Enemy HP, and Starting Coins change difficulty the most.",
+          "requestHash": "5e4ad394beebbd6980d8e7cde7d0cf84acb6171fabd6d158603076e4c7555235",
+          "src": "audio/assets/52/52eee7dba8977d09e82cfcc977e47f363cb838dd00d485095b29bea218180549.mp3",
+          "sha256": "52eee7dba8977d09e82cfcc977e47f363cb838dd00d485095b29bea218180549",
+          "bytes": 31392,
+          "durationMs": 5232
         },
         {
           "sourcePath": "chapters/5/steps/3/hints/1",
-          "speech": "Test one idea at a time.",
-          "requestHash": "1fa23783df5e21ebdf13b003e6233c374fbef78ef919c4710d7f43175b965e94",
-          "src": "audio/assets/70/70062b9332440a72a4e40e0b9202aa8115a501b85ef94064e989aa952aa6802c.mp3",
-          "sha256": "70062b9332440a72a4e40e0b9202aa8115a501b85ef94064e989aa952aa6802c",
-          "bytes": 13104,
-          "durationMs": 2184
+          "speech": "A bigger Reload Time or Enemy HP makes towers weaker; more coins let players build more towers.",
+          "requestHash": "f06da07ef3c465ca2eaa3621cc5ac3e97a66733e5c663822e83b7ffa38346e31",
+          "src": "audio/assets/ee/ee56cfd557dd2b455c52e7200771c67babadbb8615fb73d1a705ab8670f1e9df.mp3",
+          "sha256": "ee56cfd557dd2b455c52e7200771c67babadbb8615fb73d1a705ab8670f1e9df",
+          "bytes": 40464,
+          "durationMs": 6744
+        },
+        {
+          "sourcePath": "chapters/5/steps/3/hints/1",
+          "speech": "Test one change at a time.",
+          "requestHash": "9673fb5a254780ed335688cbbbad64ee0a66c956eb3fd767f78f533bfe173961",
+          "src": "audio/assets/69/69d60bc97a4f2a7e50ef0912864349745d06cd095186ff14579ee50c2fb1d653.mp3",
+          "sha256": "69d60bc97a4f2a7e50ef0912864349745d06cd095186ff14579ee50c2fb1d653",
+          "bytes": 13248,
+          "durationMs": 2208
         }
       ]
     },

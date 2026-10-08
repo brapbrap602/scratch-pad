@@ -699,12 +699,12 @@
         },
         {
           "sourcePath": "chapters/0/steps/0/instructions/2",
-          "speech": "Eight times three is 24, so Aliens Left can tell the Stage when the player wins.",
-          "requestHash": "043260f918db3f7e8d3e53d1ed245343dabc48af1a69b35ef0b32dacb547b90d",
-          "src": "audio/assets/c5/c5245787662789540e54c5a2960f02fcd72a533b179c06c1824e3efb8083adf2.mp3",
-          "sha256": "c5245787662789540e54c5a2960f02fcd72a533b179c06c1824e3efb8083adf2",
-          "bytes": 32688,
-          "durationMs": 5448
+          "speech": "That is 24 aliens, so Aliens Left starts at 24 and the player wins when it reaches 0.",
+          "requestHash": "729646ed91505e97a3fa58fe51ad5b8ff95365aa03d1d79a983547f8dab4585e",
+          "src": "audio/assets/98/986a6b7ff75ee8c8bc3dd66f3e6a39a17157dcb9937045d9dab9dcd99f106e1d.mp3",
+          "sha256": "986a6b7ff75ee8c8bc3dd66f3e6a39a17157dcb9937045d9dab9dcd99f106e1d",
+          "bytes": 36288,
+          "durationMs": 6048
         }
       ]
     },
@@ -948,12 +948,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/1/instructions/1",
-          "speech": "Add readable player instructions to Space: Arrow keys move, Space fires, destroy all Aliens to win, avoid Enemy Shots and stop the Aliens from reaching the invasion line, the green flag starts or restarts, Aliens score 10, and Mothership scores 50.",
-          "requestHash": "a5e1c05faa59e9f2c43438cb35754d6df6c517257769960916af83ac4840ffbe",
-          "src": "audio/assets/d3/d321e718d8039fa63a67f9ba7869f2e25c0f7bdd5d7bf994146aba2e111a84f1.mp3",
-          "sha256": "d321e718d8039fa63a67f9ba7869f2e25c0f7bdd5d7bf994146aba2e111a84f1",
-          "bytes": 87264,
-          "durationMs": 14544
+          "speech": "Write the controls on Space: Arrow keys move, Space fires, and the green flag starts or restarts.",
+          "requestHash": "d016caf758162e0cde14b875e2b394fac5a8a8897e2443c4de5a8c502ec28ecb",
+          "src": "audio/assets/d9/d970d0f28fa1c9fe9abfe9bf49cae8169b7b4a9458d37714975a8bedebec76dc.mp3",
+          "sha256": "d970d0f28fa1c9fe9abfe9bf49cae8169b7b4a9458d37714975a8bedebec76dc",
+          "bytes": 42912,
+          "durationMs": 7152
         }
       ]
     },
@@ -965,21 +965,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/1/instructions/2",
-          "speech": "Duplicate Space twice.",
-          "requestHash": "b1e1f4557bff3a0c94b14c6aa38023d941e71d0d5dbb4985ca194f5f20cf0145",
-          "src": "audio/assets/fd/fd51cd6e0d95a9ba8f2fbff28e746693a1305989fac6619a2d7ad00ce891b9db.mp3",
-          "sha256": "fd51cd6e0d95a9ba8f2fbff28e746693a1305989fac6619a2d7ad00ce891b9db",
-          "bytes": 11232,
-          "durationMs": 1872
-        },
-        {
-          "sourcePath": "chapters/0/steps/1/instructions/2",
-          "speech": "Name the copies You Win and Game Over, replace the control text with a large matching result, and confirm exactly three backdrops exist.",
-          "requestHash": "ef1eca7518fc3724a5cc608a4f030cdb334705c3c6e3730d0a7da46edc68ab9e",
-          "src": "audio/assets/8a/8a7f8441a0e937a297828d0a18d044af3be721aef3f8bcf23d1ce602c0445954.mp3",
-          "sha256": "8a7f8441a0e937a297828d0a18d044af3be721aef3f8bcf23d1ce602c0445954",
-          "bytes": 52992,
-          "durationMs": 8832
+          "speech": "Write the goal and scoring on Space: destroy all Aliens to win, avoid Enemy Shots, stop the Aliens from reaching the invasion line, Aliens score 10, and Mothership scores 50.",
+          "requestHash": "65194b7b5c75bf8da5853499a0a69157c78d08119e62d7652ba262b6c7f44c74",
+          "src": "audio/assets/23/2356f120b66ee81a13cddedfa03d97270946fb7f5cfe07e1e8bceb917ded0df7.mp3",
+          "sha256": "2356f120b66ee81a13cddedfa03d97270946fb7f5cfe07e1e8bceb917ded0df7",
+          "bytes": 67104,
+          "durationMs": 11184
         }
       ]
     },
@@ -991,21 +982,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/1/instructions/3",
-          "speech": "Create a ship sprite named Player.",
-          "requestHash": "e1d1e5823bb348d7b4149dd2177781619ef07aa141002ae583d044979f45abca",
-          "src": "audio/assets/96/96db7d1332624f3c87fbc4618bb9b7d7e43f2ef79ccf4838a551fc2f5d78fb5f.mp3",
-          "sha256": "96db7d1332624f3c87fbc4618bb9b7d7e43f2ef79ccf4838a551fc2f5d78fb5f",
-          "bytes": 14400,
-          "durationMs": 2400
+          "speech": "Draw a thin, faint line across Space at y negative 60 and label it as the invasion line.",
+          "requestHash": "805ac65ed8f8611a2ed0bb779b66bda9fc7716288590d98154f076c35b397517",
+          "src": "audio/assets/53/53aecbeb1e08f954a96b27890da64f41883ca590b3addfaeba80b01622d8c9c0.mp3",
+          "sha256": "53aecbeb1e08f954a96b27890da64f41883ca590b3addfaeba80b01622d8c9c0",
+          "bytes": 38016,
+          "durationMs": 6336
         },
         {
           "sourcePath": "chapters/0/steps/1/instructions/3",
-          "speech": "Center its artwork and keep its visible costume no larger than 36 pixels wide by 18 pixels high.",
-          "requestHash": "d2507c5a577b749e3e9d40a7c131e81d28095c9678f90afcbff8260dcab698ed",
-          "src": "audio/assets/b3/b37f34fa6009b5a283f3b0543cb774cb1ca3d47b94aa702e777a6923355ece2a.mp3",
-          "sha256": "b37f34fa6009b5a283f3b0543cb774cb1ca3d47b94aa702e777a6923355ece2a",
-          "bytes": 40752,
-          "durationMs": 6792
+          "speech": "An alien that drops below this line ends the game.",
+          "requestHash": "9e7cd75f21a0ca172bdd39503566215cf412cf584363dca2bab21aafb84d99ba",
+          "src": "audio/assets/d3/d33734b49222f40f77b3360ae5553b7b25ffa3974c80fcfec09d97e3585e297b.mp3",
+          "sha256": "d33734b49222f40f77b3360ae5553b7b25ffa3974c80fcfec09d97e3585e297b",
+          "bytes": 19728,
+          "durationMs": 3288
         }
       ]
     },
@@ -1017,21 +1008,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/1/instructions/4",
-          "speech": "Create an enemy sprite named Alien.",
-          "requestHash": "44d2e4eea249b69553166988111bf1f7d1cf3e392a9e80fb0b78db9968a109f3",
-          "src": "audio/assets/95/959917c92a5b0649544d277e733e833f30bb2a1adce2c01853ea16695c017796.mp3",
-          "sha256": "959917c92a5b0649544d277e733e833f30bb2a1adce2c01853ea16695c017796",
-          "bytes": 16848,
-          "durationMs": 2808
+          "speech": "Duplicate Space twice.",
+          "requestHash": "b1e1f4557bff3a0c94b14c6aa38023d941e71d0d5dbb4985ca194f5f20cf0145",
+          "src": "audio/assets/fd/fd51cd6e0d95a9ba8f2fbff28e746693a1305989fac6619a2d7ad00ce891b9db.mp3",
+          "sha256": "fd51cd6e0d95a9ba8f2fbff28e746693a1305989fac6619a2d7ad00ce891b9db",
+          "bytes": 11232,
+          "durationMs": 1872
         },
         {
           "sourcePath": "chapters/0/steps/1/instructions/4",
-          "speech": "Center its artwork and keep its visible costume no larger than 32 pixels wide by 18 pixels high.",
-          "requestHash": "edd40d57d5c824cf645d7a6335ac0c1124e9ff2f20d5acaa7926d78152fc67bb",
-          "src": "audio/assets/5c/5c787283f562106b267cfdd21837124a15fa67a9ee1cf21d3f4e36bfe885d70f.mp3",
-          "sha256": "5c787283f562106b267cfdd21837124a15fa67a9ee1cf21d3f4e36bfe885d70f",
-          "bytes": 40320,
-          "durationMs": 6720
+          "speech": "Name the copies You Win and Game Over, replace the control text with a large matching result, and confirm exactly three backdrops exist.",
+          "requestHash": "ef1eca7518fc3724a5cc608a4f030cdb334705c3c6e3730d0a7da46edc68ab9e",
+          "src": "audio/assets/8a/8a7f8441a0e937a297828d0a18d044af3be721aef3f8bcf23d1ce602c0445954.mp3",
+          "sha256": "8a7f8441a0e937a297828d0a18d044af3be721aef3f8bcf23d1ce602c0445954",
+          "bytes": 52992,
+          "durationMs": 8832
         }
       ]
     },
@@ -1043,21 +1034,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/1/instructions/5",
-          "speech": "Paint centered vertical sprites named Player Laser and Enemy Shot.",
-          "requestHash": "9e547e028d47cf3a41729853717f875c5a01c975e6650a31e9c21984afab6ab8",
-          "src": "audio/assets/0f/0f9d3ff9d30765d8748ef35d934fadf00bd6f8fdf0c1fc49af1bd571df3d4cf9.mp3",
-          "sha256": "0f9d3ff9d30765d8748ef35d934fadf00bd6f8fdf0c1fc49af1bd571df3d4cf9",
-          "bytes": 25920,
-          "durationMs": 4320
+          "speech": "Create a ship sprite named Player.",
+          "requestHash": "e1d1e5823bb348d7b4149dd2177781619ef07aa141002ae583d044979f45abca",
+          "src": "audio/assets/96/96db7d1332624f3c87fbc4618bb9b7d7e43f2ef79ccf4838a551fc2f5d78fb5f.mp3",
+          "sha256": "96db7d1332624f3c87fbc4618bb9b7d7e43f2ef79ccf4838a551fc2f5d78fb5f",
+          "bytes": 14400,
+          "durationMs": 2400
         },
         {
           "sourcePath": "chapters/0/steps/1/instructions/5",
-          "speech": "Keep each visible costume no larger than 4 pixels wide by 10 pixels high; make Player Laser bright and Enemy Shot red.",
-          "requestHash": "0b50603a3193f866a2678678e27c6bbe6f10477ef706f8af0cb4de9813c5dec1",
-          "src": "audio/assets/50/5093fff942c14d75068bc9e7bd785a4ecf1a84d742784fb676221e87eb274156.mp3",
-          "sha256": "5093fff942c14d75068bc9e7bd785a4ecf1a84d742784fb676221e87eb274156",
-          "bytes": 47952,
-          "durationMs": 7992
+          "speech": "Center its artwork and keep its visible costume no larger than 36 pixels wide by 18 pixels high.",
+          "requestHash": "d2507c5a577b749e3e9d40a7c131e81d28095c9678f90afcbff8260dcab698ed",
+          "src": "audio/assets/b3/b37f34fa6009b5a283f3b0543cb774cb1ca3d47b94aa702e777a6923355ece2a.mp3",
+          "sha256": "b37f34fa6009b5a283f3b0543cb774cb1ca3d47b94aa702e777a6923355ece2a",
+          "bytes": 40752,
+          "durationMs": 6792
         }
       ]
     },
@@ -1069,12 +1060,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/1/instructions/6",
-          "speech": "Create a centered Bunker no larger than 56 pixels wide by 18 pixels high and a centered Mothership no larger than 40 pixels wide by 12 pixels high.",
-          "requestHash": "da2e2c6d87edbb10d45778dc402121a1f5b63561d071325fc4e9b4129c0fd42a",
-          "src": "audio/assets/97/97d1f1067485ae05f47a701a001d8eb73394fdf914f4e4a997adcf7c05f34f83.mp3",
-          "sha256": "97d1f1067485ae05f47a701a001d8eb73394fdf914f4e4a997adcf7c05f34f83",
-          "bytes": 56448,
-          "durationMs": 9408
+          "speech": "Create an enemy sprite named Alien.",
+          "requestHash": "44d2e4eea249b69553166988111bf1f7d1cf3e392a9e80fb0b78db9968a109f3",
+          "src": "audio/assets/95/959917c92a5b0649544d277e733e833f30bb2a1adce2c01853ea16695c017796.mp3",
+          "sha256": "959917c92a5b0649544d277e733e833f30bb2a1adce2c01853ea16695c017796",
+          "bytes": 16848,
+          "durationMs": 2808
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/instructions/6",
+          "speech": "Center its artwork and keep its visible costume no larger than 32 pixels wide by 18 pixels high.",
+          "requestHash": "edd40d57d5c824cf645d7a6335ac0c1124e9ff2f20d5acaa7926d78152fc67bb",
+          "src": "audio/assets/5c/5c787283f562106b267cfdd21837124a15fa67a9ee1cf21d3f4e36bfe885d70f.mp3",
+          "sha256": "5c787283f562106b267cfdd21837124a15fa67a9ee1cf21d3f4e36bfe885d70f",
+          "bytes": 40320,
+          "durationMs": 6720
         }
       ]
     },
@@ -1086,6 +1086,49 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/1/instructions/7",
+          "speech": "Paint centered vertical sprites named Player Laser and Enemy Shot.",
+          "requestHash": "9e547e028d47cf3a41729853717f875c5a01c975e6650a31e9c21984afab6ab8",
+          "src": "audio/assets/0f/0f9d3ff9d30765d8748ef35d934fadf00bd6f8fdf0c1fc49af1bd571df3d4cf9.mp3",
+          "sha256": "0f9d3ff9d30765d8748ef35d934fadf00bd6f8fdf0c1fc49af1bd571df3d4cf9",
+          "bytes": 25920,
+          "durationMs": 4320
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/instructions/7",
+          "speech": "Keep each visible costume no larger than 4 pixels wide by 10 pixels high; make Player Laser bright and Enemy Shot red.",
+          "requestHash": "0b50603a3193f866a2678678e27c6bbe6f10477ef706f8af0cb4de9813c5dec1",
+          "src": "audio/assets/50/5093fff942c14d75068bc9e7bd785a4ecf1a84d742784fb676221e87eb274156.mp3",
+          "sha256": "5093fff942c14d75068bc9e7bd785a4ecf1a84d742784fb676221e87eb274156",
+          "bytes": 47952,
+          "durationMs": 7992
+        }
+      ]
+    },
+    {
+      "id": "launch-pad/create-stage-and-sprites/instruction/008",
+      "sourcePaths": [
+        "chapters/0/steps/1/instructions/8"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/0/steps/1/instructions/8",
+          "speech": "Create a centered Bunker no larger than 56 pixels wide by 18 pixels high and a centered Mothership no larger than 40 pixels wide by 12 pixels high.",
+          "requestHash": "da2e2c6d87edbb10d45778dc402121a1f5b63561d071325fc4e9b4129c0fd42a",
+          "src": "audio/assets/97/97d1f1067485ae05f47a701a001d8eb73394fdf914f4e4a997adcf7c05f34f83.mp3",
+          "sha256": "97d1f1067485ae05f47a701a001d8eb73394fdf914f4e4a997adcf7c05f34f83",
+          "bytes": 56448,
+          "durationMs": 9408
+        }
+      ]
+    },
+    {
+      "id": "launch-pad/create-stage-and-sprites/instruction/009",
+      "sourcePaths": [
+        "chapters/0/steps/1/instructions/9"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/0/steps/1/instructions/9",
           "speech": "Check costume selection bounds in the paint editor.",
           "requestHash": "08887adacf97973349e283499e8452e00b8b41a0b9caa61b646b389cd822e105",
           "src": "audio/assets/6a/6a90251dcc0539aa1fb1373acc07f700d4f2793f88998789423a39b22807efa7.mp3",
@@ -1094,7 +1137,7 @@
           "durationMs": 3456
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/7",
+          "sourcePath": "chapters/0/steps/1/instructions/9",
           "speech": "Do not continue with off-center pixels or artwork outside the stated maximum boxes.",
           "requestHash": "c1ec7750331b1fd1bb30f1b0647acbd98c7d39e01937974a2345fb61bf837669",
           "src": "audio/assets/f7/f79f2acb97f434a64ff6af78e23dc1d4f6bfac3b90bb4ea7d7621be7d93fa5e1.mp3",
@@ -1429,23 +1472,6 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/2/instructions/8",
-          "speech": "At the Chapter 1 checkpoint, save the project, load the saved file with File > Load from your computer, and confirm that no unused message1 remains.",
-          "requestHash": "688bf6b3c2712c7880766ea8320a95a22e45ea7674fa6032bd08ec24090e11e0",
-          "src": "audio/assets/a2/a2eacba37ac024d9afa84d269b76202f9215f8c46b30a02a544a7f0cb2687b5c.mp3",
-          "sha256": "a2eacba37ac024d9afa84d269b76202f9215f8c46b30a02a544a7f0cb2687b5c",
-          "bytes": 57312,
-          "durationMs": 9552
-        }
-      ]
-    },
-    {
-      "id": "launch-pad/create-shared-language/instruction/009",
-      "sourcePaths": [
-        "chapters/0/steps/2/instructions/9"
-      ],
-      "sentences": [
-        {
-          "sourcePath": "chapters/0/steps/2/instructions/9",
           "speech": "Hide every variable monitor except Score and Aliens Left.",
           "requestHash": "4e46204b5d81fcfff0741fe3465c9acc757e6981100826293b1d57bf2494fb9b",
           "src": "audio/assets/88/88f25eedaa87dae7a23f62caf59f9094d1bc732473deccf7d3e83d70479eb0ec.mp3",
@@ -1592,12 +1618,12 @@
         },
         {
           "sourcePath": "chapters/0/steps/2/checkpoint/completeWhen/1",
-          "speech": "After loading the saved project, Reset Game and Start Game, but no unused message1, appear in a broadcast menu.",
-          "requestHash": "4d5b9b85084d21d45cf1aa672b2566caaa9af92a029c264865dbb36fe71592f8",
-          "src": "audio/assets/47/470fe1f4969e4d60225b619400eb8e5e7526c3edcce775d5d6fc62fd0044305b.mp3",
-          "sha256": "470fe1f4969e4d60225b619400eb8e5e7526c3edcce775d5d6fc62fd0044305b",
-          "bytes": 48816,
-          "durationMs": 8136
+          "speech": "Reset Game and Start Game appear in a broadcast menu.",
+          "requestHash": "d7835f7b71ad4c009ba4ac141dc35dad3dce5d1c6dd3bfae3b003f1592472068",
+          "src": "audio/assets/c5/c5531b1324856ca57b406adf6e6a0124c8e1249d0f94f7d19a416a04658b8105.mp3",
+          "sha256": "c5531b1324856ca57b406adf6e6a0124c8e1249d0f94f7d19a416a04658b8105",
+          "bytes": 23328,
+          "durationMs": 3888
         },
         {
           "sourcePath": "chapters/0/steps/2/checkpoint/completeWhen/2",
@@ -1757,12 +1783,21 @@
         },
         {
           "sourcePath": "chapters/0/steps/3/instructions/4",
-          "speech": "Use repeat until Game State is not playing so movement stops when the game ends.",
-          "requestHash": "9037f19f46a5b73d0231de2482fa4eb519aa0f57dd45af55f078e2105a19acd7",
-          "src": "audio/assets/f7/f70edf27c316809102f6073df34552f91f184bd26b11fb8d21907d3620b7e69e.mp3",
-          "sha256": "f70edf27c316809102f6073df34552f91f184bd26b11fb8d21907d3620b7e69e",
-          "bytes": 29232,
-          "durationMs": 4872
+          "speech": "Add repeat until, and for its condition put Game State equals playing inside a not block.",
+          "requestHash": "deefd98b114641434b509804c0ee0ac5ddcd3ede6895f9d343c0ab433f0b972a",
+          "src": "audio/assets/51/51676c8ddb1717ec933de4da859d852ca00a5bc73b15712c2cdb9674b1658b8a.mp3",
+          "sha256": "51676c8ddb1717ec933de4da859d852ca00a5bc73b15712c2cdb9674b1658b8a",
+          "bytes": 32976,
+          "durationMs": 5496
+        },
+        {
+          "sourcePath": "chapters/0/steps/3/instructions/4",
+          "speech": "Movement then stops when the game ends.",
+          "requestHash": "6929bbce3f8a55f36cc24332b61ca6e7a4461d3719b149a87606216a528595f0",
+          "src": "audio/assets/ba/ba64db528698138022b4d6692d763f9280011560b324a9b6c6fa794fabf0eaf9.mp3",
+          "sha256": "ba64db528698138022b4d6692d763f9280011560b324a9b6c6fa794fabf0eaf9",
+          "bytes": 16128,
+          "durationMs": 2688
         }
       ]
     },
@@ -2043,12 +2078,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/4/instructions/1",
-          "speech": "Click the green flag, move Player, then click the green flag again while Player is moving.",
-          "requestHash": "1e8643558340dd73ca1114e683e8953bb15a25f0cf686cd28ebda7898bd66138",
-          "src": "audio/assets/15/15b22d31d7054d98d1e73235a5775585b8a562fad017e4a5181b429a1afe55e4.mp3",
-          "sha256": "15b22d31d7054d98d1e73235a5775585b8a562fad017e4a5181b429a1afe55e4",
-          "bytes": 33840,
-          "durationMs": 5640
+          "speech": "Load the saved file with File > Load from your computer.",
+          "requestHash": "900b2b22352f9ea093cbc253b344e292d55dfcbaec8d90a2fc1afad78a767c35",
+          "src": "audio/assets/4c/4c492a18e98a24eb159651813129f6b3d5503251c3312327a0d7a253d42f7c7f.mp3",
+          "sha256": "4c492a18e98a24eb159651813129f6b3d5503251c3312327a0d7a253d42f7c7f",
+          "bytes": 23184,
+          "durationMs": 3864
+        },
+        {
+          "sourcePath": "chapters/0/steps/4/instructions/1",
+          "speech": "Open a broadcast menu and check that it shows Reset Game and Start Game but no unused message1.",
+          "requestHash": "b1bce9eefc70ec65c6c47135f8860c064dedba8dc2d459eda5e5e5f742ea0046",
+          "src": "audio/assets/55/5528c6451b761137ad757fcdf1e55ba872e94dc0364ba538a70e29c9830a181b.mp3",
+          "sha256": "5528c6451b761137ad757fcdf1e55ba872e94dc0364ba538a70e29c9830a181b",
+          "bytes": 35424,
+          "durationMs": 5904
         }
       ]
     },
@@ -2060,12 +2104,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/4/instructions/2",
-          "speech": "Confirm Player returns to x 0, y negative 150 and the Space backdrop returns.",
-          "requestHash": "354520fd38fe9f2c4b43d6fbfbee407c6ec4ac2ec21330779c90ccf240e16f2e",
-          "src": "audio/assets/e6/e6b2ae44c2feb84030d149a91c83f451a9bf7ec3870ef61514393e012f575f20.mp3",
-          "sha256": "e6b2ae44c2feb84030d149a91c83f451a9bf7ec3870ef61514393e012f575f20",
-          "bytes": 36432,
-          "durationMs": 6072
+          "speech": "Click the green flag, move Player, then click the green flag again while Player is moving.",
+          "requestHash": "1e8643558340dd73ca1114e683e8953bb15a25f0cf686cd28ebda7898bd66138",
+          "src": "audio/assets/15/15b22d31d7054d98d1e73235a5775585b8a562fad017e4a5181b429a1afe55e4.mp3",
+          "sha256": "15b22d31d7054d98d1e73235a5775585b8a562fad017e4a5181b429a1afe55e4",
+          "bytes": 33840,
+          "durationMs": 5640
         }
       ]
     },
@@ -2077,12 +2121,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/4/instructions/3",
-          "speech": "Compare the Stage and Player scripts with the complete Chapter 1 code below.",
-          "requestHash": "9c803e039f2955bbe8daef7423e6766b9fa870d6624556be92eb8d4787aac6c2",
-          "src": "audio/assets/dd/dd8b801a60539857a771592892cedebf5d83be104076caea48d580347e843a90.mp3",
-          "sha256": "dd8b801a60539857a771592892cedebf5d83be104076caea48d580347e843a90",
-          "bytes": 27648,
-          "durationMs": 4608
+          "speech": "Confirm Player returns to x 0, y negative 150 and the Space backdrop returns.",
+          "requestHash": "354520fd38fe9f2c4b43d6fbfbee407c6ec4ac2ec21330779c90ccf240e16f2e",
+          "src": "audio/assets/e6/e6b2ae44c2feb84030d149a91c83f451a9bf7ec3870ef61514393e012f575f20.mp3",
+          "sha256": "e6b2ae44c2feb84030d149a91c83f451a9bf7ec3870ef61514393e012f575f20",
+          "bytes": 36432,
+          "durationMs": 6072
         }
       ]
     },
@@ -2094,6 +2138,23 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/4/instructions/4",
+          "speech": "Compare the Stage and Player scripts with the complete Chapter 1 code below.",
+          "requestHash": "9c803e039f2955bbe8daef7423e6766b9fa870d6624556be92eb8d4787aac6c2",
+          "src": "audio/assets/dd/dd8b801a60539857a771592892cedebf5d83be104076caea48d580347e843a90.mp3",
+          "sha256": "dd8b801a60539857a771592892cedebf5d83be104076caea48d580347e843a90",
+          "bytes": 27648,
+          "durationMs": 4608
+        }
+      ]
+    },
+    {
+      "id": "launch-pad/launch-pad-checkpoint/instruction/005",
+      "sourcePaths": [
+        "chapters/0/steps/4/instructions/5"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/0/steps/4/instructions/5",
           "speech": "Do not continue until every required sprite, variable, message, and backdrop name matches.",
           "requestHash": "ff2d69bd1d14844bbb30608728d28138eda0e23926e96a3ca9ed85c67b1d873c",
           "src": "audio/assets/43/4340159d78f6aa2d8c575d85cb3dbe73258f892904359d01bf9928f9574ca7de.mp3",
@@ -2308,12 +2369,30 @@
       "sentences": [
         {
           "sourcePath": "chapters/1/steps/0/instructions/2",
-          "speech": "Add the Reset Game cloning script shown below.",
-          "requestHash": "9adb075ac08a1ab3c7e4fa67bf685d2d35cf977c8d435a5c43aba1477e2e24f7",
-          "src": "audio/assets/6b/6b2976139b0f1771c49d9a7a74ab324a3ae6823db3174a63bf1c075da7702d96.mp3",
-          "sha256": "6b2976139b0f1771c49d9a7a74ab324a3ae6823db3174a63bf1c075da7702d96",
-          "bytes": 18288,
-          "durationMs": 3048
+          "speech": "Find Alien's existing when I receive Reset Game script from Chapter 1.",
+          "requestHash": "530ccbf996dad8610915081947ad80e5a661ae6d617e4e7af219d468615e2431",
+          "src": "audio/assets/db/db560b853828f2b66e4ff948a91681e801677c44baf760d4a95961a6962e6157.mp3",
+          "sha256": "db560b853828f2b66e4ff948a91681e801677c44baf760d4a95961a6962e6157",
+          "bytes": 28224,
+          "durationMs": 4704
+        },
+        {
+          "sourcePath": "chapters/1/steps/0/instructions/2",
+          "speech": "Under its hide block, add the cloning blocks shown below.",
+          "requestHash": "50ab85ded3f49ba50337f0227f50e83de5a9744ba23c13b102c3e8187d0dd293",
+          "src": "audio/assets/da/da5a0bf6292f62499f7f198a7d4030c279be23233c7fef4883a675cfd5763de6.mp3",
+          "sha256": "da5a0bf6292f62499f7f198a7d4030c279be23233c7fef4883a675cfd5763de6",
+          "bytes": 23040,
+          "durationMs": 3840
+        },
+        {
+          "sourcePath": "chapters/1/steps/0/instructions/2",
+          "speech": "Do not add a second when I receive Reset Game event block.",
+          "requestHash": "7cd1df93987f1d5b9b7b6431242b95a5dc6bc598198d44ca5c7d5cb61f6c9989",
+          "src": "audio/assets/22/22867faba8f5c06fb1001e9cc29e1ce16d8caebfd40f240785a337294694537d.mp3",
+          "sha256": "22867faba8f5c06fb1001e9cc29e1ce16d8caebfd40f240785a337294694537d",
+          "bytes": 23904,
+          "durationMs": 3984
         }
       ]
     },
@@ -2531,12 +2610,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/1/steps/1/instructions/0",
-          "speech": "Under when I start as a clone, set x to Fleet X plus My Column times 45.",
-          "requestHash": "c30a259fcd8ae69e182dec9ee12d9e43791ea3c0fe80981a8ee27ead8197154f",
-          "src": "audio/assets/93/93abb63b7ffaf8a06b1b0d5a5b9772a0dc912dad507ae885f52b02316e470934.mp3",
-          "sha256": "93abb63b7ffaf8a06b1b0d5a5b9772a0dc912dad507ae885f52b02316e470934",
-          "bytes": 34704,
-          "durationMs": 5784
+          "speech": "Under when I start as a clone, add the Motion block go to x: y:.",
+          "requestHash": "d91ba5244fc3daf5ca71543d5ab0d07b3460d2b062e7e7bd49a63e8a49e13ab9",
+          "src": "audio/assets/02/020551149955fb017299aec9d55fffbce1445cdc2573e3102ee9549ff7dad9ed.mp3",
+          "sha256": "020551149955fb017299aec9d55fffbce1445cdc2573e3102ee9549ff7dad9ed",
+          "bytes": 28080,
+          "durationMs": 4680
+        },
+        {
+          "sourcePath": "chapters/1/steps/1/instructions/0",
+          "speech": "For x, build Fleet X plus My Column times 45.",
+          "requestHash": "080bc81f005a668b4adb568c28838b9e544c97ad086c60d30527292c5f869763",
+          "src": "audio/assets/98/987989aba5026df93dd386c9d572d4331f888d06ae2e611e5552b46abe441a27.mp3",
+          "sha256": "987989aba5026df93dd386c9d572d4331f888d06ae2e611e5552b46abe441a27",
+          "bytes": 27648,
+          "durationMs": 4608
         }
       ]
     },
@@ -2548,12 +2636,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/1/steps/1/instructions/1",
-          "speech": "Set y to Fleet Y minus My Row times 35.",
-          "requestHash": "5f0df6da42762d24dff0914d73b21d524f95e3607f06ebe64fd7973f56d87c4f",
-          "src": "audio/assets/92/929a44e85706760f4383cba77e4ed25962d17fd7f3b79deefedc3a7fdb9f0702.mp3",
-          "sha256": "929a44e85706760f4383cba77e4ed25962d17fd7f3b79deefedc3a7fdb9f0702",
-          "bytes": 22608,
-          "durationMs": 3768
+          "speech": "For y, build Fleet Y minus My Row times 35.",
+          "requestHash": "8d1502a663b05241c5fab31f1b9e75cbfd46e0e203962f4f8339118e7b4c4f1e",
+          "src": "audio/assets/a6/a686e937869e57e4fd48b9f106a65fbabdd3aff36c63f0fa0824d675065a946a.mp3",
+          "sha256": "a686e937869e57e4fd48b9f106a65fbabdd3aff36c63f0fa0824d675065a946a",
+          "bytes": 25344,
+          "durationMs": 4224
         }
       ]
     },
@@ -3257,12 +3345,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/1/steps/3/instructions/0",
-          "speech": "On the Stage, add the Start Game march script shown below.",
-          "requestHash": "74f09d7f6b310ddd50a04bff8a1f775490343eb99ccad4e0895f7d7c7382da2a",
-          "src": "audio/assets/4f/4f7545acaa88b04079ea985091431953d7fe34a6c5c8299bc55b6fab69ba8aca.mp3",
-          "sha256": "4f7545acaa88b04079ea985091431953d7fe34a6c5c8299bc55b6fab69ba8aca",
-          "bytes": 23760,
-          "durationMs": 3960
+          "speech": "On the Stage, start a new script with when I receive Start Game.",
+          "requestHash": "4b4237663aaae995ad8b9f57eb00916e70ce1218509fb6d02ad5119e2d51c3de",
+          "src": "audio/assets/cd/cd407adee37e51bebb3c54f0a9d4103049a0c6f725bc6a512bcfdf7999b8421d.mp3",
+          "sha256": "cd407adee37e51bebb3c54f0a9d4103049a0c6f725bc6a512bcfdf7999b8421d",
+          "bytes": 24624,
+          "durationMs": 4104
+        },
+        {
+          "sourcePath": "chapters/1/steps/3/instructions/0",
+          "speech": "The steps below build the march script shown at the end.",
+          "requestHash": "680bbe854c7508ecc7152036c3185041fc6ad376083a1cde494429372e6ffdbb",
+          "src": "audio/assets/a2/a29c54ca571c2f39675f6b715a5009693787f3f5a3124d28e88adae0b4ef8c97.mp3",
+          "sha256": "a29c54ca571c2f39675f6b715a5009693787f3f5a3124d28e88adae0b4ef8c97",
+          "bytes": 20736,
+          "durationMs": 3456
         }
       ]
     },
@@ -3274,12 +3371,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/1/steps/3/instructions/1",
-          "speech": "For phase 1, repeat five times: add 10 to Fleet X, use broadcast March Right and wait, and then wait 0.35 seconds.",
-          "requestHash": "1e91ec8c85721c622c073f12ad4a99f7c3f15c009ecc4b08cc5b7a03ab9fce36",
-          "src": "audio/assets/d7/d79ad3491a3950962e4fc500a1c5001878fbd4ff741417b54992ae5e1e0f7579.mp3",
-          "sha256": "d79ad3491a3950962e4fc500a1c5001878fbd4ff741417b54992ae5e1e0f7579",
-          "bytes": 58032,
-          "durationMs": 9672
+          "speech": "Add repeat until.",
+          "requestHash": "4496b1613dd734a95be50e4adc8694e8c4d3d309f3f3923c6a0035d25a822e3c",
+          "src": "audio/assets/bc/bc65a8d1814d58e9fd28a94483f4e22980f20e51a8f38baab69256466e55b544.mp3",
+          "sha256": "bc65a8d1814d58e9fd28a94483f4e22980f20e51a8f38baab69256466e55b544",
+          "bytes": 11232,
+          "durationMs": 1872
+        },
+        {
+          "sourcePath": "chapters/1/steps/3/instructions/1",
+          "speech": "For its condition, put Game State equals playing inside a not block.",
+          "requestHash": "b450b6d6fb275b1b98a67d7c6b195a94d7160cd6f1f1557c25b5c47b5adb435d",
+          "src": "audio/assets/2e/2e1fdc06469f1585b5ebc14d7d5b5342f4e1cf8c51269bbfb03d51a6ac4838db.mp3",
+          "sha256": "2e1fdc06469f1585b5ebc14d7d5b5342f4e1cf8c51269bbfb03d51a6ac4838db",
+          "bytes": 25920,
+          "durationMs": 4320
         }
       ]
     },
@@ -3291,12 +3397,30 @@
       "sentences": [
         {
           "sourcePath": "chapters/1/steps/3/instructions/2",
-          "speech": "After phase 1, subtract 10 from Fleet Y, use broadcast March Down and wait, and set the Stage variable to 2.",
-          "requestHash": "dea0ced66d3f43949d8806030d7817776bdb1708bdd3634ff0f6b52e09547002",
-          "src": "audio/assets/a8/a84f5f7a64e705823e3c74b9da0d30c447faebeae34834cf929e80e9a3d7a311.mp3",
-          "sha256": "a84f5f7a64e705823e3c74b9da0d30c447faebeae34834cf929e80e9a3d7a311",
-          "bytes": 44208,
-          "durationMs": 7368
+          "speech": "Inside the repeat, add an if then else that checks Stage equals 1.",
+          "requestHash": "60e2339b97c97a8358f13ee8cb237a53a0bdd812ce880d6198bbc93405df6fab",
+          "src": "audio/assets/21/214c9b37c50c95ee4fb1f1f1d3ff16c77bdb4b33bdbd210ec513d754e7e1c4f2.mp3",
+          "sha256": "214c9b37c50c95ee4fb1f1f1d3ff16c77bdb4b33bdbd210ec513d754e7e1c4f2",
+          "bytes": 25344,
+          "durationMs": 4224
+        },
+        {
+          "sourcePath": "chapters/1/steps/3/instructions/2",
+          "speech": "Inside its else, add a second if then else that checks Stage equals 2.",
+          "requestHash": "5ad6275e462821368e19f6794404941ac44de66d9ee0ae3621c15e40dad8dfee",
+          "src": "audio/assets/dc/dc91f8bf99063a67414366f5da86d0cf2179c15393cf215c95ebf290d022f9d0.mp3",
+          "sha256": "dc91f8bf99063a67414366f5da86d0cf2179c15393cf215c95ebf290d022f9d0",
+          "bytes": 26784,
+          "durationMs": 4464
+        },
+        {
+          "sourcePath": "chapters/1/steps/3/instructions/2",
+          "speech": "The three open spaces will hold phase 1, phase 2, and phase 3.",
+          "requestHash": "63beedb7baf5543c7241d8d001e048b020703b1b5bfd62a2567892a4b1f95d20",
+          "src": "audio/assets/09/0940bd9187be180c9a7bf54c391ab1a34b849abc1f0f8cdf64650471d0b12d6f.mp3",
+          "sha256": "0940bd9187be180c9a7bf54c391ab1a34b849abc1f0f8cdf64650471d0b12d6f",
+          "bytes": 31248,
+          "durationMs": 5208
         }
       ]
     },
@@ -3308,21 +3432,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/1/steps/3/instructions/3",
-          "speech": "Build phase 2 with nine left moves and one down move.",
-          "requestHash": "de4557446395163717256e8cce7f5e555f6be6d53528b785bb871808beebc275",
-          "src": "audio/assets/f1/f12e4cab5dbc1892edc91633ff1e0ba0ba1129c7b73aa50feba537859e6bcdaa.mp3",
-          "sha256": "f12e4cab5dbc1892edc91633ff1e0ba0ba1129c7b73aa50feba537859e6bcdaa",
-          "bytes": 21744,
-          "durationMs": 3624
+          "speech": "In the Stage equals 1 space, build phase 1.",
+          "requestHash": "90b65bdb8fd7d3a0b836a00e7d1c6af3315032effaed04fd0becd0194ca01258",
+          "src": "audio/assets/75/759b5608beb83a736e1142da7c32b99c262f0c808f663d71990d7d6df393f288.mp3",
+          "sha256": "759b5608beb83a736e1142da7c32b99c262f0c808f663d71990d7d6df393f288",
+          "bytes": 21600,
+          "durationMs": 3600
         },
         {
           "sourcePath": "chapters/1/steps/3/instructions/3",
-          "speech": "Then set the Stage variable to 3.",
-          "requestHash": "3eaf501d66189e60d2be15bcdb0c060833f3036c995eaff6e6715a95fae33fc9",
-          "src": "audio/assets/a1/a156a82440f12716e85f489f7a1fec3c70b7d20beeaed592775124a66fb7c8f4.mp3",
-          "sha256": "a156a82440f12716e85f489f7a1fec3c70b7d20beeaed592775124a66fb7c8f4",
-          "bytes": 15840,
-          "durationMs": 2640
+          "speech": "Repeat five times: add 10 to Fleet X, use broadcast March Right and wait, and then wait 0.35 seconds.",
+          "requestHash": "a46f7b7bc4c3ec3aceb8ee117abf5643076df08665d7dac8f6bfd4c5ac7126fc",
+          "src": "audio/assets/f9/f98bb61733c1bc6b5e741f0b1d556609928e1aca5b3ed41a46a820bd81030e88.mp3",
+          "sha256": "f98bb61733c1bc6b5e741f0b1d556609928e1aca5b3ed41a46a820bd81030e88",
+          "bytes": 48096,
+          "durationMs": 8016
         }
       ]
     },
@@ -3334,21 +3458,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/1/steps/3/instructions/4",
-          "speech": "Build phase 3 with nine right moves and one down move.",
-          "requestHash": "9352fd3e445e3dbfa2f9093e6607d2461c23b5b255854363f0b7168dbdc65324",
-          "src": "audio/assets/9c/9c4e30ddb0af081c1b38bbf69b51c24ce672ea15b5ad66c03545938d160f4eb6.mp3",
-          "sha256": "9c4e30ddb0af081c1b38bbf69b51c24ce672ea15b5ad66c03545938d160f4eb6",
-          "bytes": 22176,
-          "durationMs": 3696
-        },
-        {
-          "sourcePath": "chapters/1/steps/3/instructions/4",
-          "speech": "Then set the Stage variable to 2.",
-          "requestHash": "b3fa27f2b7db12d2e1baf76175be23650a7e8edf16c234f371f91b0153158d08",
-          "src": "audio/assets/58/586285d14da61e9dc10feadaa8696ae988e3047e8648f29168112f4baf355211.mp3",
-          "sha256": "586285d14da61e9dc10feadaa8696ae988e3047e8648f29168112f4baf355211",
-          "bytes": 15696,
-          "durationMs": 2616
+          "speech": "After phase 1, subtract 10 from Fleet Y, use broadcast March Down and wait, and set the Stage variable to 2.",
+          "requestHash": "dea0ced66d3f43949d8806030d7817776bdb1708bdd3634ff0f6b52e09547002",
+          "src": "audio/assets/a8/a84f5f7a64e705823e3c74b9da0d30c447faebeae34834cf929e80e9a3d7a311.mp3",
+          "sha256": "a84f5f7a64e705823e3c74b9da0d30c447faebeae34834cf929e80e9a3d7a311",
+          "bytes": 44208,
+          "durationMs": 7368
         }
       ]
     },
@@ -3360,6 +3475,93 @@
       "sentences": [
         {
           "sourcePath": "chapters/1/steps/3/instructions/5",
+          "speech": "In the Stage equals 2 space, build phase 2 with nine left moves and one down move.",
+          "requestHash": "407da3bd9296c1e6b167df9844f73f13f54bacc43c4d10625682137ddff75440",
+          "src": "audio/assets/d0/d0a28ce2cd657f03d2d6b4ad56f654d2cd0e9eea154c8cecdb14673dcde391a8.mp3",
+          "sha256": "d0a28ce2cd657f03d2d6b4ad56f654d2cd0e9eea154c8cecdb14673dcde391a8",
+          "bytes": 33552,
+          "durationMs": 5592
+        },
+        {
+          "sourcePath": "chapters/1/steps/3/instructions/5",
+          "speech": "Then set the Stage variable to 3.",
+          "requestHash": "3eaf501d66189e60d2be15bcdb0c060833f3036c995eaff6e6715a95fae33fc9",
+          "src": "audio/assets/a1/a156a82440f12716e85f489f7a1fec3c70b7d20beeaed592775124a66fb7c8f4.mp3",
+          "sha256": "a156a82440f12716e85f489f7a1fec3c70b7d20beeaed592775124a66fb7c8f4",
+          "bytes": 15840,
+          "durationMs": 2640
+        }
+      ]
+    },
+    {
+      "id": "alien-fleet/conduct-finite-march/instruction/006",
+      "sourcePaths": [
+        "chapters/1/steps/3/instructions/6"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/1/steps/3/instructions/6",
+          "speech": "In the last else space, build phase 3 with nine right moves and one down move.",
+          "requestHash": "73ad6797aaec3c3eabc359d8e067e9968b699ce3800c3cbfb5722094466e6d63",
+          "src": "audio/assets/bb/bb398ddf76b17096476e977d8fba5c456d12da6bf27e75eedcfb421ac4914403.mp3",
+          "sha256": "bb398ddf76b17096476e977d8fba5c456d12da6bf27e75eedcfb421ac4914403",
+          "bytes": 29952,
+          "durationMs": 4992
+        },
+        {
+          "sourcePath": "chapters/1/steps/3/instructions/6",
+          "speech": "Then set the Stage variable to 2.",
+          "requestHash": "b3fa27f2b7db12d2e1baf76175be23650a7e8edf16c234f371f91b0153158d08",
+          "src": "audio/assets/58/586285d14da61e9dc10feadaa8696ae988e3047e8648f29168112f4baf355211.mp3",
+          "sha256": "586285d14da61e9dc10feadaa8696ae988e3047e8648f29168112f4baf355211",
+          "bytes": 15696,
+          "durationMs": 2616
+        }
+      ]
+    },
+    {
+      "id": "alien-fleet/conduct-finite-march/instruction/007",
+      "sourcePaths": [
+        "chapters/1/steps/3/instructions/7"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/1/steps/3/instructions/7",
+          "speech": "Wrap the blocks of every sideways move in if Game State equals playing.",
+          "requestHash": "7219b768595b6531a0c8948372290420aa5b7245cf0a6da8e6ebf4b64352c36d",
+          "src": "audio/assets/8a/8ae24ecd8c5d88b74224135009a8da13fabab506a188a803aacc6e69bb1b7101.mp3",
+          "sha256": "8ae24ecd8c5d88b74224135009a8da13fabab506a188a803aacc6e69bb1b7101",
+          "bytes": 26640,
+          "durationMs": 4440
+        },
+        {
+          "sourcePath": "chapters/1/steps/3/instructions/7",
+          "speech": "Wrap every down move the same way.",
+          "requestHash": "96e591a6b891cd858b708193fd7a212ffff8b7a1d328f4caea57e45e3cb9a4f3",
+          "src": "audio/assets/f9/f9271e04520ec5baba2dae121c5a89a7f3e6eb5dc4dbe48ccea1de104f36e807.mp3",
+          "sha256": "f9271e04520ec5baba2dae121c5a89a7f3e6eb5dc4dbe48ccea1de104f36e807",
+          "bytes": 14544,
+          "durationMs": 2424
+        },
+        {
+          "sourcePath": "chapters/1/steps/3/instructions/7",
+          "speech": "This makes the fleet stop as soon as the game ends.",
+          "requestHash": "12ffebcad4b3865c2812aa5898ef94a93e684b4b9861730da171c6c533136f83",
+          "src": "audio/assets/7c/7cf98392fb7c0d59462ef4d18082cb200b77eac66ef7eaea9870439e755a9837.mp3",
+          "sha256": "7cf98392fb7c0d59462ef4d18082cb200b77eac66ef7eaea9870439e755a9837",
+          "bytes": 19296,
+          "durationMs": 3216
+        }
+      ]
+    },
+    {
+      "id": "alien-fleet/conduct-finite-march/instruction/008",
+      "sourcePaths": [
+        "chapters/1/steps/3/instructions/8"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/1/steps/3/instructions/8",
           "speech": "Keep every coordinate change and march broadcast on the Stage.",
           "requestHash": "b90dd41ef8f4e8bfef6cddf48adc038b4cb7ed243cbb54f2aaf9e037c90c5b54",
           "src": "audio/assets/c2/c2dfc5843f1105d87d29e0b81668ffb294d98364ca20f1e73cd0146f38f45940.mp3",
@@ -3394,12 +3596,30 @@
       "sentences": [
         {
           "sourcePath": "chapters/1/steps/3/hints/1",
-          "speech": "The first five-step phase starts the fleet near the left side; later nine-step phases travel the full safe width.",
-          "requestHash": "770ee07a9ff47ae88361c38d8cfd552f7c376a1583ad62f0d79824baeb65ba1a",
-          "src": "audio/assets/08/08cb6f9244b03a3c559e9dda2483d5626277647981b5f8cf0c78b19dad43ca29.mp3",
-          "sha256": "08cb6f9244b03a3c559e9dda2483d5626277647981b5f8cf0c78b19dad43ca29",
-          "bytes": 41616,
-          "durationMs": 6936
+          "speech": "The fleet starts in the center.",
+          "requestHash": "e6d7ff1889529f2e0246ccfb451788ea5d13d5807665b3b82f15d96c8c0e0a99",
+          "src": "audio/assets/60/60c29335943b606e7eef1a53f0914669e5d880fdba46ef4e2b20e355aeee35f4.mp3",
+          "sha256": "60c29335943b606e7eef1a53f0914669e5d880fdba46ef4e2b20e355aeee35f4",
+          "bytes": 13248,
+          "durationMs": 2208
+        },
+        {
+          "sourcePath": "chapters/1/steps/3/hints/1",
+          "speech": "Phase 1 moves it five steps to the right edge.",
+          "requestHash": "ace8536f517fd89af8b443d29fa3a8a2ae554af267fa722745a2d921c4a9cbd3",
+          "src": "audio/assets/a9/a9e28cf7e936d21764856825de2e369386b95d8aa9798be8550545f5d2bc7fc7.mp3",
+          "sha256": "a9e28cf7e936d21764856825de2e369386b95d8aa9798be8550545f5d2bc7fc7",
+          "bytes": 19008,
+          "durationMs": 3168
+        },
+        {
+          "sourcePath": "chapters/1/steps/3/hints/1",
+          "speech": "The nine-step phases then travel the full width from edge to edge.",
+          "requestHash": "fcb2f6dbf82d7a5a32c9965acc4c2c217c1f707ff4dcf1b18d6205a694d2108a",
+          "src": "audio/assets/6c/6c30fad00375842bdc5cb4a3e2b1f14a1708acb0af37d1529edc4c9603520e20.mp3",
+          "sha256": "6c30fad00375842bdc5cb4a3e2b1f14a1708acb0af37d1529edc4c9603520e20",
+          "bytes": 24480,
+          "durationMs": 4080
         }
       ]
     },
@@ -3498,21 +3718,21 @@
         },
         {
           "sourcePath": "chapters/1/steps/3/checkpoint/expectedResult",
-          "speech": "All 24 aliens move as one shape, step down only at an edge, and eventually trigger loss below y negative 60 before reaching the bunkers.",
-          "requestHash": "0a55629523e3e7e9375b6d38df3f416b118556a95405db6bef66bf21c99b8e21",
-          "src": "audio/assets/95/956187964bc354f76ba83370c305cf9244c1cbcbb998959cffb108f50eb02cf5.mp3",
-          "sha256": "956187964bc354f76ba83370c305cf9244c1cbcbb998959cffb108f50eb02cf5",
-          "bytes": 55008,
-          "durationMs": 9168
+          "speech": "All 24 aliens move as one shape, step down only at an edge, and set Game State to lost once an alien drops below y negative 60.",
+          "requestHash": "9fcf833bb472295b6328e0c334e92a286ab388c1244d53b1bc1b64b89676acb1",
+          "src": "audio/assets/80/80c8613393ea23479d0530e578b932c4d319b092e8170a0f41059fd1940ed574.mp3",
+          "sha256": "80c8613393ea23479d0530e578b932c4d319b092e8170a0f41059fd1940ed574",
+          "bytes": 54576,
+          "durationMs": 9096
         },
         {
           "sourcePath": "chapters/1/steps/3/checkpoint/completeWhen/0",
-          "speech": "No alien moves early or late.",
-          "requestHash": "f05433014936100e1261ce4f62a5102866bda4ceb3f44242f40e9cc082551584",
-          "src": "audio/assets/bd/bd04c16743fed39f2e46cf8a9ae08aa82189f2718734594c9efdf0c9f2d77ba8.mp3",
-          "sha256": "bd04c16743fed39f2e46cf8a9ae08aa82189f2718734594c9efdf0c9f2d77ba8",
-          "bytes": 14832,
-          "durationMs": 2472
+          "speech": "The spaces between aliens never change size while the fleet moves.",
+          "requestHash": "3c1dc3663e5af431c7a0fea126c1f09183b20d803e13c6fd3360ec2bab1aad7b",
+          "src": "audio/assets/fe/fe22b1b0284f8b5d79c8c5f57816ef49b70577ef8207188b68292c250b604b37.mp3",
+          "sha256": "fe22b1b0284f8b5d79c8c5f57816ef49b70577ef8207188b68292c250b604b37",
+          "bytes": 25920,
+          "durationMs": 4320
         },
         {
           "sourcePath": "chapters/1/steps/3/checkpoint/completeWhen/1",
@@ -3764,12 +3984,12 @@
         },
         {
           "sourcePath": "chapters/1/steps/4/checkpoint/completeWhen/2",
-          "speech": "A clone below y negative 60 changes the game to lost before it can overlap a bunker.",
-          "requestHash": "5eca166c4c8ada8dbad772f1643f2dfecdb774cf10cb55074296a6a1fe1a3ed1",
-          "src": "audio/assets/69/69d2cc9bb0edc48ba4fe92cf5c7fe0889eb5f2cab4ed369153c812df03b940c5.mp3",
-          "sha256": "69d2cc9bb0edc48ba4fe92cf5c7fe0889eb5f2cab4ed369153c812df03b940c5",
-          "bytes": 33552,
-          "durationMs": 5592
+          "speech": "A clone below y negative 60 changes Game State to lost.",
+          "requestHash": "affaa0218206e9584e9d398f28218d6d10caa2b1003480050db3bd43d80ac76e",
+          "src": "audio/assets/0b/0bdba31e49eea0fa73854e3ceb4d90b3a43808e59291ec38bb2642faeec5d3eb.mp3",
+          "sha256": "0bdba31e49eea0fa73854e3ceb4d90b3a43808e59291ec38bb2642faeec5d3eb",
+          "bytes": 24624,
+          "durationMs": 4104
         }
       ]
     },
@@ -3842,12 +4062,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/2/steps/0/instructions/1",
-          "speech": "Add a Reset Game script that hides Player Laser and sets Laser Active to 0.",
-          "requestHash": "169cdc29af93559ef12a91219c17d1dd3c631ea8dd5fe38bac325e0caa4b8035",
-          "src": "audio/assets/92/926d06213f7960abdbe656633d3d46d63efcd72388026d4640aadcf04b1ad9d4.mp3",
-          "sha256": "926d06213f7960abdbe656633d3d46d63efcd72388026d4640aadcf04b1ad9d4",
+          "speech": "Find Player Laser's existing when I receive Reset Game script from Chapter 1.",
+          "requestHash": "c64f8dede085cf5bd29e4e2feecd38bdd71f1a34d14fd23484fa3cf44273b53e",
+          "src": "audio/assets/82/82c23b11b1c007369a47a3b12251e410d62fdf51118f10118d8530b195c0916c.mp3",
+          "sha256": "82c23b11b1c007369a47a3b12251e410d62fdf51118f10118d8530b195c0916c",
           "bytes": 30384,
           "durationMs": 5064
+        },
+        {
+          "sourcePath": "chapters/2/steps/0/instructions/1",
+          "speech": "Snap set Laser Active to 0 directly under its hide block.",
+          "requestHash": "60cb80bbfdbc4e21b9ec12b598444eec4e069d00234669a1ae22a12287ccf992",
+          "src": "audio/assets/f1/f1c9a5f999d2bb05f9b43dcd5b2b77ac98b223362b493b4e5876879fa3f68d38.mp3",
+          "sha256": "f1c9a5f999d2bb05f9b43dcd5b2b77ac98b223362b493b4e5876879fa3f68d38",
+          "bytes": 26208,
+          "durationMs": 4368
         }
       ]
     },
@@ -3868,12 +4097,12 @@
         },
         {
           "sourcePath": "chapters/2/steps/0/instructions/2",
-          "speech": "This is visible, cannot skip an 18-pixel target while moving by 10, and cannot bridge two target rows.",
-          "requestHash": "fc064772f133fb79809b175196b06587983c0d0ef3483b366df07dabfe6047d0",
-          "src": "audio/assets/1f/1f79f0e9d9f00b1d88fce014ea025d015a992447ca5ed3239efce02f250a284d.mp3",
-          "sha256": "1f79f0e9d9f00b1d88fce014ea025d015a992447ca5ed3239efce02f250a284d",
-          "bytes": 40176,
-          "durationMs": 6696
+          "speech": "A 10-pixel laser that moves 10 pixels at a time cannot jump over an 18-pixel alien, and it cannot touch two rows at once.",
+          "requestHash": "35852a918d7558099e16218858e6a00cc363318336c237f6a7382a7246a9f869",
+          "src": "audio/assets/2e/2ecd7d1ab0a383a99007a7874d57e5b87184594d0f8813e8f327fc8bb04e6d5a.mp3",
+          "sha256": "2ecd7d1ab0a383a99007a7874d57e5b87184594d0f8813e8f327fc8bb04e6d5a",
+          "bytes": 46800,
+          "durationMs": 7800
         }
       ]
     },
@@ -3894,12 +4123,12 @@
         },
         {
           "sourcePath": "chapters/2/steps/0/instructions/3",
-          "speech": "Use repeat until Game State is not playing.",
-          "requestHash": "fe06f11af27288c21ef4ea70900af6ce6cda80eb7ad983747107b6e7ecc76432",
-          "src": "audio/assets/35/35c16c72d40b1b6230a873ff5e6146f5c360f17d050fe9e18e53e096173aacd7.mp3",
-          "sha256": "35c16c72d40b1b6230a873ff5e6146f5c360f17d050fe9e18e53e096173aacd7",
-          "bytes": 18864,
-          "durationMs": 3144
+          "speech": "Use the same repeat until not Game State equals playing loop.",
+          "requestHash": "d1056503ea1c8cd42976e7f21ca4a25c041ce10747db311e25172c542560445c",
+          "src": "audio/assets/03/038d2574ff9c41a76f8f048e7af0a799977aef892d6f929e7205a585d9976973.mp3",
+          "sha256": "038d2574ff9c41a76f8f048e7af0a799977aef892d6f929e7205a585d9976973",
+          "bytes": 24192,
+          "durationMs": 4032
         },
         {
           "sourcePath": "chapters/2/steps/0/instructions/3",
@@ -4100,21 +4329,48 @@
       "sentences": [
         {
           "sourcePath": "chapters/2/steps/0/checkpoint/task",
-          "speech": "Press and hold space while watching Laser Active.",
-          "requestHash": "74466aaea9e8199fc94367f166bce24aff01d061e606bdfd40ac54b78487a735",
-          "src": "audio/assets/c9/c9ddc738cd45ac0c784f1e63b91fac830ebc0268a00f706532ada28a66dbba89.mp3",
-          "sha256": "c9ddc738cd45ac0c784f1e63b91fac830ebc0268a00f706532ada28a66dbba89",
-          "bytes": 19440,
-          "durationMs": 3240
+          "speech": "Turn on the Laser Active variable display.",
+          "requestHash": "1192afe74f110808c49b4967999c777c82bb45e13a13161bca49f940f0e5c9b5",
+          "src": "audio/assets/bc/bc85c82096b1539e9dd1f99de1c8e647ad789afeaf16938b9fcd4b790f83ec37.mp3",
+          "sha256": "bc85c82096b1539e9dd1f99de1c8e647ad789afeaf16938b9fcd4b790f83ec37",
+          "bytes": 19008,
+          "durationMs": 3168
+        },
+        {
+          "sourcePath": "chapters/2/steps/0/checkpoint/task",
+          "speech": "Click the green flag, then press and hold Space.",
+          "requestHash": "b2ab95f1cdb5d0c84ed649dfda5e6c8695a12a16dc98453d0db84e6fa68c49ee",
+          "src": "audio/assets/ff/ff361e7ca2e0be63d9be0305f9b90848f82ab69f56f329e88d6b2333236d3c3f.mp3",
+          "sha256": "ff361e7ca2e0be63d9be0305f9b90848f82ab69f56f329e88d6b2333236d3c3f",
+          "bytes": 21456,
+          "durationMs": 3576
         },
         {
           "sourcePath": "chapters/2/steps/0/checkpoint/expectedResult",
-          "speech": "One press changes Laser Active from 0 to 1 only once; no clones are created.",
-          "requestHash": "d6c9652f63d36b042f47c513490c92c482bec19aa8c9080c82fa6dec6ff480ca",
-          "src": "audio/assets/fe/fed2d1ebf17ac35389042dbd21aa9c6e363c0f29186599d021813aaffd909d60.mp3",
-          "sha256": "fed2d1ebf17ac35389042dbd21aa9c6e363c0f29186599d021813aaffd909d60",
-          "bytes": 36288,
-          "durationMs": 6048
+          "speech": "Laser Active changes from 0 to 1 once and stays 1, because the script that sets it back to 0 comes in the next step.",
+          "requestHash": "f15abee3aab30ef6f0e8870781d906be8d9030a4440d31449d4098e67efa01ce",
+          "src": "audio/assets/c7/c7a1099aef81b730eadf0072d1d005a6575217e0e7d33dc0abcc221703304871.mp3",
+          "sha256": "c7a1099aef81b730eadf0072d1d005a6575217e0e7d33dc0abcc221703304871",
+          "bytes": 45360,
+          "durationMs": 7560
+        },
+        {
+          "sourcePath": "chapters/2/steps/0/checkpoint/expectedResult",
+          "speech": "No clones are created.",
+          "requestHash": "af8fb1d625b4793b6caa2c3f229d848aa671933af5287d9008cc4cbb6a89ef34",
+          "src": "audio/assets/35/356f75d0e2f815c817764d1e26c52716b47a5b6595194dd19aaf2f5500591609.mp3",
+          "sha256": "356f75d0e2f815c817764d1e26c52716b47a5b6595194dd19aaf2f5500591609",
+          "bytes": 11520,
+          "durationMs": 1920
+        },
+        {
+          "sourcePath": "chapters/2/steps/0/checkpoint/expectedResult",
+          "speech": "Turn the display off again after the test.",
+          "requestHash": "309cd359bc365e8a209e60676f4933a933f71953ecc5742658877a666b1e5f12",
+          "src": "audio/assets/ef/ef15b0916bcb4e9385634bb683ec5736498e3c18e62970a787e299bfc261bf15.mp3",
+          "sha256": "ef15b0916bcb4e9385634bb683ec5736498e3c18e62970a787e299bfc261bf15",
+          "bytes": 18288,
+          "durationMs": 3048
         },
         {
           "sourcePath": "chapters/2/steps/0/checkpoint/completeWhen/0",
@@ -4205,12 +4461,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/2/steps/1/instructions/1",
-          "speech": "Use go to Player, then change y by 15 so the shot begins above the ship costume.",
-          "requestHash": "a0e069602b580d32f5661197d47121e1b956fba26e852349a9e6537df34d4c68",
-          "src": "audio/assets/76/765a69423583cb687c01f0c6fb3d8a9e2b2a2a399c0ddd7b6d036365ffe9d9af.mp3",
-          "sha256": "765a69423583cb687c01f0c6fb3d8a9e2b2a2a399c0ddd7b6d036365ffe9d9af",
-          "bytes": 34128,
-          "durationMs": 5688
+          "speech": "Add if Game State equals playing.",
+          "requestHash": "2624db85f36c3ccfb65fd25c4c06286dd90794ba7c2e5694e2379e27913ecbb3",
+          "src": "audio/assets/f9/f927e14fca941be34cc76ce0a8496638a1bc1d7a21d7888e7775a2c383ae114f.mp3",
+          "sha256": "f927e14fca941be34cc76ce0a8496638a1bc1d7a21d7888e7775a2c383ae114f",
+          "bytes": 13968,
+          "durationMs": 2328
+        },
+        {
+          "sourcePath": "chapters/2/steps/1/instructions/1",
+          "speech": "Inside it, use go to Player, then change y by 15 so the shot begins above the ship costume.",
+          "requestHash": "70697f88720c2de41b64b75976acbf43022ae65d86e0fcecae9f42096d6a3db0",
+          "src": "audio/assets/c7/c7280f02b8a08b46d4e46f7e7763a259559e4dc8b12a1b2d4b8ecc8295a7b8a5.mp3",
+          "sha256": "c7280f02b8a08b46d4e46f7e7763a259559e4dc8b12a1b2d4b8ecc8295a7b8a5",
+          "bytes": 38016,
+          "durationMs": 6336
         }
       ]
     },
@@ -4222,12 +4487,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/2/steps/1/instructions/2",
-          "speech": "Show the sprite and repeat while it is active, below y 175, and the game is playing.",
-          "requestHash": "63588001bebbf2c32ffcc7f93123624f7357c0840b53cd9ed787df104c64c787",
-          "src": "audio/assets/53/534cbc2a510d140850c3f78ab31457b31e3f34234d32d5772142bdfdb4e5d87e.mp3",
-          "sha256": "534cbc2a510d140850c3f78ab31457b31e3f34234d32d5772142bdfdb4e5d87e",
-          "bytes": 37440,
-          "durationMs": 6240
+          "speech": "Still inside the if, show the sprite and add repeat until.",
+          "requestHash": "87a7520ba25538a36e14f84c09442c3ab39dc928a51490aedac96560254dd370",
+          "src": "audio/assets/76/76cb359e71aef20e28e263d6271d2823658c9c4b583454ded2de786b13ff667d.mp3",
+          "sha256": "76cb359e71aef20e28e263d6271d2823658c9c4b583454ded2de786b13ff667d",
+          "bytes": 23040,
+          "durationMs": 3840
+        },
+        {
+          "sourcePath": "chapters/2/steps/1/instructions/2",
+          "speech": "It stops when Laser Active equals 0, when y position is over 175, or when Game State is not playing.",
+          "requestHash": "4a58bd5942f797236bb9898621e1c1602113c186091e04b9e1a38c56eae3cdef",
+          "src": "audio/assets/29/29726b642d8dc0fd13afcb034884cb5e8fff774e8cf1c4dde0e6e8a030e11dbb.mp3",
+          "sha256": "29726b642d8dc0fd13afcb034884cb5e8fff774e8cf1c4dde0e6e8a030e11dbb",
+          "bytes": 48816,
+          "durationMs": 8136
         }
       ]
     },
@@ -4256,12 +4530,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/2/steps/1/instructions/4",
-          "speech": "After the loop, hide and set Laser Active back to 0.",
-          "requestHash": "a0878542263ad4717c91e1292a0c97aa097b1544e8a741041d9922108a01799f",
-          "src": "audio/assets/83/83735bf926be0d46621403029c0857d01ab4b5fbadb8d114bd2ecd620aa58d2a.mp3",
-          "sha256": "83735bf926be0d46621403029c0857d01ab4b5fbadb8d114bd2ecd620aa58d2a",
-          "bytes": 22896,
-          "durationMs": 3816
+          "speech": "Below the if block, not inside it, hide and set Laser Active back to 0.",
+          "requestHash": "1b990d528adb71b99b1a8488d61da4db63437d0564a7a89c54a313b8c3f3db35",
+          "src": "audio/assets/d4/d4e05200baae1f428bc378af968494b28d758762541fc78e54d54301a15c45d2.mp3",
+          "sha256": "d4e05200baae1f428bc378af968494b28d758762541fc78e54d54301a15c45d2",
+          "bytes": 30240,
+          "durationMs": 5040
+        },
+        {
+          "sourcePath": "chapters/2/steps/1/instructions/4",
+          "speech": "These blocks run even when the game has ended, so the laser is always ready for the next shot.",
+          "requestHash": "75af43fdbbd114e933b51595ace7a9a1c8b6298c58483a161c32e9f4264c7ea8",
+          "src": "audio/assets/c8/c843c409e8f03258d740f39a136a9161eaebea90675f16dbf9a3ce356dc55ffa.mp3",
+          "sha256": "c843c409e8f03258d740f39a136a9161eaebea90675f16dbf9a3ce356dc55ffa",
+          "bytes": 32112,
+          "durationMs": 5352
         }
       ]
     },
@@ -5452,15 +5735,6 @@
           "sha256": "e8688f7bfcba8cca6a49102ab05e83ac0b4e57eec6e21f7f81c2dda6ea071024",
           "bytes": 25488,
           "durationMs": 4248
-        },
-        {
-          "sourcePath": "chapters/3/steps/0/instructions/4",
-          "speech": "Remove two small chunks from the upper edge of Damaged and three small chunks from the upper edge of Critical; leave a solid path through the center and across the lower edge so a straight laser or shot can still touch every damage level.",
-          "requestHash": "e45cd99dddb8b7a24ddeadccd6ed577e77d84e29a22c636997286a91cb5ca781",
-          "src": "audio/assets/1c/1c2c6ba8217d37f447b027ab4fa8ea10493a4e26c56795f8019add5c657baef4.mp3",
-          "sha256": "1c2c6ba8217d37f447b027ab4fa8ea10493a4e26c56795f8019add5c657baef4",
-          "bytes": 71424,
-          "durationMs": 11904
         }
       ]
     },
@@ -5472,21 +5746,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/0/instructions/5",
-          "speech": "Click each costume thumbnail and check the size printed beside its name.",
-          "requestHash": "34928ddc5ce8bc38126220d2aee62506474f4b8bf4d5ce866f31fa4d78b9f8e9",
-          "src": "audio/assets/52/52798812c65d394b4c3f1afb1d129799ff70a31749a8d143e8bd15919534962d.mp3",
-          "sha256": "52798812c65d394b4c3f1afb1d129799ff70a31749a8d143e8bd15919534962d",
-          "bytes": 27216,
-          "durationMs": 4536
-        },
-        {
-          "sourcePath": "chapters/3/steps/0/instructions/5",
-          "speech": "Full, Damaged, and Critical must each stay centered and no larger than 56 pixels wide by 18 pixels high.",
-          "requestHash": "e4ef43e52a39d325df3a2a4a355c7e59136cb45da1c238782b5432678ce31ce1",
-          "src": "audio/assets/7a/7a256ba0b590c8060dde61ee1284410a72eda7b63ec002c1474306166ffd7cf8.mp3",
-          "sha256": "7a256ba0b590c8060dde61ee1284410a72eda7b63ec002c1474306166ffd7cf8",
-          "bytes": 45216,
-          "durationMs": 7536
+          "speech": "On Damaged, erase two small chunks from the upper edge.",
+          "requestHash": "e010e2870e2c14e562206fa2becda59958b8388e9ff7611720931424c2059251",
+          "src": "audio/assets/ae/aef2f7752d2a4ccc22b16e039e4b07fb1cf53adace0ac1cc51f413a38fcf4ba4.mp3",
+          "sha256": "aef2f7752d2a4ccc22b16e039e4b07fb1cf53adace0ac1cc51f413a38fcf4ba4",
+          "bytes": 24768,
+          "durationMs": 4128
         }
       ]
     },
@@ -5498,12 +5763,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/0/instructions/6",
-          "speech": "Click the Code tab, open Variables, and confirm Health and Bunker Number were made For this sprite only on Bunker.",
-          "requestHash": "c4c3a7badcd1e1c0a47e92969745e16dc04490c2665e9ef6454c26de70649101",
-          "src": "audio/assets/5d/5d5ac32bd987d5cc9330ac755d031e882a5b8e86ea2d5794a20a39b6ef9c621c.mp3",
-          "sha256": "5d5ac32bd987d5cc9330ac755d031e882a5b8e86ea2d5794a20a39b6ef9c621c",
-          "bytes": 39600,
-          "durationMs": 6600
+          "speech": "On Critical, erase three small chunks from the upper edge.",
+          "requestHash": "04b65e5563bdf7efef87febe2db0e8a3b58b4d302392d5212d046acfbf67eba3",
+          "src": "audio/assets/57/571450d2bea73520a7b7f796f0e3d050cdf793b25f2dd42a135d84412f48a703.mp3",
+          "sha256": "571450d2bea73520a7b7f796f0e3d050cdf793b25f2dd42a135d84412f48a703",
+          "bytes": 23472,
+          "durationMs": 3912
         }
       ]
     },
@@ -5515,30 +5780,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/0/instructions/7",
-          "speech": "Select Enemy Shot and find the existing when I receive Reset Game script from Chapter 1.",
-          "requestHash": "17b0a6da7f8543c7f14d98eb9ae8080a5286b0e9cffccb282a369d9c3afb55a5",
-          "src": "audio/assets/11/11fefacf9f18642c350dc67faa94a01a19ea79714ef8ccda03f4326e41184cac.mp3",
-          "sha256": "11fefacf9f18642c350dc67faa94a01a19ea79714ef8ccda03f4326e41184cac",
-          "bytes": 32976,
-          "durationMs": 5496
-        },
-        {
-          "sourcePath": "chapters/3/steps/0/instructions/7",
-          "speech": "Snap set Enemy Shot Active to 0 directly under its hide block.",
-          "requestHash": "74e936d025981d8b0eb51ab8490b611e71adb409e75563faf57f95838ed55231",
-          "src": "audio/assets/bd/bd96146a0005aced47b6fb02610830b672b8354718b4612339100f8037d60d31.mp3",
-          "sha256": "bd96146a0005aced47b6fb02610830b672b8354718b4612339100f8037d60d31",
-          "bytes": 27504,
-          "durationMs": 4584
-        },
-        {
-          "sourcePath": "chapters/3/steps/0/instructions/7",
-          "speech": "Do not add a second when I receive Reset Game event block.",
-          "requestHash": "7cd1df93987f1d5b9b7b6431242b95a5dc6bc598198d44ca5c7d5cb61f6c9989",
-          "src": "audio/assets/22/22867faba8f5c06fb1001e9cc29e1ce16d8caebfd40f240785a337294694537d.mp3",
-          "sha256": "22867faba8f5c06fb1001e9cc29e1ce16d8caebfd40f240785a337294694537d",
-          "bytes": 23904,
-          "durationMs": 3984
+          "speech": "Leave the center and the lower edge solid, so a straight laser or shot can still touch every damage level.",
+          "requestHash": "6374b39ed814705452ee842d1ed5cba32d7eb0bacf51b5ceec837d84e32b64f3",
+          "src": "audio/assets/ff/ffd15a5c2420af1011e346acdbb470bf329afc375e4495f0d40743a385b60698.mp3",
+          "sha256": "ffd15a5c2420af1011e346acdbb470bf329afc375e4495f0d40743a385b60698",
+          "bytes": 36864,
+          "durationMs": 6144
         }
       ]
     },
@@ -5550,12 +5797,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/0/instructions/8",
-          "speech": "Click the green flag once, select Enemy Shot, and confirm the sprite is hidden and Enemy Shot Active is 0 before continuing.",
-          "requestHash": "70946a3e51d2b1568dd0f28984ea4e54886ee1313b645f15cc5136f97bfba0ed",
-          "src": "audio/assets/59/59c370b71a2937435702f6a044799e71fbdad6bcde311afaeb50d99309c770a4.mp3",
-          "sha256": "59c370b71a2937435702f6a044799e71fbdad6bcde311afaeb50d99309c770a4",
-          "bytes": 48672,
-          "durationMs": 8112
+          "speech": "Click each costume thumbnail and check the size printed beside its name.",
+          "requestHash": "34928ddc5ce8bc38126220d2aee62506474f4b8bf4d5ce866f31fa4d78b9f8e9",
+          "src": "audio/assets/52/52798812c65d394b4c3f1afb1d129799ff70a31749a8d143e8bd15919534962d.mp3",
+          "sha256": "52798812c65d394b4c3f1afb1d129799ff70a31749a8d143e8bd15919534962d",
+          "bytes": 27216,
+          "durationMs": 4536
+        },
+        {
+          "sourcePath": "chapters/3/steps/0/instructions/8",
+          "speech": "Full, Damaged, and Critical must each stay centered and no larger than 56 pixels wide by 18 pixels high.",
+          "requestHash": "e4ef43e52a39d325df3a2a4a355c7e59136cb45da1c238782b5432678ce31ce1",
+          "src": "audio/assets/7a/7a256ba0b590c8060dde61ee1284410a72eda7b63ec002c1474306166ffd7cf8.mp3",
+          "sha256": "7a256ba0b590c8060dde61ee1284410a72eda7b63ec002c1474306166ffd7cf8",
+          "bytes": 45216,
+          "durationMs": 7536
         }
       ]
     },
@@ -5567,6 +5823,75 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/0/instructions/9",
+          "speech": "Click the Code tab, open Variables, and confirm Health and Bunker Number were made For this sprite only on Bunker.",
+          "requestHash": "c4c3a7badcd1e1c0a47e92969745e16dc04490c2665e9ef6454c26de70649101",
+          "src": "audio/assets/5d/5d5ac32bd987d5cc9330ac755d031e882a5b8e86ea2d5794a20a39b6ef9c621c.mp3",
+          "sha256": "5d5ac32bd987d5cc9330ac755d031e882a5b8e86ea2d5794a20a39b6ef9c621c",
+          "bytes": 39600,
+          "durationMs": 6600
+        }
+      ]
+    },
+    {
+      "id": "return-fire-and-bunkers/prepare-shots-and-bunkers/instruction/010",
+      "sourcePaths": [
+        "chapters/3/steps/0/instructions/10"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/0/instructions/10",
+          "speech": "Select Enemy Shot and find the existing when I receive Reset Game script from Chapter 1.",
+          "requestHash": "17b0a6da7f8543c7f14d98eb9ae8080a5286b0e9cffccb282a369d9c3afb55a5",
+          "src": "audio/assets/11/11fefacf9f18642c350dc67faa94a01a19ea79714ef8ccda03f4326e41184cac.mp3",
+          "sha256": "11fefacf9f18642c350dc67faa94a01a19ea79714ef8ccda03f4326e41184cac",
+          "bytes": 32976,
+          "durationMs": 5496
+        },
+        {
+          "sourcePath": "chapters/3/steps/0/instructions/10",
+          "speech": "Snap set Enemy Shot Active to 0 directly under its hide block.",
+          "requestHash": "74e936d025981d8b0eb51ab8490b611e71adb409e75563faf57f95838ed55231",
+          "src": "audio/assets/bd/bd96146a0005aced47b6fb02610830b672b8354718b4612339100f8037d60d31.mp3",
+          "sha256": "bd96146a0005aced47b6fb02610830b672b8354718b4612339100f8037d60d31",
+          "bytes": 27504,
+          "durationMs": 4584
+        },
+        {
+          "sourcePath": "chapters/3/steps/0/instructions/10",
+          "speech": "Do not add a second when I receive Reset Game event block.",
+          "requestHash": "7cd1df93987f1d5b9b7b6431242b95a5dc6bc598198d44ca5c7d5cb61f6c9989",
+          "src": "audio/assets/22/22867faba8f5c06fb1001e9cc29e1ce16d8caebfd40f240785a337294694537d.mp3",
+          "sha256": "22867faba8f5c06fb1001e9cc29e1ce16d8caebfd40f240785a337294694537d",
+          "bytes": 23904,
+          "durationMs": 3984
+        }
+      ]
+    },
+    {
+      "id": "return-fire-and-bunkers/prepare-shots-and-bunkers/instruction/011",
+      "sourcePaths": [
+        "chapters/3/steps/0/instructions/11"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/0/instructions/11",
+          "speech": "Click the green flag once, select Enemy Shot, and confirm the sprite is hidden and Enemy Shot Active is 0 before continuing.",
+          "requestHash": "70946a3e51d2b1568dd0f28984ea4e54886ee1313b645f15cc5136f97bfba0ed",
+          "src": "audio/assets/59/59c370b71a2937435702f6a044799e71fbdad6bcde311afaeb50d99309c770a4.mp3",
+          "sha256": "59c370b71a2937435702f6a044799e71fbdad6bcde311afaeb50d99309c770a4",
+          "bytes": 48672,
+          "durationMs": 8112
+        }
+      ]
+    },
+    {
+      "id": "return-fire-and-bunkers/prepare-shots-and-bunkers/instruction/012",
+      "sourcePaths": [
+        "chapters/3/steps/0/instructions/12"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/0/instructions/12",
           "speech": "Make sure no create clone block exists on Enemy Shot or Player Laser.",
           "requestHash": "68b568c9dc42ccd55a466f59f8e9771f6d4fdb007a0083317dc97ddb92248404",
           "src": "audio/assets/28/28fc06e5a28b94f77fa7e8d16dea1eb17c1e01eda78af4a4e87e76bf972f3300.mp3",
@@ -6884,12 +7209,12 @@
         },
         {
           "sourcePath": "chapters/3/steps/2/instructions/0",
-          "speech": "Drag a Control if then block onto the thin connection between change y by negative 7 and wait 0.03 seconds; when it snaps correctly, the wait block moves below the new if.",
-          "requestHash": "d916a82bb9262757920281e4271ec05728254f7e0afc9d9af880d5353dd977a7",
-          "src": "audio/assets/61/6195c1bea5c9d1f7da76ec5cb0d98941ab76ce25724815c310c9f4f7519e0f6f.mp3",
-          "sha256": "6195c1bea5c9d1f7da76ec5cb0d98941ab76ce25724815c310c9f4f7519e0f6f",
-          "bytes": 63216,
-          "durationMs": 10536
+          "speech": "Drag a Control if then block onto the thin connection between change y by negative 7 and wait 0.03 seconds.",
+          "requestHash": "cec7ce89c114d19a621cd2dc3ad16de2dcadc69bda765e2f4170f5b8a9f9ea7b",
+          "src": "audio/assets/c1/c1c2c70e47551bb307ec94ccd9daf5020933e36ec3ed2b2f6e6a1218bb6e0af8.mp3",
+          "sha256": "c1c2c70e47551bb307ec94ccd9daf5020933e36ec3ed2b2f6e6a1218bb6e0af8",
+          "bytes": 44784,
+          "durationMs": 7464
         }
       ]
     },
@@ -6901,30 +7226,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/2/instructions/1",
-          "speech": "Put an and operator in the new if's condition space.",
-          "requestHash": "0111b90a1ffcf4e14e730fda465e2050a894906c817c1708589be08f253ddb71",
-          "src": "audio/assets/89/891854bc39d0a9dff7d12ed6f6f1c777480ea23c7a2ff2a361392fdb97c2618e.mp3",
-          "sha256": "891854bc39d0a9dff7d12ed6f6f1c777480ea23c7a2ff2a361392fdb97c2618e",
-          "bytes": 20736,
-          "durationMs": 3456
-        },
-        {
-          "sourcePath": "chapters/3/steps/2/instructions/1",
-          "speech": "On its left, build Enemy Shot Active equals 1.",
-          "requestHash": "3773690cc4f27fdf8eb6749483e444b7e07d5113e67723741e79c09ac2d859d0",
-          "src": "audio/assets/e7/e765b488d7ec4205b1303e1b60a137d95b038894758ee521b11c030fc958371f.mp3",
-          "sha256": "e765b488d7ec4205b1303e1b60a137d95b038894758ee521b11c030fc958371f",
-          "bytes": 21024,
-          "durationMs": 3504
-        },
-        {
-          "sourcePath": "chapters/3/steps/2/instructions/1",
-          "speech": "On its right, add the Sensing block touching Player and choose Player from the menu.",
-          "requestHash": "af54d8f9caed323d246149659effd7dacdcef184531017ebb89920f1593186d7",
-          "src": "audio/assets/78/78017a7b363c9c3380ad87e831c80995e950109a31a3685fb1c99ab6b531fc5d.mp3",
-          "sha256": "78017a7b363c9c3380ad87e831c80995e950109a31a3685fb1c99ab6b531fc5d",
-          "bytes": 30240,
-          "durationMs": 5040
+          "speech": "When it snaps correctly, the wait block moves below the new if.",
+          "requestHash": "fdeee3693b8757159800045f5203eb0aba3c50d8d0bcaa4e19fe2bd7f5db7810",
+          "src": "audio/assets/35/35f5387b0671abba64f8ac64723d6e6f2817dcd61b8a1698801fc13f860c6a7f.mp3",
+          "sha256": "35f5387b0671abba64f8ac64723d6e6f2817dcd61b8a1698801fc13f860c6a7f",
+          "bytes": 24768,
+          "durationMs": 4128
         }
       ]
     },
@@ -6936,21 +7243,30 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/2/instructions/2",
-          "speech": "Inside the collision if, the first block must be set Enemy Shot Active to 0.",
-          "requestHash": "6400159f4df54634339c74cbcf78c4b584a10278eaab5fbba428f36b809e8f9c",
-          "src": "audio/assets/e1/e1cdf7f5b55d0c50c2417365f372414d3dec7864b48cfbc017c5b64f4aa6142e.mp3",
-          "sha256": "e1cdf7f5b55d0c50c2417365f372414d3dec7864b48cfbc017c5b64f4aa6142e",
-          "bytes": 29952,
-          "durationMs": 4992
+          "speech": "Put an and operator in the new if's condition space.",
+          "requestHash": "0111b90a1ffcf4e14e730fda465e2050a894906c817c1708589be08f253ddb71",
+          "src": "audio/assets/89/891854bc39d0a9dff7d12ed6f6f1c777480ea23c7a2ff2a361392fdb97c2618e.mp3",
+          "sha256": "891854bc39d0a9dff7d12ed6f6f1c777480ea23c7a2ff2a361392fdb97c2618e",
+          "bytes": 20736,
+          "durationMs": 3456
         },
         {
           "sourcePath": "chapters/3/steps/2/instructions/2",
-          "speech": "Set it first so another loop pass sees that the hit was already handled.",
-          "requestHash": "18510776d5f1aac6ea45af925f57369c963e776a361b4b4f2c645a9441c62429",
-          "src": "audio/assets/60/607e938382f9c187a1f837d70ffaaf2d3fe3b60668197e08f15d301182e46ea2.mp3",
-          "sha256": "607e938382f9c187a1f837d70ffaaf2d3fe3b60668197e08f15d301182e46ea2",
-          "bytes": 26064,
-          "durationMs": 4344
+          "speech": "On its left, build Enemy Shot Active equals 1.",
+          "requestHash": "3773690cc4f27fdf8eb6749483e444b7e07d5113e67723741e79c09ac2d859d0",
+          "src": "audio/assets/e7/e765b488d7ec4205b1303e1b60a137d95b038894758ee521b11c030fc958371f.mp3",
+          "sha256": "e765b488d7ec4205b1303e1b60a137d95b038894758ee521b11c030fc958371f",
+          "bytes": 21024,
+          "durationMs": 3504
+        },
+        {
+          "sourcePath": "chapters/3/steps/2/instructions/2",
+          "speech": "On its right, add the Sensing block touching Player and choose Player from the menu.",
+          "requestHash": "af54d8f9caed323d246149659effd7dacdcef184531017ebb89920f1593186d7",
+          "src": "audio/assets/78/78017a7b363c9c3380ad87e831c80995e950109a31a3685fb1c99ab6b531fc5d.mp3",
+          "sha256": "78017a7b363c9c3380ad87e831c80995e950109a31a3685fb1c99ab6b531fc5d",
+          "bytes": 30240,
+          "durationMs": 5040
         }
       ]
     },
@@ -6962,21 +7278,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/2/instructions/3",
-          "speech": "Under that set block, add a nested if then.",
-          "requestHash": "b9aa2644b4dd4d474c796bfb46fd3a0a08227c40489f920d1dbe156a82b5ab45",
-          "src": "audio/assets/f3/f3c2a3305095f4187eda20f7de39990cb8e5a882c70e444d17b67b7adb346183.mp3",
-          "sha256": "f3c2a3305095f4187eda20f7de39990cb8e5a882c70e444d17b67b7adb346183",
-          "bytes": 17856,
-          "durationMs": 2976
+          "speech": "Inside the collision if, the first block must be set Enemy Shot Active to 0.",
+          "requestHash": "6400159f4df54634339c74cbcf78c4b584a10278eaab5fbba428f36b809e8f9c",
+          "src": "audio/assets/e1/e1cdf7f5b55d0c50c2417365f372414d3dec7864b48cfbc017c5b64f4aa6142e.mp3",
+          "sha256": "e1cdf7f5b55d0c50c2417365f372414d3dec7864b48cfbc017c5b64f4aa6142e",
+          "bytes": 29952,
+          "durationMs": 4992
         },
         {
           "sourcePath": "chapters/3/steps/2/instructions/3",
-          "speech": "Build Game State equals playing in its condition space.",
-          "requestHash": "6a4a980104d4c837c4b869f2e3500e4dc9a63c597a5cf51c140d87ccd47dd0e8",
-          "src": "audio/assets/ee/eefd9b831ddc9588e2d505fb25d3f8ba22f5afdfe3e366460d11079fda10f3b7.mp3",
-          "sha256": "eefd9b831ddc9588e2d505fb25d3f8ba22f5afdfe3e366460d11079fda10f3b7",
-          "bytes": 21600,
-          "durationMs": 3600
+          "speech": "Set it first so another loop pass sees that the hit was already handled.",
+          "requestHash": "18510776d5f1aac6ea45af925f57369c963e776a361b4b4f2c645a9441c62429",
+          "src": "audio/assets/60/607e938382f9c187a1f837d70ffaaf2d3fe3b60668197e08f15d301182e46ea2.mp3",
+          "sha256": "607e938382f9c187a1f837d70ffaaf2d3fe3b60668197e08f15d301182e46ea2",
+          "bytes": 26064,
+          "durationMs": 4344
         }
       ]
     },
@@ -6988,21 +7304,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/2/instructions/4",
-          "speech": "Inside the nested state if, add set Game State to lost, then snap broadcast Lose directly underneath it.",
-          "requestHash": "ad34a93105cf49ca9764e39abd25d94a8de6676943da8acada16f97ac9f67b20",
-          "src": "audio/assets/b9/b9804ad61ac710850654afeba8eb04ef776cfd4891571338db3841737ce1ed57.mp3",
-          "sha256": "b9804ad61ac710850654afeba8eb04ef776cfd4891571338db3841737ce1ed57",
-          "bytes": 40896,
-          "durationMs": 6816
+          "speech": "Under that set block, add a nested if then.",
+          "requestHash": "b9aa2644b4dd4d474c796bfb46fd3a0a08227c40489f920d1dbe156a82b5ab45",
+          "src": "audio/assets/f3/f3c2a3305095f4187eda20f7de39990cb8e5a882c70e444d17b67b7adb346183.mp3",
+          "sha256": "f3c2a3305095f4187eda20f7de39990cb8e5a882c70e444d17b67b7adb346183",
+          "bytes": 17856,
+          "durationMs": 2976
         },
         {
           "sourcePath": "chapters/3/steps/2/instructions/4",
-          "speech": "Set the state before broadcasting so another ending sees that the game already ended.",
-          "requestHash": "c83e0e14a05ba6a3877f2853006b86af92d54de09c24d94f7fb030a919018b3b",
-          "src": "audio/assets/12/1209a5cd4d6ee49034a6e45664dc95ed2a7ac69c35ed50891f053601715d8f1c.mp3",
-          "sha256": "1209a5cd4d6ee49034a6e45664dc95ed2a7ac69c35ed50891f053601715d8f1c",
-          "bytes": 32112,
-          "durationMs": 5352
+          "speech": "Build Game State equals playing in its condition space.",
+          "requestHash": "6a4a980104d4c837c4b869f2e3500e4dc9a63c597a5cf51c140d87ccd47dd0e8",
+          "src": "audio/assets/ee/eefd9b831ddc9588e2d505fb25d3f8ba22f5afdfe3e366460d11079fda10f3b7.mp3",
+          "sha256": "eefd9b831ddc9588e2d505fb25d3f8ba22f5afdfe3e366460d11079fda10f3b7",
+          "bytes": 21600,
+          "durationMs": 3600
         }
       ]
     },
@@ -7014,12 +7330,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/2/instructions/5",
-          "speech": "Read the flight-loop body from top to bottom and check this order: change y by negative 7, Player collision if, then wait 0.03 seconds.",
-          "requestHash": "fb968f504b9e30a4c297ec08e5385a775af4d05b060a354be736fd9e572fa9c1",
-          "src": "audio/assets/64/6409912e5a0cf2b69a49f9a2b14438d4083bad6299e119b13554dd5f56804fe0.mp3",
-          "sha256": "6409912e5a0cf2b69a49f9a2b14438d4083bad6299e119b13554dd5f56804fe0",
-          "bytes": 57456,
-          "durationMs": 9576
+          "speech": "Inside the nested state if, add set Game State to lost, then snap broadcast Lose directly underneath it.",
+          "requestHash": "ad34a93105cf49ca9764e39abd25d94a8de6676943da8acada16f97ac9f67b20",
+          "src": "audio/assets/b9/b9804ad61ac710850654afeba8eb04ef776cfd4891571338db3841737ce1ed57.mp3",
+          "sha256": "b9804ad61ac710850654afeba8eb04ef776cfd4891571338db3841737ce1ed57",
+          "bytes": 40896,
+          "durationMs": 6816
+        },
+        {
+          "sourcePath": "chapters/3/steps/2/instructions/5",
+          "speech": "Set the state before broadcasting so another ending sees that the game already ended.",
+          "requestHash": "c83e0e14a05ba6a3877f2853006b86af92d54de09c24d94f7fb030a919018b3b",
+          "src": "audio/assets/12/1209a5cd4d6ee49034a6e45664dc95ed2a7ac69c35ed50891f053601715d8f1c.mp3",
+          "sha256": "1209a5cd4d6ee49034a6e45664dc95ed2a7ac69c35ed50891f053601715d8f1c",
+          "bytes": 32112,
+          "durationMs": 5352
         }
       ]
     },
@@ -7031,21 +7356,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/2/instructions/6",
-          "speech": "For a miss test, show the Game State and Enemy Shot Active variable displays.",
-          "requestHash": "beafddc9e720c0da51ad4da027a11853dee9315ffb8740b7d203f61d6a4a60de",
-          "src": "audio/assets/f6/f62e720bfc146e43cea8473213482874005160ef40440085ed1a298cb478c399.mp3",
-          "sha256": "f62e720bfc146e43cea8473213482874005160ef40440085ed1a298cb478c399",
-          "bytes": 28368,
-          "durationMs": 4728
-        },
-        {
-          "sourcePath": "chapters/3/steps/2/instructions/6",
-          "speech": "Move Player away from the falling shot and let one shot leave the Stage.",
-          "requestHash": "76bb89e6afaa226b38609066c1c09183583cb00155be991dbf9f32c5f4707212",
-          "src": "audio/assets/b5/b56d7127ae4525c5daf20475357c816754f5bef4aee97fd3de1f02acd4f92477.mp3",
-          "sha256": "b56d7127ae4525c5daf20475357c816754f5bef4aee97fd3de1f02acd4f92477",
-          "bytes": 26496,
-          "durationMs": 4416
+          "speech": "Read the flight-loop body from top to bottom and check this order: change y by negative 7, Player collision if, then wait 0.03 seconds.",
+          "requestHash": "fb968f504b9e30a4c297ec08e5385a775af4d05b060a354be736fd9e572fa9c1",
+          "src": "audio/assets/64/6409912e5a0cf2b69a49f9a2b14438d4083bad6299e119b13554dd5f56804fe0.mp3",
+          "sha256": "6409912e5a0cf2b69a49f9a2b14438d4083bad6299e119b13554dd5f56804fe0",
+          "bytes": 57456,
+          "durationMs": 9576
         }
       ]
     },
@@ -7057,12 +7373,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/2/instructions/7",
-          "speech": "A miss must leave Game State as playing and return Enemy Shot Active to 0.",
-          "requestHash": "a92166fc4b298a25541c3caf036b4fdd356d63bf65ebe1ed86f4ffb3dc2bc4be",
-          "src": "audio/assets/3e/3e757259fab5e063569741c7fe0645f84a631ea59b434b6260cc507cac71c244.mp3",
-          "sha256": "3e757259fab5e063569741c7fe0645f84a631ea59b434b6260cc507cac71c244",
-          "bytes": 28944,
-          "durationMs": 4824
+          "speech": "For a miss test, show the Game State and Enemy Shot Active variable displays.",
+          "requestHash": "beafddc9e720c0da51ad4da027a11853dee9315ffb8740b7d203f61d6a4a60de",
+          "src": "audio/assets/f6/f62e720bfc146e43cea8473213482874005160ef40440085ed1a298cb478c399.mp3",
+          "sha256": "f62e720bfc146e43cea8473213482874005160ef40440085ed1a298cb478c399",
+          "bytes": 28368,
+          "durationMs": 4728
+        },
+        {
+          "sourcePath": "chapters/3/steps/2/instructions/7",
+          "speech": "Move Player away from the falling shot and let one shot leave the Stage.",
+          "requestHash": "76bb89e6afaa226b38609066c1c09183583cb00155be991dbf9f32c5f4707212",
+          "src": "audio/assets/b5/b56d7127ae4525c5daf20475357c816754f5bef4aee97fd3de1f02acd4f92477.mp3",
+          "sha256": "b56d7127ae4525c5daf20475357c816754f5bef4aee97fd3de1f02acd4f92477",
+          "bytes": 26496,
+          "durationMs": 4416
         }
       ]
     },
@@ -7074,21 +7399,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/2/instructions/8",
-          "speech": "For a hit test, click the green flag and move Player under an incoming shot.",
-          "requestHash": "efc130d21c46cd7f837b7d5c415c3124cf4d090ae8c8834ad07748c7e4a4b9eb",
-          "src": "audio/assets/7e/7eeb5d30a8c2ba3d6bf3c5ea78efddf7bfdeac2ed7e9f204bc6ad4515d8e937b.mp3",
-          "sha256": "7eeb5d30a8c2ba3d6bf3c5ea78efddf7bfdeac2ed7e9f204bc6ad4515d8e937b",
-          "bytes": 30240,
-          "durationMs": 5040
-        },
-        {
-          "sourcePath": "chapters/3/steps/2/instructions/8",
-          "speech": "Watch the variable displays.",
-          "requestHash": "fd72a57312a13dabbb9b643764098975b8c9eb8c8e1ccd8e9cc50338995c2c4c",
-          "src": "audio/assets/14/14e79b6cecb0b7670290a2e35159d4f56d39fc44e1943dbb81ba257a101afe35.mp3",
-          "sha256": "14e79b6cecb0b7670290a2e35159d4f56d39fc44e1943dbb81ba257a101afe35",
-          "bytes": 13248,
-          "durationMs": 2208
+          "speech": "A miss must leave Game State as playing and return Enemy Shot Active to 0.",
+          "requestHash": "a92166fc4b298a25541c3caf036b4fdd356d63bf65ebe1ed86f4ffb3dc2bc4be",
+          "src": "audio/assets/3e/3e757259fab5e063569741c7fe0645f84a631ea59b434b6260cc507cac71c244.mp3",
+          "sha256": "3e757259fab5e063569741c7fe0645f84a631ea59b434b6260cc507cac71c244",
+          "bytes": 28944,
+          "durationMs": 4824
         }
       ]
     },
@@ -7100,21 +7416,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/2/instructions/9",
-          "speech": "A hit must change Game State to lost and Enemy Shot Active to 0.",
-          "requestHash": "5e35f23eca56799cce6ba800a788a90a74a5ffebc2b26d29fb3abe422cab6d5d",
-          "src": "audio/assets/2e/2e3a634700831cd2d2d470eeca01783299eeecd09b7a5d69e33599fe2ff191bb.mp3",
-          "sha256": "2e3a634700831cd2d2d470eeca01783299eeecd09b7a5d69e33599fe2ff191bb",
-          "bytes": 26640,
-          "durationMs": 4440
+          "speech": "For a hit test, click the green flag and move Player under an incoming shot.",
+          "requestHash": "efc130d21c46cd7f837b7d5c415c3124cf4d090ae8c8834ad07748c7e4a4b9eb",
+          "src": "audio/assets/7e/7eeb5d30a8c2ba3d6bf3c5ea78efddf7bfdeac2ed7e9f204bc6ad4515d8e937b.mp3",
+          "sha256": "7eeb5d30a8c2ba3d6bf3c5ea78efddf7bfdeac2ed7e9f204bc6ad4515d8e937b",
+          "bytes": 30240,
+          "durationMs": 5040
         },
         {
           "sourcePath": "chapters/3/steps/2/instructions/9",
-          "speech": "Click the green flag again and confirm the reset returns Game State to playing.",
-          "requestHash": "ad0fa58ef2ea4453cbbba0f441ab2447d35a290ef791e158309da7a4bce6b6e5",
-          "src": "audio/assets/98/989f910736ac1962f745df376d07b5298e6b510f15b7955f8058f81bbbaa3276.mp3",
-          "sha256": "989f910736ac1962f745df376d07b5298e6b510f15b7955f8058f81bbbaa3276",
-          "bytes": 28944,
-          "durationMs": 4824
+          "speech": "Watch the variable displays.",
+          "requestHash": "fd72a57312a13dabbb9b643764098975b8c9eb8c8e1ccd8e9cc50338995c2c4c",
+          "src": "audio/assets/14/14e79b6cecb0b7670290a2e35159d4f56d39fc44e1943dbb81ba257a101afe35.mp3",
+          "sha256": "14e79b6cecb0b7670290a2e35159d4f56d39fc44e1943dbb81ba257a101afe35",
+          "bytes": 13248,
+          "durationMs": 2208
         }
       ]
     },
@@ -7126,30 +7442,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/2/instructions/10",
-          "speech": "The Lose broadcast will not show the final Game Over backdrop yet.",
-          "requestHash": "d8a949d741651d8bb3885e6bb570dae6dfdccc838346e93a7cc30bb4cc500576",
-          "src": "audio/assets/e4/e469b69ac6feef0e5fd2c294331ca46c46b781bf51127801b0e94d04e8fa9d2c.mp3",
-          "sha256": "e469b69ac6feef0e5fd2c294331ca46c46b781bf51127801b0e94d04e8fa9d2c",
-          "bytes": 25776,
-          "durationMs": 4296
+          "speech": "A hit must change Game State to lost and Enemy Shot Active to 0.",
+          "requestHash": "5e35f23eca56799cce6ba800a788a90a74a5ffebc2b26d29fb3abe422cab6d5d",
+          "src": "audio/assets/2e/2e3a634700831cd2d2d470eeca01783299eeecd09b7a5d69e33599fe2ff191bb.mp3",
+          "sha256": "2e3a634700831cd2d2d470eeca01783299eeecd09b7a5d69e33599fe2ff191bb",
+          "bytes": 26640,
+          "durationMs": 4440
         },
         {
           "sourcePath": "chapters/3/steps/2/instructions/10",
-          "speech": "Chapter 5 adds the matching when I receive Lose script.",
-          "requestHash": "7de4116b05bcd2ef167ba4a9627b9c3475e6f309cdc04d660fa24bfc57ba84d1",
-          "src": "audio/assets/27/27e73c474e2f971b493dcbdaa7921de6d5b7cf89a818d2e4ec530bb87a81f40a.mp3",
-          "sha256": "27e73c474e2f971b493dcbdaa7921de6d5b7cf89a818d2e4ec530bb87a81f40a",
-          "bytes": 22464,
-          "durationMs": 3744
-        },
-        {
-          "sourcePath": "chapters/3/steps/2/instructions/10",
-          "speech": "In this chapter, the visible lost value and hidden shot prove that collision works.",
-          "requestHash": "4e902f8a51d7b0fc7b588939d9173a33f2d879180ec8f0002739c7bd3c422b9f",
-          "src": "audio/assets/cc/cc90dcf10e87e4fb56173f9b44a64ef23c6d5c9c7450c5947ff7a38a5e3f68cf.mp3",
-          "sha256": "cc90dcf10e87e4fb56173f9b44a64ef23c6d5c9c7450c5947ff7a38a5e3f68cf",
-          "bytes": 30384,
-          "durationMs": 5064
+          "speech": "Click the green flag again and confirm the reset returns Game State to playing.",
+          "requestHash": "ad0fa58ef2ea4453cbbba0f441ab2447d35a290ef791e158309da7a4bce6b6e5",
+          "src": "audio/assets/98/989f910736ac1962f745df376d07b5298e6b510f15b7955f8058f81bbbaa3276.mp3",
+          "sha256": "989f910736ac1962f745df376d07b5298e6b510f15b7955f8058f81bbbaa3276",
+          "bytes": 28944,
+          "durationMs": 4824
         }
       ]
     },
@@ -7161,6 +7468,41 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/2/instructions/11",
+          "speech": "The Lose broadcast will not show the final Game Over backdrop yet.",
+          "requestHash": "d8a949d741651d8bb3885e6bb570dae6dfdccc838346e93a7cc30bb4cc500576",
+          "src": "audio/assets/e4/e469b69ac6feef0e5fd2c294331ca46c46b781bf51127801b0e94d04e8fa9d2c.mp3",
+          "sha256": "e469b69ac6feef0e5fd2c294331ca46c46b781bf51127801b0e94d04e8fa9d2c",
+          "bytes": 25776,
+          "durationMs": 4296
+        },
+        {
+          "sourcePath": "chapters/3/steps/2/instructions/11",
+          "speech": "Chapter 5 adds the matching when I receive Lose script.",
+          "requestHash": "7de4116b05bcd2ef167ba4a9627b9c3475e6f309cdc04d660fa24bfc57ba84d1",
+          "src": "audio/assets/27/27e73c474e2f971b493dcbdaa7921de6d5b7cf89a818d2e4ec530bb87a81f40a.mp3",
+          "sha256": "27e73c474e2f971b493dcbdaa7921de6d5b7cf89a818d2e4ec530bb87a81f40a",
+          "bytes": 22464,
+          "durationMs": 3744
+        },
+        {
+          "sourcePath": "chapters/3/steps/2/instructions/11",
+          "speech": "In this chapter, the visible lost value and hidden shot prove that collision works.",
+          "requestHash": "4e902f8a51d7b0fc7b588939d9173a33f2d879180ec8f0002739c7bd3c422b9f",
+          "src": "audio/assets/cc/cc90dcf10e87e4fb56173f9b44a64ef23c6d5c9c7450c5947ff7a38a5e3f68cf.mp3",
+          "sha256": "cc90dcf10e87e4fb56173f9b44a64ef23c6d5c9c7450c5947ff7a38a5e3f68cf",
+          "bytes": 30384,
+          "durationMs": 5064
+        }
+      ]
+    },
+    {
+      "id": "return-fire-and-bunkers/enemy-shot-hits-player/instruction/012",
+      "sourcePaths": [
+        "chapters/3/steps/2/instructions/12"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/2/instructions/12",
           "speech": "Turn off the temporary variable monitors after both tests.",
           "requestHash": "d1a5e953601c3e6d24b908a855b8966b5e567be2afcafbe7d9109c22cb08ffc5",
           "src": "audio/assets/52/52545c79dd2357715223afc99740ba3da95df49073093d0eab2a013fdcba27b1.mp3",
@@ -7892,12 +8234,12 @@
         },
         {
           "sourcePath": "chapters/3/steps/3/instructions/17",
-          "speech": "If a clone appears in the wrong place, recheck the plus and multiply holes before testing damage.",
-          "requestHash": "c858d98e67fc12d728fc0240f79c7de8e13749f0aab48f5d788df6163da07dad",
-          "src": "audio/assets/97/974724cbee0e7c99888bee9c75a8001074a531b193df9fe44a55fc5a9fecf571.mp3",
-          "sha256": "974724cbee0e7c99888bee9c75a8001074a531b193df9fe44a55fc5a9fecf571",
-          "bytes": 38448,
-          "durationMs": 6408
+          "speech": "If a clone appears in the wrong place, recheck the number spaces in the plus and times blocks before testing damage.",
+          "requestHash": "64bc9f381259e303ee6fbc05d718ad42c755f09ff7789f56157b05ec42bdc27b",
+          "src": "audio/assets/f0/f0a9cd312e1e5690b5b079b7bf0141851269560221dcf7d727ef3d3e1813fef2.mp3",
+          "sha256": "f0a9cd312e1e5690b5b079b7bf0141851269560221dcf7d727ef3d3e1813fef2",
+          "bytes": 43920,
+          "durationMs": 7320
         }
       ]
     },
@@ -7909,21 +8251,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/3/instructions/18",
-          "speech": "Test the costumes and separate Health values.",
-          "requestHash": "bd50d09d330b85846b56b221d93663da6d1422dc22ccef151795a227e34c7e02",
-          "src": "audio/assets/62/62535d3dda3883eecbe1650c8b2bcacf4aa7fb716d769a256a5f2fd0a221f4c7.mp3",
-          "sha256": "62535d3dda3883eecbe1650c8b2bcacf4aa7fb716d769a256a5f2fd0a221f4c7",
-          "bytes": 19008,
-          "durationMs": 3168
+          "speech": "Before the damage test, temporarily change Enemy Shot's pick random 1.5 to 3 to pick random 99 to 99.",
+          "requestHash": "c278277000ff19938d2cca491152e4538300e33eedd033e7563c2e00acbc2782",
+          "src": "audio/assets/94/9496ebb16761bfcb011956fb049dcc732598dd7b7448e14f66c0cd6f46d8e035.mp3",
+          "sha256": "9496ebb16761bfcb011956fb049dcc732598dd7b7448e14f66c0cd6f46d8e035",
+          "bytes": 48672,
+          "durationMs": 8112
         },
         {
           "sourcePath": "chapters/3/steps/3/instructions/18",
-          "speech": "Hit the left bunker twice with Player Laser, then hit the right bunker once.",
-          "requestHash": "674575298b748d16897b867ee756146490ddbfe6d446a98a95ff6dfb7efa0c05",
-          "src": "audio/assets/ce/ce69bde153e5f200e02ef2bd0fd4c8e3900c505434e45e5dc07ac75596afe3dd.mp3",
-          "sha256": "ce69bde153e5f200e02ef2bd0fd4c8e3900c505434e45e5dc07ac75596afe3dd",
-          "bytes": 30816,
-          "durationMs": 5136
+          "speech": "This stops enemy fire from changing the bunkers while you test.",
+          "requestHash": "6bc573b35e2923c1da89e15bd4ab9e700d18c046c82033c842531ba7df7f8260",
+          "src": "audio/assets/67/6704d3f0918282677cba0b8cf2383e59b4eb0fc40823683a601d72643b24c2b4.mp3",
+          "sha256": "6704d3f0918282677cba0b8cf2383e59b4eb0fc40823683a601d72643b24c2b4",
+          "bytes": 24768,
+          "durationMs": 4128
         }
       ]
     },
@@ -7935,12 +8277,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/3/instructions/19",
-          "speech": "The left bunker must be Critical, the middle must still be Full, and the right must be Damaged.",
-          "requestHash": "6c62e9942a07e25a4ab020c6123834e2795690cf14aafaf2e207f6dceb81959e",
-          "src": "audio/assets/f4/f4f8da5feca72ff8d1ff9a0b015822c0c4c1bb888e4daa258ab53dc8abd305d5.mp3",
-          "sha256": "f4f8da5feca72ff8d1ff9a0b015822c0c4c1bb888e4daa258ab53dc8abd305d5",
-          "bytes": 33984,
-          "durationMs": 5664
+          "speech": "Test the costumes and separate Health values.",
+          "requestHash": "bd50d09d330b85846b56b221d93663da6d1422dc22ccef151795a227e34c7e02",
+          "src": "audio/assets/62/62535d3dda3883eecbe1650c8b2bcacf4aa7fb716d769a256a5f2fd0a221f4c7.mp3",
+          "sha256": "62535d3dda3883eecbe1650c8b2bcacf4aa7fb716d769a256a5f2fd0a221f4c7",
+          "bytes": 19008,
+          "durationMs": 3168
+        },
+        {
+          "sourcePath": "chapters/3/steps/3/instructions/19",
+          "speech": "Hit the left bunker twice with Player Laser, then hit the right bunker once.",
+          "requestHash": "674575298b748d16897b867ee756146490ddbfe6d446a98a95ff6dfb7efa0c05",
+          "src": "audio/assets/ce/ce69bde153e5f200e02ef2bd0fd4c8e3900c505434e45e5dc07ac75596afe3dd.mp3",
+          "sha256": "ce69bde153e5f200e02ef2bd0fd4c8e3900c505434e45e5dc07ac75596afe3dd",
+          "bytes": 30816,
+          "durationMs": 5136
         }
       ]
     },
@@ -7952,21 +8303,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/3/instructions/20",
-          "speech": "Hit the left bunker a third time to delete it.",
-          "requestHash": "f6a32736ccd69296a41aabb9a41aa21f744c9d17d67a01a1b2b870da35217bcf",
-          "src": "audio/assets/77/77b295220efb64a5b1e7001ab1ee5167542626e5644918e7fc3e1f27922a6062.mp3",
-          "sha256": "77b295220efb64a5b1e7001ab1ee5167542626e5644918e7fc3e1f27922a6062",
-          "bytes": 19008,
-          "durationMs": 3168
-        },
-        {
-          "sourcePath": "chapters/3/steps/3/instructions/20",
-          "speech": "Fire a fourth laser through the empty left position.",
-          "requestHash": "62ec84e006ad8866e9847534779ca9fd60f6d761b1b03d7bf9d154d4882c22de",
-          "src": "audio/assets/2c/2cda4a2caa6a3fa9a2a69ff8e641d79b01b639d2d06c07b28cb0d58f03aba16a.mp3",
-          "sha256": "2cda4a2caa6a3fa9a2a69ff8e641d79b01b639d2d06c07b28cb0d58f03aba16a",
-          "bytes": 20736,
-          "durationMs": 3456
+          "speech": "The left bunker must be Critical, the middle must still be Full, and the right must be Damaged.",
+          "requestHash": "6c62e9942a07e25a4ab020c6123834e2795690cf14aafaf2e207f6dceb81959e",
+          "src": "audio/assets/f4/f4f8da5feca72ff8d1ff9a0b015822c0c4c1bb888e4daa258ab53dc8abd305d5.mp3",
+          "sha256": "f4f8da5feca72ff8d1ff9a0b015822c0c4c1bb888e4daa258ab53dc8abd305d5",
+          "bytes": 33984,
+          "durationMs": 5664
         }
       ]
     },
@@ -7978,21 +8320,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/3/instructions/21",
-          "speech": "Then fire at the middle bunker.",
-          "requestHash": "3b59a62b0f997db73f3b0159fb6e7a23c63bed204db824c0f0e7f7e63a414295",
-          "src": "audio/assets/83/83e50937267e0736a694bfc3ab3e06ee3786b23321fde72be17e64143000e959.mp3",
-          "sha256": "83e50937267e0736a694bfc3ab3e06ee3786b23321fde72be17e64143000e959",
-          "bytes": 14112,
-          "durationMs": 2352
+          "speech": "Hit the left bunker a third time to delete it.",
+          "requestHash": "f6a32736ccd69296a41aabb9a41aa21f744c9d17d67a01a1b2b870da35217bcf",
+          "src": "audio/assets/77/77b295220efb64a5b1e7001ab1ee5167542626e5644918e7fc3e1f27922a6062.mp3",
+          "sha256": "77b295220efb64a5b1e7001ab1ee5167542626e5644918e7fc3e1f27922a6062",
+          "bytes": 19008,
+          "durationMs": 3168
         },
         {
           "sourcePath": "chapters/3/steps/3/instructions/21",
-          "speech": "The fourth shot on the left must pass through, while the middle bunker must still absorb its shot.",
-          "requestHash": "200b241e60141540c0e78e961e08ede33b4e092defb7482d16b8151a05e678fe",
-          "src": "audio/assets/10/1049aa37beaed27076c5590e1110f84f9fbcb9894e3b111bc95e2c7afb174cf4.mp3",
-          "sha256": "1049aa37beaed27076c5590e1110f84f9fbcb9894e3b111bc95e2c7afb174cf4",
-          "bytes": 33408,
-          "durationMs": 5568
+          "speech": "Fire a fourth laser through the empty left position.",
+          "requestHash": "62ec84e006ad8866e9847534779ca9fd60f6d761b1b03d7bf9d154d4882c22de",
+          "src": "audio/assets/2c/2cda4a2caa6a3fa9a2a69ff8e641d79b01b639d2d06c07b28cb0d58f03aba16a.mp3",
+          "sha256": "2cda4a2caa6a3fa9a2a69ff8e641d79b01b639d2d06c07b28cb0d58f03aba16a",
+          "bytes": 20736,
+          "durationMs": 3456
         }
       ]
     },
@@ -8004,12 +8346,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/3/instructions/22",
-          "speech": "Restart with the green flag, move Player aside, and watch Enemy Shot.",
-          "requestHash": "3940a36e582ea2ed5afcfc30616d0497e2e79a06a7f4c81480bf130c1b81d392",
-          "src": "audio/assets/76/76d70594e441857cfa7117d5ae9ac742c7fe4921d20a0765116b9f0c35f867c5.mp3",
-          "sha256": "76d70594e441857cfa7117d5ae9ac742c7fe4921d20a0765116b9f0c35f867c5",
-          "bytes": 31104,
-          "durationMs": 5184
+          "speech": "Then fire at the middle bunker.",
+          "requestHash": "3b59a62b0f997db73f3b0159fb6e7a23c63bed204db824c0f0e7f7e63a414295",
+          "src": "audio/assets/83/83e50937267e0736a694bfc3ab3e06ee3786b23321fde72be17e64143000e959.mp3",
+          "sha256": "83e50937267e0736a694bfc3ab3e06ee3786b23321fde72be17e64143000e959",
+          "bytes": 14112,
+          "durationMs": 2352
+        },
+        {
+          "sourcePath": "chapters/3/steps/3/instructions/22",
+          "speech": "The fourth shot on the left must pass through, while the middle bunker must still absorb its shot.",
+          "requestHash": "200b241e60141540c0e78e961e08ede33b4e092defb7482d16b8151a05e678fe",
+          "src": "audio/assets/10/1049aa37beaed27076c5590e1110f84f9fbcb9894e3b111bc95e2c7afb174cf4.mp3",
+          "sha256": "1049aa37beaed27076c5590e1110f84f9fbcb9894e3b111bc95e2c7afb174cf4",
+          "bytes": 33408,
+          "durationMs": 5568
         }
       ]
     },
@@ -8021,12 +8372,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/3/instructions/23",
-          "speech": "A shot that misses through a gap is valid and must leave Game State playing.",
-          "requestHash": "eaa109ce9226d4aeb35d9b96fe30df1b344ef3bff9be2976b9ee60249f7c06a3",
-          "src": "audio/assets/fd/fdb8c989ac5a5b785090ab392ef937be387912f7a74a0b2221bb2e855d5653fa.mp3",
-          "sha256": "fdb8c989ac5a5b785090ab392ef937be387912f7a74a0b2221bb2e855d5653fa",
-          "bytes": 26640,
-          "durationMs": 4440
+          "speech": "Change Enemy Shot's wait back to pick random 1.5 to 3.",
+          "requestHash": "973349e4ceb9aaaa5fc3d8ea56f30e83dd6da703b018d8cb4711bc52a53b0baf",
+          "src": "audio/assets/fc/fc84f47579b142fdc369cd683642425bbadf9916d292555929f1b3827075ebab.mp3",
+          "sha256": "fc84f47579b142fdc369cd683642425bbadf9916d292555929f1b3827075ebab",
+          "bytes": 25200,
+          "durationMs": 4200
+        },
+        {
+          "sourcePath": "chapters/3/steps/3/instructions/23",
+          "speech": "Restart with the green flag, move Player aside, and watch Enemy Shot.",
+          "requestHash": "3940a36e582ea2ed5afcfc30616d0497e2e79a06a7f4c81480bf130c1b81d392",
+          "src": "audio/assets/76/76d70594e441857cfa7117d5ae9ac742c7fe4921d20a0765116b9f0c35f867c5.mp3",
+          "sha256": "76d70594e441857cfa7117d5ae9ac742c7fe4921d20a0765116b9f0c35f867c5",
+          "bytes": 31104,
+          "durationMs": 5184
         }
       ]
     },
@@ -8038,21 +8398,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/3/instructions/24",
-          "speech": "Keep watching until a lane reaches a Bunker.",
-          "requestHash": "df30d0c478a3cc07725707a44dca511bf4d3d9174aba12895506af1c54190ee1",
-          "src": "audio/assets/c8/c8c30ea0e46b4cc32613fef2659cd350ed94047e30577fc787b96b98e98a211d.mp3",
-          "sha256": "c8c30ea0e46b4cc32613fef2659cd350ed94047e30577fc787b96b98e98a211d",
-          "bytes": 19008,
-          "durationMs": 3168
-        },
-        {
-          "sourcePath": "chapters/3/steps/3/instructions/24",
-          "speech": "It must set Enemy Shot Active to 0 and damage only that clone.",
-          "requestHash": "3363e342448a087037a1f079990dfadb0576002af79b99e1673eee47f519125b",
-          "src": "audio/assets/f7/f7f3747413c68990d32bb6cc238855bf0bfe8de09fc7ba343e5e87661e38932b.mp3",
-          "sha256": "f7f3747413c68990d32bb6cc238855bf0bfe8de09fc7ba343e5e87661e38932b",
-          "bytes": 26496,
-          "durationMs": 4416
+          "speech": "A shot that misses through a gap is valid and must leave Game State playing.",
+          "requestHash": "eaa109ce9226d4aeb35d9b96fe30df1b344ef3bff9be2976b9ee60249f7c06a3",
+          "src": "audio/assets/fd/fdb8c989ac5a5b785090ab392ef937be387912f7a74a0b2221bb2e855d5653fa.mp3",
+          "sha256": "fdb8c989ac5a5b785090ab392ef937be387912f7a74a0b2221bb2e855d5653fa",
+          "bytes": 26640,
+          "durationMs": 4440
         }
       ]
     },
@@ -8064,6 +8415,32 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/3/instructions/25",
+          "speech": "Keep watching until a lane reaches a Bunker.",
+          "requestHash": "df30d0c478a3cc07725707a44dca511bf4d3d9174aba12895506af1c54190ee1",
+          "src": "audio/assets/c8/c8c30ea0e46b4cc32613fef2659cd350ed94047e30577fc787b96b98e98a211d.mp3",
+          "sha256": "c8c30ea0e46b4cc32613fef2659cd350ed94047e30577fc787b96b98e98a211d",
+          "bytes": 19008,
+          "durationMs": 3168
+        },
+        {
+          "sourcePath": "chapters/3/steps/3/instructions/25",
+          "speech": "It must set Enemy Shot Active to 0 and damage only that clone.",
+          "requestHash": "3363e342448a087037a1f079990dfadb0576002af79b99e1673eee47f519125b",
+          "src": "audio/assets/f7/f7f3747413c68990d32bb6cc238855bf0bfe8de09fc7ba343e5e87661e38932b.mp3",
+          "sha256": "f7f3747413c68990d32bb6cc238855bf0bfe8de09fc7ba343e5e87661e38932b",
+          "bytes": 26496,
+          "durationMs": 4416
+        }
+      ]
+    },
+    {
+      "id": "return-fire-and-bunkers/build-three-bunkers/instruction/026",
+      "sourcePaths": [
+        "chapters/3/steps/3/instructions/26"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/3/steps/3/instructions/26",
           "speech": "Click the green flag once more and check that all three Bunkers return at Full.",
           "requestHash": "7de0cc236d7d2890c09a47db3ce9aafd79243bfbae7873dfc127143a33aeeccc",
           "src": "audio/assets/97/97bf6bce94304a5721ec53531223359f9b7500c25f010592c507a7c44a96ae72.mp3",
@@ -8072,7 +8449,7 @@
           "durationMs": 4800
         },
         {
-          "sourcePath": "chapters/3/steps/3/instructions/25",
+          "sourcePath": "chapters/3/steps/3/instructions/26",
           "speech": "Turn off any temporary variable monitors after the test.",
           "requestHash": "cdda8592b9955ee320ffa985985ff91d592877f825fe0a6e3a44176db6dfc406",
           "src": "audio/assets/45/4529dff6dfa728ad414aeb35ff036a57207a04f47b9b36c6c5c401442906700e.mp3",
@@ -8789,12 +9166,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/4/steps/0/instructions/2",
-          "speech": "Add a Reset Game script that hides Mothership and sets Active to 0.",
-          "requestHash": "254e85ddedaf00e39cb788f8067bba114e473c4de41bbc3efa77c5d84505b0a2",
-          "src": "audio/assets/5b/5bbfde77ebaffbab7586b7dfa3286d573a66eca5c20f390e00df1ddf9f8180b2.mp3",
-          "sha256": "5bbfde77ebaffbab7586b7dfa3286d573a66eca5c20f390e00df1ddf9f8180b2",
-          "bytes": 27648,
-          "durationMs": 4608
+          "speech": "Find Mothership's existing when I receive Reset Game script from Chapter 1.",
+          "requestHash": "a9239078439942e2acd18945908cc56775df789774233802e28a02e119583ea8",
+          "src": "audio/assets/2d/2d5eceb4dff273f5255bd69a58ce246775f45a3cc95e08f91180adfd1adb6626.mp3",
+          "sha256": "2d5eceb4dff273f5255bd69a58ce246775f45a3cc95e08f91180adfd1adb6626",
+          "bytes": 28944,
+          "durationMs": 4824
+        },
+        {
+          "sourcePath": "chapters/4/steps/0/instructions/2",
+          "speech": "Snap set Active to 0 directly under its hide block.",
+          "requestHash": "9ad2d0a46f424226a201bc304676d179d308d82a54bd84c5f58fce169b1bec8e",
+          "src": "audio/assets/ac/acc4db77cd73f899172c7bbdcaa9229b7705e19d195d1a69dffc17e4d4ab5699.mp3",
+          "sha256": "acc4db77cd73f899172c7bbdcaa9229b7705e19d195d1a69dffc17e4d4ab5699",
+          "bytes": 23472,
+          "durationMs": 3912
         }
       ]
     },
@@ -8857,6 +9243,23 @@
       "sentences": [
         {
           "sourcePath": "chapters/4/steps/0/hints/1",
+          "speech": "To hit Mothership in a test, first clear one column of aliens so your laser has an open path upward.",
+          "requestHash": "841dc39ec09e089236fccd4f3ab74dd9f20006435de43dbd04623de6df34ea05",
+          "src": "audio/assets/01/0115d03dce978bc460f009b3f6fd57963b148a319f8afa596d6b55cf9764ac74.mp3",
+          "sha256": "0115d03dce978bc460f009b3f6fd57963b148a319f8afa596d6b55cf9764ac74",
+          "bytes": 39888,
+          "durationMs": 6648
+        }
+      ]
+    },
+    {
+      "id": "bonus-and-endings/prepare-mothership-singleton/hint/002",
+      "sourcePaths": [
+        "chapters/4/steps/0/hints/2"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/4/steps/0/hints/2",
           "speech": "The sprite will cross at y 160, above the starting fleet.",
           "requestHash": "09503e6b9cffef5e43b1c1fa0171bf5a51fcec80a685e0bee8e2741de64f4252",
           "src": "audio/assets/ce/ce42ab0f7b1728cee56a6d1da72893045cd333dd29db33a44aa4403840774be1.mp3",
@@ -9038,12 +9441,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/4/steps/1/instructions/1",
-          "speech": "Wait a random 8 to 14 seconds, then continue only if the game is playing.",
-          "requestHash": "25b3796e0074bd2df39d5014ca89ce3d5d23222a321487cfb2932781095c364d",
-          "src": "audio/assets/db/dbb729c952a6e8405dba8f9356f7f77221477b18456715cdf2a277bb74f3d4f7.mp3",
-          "sha256": "dbb729c952a6e8405dba8f9356f7f77221477b18456715cdf2a277bb74f3d4f7",
-          "bytes": 32112,
-          "durationMs": 5352
+          "speech": "Inside forever, wait a random 8 to 14 seconds.",
+          "requestHash": "253362fcd5a42de38b995a1300e3386497063b5d468a382960b307c750020259",
+          "src": "audio/assets/a4/a43a7ba667c638dc60389e9a624135cb10193c26091a8719dd107d86faa60493.mp3",
+          "sha256": "a43a7ba667c638dc60389e9a624135cb10193c26091a8719dd107d86faa60493",
+          "bytes": 21744,
+          "durationMs": 3624
+        },
+        {
+          "sourcePath": "chapters/4/steps/1/instructions/1",
+          "speech": "Then add if Game State equals playing and build the rest of the pass inside it.",
+          "requestHash": "48d1cfa104f450d047652a89258890c3fc911d47ba752f5fe466e0e55b011a39",
+          "src": "audio/assets/8a/8a301563bb354ba653f32ff677c436f72d6ac708ed32ffe19e2fe27206d0f8cd.mp3",
+          "sha256": "8a301563bb354ba653f32ff677c436f72d6ac708ed32ffe19e2fe27206d0f8cd",
+          "bytes": 27504,
+          "durationMs": 4584
         }
       ]
     },
@@ -9072,12 +9484,30 @@
       "sentences": [
         {
           "sourcePath": "chapters/4/steps/1/instructions/3",
-          "speech": "Move right by 5 until Active is 0, x is over 230, or play ends.",
-          "requestHash": "eeff8c1f31b78a644381e2262d6a03ce0a0c66c7a4e67b3242e599551c48d4e8",
-          "src": "audio/assets/de/de856a7097d90fdce775c23418afa60c66687f8bbcbb41b5c6c143efcf4d7ae2.mp3",
-          "sha256": "de856a7097d90fdce775c23418afa60c66687f8bbcbb41b5c6c143efcf4d7ae2",
-          "bytes": 36864,
-          "durationMs": 6144
+          "speech": "Add repeat until.",
+          "requestHash": "4496b1613dd734a95be50e4adc8694e8c4d3d309f3f3923c6a0035d25a822e3c",
+          "src": "audio/assets/bc/bc65a8d1814d58e9fd28a94483f4e22980f20e51a8f38baab69256466e55b544.mp3",
+          "sha256": "bc65a8d1814d58e9fd28a94483f4e22980f20e51a8f38baab69256466e55b544",
+          "bytes": 11232,
+          "durationMs": 1872
+        },
+        {
+          "sourcePath": "chapters/4/steps/1/instructions/3",
+          "speech": "It stops when Active is 0, x is over 230, or Game State is not playing.",
+          "requestHash": "4bbe3c3945ff9825fb8986095222e3fd4b9abafb1eba85c20e5eb0ece08ac8c8",
+          "src": "audio/assets/27/2787193ba2ed438840eb21e5e597dd969257f7e061375d57a928bb9408114330.mp3",
+          "sha256": "2787193ba2ed438840eb21e5e597dd969257f7e061375d57a928bb9408114330",
+          "bytes": 38592,
+          "durationMs": 6432
+        },
+        {
+          "sourcePath": "chapters/4/steps/1/instructions/3",
+          "speech": "Inside it, move right by 5 and wait 0.03 seconds.",
+          "requestHash": "050c160ce9428f828931119a4c78042fe00da60554dda89c15cce651af9c84a8",
+          "src": "audio/assets/f9/f9ee94becf4332e7bceaedb981497e4705db2856c4dd31fcc2d0fc90b7453250.mp3",
+          "sha256": "f9ee94becf4332e7bceaedb981497e4705db2856c4dd31fcc2d0fc90b7453250",
+          "bytes": 26640,
+          "durationMs": 4440
         }
       ]
     },
@@ -9106,21 +9536,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/4/steps/1/instructions/5",
-          "speech": "After the pass, hide and set Active to 0.",
-          "requestHash": "0ea88b42a2c94d8b00018c35689e5873db9552632a52af8f62ed3b378dc376b2",
-          "src": "audio/assets/7a/7ad52e9c99d7e457605c675a6d478da87c148e190ed39406a200dbfe6347f5c9.mp3",
-          "sha256": "7ad52e9c99d7e457605c675a6d478da87c148e190ed39406a200dbfe6347f5c9",
-          "bytes": 20592,
-          "durationMs": 3432
+          "speech": "After the repeat, but still inside the if, hide and set Active to 0.",
+          "requestHash": "5f176370d3eefb7b2c871dc03a10a4320a032ec4f09fd016d882b38c54689bb5",
+          "src": "audio/assets/c7/c76a9111fd75e42b0d05566989a0018191d55ed4af5781e766e8f5e3cf226d6e.mp3",
+          "sha256": "c76a9111fd75e42b0d05566989a0018191d55ed4af5781e766e8f5e3cf226d6e",
+          "bytes": 27072,
+          "durationMs": 4512
         },
         {
           "sourcePath": "chapters/4/steps/1/instructions/5",
-          "speech": "Then let the forever loop wait for another pass.",
-          "requestHash": "84dd27146ffd397541993d4e4ee5cd9d3fbf87160ae57a62517635184cea106e",
-          "src": "audio/assets/0f/0f12e88bc4993f7f145e803ffaf9d471f01f7ada4bc5c6c4fc4f80aa4364e7af.mp3",
-          "sha256": "0f12e88bc4993f7f145e803ffaf9d471f01f7ada4bc5c6c4fc4f80aa4364e7af",
-          "bytes": 19296,
-          "durationMs": 3216
+          "speech": "Then the forever loop waits for another pass.",
+          "requestHash": "e827e46e559bbc6ff95bfa941195318333713302608c93332fa082efd47febff",
+          "src": "audio/assets/ca/ca0e6a9a7959b9a5f427023bde140ae9f565cc347949fe35fb169ad232d6af12.mp3",
+          "sha256": "ca0e6a9a7959b9a5f427023bde140ae9f565cc347949fe35fb169ad232d6af12",
+          "bytes": 18720,
+          "durationMs": 3120
         }
       ]
     },
@@ -9557,30 +9987,63 @@
       "sentences": [
         {
           "sourcePath": "chapters/4/steps/2/instructions/9",
-          "speech": "Test loss by Player hit and by letting the fleet invade.",
-          "requestHash": "b89620bdd4d2304badc1421b981a4cdc3e50700318214e241e6ea3c9211744d1",
-          "src": "audio/assets/49/49b9f6d548fb7765489d7dc328872a0d0c85d4a07a19c54fa2283a9b64171554.mp3",
-          "sha256": "49b9f6d548fb7765489d7dc328872a0d0c85d4a07a19c54fa2283a9b64171554",
-          "bytes": 21888,
-          "durationMs": 3648
-        },
+          "speech": "Test a loss by letting Enemy Shot hit Player.",
+          "requestHash": "a1bad93f5c734773074df66fff3787baff9dea8b45e99dd9a324806203031a9c",
+          "src": "audio/assets/78/780a184fae3d44aa88f86b462b659c6aa59cafab017653502992ce9285bd72ef.mp3",
+          "sha256": "780a184fae3d44aa88f86b462b659c6aa59cafab017653502992ce9285bd72ef",
+          "bytes": 18720,
+          "durationMs": 3120
+        }
+      ]
+    },
+    {
+      "id": "bonus-and-endings/detect-win-and-finish-loss/instruction/010",
+      "sourcePaths": [
+        "chapters/4/steps/2/instructions/10"
+      ],
+      "sentences": [
         {
-          "sourcePath": "chapters/4/steps/2/instructions/9",
-          "speech": "Test win by destroying all 24 aliens.",
-          "requestHash": "6d79c36bf22648479465edbaeb6360ca95bbc44bdc3053e887c69e30c1393f6c",
-          "src": "audio/assets/f0/f0bfd2bc97ab22e7725d226d0f266c6b867e4603f65195b017b0862a37827edc.mp3",
-          "sha256": "f0bfd2bc97ab22e7725d226d0f266c6b867e4603f65195b017b0862a37827edc",
-          "bytes": 20304,
-          "durationMs": 3384
-        },
+          "sourcePath": "chapters/4/steps/2/instructions/10",
+          "speech": "Test the other loss by letting the fleet invade.",
+          "requestHash": "500e0857b2bf2fe045890601d01dea05569ff6d0369e7afb5f205bb8797eda8b",
+          "src": "audio/assets/c0/c0157ffc005d103d91d3b944c7f6bf2e76cd688721eecdbc3dfd7155ae352e21.mp3",
+          "sha256": "c0157ffc005d103d91d3b944c7f6bf2e76cd688721eecdbc3dfd7155ae352e21",
+          "bytes": 19440,
+          "durationMs": 3240
+        }
+      ]
+    },
+    {
+      "id": "bonus-and-endings/detect-win-and-finish-loss/instruction/011",
+      "sourcePaths": [
+        "chapters/4/steps/2/instructions/11"
+      ],
+      "sentences": [
         {
-          "sourcePath": "chapters/4/steps/2/instructions/9",
-          "speech": "In every result, Score and Aliens Left may remain visible but no gameplay sprite may cover the backdrop.",
-          "requestHash": "b80d72935689b62622bda3cb272cf026416b1a61d81851b73e33a47022bceadb",
-          "src": "audio/assets/26/26eb36f68f15019aa40ec195e14b3a354f99e9f783788cdf9d5d857a98f2d77b.mp3",
-          "sha256": "26eb36f68f15019aa40ec195e14b3a354f99e9f783788cdf9d5d857a98f2d77b",
-          "bytes": 40320,
-          "durationMs": 6720
+          "sourcePath": "chapters/4/steps/2/instructions/11",
+          "speech": "Test a win by destroying all 24 aliens.",
+          "requestHash": "6ab060b5d4a5349d1e56b1ce79e90d18bf21e4278dbe15838b1fadd387408ab4",
+          "src": "audio/assets/05/057462f91f0f688d627b38de23edfa9a904a5d602deff42f47c3a5b4c0460bd8.mp3",
+          "sha256": "057462f91f0f688d627b38de23edfa9a904a5d602deff42f47c3a5b4c0460bd8",
+          "bytes": 20880,
+          "durationMs": 3480
+        }
+      ]
+    },
+    {
+      "id": "bonus-and-endings/detect-win-and-finish-loss/instruction/012",
+      "sourcePaths": [
+        "chapters/4/steps/2/instructions/12"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/4/steps/2/instructions/12",
+          "speech": "In every result, Score and Aliens Left may stay visible, but no gameplay sprite may cover the backdrop.",
+          "requestHash": "7a8b5d6b16254c1ee7969e2f1cdda5a8a3fc3ad4f7d0bec396b08447330d3698",
+          "src": "audio/assets/43/43e0024454f3f5a0d1258f3d03d320a2fa3cd41329c347aa2037070280e481da.mp3",
+          "sha256": "43e0024454f3f5a0d1258f3d03d320a2fa3cd41329c347aa2037070280e481da",
+          "bytes": 42624,
+          "durationMs": 7104
         }
       ]
     },
@@ -11252,12 +11715,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/3/instructions/1",
-          "speech": "Confirm the Space backdrop shows the controls, goal, dangers, and scoring: Arrow keys move, Space fires, destroy all Aliens to win, avoid Enemy Shots and stop Aliens from reaching the invasion line, the green flag starts or restarts, Aliens score 10, and Mothership scores 50.",
-          "requestHash": "2a4ece58ed5d6904571a6120ab1af7ea830a1ce338f7a9de85089d08da5496e6",
-          "src": "audio/assets/72/72fb478d405b7a0d8e542ac73027d3d07ca3757f006f5ed372ccf667148de783.mp3",
-          "sha256": "72fb478d405b7a0d8e542ac73027d3d07ca3757f006f5ed372ccf667148de783",
-          "bytes": 93888,
-          "durationMs": 15648
+          "speech": "Confirm the Space backdrop still shows the controls, goal, scoring, and invasion line you added in Chapter 1.",
+          "requestHash": "2beac6b7f6a562c7b6bb75f6984a60be0f8b65b0bf61a9f3be11f8d34c2ab0c6",
+          "src": "audio/assets/2a/2ab901dba314eeacd2a0bac83137452c1cf3c14883da7c835f5ae4eb20018fdc.mp3",
+          "sha256": "2ab901dba314eeacd2a0bac83137452c1cf3c14883da7c835f5ae4eb20018fdc",
+          "bytes": 40752,
+          "durationMs": 6792
         }
       ]
     },
@@ -11428,12 +11891,21 @@
         },
         {
           "sourcePath": "chapters/5/steps/3/checkpoint/completeWhen/1",
-          "speech": "The Stage controls the fleet and shows the win and loss backdrops immediately.",
-          "requestHash": "78009c93197a81e07bc1db9d07b5fdabdcca57f0fffe603e88561da3e81f36d2",
-          "src": "audio/assets/fc/fccb2eeae5c57b317a14a2b72d1c1eb39198de325d4d1427a1f856c776eb3bfd.mp3",
-          "sha256": "fccb2eeae5c57b317a14a2b72d1c1eb39198de325d4d1427a1f856c776eb3bfd",
-          "bytes": 28944,
-          "durationMs": 4824
+          "speech": "The Stage controls the fleet.",
+          "requestHash": "a0b989da67f1bd10c6dc2e5e20edb67c2efec37f9a1b306444fdd3af0825822d",
+          "src": "audio/assets/25/258dfbb2ad7f00e96dbabb7e02e0ffd5860ac1158ae4f8872dcce360f38a1640.mp3",
+          "sha256": "258dfbb2ad7f00e96dbabb7e02e0ffd5860ac1158ae4f8872dcce360f38a1640",
+          "bytes": 12960,
+          "durationMs": 2160
+        },
+        {
+          "sourcePath": "chapters/5/steps/3/checkpoint/completeWhen/1",
+          "speech": "On a win or loss, it waits for End Cleanup and then shows the result backdrop.",
+          "requestHash": "b7db7fa48a53e1afdd3242c2dc49d6e03e7de5257ebe2e874d836025ab0f439c",
+          "src": "audio/assets/e0/e08daec8ad92c9e17a69d6b8eeacaa13789de1e08597e641830c41c69aca8792.mp3",
+          "sha256": "e08daec8ad92c9e17a69d6b8eeacaa13789de1e08597e641830c41c69aca8792",
+          "bytes": 28512,
+          "durationMs": 4752
         },
         {
           "sourcePath": "chapters/5/steps/3/checkpoint/completeWhen/2",
