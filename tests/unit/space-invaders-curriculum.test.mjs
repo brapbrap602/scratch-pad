@@ -20,16 +20,16 @@ const assertInstructionsInOrder = (instructions, patterns) => {
   }
 };
 
-test('Space Invaders supports chapter recovery without a Scratch account', () => {
+test('Space Invaders saves every chapter to the learner\'s Scratch account', () => {
   const chapterCheckpoints = lesson.chapters.map(({ steps: chapterSteps }) => chapterSteps.at(-1));
   for (const checkpoint of chapterCheckpoints) {
-    assert.match(checkpoint.instructions.join('\n'), /File > Save to your computer/);
+    assert.match(checkpoint.instructions.join('\n'), /File > Save now/);
   }
 
   const learnerText = JSON.stringify(lesson);
   assert.doesNotMatch(learnerText, /project notes/i);
   assert.doesNotMatch(learnerText, /share (?:or )?(?:the )?project/i);
-  assert.match(learnerText, /File > Load from your computer/);
+  assert.match(learnerText, /My Stuff.*See inside on Space Invaders/);
 });
 
 test('Space Invaders creates messages only when their first real scripts need them', () => {

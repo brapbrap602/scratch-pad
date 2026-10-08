@@ -17,7 +17,7 @@
     "Be able to rename sprites, costumes, backdrops, variables, and messages exactly as shown."
   ],
   "requirements": [
-    "Use Scratch 3 in a browser or the Scratch 3 desktop app.",
+    "Use Scratch online at scratch.mit.edu, signed in to your Scratch account. You will not download or upload project files.",
     "Complete all six chapters in order; there are no optional branches.",
     "Plan for 90-120 minutes per chapter.",
     "Create exactly four sprites named Paddle, Ball, Brick, and Apple.",
@@ -127,7 +127,8 @@
           "title": "Create the Sprites, Backdrops, and Shared Data",
           "explanation": "Exact names make later menus and code easy to follow. Lives and Bricks Left decide whether play continues. The shared Hit Claimed variable makes sure only one Brick clone reacts when Ball touches the bricks. Messages let the Stage run setup in order and let sprites work together.",
           "instructions": [
-            "Start a new Scratch project and delete the Cat.",
+            "Sign in to Scratch, click Create, and delete the Cat.",
+            "Type Brick Breaker in the project title box at the top of the editor.",
             "Add or paint four sprites and name them exactly Paddle, Ball, Brick, and Apple.",
             "Make Ball round and no wider than 20 pixels. Paint Paddle about 80 pixels wide and 10 pixels tall. Paint Brick about 40 pixels wide and 18 pixels tall.",
             "Create three Stage backdrops named Play, You Win, and Game Over. Keep the ending backdrops simple and readable.",
@@ -222,7 +223,8 @@
             "In the Variables category, choose Lives in the `set to` block, type 9, and click the block. Lives now shows 9. Do the same for Bricks Left and Hit Claimed.",
             "Click the green flag once.",
             "Confirm the backdrop, variables, Paddle position, and Paddle size all reset.",
-            "Compare your scripts with the complete code so far, shown below, before continuing."
+            "Compare your scripts with the complete code so far, shown below, before continuing.",
+            "Choose File > Save now."
           ],
           "hints": [
             "Later, the green flag will also remove old clones. That is another reason it is the only way to restart."
@@ -432,7 +434,8 @@
             "Let Ball miss three separate times.",
             "Confirm Lives reads 2, then 1, then 0 and all scripts stop at 0.",
             "Click the green flag to restart; do not add or use any other restart action.",
-            "Compare your Stage, Paddle, and Ball code with the complete code below."
+            "Compare your Stage, Paddle, and Ball code with the complete code below.",
+            "Choose File > Save now."
           ],
           "hints": [
             "The Game Over backdrop is added later. For now, Lives reaching 0 and motion stopping are enough."
@@ -663,7 +666,8 @@
             "Observe at least three first hits and three second hits.",
             "Confirm one clone responds per contact, first hits never change Bricks Left, and second hits always reduce it by one.",
             "Check that no Brick script has a forever loop around its hit code.",
-            "Compare Ball and Brick with the complete code so far."
+            "Compare Ball and Brick with the complete code so far.",
+            "Choose File > Save now."
           ],
           "hints": [
             "Use the stop button after testing if you do not want to finish the whole game yet."
@@ -893,7 +897,8 @@
             "Select Paddle and tick the `size` checkbox in Looks. Each caught Apple adds 10 to size.",
             "To test the limit quickly, type 150 into Paddle's size box during play, then catch two more Apples. Size reaches 160 and stays there.",
             "Click the green flag and confirm Paddle returns to 100 percent and old Apple clones disappear.",
-            "Compare Paddle, Apple, and Brick's Hit Brick script with the code below. Ball, the Stage, and Brick's other scripts have not changed since Chapter 3."
+            "Compare Paddle, Apple, and Brick's Hit Brick script with the code below. Ball, the Stage, and Brick's other scripts have not changed since Chapter 3.",
+            "Choose File > Save now."
           ],
           "hints": [
             "Scratch removes all existing clones when the green flag starts the project again."
@@ -1092,7 +1097,8 @@
             "Complete a game by breaking every brick twice and observe You Win.",
             "Confirm Bricks Left reads 0 at Win.",
             "Use the green flag again and check every starting value and costume.",
-            "Compare the Stage and Ball code below with your project."
+            "Compare the Stage and Ball code below with your project.",
+            "Choose File > Save now."
           ],
           "hints": [
             "A full win test takes time because all 50 bricks need two hits. Do it anyway: it is the only way to see the win work."
@@ -1296,7 +1302,8 @@
             "Correct names, values, nesting, and block order one script at a time.",
             "Run one final loss test and one final win test.",
             "Restart each stopped game only with the green flag.",
-            "Ask another learner to play without explaining the controls. If they get stuck, improve only the artwork or the instructions on the Stage."
+            "Ask another learner to play without explaining the controls. If they get stuck, improve only the artwork or the instructions on the Stage.",
+            "Choose File > Save now."
           ],
           "hints": [
             "Separate code entries with the same target represent separate Scratch stacks.",

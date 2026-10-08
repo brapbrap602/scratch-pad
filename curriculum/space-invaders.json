@@ -17,9 +17,9 @@
     "You do not need to have built a full game or used clones before."
   ],
   "requirements": [
-    "Use Scratch 3 in a modern web browser or the Scratch desktop app.",
+    "Use Scratch online at scratch.mit.edu, signed in to your Scratch account. You will not download or upload project files.",
     "Complete all six chapters in order; this course has one required path.",
-    "Plan for 90-120 minutes per chapter. At each chapter checkpoint, use File > Save to your computer. To continue later, open Scratch and use File > Load from your computer.",
+    "Plan for 90-120 minutes per chapter. Scratch saves your project to your account; also choose File > Save now at each chapter checkpoint. To continue later, sign in, open My Stuff, and click See inside on your project.",
     "Use the exact sprite, variable, costume, backdrop, and message names shown so the code references match.",
     "Keep every costume centered and inside the maximum width and height given in Chapter 1 so separate targets cannot overlap.",
     "Use the green flag as the only way to start or restart the game."
@@ -80,7 +80,8 @@
           "title": "Map the Complete Game",
           "explanation": "A reliable game starts with a clear plan. The Stage will reset shared data and control the alien march. One Alien sprite will make 24 clones. Player Laser, Enemy Shot, and Mothership will each be one reusable sprite with no clones. Each of the three Bunker clones will remember its own Health value.",
           "instructions": [
-            "Open a new Scratch 3 project and delete the Cat sprite.",
+            "Sign in to Scratch, click Create, and delete the Cat sprite.",
+            "Type Space Invaders in the project title box at the top of the editor.",
             "Write down the required sprites: `Player`, `Alien`, `Player Laser`, `Enemy Shot`, `Bunker`, and `Mothership`.",
             "Picture an 8-column by 3-row alien fleet. That is 24 aliens, so `Aliens Left` starts at 24 and the player wins when it reaches 0.",
             "Trace the two ways to lose: an Enemy Shot touches Player, or an Alien reaches the invasion line.",
@@ -260,8 +261,8 @@
           "title": "Checkpoint: Reliable Launch",
           "explanation": "This checkpoint prevents problems in later chapters. The green flag must be the only reset, and all names must be exact before you add clones and shots.",
           "instructions": [
-            "Use File > Save to your computer and keep the download as `space-invaders-chapter-1.sb3`.",
-            "Load the saved file with File > Load from your computer. Open a broadcast menu and check that it shows `Reset Game` and `Start Game` but no unused `message1`.",
+            "Choose File > Save now.",
+            "Click My Stuff at the top of the page, then click See inside on Space Invaders. Open a broadcast menu and check that it shows `Reset Game` and `Start Game` but no unused `message1`.",
             "Click the green flag, move Player, then click the green flag again while Player is moving.",
             "Confirm Player returns to x 0, y -150 and the Space backdrop returns.",
             "Compare the Stage and Player scripts with the complete Chapter 1 code below.",
@@ -510,7 +511,7 @@
           "title": "Checkpoint: One Synchronized Fleet",
           "explanation": "Only the Stage changes the shared fleet coordinates. Each movement phase finishes before the next one starts, and every clone uses its own row and column to find the correct place.",
           "instructions": [
-            "Use File > Save to your computer and keep the download as `space-invaders-chapter-2.sb3`.",
+            "Choose File > Save now.",
             "Start the game and check that `Aliens Left` reaches 24 before movement starts.",
             "Count eight aliens across and three down.",
             "Watch the phase 1, phase 2, and phase 3 sequence.",
@@ -764,7 +765,7 @@
           "title": "Checkpoint: Reusable Player Attack",
           "explanation": "Each sprite now has a clear job. Player starts a shot, Player Laser moves it, and the Alien clone that is hit changes the score and count exactly once.",
           "instructions": [
-            "Use File > Save to your computer and keep the download as `space-invaders-chapter-3.sb3`.",
+            "Choose File > Save now.",
             "Compare Player firing, Player Laser, and Alien collision with the complete Chapter 3 code.",
             "Start fresh and destroy a complete column of three aliens.",
             "Confirm the remaining 21 aliens still march in formation.",
@@ -1147,7 +1148,7 @@
           "title": "Checkpoint: Lane Fire and Independent Cover",
           "explanation": "The return-fire system now uses one shot with a calculated position and three separate shields. Shared fleet coordinates place the shot. Because `Health` is `For this sprite only`, each Bunker clone keeps its own value.",
           "instructions": [
-            "Use File > Save to your computer and keep the download as `space-invaders-chapter-4.sb3`.",
+            "Choose File > Save now.",
             "Compare Enemy Shot and Bunker with the complete Chapter 4 code below.",
             "Run one test where Enemy Shot misses everything, one where each type of shot hits a bunker, and one where Enemy Shot hits Player.",
             "Confirm a bunker hit does not cause Player loss.",
@@ -1369,7 +1370,7 @@
           "title": "Checkpoint: Complete Game Rules",
           "explanation": "Every required game rule is now connected. Active variable checks make the one-sprite shots and Mothership reusable, `Aliens Left` decides the win, and `Game State` allows exactly one ending.",
           "instructions": [
-            "Use File > Save to your computer and keep the download as `space-invaders-chapter-5.sb3` before final polish.",
+            "Choose File > Save now before final polish.",
             "Score a normal Alien and a Mothership in one game; confirm they add 10 and 50.",
             "Clear the final Alien and confirm the You Win backdrop appears.",
             "Click the green flag and lose by Enemy Shot, then restart and lose by invasion.",
@@ -1561,11 +1562,11 @@
           "title": "Checkpoint: Finish Space Invaders",
           "explanation": "The finished project starts with the green flag and ends with a win or loss. Alien clones remember their rows and columns, Bunker clones remember their own Health, and the Stage controls three fleet movement phases. The game also reuses one laser and one enemy shot, counts each score once, and uses Game State to show only one ending.",
           "instructions": [
-            "Use File > Save to your computer and keep the download as `space-invaders-final.sb3`.",
+            "Choose File > Save now.",
             "Confirm the Space backdrop still shows the controls, goal, scoring, and invasion line you added in Chapter 1.",
             "Play one final game without opening the code area or changing variables.",
             "Confirm the final project matches the checklist below.",
-            "Open a new Scratch editor, use File > Load from your computer to load `space-invaders-final.sb3`, and repeat the clean green-flag start."
+            "Click My Stuff at the top of the page, then click See inside on Space Invaders. Repeat the clean green-flag start."
           ],
           "hints": [
             "Good player instructions explain controls and goals, not internal code.",

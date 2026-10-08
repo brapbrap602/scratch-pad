@@ -152,7 +152,7 @@ test('captures tower defense lists, My Blocks, level settings, and mobile challe
   await page.getByRole('button', { name: 'Show chapters' }).click();
   await page.locator('.step-button[data-step-id="design-your-own-level"]').click();
   await expect(page.getByRole('heading', { name: 'Your Challenge: Design Level 3' })).toBeFocused();
-  const referenceSave = page.locator('.instruction-list > li').filter({ hasText: 'tower-defense-two-levels.sb3' });
+  const referenceSave = page.locator('.instruction-list > li').filter({ hasText: 'File > Save as a copy' });
   // The narration play button also draws an svg icon; only inline Scratch code matters here.
   await expect(referenceSave.locator('.scratch-inline-source')).toHaveCount(0);
   const levelBranch = page.locator('.instruction-list > li').filter({ hasText: 'Load level settings' });

@@ -17,8 +17,8 @@
     "You do not need previous experience with lists, clones, or My Blocks."
   ],
   "requirements": [
-    "Use Scratch 3 in a modern desktop browser or the Scratch desktop app.",
-    "Work through the chapters in order, keeping a separate saved project at each checkpoint.",
+    "Use Scratch online at scratch.mit.edu in a desktop browser, signed in to your Scratch account. You will not download or upload project files.",
+    "Work through the chapters in order in one Tower Defense project. Choose File > Save now at each checkpoint.",
     "Use the exact names shown for sprites, messages, variables, lists, costumes, and My Blocks.",
     "Keep costumes centered and within the given sizes so the position checks match the artwork.",
     "Use the green flag to restart the whole game. Start Wave and Next Level have different jobs."
@@ -49,7 +49,8 @@
           "title": "Picture the Defense",
           "explanation": "Enemies enter from the right. Your base is on the left. Towers beside each road shoot along it, but do not block enemies. We will get one road working before expanding the game.",
           "instructions": [
-            "Start a blank Scratch project and delete the Cat.",
+            "Sign in to Scratch, click Create, and delete the Cat.",
+            "Type Tower Defense in the project title box at the top of the editor.",
             "Sketch three horizontal roads with a base on their left ends.",
             "Mark two tower spots beside each road, near its left end: one above the road and one below it.",
             "Trace what happens when an enemy is defeated: the player earns coins.",
@@ -121,16 +122,16 @@
             "Click the green flag, then click it again while Enemy is halfway across the road.",
             "Check that health returns to 5 and Enemy returns to x 220, y 90.",
             "Let it escape and check that health remains at 4 afterward.",
-            "Use File > Save to your computer and name the file tower-defense-chapter-1.sb3.",
-            "Open a fresh Scratch editor and use File > Load from your computer to open that file. Repeat the escape test.",
+            "Choose File > Save now.",
+            "Click My Stuff at the top of the page, then click See inside on Tower Defense. Repeat the escape test.",
             "Compare both scripts with the complete code below before continuing."
           ],
-          "hints": ["Loading your saved file checks what you actually saved, not just the project still open in the editor."],
+          "hints": ["Reopening from My Stuff checks what Scratch actually saved, not just the project still open in the editor."],
           "debuggingTips": [{ "symptom": "Restart keeps the enemy's old position.", "checks": ["Prepare Enemy must set both coordinates before show.", "Keep the Stage's reset values above its forever loop."] }],
           "checkpoint": {
-            "task": "Pass the restart and saved-file escape tests.",
+            "task": "Pass the restart and saved-project escape tests.",
             "expectedResult": "Every start resets health to 5; one escape leaves health at 4 in both the original and reopened project.",
-            "completeWhen": ["Both tests pass.", "The chapter file is saved and can be reopened."]
+            "completeWhen": ["Both tests pass.", "The project is saved and reopens from My Stuff."]
           },
           "finishedCode": [
             { "target": "Stage", "code": "when green flag clicked\nset [Base Health v] to (5)\nset [Game State v] to [resetting]\nbroadcast [Prepare Enemy v] and wait\nset [Game State v] to [combat]\nforever\n  if <(Game State) = [combat]> then\n    broadcast [Enemy Step v] and wait\n  end\n  wait (0.03) seconds\nend" },
@@ -151,7 +152,7 @@
           "title": "An Empty Spot and a Built Tower",
           "explanation": "One sprite can look like an empty build spot or a tower. Its Built variable remembers which it is. Looking at its costume is useful for the player, but the code will check the variable.",
           "instructions": [
-            "Load your Chapter 1 project and paint a new sprite named `Tower`.",
+            "Continue in your Tower Defense project. Paint a new sprite named `Tower`.",
             "Give it a centered costume named `Empty`: a small circle or outlined square no larger than 28 by 24 pixels.",
             "Add a visibly different centered costume named `Built`, within the same 28 by 24 pixel limit. A filled rectangle works well.",
             "Make `Coins` with `For all sprites` and show its display.",
@@ -213,12 +214,12 @@
           "instructions": [
             "Compare the Stage and Tower code below with your scripts. Keep Enemy's complete Chapter 1 code.",
             "Buy the tower during enemy movement, then restart and buy it after the enemy escapes.",
-            "Save as tower-defense-chapter-2.sb3 using File > Save to your computer.",
-            "Use File > Load from your computer in a fresh editor. Repeat one purchase and a second click on the same spot."
+            "Choose File > Save now.",
+            "Reopen the project from My Stuff with See inside. Repeat one purchase and a second click on the same spot."
           ],
-          "hints": ["Keep the Chapter 1 download too, so you have a working earlier version."],
+          "hints": ["Scratch also saves on its own, but File > Save now makes sure your latest change is saved before you test."],
           "debuggingTips": [{ "symptom": "Clicking does nothing despite enough coins.", "checks": ["Click the spot on the Stage, not its thumbnail below the Stage.", "Check that the sprite-clicked script calls Try to build."] }],
-          "checkpoint": { "task": "Buy once in both allowed game states and repeat after reloading.", "expectedResult": "The first purchase leaves 60 coins, repeated clicks leave 60, and restart returns to 90.", "completeWhen": ["The saved project passes the purchase tests.", "You can explain why Try to build is a My Block."] },
+          "checkpoint": { "task": "Buy once in both allowed game states and repeat after reopening.", "expectedResult": "The first purchase leaves 60 coins, repeated clicks leave 60, and restart returns to 90.", "completeWhen": ["The saved project passes the purchase tests.", "You can explain why Try to build is a My Block."] },
           "finishedCode": [
             { "target": "Stage", "code": "when green flag clicked\nset [Base Health v] to (5)\nset [Coins v] to (90)\nset [Game State v] to [resetting]\nbroadcast [Prepare Enemy v] and wait\nbroadcast [Prepare Tower v] and wait\nset [Game State v] to [combat]\nforever\n  if <(Game State) = [combat]> then\n    broadcast [Enemy Step v] and wait\n  end\n  wait (0.03) seconds\nend" },
             { "target": "Tower", "code": "when I receive [Prepare Tower v]\nset [Built v] to (0)\ngo to x: (-155) y: (112)\nswitch costume to [Empty v]\nshow\n\nwhen this sprite clicked\nTry to build :: custom\n\ndefine Try to build\nif <<(Game State) = [ready]> or <(Game State) = [combat]>> then\n  if <<(Built) = (0)> and <not <(Coins) < (30)>>> then\n    change [Coins v] by (-30)\n    set [Built v] to (1)\n    switch costume to [Built v]\n  end\nend" }
@@ -238,7 +239,7 @@
           "title": "Two Lists, One Numbered Shot",
           "explanation": "Each tower will eventually have a numbered shot. For now there is only shot 1. Shot X stores its position. Shot Active stores 1 while it is flying and 0 when it is available. A list is like a variable with numbered items.",
           "instructions": [
-            "Load Chapter 2. In Variables, click Make a List and create `Shot X` with `For all sprites`.",
+            "In Variables, click Make a List and create `Shot X` with `For all sprites`.",
             "Create the list `Shot Active` with `For all sprites` too.",
             "On the Stage, insert `delete all of Shot X` after `set Game State to resetting`. Attach `add 0 to Shot X` immediately after it.",
             "After those two blocks, attach `delete all of Shot Active`, followed by `add 0 to Shot Active`.",
@@ -355,7 +356,7 @@
             "Keep Tower's purchase code from Chapter 2, plus its new Update my shot definition and receiver. Prepare Tower must now also set ID to 1.",
             "Keep Enemy's Prepare Enemy with HP 2, the Check shot definition, and only the replacement Enemy Step from this chapter.",
             "Keep Shot's Prepare Shot and Draw Shots scripts. Hide the two list displays after checking their values, so they do not cover the playfield.",
-            "Save as tower-defense-chapter-3.sb3, reopen it in a fresh editor, and repeat the defended and undefended runs.",
+            "Choose File > Save now, reopen the project from My Stuff with See inside, and repeat the defended and undefended runs.",
             "Restart while a shot is flying. Both lists should reset to one item and the tower should return to Empty."
           ],
           "hints": ["Lists store the shot's facts. Shot's show and hide blocks only draw those facts."],
@@ -377,7 +378,7 @@
           "title": "Try Clones First",
           "explanation": "A clone is a copy of a sprite that Scratch makes while the project runs. When a clone is made, it copies the sprite's `For this sprite only` variables at that moment. This short test shows that rule on a throwaway sprite before you use it for six tower spots.",
           "instructions": [
-            "Load tower-defense-chapter-3.sb3.",
+            "Continue in your Tower Defense project.",
             "Paint a small new sprite named `Clone Test`. Any simple shape works.",
             "On Clone Test, make a variable named `My Number` with `For this sprite only`.",
             "Build the green-flag script shown below. Three times, it sets `My Number`, moves, and creates a clone. At the end it sets `My Number` back to 0.",
@@ -489,7 +490,7 @@
             "Restart and buy one tower in each lane. Three purchases cost 90; three defeats should earn 30 coins and leave all 5 base health.",
             "Restart and buy both top-lane spots. Both should fire independently; other lanes still have empty spots.",
             "Check both lists have six items after repeated restarts. Hide Built, ID, Lane, and the lists when finished checking them.",
-            "Save as tower-defense-chapter-4.sb3, reopen it, and repeat the one-tower-per-lane test."
+            "Choose File > Save now, reopen the project from My Stuff with See inside, and repeat the one-tower-per-lane test."
           ],
           "hints": ["Click promptly while this temporary three-enemy group is moving. The next chapter adds a preparation phase and Start Wave button.", "Two top-lane shots can overlap visually because they share a firing point; their separate list items show that both are being used."],
           "debuggingTips": [{ "symptom": "The game has more than six tower spots after restart.", "checks": ["Only the Stage has the main green-flag script.", "Prepare Tower creates spots only when ID equals 0.", "Remove the previous one-tower setup rather than keeping both versions."] }],
@@ -510,7 +511,7 @@
           "title": "Put Level Settings Together",
           "explanation": "A new level should not need a new shooting system. We will collect the numbers that describe a level in two Stage My Blocks: one for the fresh battlefield and one for each wave. We will also add one rule that makes towers more interesting: after a tower launches a shot, it must wait before it can launch another.",
           "instructions": [
-            "Load Chapter 4. Create the variables in the next four instructions with `For all sprites`.",
+            "Create the variables in the next four instructions with `For all sprites`.",
             "Create `Level`, `Final Level`, `Wave`, and `Waves in Level` to keep track of which part of the game the player has reached.",
             "Create `Starting Coins`, `Starting Health`, `Enemy HP`, and `Reload Time` for the values a new level gives the player, the enemies, and the towers.",
             "Create `Enemy Count`, `Spawn Gap`, `Spawned`, and `Spawn Countdown` to keep track of how many enemies enter and when.",
@@ -622,7 +623,7 @@
             "Finish each wave and confirm that the next waits for a click, preserving towers, coins, and remaining health.",
             "Buy an extra tower during a wave when you can afford it. Make sure an occupied spot and an unaffordable spot do not change coins.",
             "Restart during combat and from each ending. Check six empty spots, two six-item lists, Wave 1, 90 coins, and 5 base health.",
-            "Save as tower-defense-chapter-5.sb3, reopen it, and play all three waves using the normal settings.",
+            "Choose File > Save now, reopen the project from My Stuff with See inside, and play all three waves using the normal settings.",
             "Keep the shooting and movement scripts unchanged while testing prices and wave settings. Record any difficulty adjustment in your notes."
           ],
           "hints": ["Three defeats earn 30 coins, enough for another tower.", "Changing a setting is a design experiment: predict its effect, test it, and compare the result."],
@@ -643,7 +644,7 @@
           "title": "A Small Level 2 Example",
           "explanation": "Level 2 uses the same towers, enemies, and shots. Only the numbers change: enemies need 4 hits instead of 2, the player starts with 120 coins, and the second wave has nine enemies. It is a harder challenge, not a new game system.",
           "instructions": [
-            "Load Chapter 5. On the Stage, change Final Level from 1 to 2 in the green-flag script.",
+            "On the Stage, change Final Level from 1 to 2 in the green-flag script.",
             "Replace all the blocks under `define Load level settings` with the version below. Keep the define block so its existing calls still work.",
             "The blocks above the two Level checks set the values every level starts with. The Level 2 check then changes Waves in Level, Starting Coins, and Enemy HP for Level 2 only.",
             "Replace all the blocks under `define Load wave settings` with the version below. Keep this define block too.",
@@ -702,7 +703,9 @@
           "title": "Your Challenge: Design Level 3",
           "explanation": "Now use the pieces you built to make a level of your own. Your goal is to make a deliberate change and explain its effect, rather than turning every number up at once.",
           "instructions": [
-            "Save the working two-level game first as tower-defense-two-levels.sb3. Keep that file as your reference.",
+            "Choose File > Save now. Your Tower Defense project now holds the working two-level game. Keep it unchanged as your reference.",
+            "Choose File > Save as a copy. Scratch opens the copy, and its title ends with copy.",
+            "Change the copy's title to Tower Defense My Levels. Build Level 3 only in this copy.",
             "Choose one goal for Level 3: a gentler introduction, more decisions about where to spend coins, or a harder final wave. Write what you expect players to do.",
             "On the Stage, add a separate `if <(Level) = (3)> then` after the Level 2 if in Load level settings.",
             "Inside the new if, set Waves in Level to two or three. You may also set different Starting Coins, Enemy HP, or Reload Time here.",
@@ -713,7 +716,7 @@
             "Try a sensible strategy and a poor one. Record the remaining health and explain whether your design goal was met.",
             "Revise one setting based on the result, then retest. If possible, ask another student to play without explaining your strategy."
           ],
-          "hints": ["Copy a settings branch as a starting point, not the whole game loop.", "Reload Time, Enemy HP, and Starting Coins change difficulty the most. A bigger Reload Time or Enemy HP makes towers weaker; more coins let players build more towers. Test one change at a time.", "Keep movement speeds, lane positions, list lengths, and hit-check arithmetic unchanged for this challenge."],
+          "hints": ["Copy a settings branch as a starting point, not the whole game loop.", "If the title does not end with copy, you are still in the original. Open My Stuff and click See inside on the copy.", "Reload Time, Enemy HP, and Starting Coins change difficulty the most. A bigger Reload Time or Enemy HP makes towers weaker; more coins let players build more towers. Test one change at a time.", "Keep movement speeds, lane positions, list lengths, and hit-check arithmetic unchanged for this challenge."],
           "debuggingTips": [{ "symptom": "The new level instantly finishes or has an old wave pattern.", "checks": ["Add Level 3 branches to both settings definitions.", "Set Enemy Count and Spawn Gap for every wave, and keep Enemy Count positive."] }],
           "checkpoint": { "task": "Show your level, prediction, results, and one revision.", "expectedResult": "A playable new level reuses the existing game scripts and has a design choice you can explain.", "completeWhen": ["Both settings branches exist and Final Level is 3.", "A complete playthrough reaches the correct final win.", "You can describe one change you made after testing.", "You did not duplicate the gameplay scripts."] }
         },
@@ -721,20 +724,20 @@
           "id": "tower-defense-release",
           "kind": "checkpoint",
           "title": "Checkpoint: A Game You Can Extend",
-          "explanation": "A finished game includes readable feedback, dependable controls, and a saved file that works outside the editor session where you built it. Keep the guided two-level version as well as your own extension.",
+          "explanation": "A finished game includes readable feedback, dependable controls, and a saved project that still works when you reopen it from My Stuff. Keep the guided two-level version as well as your own extension.",
           "instructions": [
             "Hide debugging displays. Keep Coins, Base Health, Level, and Wave visible in the top area without covering roads or build spots.",
             "Check that Empty and Built costumes are easy to tell apart and that Start Wave, Next Level, You Win, and Game Over are readable.",
             "Remove temporary test blocks. Keep the Stage's green-flag script and all the My Block definitions; a definition still does its job when another script calls it.",
-            "Save the currently open independent extension under a different filename, such as tower-defense-my-levels.sb3. Do not use the preserved two-level reference's filename.",
-            "Open a fresh editor and load tower-defense-two-levels.sb3, the file you saved before adding Level 3.",
-            "Check that the green-flag script sets Final Level to 2. Test purchases, one-shot reuse, wave pauses, the level transition, win, loss, and restart in this reopened file.",
-            "In another fresh editor, load your separately saved extension and repeat those checks through its final level.",
+            "In Tower Defense My Levels, choose File > Save now.",
+            "Click My Stuff and click See inside on Tower Defense, the two-level project you kept before adding Level 3.",
+            "Check that the green-flag script sets Final Level to 2. Test purchases, one-shot reuse, wave pauses, the level transition, win, loss, and restart in this reopened project.",
+            "Open My Stuff again, click See inside on Tower Defense My Levels, and repeat those checks through its final level.",
             "Capture screenshots of the starting battlefield, combat, fresh next level, and endings. Compare them with the actual behavior rather than using pictures as the only test.",
             "Explain to someone else where they would change a level's waves without changing how a tower shoots."
           ],
           "hints": ["The Stage chooses settings and timing; Tower buys and moves numbered shots; Enemy moves and handles damage; Shot draws list values.", "Your independent level can be different from another student's and still meet the same checks."],
-          "debuggingTips": [{ "symptom": "A project works in the old tab but not after loading its file.", "checks": ["Save again after the final edits and reload that exact file.", "Check that setup scripts assign every starting value rather than relying on a manually edited display."] }],
+          "debuggingTips": [{ "symptom": "A project works before saving but not after reopening it from My Stuff.", "checks": ["Choose File > Save now after the final edits, then reopen the project from My Stuff.", "Check that setup scripts assign every starting value rather than relying on a manually edited display."] }],
           "checkpoint": { "task": "Save and reopen both versions, then check their controls, levels, and endings.", "expectedResult": "Both saved projects reopen, their controls and endings work, and the next level can be changed through settings rather than copied gameplay code.", "completeWhen": ["The two-level reference is preserved.", "The independent extension has been tested and saved separately.", "Screenshots and playtest notes agree with the saved projects.", "You can identify each sprite's job and the two settings definitions."] },
           "finishedCode": [
             { "target": "Stage - two-level controller and settings", "code": "when green flag clicked\nset [Game State v] to [resetting]\nset [Level v] to (1)\nset [Final Level v] to (2)\nbroadcast [Initialize Originals v] and wait\nReset level :: custom\nforever\n  if <<(Game State) = [cleared]> and <(Next Requested) = (1)>> then\n    set [Game State v] to [resetting]\n    change [Level v] by (1)\n    Reset level :: custom\n  end\n  if <<(Game State) = [ready]> and <(Start Requested) = (1)>> then\n    Start this wave :: custom\n  end\n  if <(Game State) = [combat]> then\n    Combat step :: custom\n  end\n  broadcast [Draw Shots v] and wait\n  wait (0.03) seconds\nend\n\ndefine Load level settings\nset [Starting Coins v] to (90)\nset [Starting Health v] to (5)\nset [Enemy HP v] to (2)\nset [Reload Time v] to (30)\nif <(Level) = (1)> then\n  set [Waves in Level v] to (3)\nend\nif <(Level) = (2)> then\n  set [Waves in Level v] to (2)\n  set [Starting Coins v] to (120)\n  set [Enemy HP v] to (4)\nend\n\ndefine Load wave settings\nif <(Level) = (1)> then\n  set [Spawn Gap v] to (18)\n  set [Enemy Count v] to (3)\n  if <(Wave) = (3)> then\n    set [Enemy Count v] to (6)\n  end\nend\nif <(Level) = (2)> then\n  set [Spawn Gap v] to (15)\n  set [Enemy Count v] to (6)\n  if <(Wave) = (2)> then\n    set [Enemy Count v] to (9)\n  end\nend" },

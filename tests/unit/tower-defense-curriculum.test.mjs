@@ -31,7 +31,9 @@ test('level extension instructions preserve the reference and add separate setti
   const steps = lesson.chapters.flatMap(({ steps }) => steps);
   const challenge = steps.find(({ id }) => id === 'design-your-own-level');
   assertInstructionsInOrder(challenge.instructions, [
-    /Save.*tower-defense-two-levels\.sb3/,
+    /File > Save now.*reference/,
+    /File > Save as a copy/,
+    /title to Tower Defense My Levels/,
     /separate.*if <\(Level\) = \(3\)> then.*after the Level 2 if.*Load level settings/,
     /Inside.*Waves in Level/,
     /separate.*if <\(Level\) = \(3\)> then.*after the Level 2 if.*Load wave settings/,
@@ -41,10 +43,10 @@ test('level extension instructions preserve the reference and add separate setti
   ]);
   const release = steps.find(({ id }) => id === 'tower-defense-release');
   assertInstructionsInOrder(release.instructions, [
-    /different filename.*tower-defense-my-levels\.sb3/,
-    /fresh editor.*tower-defense-two-levels\.sb3/,
-    /Final Level to 2.*reopened file/,
-    /another fresh editor.*separately saved extension/,
+    /Tower Defense My Levels.*File > Save now/,
+    /My Stuff.*See inside on Tower Defense,/,
+    /Final Level to 2.*reopened project/,
+    /My Stuff again.*Tower Defense My Levels/,
   ]);
 });
 
@@ -55,8 +57,8 @@ test('tower defense begins with a runnable one-enemy checkpoint and a saved-proj
   assert.equal(checkpoint.kind, 'checkpoint');
   assert.ok(checkpoint.finishedCode.some(({ target }) => target === 'Stage'));
   assert.ok(checkpoint.finishedCode.some(({ target }) => target === 'Enemy'));
-  assert.match(checkpoint.instructions.join(' '), /Save to your computer/);
-  assert.match(checkpoint.instructions.join(' '), /Load from your computer/);
+  assert.match(checkpoint.instructions.join(' '), /File > Save now/);
+  assert.match(checkpoint.instructions.join(' '), /My Stuff/);
   assert.match(checkpoint.checkpoint.expectedResult, /4/);
 });
 

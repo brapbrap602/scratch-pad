@@ -29,7 +29,7 @@ for (const id of index) {
   narrationSentenceCount += sections.reduce((total, section) => total + section.sentences.length, 0);
 }
 
-if (narrationSectionCount !== 1202 || narrationSentenceCount !== 2442) {
+if (narrationSectionCount !== 1214 || narrationSentenceCount !== 2460) {
   throw new Error(
     `Narration inventory changed: ${narrationSectionCount} sections, ${narrationSentenceCount} sentences.`,
   );
