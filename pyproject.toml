@@ -3,6 +3,6 @@ name = "scratch-lessons-audio"
 version = "0.1.0"
 requires-python = ">=3.12"
 dependencies = [
-    "edge-tts==7.2.8",
+    "edge-tts==7.3.1",
     "mutagen==1.47.0",
 ]
