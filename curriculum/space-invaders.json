@@ -69,7 +69,7 @@
       "estimatedMinutes": 100,
       "objectives": [
         "Plan the game objects and rules before coding.",
-        "Create all named sprites, variables, messages, and backdrops.",
+        "Create all named sprites, variables, and backdrops, plus the first two messages.",
         "Make one green-flag reset sequence on the Stage.",
         "Move the Player while keeping it on the Stage."
       ],
@@ -82,9 +82,9 @@
           "instructions": [
             "Sign in to Scratch, click Create, and delete the Cat sprite.",
             "Type Space Invaders in the project title box at the top of the editor.",
-            "Write down the required sprites: `Player`, `Alien`, `Player Laser`, `Enemy Shot`, `Bunker`, and `Mothership`.",
-            "Picture an 8-column by 3-row alien fleet. That is 24 aliens, so `Aliens Left` starts at 24 and the player wins when it reaches 0.",
-            "Trace the two ways to lose: an Enemy Shot touches Player, or an Alien reaches the invasion line.",
+            "On paper or in a note, write down the six sprites you will need: `Player`, `Alien`, `Player Laser`, `Enemy Shot`, `Bunker`, and `Mothership`.",
+            "Picture an 8-column by 3-row alien fleet. That is 24 aliens. `Aliens Left` counts up to 24 during setup, and the player wins when it reaches 0.",
+            "Think through the two ways to lose: an Enemy Shot touches Player, or an Alien reaches the invasion line. That is a low line you will draw on the backdrop in the next step.",
             "Remember the restart rule: after a win or loss, click the green flag. Do not build a Restart button or an in-game restart message."
           ],
           "hints": [
@@ -101,7 +101,7 @@
             }
           ],
           "checkpoint": {
-            "task": "Explain the object plan without looking back at the lesson.",
+            "task": "Explain the plan for your sprites without looking back at the lesson.",
             "expectedResult": "You can name all six sprites, the two sprite types that use clones, the two reusable shots that do not use clones, and both ways to lose.",
             "completeWhen": [
               "You identify `Alien` and `Bunker` as the only cloned sprites.",
@@ -116,20 +116,30 @@
           "title": "Create the Stage and Six Sprites",
           "explanation": "Names matter because Scratch places sprite names inside sensing and motion blocks. Set up every game object now so later instructions can use exact names.",
           "instructions": [
-            "Create the `Space` backdrop. Paint and rename the existing blank backdrop, or choose a dark space backdrop, delete the original blank backdrop, and rename the chosen one `Space`.",
-            "Write the controls on `Space`: Arrow keys move, Space fires, and the green flag starts or restarts.",
-            "Write the goal and scoring on `Space`: destroy all Aliens to win, avoid Enemy Shots, stop the Aliens from reaching the invasion line, Aliens score 10, and Mothership scores 50.",
-            "Draw a thin, faint line across `Space` at y -60 and label it as the invasion line. An alien that drops below this line ends the game.",
-            "Duplicate Space twice. Name the copies `You Win` and `Game Over`, replace the control text with a large matching result, and confirm exactly three backdrops exist.",
+            "Click the Stage in the bottom right of the editor, then click the Backdrops tab.",
+            "Make a dark background in one of two ways. Either fill the blank backdrop with a dark color, or choose a dark space backdrop from the library and then delete the blank one.",
+            "Rename the dark backdrop `Space`.",
+            "Right-click the `Space` thumbnail and choose duplicate. Do this twice, then name the two copies `You Win` and `Game Over`. You should now have exactly three backdrops.",
+            "On `You Win`, use the Text tool and a light color to type the words You Win in large letters. On `Game Over`, do the same with the words Game Over.",
+            "Select `Space` again. The next three instructions tell you what to type on it with the Text tool. Use a light color so the words show up. This is only information for the player, so no code is needed yet.",
+            "Type the controls: Arrow keys: move. Space key: fire. Green flag: start or restart.",
+            "Type the goal: Destroy all Aliens to win. Avoid Enemy Shots. Stop the Aliens from reaching the invasion line.",
+            "Type the scoring: Aliens: 10 points each. Mothership: 50 points. The Mothership is a bonus enemy ship you will build in Chapter 5.",
+            "Keep the words small so they do not distract from the game. Sprites move in front of the backdrop, so the words cannot affect play.",
+            "To make each sprite below, point at the cat button in the bottom right and click Paint. Rename the sprite in the Sprite box under the Stage. To center a costume, drag its artwork over the small center mark in the middle of the paint canvas.",
             "Create a ship sprite named `Player`. Center its artwork and keep its visible costume no larger than 36 pixels wide by 18 pixels high.",
+            "Select `Player` and use the y box under the Stage to move it to y -60. Player now marks the height of the invasion line. A later script moves it back to its real starting place.",
+            "Select the Stage and the `Space` backdrop. Use the Line tool and a dim color to draw a thin line across the whole backdrop. Watch the Stage preview and make the line pass through the middle of Player.",
+            "Use the Text tool to label the line invasion line. An alien that drops below this line ends the game.",
             "Create an enemy sprite named `Alien`. Center its artwork and keep its visible costume no larger than 32 pixels wide by 18 pixels high.",
-            "Paint centered vertical sprites named `Player Laser` and `Enemy Shot`. Keep each visible costume no larger than 4 pixels wide by 10 pixels high; make Player Laser bright and Enemy Shot red.",
-            "Create a centered `Bunker` no larger than 56 pixels wide by 18 pixels high and a centered `Mothership` no larger than 40 pixels wide by 12 pixels high.",
-            "Check costume selection bounds in the paint editor. Do not continue with off-center pixels or artwork outside the stated maximum boxes."
+            "Paint two thin, upright sprites named `Player Laser` and `Enemy Shot`. Center each one and keep it no larger than 4 pixels wide by 10 pixels high. Make Player Laser bright and Enemy Shot red.",
+            "Create a centered `Bunker` no larger than 56 pixels wide by 18 pixels high.",
+            "Create a centered `Mothership` no larger than 40 pixels wide by 12 pixels high.",
+            "Check each sprite on its Costumes tab. The size is printed beside the costume name in the thumbnail list. Do not continue until every costume is centered and inside its maximum size."
           ],
           "hints": [
             "Simple geometric art is easier to resize and test than detailed art.",
-            "Select the Stage before editing backdrop names."
+            "Use the zoom buttons below the paint canvas to draw tiny costumes more easily."
           ],
           "debuggingTips": [
             {
@@ -142,11 +152,11 @@
           ],
           "checkpoint": {
             "task": "Check the sprite list and the Stage's backdrop list.",
-            "expectedResult": "The project has exactly the six required named sprites, three named backdrops, centered costumes within the size limits, and visible player instructions on Space.",
+            "expectedResult": "The project has exactly the six required named sprites, three named backdrops, centered costumes within the size limits, and visible player instructions on the `Space` backdrop.",
             "completeWhen": [
               "All sprite names match the lesson exactly.",
               "Only the `Space`, `You Win`, and `Game Over` backdrops exist.",
-              "Space shows the controls, goal, dangers, and scoring while every sprite costume is centered and inside its maximum box."
+              "The `Space` backdrop shows the controls, goal, dangers, and scoring while every sprite costume is centered and inside its maximum box."
             ]
           }
         },
@@ -156,15 +166,13 @@
           "title": "Create Variables and Messages",
           "explanation": "The Stage and sprites need the same names for game information. Variables made `For all sprites` store shared facts and fleet coordinates. Variables made `For this sprite only` let each Alien clone remember its own row and column and each Bunker clone remember its own health.",
           "instructions": [
-            "Make these variables with `For all sprites`: `Score`, `Aliens Left`, `Game State`, `Stage`, `Fleet X`, `Fleet Y`, `Laser Active`, `Enemy Shot Active`, and `Shot Lane`.",
+            "Make these variables with `For all sprites`: `Score`, `Aliens Left`, `Game State`, `Stage`, `Fleet X`, `Fleet Y`, `Laser Active`, `Enemy Shot Active`, and `Shot Lane`. The variable named `Stage` only shares its name with Scratch's Stage. It stores the number of the fleet's movement phase.",
             "On the Alien sprite, make `My Column`, `My Row`, and `Is Clone` with `For this sprite only`.",
             "On the Bunker sprite, make `Health` and `Bunker Number` with `For this sprite only`.",
             "On the Mothership sprite, make `Active` with `For this sprite only`.",
-            "On the Stage, drag out a temporary `broadcast` block. Open its message menu, choose New message, and create `Reset Game` and `Start Game`.",
-            "Later chapters create each new message when its first real script is built. This keeps unused message blocks out of this checkpoint.",
-            "Keep the temporary broadcast block until you build the startup script on the Stage in the next step and select `Reset Game` and `Start Game` in its broadcast blocks.",
-            "After both messages are used in the startup script, delete the temporary broadcast block.",
-            "Hide every variable monitor except `Score` and `Aliens Left`."
+            "On the Stage, drag out a temporary `broadcast` block. Open its message menu, choose New message, and create `Reset Game` and `Start Game`. Later chapters create each new message when its first real script is built.",
+            "Leave the temporary block in the Code area for now. You will delete it in the next step, once the startup script uses both messages.",
+            "Hide every variable display except `Score` and `Aliens Left`. To hide one, untick the checkbox beside its name in the Variables list."
           ],
           "hints": [
             "The choice `For this sprite only` appears while making a variable.",
@@ -201,10 +209,10 @@
           "title": "Reset the Game and Control Player",
           "explanation": "One script on the Stage is the only way the game starts. It resets shared values, tells every sprite to prepare, and starts play only after preparation finishes. Player checks the arrow keys in its own movement loop and keeps its x coordinate inside the Stage. A later chapter adds a separate firing loop, so waiting for the Space key to be released never pauses movement.",
           "instructions": [
-            "On the Stage, add the green-flag script shown below. Use `broadcast Reset Game and wait` so all setup finishes before `Game State` becomes `playing`.",
+            "On the Stage, add the green-flag script. Every block is in the finished code section on this page. If that section is closed, click Show finished code. Use `broadcast Reset Game and wait` so all setup finishes before `Game State` becomes `playing`.",
+            "Delete the temporary `broadcast` block from the last step. The startup script now uses both messages, so Scratch keeps them.",
             "On Player, reset its position to x 0, y -150 and show it when `Reset Game` arrives.",
-            "On Alien, Player Laser, Enemy Shot, Bunker, and Mothership, add a `when I receive Reset Game` script with `hide`.",
-            "This hides every non-Player sprite during Chapter 1 setup and every reset. In later chapters, add each sprite's other reset blocks to this same script.",
+            "On Alien, Player Laser, Enemy Shot, Bunker, and Mothership, add a `when I receive Reset Game` script with `hide`. In later chapters, add each sprite's other reset blocks to this same script.",
             "On Player, start a movement script when `Start Game` arrives. Add `repeat until`, and for its condition put `Game State = playing` inside a `not` block. Movement then stops when the game ends.",
             "Move left or right by 6 while the matching arrow key is pressed.",
             "Keep Player between x -210 and x 210 so it cannot leave the Stage.",
@@ -265,7 +273,7 @@
             "Click My Stuff at the top of the page, then click See inside on Space Invaders. Open a broadcast menu and check that it shows `Reset Game` and `Start Game` but no unused `message1`.",
             "Click the green flag, move Player, then click the green flag again while Player is moving.",
             "Confirm Player returns to x 0, y -150 and the Space backdrop returns.",
-            "Compare the Stage and Player scripts with the complete Chapter 1 code below.",
+            "Compare your Stage and Player scripts with the complete Chapter 1 code in the finished code section on this page.",
             "Do not continue until every required sprite, variable, message, and backdrop name matches."
           ],
           "hints": [
@@ -326,7 +334,7 @@
           "instructions": [
             "Select Alien and confirm `My Column`, `My Row`, and `Is Clone` say `For this sprite only`.",
             "Confirm the centered Alien costume is no larger than 32 pixels wide by 18 pixels high so rows and columns cannot overlap.",
-            "Find Alien's existing `when I receive Reset Game` script from Chapter 1. Under its `hide` block, add the cloning blocks shown below. Do not add a second `when I receive Reset Game` event block.",
+            "Find Alien's existing `when I receive Reset Game` script from Chapter 1. Under its `hide` block, add the cloning blocks from the finished code section on this page. Do not add a second `when I receive Reset Game` event block.",
             "Set `Is Clone` to 1 before creating clones and back to 0 afterward. This tells the hidden original apart from its clones.",
             "Change `Aliens Left` by 1 for each clone so the final count is exactly 24."
           ],
@@ -369,7 +377,7 @@
             "For y, build `Fleet Y - My Row * 35`.",
             "Show the clone after both coordinates are set.",
             "Click the green flag and count eight aliens in each of three rows.",
-            "If aliens overlap, make the Alien costume smaller instead of changing the shared spacing yet."
+            "If aliens overlap, make the Alien costume smaller. Do not change the 45 and 35 spacing numbers."
           ],
           "hints": [
             "Build the multiplication operator first. Then place it inside the addition or subtraction operator.",
@@ -421,7 +429,9 @@
             "Inside that `if`, set Game State to lost. Then choose New message in the broadcast block, create `Lose`, and broadcast it.",
             "Do not change fleet coordinates in Alien. Only the Stage changes `Fleet X` and `Fleet Y`.",
             "Keep the `Is Clone = 1` check so the hidden original does not act like a fleet member.",
-            "To test, make one temporary script on the Stage for each march message using `broadcast and wait`. Click each broadcast block, then delete all three temporary scripts."
+            "To test, click the green flag so the clones exist. Then on the Stage, drag out one temporary `broadcast and wait` block for each march message.",
+            "Drag out a temporary `change Fleet X by 10` block and click it. Then click a `broadcast and wait` block. Every Alien should jump 10 pixels to the right. Try each message, also changing `Fleet Y` to test `March Down`.",
+            "Delete all of the temporary test blocks from the Stage."
           ],
           "hints": [
             "All three `when I receive` scripts use the same coordinate formula. Only March Down adds the invasion check.",
@@ -437,7 +447,7 @@
             }
           ],
           "checkpoint": {
-            "task": "Use temporary scripts on the Stage with `broadcast and wait` to test each Alien `when I receive` script after manually changing a fleet coordinate.",
+            "task": "Think back over your march-message tests, then check the Stage for leftover test blocks.",
             "expectedResult": "Every Alien moves to the position given by `Fleet X`, `Fleet Y`, and its own row and column.",
             "completeWhen": [
               "All three messages have matching `when I receive` scripts.",
@@ -459,15 +469,15 @@
           "title": "Control the Fleet in Three Movement Phases",
           "explanation": "The Stage controls the fleet with scripts that finish each phase instead of letting 24 clones choose their own movement. In phase 1, the fleet moves right five times. In phase 2, it moves left nine times. In phase 3, it moves right nine times. Each side-to-side phase ends with one move down. The `Stage` variable then switches between 2 and 3.",
           "instructions": [
-            "On the Stage, start a new script with `when I receive Start Game`. The steps below build the march script shown at the end.",
+            "On the Stage, start a new script with `when I receive Start Game`. These steps build the march script in the finished code section on this page.",
             "Add `repeat until`. For its condition, put `Game State = playing` inside a `not` block.",
             "Inside the repeat, add an `if then else` that checks `Stage = 1`. Inside its `else`, add a second `if then else` that checks `Stage = 2`. The three open spaces will hold phase 1, phase 2, and phase 3.",
+            "As you build each phase below, put the blocks of every sideways move inside their own `if Game State = playing`. Do the same for every down move. This makes the fleet stop as soon as the game ends.",
             "In the `Stage = 1` space, build phase 1. Repeat five times: add 10 to `Fleet X`, use `broadcast March Right and wait`, and then wait 0.35 seconds.",
             "After phase 1, subtract 10 from `Fleet Y`, use `broadcast March Down and wait`, and set the `Stage` variable to 2.",
             "In the `Stage = 2` space, build phase 2 with nine left moves and one down move. Then set the `Stage` variable to 3.",
             "In the last `else` space, build phase 3 with nine right moves and one down move. Then set the `Stage` variable to 2.",
-            "Wrap the blocks of every sideways move in `if Game State = playing`. Wrap every down move the same way. This makes the fleet stop as soon as the game ends.",
-            "Keep every coordinate change and march broadcast on the Stage."
+            "Check that every coordinate change and march broadcast is on the Stage, not on Alien."
           ],
           "hints": [
             "`Broadcast and wait` lets all clones finish positioning before the next fleet step.",
@@ -515,7 +525,7 @@
             "Start the game and check that `Aliens Left` reaches 24 before movement starts.",
             "Count eight aliens across and three down.",
             "Watch the phase 1, phase 2, and phase 3 sequence.",
-            "Let the aliens descend until the Game Over behavior is added later; for now confirm `Game State` becomes `lost`."
+            "Turn on the `Game State` variable display and let the fleet descend without shooting it. When an alien drops below the invasion line, the fleet stops and `Game State` becomes `lost`. Chapter 5 adds the Game Over screen. Turn the display off again."
           ],
           "hints": [
             "Temporarily show the `Stage`, `Fleet X`, and `Fleet Y` variable displays while testing, then hide them.",
@@ -573,10 +583,10 @@
             "Find Player Laser's existing `when I receive Reset Game` script from Chapter 1. Snap `set Laser Active to 0` directly under its `hide` block.",
             "Confirm Player Laser is centered and no larger than 4 pixels wide by 10 pixels high. A 10-pixel laser that moves 10 pixels at a time cannot jump over an 18-pixel alien, and it cannot touch two rows at once.",
             "On Player, add a second, separate `when I receive Start Game` script for firing. Use the same `repeat until not Game State = playing` loop. Do not put firing inside the movement script.",
-            "Inside the firing loop, add a condition that checks whether Space is pressed and `Laser Active` is 0.",
+            "Inside the firing loop, add a condition that checks whether the Space key is pressed and `Laser Active` is 0.",
             "Inside that condition, set `Laser Active` to 1 first so the next loop pass sees that a shot has started.",
             "Choose New message in a broadcast block, create `Fire Laser`, and broadcast it.",
-            "Wait until Space is released or Game State is not playing."
+            "Wait until the Space key is released or Game State is not playing."
           ],
           "hints": [
             "Waiting for key release prevents one long press from behaving like many separate presses.",
@@ -591,15 +601,15 @@
               ]
             },
             {
-              "symptom": "Player stops moving while Space is held.",
+              "symptom": "Player stops moving while the Space key is held.",
               "checks": [
                 "Keep movement and firing in two separate `when I receive Start Game` scripts.",
-                "Do not place the Space release wait inside the movement loop."
+                "Do not place the wait for the Space key release inside the movement loop."
               ]
             }
           ],
           "checkpoint": {
-            "task": "Turn on the `Laser Active` variable display. Click the green flag, then press and hold Space.",
+            "task": "Turn on the `Laser Active` variable display. Click the green flag, then press and hold the Space key.",
             "expectedResult": "`Laser Active` changes from 0 to 1 once and stays 1, because the script that sets it back to 0 comes in the next step. No clones are created. Turn the display off again after the test.",
             "completeWhen": [
               "Player contains no `create clone` block.",
@@ -624,12 +634,12 @@
           "title": "Fly, Hide, and Reuse the Laser",
           "explanation": "When the `Fire Laser` message arrives, Player Laser moves to Player, starts a little above the ship, and travels upward. The loop stops when the laser reaches the top, a collision sets `Laser Active` to 0, or play ends. The same sprite then hides and becomes ready again.",
           "instructions": [
-            "On Player Laser, add the `when I receive Fire Laser` script shown below.",
+            "On Player Laser, add a `when I receive Fire Laser` script. The full script is in the finished code section on this page.",
             "Add `if Game State = playing`. Inside it, use `go to Player`, then change y by 15 so the shot begins above the ship costume.",
-            "Still inside the if, show the sprite and add `repeat until`. It stops when `Laser Active = 0`, when y position is over 175, or when Game State is not playing.",
+            "Still inside the `if` block, show the sprite and add `repeat until`. It stops when `Laser Active = 0`, when y position is over 175, or when Game State is not playing.",
             "Move upward by 10 and wait 0.02 seconds each loop pass.",
             "Below the `if` block, not inside it, hide and set `Laser Active` back to 0. These blocks run even when the game has ended, so the laser is always ready for the next shot.",
-            "Fire several separate shots and confirm the same sprite is reused."
+            "Fire several separate shots. Only one laser should be on the Stage at a time."
           ],
           "hints": [
             "The `repeat until` condition uses one `or` operator inside another because any one of the three reasons should stop the laser.",
@@ -673,7 +683,7 @@
           "title": "Hit One Alien, Score, and Count",
           "explanation": "Each Alien clone checks whether the active Player Laser touches it. The first clone hit sets `Laser Active` to 0 before changing the score and count. Other clones then see that the hit was already handled, so the same laser cannot score twice.",
           "instructions": [
-            "Extend the Alien `when I start as a clone` script with the forever collision loop shown below.",
+            "Extend the Alien `when I start as a clone` script with a forever collision loop. The full script is in the finished code section on this page.",
             "Require `Laser Active = 1` and `touching Player Laser` in the same condition.",
             "First set `Laser Active` to 0. This tells the Player Laser to end its flight and hide, and tells other Alien clones that the hit was handled.",
             "Add 10 to `Score` and subtract 1 from `Aliens Left`.",
@@ -722,9 +732,9 @@
           "title": "Debug Shot Timing and Restarts",
           "explanation": "Fast shots can reveal blocks in the wrong order. Test misses, hits, held keys, edge shots, and green-flag restarts now. A short checklist is faster than guessing after you add more game systems.",
           "instructions": [
-            "Test a miss: fire through an empty column and confirm the laser hides at the top.",
-            "Test a hit: fire through one alien and confirm exactly one alien and 10 points change.",
-            "Test a held key: hold Space while moving left and right. Confirm one shot occurs and arrow movement continues until you release and press Space again.",
+            "Test a miss: move Player to the far left edge while the fleet is on the right side of the Stage, then fire. The laser should reach the top without hitting anything and then hide.",
+            "Test a hit: fire at one alien. Confirm that one alien disappears and `Score` goes up by 10.",
+            "Test a held key: hold the Space key while moving left and right. Confirm that only one shot fires and that Player keeps moving. Release the Space key and press it again to fire the next shot.",
             "Test an edge position: move Player to each boundary and fire.",
             "Test restart during flight: click the green flag while the laser is visible and confirm it hides and all 24 aliens return.",
             "Fix each failed case before moving on."
@@ -750,11 +760,11 @@
           ],
           "checkpoint": {
             "task": "Pass all five attack test cases.",
-            "expectedResult": "The reusable laser behaves consistently on misses, hits, held input, edge firing, and restart, and waiting for Space release never blocks movement.",
+            "expectedResult": "The reusable laser behaves consistently on misses, hits, held input, edge firing, and restart, and waiting for the Space key to be released never blocks movement.",
             "completeWhen": [
               "No test creates a laser clone.",
               "No test awards duplicate points.",
-              "Arrow movement continues while Space is held.",
+              "Arrow movement continues while the Space key is held.",
               "Restart always returns `Laser Active` to 0 and `Aliens Left` to 24."
             ]
           }
@@ -767,7 +777,7 @@
           "instructions": [
             "Choose File > Save now.",
             "Compare Player firing, Player Laser, and Alien collision with the complete Chapter 3 code.",
-            "Start fresh and destroy a complete column of three aliens.",
+            "Click the green flag and destroy a complete column of three aliens.",
             "Confirm the remaining 21 aliens still march in formation.",
             "Restart with the green flag and check that all values and sprites reset."
           ],
@@ -899,7 +909,7 @@
             "From Operators, place `pick random 1 to 10` in the wait block's number space. Change its values to 1.5 and 3.",
             "Directly below the wait, add `if then`. Put the `=` operator in its condition space.",
             "Place `Game State` on the left of `=` and type `playing` on the right.",
-            "Inside the `Game State = playing` if, add `set Shot Lane to 0`.",
+            "Inside the `if Game State = playing` block, add `set Shot Lane to 0`.",
             "Replace 0 with `pick random 1 to 10`, then change its values to 0 and 7.",
             "Below `set Shot Lane`, add `set x to 0`. Put the `+` operator in its number space.",
             "Place `Fleet X` on the left of `+`. Put the `*` operator on the right of `+`.",
@@ -914,12 +924,12 @@
             "Grab the completed outer `or` by the word `or` and place the whole group of operators in the condition space of `repeat until`.",
             "In an empty part of the Code area, connect `change y by -7` above `wait 0.03 seconds`.",
             "Drag that two-block script inside `repeat until`.",
-            "After `repeat until`, but still inside the `Game State = playing` if, add `set Enemy Shot Active to 0` followed by `hide`. These two cleanup blocks must not be inside the repeat loop.",
-            "Check the finished script from top to bottom. `forever` contains the random wait and the playing if.",
-            "The playing if contains the launch, flight, and cleanup blocks. For now, `repeat until` contains only `change y by -7` and `wait 0.03 seconds`.",
+            "After `repeat until`, but still inside the `if Game State = playing` block, add `set Enemy Shot Active to 0` followed by `hide`. These two cleanup blocks must not be inside the repeat loop.",
+            "Check the finished script from top to bottom. `forever` contains the random wait and the `if Game State = playing` block.",
+            "The `if Game State = playing` block contains the launch, flight, and cleanup blocks. For now, `repeat until` contains only `change y by -7` and `wait 0.03 seconds`.",
             "Do not use `go to Alien` anywhere in Enemy Shot.",
             "Open Variables and turn on the `Shot Lane` checkbox temporarily. Watch at least eight launches and confirm every displayed lane number is from 0 through 7; turn the checkbox off after the test.",
-            "After clearing one complete column, wait until its lane fires and confirm a shot from that empty lane is expected fleet behavior rather than a hidden Alien."
+            "Clear one complete column, then keep watching until a shot falls from that empty column. This is expected, because shots come from lanes and not from individual Aliens."
           ],
           "hints": [
             "Lane 0 lines up with the left fleet column and lane 7 with the right fleet column.",
@@ -954,7 +964,7 @@
               "symptom": "The shot never hides or never launches again.",
               "checks": [
                 "Confirm the completed outer `or` fills the condition space in `repeat until`.",
-                "Place `set Enemy Shot Active to 0` and `hide` after the repeat block but inside the playing if."
+                "Place `set Enemy Shot Active to 0` and `hide` after the repeat block but inside the `if Game State = playing` block."
               ]
             },
             {
@@ -988,24 +998,24 @@
           "explanation": "Enemy Shot checks for contact with Player because there is only one enemy shot. Put the collision check inside the flight loop, immediately after each downward move, so the shot checks for contact as it travels. On contact, set `Enemy Shot Active` to 0 first. Then a nested `Game State = playing` check allows only the first valid loss to set the state to `lost` and broadcast `Lose`.",
           "instructions": [
             "Find `change y by -7` inside Enemy Shot's `repeat until`. Drag a Control `if then` block onto the thin connection between `change y by -7` and `wait 0.03 seconds`.",
-            "When it snaps correctly, the wait block moves below the new if.",
-            "Put an `and` operator in the new if's condition space. On its left, build `Enemy Shot Active = 1`. On its right, add the Sensing block `touching Player` and choose Player from the menu.",
-            "Inside the collision if, the first block must be `set Enemy Shot Active to 0`. Set it first so another loop pass sees that the hit was already handled.",
+            "When it snaps correctly, the wait block moves below the new `if` block.",
+            "Put an `and` operator in the new `if` block's condition space. On its left, build `Enemy Shot Active = 1`. On its right, add the Sensing block `touching Player` and choose Player from the menu.",
+            "Inside this collision `if` block, the first block must be `set Enemy Shot Active to 0`. Set it first so another loop pass sees that the hit was already handled.",
             "Under that set block, add a nested `if then`. Build `Game State = playing` in its condition space.",
-            "Inside the nested state if, add `set Game State to lost`, then snap `broadcast Lose` directly underneath it. Set the state before broadcasting so another ending sees that the game already ended.",
-            "Read the flight-loop body from top to bottom and check this order: `change y by -7`, Player collision if, then `wait 0.03 seconds`.",
+            "Inside the nested `if` block, add `set Game State to lost`, then snap `broadcast Lose` directly underneath it. Set the state before broadcasting so another ending sees that the game already ended.",
+            "Read the flight-loop body from top to bottom and check this order: `change y by -7`, the Player collision `if` block, then `wait 0.03 seconds`.",
             "For a miss test, show the `Game State` and `Enemy Shot Active` variable displays. Move Player away from the falling shot and let one shot leave the Stage.",
             "A miss must leave Game State as playing and return Enemy Shot Active to 0.",
             "For a hit test, click the green flag and move Player under an incoming shot. Watch the variable displays.",
             "A hit must change Game State to lost and Enemy Shot Active to 0. Click the green flag again and confirm the reset returns Game State to playing.",
             "The `Lose` broadcast will not show the final Game Over backdrop yet. Chapter 5 adds the matching `when I receive Lose` script. In this chapter, the visible `lost` value and hidden shot prove that collision works.",
-            "Turn off the temporary variable monitors after both tests."
+            "Turn off the temporary variable displays after both tests."
           ],
           "hints": [
             "Changing `Game State` before the broadcast prevents another loss cause from starting a second ending.",
             "Place collision before the short wait so a visible overlap is noticed promptly.",
-            "The first if asks whether this active shot touches Player. The smaller nested if checks whether another ending has already changed the game state.",
-            "If the new if attaches below `wait 0.03`, drag it by its top edge onto the connection above the wait until the wait moves underneath it."
+            "The first `if` block asks whether this active shot touches Player. The smaller nested `if` block checks whether another ending has already changed the game state.",
+            "If the new `if` block attaches below `wait 0.03`, drag it by its top edge onto the connection above the wait until the wait moves underneath it."
           ],
           "debuggingTips": [
             {
@@ -1019,14 +1029,14 @@
             {
               "symptom": "A hit hides the shot but Game State stays playing.",
               "checks": [
-                "Put the `Game State = playing` if below `set Enemy Shot Active to 0` inside the collision if.",
-                "Put both `set Game State to lost` and `broadcast Lose` inside that nested state if."
+                "Put the `if Game State = playing` block below `set Enemy Shot Active to 0`, inside the collision `if` block.",
+                "Put both `set Game State to lost` and `broadcast Lose` inside that nested `if` block."
               ]
             },
             {
               "symptom": "A miss changes Game State to lost.",
               "checks": [
-                "Confirm the loss blocks are inside the `Enemy Shot Active = 1 and touching Player` collision if.",
+                "Confirm the loss blocks are inside the `if Enemy Shot Active = 1 and touching Player` block.",
                 "Move Player clear of the shot's x position and repeat the miss test after a green-flag reset."
               ]
             }
@@ -1061,15 +1071,15 @@
             "Under the clone's position block, add `set Health to 3`, `switch costume to Full`, `show`, and `forever` in that exact order.",
             "Inside forever, add the first `if then` for Player Laser damage. Put an `and` operator in its condition space.",
             "On the left of `and`, build `Laser Active = 1`. On the right, choose the Sensing block `touching Player Laser`.",
-            "Inside that collision if, the first block must be `set Laser Active to 0`. Set it first so every script sees that this laser hit was handled.",
+            "Inside that collision `if` block, the first block must be `set Laser Active to 0`. Set it first so every script sees that this laser hit was handled.",
             "Directly under it, add `change Health by -1`.",
-            "Still inside the Player Laser collision if, add three separate `if` blocks at the same level and in this order.",
+            "Still inside the Player Laser collision `if` block, add three separate `if` blocks at the same level and in this order.",
             "If `Health = 2`, switch to Damaged. If `Health = 1`, switch to Critical. If `Health = 0`, hide and attach `delete this clone` directly under hide.",
-            "Below the first collision if, add a second `if then` in the same forever loop. Do not place it inside the first if.",
+            "Below the first collision `if` block, add a second `if then` in the same forever loop. Do not place it inside the first `if` block.",
             "Build the condition `Enemy Shot Active = 1 and touching Enemy Shot`.",
-            "Inside it, set `Enemy Shot Active` to 0 first. Then repeat the same Health, costume, hide, and delete blocks.",
-            "Check the forever loop from top to bottom. It must contain two separate collision ifs at the same level: Player Laser first and Enemy Shot second.",
-            "Each collision if must contain its own three separate Health checks.",
+            "Inside it, set `Enemy Shot Active` to 0 first. Then add the same Health, costume, hide, and delete blocks that you used for Player Laser.",
+            "Check the forever loop from top to bottom. It must contain two separate collision `if` blocks at the same level: Player Laser first and Enemy Shot second.",
+            "Each collision `if` block must contain its own three separate Health checks.",
             "Click the green flag and confirm exactly three Full bunkers appear at x -130, 0, and 130. If a clone appears in the wrong place, recheck the number spaces in the `+` and `*` blocks before testing damage.",
             "Before the damage test, temporarily change Enemy Shot's `pick random 1.5 to 3` to `pick random 99 to 99`. This stops enemy fire from changing the bunkers while you test.",
             "Test the costumes and separate Health values. Hit the left bunker twice with Player Laser, then hit the right bunker once.",
@@ -1078,14 +1088,14 @@
             "Then fire at the middle bunker. The fourth shot on the left must pass through, while the middle bunker must still absorb its shot.",
             "Change Enemy Shot's wait back to `pick random 1.5 to 3`. Restart with the green flag, move Player aside, and watch Enemy Shot.",
             "A shot that misses through a gap is valid and must leave Game State playing.",
-            "Keep watching until a lane reaches a Bunker. It must set Enemy Shot Active to 0 and damage only that clone.",
-            "Click the green flag once more and check that all three Bunkers return at Full. Turn off any temporary variable monitors after the test."
+            "Keep watching until a shot in a lane lines up with a Bunker and hits it. The Bunker must set `Enemy Shot Active` to 0 and damage only that clone.",
+            "Click the green flag once more and check that all three Bunkers return at Full. Turn off any temporary variable displays after the test."
           ],
           "hints": [
             "Bunker numbers 0, 1, and 2 produce x positions -130, 0, and 130.",
             "Set each shot's Active variable to 0 before changing Health. Then another loop pass sees that the hit was already handled and cannot damage the same bunker again.",
             "Build the `-130 + Bunker Number * 130` group of operators in an empty part of the Code area if it will not fit into x. Then drag the complete formula into the x number space.",
-            "You can finish the whole Player Laser collision if, right-click its top edge, choose duplicate, and place the copy below it. In the copy, change both Laser Active menus to Enemy Shot Active and change touching Player Laser to touching Enemy Shot.",
+            "You can finish the whole Player Laser collision `if` block, right-click its top edge, choose duplicate, and place the copy below it. In the copy, change both Laser Active menus to Enemy Shot Active and change touching Player Laser to touching Enemy Shot.",
             "Make sure `delete this clone` snaps directly under hide before you let go. A loose block that only looks close will not run."
           ],
           "debuggingTips": [
@@ -1120,7 +1130,7 @@
             {
               "symptom": "Only Player Laser damage works, or only Enemy Shot damage works.",
               "checks": [
-                "Keep the two large shot-collision ifs as separate `if` blocks at the same level inside forever.",
+                "Keep the two large shot-collision `if` blocks as separate `if` blocks at the same level inside forever.",
                 "In the second copy, change the active variable and the touching menu to Enemy Shot in both required places."
               ]
             }
@@ -1145,12 +1155,14 @@
         {
           "id": "defense-checkpoint",
           "kind": "checkpoint",
-          "title": "Checkpoint: Lane Fire and Independent Cover",
-          "explanation": "The return-fire system now uses one shot with a calculated position and three separate shields. Shared fleet coordinates place the shot. Because `Health` is `For this sprite only`, each Bunker clone keeps its own value.",
+          "title": "Checkpoint: Lane Fire and Separate Bunkers",
+          "explanation": "The return-fire system now uses one shot with a calculated position and three separate Bunkers. Shared fleet coordinates place the shot. Because `Health` is `For this sprite only`, each Bunker clone keeps its own value.",
           "instructions": [
             "Choose File > Save now.",
-            "Compare Enemy Shot and Bunker with the complete Chapter 4 code below.",
-            "Run one test where Enemy Shot misses everything, one where each type of shot hits a bunker, and one where Enemy Shot hits Player.",
+            "Compare Enemy Shot and Bunker with the complete Chapter 4 code in the finished code section on this page.",
+            "Test a miss: let Enemy Shot fall without touching anything.",
+            "Test bunker hits: hit a bunker with Player Laser, then let Enemy Shot hit a bunker.",
+            "Test a Player hit: let Enemy Shot hit Player.",
             "Confirm a bunker hit does not cause Player loss.",
             "Restart and check that all three Full bunkers return and Enemy Shot stays hidden until its next launch."
           ],
@@ -1209,8 +1221,7 @@
             "Select Mothership and confirm `Active` was made `For this sprite only`.",
             "Confirm its centered costume is no larger than 40 pixels wide by 12 pixels high so it cannot overlap the 18-pixel Alien costume below it.",
             "Find Mothership's existing `when I receive Reset Game` script from Chapter 1. Snap `set Active to 0` directly under its `hide` block.",
-            "Remove any clone blocks or separate always-running collision script from Mothership.",
-            "Place both motion and hit checking in the one pass script built next."
+            "If you added any clone blocks to Mothership while experimenting, remove them."
           ],
           "hints": [
             "One script makes it easy to prove one pass can award the bonus once.",
@@ -1227,7 +1238,7 @@
             }
           ],
           "checkpoint": {
-            "task": "Run Reset Game and check Mothership.",
+            "task": "Click the green flag, select Mothership, and click its `Active` variable block to see the value.",
             "expectedResult": "Mothership is hidden, Active is 0, and it has no clone code.",
             "completeWhen": [
               "`Active` belongs only to Mothership.",
@@ -1248,12 +1259,15 @@
           "title": "Fly the Mothership and Score Once",
           "explanation": "After a random delay, Mothership begins one pass. During that pass it checks for an active Player Laser. On a hit, it first sets `Active` and `Laser Active` to 0, so every script sees that the hit was handled. Then it adds exactly 50 points. Setting `Active` to 0 ends the pass and prevents another score from the same appearance.",
           "instructions": [
-            "Add the Mothership `Start Game` script shown below.",
+            "Add a `when I receive Start Game` script to Mothership. The full script is in the finished code section on this page.",
             "Inside forever, wait a random 8 to 14 seconds. Then add `if Game State = playing` and build the rest of the pass inside it.",
             "Go to x -230, y 160, set Active to 1, and show.",
-            "Add `repeat until`. It stops when Active is 0, x is over 230, or Game State is not playing. Inside it, move right by 5 and wait 0.03 seconds.",
-            "On an active laser touch, set Active to 0 and `Laser Active` to 0 before adding 50 to Score.",
-            "After the repeat, but still inside the if, hide and set Active to 0. Then the forever loop waits for another pass."
+            "Add `repeat until`. It stops when Active is 0, x is over 230, or Game State is not playing.",
+            "Inside `repeat until`, add `change x by 5`.",
+            "Directly under it, add a collision `if then`. Its condition needs all three of these: `Active = 1`, `Laser Active = 1`, and `touching Player Laser`. Put one `and` inside another to join them.",
+            "Inside the collision `if` block, set Active to 0 and `Laser Active` to 0 first. Then change Score by 50.",
+            "Below the collision `if` block, but still inside `repeat until`, add `wait 0.03 seconds`.",
+            "After the repeat, but still inside the `if Game State = playing` block, hide and set Active to 0. Then the forever loop waits for another pass."
           ],
           "hints": [
             "A laser hit makes the Player Laser loop end and hide because `Laser Active` becomes 0.",
@@ -1308,12 +1322,17 @@
             "Do not broadcast Reset Game from either ending. Do not add a Restart key or button.",
             "Test a loss by letting Enemy Shot hit Player.",
             "Test the other loss by letting the fleet invade.",
-            "Test a win by destroying all 24 aliens.",
+            "Test a win by destroying all 24 aliens. The fleet can invade in about 40 seconds, so first use the hints on this page to slow the game down. Undo those changes after the test.",
             "In every result, Score and Aliens Left may stay visible, but no gameplay sprite may cover the backdrop."
           ],
           "hints": [
             "The startup state is `starting`, so a temporary count of zero during reset cannot cause a win.",
-            "The Stage uses `broadcast End Cleanup and wait`, so cleanup finishes before `stop all`. The result backdrop stays clear, and the next green-flag click performs the only restart."
+            "The Stage uses `broadcast End Cleanup and wait`, so cleanup finishes before `stop all`. The result backdrop stays clear, and the next green-flag click performs the only restart.",
+            "For a focused win test, first change each of the Stage's three `wait 0.35 seconds` blocks to `wait 99 seconds`.",
+            "Temporarily change Enemy Shot's `pick random 1.5 to 3` to `pick random 99 to 99` and Mothership's `pick random 8 to 14` to `pick random 99 to 99`.",
+            "Keep Player Laser moving by 10 so it cannot skip through a target.",
+            "After the test, restore all five original waits exactly: the three 0.35-second waits, the 1.5-to-3-second random wait, and the 8-to-14-second random wait.",
+            "Do not change `Aliens Left` manually during the final test."
           ],
           "debuggingTips": [
             {
@@ -1434,7 +1453,7 @@
             "Choose a short hit sound for Alien, rename it `alien hit`, and start it immediately before deleting a hit clone.",
             "Choose a distinct bonus sound for Mothership, rename it `bonus`, and start it immediately after adding 50 points.",
             "Choose a quiet firing sound for Player Laser, rename it `laser`, and start it after the sprite shows.",
-            "Place the `Score` and `Aliens Left` monitors where they do not cover the Mothership or fleet.",
+            "Place the `Score` and `Aliens Left` displays where they do not cover the Mothership or fleet.",
             "Use readable colors on You Win and Game Over backdrops.",
             "Keep sounds short so they do not delay movement scripts; use `start sound`, not `play sound until done`."
           ],
@@ -1455,11 +1474,62 @@
             "task": "Play until you hear a fire, Alien hit, and Mothership bonus sound.",
             "expectedResult": "Each important event has brief distinct feedback and gameplay timing remains unchanged.",
             "completeWhen": [
-              "Monitors remain readable without covering targets.",
+              "Variable displays remain readable without covering targets.",
               "Sounds do not pause scripts.",
               "Score values remain 10 per Alien and 50 per Mothership hit."
             ]
           }
+        },
+        {
+          "id": "stop-collisions-after-ending",
+          "kind": "build",
+          "title": "Stop Collisions When the Game Ends",
+          "explanation": "A shot could still be touching something at the moment a game ends. Add a `Game State = playing` check to each collision so nothing can score or take damage after an ending. Normal play does not change.",
+          "instructions": [
+            "Select Alien and find the collision condition in its `forever` loop. Drag `Laser Active = 1` out to an empty part of the Code area.",
+            "Drag a new `and` into the space it left. On the left of the new `and`, build `Game State = playing`. On the right, put `Laser Active = 1` back.",
+            "Add `Game State = playing` to the Bunker collision condition for Player Laser in the same way.",
+            "Add `Game State = playing` to the Bunker collision condition for Enemy Shot. Here, drag out `Enemy Shot Active = 1` and put it back on the right of the new `and`.",
+            "Add `Game State = playing` to the Mothership collision condition. Here, drag out `Active = 1` and put it back on the right of the new `and`.",
+            "Leave the outer `forever` loops on Enemy Shot and Mothership as they are. Only these four conditions change.",
+            "Click the green flag. Shoot an Alien, a Bunker, and a Mothership, and confirm that each one still reacts."
+          ],
+          "hints": [
+            "Dragging out one operator leaves its neighbor in place, so you do not need to rebuild the whole condition.",
+            "Compare your conditions with the finished code section on this page."
+          ],
+          "debuggingTips": [
+            {
+              "symptom": "Nothing can be hit after this change.",
+              "checks": [
+                "Check the spelling of `playing` in each new condition.",
+                "Make sure the new `and` is completely filled on both sides."
+              ]
+            }
+          ],
+          "checkpoint": {
+            "task": "Hit an Alien, a Bunker, and a Mothership in one game.",
+            "expectedResult": "Each hit still works: the Alien adds 10 points, the Bunker takes damage, and the Mothership adds 50 points.",
+            "completeWhen": [
+              "The Alien collision condition includes `Game State = playing`.",
+              "Both Bunker collision conditions include `Game State = playing`.",
+              "The Mothership collision condition includes `Game State = playing`."
+            ]
+          },
+          "finishedCode": [
+            {
+              "target": "Alien clone script with the playing check",
+              "code": "when I start as a clone\ngo to x: ((Fleet X) + ((My Column) * (45))) y: ((Fleet Y) - ((My Row) * (35)))\nshow\nforever\n  if <<<(Game State) = [playing]> and <(Laser Active) = (1)>> and <touching [Player Laser v]?>> then\n    set [Laser Active v] to (0)\n    change [Score v] by (10)\n    change [Aliens Left v] by (-1)\n    start sound [alien hit v]\n    delete this clone\n  end\nend"
+            },
+            {
+              "target": "Bunker clone script with the playing checks",
+              "code": "when I start as a clone\ngo to x: ((-130) + ((Bunker Number) * (130))) y: (-105)\nset [Health v] to (3)\nswitch costume to [Full v]\nshow\nforever\n  if <<<(Game State) = [playing]> and <(Laser Active) = (1)>> and <touching [Player Laser v]?>> then\n    set [Laser Active v] to (0)\n    change [Health v] by (-1)\n    if <(Health) = (2)> then\n      switch costume to [Damaged v]\n    end\n    if <(Health) = (1)> then\n      switch costume to [Critical v]\n    end\n    if <(Health) = (0)> then\n      hide\n      delete this clone\n    end\n  end\n  if <<<(Game State) = [playing]> and <(Enemy Shot Active) = (1)>> and <touching [Enemy Shot v]?>> then\n    set [Enemy Shot Active v] to (0)\n    change [Health v] by (-1)\n    if <(Health) = (2)> then\n      switch costume to [Damaged v]\n    end\n    if <(Health) = (1)> then\n      switch costume to [Critical v]\n    end\n    if <(Health) = (0)> then\n      hide\n      delete this clone\n    end\n  end\nend"
+            },
+            {
+              "target": "Mothership pass script with the playing check",
+              "code": "when I receive [Start Game v]\nforever\n  wait (pick random (8) to (14)) seconds\n  if <(Game State) = [playing]> then\n    go to x: (-230) y: (160)\n    set [Active v] to (1)\n    show\n    repeat until <<<(Active) = (0)> or <(x position) > (230)>> or <not <(Game State) = [playing]>>>\n      change x by (5)\n      if <<<<(Game State) = [playing]> and <(Active) = (1)>> and <(Laser Active) = (1)>> and <touching [Player Laser v]?>> then\n        set [Active v] to (0)\n        set [Laser Active v] to (0)\n        change [Score v] by (50)\n        start sound [bonus v]\n      end\n      wait (0.03) seconds\n    end\n    hide\n    set [Active v] to (0)\n  end\nend"
+            }
+          ]
         },
         {
           "id": "audit-architecture",
@@ -1469,12 +1539,11 @@
           "instructions": [
             "Check every sprite for `create clone`. It must appear only in the Alien and Bunker reset scripts.",
             "Check Enemy Shot. It must use `Fleet X`, `Fleet Y`, and `Shot Lane`, and it must never use `go to Alien`.",
-            "Check Mothership. Active must become 0 before another 50-point score could happen.",
+            "Check Mothership's collision `if` block. `set Active to 0` must come before `change Score by 50`.",
             "Check Alien collision. `Aliens Left` must decrease before `delete this clone`.",
-            "Add `Game State = playing` to the Alien collision condition.",
-            "Add `Game State = playing` to both Bunker shot-collision conditions.",
-            "Add `Game State = playing` to the Mothership collision condition.",
-            "Keep Enemy Shot and Mothership using their existing outer `forever` loops. Only the work inside those loops uses the playing-state checks.",
+            "Check that `Game State = playing` is in the Alien collision condition.",
+            "Check that `Game State = playing` is in both Bunker collision conditions.",
+            "Check that `Game State = playing` is in the Mothership collision condition.",
             "Check every way to lose. Each one must require `Game State = playing` and set Game State to lost before broadcasting Lose.",
             "Check all six sprites for an `End Cleanup` script that finishes and has no forever loop.",
             "Check both ending scripts on the Stage. Cleanup must finish before `stop all`, and there must be no in-game restart. The green flag is the only restart."
@@ -1501,7 +1570,7 @@
           ],
           "checkpoint": {
             "task": "Complete the code organization check.",
-            "expectedResult": "Every system has one clear sprite script or script on the Stage doing its job, ending collisions check Game State, cleanup scripts finish without forever loops, and all required rules are visible in the code.",
+            "expectedResult": "Each job is done by one clear script, collisions check Game State, cleanup scripts finish without forever loops, and all required rules are visible in the code.",
             "completeWhen": [
               "Only Alien and Bunker create clones.",
               "All Active variables are set to 0 before scoring or damage.",

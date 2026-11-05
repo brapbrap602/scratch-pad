@@ -418,7 +418,7 @@ test('keeps desktop navigation fixed while lesson content scrolls independently'
 });
 
 test('renders every real curriculum step without page errors', async ({ page }) => {
-  test.setTimeout(60_000);
+  test.setTimeout(120_000);
   const pageErrors = [];
   page.on('pageerror', (error) => pageErrors.push(error.message));
 

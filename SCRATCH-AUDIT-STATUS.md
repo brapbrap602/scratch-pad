@@ -127,7 +127,7 @@ loaded March Right/Left parentage before runtime tests.
 | `tools/recover-scratch-live.py` | Recovers the complete ignored driver set only from sessions rooted at this workspace, resolves candidate paths against the repo, validates in staging, and refuses to overwrite live files |
 | `playwright.config.mjs` | Uses `test-results/playwright` so normal site tests cannot erase sibling `scratch-live` evidence |
 | `playwright.visual.config.mjs` | Uses `test-results/playwright-visual` so visual tests also preserve `scratch-live` evidence |
-| `tests/e2e/app.spec.mjs` | Polls narration cleanup and gives the intentionally exhaustive all-curriculum render test an explicit 60-second timeout |
+| `tests/e2e/app.spec.mjs` | Polls narration cleanup and gives the intentionally exhaustive all-curriculum render test an explicit 120-second timeout |
 | `tests/visual/site.visual.spec.mjs` | Added targeted screenshots of changed final-code entries (endings, invasion, Enemy Shot, Bunker, Mothership) |
 
 Latest local regression (all green):

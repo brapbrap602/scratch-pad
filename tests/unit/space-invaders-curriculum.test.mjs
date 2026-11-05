@@ -214,3 +214,49 @@ test('later sprites extend their Chapter 1 Reset Game script instead of adding a
   const learnerText = steps.map((entry) => entry.instructions.join('\n')).join('\n');
   assert.doesNotMatch(learnerText, /add (?:a|the) `Reset Game`(?: cloning)? script/i);
 });
+
+test('instructions point to finished code where the page actually shows it', () => {
+  const instructions = steps.flatMap((entry) => entry.instructions).join('\n');
+  assert.doesNotMatch(instructions, /(?:shown|code) below/i);
+  assert.match(instructions, /finished code section on this page/);
+  assert.doesNotMatch(instructions, /Click (?:the )?(?:Show )?finished code section/i);
+});
+
+test('Chapter 1 backdrop steps make the ending screens before the player text', () => {
+  assertInstructionsInOrder(step('create-stage-and-sprites').instructions, [
+    /Backdrops tab/,
+    /Rename.*`Space`/,
+    /duplicate.*`You Win`.*`Game Over`/i,
+    /Text tool.*You Win/,
+    /Select `Space` again/,
+    /Type the controls.*Space key: fire/,
+    /Type the goal/,
+    /Type the scoring/,
+    /`Player`.*y -60/,
+    /Line tool.*Stage preview/,
+  ]);
+});
+
+test('the temporary broadcast block is removed once the startup script exists', () => {
+  assert.doesNotMatch(step('create-shared-language').instructions.join('\n'), /delete the temporary/i);
+  assertInstructionsInOrder(step('reset-and-control-player').instructions, [
+    /green-flag script/,
+    /Delete the temporary `broadcast` block/,
+  ]);
+});
+
+test('Chapter 6 teaches the playing checks in a build step and only checks them later', () => {
+  const build = step('stop-collisions-after-ending');
+  assert.equal(build.kind, 'build');
+  assertInstructionsInOrder(build.instructions, [
+    /Alien.*`Laser Active = 1`/,
+    /new `and`.*left.*`Game State = playing`.*right.*`Laser Active = 1`/,
+    /Bunker.*Player Laser/,
+    /Bunker.*Enemy Shot/,
+    /Mothership.*`Active = 1`/,
+  ]);
+  for (const { code } of build.finishedCode) assert.match(code, /\(Game State\) = \[playing\]/);
+  assert.equal(step('audit-architecture').instructions.some((text) => text.startsWith('Add ')), false);
+  const chapterSteps = lesson.chapters[5].steps.map(({ id }) => id);
+  assert.ok(chapterSteps.indexOf(build.id) < chapterSteps.indexOf('audit-architecture'));
+});
