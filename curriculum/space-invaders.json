@@ -21,13 +21,17 @@
     "Complete all six chapters in order; this course has one required path.",
     "Plan for 90-120 minutes per chapter. Scratch saves your project to your account; also choose File > Save now at each chapter checkpoint. To continue later, sign in, open My Stuff, and click See inside on your project.",
     "Use the exact sprite, variable, costume, backdrop, and message names shown so the code references match.",
-    "Keep every costume centered and inside the maximum width and height given in Chapter 1 so separate targets cannot overlap.",
+    "Keep every costume centered and inside the maximum width and height given in Chapter 1 so sprites do not overlap by accident.",
     "Use the green flag as the only way to start or restart the game."
   ],
   "vocabulary": [
     {
+      "term": "pixel",
+      "meaning": "One of the tiny dots that make up the screen. The Stage is 480 pixels wide and 360 pixels high."
+    },
+    {
       "term": "coordinate",
-      "meaning": "A number that describes a sprite position. X moves left and right; Y moves down and up."
+      "meaning": "A number that says where a sprite is. x goes from -240 on the left to 240 on the right. y goes from -180 at the bottom to 180 at the top. The middle of the Stage is x 0, y 0."
     },
     {
       "term": "clone",
@@ -80,7 +84,7 @@
           "title": "Map the Complete Game",
           "explanation": "A reliable game starts with a clear plan. The Stage will reset shared data and control the alien march. One Alien sprite will make 24 clones. Player Laser, Enemy Shot, and Mothership will each be one reusable sprite with no clones. Each of the three Bunker clones will remember its own Health value.",
           "instructions": [
-            "Sign in to Scratch, click Create, and delete the Cat sprite.",
+            "Sign in to Scratch and click Create. Keep the Cat for now, because you will use it in the next step.",
             "Type Space Invaders in the project title box at the top of the editor.",
             "On paper or in a note, write down the six sprites you will need: `Player`, `Alien`, `Player Laser`, `Enemy Shot`, `Bunker`, and `Mothership`.",
             "Picture an 8-column by 3-row alien fleet. That is 24 aliens. `Aliens Left` counts up to 24 during setup, and the player wins when it reaches 0.",
@@ -111,6 +115,44 @@
           }
         },
         {
+          "id": "learn-stage-numbers",
+          "kind": "setup",
+          "title": "Learn the Stage's Numbers",
+          "explanation": "Scratch uses numbers to say where a sprite is. These numbers count pixels, the tiny dots that make up the screen. The Stage is 480 pixels wide and 360 pixels high. A costume that is 36 pixels wide is small: about 13 of them fit side by side across the Stage. Try the numbers with the Cat now, because every later step uses them.",
+          "instructions": [
+            "Drag the Cat around the Stage and watch the x and y boxes under the Stage change.",
+            "Use those boxes to move the Cat to x 0, y 0. The Cat jumps to the middle of the Stage.",
+            "Drag the Cat right, then left. x gets bigger going right. Left of the middle, x has a minus sign.",
+            "Drag the Cat up, then down. y gets bigger going up. Below the middle, y has a minus sign.",
+            "Use the y box to move the Cat to y -60, then to y -120. The bigger the number after the minus sign, the lower the Cat goes.",
+            "Drag a `change x by 10` block into the Code area and click it a few times. x changes by 10 on each click, so the Cat moves 10 pixels to the right.",
+            "Change the block to `change y by -10` and click it a few times. The Cat moves down 10 pixels on each click.",
+            "Delete that block, then delete the Cat by clicking the trash can on its thumbnail in the sprite list."
+          ],
+          "hints": [
+            "The edges of the Stage are x -240 on the left, x 240 on the right, y -180 at the bottom, and y 180 at the top.",
+            "Press Enter after you type in a box."
+          ],
+          "debuggingTips": [
+            {
+              "symptom": "The Cat does not move when you type a number.",
+              "checks": [
+                "Press Enter after typing.",
+                "Make sure the Cat is selected in the sprite list."
+              ]
+            }
+          ],
+          "checkpoint": {
+            "task": "Without looking back, say where each of these is: x 0, y 0; x -210; and y -150. Then say what `change y by -10` does.",
+            "expectedResult": "x 0, y 0 is the middle of the Stage. x -210 is near the left edge. y -150 is near the bottom. `change y by -10` moves a sprite down 10 pixels.",
+            "completeWhen": [
+              "You can explain what a minus sign means for x and for y.",
+              "You know that a bigger x means further right and a bigger y means higher up.",
+              "The Cat is deleted."
+            ]
+          }
+        },
+        {
           "id": "create-stage-and-sprites",
           "kind": "setup",
           "title": "Create the Stage and Six Sprites",
@@ -126,7 +168,8 @@
             "Type the goal: Destroy all Aliens to win. Avoid Enemy Shots. Stop the Aliens from reaching the invasion line.",
             "Type the scoring: Aliens: 10 points each. Mothership: 50 points. The Mothership is a bonus enemy ship you will build in Chapter 5.",
             "Keep the words small so they do not distract from the game. Sprites move in front of the backdrop, so the words cannot affect play.",
-            "To make each sprite below, point at the cat button in the bottom right and click Paint. Rename the sprite in the Sprite box under the Stage. To center a costume, drag its artwork over the small center mark in the middle of the paint canvas.",
+            "To make each sprite below, point at the cat button in the bottom right and click Paint. Rename the sprite in the Sprite box under the Stage.",
+            "Paint each shape over the small center mark in the middle of the canvas. A costume is centered when that mark is in the middle of the artwork. Set the Outline number to 0 so an outline does not add to the size.",
             "Create a ship sprite named `Player`. Center its artwork and keep its visible costume no larger than 36 pixels wide by 18 pixels high.",
             "Select `Player` and use the y box under the Stage to move it to y -60. Player now marks the height of the invasion line. A later script moves it back to its real starting place.",
             "Select the Stage and the `Space` backdrop. Use the Line tool and a dim color to draw a thin line across the whole backdrop. Watch the Stage preview and make the line pass through the middle of Player.",
@@ -135,11 +178,13 @@
             "Paint two thin, upright sprites named `Player Laser` and `Enemy Shot`. Center each one and keep it no larger than 4 pixels wide by 10 pixels high. Make Player Laser bright and Enemy Shot red.",
             "Create a centered `Bunker` no larger than 56 pixels wide by 18 pixels high.",
             "Create a centered `Mothership` no larger than 40 pixels wide by 12 pixels high.",
-            "Check each sprite on its Costumes tab. The size is printed beside the costume name in the thumbnail list. Do not continue until every costume is centered and inside its maximum size."
+            "Check each sprite on its Costumes tab. The thumbnail shows two numbers, such as 36 x 18. The first is the width and the second is the height.",
+            "If a shape is too big, select it with the arrow tool and drag a corner to shrink it. Do not use the Size box under the Stage, because that does not change the costume's numbers.",
+            "Do not continue until every costume is centered and inside its maximum size."
           ],
           "hints": [
             "Simple geometric art is easier to resize and test than detailed art.",
-            "Use the zoom buttons below the paint canvas to draw tiny costumes more easily."
+            "Use the zoom buttons below the paint canvas to draw tiny costumes more easily. A 4-pixel laser is only as wide as four of those tiny dots."
           ],
           "debuggingTips": [
             {
@@ -211,12 +256,12 @@
           "instructions": [
             "On the Stage, add the green-flag script. Every block is in the finished code section on this page. If that section is closed, click Show finished code. Use `broadcast Reset Game and wait` so all setup finishes before `Game State` becomes `playing`.",
             "Delete the temporary `broadcast` block from the last step. The startup script now uses both messages, so Scratch keeps them.",
-            "On Player, reset its position to x 0, y -150 and show it when `Reset Game` arrives.",
+            "On Player, reset its position to x 0, y -150, which is near the bottom of the Stage, and show it when `Reset Game` arrives.",
             "On Alien, Player Laser, Enemy Shot, Bunker, and Mothership, add a `when I receive Reset Game` script with `hide`. In later chapters, add each sprite's other reset blocks to this same script.",
             "On Player, start a movement script when `Start Game` arrives. Add `repeat until`, and for its condition put `Game State = playing` inside a `not` block. Movement then stops when the game ends.",
-            "Move left or right by 6 while the matching arrow key is pressed.",
-            "Keep Player between x -210 and x 210 so it cannot leave the Stage.",
-            "Click the green flag and test both edges."
+            "Move left or right by 6 while the matching arrow key is pressed. Player moves 6 pixels each time the loop runs, so a bigger number would make it faster.",
+            "Keep Player between x -210 and x 210. The edges of the Stage are at x -240 and x 240, so Player stays fully on the Stage.",
+            "Click the green flag and move to both sides. With Player selected, the x box under the Stage should stop at -210 and 210."
           ],
           "hints": [
             "Put the two edge checks inside the movement loop, after the movement blocks.",
@@ -272,7 +317,7 @@
             "Choose File > Save now.",
             "Click My Stuff at the top of the page, then click See inside on Space Invaders. Open a broadcast menu and check that it shows `Reset Game` and `Start Game` but no unused `message1`.",
             "Click the green flag, move Player, then click the green flag again while Player is moving.",
-            "Confirm Player returns to x 0, y -150 and the Space backdrop returns.",
+            "With Player selected, check that the boxes under the Stage show x 0, y -150, and that the Space backdrop returns.",
             "Compare your Stage and Player scripts with the complete Chapter 1 code in the finished code section on this page.",
             "Do not continue until every required sprite, variable, message, and backdrop name matches."
           ],
@@ -333,7 +378,7 @@
           "explanation": "The hidden original Alien creates all the clones. Before it creates each clone, it changes its own row and column values. Scratch copies those `For this sprite only` values into the new clone, so every Alien clone remembers its row and column.",
           "instructions": [
             "Select Alien and confirm `My Column`, `My Row`, and `Is Clone` say `For this sprite only`.",
-            "Confirm the centered Alien costume is no larger than 32 pixels wide by 18 pixels high so rows and columns cannot overlap.",
+            "On Alien's Costumes tab, check that the centered costume is no larger than 32 x 18. Those are the width and height in pixels, and they stop rows and columns from overlapping.",
             "Find Alien's existing `when I receive Reset Game` script from Chapter 1. Under its `hide` block, add the cloning blocks from the finished code section on this page. Do not add a second `when I receive Reset Game` event block.",
             "Set `Is Clone` to 1 before creating clones and back to 0 afterward. This tells the hidden original apart from its clones.",
             "Change `Aliens Left` by 1 for each clone so the final count is exactly 24."
@@ -371,7 +416,7 @@
           "id": "place-alien-grid",
           "kind": "build",
           "title": "Place the 8 by 3 Grid",
-          "explanation": "Every clone works out its position from the fleet's starting coordinates and its own row and column. Columns are 45 pixels apart and rows are 35 pixels apart. The same formula keeps working when the Stage changes `Fleet X` and `Fleet Y`.",
+          "explanation": "Every clone works out its position from the fleet's starting coordinates and its own row and column. Columns are 45 pixels apart and rows are 35 pixels apart. An Alien is at most 32 pixels wide and 18 pixels high, so there is always a gap between them. The same formula keeps working when the Stage changes `Fleet X` and `Fleet Y`.",
           "instructions": [
             "Under `when I start as a clone`, add the Motion block `go to x: y:`. For x, build `Fleet X + My Column * 45`.",
             "For y, build `Fleet Y - My Row * 35`.",
@@ -381,7 +426,7 @@
           ],
           "hints": [
             "Build the multiplication operator first. Then place it inside the addition or subtraction operator.",
-            "Row zero is at `Fleet Y`; rows one and two are lower."
+            "Row zero is at `Fleet Y`, which starts at 130, near the top of the Stage. Rows one and two are lower."
           ],
           "debuggingTips": [
             {
@@ -425,12 +470,12 @@
             "Inside that check, use the same x and y position formula as clone placement.",
             "Duplicate that script for `March Left`. In the event block's message menu, choose New message and create that exact name.",
             "Duplicate the script again. Choose New message and create `March Down`.",
-            "After `go to x y`, add an `if` that checks `y position < -60` and `Game State = playing`.",
+            "After `go to x y`, add an `if` that checks `y position < -60` and `Game State = playing`. y -60 is the height of your invasion line, so `y position < -60` means the Alien is lower than the line.",
             "Inside that `if`, set Game State to lost. Then choose New message in the broadcast block, create `Lose`, and broadcast it.",
             "Do not change fleet coordinates in Alien. Only the Stage changes `Fleet X` and `Fleet Y`.",
             "Keep the `Is Clone = 1` check so the hidden original does not act like a fleet member.",
             "To test, click the green flag so the clones exist. Then on the Stage, drag out one temporary `broadcast and wait` block for each march message.",
-            "Drag out a temporary `change Fleet X by 10` block and click it. Then click a `broadcast and wait` block. Every Alien should jump 10 pixels to the right. Try each message, also changing `Fleet Y` to test `March Down`.",
+            "Drag out a temporary `change Fleet X by 10` block and click it. Then click a `broadcast and wait` block. Every Alien should take a small jump to the right, and the gaps between them should stay the same. Try each message, also changing `Fleet Y` to test `March Down`.",
             "Delete all of the temporary test blocks from the Stage."
           ],
           "hints": [
@@ -467,7 +512,7 @@
           "id": "conduct-finite-march",
           "kind": "build",
           "title": "Control the Fleet in Three Movement Phases",
-          "explanation": "The Stage controls the fleet with scripts that finish each phase instead of letting 24 clones choose their own movement. In phase 1, the fleet moves right five times. In phase 2, it moves left nine times. In phase 3, it moves right nine times. Each side-to-side phase ends with one move down. The `Stage` variable then switches between 2 and 3.",
+          "explanation": "The Stage controls the fleet with scripts that finish each phase instead of letting 24 clones choose their own movement. Each move changes the fleet's position by 10 pixels. In phase 1, the fleet moves right five times. In phase 2, it moves left nine times. In phase 3, it moves right nine times. Each side-to-side phase ends with one move down. The `Stage` variable then switches between 2 and 3.",
           "instructions": [
             "On the Stage, start a new script with `when I receive Start Game`. These steps build the march script in the finished code section on this page.",
             "Add `repeat until`. For its condition, put `Game State = playing` inside a `not` block.",
@@ -501,7 +546,7 @@
           ],
           "checkpoint": {
             "task": "Watch at least three complete horizontal phases.",
-            "expectedResult": "All 24 aliens move as one shape, step down only at an edge, and set `Game State` to `lost` once an alien drops below y -60.",
+            "expectedResult": "All 24 aliens move as one shape, step down only at an edge, and set `Game State` to `lost` once an alien drops below the invasion line.",
             "completeWhen": [
               "The spaces between aliens never change size while the fleet moves.",
               "Only scripts on the Stage change `Fleet X`, `Fleet Y`, and the `Stage` variable.",
@@ -546,7 +591,7 @@
             "completeWhen": [
               "The count is exactly 24 after every green-flag restart.",
               "Only the three march messages controlled by the Stage move the fleet.",
-              "A clone below y -60 changes `Game State` to `lost`."
+              "An alien below the invasion line changes `Game State` to `lost`."
             ]
           },
           "finishedCode": [
@@ -581,7 +626,7 @@
           "instructions": [
             "Select Player Laser and remove any clone blocks if you experimented earlier.",
             "Find Player Laser's existing `when I receive Reset Game` script from Chapter 1. Snap `set Laser Active to 0` directly under its `hide` block.",
-            "Confirm Player Laser is centered and no larger than 4 pixels wide by 10 pixels high. A 10-pixel laser that moves 10 pixels at a time cannot jump over an 18-pixel alien, and it cannot touch two rows at once.",
+            "On Player Laser's Costumes tab, check that it is centered and no larger than 4 x 10. A 10-pixel laser that moves 10 pixels at a time cannot jump over an 18-pixel alien, and it cannot touch two rows at once.",
             "On Player, add a second, separate `when I receive Start Game` script for firing. Use the same `repeat until not Game State = playing` loop. Do not put firing inside the movement script.",
             "Inside the firing loop, add a condition that checks whether the Space key is pressed and `Laser Active` is 0.",
             "Inside that condition, set `Laser Active` to 1 first so the next loop pass sees that a shot has started.",
@@ -635,9 +680,9 @@
           "explanation": "When the `Fire Laser` message arrives, Player Laser moves to Player, starts a little above the ship, and travels upward. The loop stops when the laser reaches the top, a collision sets `Laser Active` to 0, or play ends. The same sprite then hides and becomes ready again.",
           "instructions": [
             "On Player Laser, add a `when I receive Fire Laser` script. The full script is in the finished code section on this page.",
-            "Add `if Game State = playing`. Inside it, use `go to Player`, then change y by 15 so the shot begins above the ship costume.",
-            "Still inside the `if` block, show the sprite and add `repeat until`. It stops when `Laser Active = 0`, when y position is over 175, or when Game State is not playing.",
-            "Move upward by 10 and wait 0.02 seconds each loop pass.",
+            "Add `if Game State = playing`. Inside it, use `go to Player`, then change y by 15. That starts the shot 15 pixels higher, just above the ship.",
+            "Still inside the `if` block, show the sprite and add `repeat until`. It stops when `Laser Active = 0`, when y position is over 175, just below the top edge at y 180, or when Game State is not playing.",
+            "Inside the loop, change y by 10 and wait 0.02 seconds. Each time the loop runs, the laser moves up 10 pixels.",
             "Below the `if` block, not inside it, hide and set `Laser Active` back to 0. These blocks run even when the game has ended, so the laser is always ready for the next shot.",
             "Fire several separate shots. Only one laser should be on the Stage at a time."
           ],
@@ -666,7 +711,7 @@
             "expectedResult": "One visible laser rises from the current Player position, hides at the top, and can be reused.",
             "completeWhen": [
               "Only one player laser can be visible.",
-              "The laser starts 15 pixels above Player.",
+              "The laser appears just above the ship, not on top of it.",
               "`Laser Active` returns to 0 after each miss."
             ]
           },
@@ -842,10 +887,10 @@
             "In the costume thumbnail list, right-click `Full`, choose `duplicate`, click the copy's name box, type `Damaged`, and press Enter.",
             "Right-click `Full` again, choose `duplicate`, rename this second copy `Critical`, and press Enter. Duplicate Full both times; do not copy a costume that is already damaged.",
             "Select the Eraser tool and change its size box from 40 to 10.",
-            "On `Damaged`, erase two small chunks from the upper edge.",
-            "On `Critical`, erase three small chunks from the upper edge.",
+            "On `Damaged`, erase two small chunks from the upper edge. Click once on the edge for each chunk.",
+            "On `Critical`, erase three small chunks from the upper edge. Click once on the edge for each chunk.",
             "Leave the center and the lower edge solid, so a straight laser or shot can still touch every damage level.",
-            "Click each costume thumbnail and check the size printed beside its name. `Full`, `Damaged`, and `Critical` must each stay centered and no larger than 56 pixels wide by 18 pixels high.",
+            "Check the two size numbers on each costume thumbnail. `Full`, `Damaged`, and `Critical` must each stay centered and no larger than 56 x 18.",
             "Click the `Code` tab, open Variables, and confirm `Health` and `Bunker Number` were made `For this sprite only` on Bunker.",
             "Select Enemy Shot and find the existing `when I receive Reset Game` script from Chapter 1. Snap `set Enemy Shot Active to 0` directly under its `hide` block. Do not add a second `when I receive Reset Game` event block.",
             "Click the green flag once, select Enemy Shot, and confirm the sprite is hidden and `Enemy Shot Active` is 0 before continuing.",
@@ -885,7 +930,7 @@
             "expectedResult": "Bunker damage stays aligned, and Enemy Shot is hidden and ready to be reused after reset.",
             "completeWhen": [
               "All three costume names match exactly.",
-              "All three costumes keep the same centered 56-by-18-or-smaller outside shape.",
+              "All three costumes are centered and no larger than 56 x 18.",
               "Both Bunker variables are `For this sprite only`.",
               "Enemy Shot has one `when I receive Reset Game` script and no clone code."
             ]
@@ -901,7 +946,7 @@
           "id": "launch-lane-enemy-shot",
           "kind": "build",
           "title": "Launch a Shot from a Fleet Lane",
-          "explanation": "A lane is an imaginary vertical firing line for one fleet column. Lane numbers run from 0 on the left to 7 on the right. Enemy Shot uses `Fleet X + Shot Lane * 45` for x and `Fleet Y - 75` for y, so it does not need to select an Alien clone. This calculated launch point overlaps the bottom fleet row vertically, which makes the shot appear to come from the fleet. A cleared lane may still fire. Build each operator carefully and place it in the correct condition or number space.",
+          "explanation": "A lane is an imaginary vertical firing line for one fleet column. Lane numbers run from 0 on the left to 7 on the right. Enemy Shot uses `Fleet X + Shot Lane * 45` for x and `Fleet Y - 75` for y, so it does not need to select an Alien clone. Columns are 45 pixels apart, so each lane lines up with a column. The bottom row is 70 pixels below `Fleet Y`, so 75 starts the shot at about that height, and it looks like the fleet fired it. A cleared lane may still fire. Build each operator carefully and place it in the correct condition or number space.",
           "instructions": [
             "Select Enemy Shot and click `Code`. From Events, drag `when I receive` into an empty part of the Code area and choose `Start Game` from its menu.",
             "From Control, snap a `forever` block under `when I receive Start Game`.",
@@ -922,7 +967,7 @@
             "In the inner `or`, put `Enemy Shot Active = 0` on the left and `y position < -175` on the right.",
             "In the right condition space of the outer `or`, place `not`. Inside `not`, place `Game State = playing`. This third stop reason means that the game is not playing.",
             "Grab the completed outer `or` by the word `or` and place the whole group of operators in the condition space of `repeat until`.",
-            "In an empty part of the Code area, connect `change y by -7` above `wait 0.03 seconds`.",
+            "In an empty part of the Code area, connect `change y by -7` above `wait 0.03 seconds`. Each time the loop runs, the shot moves down 7 pixels.",
             "Drag that two-block script inside `repeat until`.",
             "After `repeat until`, but still inside the `if Game State = playing` block, add `set Enemy Shot Active to 0` followed by `hide`. These two cleanup blocks must not be inside the repeat loop.",
             "Check the finished script from top to bottom. `forever` contains the random wait and the `if Game State = playing` block.",
@@ -935,7 +980,7 @@
             "Lane 0 lines up with the left fleet column and lane 7 with the right fleet column.",
             "The `*` operator belongs inside the right side of `+`. If it sits beside `+`, the x formula is not connected.",
             "The launch y overlaps the original bottom row vertically and follows `Fleet Y` as the fleet descends.",
-            "The inner `or` handles `Enemy Shot Active = 0` and `y position < -175`. The outer `or` adds `not Game State = playing` as the third reason to stop.",
+            "The inner `or` handles `Enemy Shot Active = 0` and `y position < -175`, which is just above the bottom edge at y -180. The outer `or` adds `not Game State = playing` as the third reason to stop.",
             "Building the group of operators and the movement script in an empty part of the Code area helps each piece snap into the correct place."
           ],
           "debuggingTips": [
@@ -1067,7 +1112,7 @@
             "Inside the repeat, add `create clone of myself`.",
             "Directly under that block, but still inside the repeat, add `change Bunker Number by 1`. Keep this order so each clone copies its number before the hidden original changes it.",
             "In an empty part of the Code area, start `when I start as a clone` and add the Motion block `go to x: y:`.",
-            "For x, build `-130 + Bunker Number * 130`: put -130 on the left of `+` and put `Bunker Number * 130` on its right. Set y to -105.",
+            "For x, build `-130 + Bunker Number * 130`: put -130 on the left of `+` and put `Bunker Number * 130` on its right. Set y to -105, which is below the invasion line and above Player.",
             "Under the clone's position block, add `set Health to 3`, `switch costume to Full`, `show`, and `forever` in that exact order.",
             "Inside forever, add the first `if then` for Player Laser damage. Put an `and` operator in its condition space.",
             "On the left of `and`, build `Laser Active = 1`. On the right, choose the Sensing block `touching Player Laser`.",
@@ -1080,7 +1125,7 @@
             "Inside it, set `Enemy Shot Active` to 0 first. Then add the same Health, costume, hide, and delete blocks that you used for Player Laser.",
             "Check the forever loop from top to bottom. It must contain two separate collision `if` blocks at the same level: Player Laser first and Enemy Shot second.",
             "Each collision `if` block must contain its own three separate Health checks.",
-            "Click the green flag and confirm exactly three Full bunkers appear at x -130, 0, and 130. If a clone appears in the wrong place, recheck the number spaces in the `+` and `*` blocks before testing damage.",
+            "Click the green flag and confirm exactly three Full bunkers appear: one on the left, one in the middle, and one on the right, evenly spaced. If a clone appears in the wrong place, recheck the number spaces in the `+` and `*` blocks before testing damage.",
             "Before the damage test, temporarily change Enemy Shot's `pick random 1.5 to 3` to `pick random 99 to 99`. This stops enemy fire from changing the bunkers while you test.",
             "Test the costumes and separate Health values. Hit the left bunker twice with Player Laser, then hit the right bunker once.",
             "The left bunker must be Critical, the middle must still be Full, and the right must be Damaged.",
@@ -1139,7 +1184,7 @@
             "task": "Damage the left bunker twice and the right bunker once.",
             "expectedResult": "The left bunker shows Critical, the middle remains Full, and the right shows Damaged.",
             "completeWhen": [
-              "Exactly three Bunker clones appear at x -130, 0, and 130.",
+              "Exactly three Bunker clones appear, on the left, in the middle, and on the right.",
               "Each clone changes costume according to its own Health.",
               "Player Laser and Enemy Shot can each damage a bunker.",
               "Three total hits delete one bunker."
@@ -1219,14 +1264,14 @@
           "explanation": "Mothership is one reusable sprite and never a clone. Its `Active` variable is made `For this sprite only` and is 1 only during a visible pass. A collision can score only while `Active` is 1.",
           "instructions": [
             "Select Mothership and confirm `Active` was made `For this sprite only`.",
-            "Confirm its centered costume is no larger than 40 pixels wide by 12 pixels high so it cannot overlap the 18-pixel Alien costume below it.",
+            "On Mothership's Costumes tab, check that its centered costume is no larger than 40 x 12, so it stays clear of the top row of Aliens.",
             "Find Mothership's existing `when I receive Reset Game` script from Chapter 1. Snap `set Active to 0` directly under its `hide` block.",
             "If you added any clone blocks to Mothership while experimenting, remove them."
           ],
           "hints": [
             "One script makes it easy to prove one pass can award the bonus once.",
             "To hit Mothership in a test, first clear one column of aliens so your laser has an open path upward.",
-            "The sprite will cross at y 160, above the starting fleet."
+            "The sprite will cross at y 160, near the top edge at y 180 and above the starting fleet."
           ],
           "debuggingTips": [
             {
@@ -1261,9 +1306,9 @@
           "instructions": [
             "Add a `when I receive Start Game` script to Mothership. The full script is in the finished code section on this page.",
             "Inside forever, wait a random 8 to 14 seconds. Then add `if Game State = playing` and build the rest of the pass inside it.",
-            "Go to x -230, y 160, set Active to 1, and show.",
+            "Go to x -230, y 160, set Active to 1, and show. x -230 is at the far left of the Stage, so the Mothership flies in from the side.",
             "Add `repeat until`. It stops when Active is 0, x is over 230, or Game State is not playing.",
-            "Inside `repeat until`, add `change x by 5`.",
+            "Inside `repeat until`, add `change x by 5`. Each time the loop runs, the Mothership moves 5 pixels to the right.",
             "Directly under it, add a collision `if then`. Its condition needs all three of these: `Active = 1`, `Laser Active = 1`, and `touching Player Laser`. Put one `and` inside another to join them.",
             "Inside the collision `if` block, set Active to 0 and `Laser Active` to 0 first. Then change Score by 50.",
             "Below the collision `if` block, but still inside `repeat until`, add `wait 0.03 seconds`.",
@@ -1592,7 +1637,7 @@
             "Defense test: let shots miss, hit each bunker, and hit Player. Expect one reusable lane shot, a separate Health value for each Bunker clone, and a loss only when Player is hit.",
             "Bonus test: hit one Mothership pass; expect exactly 50 bonus points once.",
             "Win test: clear all 24 aliens; expect `Aliens Left` 0, You Win, and stopped play.",
-            "Invasion test: let a live Alien pass y -60. Game Over must appear with no sprites covering it, and play must stop before an Alien overlaps a bunker.",
+            "Invasion test: let a live Alien pass the invasion line. Game Over must appear with no sprites covering it, and play must stop before an Alien overlaps a bunker.",
             "Restart test: after every ending, click only the green flag and expect a complete clean game."
           ],
           "hints": [

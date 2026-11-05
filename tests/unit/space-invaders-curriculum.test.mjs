@@ -260,3 +260,32 @@ test('Chapter 6 teaches the playing checks in a build step and only checks them 
   const chapterSteps = lesson.chapters[5].steps.map(({ id }) => id);
   assert.ok(chapterSteps.indexOf(build.id) < chapterSteps.indexOf('audit-architecture'));
 });
+
+test('learners try the Stage numbers with the Cat before they need them', () => {
+  const ids = lesson.chapters[0].steps.map(({ id }) => id);
+  assert.ok(ids.indexOf('learn-stage-numbers') < ids.indexOf('create-stage-and-sprites'));
+  assert.match(step('learn-stage-numbers').explanation, /480 pixels wide and 360 pixels high/);
+  assertInstructionsInOrder(step('learn-stage-numbers').instructions, [
+    /x 0, y 0/,
+    /y -60.*y -120.*bigger the number after the minus sign/,
+    /`change x by 10`/,
+    /`change y by -10`/,
+    /delete the Cat/,
+  ]);
+  assert.match(step('map-the-game').instructions[0], /Keep the Cat/);
+  assert.ok(lesson.vocabulary.some(({ term }) => term === 'pixel'));
+});
+
+test('costume sizes come with a way to read and fix them', () => {
+  const setup = step('create-stage-and-sprites').instructions.join('\n');
+  assert.match(setup, /36 x 18.*first is the width/);
+  assert.match(setup, /Do not use the Size box/);
+});
+
+test('checks use what learners can see instead of positions of clones', () => {
+  // The x and y boxes only show the original sprite, never a clone.
+  const bunkers = step('build-three-bunkers');
+  assert.doesNotMatch([...bunkers.instructions, ...bunkers.checkpoint.completeWhen].join('\n'), /appears? at x -130/);
+  assert.doesNotMatch(step('alien-fleet-checkpoint').checkpoint.completeWhen.join('\n'), /below y -60/);
+  assert.doesNotMatch(step('run-playtest-matrix').instructions.join('\n'), /pass y -60/);
+});

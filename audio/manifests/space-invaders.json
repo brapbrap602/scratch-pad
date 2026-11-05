@@ -299,12 +299,12 @@
       "sentences": [
         {
           "sourcePath": "requirements/4",
-          "speech": "Keep every costume centered and inside the maximum width and height given in Chapter 1 so separate targets cannot overlap.",
-          "requestHash": "158bee3d4ccc180e366684a100d09ea6254ad96502c78f3768b93fca46775445",
-          "src": "audio/assets/97/97dd533076461a2069fb8e55063b8e78bbe3cd19f758adff5c0a9e50318a0541.mp3",
-          "sha256": "97dd533076461a2069fb8e55063b8e78bbe3cd19f758adff5c0a9e50318a0541",
-          "bytes": 44352,
-          "durationMs": 7392
+          "speech": "Keep every costume centered and inside the maximum width and height given in Chapter 1 so sprites do not overlap by accident.",
+          "requestHash": "050c4b4c7ca88d70892cc1c3d5caa25a7fe54bb93fd36cf8dd99ed1a4d5b3184",
+          "src": "audio/assets/16/162f066dd1cd69d564c1b6a341cf032e592dec789ad1ac6c2bcd3dda4adef906.mp3",
+          "sha256": "162f066dd1cd69d564c1b6a341cf032e592dec789ad1ac6c2bcd3dda4adef906",
+          "bytes": 46080,
+          "durationMs": 7680
         }
       ]
     },
@@ -334,30 +334,30 @@
       "sentences": [
         {
           "sourcePath": "vocabulary/0/term",
-          "speech": "coordinate",
-          "requestHash": "0ee81f050b30e1a408d1f5248f186d9fb880fe7d2ffbbfed100645879aa81d7c",
-          "src": "audio/assets/61/61ff90c00f8660e7a930561d00517b977f9d46402a48140ef1bca5edf805fa15.mp3",
-          "sha256": "61ff90c00f8660e7a930561d00517b977f9d46402a48140ef1bca5edf805fa15",
-          "bytes": 10656,
-          "durationMs": 1776
+          "speech": "pixel",
+          "requestHash": "96e8d84af42d5f2474676c5bd80d345d370daac703d6db904a51be31f469be83",
+          "src": "audio/assets/e7/e7ba3987411081b6518962f25d16320941d9d3a930e5d80628d7c1cfb650d294.mp3",
+          "sha256": "e7ba3987411081b6518962f25d16320941d9d3a930e5d80628d7c1cfb650d294",
+          "bytes": 11232,
+          "durationMs": 1872
         },
         {
           "sourcePath": "vocabulary/0/meaning",
-          "speech": "A number that describes a sprite position.",
-          "requestHash": "8ab0e756cf409c67ffbc3d1c333abcbaabd8416a1b1a9cac3bc890ef97348247",
-          "src": "audio/assets/a3/a3c11e381b08c07949a2b1b50202ab2e8d9454b3d21d558b4b165acdf6ff9126.mp3",
-          "sha256": "a3c11e381b08c07949a2b1b50202ab2e8d9454b3d21d558b4b165acdf6ff9126",
-          "bytes": 18000,
-          "durationMs": 3000
+          "speech": "One of the tiny dots that make up the screen.",
+          "requestHash": "ad374c8e30be78f232ce9cbdf52c0ee0f339ae1dfcd00c7362155555db3db1cd",
+          "src": "audio/assets/c5/c5892bfd49149a8538981b3e40b49fc4f7a49721583e26d47cfe9e3f0669b7b1.mp3",
+          "sha256": "c5892bfd49149a8538981b3e40b49fc4f7a49721583e26d47cfe9e3f0669b7b1",
+          "bytes": 18432,
+          "durationMs": 3072
         },
         {
           "sourcePath": "vocabulary/0/meaning",
-          "speech": "X moves left and right; Y moves down and up.",
-          "requestHash": "3e69ef04caed39e365a467b25e9dbb1782146a90b7279375e7b511e3b9523a54",
-          "src": "audio/assets/b0/b0d92ee940e55776b655f85b4cce8e45c5f43aa2839e2ff4834fcf5606dc40a9.mp3",
-          "sha256": "b0d92ee940e55776b655f85b4cce8e45c5f43aa2839e2ff4834fcf5606dc40a9",
-          "bytes": 20736,
-          "durationMs": 3456
+          "speech": "The Stage is 480 pixels wide and 360 pixels high.",
+          "requestHash": "f2593c3bee81da0f3e84d3d9b122fd62ad2f8b9f85dadfd94af11d7b037d3d68",
+          "src": "audio/assets/6f/6f56beb0bdbfbde179128944e78f7ab029e1ba38aa3db69df95365d55e9d89d6.mp3",
+          "sha256": "6f56beb0bdbfbde179128944e78f7ab029e1ba38aa3db69df95365d55e9d89d6",
+          "bytes": 29952,
+          "durationMs": 4992
         }
       ]
     },
@@ -370,21 +370,48 @@
       "sentences": [
         {
           "sourcePath": "vocabulary/1/term",
-          "speech": "clone",
-          "requestHash": "10af79c8fa95dc95c4579503c08003eb124245a03d03b8adf6dc4555e8036650",
-          "src": "audio/assets/27/27aceb5b07851577e93b546bab2bc045a9d32caa1407d230f0ec3ef34b14faaa.mp3",
-          "sha256": "27aceb5b07851577e93b546bab2bc045a9d32caa1407d230f0ec3ef34b14faaa",
+          "speech": "coordinate",
+          "requestHash": "0ee81f050b30e1a408d1f5248f186d9fb880fe7d2ffbbfed100645879aa81d7c",
+          "src": "audio/assets/61/61ff90c00f8660e7a930561d00517b977f9d46402a48140ef1bca5edf805fa15.mp3",
+          "sha256": "61ff90c00f8660e7a930561d00517b977f9d46402a48140ef1bca5edf805fa15",
           "bytes": 10656,
           "durationMs": 1776
         },
         {
           "sourcePath": "vocabulary/1/meaning",
-          "speech": "A temporary copy of a sprite that runs the clone scripts and keeps its own sprite-only variable values.",
-          "requestHash": "1c44af91e658098294614926d13ebff158f3c9febcd0de5adee0c0ba9eb82fa7",
-          "src": "audio/assets/14/14ba88b7c4ef0a809b40145b442797a33781c16878fe8fbdbeaab3dbbc798611.mp3",
-          "sha256": "14ba88b7c4ef0a809b40145b442797a33781c16878fe8fbdbeaab3dbbc798611",
-          "bytes": 36720,
-          "durationMs": 6120
+          "speech": "A number that says where a sprite is.",
+          "requestHash": "28bedd57f328a0eb33d8ad664c0795021860c19a790255c76a919e94916545ec",
+          "src": "audio/assets/0b/0b5fa3ef712ec6f77b8b2eed9b702a376f946ae63034845091aa2f2e234c5801.mp3",
+          "sha256": "0b5fa3ef712ec6f77b8b2eed9b702a376f946ae63034845091aa2f2e234c5801",
+          "bytes": 15696,
+          "durationMs": 2616
+        },
+        {
+          "sourcePath": "vocabulary/1/meaning",
+          "speech": "x goes from -240 on the left to 240 on the right.",
+          "requestHash": "a7355adb2ebcda3c7f51756d1b477cbd0d10426d5eb92786c61539263d09658a",
+          "src": "audio/assets/57/57ac8b46f7d188063501d65faa09491f9fc93f12f68b2989add09ed86b20b805.mp3",
+          "sha256": "57ac8b46f7d188063501d65faa09491f9fc93f12f68b2989add09ed86b20b805",
+          "bytes": 29520,
+          "durationMs": 4920
+        },
+        {
+          "sourcePath": "vocabulary/1/meaning",
+          "speech": "y goes from -180 at the bottom to 180 at the top.",
+          "requestHash": "f2ade0c99ec151a7e1cfe8b46a7e291fa93df5ce52ebd780a6d45c8b55947785",
+          "src": "audio/assets/dc/dce4af904d0a4527b8faffdd97fa3e269387422779ffeefe6de86ca0d3804c0e.mp3",
+          "sha256": "dce4af904d0a4527b8faffdd97fa3e269387422779ffeefe6de86ca0d3804c0e",
+          "bytes": 28368,
+          "durationMs": 4728
+        },
+        {
+          "sourcePath": "vocabulary/1/meaning",
+          "speech": "The middle of the Stage is x 0, y 0.",
+          "requestHash": "6dd5acdeefb39c41a21cb4f29e71f3f5a52b7d2ddebcc9dd6d8a3a20a2288da9",
+          "src": "audio/assets/9c/9ce93840148927f1cf614627eb241bc980c8a22a8e50e2dc6bb33505cc342e86.mp3",
+          "sha256": "9ce93840148927f1cf614627eb241bc980c8a22a8e50e2dc6bb33505cc342e86",
+          "bytes": 19872,
+          "durationMs": 3312
         }
       ]
     },
@@ -397,30 +424,21 @@
       "sentences": [
         {
           "sourcePath": "vocabulary/2/term",
-          "speech": "shared variable",
-          "requestHash": "2b71283220abad6af87511b57ac4e2aa99f67675d45d7b2533e8cb1eb02128bc",
-          "src": "audio/assets/e7/e78b93d3a726cc22fe2885caf3ed210b47b1cb960707204635f4292b5031153f.mp3",
-          "sha256": "e78b93d3a726cc22fe2885caf3ed210b47b1cb960707204635f4292b5031153f",
-          "bytes": 11232,
-          "durationMs": 1872
+          "speech": "clone",
+          "requestHash": "10af79c8fa95dc95c4579503c08003eb124245a03d03b8adf6dc4555e8036650",
+          "src": "audio/assets/27/27aceb5b07851577e93b546bab2bc045a9d32caa1407d230f0ec3ef34b14faaa.mp3",
+          "sha256": "27aceb5b07851577e93b546bab2bc045a9d32caa1407d230f0ec3ef34b14faaa",
+          "bytes": 10656,
+          "durationMs": 1776
         },
         {
           "sourcePath": "vocabulary/2/meaning",
-          "speech": "A shared variable made with For all sprites.",
-          "requestHash": "ed8fbf7808862a617c732c57149a19f3f4684d527d7a5ba55bb82b9b395cfa39",
-          "src": "audio/assets/32/32e48c4f7bed021fe00e9d98d6ce16c34a853e9f634f711c23ef34d7785e4e27.mp3",
-          "sha256": "32e48c4f7bed021fe00e9d98d6ce16c34a853e9f634f711c23ef34d7785e4e27",
-          "bytes": 18000,
-          "durationMs": 3000
-        },
-        {
-          "sourcePath": "vocabulary/2/meaning",
-          "speech": "The Stage and every sprite can read or change it.",
-          "requestHash": "caf533fe9c5a61610e5d196ce3594b99b2c2fb9c85cde5ddff5b7856b731309e",
-          "src": "audio/assets/03/0359f073c77579d0c3a0226d41d8082d3ec64ae76a8efd32331a94bd8cac99f6.mp3",
-          "sha256": "0359f073c77579d0c3a0226d41d8082d3ec64ae76a8efd32331a94bd8cac99f6",
-          "bytes": 20016,
-          "durationMs": 3336
+          "speech": "A temporary copy of a sprite that runs the clone scripts and keeps its own sprite-only variable values.",
+          "requestHash": "1c44af91e658098294614926d13ebff158f3c9febcd0de5adee0c0ba9eb82fa7",
+          "src": "audio/assets/14/14ba88b7c4ef0a809b40145b442797a33781c16878fe8fbdbeaab3dbbc798611.mp3",
+          "sha256": "14ba88b7c4ef0a809b40145b442797a33781c16878fe8fbdbeaab3dbbc798611",
+          "bytes": 36720,
+          "durationMs": 6120
         }
       ]
     },
@@ -433,28 +451,28 @@
       "sentences": [
         {
           "sourcePath": "vocabulary/3/term",
-          "speech": "sprite-only variable",
-          "requestHash": "0d807d6321fb26f6e80a4970a38d794117cb7ab1b12972b8181709a81a99d7ad",
-          "src": "audio/assets/cc/ccac699d5f9749c9d341cb24a66b3079e957b04645b39b86fd181675e1c145ee.mp3",
-          "sha256": "ccac699d5f9749c9d341cb24a66b3079e957b04645b39b86fd181675e1c145ee",
+          "speech": "shared variable",
+          "requestHash": "2b71283220abad6af87511b57ac4e2aa99f67675d45d7b2533e8cb1eb02128bc",
+          "src": "audio/assets/e7/e78b93d3a726cc22fe2885caf3ed210b47b1cb960707204635f4292b5031153f.mp3",
+          "sha256": "e78b93d3a726cc22fe2885caf3ed210b47b1cb960707204635f4292b5031153f",
           "bytes": 11232,
           "durationMs": 1872
         },
         {
           "sourcePath": "vocabulary/3/meaning",
-          "speech": "A variable made with For this sprite only.",
-          "requestHash": "5d15c32eb1d5116298c9b90e68265a2270f58c4760af3547aa5e633dd3cb0602",
-          "src": "audio/assets/52/523f9536d9f9200f3d0a035b134384899ec11fe3027a90bbcbc957296ac8e223.mp3",
-          "sha256": "523f9536d9f9200f3d0a035b134384899ec11fe3027a90bbcbc957296ac8e223",
-          "bytes": 17280,
-          "durationMs": 2880
+          "speech": "A shared variable made with For all sprites.",
+          "requestHash": "ed8fbf7808862a617c732c57149a19f3f4684d527d7a5ba55bb82b9b395cfa39",
+          "src": "audio/assets/32/32e48c4f7bed021fe00e9d98d6ce16c34a853e9f634f711c23ef34d7785e4e27.mp3",
+          "sha256": "32e48c4f7bed021fe00e9d98d6ce16c34a853e9f634f711c23ef34d7785e4e27",
+          "bytes": 18000,
+          "durationMs": 3000
         },
         {
           "sourcePath": "vocabulary/3/meaning",
-          "speech": "Each clone gets its own value for that variable.",
-          "requestHash": "870fb97166c29bb4f0139fcb513ac32b7ede1cca9e17780033fef4f8a6581abf",
-          "src": "audio/assets/6b/6b822356810c609f7f941fddc40b5e568e15674e53bb88bd79974e85de0a3e46.mp3",
-          "sha256": "6b822356810c609f7f941fddc40b5e568e15674e53bb88bd79974e85de0a3e46",
+          "speech": "The Stage and every sprite can read or change it.",
+          "requestHash": "caf533fe9c5a61610e5d196ce3594b99b2c2fb9c85cde5ddff5b7856b731309e",
+          "src": "audio/assets/03/0359f073c77579d0c3a0226d41d8082d3ec64ae76a8efd32331a94bd8cac99f6.mp3",
+          "sha256": "0359f073c77579d0c3a0226d41d8082d3ec64ae76a8efd32331a94bd8cac99f6",
           "bytes": 20016,
           "durationMs": 3336
         }
@@ -469,21 +487,30 @@
       "sentences": [
         {
           "sourcePath": "vocabulary/4/term",
-          "speech": "message",
-          "requestHash": "ea43aa2051f2d47e6ddbb06871b8eea2d05f28317073152608c2a408541ddcc0",
-          "src": "audio/assets/05/05cbef9462a435a5f87c15e5a5901fdd7058b241ca1b75b6edc2bf480603af47.mp3",
-          "sha256": "05cbef9462a435a5f87c15e5a5901fdd7058b241ca1b75b6edc2bf480603af47",
+          "speech": "sprite-only variable",
+          "requestHash": "0d807d6321fb26f6e80a4970a38d794117cb7ab1b12972b8181709a81a99d7ad",
+          "src": "audio/assets/cc/ccac699d5f9749c9d341cb24a66b3079e957b04645b39b86fd181675e1c145ee.mp3",
+          "sha256": "ccac699d5f9749c9d341cb24a66b3079e957b04645b39b86fd181675e1c145ee",
           "bytes": 11232,
           "durationMs": 1872
         },
         {
           "sourcePath": "vocabulary/4/meaning",
-          "speech": "A named broadcast that starts matching when I receive scripts.",
-          "requestHash": "d0ad30b486c95188522cbc5d3595a36f6d539fb405cb77533c4d2a90674ba7a6",
-          "src": "audio/assets/f9/f9c3b1e23f3f0418e3d3644c2fa6e9eaf5ea2a4be682ef033e9c95052b21e86d.mp3",
-          "sha256": "f9c3b1e23f3f0418e3d3644c2fa6e9eaf5ea2a4be682ef033e9c95052b21e86d",
-          "bytes": 23904,
-          "durationMs": 3984
+          "speech": "A variable made with For this sprite only.",
+          "requestHash": "5d15c32eb1d5116298c9b90e68265a2270f58c4760af3547aa5e633dd3cb0602",
+          "src": "audio/assets/52/523f9536d9f9200f3d0a035b134384899ec11fe3027a90bbcbc957296ac8e223.mp3",
+          "sha256": "523f9536d9f9200f3d0a035b134384899ec11fe3027a90bbcbc957296ac8e223",
+          "bytes": 17280,
+          "durationMs": 2880
+        },
+        {
+          "sourcePath": "vocabulary/4/meaning",
+          "speech": "Each clone gets its own value for that variable.",
+          "requestHash": "870fb97166c29bb4f0139fcb513ac32b7ede1cca9e17780033fef4f8a6581abf",
+          "src": "audio/assets/6b/6b822356810c609f7f941fddc40b5e568e15674e53bb88bd79974e85de0a3e46.mp3",
+          "sha256": "6b822356810c609f7f941fddc40b5e568e15674e53bb88bd79974e85de0a3e46",
+          "bytes": 20016,
+          "durationMs": 3336
         }
       ]
     },
@@ -496,21 +523,21 @@
       "sentences": [
         {
           "sourcePath": "vocabulary/5/term",
-          "speech": "state",
-          "requestHash": "6ad2ca2cd9f57a2bd03a2896cc3050ccfdd12a2a182927834ca83a38514a2d39",
-          "src": "audio/assets/66/6665cdfdee134bd322480d43af36e323e89d5440aa2f6606ba4cff41d74efa98.mp3",
-          "sha256": "6665cdfdee134bd322480d43af36e323e89d5440aa2f6606ba4cff41d74efa98",
-          "bytes": 10656,
-          "durationMs": 1776
+          "speech": "message",
+          "requestHash": "ea43aa2051f2d47e6ddbb06871b8eea2d05f28317073152608c2a408541ddcc0",
+          "src": "audio/assets/05/05cbef9462a435a5f87c15e5a5901fdd7058b241ca1b75b6edc2bf480603af47.mp3",
+          "sha256": "05cbef9462a435a5f87c15e5a5901fdd7058b241ca1b75b6edc2bf480603af47",
+          "bytes": 11232,
+          "durationMs": 1872
         },
         {
           "sourcePath": "vocabulary/5/meaning",
-          "speech": "A stored value such as starting, playing, won, or lost that describes what the game may do now.",
-          "requestHash": "9dd403aa1bf27bd69882db6eebf810c115380793b76176acd1993663ff73d48d",
-          "src": "audio/assets/5c/5c01534c1f18c9d544bc0a48809ecd4d3dddfc802285736bc8daf098bbe5dff7.mp3",
-          "sha256": "5c01534c1f18c9d544bc0a48809ecd4d3dddfc802285736bc8daf098bbe5dff7",
-          "bytes": 37872,
-          "durationMs": 6312
+          "speech": "A named broadcast that starts matching when I receive scripts.",
+          "requestHash": "d0ad30b486c95188522cbc5d3595a36f6d539fb405cb77533c4d2a90674ba7a6",
+          "src": "audio/assets/f9/f9c3b1e23f3f0418e3d3644c2fa6e9eaf5ea2a4be682ef033e9c95052b21e86d.mp3",
+          "sha256": "f9c3b1e23f3f0418e3d3644c2fa6e9eaf5ea2a4be682ef033e9c95052b21e86d",
+          "bytes": 23904,
+          "durationMs": 3984
         }
       ]
     },
@@ -523,21 +550,21 @@
       "sentences": [
         {
           "sourcePath": "vocabulary/6/term",
-          "speech": "reusable sprite",
-          "requestHash": "080a36f303a7b5462d8364ed2be66769ddeb08bb2a48e03dfa5f0adefa523990",
-          "src": "audio/assets/4a/4a49cc31fb911def091379b5bdc68861efa59b11f554f55126842b410210ede7.mp3",
-          "sha256": "4a49cc31fb911def091379b5bdc68861efa59b11f554f55126842b410210ede7",
-          "bytes": 11232,
-          "durationMs": 1872
+          "speech": "state",
+          "requestHash": "6ad2ca2cd9f57a2bd03a2896cc3050ccfdd12a2a182927834ca83a38514a2d39",
+          "src": "audio/assets/66/6665cdfdee134bd322480d43af36e323e89d5440aa2f6606ba4cff41d74efa98.mp3",
+          "sha256": "6665cdfdee134bd322480d43af36e323e89d5440aa2f6606ba4cff41d74efa98",
+          "bytes": 10656,
+          "durationMs": 1776
         },
         {
           "sourcePath": "vocabulary/6/meaning",
-          "speech": "One sprite that is hidden, moved, and used again instead of creating clones.",
-          "requestHash": "4192c8b83189180f18e117e9912afc98879898843fbe0093c12704c12db52d62",
-          "src": "audio/assets/d3/d3a5997a703a66920e3b46f73660a569ad99cc807ec02068054c698190da3640.mp3",
-          "sha256": "d3a5997a703a66920e3b46f73660a569ad99cc807ec02068054c698190da3640",
-          "bytes": 31104,
-          "durationMs": 5184
+          "speech": "A stored value such as starting, playing, won, or lost that describes what the game may do now.",
+          "requestHash": "9dd403aa1bf27bd69882db6eebf810c115380793b76176acd1993663ff73d48d",
+          "src": "audio/assets/5c/5c01534c1f18c9d544bc0a48809ecd4d3dddfc802285736bc8daf098bbe5dff7.mp3",
+          "sha256": "5c01534c1f18c9d544bc0a48809ecd4d3dddfc802285736bc8daf098bbe5dff7",
+          "bytes": 37872,
+          "durationMs": 6312
         }
       ]
     },
@@ -550,30 +577,21 @@
       "sentences": [
         {
           "sourcePath": "vocabulary/7/term",
-          "speech": "Active variable",
-          "requestHash": "81c481781af1051c8bf59f9bb845f51f1e2317d75e32c5b886f45af12c77cbc4",
-          "src": "audio/assets/25/251079259ab4899a0da5d073c20ebda0cb73f4dc764d5dd8f70eac6c694d9c83.mp3",
-          "sha256": "251079259ab4899a0da5d073c20ebda0cb73f4dc764d5dd8f70eac6c694d9c83",
+          "speech": "reusable sprite",
+          "requestHash": "080a36f303a7b5462d8364ed2be66769ddeb08bb2a48e03dfa5f0adefa523990",
+          "src": "audio/assets/4a/4a49cc31fb911def091379b5bdc68861efa59b11f554f55126842b410210ede7.mp3",
+          "sha256": "4a49cc31fb911def091379b5bdc68861efa59b11f554f55126842b410210ede7",
           "bytes": 11232,
           "durationMs": 1872
         },
         {
           "sourcePath": "vocabulary/7/meaning",
-          "speech": "A 0-or-1 variable that shows whether a reusable sprite is busy.",
-          "requestHash": "094297cf6c93190b7784a057d133361c3d1fae5016713b8614d1a7b88e852897",
-          "src": "audio/assets/a1/a1c6b1cb01a2ccfc92eeeef9ebc02b182ba9db4cc4ab1ceb1855863182f3bcd5.mp3",
-          "sha256": "a1c6b1cb01a2ccfc92eeeef9ebc02b182ba9db4cc4ab1ceb1855863182f3bcd5",
-          "bytes": 28512,
-          "durationMs": 4752
-        },
-        {
-          "sourcePath": "vocabulary/7/meaning",
-          "speech": "Checking it prevents the same action from happening twice.",
-          "requestHash": "65b1e82de2810b6e386916400f8df859df7a4c0114db611ee47bb5b81c71adc7",
-          "src": "audio/assets/6a/6a42aa1b71dfb387b55066b0044a0e68ab416e0c811f3ef318d32675ba070857.mp3",
-          "sha256": "6a42aa1b71dfb387b55066b0044a0e68ab416e0c811f3ef318d32675ba070857",
-          "bytes": 22032,
-          "durationMs": 3672
+          "speech": "One sprite that is hidden, moved, and used again instead of creating clones.",
+          "requestHash": "4192c8b83189180f18e117e9912afc98879898843fbe0093c12704c12db52d62",
+          "src": "audio/assets/d3/d3a5997a703a66920e3b46f73660a569ad99cc807ec02068054c698190da3640.mp3",
+          "sha256": "d3a5997a703a66920e3b46f73660a569ad99cc807ec02068054c698190da3640",
+          "bytes": 31104,
+          "durationMs": 5184
         }
       ]
     },
@@ -586,6 +604,42 @@
       "sentences": [
         {
           "sourcePath": "vocabulary/8/term",
+          "speech": "Active variable",
+          "requestHash": "81c481781af1051c8bf59f9bb845f51f1e2317d75e32c5b886f45af12c77cbc4",
+          "src": "audio/assets/25/251079259ab4899a0da5d073c20ebda0cb73f4dc764d5dd8f70eac6c694d9c83.mp3",
+          "sha256": "251079259ab4899a0da5d073c20ebda0cb73f4dc764d5dd8f70eac6c694d9c83",
+          "bytes": 11232,
+          "durationMs": 1872
+        },
+        {
+          "sourcePath": "vocabulary/8/meaning",
+          "speech": "A 0-or-1 variable that shows whether a reusable sprite is busy.",
+          "requestHash": "094297cf6c93190b7784a057d133361c3d1fae5016713b8614d1a7b88e852897",
+          "src": "audio/assets/a1/a1c6b1cb01a2ccfc92eeeef9ebc02b182ba9db4cc4ab1ceb1855863182f3bcd5.mp3",
+          "sha256": "a1c6b1cb01a2ccfc92eeeef9ebc02b182ba9db4cc4ab1ceb1855863182f3bcd5",
+          "bytes": 28512,
+          "durationMs": 4752
+        },
+        {
+          "sourcePath": "vocabulary/8/meaning",
+          "speech": "Checking it prevents the same action from happening twice.",
+          "requestHash": "65b1e82de2810b6e386916400f8df859df7a4c0114db611ee47bb5b81c71adc7",
+          "src": "audio/assets/6a/6a42aa1b71dfb387b55066b0044a0e68ab416e0c811f3ef318d32675ba070857.mp3",
+          "sha256": "6a42aa1b71dfb387b55066b0044a0e68ab416e0c811f3ef318d32675ba070857",
+          "bytes": 22032,
+          "durationMs": 3672
+        }
+      ]
+    },
+    {
+      "id": "welcome/vocabulary/009",
+      "sourcePaths": [
+        "vocabulary/9/term",
+        "vocabulary/9/meaning"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "vocabulary/9/term",
           "speech": "lane",
           "requestHash": "2d8b74f097b63e9012d222cc75df1c8752faad117c33e16af1a3601646a8e166",
           "src": "audio/assets/77/774fe2a27023d5e03e496b67ef6ae1edd76deb39f5b78957084f0cdf589164c0.mp3",
@@ -594,7 +648,7 @@
           "durationMs": 768
         },
         {
-          "sourcePath": "vocabulary/8/meaning",
+          "sourcePath": "vocabulary/9/meaning",
           "speech": "One vertical firing column in the eight-column alien fleet.",
           "requestHash": "8bb3c6b3c78363dca6c4ec8eda59c2ae8f55c0612a2eec355356db9db05d6b6e",
           "src": "audio/assets/87/874524d9814bff96a6c8347761d048d8147eb3d5d3d1d13357d025417c0d7b27.mp3",
@@ -665,12 +719,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/0/instructions/0",
-          "speech": "Sign in to Scratch, click Create, and delete the Cat sprite.",
-          "requestHash": "3fe3a64f440e3ece58e4bb7ea68158be53c2b14829b10a1f75026ff292c96961",
-          "src": "audio/assets/53/53e7efac28400b04431f60fdd9bc11ca2ccb8cf0a9e819672ae60eb6c2aec5c8.mp3",
-          "sha256": "53e7efac28400b04431f60fdd9bc11ca2ccb8cf0a9e819672ae60eb6c2aec5c8",
-          "bytes": 24912,
-          "durationMs": 4152
+          "speech": "Sign in to Scratch and click Create.",
+          "requestHash": "2deb02754e4c580be43decb390fc0291225aa9b15f441aad212cded0be618dd2",
+          "src": "audio/assets/72/72c3db7c931eb6fd0080c0cd0611cc7a8e831dc2a54f6cef94d2699555356b74.mp3",
+          "sha256": "72c3db7c931eb6fd0080c0cd0611cc7a8e831dc2a54f6cef94d2699555356b74",
+          "bytes": 15984,
+          "durationMs": 2664
+        },
+        {
+          "sourcePath": "chapters/0/steps/0/instructions/0",
+          "speech": "Keep the Cat for now, because you will use it in the next step.",
+          "requestHash": "c4b321ed59b1028ff58f88c87a5a8b7277cdf307a118d3ac05295933e30fdcf4",
+          "src": "audio/assets/ab/abbe8e40c0b65471447b7f378aee4b9557077a5abf758cb3c0fee6173ef0608e.mp3",
+          "sha256": "abbe8e40c0b65471447b7f378aee4b9557077a5abf758cb3c0fee6173ef0608e",
+          "bytes": 21888,
+          "durationMs": 3648
         }
       ]
     },
@@ -933,13 +996,438 @@
       ]
     },
     {
-      "id": "launch-pad/create-stage-and-sprites/overview",
+      "id": "launch-pad/learn-stage-numbers/overview",
       "sourcePaths": [
         "chapters/0/steps/1/explanation"
       ],
       "sentences": [
         {
           "sourcePath": "chapters/0/steps/1/explanation",
+          "speech": "Scratch uses numbers to say where a sprite is.",
+          "requestHash": "8b4d84de595dff53e9ab0835f7198ce5a1246ddc92a73bc0a1d3ba540f7515df",
+          "src": "audio/assets/0a/0ad0db18fe3200b6aebcdd78af53fc54fbbb44f4e25ed93172bf226b28d5be81.mp3",
+          "sha256": "0ad0db18fe3200b6aebcdd78af53fc54fbbb44f4e25ed93172bf226b28d5be81",
+          "bytes": 20448,
+          "durationMs": 3408
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/explanation",
+          "speech": "These numbers count pixels, the tiny dots that make up the screen.",
+          "requestHash": "0658cac675c37da4da9cf2f9e7fde95aaf4b09f5dfaefb15ee30f3f3e9c8bd14",
+          "src": "audio/assets/0d/0d027b810756fd6e473c55968210c3986427a3b6e9c0269ce70fd3ce43ca6679.mp3",
+          "sha256": "0d027b810756fd6e473c55968210c3986427a3b6e9c0269ce70fd3ce43ca6679",
+          "bytes": 23616,
+          "durationMs": 3936
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/explanation",
+          "speech": "The Stage is 480 pixels wide and 360 pixels high.",
+          "requestHash": "f2593c3bee81da0f3e84d3d9b122fd62ad2f8b9f85dadfd94af11d7b037d3d68",
+          "src": "audio/assets/6f/6f56beb0bdbfbde179128944e78f7ab029e1ba38aa3db69df95365d55e9d89d6.mp3",
+          "sha256": "6f56beb0bdbfbde179128944e78f7ab029e1ba38aa3db69df95365d55e9d89d6",
+          "bytes": 29952,
+          "durationMs": 4992
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/explanation",
+          "speech": "A costume that is 36 pixels wide is small: about 13 of them fit side by side across the Stage.",
+          "requestHash": "a382b0bd6ad6883f533aa0cfa9c4cfda9ee18d42358f44936bf44ca2c67cf676",
+          "src": "audio/assets/3c/3c7b362dda2851467a43e3cf9a228236a3b77858ca87f321de067f0a2d4ef4b4.mp3",
+          "sha256": "3c7b362dda2851467a43e3cf9a228236a3b77858ca87f321de067f0a2d4ef4b4",
+          "bytes": 42480,
+          "durationMs": 7080
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/explanation",
+          "speech": "Try the numbers with the Cat now, because every later step uses them.",
+          "requestHash": "97efecb1f23120659a2ad2f663bd60195b26e7f10fc81354c2f5be23531f2d90",
+          "src": "audio/assets/b0/b0731ed7c27149e8a54cc1c10301369529d3ceae298e19d46e19383d1c36e176.mp3",
+          "sha256": "b0731ed7c27149e8a54cc1c10301369529d3ceae298e19d46e19383d1c36e176",
+          "bytes": 26352,
+          "durationMs": 4392
+        }
+      ]
+    },
+    {
+      "id": "launch-pad/learn-stage-numbers/instruction/000",
+      "sourcePaths": [
+        "chapters/0/steps/1/instructions/0"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/0/steps/1/instructions/0",
+          "speech": "Drag the Cat around the Stage and watch the x and y boxes under the Stage change.",
+          "requestHash": "1f0332843296c5078abfbba623c8898f352899960a77bb3d5a5f6f176325fc0c",
+          "src": "audio/assets/99/99141f66c6ca3c0191eb38b87e30c0a54f34353dc92a0debcb19d26af550f69c.mp3",
+          "sha256": "99141f66c6ca3c0191eb38b87e30c0a54f34353dc92a0debcb19d26af550f69c",
+          "bytes": 31680,
+          "durationMs": 5280
+        }
+      ]
+    },
+    {
+      "id": "launch-pad/learn-stage-numbers/instruction/001",
+      "sourcePaths": [
+        "chapters/0/steps/1/instructions/1"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/0/steps/1/instructions/1",
+          "speech": "Use those boxes to move the Cat to x 0, y 0.",
+          "requestHash": "273b6e4fa706b63e928e84ac6bdaebc8566f8b8d546acda8dd537a599d6812de",
+          "src": "audio/assets/a9/a9db2bdef71a6eefab633cd175928135311b1eafa198dc223fd85a70c179004f.mp3",
+          "sha256": "a9db2bdef71a6eefab633cd175928135311b1eafa198dc223fd85a70c179004f",
+          "bytes": 22896,
+          "durationMs": 3816
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/instructions/1",
+          "speech": "The Cat jumps to the middle of the Stage.",
+          "requestHash": "45db41ef87a51a833397a0aaec5e1ff32050cd34ab02ac588a18adb27d8ebe2a",
+          "src": "audio/assets/20/20f081d076a50adecd049cbaca27cc1fce98408b6cecd5a2748e88eac7c6732d.mp3",
+          "sha256": "20f081d076a50adecd049cbaca27cc1fce98408b6cecd5a2748e88eac7c6732d",
+          "bytes": 16272,
+          "durationMs": 2712
+        }
+      ]
+    },
+    {
+      "id": "launch-pad/learn-stage-numbers/instruction/002",
+      "sourcePaths": [
+        "chapters/0/steps/1/instructions/2"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/0/steps/1/instructions/2",
+          "speech": "Drag the Cat right, then left.",
+          "requestHash": "7b29c26fe828c2e7617479a56633a6b46d045136d09470f86d229a39c5e7d3f6",
+          "src": "audio/assets/b0/b0404987653baa8236039678153d16e22e3a70c5a2f5202433e0d3a8bb58f315.mp3",
+          "sha256": "b0404987653baa8236039678153d16e22e3a70c5a2f5202433e0d3a8bb58f315",
+          "bytes": 14256,
+          "durationMs": 2376
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/instructions/2",
+          "speech": "x gets bigger going right.",
+          "requestHash": "78a771954568cc158d0fb3e8600d45b0e179025d61ab70722790d953f0adf695",
+          "src": "audio/assets/53/5308b7beb07daffc849af7271ce1135960863ed451ded6ab7d051739cc652760.mp3",
+          "sha256": "5308b7beb07daffc849af7271ce1135960863ed451ded6ab7d051739cc652760",
+          "bytes": 12096,
+          "durationMs": 2016
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/instructions/2",
+          "speech": "Left of the middle, x has a minus sign.",
+          "requestHash": "c9b6ba29fd692acccab5301df08a590262877f646159663b0ff25006f7331b87",
+          "src": "audio/assets/a2/a2e31aa3386c87f71cd31acf0cab8592b47b6fcdd7524cd1fa588dbc2d2c6f3d.mp3",
+          "sha256": "a2e31aa3386c87f71cd31acf0cab8592b47b6fcdd7524cd1fa588dbc2d2c6f3d",
+          "bytes": 17568,
+          "durationMs": 2928
+        }
+      ]
+    },
+    {
+      "id": "launch-pad/learn-stage-numbers/instruction/003",
+      "sourcePaths": [
+        "chapters/0/steps/1/instructions/3"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/0/steps/1/instructions/3",
+          "speech": "Drag the Cat up, then down.",
+          "requestHash": "13d9e19dd0ad976529adfd28134b5f0129a9e96fe52387405f6e0bc77769f4b2",
+          "src": "audio/assets/6d/6dd70e72b6e49672402c0fcd1e23c1f5123cc2986289bcf30c6d74095cc4371f.mp3",
+          "sha256": "6dd70e72b6e49672402c0fcd1e23c1f5123cc2986289bcf30c6d74095cc4371f",
+          "bytes": 12816,
+          "durationMs": 2136
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/instructions/3",
+          "speech": "y gets bigger going up.",
+          "requestHash": "171d054dc98790bb08ab621043bc9d582eafdb4ac76fee1ea241b6d761776d0f",
+          "src": "audio/assets/ea/ea81799e1578f6e1078a7935f6f8d4b0ef0266e6704e26faaf6b94219edc7575.mp3",
+          "sha256": "ea81799e1578f6e1078a7935f6f8d4b0ef0266e6704e26faaf6b94219edc7575",
+          "bytes": 11664,
+          "durationMs": 1944
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/instructions/3",
+          "speech": "Below the middle, y has a minus sign.",
+          "requestHash": "5f393e7aafc944520b559b93330d84f970c96200d8249438ab301c758df6cf0a",
+          "src": "audio/assets/42/42ae04c1870aa0d5e7d17c0917da0680bbd2652989bed93ff1f85fd1e48ca3ed.mp3",
+          "sha256": "42ae04c1870aa0d5e7d17c0917da0680bbd2652989bed93ff1f85fd1e48ca3ed",
+          "bytes": 15840,
+          "durationMs": 2640
+        }
+      ]
+    },
+    {
+      "id": "launch-pad/learn-stage-numbers/instruction/004",
+      "sourcePaths": [
+        "chapters/0/steps/1/instructions/4"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/0/steps/1/instructions/4",
+          "speech": "Use the y box to move the Cat to y negative 60, then to y negative 120.",
+          "requestHash": "21fa452b9017009da4178b5adb0698597163223676aa88a1878cd21d06d2558f",
+          "src": "audio/assets/06/06ecf186e82c2f72fa1e89fce1009422670dee19aa2722c70541f4d56d36ff08.mp3",
+          "sha256": "06ecf186e82c2f72fa1e89fce1009422670dee19aa2722c70541f4d56d36ff08",
+          "bytes": 37296,
+          "durationMs": 6216
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/instructions/4",
+          "speech": "The bigger the number after the minus sign, the lower the Cat goes.",
+          "requestHash": "e9d96e53084c1a9f1ce59f45247caf054b64566f948738620b6c5948426639ac",
+          "src": "audio/assets/c2/c2e593cd45405ce3316680759ea6a845b1ac4452a29e2a30721d0337d3fe0827.mp3",
+          "sha256": "c2e593cd45405ce3316680759ea6a845b1ac4452a29e2a30721d0337d3fe0827",
+          "bytes": 25632,
+          "durationMs": 4272
+        }
+      ]
+    },
+    {
+      "id": "launch-pad/learn-stage-numbers/instruction/005",
+      "sourcePaths": [
+        "chapters/0/steps/1/instructions/5"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/0/steps/1/instructions/5",
+          "speech": "Drag a change x by 10 block into the Code area and click it a few times.",
+          "requestHash": "753c80c6385eafcf34b5a5e15ad9bc15553c645ee2cc0258fd0d8dee761c095c",
+          "src": "audio/assets/8a/8a458ba7e7896d48c2105727a96981e8a06162900e7cc6e1f8645ceaaae29190.mp3",
+          "sha256": "8a458ba7e7896d48c2105727a96981e8a06162900e7cc6e1f8645ceaaae29190",
+          "bytes": 28368,
+          "durationMs": 4728
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/instructions/5",
+          "speech": "x changes by 10 on each click, so the Cat moves 10 pixels to the right.",
+          "requestHash": "2115d7bf816f25902d102b109db1f70078a2ea1137000bfcd1a85c8c1ee1ddf5",
+          "src": "audio/assets/14/1425cc3b147889726788bc2f6073bee150aa0357db270f326d1a72ad53227998.mp3",
+          "sha256": "1425cc3b147889726788bc2f6073bee150aa0357db270f326d1a72ad53227998",
+          "bytes": 29808,
+          "durationMs": 4968
+        }
+      ]
+    },
+    {
+      "id": "launch-pad/learn-stage-numbers/instruction/006",
+      "sourcePaths": [
+        "chapters/0/steps/1/instructions/6"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/0/steps/1/instructions/6",
+          "speech": "Change the block to change y by negative 10 and click it a few times.",
+          "requestHash": "5640c4b8a64bb78f837b1df11a6cbedfbe73df953e00b31d4fcb3195fd350934",
+          "src": "audio/assets/60/606251b6d0d6abbbc91a9bcd0970ca815e3a67b674f83545367a8b4f63a35e9d.mp3",
+          "sha256": "606251b6d0d6abbbc91a9bcd0970ca815e3a67b674f83545367a8b4f63a35e9d",
+          "bytes": 26352,
+          "durationMs": 4392
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/instructions/6",
+          "speech": "The Cat moves down 10 pixels on each click.",
+          "requestHash": "f04c43bbb1503120c60479ecd087db41942d88de37c683fe3adb7130c7bd7bfb",
+          "src": "audio/assets/50/506204e7a8488bc80eecede28efe32d657128283bbd50bfe8efa99f954099bf8.mp3",
+          "sha256": "506204e7a8488bc80eecede28efe32d657128283bbd50bfe8efa99f954099bf8",
+          "bytes": 19152,
+          "durationMs": 3192
+        }
+      ]
+    },
+    {
+      "id": "launch-pad/learn-stage-numbers/instruction/007",
+      "sourcePaths": [
+        "chapters/0/steps/1/instructions/7"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/0/steps/1/instructions/7",
+          "speech": "Delete that block, then delete the Cat by clicking the trash can on its thumbnail in the sprite list.",
+          "requestHash": "ba0ee154f42a8f4503427ab46b7a8b7428638cb8b4516763dfc8258c0a7a1dff",
+          "src": "audio/assets/d7/d794e3c73892bb396e0fc8181f9371744b2e8efec04281155a11567c25dad7f2.mp3",
+          "sha256": "d794e3c73892bb396e0fc8181f9371744b2e8efec04281155a11567c25dad7f2",
+          "bytes": 35424,
+          "durationMs": 5904
+        }
+      ]
+    },
+    {
+      "id": "launch-pad/learn-stage-numbers/hint/000",
+      "sourcePaths": [
+        "chapters/0/steps/1/hints/0"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/0/steps/1/hints/0",
+          "speech": "The edges of the Stage are x negative 240 on the left, x 240 on the right, y negative 180 at the bottom, and y 180 at the top.",
+          "requestHash": "0cfc1c94d167dd532592402a7153bb15a9783d322c84460ab583202fbe90fa74",
+          "src": "audio/assets/81/810ffc2627f200a56371ef2dcd57828e99e9723cf626288644a1e5480eb9dcb8.mp3",
+          "sha256": "810ffc2627f200a56371ef2dcd57828e99e9723cf626288644a1e5480eb9dcb8",
+          "bytes": 69120,
+          "durationMs": 11520
+        }
+      ]
+    },
+    {
+      "id": "launch-pad/learn-stage-numbers/hint/001",
+      "sourcePaths": [
+        "chapters/0/steps/1/hints/1"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/0/steps/1/hints/1",
+          "speech": "Press Enter after you type in a box.",
+          "requestHash": "da8ebaf99d70548676b9bd6c378d0cf839999e2b25f8cefbff956d98a02b4f61",
+          "src": "audio/assets/85/85effa772be8c513ce7ad460f503539ddd7c39f78d795223d8a0186803e3e82d.mp3",
+          "sha256": "85effa772be8c513ce7ad460f503539ddd7c39f78d795223d8a0186803e3e82d",
+          "bytes": 15696,
+          "durationMs": 2616
+        }
+      ]
+    },
+    {
+      "id": "launch-pad/learn-stage-numbers/debug/000",
+      "sourcePaths": [
+        "chapters/0/steps/1/debuggingTips/0/symptom",
+        "chapters/0/steps/1/debuggingTips/0/checks/0",
+        "chapters/0/steps/1/debuggingTips/0/checks/1"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/0/steps/1/debuggingTips/0/symptom",
+          "speech": "The Cat does not move when you type a number.",
+          "requestHash": "f1eb5f6f7d1df1a35446dbff3a937fb07dbaa71bf10678fe1513605ced9622d8",
+          "src": "audio/assets/f0/f0bc6d0b3594b649f94d30f5e679718caaf76edfeb9d5e5cbcd2f08d5609a29a.mp3",
+          "sha256": "f0bc6d0b3594b649f94d30f5e679718caaf76edfeb9d5e5cbcd2f08d5609a29a",
+          "bytes": 17136,
+          "durationMs": 2856
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/debuggingTips/0/checks/0",
+          "speech": "Press Enter after typing.",
+          "requestHash": "3163d61795a0ac9791dc7474b139ad3b3e2a45cc039048f7e1443d7b2b2928d1",
+          "src": "audio/assets/97/977a3f1f511b4a96973abbe0fca22e35a3472d597df000fa3c53bc680aa8dd0d.mp3",
+          "sha256": "977a3f1f511b4a96973abbe0fca22e35a3472d597df000fa3c53bc680aa8dd0d",
+          "bytes": 12240,
+          "durationMs": 2040
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/debuggingTips/0/checks/1",
+          "speech": "Make sure the Cat is selected in the sprite list.",
+          "requestHash": "db7704c774d5fb867a1a968b00dec78c15a349824b6fb01052c43c395a4b57f6",
+          "src": "audio/assets/77/775ab4661866597f327511e5478cd3cb54dde4d92c43269018bef8cd2e80472d.mp3",
+          "sha256": "775ab4661866597f327511e5478cd3cb54dde4d92c43269018bef8cd2e80472d",
+          "bytes": 19728,
+          "durationMs": 3288
+        }
+      ]
+    },
+    {
+      "id": "launch-pad/learn-stage-numbers/checkpoint",
+      "sourcePaths": [
+        "chapters/0/steps/1/checkpoint/task",
+        "chapters/0/steps/1/checkpoint/expectedResult",
+        "chapters/0/steps/1/checkpoint/completeWhen/0",
+        "chapters/0/steps/1/checkpoint/completeWhen/1",
+        "chapters/0/steps/1/checkpoint/completeWhen/2"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/0/steps/1/checkpoint/task",
+          "speech": "Without looking back, say where each of these is: x 0, y 0; x negative 210; and y negative 150.",
+          "requestHash": "99beeb5654ed5129bcb5cbfb14e626a982fef7bdb7f1f939d6b6d88067796f58",
+          "src": "audio/assets/73/73819fb66274d51789a6c93156afc201ab04ae1a39d4df656e87948ced96b3c9.mp3",
+          "sha256": "73819fb66274d51789a6c93156afc201ab04ae1a39d4df656e87948ced96b3c9",
+          "bytes": 59040,
+          "durationMs": 9840
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/checkpoint/task",
+          "speech": "Then say what change y by negative 10 does.",
+          "requestHash": "418d5b4da10417edf5e50ef7e1dd67b331e4ad0d8c849b1fdd30046fd6207c4a",
+          "src": "audio/assets/0f/0fc0b846ffc417bb892b2c711d15812ffffbe923962e96fcca6d1eacb4bb72cb.mp3",
+          "sha256": "0fc0b846ffc417bb892b2c711d15812ffffbe923962e96fcca6d1eacb4bb72cb",
+          "bytes": 18720,
+          "durationMs": 3120
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/checkpoint/expectedResult",
+          "speech": "x 0, y 0 is the middle of the Stage.",
+          "requestHash": "a6bc89fe280f255b55a30ea1bff5623a32942517ed45b382f8d38ac378a718b4",
+          "src": "audio/assets/0d/0df4c3a6e161860d488f11447330c4a88e75b53dfe35532569ace2a816559e7b.mp3",
+          "sha256": "0df4c3a6e161860d488f11447330c4a88e75b53dfe35532569ace2a816559e7b",
+          "bytes": 19872,
+          "durationMs": 3312
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/checkpoint/expectedResult",
+          "speech": "x negative 210 is near the left edge.",
+          "requestHash": "f1adb06deee0985a83bfa0247d3894f2abca89be61ccf8ad760aa0fb8a13b851",
+          "src": "audio/assets/07/072772c842d6abed8efcaa566527a7be53da0bcdd9afaaa044ae8a8dfcbbc41e.mp3",
+          "sha256": "072772c842d6abed8efcaa566527a7be53da0bcdd9afaaa044ae8a8dfcbbc41e",
+          "bytes": 21024,
+          "durationMs": 3504
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/checkpoint/expectedResult",
+          "speech": "y negative 150 is near the bottom.",
+          "requestHash": "b0f84239a7cb9b988b72b1906e9a27501ad8fd0ac11401bc977846f4d046c98e",
+          "src": "audio/assets/7d/7d72da1380aeb2ce15d67bc62df41261bf4e03797936407105916c834887a4a1.mp3",
+          "sha256": "7d72da1380aeb2ce15d67bc62df41261bf4e03797936407105916c834887a4a1",
+          "bytes": 18720,
+          "durationMs": 3120
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/checkpoint/expectedResult",
+          "speech": "change y by negative 10 moves a sprite down 10 pixels.",
+          "requestHash": "df290b9c91b383d262d571d25c0b39cd3d39b404ce7df6a6af529c7931f04973",
+          "src": "audio/assets/d4/d49f8a66b6ed25205f4f771c9153e6389177701fbd9ed19b96a7def6d16dc2b5.mp3",
+          "sha256": "d49f8a66b6ed25205f4f771c9153e6389177701fbd9ed19b96a7def6d16dc2b5",
+          "bytes": 24336,
+          "durationMs": 4056
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/checkpoint/completeWhen/0",
+          "speech": "You can explain what a minus sign means for x and for y.",
+          "requestHash": "52268ea6e855a2a2937d72f41532771d22798981f423a8c87f433d6ef05bfe58",
+          "src": "audio/assets/df/df89fec958e843c4b4db3fe8cb522d207ed16359e43a0b5da1ffb22490ddb741.mp3",
+          "sha256": "df89fec958e843c4b4db3fe8cb522d207ed16359e43a0b5da1ffb22490ddb741",
+          "bytes": 22752,
+          "durationMs": 3792
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/checkpoint/completeWhen/1",
+          "speech": "You know that a bigger x means further right and a bigger y means higher up.",
+          "requestHash": "e1ec781a06048834097407fac2ee3c104d44e082ea7b1769d81b67d5151c761e",
+          "src": "audio/assets/7d/7d24aee9a671a5dea253f208d6e04f1c75ce83df70043bc78073c610d4e1c910.mp3",
+          "sha256": "7d24aee9a671a5dea253f208d6e04f1c75ce83df70043bc78073c610d4e1c910",
+          "bytes": 27648,
+          "durationMs": 4608
+        },
+        {
+          "sourcePath": "chapters/0/steps/1/checkpoint/completeWhen/2",
+          "speech": "The Cat is deleted.",
+          "requestHash": "1aa4e44b9a1071f627fbddd1939d7a52413ee694f7e41f34f4451c47bcee3d2d",
+          "src": "audio/assets/ee/eee91b1b1800ad968b22eef3facb2f3ea96473708a48943e7246d31f399d3e6e.mp3",
+          "sha256": "eee91b1b1800ad968b22eef3facb2f3ea96473708a48943e7246d31f399d3e6e",
+          "bytes": 11232,
+          "durationMs": 1872
+        }
+      ]
+    },
+    {
+      "id": "launch-pad/create-stage-and-sprites/overview",
+      "sourcePaths": [
+        "chapters/0/steps/2/explanation"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/0/steps/2/explanation",
           "speech": "Names matter because Scratch places sprite names inside sensing and motion blocks.",
           "requestHash": "15a936140671238f96b770ab57666c420daa57b08f52825a1608ce2bbacefd78",
           "src": "audio/assets/93/93c931bca410422bb525975d4fc41dc9b602d688b762d41c3b009e92c961970e.mp3",
@@ -948,7 +1436,7 @@
           "durationMs": 5280
         },
         {
-          "sourcePath": "chapters/0/steps/1/explanation",
+          "sourcePath": "chapters/0/steps/2/explanation",
           "speech": "Set up every game object now so later instructions can use exact names.",
           "requestHash": "74f68db70710cafe02e0e03919ecd2191b102ec7953864374956c2e1040385c6",
           "src": "audio/assets/6b/6bd608263d5b9557652b4d34694f0becdf70d2e7455765b5b63d7e81dbcdade5.mp3",
@@ -961,11 +1449,11 @@
     {
       "id": "launch-pad/create-stage-and-sprites/instruction/000",
       "sourcePaths": [
-        "chapters/0/steps/1/instructions/0"
+        "chapters/0/steps/2/instructions/0"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/instructions/0",
+          "sourcePath": "chapters/0/steps/2/instructions/0",
           "speech": "Click the Stage in the bottom right of the editor, then click the Backdrops tab.",
           "requestHash": "cd7e6df574c4af4f826a6cf5c3a825d4b32f9bd39cf2c0f5e1efa945cfc9338a",
           "src": "audio/assets/85/850eb42d7145c2872f6449b114e005b1eb7ebb0358cfd715b2fd5ec89859768a.mp3",
@@ -978,11 +1466,11 @@
     {
       "id": "launch-pad/create-stage-and-sprites/instruction/001",
       "sourcePaths": [
-        "chapters/0/steps/1/instructions/1"
+        "chapters/0/steps/2/instructions/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/instructions/1",
+          "sourcePath": "chapters/0/steps/2/instructions/1",
           "speech": "Make a dark background in one of two ways.",
           "requestHash": "5a5f9d3a62bcda02dfad922bbd6d86d2e9a7380639b16fab08120e1f88df015f",
           "src": "audio/assets/fd/fd8e89abeb39de7e4ae3edb13748ac4eb0f86d80c73c0c7cf41dc55775cd9f2a.mp3",
@@ -991,7 +1479,7 @@
           "durationMs": 2952
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/1",
+          "sourcePath": "chapters/0/steps/2/instructions/1",
           "speech": "Either fill the blank backdrop with a dark color, or choose a dark space backdrop from the library and then delete the blank one.",
           "requestHash": "98010d3008fde0a14fd8f7b991ae6c0ee4924d4b7c4731cba202391517a8785d",
           "src": "audio/assets/67/6718000a88f1eeac0309bfcd1cf21a861be859efdd54399b048a68c6a7b88737.mp3",
@@ -1004,11 +1492,11 @@
     {
       "id": "launch-pad/create-stage-and-sprites/instruction/002",
       "sourcePaths": [
-        "chapters/0/steps/1/instructions/2"
+        "chapters/0/steps/2/instructions/2"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/instructions/2",
+          "sourcePath": "chapters/0/steps/2/instructions/2",
           "speech": "Rename the dark backdrop Space.",
           "requestHash": "bb53c6aa0c020c22e0976c832004ed6895e73a0d22c06bc16f0894febcc9f922",
           "src": "audio/assets/8b/8b74d5d532f7afcb05bd8ef1df251e96ec7bac99042c5682cbc9286d127b1d20.mp3",
@@ -1021,11 +1509,11 @@
     {
       "id": "launch-pad/create-stage-and-sprites/instruction/003",
       "sourcePaths": [
-        "chapters/0/steps/1/instructions/3"
+        "chapters/0/steps/2/instructions/3"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/instructions/3",
+          "sourcePath": "chapters/0/steps/2/instructions/3",
           "speech": "Right-click the Space thumbnail and choose duplicate.",
           "requestHash": "a7ddc39c692210c816d30232d821a7a50c3cefc14204859465f5b9e154a5a2ce",
           "src": "audio/assets/06/06dbaceaa1d88ff14f3ce9783dcacb2d6b1b4b5d2a8f764204d73d8ef67e2a9f.mp3",
@@ -1034,7 +1522,7 @@
           "durationMs": 3312
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/3",
+          "sourcePath": "chapters/0/steps/2/instructions/3",
           "speech": "Do this twice, then name the two copies You Win and Game Over.",
           "requestHash": "0077377ff612cc20e0351fe8cd889673e026aaf4fa068d3ac4357edc11e3fdf5",
           "src": "audio/assets/86/86aa5a78d92a48e5c1e32237c541ea8ec621585d9829121a98ba0f005453c768.mp3",
@@ -1043,7 +1531,7 @@
           "durationMs": 4368
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/3",
+          "sourcePath": "chapters/0/steps/2/instructions/3",
           "speech": "You should now have exactly three backdrops.",
           "requestHash": "55e27e6945ac8b70667c9e75d0dcefd5ba3901871967576d22913e86ce562df8",
           "src": "audio/assets/ec/ec95a8f1f609c5c0e76be916bdc5aa0a5d81a3223968b82044fc63d7ceb0207f.mp3",
@@ -1056,11 +1544,11 @@
     {
       "id": "launch-pad/create-stage-and-sprites/instruction/004",
       "sourcePaths": [
-        "chapters/0/steps/1/instructions/4"
+        "chapters/0/steps/2/instructions/4"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/instructions/4",
+          "sourcePath": "chapters/0/steps/2/instructions/4",
           "speech": "On You Win, use the Text tool and a light color to type the words You Win in large letters.",
           "requestHash": "58d4c2c0b8a256c9d04cafed7206f54517f1dbd226ee6851906c88040b02c90d",
           "src": "audio/assets/51/51c5b2fdd666b61a290f0b7f3650ba7e971071a8f3d5cc2f8042f485c045c735.mp3",
@@ -1069,7 +1557,7 @@
           "durationMs": 5184
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/4",
+          "sourcePath": "chapters/0/steps/2/instructions/4",
           "speech": "On Game Over, do the same with the words Game Over.",
           "requestHash": "19683b441e950b85cd2c95880c0f4835b86ebf88b46f701b8e9b0d69c5853491",
           "src": "audio/assets/4d/4daacea84010f594a44f31f56402638c7341392f4a6f8bba085c7525ef734e34.mp3",
@@ -1082,11 +1570,11 @@
     {
       "id": "launch-pad/create-stage-and-sprites/instruction/005",
       "sourcePaths": [
-        "chapters/0/steps/1/instructions/5"
+        "chapters/0/steps/2/instructions/5"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/instructions/5",
+          "sourcePath": "chapters/0/steps/2/instructions/5",
           "speech": "Select Space again.",
           "requestHash": "cf9e86d49458f951eb9bb30f79ae2113e7f3dca7598a18eba27caf42e9fba963",
           "src": "audio/assets/1b/1bf5b6274f84fe655c64709ea6b26326400d6377f0b4b8fb6f6d172d289f147d.mp3",
@@ -1095,7 +1583,7 @@
           "durationMs": 1680
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/5",
+          "sourcePath": "chapters/0/steps/2/instructions/5",
           "speech": "The next three instructions tell you what to type on it with the Text tool.",
           "requestHash": "cdf86803f558f2b0d2614ac3fc25950207bbc4a32fcada321196a9db661078e1",
           "src": "audio/assets/e1/e18b28d2e3b955c5a3ffe3b2e3993033bb4da58e45cb075be8e38b0a65e736c4.mp3",
@@ -1104,7 +1592,7 @@
           "durationMs": 4152
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/5",
+          "sourcePath": "chapters/0/steps/2/instructions/5",
           "speech": "Use a light color so the words show up.",
           "requestHash": "cb838124644340c2e12277508c1b494ef152781b354892c086e92cfd4cab6f3c",
           "src": "audio/assets/e1/e1b303a284092e48ccf4b4bd33babbc7fa6f356954ec204428537c456883f6cf.mp3",
@@ -1113,7 +1601,7 @@
           "durationMs": 2760
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/5",
+          "sourcePath": "chapters/0/steps/2/instructions/5",
           "speech": "This is only information for the player, so no code is needed yet.",
           "requestHash": "eb27159b8647860c5750a16a8f7c5ae5dc693ea8368ef439d11d6f9bdb7958b3",
           "src": "audio/assets/4c/4c67e11428f7f4b389a633dfab40b3b432b2131814de12b8f6f8234656cd3f67.mp3",
@@ -1126,11 +1614,11 @@
     {
       "id": "launch-pad/create-stage-and-sprites/instruction/006",
       "sourcePaths": [
-        "chapters/0/steps/1/instructions/6"
+        "chapters/0/steps/2/instructions/6"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/instructions/6",
+          "sourcePath": "chapters/0/steps/2/instructions/6",
           "speech": "Type the controls: Arrow keys: move.",
           "requestHash": "20c047c7d5edad85539337d1a98d962cdb01c71753381b49dba6a9625535ea3e",
           "src": "audio/assets/7b/7b2df87a14a7689378c04122e91461a4b14d46f693067d51815e6ba0360ae4dc.mp3",
@@ -1139,7 +1627,7 @@
           "durationMs": 2904
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/6",
+          "sourcePath": "chapters/0/steps/2/instructions/6",
           "speech": "Space key: fire.",
           "requestHash": "53c752761f1c071f7cfaee1bd21d1365a3a3ff00b1659b1ad7d1bed4a5c11fc4",
           "src": "audio/assets/9a/9a505d048ff7e8abd5ebc862b98814d2b8891c8167d9357494ad078efb7c3409.mp3",
@@ -1148,7 +1636,7 @@
           "durationMs": 1608
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/6",
+          "sourcePath": "chapters/0/steps/2/instructions/6",
           "speech": "Green flag: start or restart.",
           "requestHash": "27e75a46a9bee421f38a68fa8a29048e19c32e8ba689062a1268a68b12289d2f",
           "src": "audio/assets/d1/d12e7c7d554e034136bab59d7f69be6d8405a80299930829206dc091bfbc43c2.mp3",
@@ -1161,11 +1649,11 @@
     {
       "id": "launch-pad/create-stage-and-sprites/instruction/007",
       "sourcePaths": [
-        "chapters/0/steps/1/instructions/7"
+        "chapters/0/steps/2/instructions/7"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/instructions/7",
+          "sourcePath": "chapters/0/steps/2/instructions/7",
           "speech": "Type the goal: Destroy all Aliens to win.",
           "requestHash": "1c245e4d1f0ccdf06e3d5e740ff998c78804754d80c402e16208cfbc8c3cef44",
           "src": "audio/assets/d5/d50e1d8e1ac6097ae7ff505022483b8fea842f66d9a5639a60b1a03ed705e4a9.mp3",
@@ -1174,7 +1662,7 @@
           "durationMs": 3600
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/7",
+          "sourcePath": "chapters/0/steps/2/instructions/7",
           "speech": "Avoid Enemy Shots.",
           "requestHash": "b0c99388c390c6766dc57ad3b0694f86ae64e5b2669a29cb1c92fb66b1c2e80c",
           "src": "audio/assets/58/58409dc8fa78f80c02c070aeea4c70c042a1f11a10d968ed230215596bdef24a.mp3",
@@ -1183,7 +1671,7 @@
           "durationMs": 1800
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/7",
+          "sourcePath": "chapters/0/steps/2/instructions/7",
           "speech": "Stop the Aliens from reaching the invasion line.",
           "requestHash": "6ab99453c779d5af0441f7b114d253f65146e34692d54dc7ddc753e42c15f47b",
           "src": "audio/assets/bd/bd4ba848c85083f4bb6d0e9766bf8ecab752d22edbdfc43f42865e842f2b9ee7.mp3",
@@ -1196,11 +1684,11 @@
     {
       "id": "launch-pad/create-stage-and-sprites/instruction/008",
       "sourcePaths": [
-        "chapters/0/steps/1/instructions/8"
+        "chapters/0/steps/2/instructions/8"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/instructions/8",
+          "sourcePath": "chapters/0/steps/2/instructions/8",
           "speech": "Type the scoring: Aliens: 10 points each.",
           "requestHash": "1acbebc1d73cf8f4ecb04c0246c6e5c501ecd51c5a03a31b6041844fe705616d",
           "src": "audio/assets/ba/bac4c3fda1271f8277d518d3e835402f69aa0f4c52ad15ee4240a0cb72e72ea2.mp3",
@@ -1209,7 +1697,7 @@
           "durationMs": 4008
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/8",
+          "sourcePath": "chapters/0/steps/2/instructions/8",
           "speech": "Mothership: 50 points.",
           "requestHash": "94a8e6dda1f993d3ec552950aaebc9cad404cf55fb1b889605ab99044f01dbaa",
           "src": "audio/assets/c1/c1014fab0ae8b89096da59eb4a61a9f16ddca0fa737cedd3b28b693aa8bdcbb6.mp3",
@@ -1218,7 +1706,7 @@
           "durationMs": 2568
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/8",
+          "sourcePath": "chapters/0/steps/2/instructions/8",
           "speech": "The Mothership is a bonus enemy ship you will build in Chapter 5.",
           "requestHash": "994efc89a419d71e4586b2636cfad3977bfbde1230a903999f39fb9f24066def",
           "src": "audio/assets/23/23ce1bf4c46af9cd7195d089217ac39ec7a65bd92f1cc4f481534f043f213cdf.mp3",
@@ -1231,11 +1719,11 @@
     {
       "id": "launch-pad/create-stage-and-sprites/instruction/009",
       "sourcePaths": [
-        "chapters/0/steps/1/instructions/9"
+        "chapters/0/steps/2/instructions/9"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/instructions/9",
+          "sourcePath": "chapters/0/steps/2/instructions/9",
           "speech": "Keep the words small so they do not distract from the game.",
           "requestHash": "4e064160a15e18de85edb33ff00098e63f11c5d2103159e588f57947e090d68c",
           "src": "audio/assets/a4/a4d0062b090a105d9aa72cf52d96d2c97d7e0484df90527becc65f33d16dbd36.mp3",
@@ -1244,7 +1732,7 @@
           "durationMs": 3624
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/9",
+          "sourcePath": "chapters/0/steps/2/instructions/9",
           "speech": "Sprites move in front of the backdrop, so the words cannot affect play.",
           "requestHash": "0c43bc17059a448103d8486ae819f7984fd5bfdd73814a869455fcfe1203a3b8",
           "src": "audio/assets/d1/d1ee818cbcb62197710e4762a43439edf5ae2a98948077104d6044b6551ec0a0.mp3",
@@ -1257,11 +1745,11 @@
     {
       "id": "launch-pad/create-stage-and-sprites/instruction/010",
       "sourcePaths": [
-        "chapters/0/steps/1/instructions/10"
+        "chapters/0/steps/2/instructions/10"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/instructions/10",
+          "sourcePath": "chapters/0/steps/2/instructions/10",
           "speech": "To make each sprite below, point at the cat button in the bottom right and click Paint.",
           "requestHash": "c136ba7c46a2850d20edc2c4bc157406135bee4ac98a979a9aa6bc8b09e1e853",
           "src": "audio/assets/01/01d19656c9f5ae97fa61a6a7f6efa614cd0b172975604575967b2e8447bf7e62.mp3",
@@ -1270,33 +1758,59 @@
           "durationMs": 5040
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/10",
+          "sourcePath": "chapters/0/steps/2/instructions/10",
           "speech": "Rename the sprite in the Sprite box under the Stage.",
           "requestHash": "9ae3386ab4df7dc6294ac4df0b579179c41028538563501267e8db7814d45c34",
           "src": "audio/assets/23/23a46a29290e6d1439b4f436074f83a51b6fe886d51a3d818e3e1427a01a9a7f.mp3",
           "sha256": "23a46a29290e6d1439b4f436074f83a51b6fe886d51a3d818e3e1427a01a9a7f",
           "bytes": 21456,
           "durationMs": 3576
-        },
-        {
-          "sourcePath": "chapters/0/steps/1/instructions/10",
-          "speech": "To center a costume, drag its artwork over the small center mark in the middle of the paint canvas.",
-          "requestHash": "323456044865c24ad007d16cf2a75f4660ecd30aef97c38ae9d541c00206a83b",
-          "src": "audio/assets/5f/5fd56d93540b79a93e06077e9d1696b8eeb3453beba10d2c2dbf5b027b8a8793.mp3",
-          "sha256": "5fd56d93540b79a93e06077e9d1696b8eeb3453beba10d2c2dbf5b027b8a8793",
-          "bytes": 37440,
-          "durationMs": 6240
         }
       ]
     },
     {
       "id": "launch-pad/create-stage-and-sprites/instruction/011",
       "sourcePaths": [
-        "chapters/0/steps/1/instructions/11"
+        "chapters/0/steps/2/instructions/11"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/instructions/11",
+          "sourcePath": "chapters/0/steps/2/instructions/11",
+          "speech": "Paint each shape over the small center mark in the middle of the canvas.",
+          "requestHash": "c810391eb7e6b36c49616ea7013a37bc21c76321520513ea3bfefbd062f21957",
+          "src": "audio/assets/8c/8c75f39615f6ae307bf5e84fbe3b5bc803b65bc3e1cc155af22342692968b42f.mp3",
+          "sha256": "8c75f39615f6ae307bf5e84fbe3b5bc803b65bc3e1cc155af22342692968b42f",
+          "bytes": 26928,
+          "durationMs": 4488
+        },
+        {
+          "sourcePath": "chapters/0/steps/2/instructions/11",
+          "speech": "A costume is centered when that mark is in the middle of the artwork.",
+          "requestHash": "0b36a9eb4bb1d97f8c86909195b082702ece9900aa115af5d1397b08d849fdad",
+          "src": "audio/assets/d7/d7cfd855b8e1ea3a98feabd3103eb6e8f9034b5a95c3deb4de880339baa6ac98.mp3",
+          "sha256": "d7cfd855b8e1ea3a98feabd3103eb6e8f9034b5a95c3deb4de880339baa6ac98",
+          "bytes": 25488,
+          "durationMs": 4248
+        },
+        {
+          "sourcePath": "chapters/0/steps/2/instructions/11",
+          "speech": "Set the Outline number to 0 so an outline does not add to the size.",
+          "requestHash": "8bcf7b8d1e592ee86a7c8c484aa2e60a1c9e134ab3d9049e5b2873acd40a241f",
+          "src": "audio/assets/0d/0de5923444633c90583c7830020db3d04c8c1893116ae1ed8fa56900f5992359.mp3",
+          "sha256": "0de5923444633c90583c7830020db3d04c8c1893116ae1ed8fa56900f5992359",
+          "bytes": 26640,
+          "durationMs": 4440
+        }
+      ]
+    },
+    {
+      "id": "launch-pad/create-stage-and-sprites/instruction/012",
+      "sourcePaths": [
+        "chapters/0/steps/2/instructions/12"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/0/steps/2/instructions/12",
           "speech": "Create a ship sprite named Player.",
           "requestHash": "e1d1e5823bb348d7b4149dd2177781619ef07aa141002ae583d044979f45abca",
           "src": "audio/assets/96/96db7d1332624f3c87fbc4618bb9b7d7e43f2ef79ccf4838a551fc2f5d78fb5f.mp3",
@@ -1305,7 +1819,7 @@
           "durationMs": 2400
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/11",
+          "sourcePath": "chapters/0/steps/2/instructions/12",
           "speech": "Center its artwork and keep its visible costume no larger than 36 pixels wide by 18 pixels high.",
           "requestHash": "d2507c5a577b749e3e9d40a7c131e81d28095c9678f90afcbff8260dcab698ed",
           "src": "audio/assets/b3/b37f34fa6009b5a283f3b0543cb774cb1ca3d47b94aa702e777a6923355ece2a.mp3",
@@ -1316,13 +1830,13 @@
       ]
     },
     {
-      "id": "launch-pad/create-stage-and-sprites/instruction/012",
+      "id": "launch-pad/create-stage-and-sprites/instruction/013",
       "sourcePaths": [
-        "chapters/0/steps/1/instructions/12"
+        "chapters/0/steps/2/instructions/13"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/instructions/12",
+          "sourcePath": "chapters/0/steps/2/instructions/13",
           "speech": "Select Player and use the y box under the Stage to move it to y negative 60.",
           "requestHash": "54b7a3b3f52f698bcf7feb1a9fd59b84ec53e8d9808c4f5afeb29bc23de8b667",
           "src": "audio/assets/2a/2a64d911d08529688c3020e7b7be6d9835c3707fa76f18f44539d42282c3e113.mp3",
@@ -1331,7 +1845,7 @@
           "durationMs": 5184
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/12",
+          "sourcePath": "chapters/0/steps/2/instructions/13",
           "speech": "Player now marks the height of the invasion line.",
           "requestHash": "3d88c894a9173abe103eec5a7f31fb66d7a6d5faa71cbb81c1744b761369abdc",
           "src": "audio/assets/69/69c4e24060372a3165dcbbc682a9ee2e850eefe6e15add2c8691984a5f431b08.mp3",
@@ -1340,7 +1854,7 @@
           "durationMs": 3240
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/12",
+          "sourcePath": "chapters/0/steps/2/instructions/13",
           "speech": "A later script moves it back to its real starting place.",
           "requestHash": "9bdac9278713f4c0791261cef5d8fda8c59e7ed7a061b917da9b8ea0acb367f4",
           "src": "audio/assets/93/9371d565b4c447a533d5c75f65b45522237a3436a2843035112f0f2336695523.mp3",
@@ -1351,13 +1865,13 @@
       ]
     },
     {
-      "id": "launch-pad/create-stage-and-sprites/instruction/013",
+      "id": "launch-pad/create-stage-and-sprites/instruction/014",
       "sourcePaths": [
-        "chapters/0/steps/1/instructions/13"
+        "chapters/0/steps/2/instructions/14"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/instructions/13",
+          "sourcePath": "chapters/0/steps/2/instructions/14",
           "speech": "Select the Stage and the Space backdrop.",
           "requestHash": "e08d9f3e4bbd13b38e9fe32a37d872025008f52353e0740d3a9ac42bc32c44b9",
           "src": "audio/assets/72/72e61a8acc17f24d298d16349831ba0385203eaa2ab0d5b028965689048a6fd8.mp3",
@@ -1366,7 +1880,7 @@
           "durationMs": 2952
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/13",
+          "sourcePath": "chapters/0/steps/2/instructions/14",
           "speech": "Use the Line tool and a dim color to draw a thin line across the whole backdrop.",
           "requestHash": "006df84b816e0fc390f6f249ea642e3eb9990e8a08f2223c316f21951a06baea",
           "src": "audio/assets/c7/c77051b3062340c1074d51521746e95bdf5702adb0a5ba44f56f0fd2184a6a29.mp3",
@@ -1375,7 +1889,7 @@
           "durationMs": 4968
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/13",
+          "sourcePath": "chapters/0/steps/2/instructions/14",
           "speech": "Watch the Stage preview and make the line pass through the middle of Player.",
           "requestHash": "cd69cab3e5c8082307eedae364b5bcb91a717f21c9dfea958bccd35d3864d0b9",
           "src": "audio/assets/9d/9d4909ef7813824fbaac38f2ed07a6ba22550a7ffed7a3a062fd297a6c1e411e.mp3",
@@ -1386,13 +1900,13 @@
       ]
     },
     {
-      "id": "launch-pad/create-stage-and-sprites/instruction/014",
+      "id": "launch-pad/create-stage-and-sprites/instruction/015",
       "sourcePaths": [
-        "chapters/0/steps/1/instructions/14"
+        "chapters/0/steps/2/instructions/15"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/instructions/14",
+          "sourcePath": "chapters/0/steps/2/instructions/15",
           "speech": "Use the Text tool to label the line invasion line.",
           "requestHash": "fc49e1f0175df9b97f2e20654bff433fb4f5f61590312dfed62c3f7087555e1f",
           "src": "audio/assets/17/171cd231043f738d4bdd6c58f7eecf6f9bea8949e1f196801ecd6d97c607b751.mp3",
@@ -1401,7 +1915,7 @@
           "durationMs": 3480
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/14",
+          "sourcePath": "chapters/0/steps/2/instructions/15",
           "speech": "An alien that drops below this line ends the game.",
           "requestHash": "9e7cd75f21a0ca172bdd39503566215cf412cf584363dca2bab21aafb84d99ba",
           "src": "audio/assets/d3/d33734b49222f40f77b3360ae5553b7b25ffa3974c80fcfec09d97e3585e297b.mp3",
@@ -1412,13 +1926,13 @@
       ]
     },
     {
-      "id": "launch-pad/create-stage-and-sprites/instruction/015",
+      "id": "launch-pad/create-stage-and-sprites/instruction/016",
       "sourcePaths": [
-        "chapters/0/steps/1/instructions/15"
+        "chapters/0/steps/2/instructions/16"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/instructions/15",
+          "sourcePath": "chapters/0/steps/2/instructions/16",
           "speech": "Create an enemy sprite named Alien.",
           "requestHash": "44d2e4eea249b69553166988111bf1f7d1cf3e392a9e80fb0b78db9968a109f3",
           "src": "audio/assets/95/959917c92a5b0649544d277e733e833f30bb2a1adce2c01853ea16695c017796.mp3",
@@ -1427,7 +1941,7 @@
           "durationMs": 2808
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/15",
+          "sourcePath": "chapters/0/steps/2/instructions/16",
           "speech": "Center its artwork and keep its visible costume no larger than 32 pixels wide by 18 pixels high.",
           "requestHash": "edd40d57d5c824cf645d7a6335ac0c1124e9ff2f20d5acaa7926d78152fc67bb",
           "src": "audio/assets/5c/5c787283f562106b267cfdd21837124a15fa67a9ee1cf21d3f4e36bfe885d70f.mp3",
@@ -1438,13 +1952,13 @@
       ]
     },
     {
-      "id": "launch-pad/create-stage-and-sprites/instruction/016",
+      "id": "launch-pad/create-stage-and-sprites/instruction/017",
       "sourcePaths": [
-        "chapters/0/steps/1/instructions/16"
+        "chapters/0/steps/2/instructions/17"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/instructions/16",
+          "sourcePath": "chapters/0/steps/2/instructions/17",
           "speech": "Paint two thin, upright sprites named Player Laser and Enemy Shot.",
           "requestHash": "f77ac03b0ea362c5101ecb7ffeff0cceaf6d5514e1720d7612b6e904ecdb328c",
           "src": "audio/assets/17/17e2c23a513da8486c06cb83c055fa37a53a71d6b0793f1f6551db0447cc40d9.mp3",
@@ -1453,7 +1967,7 @@
           "durationMs": 4344
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/16",
+          "sourcePath": "chapters/0/steps/2/instructions/17",
           "speech": "Center each one and keep it no larger than 4 pixels wide by 10 pixels high.",
           "requestHash": "1f2fddbf2fffd8de32765404df8ba2fdb652f020cf8e8951d3679322c9534838",
           "src": "audio/assets/52/52f76abf7e7c2c8292a10e8b619de67ee9e60f422682601fa990155da8bbb3ea.mp3",
@@ -1462,7 +1976,7 @@
           "durationMs": 5088
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/16",
+          "sourcePath": "chapters/0/steps/2/instructions/17",
           "speech": "Make Player Laser bright and Enemy Shot red.",
           "requestHash": "d11571f04ad5f82300a7cac65f3e9aa763244528d1016a43aadd5dd7a72aba9d",
           "src": "audio/assets/54/543492181a3173e64d83c1410138f5fca240a9c742a2397a3582fe46b9446a34.mp3",
@@ -1473,13 +1987,13 @@
       ]
     },
     {
-      "id": "launch-pad/create-stage-and-sprites/instruction/017",
+      "id": "launch-pad/create-stage-and-sprites/instruction/018",
       "sourcePaths": [
-        "chapters/0/steps/1/instructions/17"
+        "chapters/0/steps/2/instructions/18"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/instructions/17",
+          "sourcePath": "chapters/0/steps/2/instructions/18",
           "speech": "Create a centered Bunker no larger than 56 pixels wide by 18 pixels high.",
           "requestHash": "9df3722ed7b95590d4fc4f7c4dc53b3a3c1376e98304f2e39c15706ca61ac0f6",
           "src": "audio/assets/5b/5b4973f08d0dfd391c16b3bdea8640d83e1dc3512e9877532789a67ff4ad62b1.mp3",
@@ -1490,13 +2004,13 @@
       ]
     },
     {
-      "id": "launch-pad/create-stage-and-sprites/instruction/018",
+      "id": "launch-pad/create-stage-and-sprites/instruction/019",
       "sourcePaths": [
-        "chapters/0/steps/1/instructions/18"
+        "chapters/0/steps/2/instructions/19"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/instructions/18",
+          "sourcePath": "chapters/0/steps/2/instructions/19",
           "speech": "Create a centered Mothership no larger than 40 pixels wide by 12 pixels high.",
           "requestHash": "3ac319fdc31084ead27b4970911ee1ff4eaf277998561038b061aec49a49de16",
           "src": "audio/assets/e5/e5a5a9ad7f65c73ba1fe9f7e1d50062aed0d9e4f526c8f2fcc10db1088b4f67f.mp3",
@@ -1507,13 +2021,13 @@
       ]
     },
     {
-      "id": "launch-pad/create-stage-and-sprites/instruction/019",
+      "id": "launch-pad/create-stage-and-sprites/instruction/020",
       "sourcePaths": [
-        "chapters/0/steps/1/instructions/19"
+        "chapters/0/steps/2/instructions/20"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/instructions/19",
+          "sourcePath": "chapters/0/steps/2/instructions/20",
           "speech": "Check each sprite on its Costumes tab.",
           "requestHash": "5708a914de1625d652fe875cc63ac56bcc9d7f9700a1666c4cf8b30f900fd356",
           "src": "audio/assets/76/7648721f8d263e078099a1922543b3a28b98cb9a9c06af70808794e99dca5089.mp3",
@@ -1522,16 +2036,59 @@
           "durationMs": 2832
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/19",
-          "speech": "The size is printed beside the costume name in the thumbnail list.",
-          "requestHash": "853b3a4d97731e410c99bfd3fcada38f32d51597c99ecd34cacd105603730987",
-          "src": "audio/assets/0e/0e0373e70ee1be67e81cecb03b7c45da1a74c6183b329526b4d23383272d0a3b.mp3",
-          "sha256": "0e0373e70ee1be67e81cecb03b7c45da1a74c6183b329526b4d23383272d0a3b",
-          "bytes": 25776,
-          "durationMs": 4296
+          "sourcePath": "chapters/0/steps/2/instructions/20",
+          "speech": "The thumbnail shows two numbers, such as 36 x 18.",
+          "requestHash": "141dcbb1eeb06cbae6bfab43271f0468c855621680dcab0a27f9c1462ce70245",
+          "src": "audio/assets/53/53922ccca3cf02fdd2781fe5ad40f54afa205e3a3f25cac024af4544fa33a81e.mp3",
+          "sha256": "53922ccca3cf02fdd2781fe5ad40f54afa205e3a3f25cac024af4544fa33a81e",
+          "bytes": 27360,
+          "durationMs": 4560
         },
         {
-          "sourcePath": "chapters/0/steps/1/instructions/19",
+          "sourcePath": "chapters/0/steps/2/instructions/20",
+          "speech": "The first is the width and the second is the height.",
+          "requestHash": "161ac5157ed3fef4c08a5f0c0999218a149a044244e58227db3acaa719282431",
+          "src": "audio/assets/e4/e4cb78a07a39b02a4791377b81db450dd7685ba12e41b23a640abdfb19f4ec88.mp3",
+          "sha256": "e4cb78a07a39b02a4791377b81db450dd7685ba12e41b23a640abdfb19f4ec88",
+          "bytes": 19584,
+          "durationMs": 3264
+        }
+      ]
+    },
+    {
+      "id": "launch-pad/create-stage-and-sprites/instruction/021",
+      "sourcePaths": [
+        "chapters/0/steps/2/instructions/21"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/0/steps/2/instructions/21",
+          "speech": "If a shape is too big, select it with the arrow tool and drag a corner to shrink it.",
+          "requestHash": "070ade67fe0926c35fa482a91a70344a8691ebb2eb9562bb953e63062d8e254b",
+          "src": "audio/assets/c0/c04317d995b53443d878b5c9ecdeeb72a55c0622a1903fa71353e24b7ee5ef5d.mp3",
+          "sha256": "c04317d995b53443d878b5c9ecdeeb72a55c0622a1903fa71353e24b7ee5ef5d",
+          "bytes": 30384,
+          "durationMs": 5064
+        },
+        {
+          "sourcePath": "chapters/0/steps/2/instructions/21",
+          "speech": "Do not use the Size box under the Stage, because that does not change the costume's numbers.",
+          "requestHash": "ac34c36861a3c3189996036ea592e167fc36a31256a7084ee55bcf45753b8f3c",
+          "src": "audio/assets/72/729e6cc920118bafbd8a4ea9c221e0fe1a8b6bf1bd5db2c88b02794eef2c4c9f.mp3",
+          "sha256": "729e6cc920118bafbd8a4ea9c221e0fe1a8b6bf1bd5db2c88b02794eef2c4c9f",
+          "bytes": 35568,
+          "durationMs": 5928
+        }
+      ]
+    },
+    {
+      "id": "launch-pad/create-stage-and-sprites/instruction/022",
+      "sourcePaths": [
+        "chapters/0/steps/2/instructions/22"
+      ],
+      "sentences": [
+        {
+          "sourcePath": "chapters/0/steps/2/instructions/22",
           "speech": "Do not continue until every costume is centered and inside its maximum size.",
           "requestHash": "fc20d7d4e94ebeeddea83b17fa971201567cfdbba18de4b1a35ec0d7dd23d262",
           "src": "audio/assets/85/85f1936b4879209789ca7422082d19007825bfb304be6207135705914fe3863f.mp3",
@@ -1544,11 +2101,11 @@
     {
       "id": "launch-pad/create-stage-and-sprites/hint/000",
       "sourcePaths": [
-        "chapters/0/steps/1/hints/0"
+        "chapters/0/steps/2/hints/0"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/hints/0",
+          "sourcePath": "chapters/0/steps/2/hints/0",
           "speech": "Simple geometric art is easier to resize and test than detailed art.",
           "requestHash": "dee5d5715c65a2ae0f2acf50dc9348d8e5ad480cb5d6cac820ffe2111c96300e",
           "src": "audio/assets/ec/ec2d93efb4ce6705c0eb2de98e03635bb4ffccddca5944bb9522260160dc7016.mp3",
@@ -1561,30 +2118,39 @@
     {
       "id": "launch-pad/create-stage-and-sprites/hint/001",
       "sourcePaths": [
-        "chapters/0/steps/1/hints/1"
+        "chapters/0/steps/2/hints/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/hints/1",
+          "sourcePath": "chapters/0/steps/2/hints/1",
           "speech": "Use the zoom buttons below the paint canvas to draw tiny costumes more easily.",
           "requestHash": "7ed1da0058fee36204c97dbf7dd746cb6b09e1583909b5b0a8ba8061109bc9b3",
           "src": "audio/assets/a6/a6038c7bae1396f482c7e2e7e384111e717a07a36c00e550740ab3d1b1d1047e.mp3",
           "sha256": "a6038c7bae1396f482c7e2e7e384111e717a07a36c00e550740ab3d1b1d1047e",
           "bytes": 30240,
           "durationMs": 5040
+        },
+        {
+          "sourcePath": "chapters/0/steps/2/hints/1",
+          "speech": "A 4-pixel laser is only as wide as four of those tiny dots.",
+          "requestHash": "68df69494b52ceb40aebcb3b223c12ce5145818804c91247219d454932e5f29b",
+          "src": "audio/assets/46/465bad6ae9c8df4782edf3efcfc83ab6f6d20b52faa32b8efd0d2d53f26085cf.mp3",
+          "sha256": "465bad6ae9c8df4782edf3efcfc83ab6f6d20b52faa32b8efd0d2d53f26085cf",
+          "bytes": 26928,
+          "durationMs": 4488
         }
       ]
     },
     {
       "id": "launch-pad/create-stage-and-sprites/debug/000",
       "sourcePaths": [
-        "chapters/0/steps/1/debuggingTips/0/symptom",
-        "chapters/0/steps/1/debuggingTips/0/checks/0",
-        "chapters/0/steps/1/debuggingTips/0/checks/1"
+        "chapters/0/steps/2/debuggingTips/0/symptom",
+        "chapters/0/steps/2/debuggingTips/0/checks/0",
+        "chapters/0/steps/2/debuggingTips/0/checks/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/debuggingTips/0/symptom",
+          "sourcePath": "chapters/0/steps/2/debuggingTips/0/symptom",
           "speech": "A later block menu does not show the expected sprite.",
           "requestHash": "6edebce2b892e3eed58c547837e1c8579d01619a3fa954407f6146d65779f0c8",
           "src": "audio/assets/02/02144b149a7ac45e66fe2ecb09a6054691582fca0b6cb9496e16602367cf1c66.mp3",
@@ -1593,7 +2159,7 @@
           "durationMs": 3552
         },
         {
-          "sourcePath": "chapters/0/steps/1/debuggingTips/0/checks/0",
+          "sourcePath": "chapters/0/steps/2/debuggingTips/0/checks/0",
           "speech": "Check spelling and spaces in every sprite name.",
           "requestHash": "f711ff19a7d57fb29d0ab747cb12868dfa8ba14ff283856222019503b1f7f6c2",
           "src": "audio/assets/b8/b86b345566533ffa2c45d85b88c4f68c178304e62e0e156664cc10f0d124a92b.mp3",
@@ -1602,7 +2168,7 @@
           "durationMs": 3264
         },
         {
-          "sourcePath": "chapters/0/steps/1/debuggingTips/0/checks/1",
+          "sourcePath": "chapters/0/steps/2/debuggingTips/0/checks/1",
           "speech": "Make sure Player Laser and Enemy Shot are two different sprites.",
           "requestHash": "87cfb3cde3450bf104cf046016c3b7da0e9b174484b4998bdc56e050a7d12d8b",
           "src": "audio/assets/88/881066ace5e6622a2849c7725612636ae5e6391feda09a84586ae15c932d66b3.mp3",
@@ -1615,15 +2181,15 @@
     {
       "id": "launch-pad/create-stage-and-sprites/checkpoint",
       "sourcePaths": [
-        "chapters/0/steps/1/checkpoint/task",
-        "chapters/0/steps/1/checkpoint/expectedResult",
-        "chapters/0/steps/1/checkpoint/completeWhen/0",
-        "chapters/0/steps/1/checkpoint/completeWhen/1",
-        "chapters/0/steps/1/checkpoint/completeWhen/2"
+        "chapters/0/steps/2/checkpoint/task",
+        "chapters/0/steps/2/checkpoint/expectedResult",
+        "chapters/0/steps/2/checkpoint/completeWhen/0",
+        "chapters/0/steps/2/checkpoint/completeWhen/1",
+        "chapters/0/steps/2/checkpoint/completeWhen/2"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/1/checkpoint/task",
+          "sourcePath": "chapters/0/steps/2/checkpoint/task",
           "speech": "Check the sprite list and the Stage's backdrop list.",
           "requestHash": "eeab712507a7ac69c4064d0d5728721a2ad07520bfc1cc43b3534fa785ae28d9",
           "src": "audio/assets/32/32c2f3c571343f92a8b4dbf167bae03aaefce5fa68f6a72ccdb9183e623f0160.mp3",
@@ -1632,7 +2198,7 @@
           "durationMs": 3408
         },
         {
-          "sourcePath": "chapters/0/steps/1/checkpoint/expectedResult",
+          "sourcePath": "chapters/0/steps/2/checkpoint/expectedResult",
           "speech": "The project has exactly the six required named sprites, three named backdrops, centered costumes within the size limits, and visible player instructions on the Space backdrop.",
           "requestHash": "9b2d0686c346cc2513236944380fb54d2e943129e778d07ea26a84d148e280a5",
           "src": "audio/assets/42/420ec90c254a8351229a3202242d91aca2564ad161ab5797dd84c5a486ecbfa0.mp3",
@@ -1641,7 +2207,7 @@
           "durationMs": 10920
         },
         {
-          "sourcePath": "chapters/0/steps/1/checkpoint/completeWhen/0",
+          "sourcePath": "chapters/0/steps/2/checkpoint/completeWhen/0",
           "speech": "All sprite names match the lesson exactly.",
           "requestHash": "6e3395a2ae36ad6de6639e43b695ffcd63e25980e7ffbe10ca719110a0e44001",
           "src": "audio/assets/25/2579d0fd282410e5ad2997d38dcc77ee035f8b1ebeba93253ff7ed59f4009895.mp3",
@@ -1650,7 +2216,7 @@
           "durationMs": 2952
         },
         {
-          "sourcePath": "chapters/0/steps/1/checkpoint/completeWhen/1",
+          "sourcePath": "chapters/0/steps/2/checkpoint/completeWhen/1",
           "speech": "Only the Space, You Win, and Game Over backdrops exist.",
           "requestHash": "d6d75bb8040c3ddccc9a9497a0ba328873894ee4d76263341380a44def34cdc2",
           "src": "audio/assets/81/816758cc720aeaae387bfcd393f39cebdfe1c9ec14c307c90ae8f32e1152b1f3.mp3",
@@ -1659,7 +2225,7 @@
           "durationMs": 3960
         },
         {
-          "sourcePath": "chapters/0/steps/1/checkpoint/completeWhen/2",
+          "sourcePath": "chapters/0/steps/2/checkpoint/completeWhen/2",
           "speech": "The Space backdrop shows the controls, goal, dangers, and scoring while every sprite costume is centered and inside its maximum box.",
           "requestHash": "c41dcd1e95bc4caffa9939f8782be4bb5fa92eca5a2ec773867c38e539fe1d17",
           "src": "audio/assets/ee/eec51124946e33ed992f346cbc0cb2bddc5a032d7a5a8e422e4ab8e6f72d8fc1.mp3",
@@ -1672,11 +2238,11 @@
     {
       "id": "launch-pad/create-shared-language/overview",
       "sourcePaths": [
-        "chapters/0/steps/2/explanation"
+        "chapters/0/steps/3/explanation"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/2/explanation",
+          "sourcePath": "chapters/0/steps/3/explanation",
           "speech": "The Stage and sprites need the same names for game information.",
           "requestHash": "8739fdd1f8d6a352f8bd272cafa52d316f75aebcc3ce94a3f71288f9a389f201",
           "src": "audio/assets/4e/4e5da2d63f587b1878aba32b65908732e822541091e9d8e4385077944c47ae30.mp3",
@@ -1685,7 +2251,7 @@
           "durationMs": 3984
         },
         {
-          "sourcePath": "chapters/0/steps/2/explanation",
+          "sourcePath": "chapters/0/steps/3/explanation",
           "speech": "Variables made For all sprites store shared facts and fleet coordinates.",
           "requestHash": "b84c55f46b8b42d31af2979476bcd881c309480d19f32ef58ed526f9e4b5246d",
           "src": "audio/assets/9f/9f0b2b6086566af0ef001d07bc5b692b2e94a0bfaea83335e5f759289054e6d8.mp3",
@@ -1694,7 +2260,7 @@
           "durationMs": 4512
         },
         {
-          "sourcePath": "chapters/0/steps/2/explanation",
+          "sourcePath": "chapters/0/steps/3/explanation",
           "speech": "Variables made For this sprite only let each Alien clone remember its own row and column and each Bunker clone remember its own health.",
           "requestHash": "7965191c1953acbb1e1b7b6c7a5e280af02e55400469cbfd54a2f6a37012b526",
           "src": "audio/assets/4f/4fc5d6c14121ee0295cee4cd6a14371405ddaf6c0e121cb8d00c54d58c515fad.mp3",
@@ -1707,11 +2273,11 @@
     {
       "id": "launch-pad/create-shared-language/instruction/000",
       "sourcePaths": [
-        "chapters/0/steps/2/instructions/0"
+        "chapters/0/steps/3/instructions/0"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/2/instructions/0",
+          "sourcePath": "chapters/0/steps/3/instructions/0",
           "speech": "Make these variables with For all sprites: Score, Aliens Left, Game State, Stage, Fleet X, Fleet Y, Laser Active, Enemy Shot Active, and Shot Lane.",
           "requestHash": "7c3fa0342efca1239a95fe592b6b680fa94717ef747e7496862a0baaafb41688",
           "src": "audio/assets/51/51d51d8ce966ec8177e7f7cdfc8be10bfba34cf51d7e6b0923211099d57c735b.mp3",
@@ -1720,7 +2286,7 @@
           "durationMs": 10344
         },
         {
-          "sourcePath": "chapters/0/steps/2/instructions/0",
+          "sourcePath": "chapters/0/steps/3/instructions/0",
           "speech": "The variable named Stage only shares its name with Scratch's Stage.",
           "requestHash": "b2a3fc9092d35a16cb6147bf2f707a1167d8ea1075cf9c9dae39b3233a9b21ed",
           "src": "audio/assets/d3/d3ebb0156fd7887679316cdf8456884ec3e13c452bd702b0a7cfa2956063688e.mp3",
@@ -1729,7 +2295,7 @@
           "durationMs": 4200
         },
         {
-          "sourcePath": "chapters/0/steps/2/instructions/0",
+          "sourcePath": "chapters/0/steps/3/instructions/0",
           "speech": "It stores the number of the fleet's movement phase.",
           "requestHash": "ce6c3124115d1050e8c76c68b6e5363dede22616b4eb48a69c6a1d537953069a",
           "src": "audio/assets/ac/ac26d10192d850f6d351f4cef288f05545040197f9e8eb200b4f4a295873be33.mp3",
@@ -1742,11 +2308,11 @@
     {
       "id": "launch-pad/create-shared-language/instruction/001",
       "sourcePaths": [
-        "chapters/0/steps/2/instructions/1"
+        "chapters/0/steps/3/instructions/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/2/instructions/1",
+          "sourcePath": "chapters/0/steps/3/instructions/1",
           "speech": "On the Alien sprite, make My Column, My Row, and Is Clone with For this sprite only.",
           "requestHash": "6387561edd17d19c5c644f87c95b45a2f3e4ff82d9e940602ecb12aff975334e",
           "src": "audio/assets/fc/fcf5450b324c433d7f3d13ae7a84fc9a7d1152f937fb07906a979ce9d47d7dfa.mp3",
@@ -1759,11 +2325,11 @@
     {
       "id": "launch-pad/create-shared-language/instruction/002",
       "sourcePaths": [
-        "chapters/0/steps/2/instructions/2"
+        "chapters/0/steps/3/instructions/2"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/2/instructions/2",
+          "sourcePath": "chapters/0/steps/3/instructions/2",
           "speech": "On the Bunker sprite, make Health and Bunker Number with For this sprite only.",
           "requestHash": "542045cf6b08e66b7c3d50129afe3ccb8e5c6d929ac6cdc46124f011fd890413",
           "src": "audio/assets/6f/6fdbb1574b83db25c8c53f69f2b4ccb5c63eb688a5a7a93f70a8834c70587d00.mp3",
@@ -1776,11 +2342,11 @@
     {
       "id": "launch-pad/create-shared-language/instruction/003",
       "sourcePaths": [
-        "chapters/0/steps/2/instructions/3"
+        "chapters/0/steps/3/instructions/3"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/2/instructions/3",
+          "sourcePath": "chapters/0/steps/3/instructions/3",
           "speech": "On the Mothership sprite, make Active with For this sprite only.",
           "requestHash": "f58129e6b996a39e1443aac188da3d981e7d25e064461a8c2c2d45f3ea21ce1b",
           "src": "audio/assets/a9/a93cccd6c9fae55110fa024d1c5fcc6541bbaa836e66d5c818c85085ac9e74cd.mp3",
@@ -1793,11 +2359,11 @@
     {
       "id": "launch-pad/create-shared-language/instruction/004",
       "sourcePaths": [
-        "chapters/0/steps/2/instructions/4"
+        "chapters/0/steps/3/instructions/4"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/2/instructions/4",
+          "sourcePath": "chapters/0/steps/3/instructions/4",
           "speech": "On the Stage, drag out a temporary broadcast block.",
           "requestHash": "64b14576484d95db9f689316bfece03704aa2c321c699adaca57d61aab58b635",
           "src": "audio/assets/2c/2c2aa3bd2f70e54ed2afab2e12afa4d9e78c56f607fb9c9ec0f938bc1f4a5498.mp3",
@@ -1806,7 +2372,7 @@
           "durationMs": 3720
         },
         {
-          "sourcePath": "chapters/0/steps/2/instructions/4",
+          "sourcePath": "chapters/0/steps/3/instructions/4",
           "speech": "Open its message menu, choose New message, and create Reset Game and Start Game.",
           "requestHash": "478085a198da07c028aa3e3cd37e1097b03a35773c8b1827f3ee8b9b493cb999",
           "src": "audio/assets/68/684ff4fd1f61bbe9a523299f9eee2983d4f8c5bc529425157710a04dbc287953.mp3",
@@ -1815,7 +2381,7 @@
           "durationMs": 5808
         },
         {
-          "sourcePath": "chapters/0/steps/2/instructions/4",
+          "sourcePath": "chapters/0/steps/3/instructions/4",
           "speech": "Later chapters create each new message when its first real script is built.",
           "requestHash": "3c781ac1668931c3882b21f51504f749f6b16dd04c939f16e9758a81c70210ac",
           "src": "audio/assets/f7/f71aad766ffae377d6ea99087c1e7ea904f251227fd09979179b24bd9253ec5a.mp3",
@@ -1828,11 +2394,11 @@
     {
       "id": "launch-pad/create-shared-language/instruction/005",
       "sourcePaths": [
-        "chapters/0/steps/2/instructions/5"
+        "chapters/0/steps/3/instructions/5"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/2/instructions/5",
+          "sourcePath": "chapters/0/steps/3/instructions/5",
           "speech": "Leave the temporary block in the Code area for now.",
           "requestHash": "84665ab398aa587dbbf26fd7fd2eb4373facee9c30324868ff7660cd948070dd",
           "src": "audio/assets/0d/0ddb5cd9df829f0b79c92819dfde9d6c3d89f31808bb77358c83f628de928195.mp3",
@@ -1841,7 +2407,7 @@
           "durationMs": 3336
         },
         {
-          "sourcePath": "chapters/0/steps/2/instructions/5",
+          "sourcePath": "chapters/0/steps/3/instructions/5",
           "speech": "You will delete it in the next step, once the startup script uses both messages.",
           "requestHash": "3aaed53751459093257d78105ff03970cd5ab19e3af126367799e6425cae0a43",
           "src": "audio/assets/53/53d5d3ac128d7376ba8df47ce8b3d3937770b43a9f9c41ea4dde15db28ff04a9.mp3",
@@ -1854,11 +2420,11 @@
     {
       "id": "launch-pad/create-shared-language/instruction/006",
       "sourcePaths": [
-        "chapters/0/steps/2/instructions/6"
+        "chapters/0/steps/3/instructions/6"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/2/instructions/6",
+          "sourcePath": "chapters/0/steps/3/instructions/6",
           "speech": "Hide every variable display except Score and Aliens Left.",
           "requestHash": "da17e002b34321a4d91deaeb51df6af706db8a26479aaa82f6037d7aefd8a97b",
           "src": "audio/assets/05/057d138f10009de77a831e6a986224a0a1dfac88730a92910d4586fbbc2ac1f6.mp3",
@@ -1867,7 +2433,7 @@
           "durationMs": 4104
         },
         {
-          "sourcePath": "chapters/0/steps/2/instructions/6",
+          "sourcePath": "chapters/0/steps/3/instructions/6",
           "speech": "To hide one, untick the checkbox beside its name in the Variables list.",
           "requestHash": "f00d507b03187ca8b4deb1fa8001bbfe3fed9c34c7f8f580d8905177b985116e",
           "src": "audio/assets/5c/5c58af67e75b91b0a973a883c76d0370d6015761c40d8b1a055c922ebed1627c.mp3",
@@ -1880,11 +2446,11 @@
     {
       "id": "launch-pad/create-shared-language/hint/000",
       "sourcePaths": [
-        "chapters/0/steps/2/hints/0"
+        "chapters/0/steps/3/hints/0"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/2/hints/0",
+          "sourcePath": "chapters/0/steps/3/hints/0",
           "speech": "The choice For this sprite only appears while making a variable.",
           "requestHash": "9e45bda458e648dcbae9681594248182a49071f6fa4fda7fb3fc28b0265cc5ca",
           "src": "audio/assets/6a/6a8be4dc55dabcdbeab80a2e376ea765690de0bae0898cd5f7fdf0221a570035.mp3",
@@ -1897,11 +2463,11 @@
     {
       "id": "launch-pad/create-shared-language/hint/001",
       "sourcePaths": [
-        "chapters/0/steps/2/hints/1"
+        "chapters/0/steps/3/hints/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/2/hints/1",
+          "sourcePath": "chapters/0/steps/3/hints/1",
           "speech": "Capitalization must match because the finished code uses these exact names.",
           "requestHash": "164b8eacebf56cfebd6b6f0714c8abff71f4f3e78d7956e85caef8a41bf98a38",
           "src": "audio/assets/61/61b9bc5f9b2980de44599c9b3fb91dcbcc5f09c26370ab8cfbf35a7ed7108749.mp3",
@@ -1914,13 +2480,13 @@
     {
       "id": "launch-pad/create-shared-language/debug/000",
       "sourcePaths": [
-        "chapters/0/steps/2/debuggingTips/0/symptom",
-        "chapters/0/steps/2/debuggingTips/0/checks/0",
-        "chapters/0/steps/2/debuggingTips/0/checks/1"
+        "chapters/0/steps/3/debuggingTips/0/symptom",
+        "chapters/0/steps/3/debuggingTips/0/checks/0",
+        "chapters/0/steps/3/debuggingTips/0/checks/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/2/debuggingTips/0/symptom",
+          "sourcePath": "chapters/0/steps/3/debuggingTips/0/symptom",
           "speech": "Every Bunker clone later loses health together.",
           "requestHash": "a7a946e5eaff67e57322a754cd1db9a2cee3cddd4e5d0718f6a24b649d139822",
           "src": "audio/assets/e0/e01e3c627c3bc06521330f0cefff9b12ddb63f5bc3aced2bc6a28b85131c5665.mp3",
@@ -1929,7 +2495,7 @@
           "durationMs": 3240
         },
         {
-          "sourcePath": "chapters/0/steps/2/debuggingTips/0/checks/0",
+          "sourcePath": "chapters/0/steps/3/debuggingTips/0/checks/0",
           "speech": "Delete and remake Health as For this sprite only on Bunker.",
           "requestHash": "5bf68364a0bb446868b34906df889562717982a6dc9f5b6f5c1cce4e3f639faa",
           "src": "audio/assets/fc/fc3e5353a9d11fcf66f333e8a59dd517136639ba713e30b9a379a86fa3572265.mp3",
@@ -1938,7 +2504,7 @@
           "durationMs": 3816
         },
         {
-          "sourcePath": "chapters/0/steps/2/debuggingTips/0/checks/1",
+          "sourcePath": "chapters/0/steps/3/debuggingTips/0/checks/1",
           "speech": "Do the same for Bunker Number.",
           "requestHash": "f94c773b5577406add07ee5267811388d3a7b6870057218f19041de1c6e31298",
           "src": "audio/assets/30/307bda1055143d25e40a6a3b01daf22834418cde2ac58b20b27edcc56bc9a711.mp3",
@@ -1951,12 +2517,12 @@
     {
       "id": "launch-pad/create-shared-language/debug/001",
       "sourcePaths": [
-        "chapters/0/steps/2/debuggingTips/1/symptom",
-        "chapters/0/steps/2/debuggingTips/1/checks/0"
+        "chapters/0/steps/3/debuggingTips/1/symptom",
+        "chapters/0/steps/3/debuggingTips/1/checks/0"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/2/debuggingTips/1/symptom",
+          "sourcePath": "chapters/0/steps/3/debuggingTips/1/symptom",
           "speech": "Alien identities do not stay independent.",
           "requestHash": "d7814c366193bf90a00b0b74c0d830d6dea1e9bd331094565aeea37ff34d2ea4",
           "src": "audio/assets/07/07bd43985f25f3f541ccfd8b9dd60c343b5e08eca6a5af92ca5f32c8cdbbe944.mp3",
@@ -1965,7 +2531,7 @@
           "durationMs": 3096
         },
         {
-          "sourcePath": "chapters/0/steps/2/debuggingTips/1/checks/0",
+          "sourcePath": "chapters/0/steps/3/debuggingTips/1/checks/0",
           "speech": "Confirm My Column, My Row, and Is Clone are Alien variables made with For this sprite only.",
           "requestHash": "f29b82796641fce1d37ce8fde7fce3e47e215fc74a0b0a60f37c013b408de0d9",
           "src": "audio/assets/b7/b7c5a3f169665754d73fd91dde6d2d1c8a37eb6c11e93f4fc2251d7f7e7a6c7c.mp3",
@@ -1978,15 +2544,15 @@
     {
       "id": "launch-pad/create-shared-language/checkpoint",
       "sourcePaths": [
-        "chapters/0/steps/2/checkpoint/task",
-        "chapters/0/steps/2/checkpoint/expectedResult",
-        "chapters/0/steps/2/checkpoint/completeWhen/0",
-        "chapters/0/steps/2/checkpoint/completeWhen/1",
-        "chapters/0/steps/2/checkpoint/completeWhen/2"
+        "chapters/0/steps/3/checkpoint/task",
+        "chapters/0/steps/3/checkpoint/expectedResult",
+        "chapters/0/steps/3/checkpoint/completeWhen/0",
+        "chapters/0/steps/3/checkpoint/completeWhen/1",
+        "chapters/0/steps/3/checkpoint/completeWhen/2"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/2/checkpoint/task",
+          "sourcePath": "chapters/0/steps/3/checkpoint/task",
           "speech": "Sort the variables into For all sprites and For this sprite only groups.",
           "requestHash": "360a58de706a69223fe6916bf1eae1ce4d70d016649d4059653f6b6864fd21d4",
           "src": "audio/assets/4e/4e6a8802031f62090987c78cd09e78805bc1dbe88f1fcc739815f7bd3c60dc69.mp3",
@@ -1995,7 +2561,7 @@
           "durationMs": 4488
         },
         {
-          "sourcePath": "chapters/0/steps/2/checkpoint/expectedResult",
+          "sourcePath": "chapters/0/steps/3/checkpoint/expectedResult",
           "speech": "Nine For all sprites variables, three Alien For this sprite only variables, two Bunker For this sprite only variables, one Mothership For this sprite only variable, and the two Chapter 1 messages exist.",
           "requestHash": "4d6a1ba57eceb14b418ba65b6801205b9fb9e50002747f7f0066b980f404a029",
           "src": "audio/assets/58/58568553c67e701fccceadc84ee8f68966e05ebd9cd174f44f98d0c176958bb4.mp3",
@@ -2004,7 +2570,7 @@
           "durationMs": 10680
         },
         {
-          "sourcePath": "chapters/0/steps/2/checkpoint/completeWhen/0",
+          "sourcePath": "chapters/0/steps/3/checkpoint/completeWhen/0",
           "speech": "Only Score and Aliens Left are visible on the Stage.",
           "requestHash": "41f898f906028752763074df7d3f8b9a80477bf5d71deaaa91f86c6121c25158",
           "src": "audio/assets/e3/e3a4193872c292bac259eb217de6c78d3f08ab6c167a30610066b68948975046.mp3",
@@ -2013,7 +2579,7 @@
           "durationMs": 3744
         },
         {
-          "sourcePath": "chapters/0/steps/2/checkpoint/completeWhen/1",
+          "sourcePath": "chapters/0/steps/3/checkpoint/completeWhen/1",
           "speech": "Reset Game and Start Game appear in a broadcast menu.",
           "requestHash": "d7835f7b71ad4c009ba4ac141dc35dad3dce5d1c6dd3bfae3b003f1592472068",
           "src": "audio/assets/c5/c5531b1324856ca57b406adf6e6a0124c8e1249d0f94f7d19a416a04658b8105.mp3",
@@ -2022,7 +2588,7 @@
           "durationMs": 3888
         },
         {
-          "sourcePath": "chapters/0/steps/2/checkpoint/completeWhen/2",
+          "sourcePath": "chapters/0/steps/3/checkpoint/completeWhen/2",
           "speech": "Each For this sprite only variable was created on the correct sprite.",
           "requestHash": "639dd9d67157b474418c4eb89861397cbb4c3210a9da25ad9b12ecdbf6f1f82e",
           "src": "audio/assets/3f/3f95498037df282f026b9b10dbc9297b0ce46ed070bc396ac0eb3297a485513c.mp3",
@@ -2035,11 +2601,11 @@
     {
       "id": "launch-pad/reset-and-control-player/overview",
       "sourcePaths": [
-        "chapters/0/steps/3/explanation"
+        "chapters/0/steps/4/explanation"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/3/explanation",
+          "sourcePath": "chapters/0/steps/4/explanation",
           "speech": "One script on the Stage is the only way the game starts.",
           "requestHash": "7b032f0a7157f43fe2b9ecf8d19fe31942f49c255768592d56b7099fb9a99ae0",
           "src": "audio/assets/50/507b2a0161ec09ca8f5c638956a56217b028c572192312f4cb6e1fc32442f8ab.mp3",
@@ -2048,7 +2614,7 @@
           "durationMs": 3840
         },
         {
-          "sourcePath": "chapters/0/steps/3/explanation",
+          "sourcePath": "chapters/0/steps/4/explanation",
           "speech": "It resets shared values, tells every sprite to prepare, and starts play only after preparation finishes.",
           "requestHash": "0b3600ffb06f92be23c0abacf52369e6865a833ae74ceb58605d2228281d2252",
           "src": "audio/assets/cb/cb5d8fb090a7a831b3625c2cbc38938db9d42c098a04213a0a6fecff30fe08bd.mp3",
@@ -2057,7 +2623,7 @@
           "durationMs": 7272
         },
         {
-          "sourcePath": "chapters/0/steps/3/explanation",
+          "sourcePath": "chapters/0/steps/4/explanation",
           "speech": "Player checks the arrow keys in its own movement loop and keeps its x coordinate inside the Stage.",
           "requestHash": "b1c77453eb6affd50516e6337634e0b8b36fedeefdb66814ab890f843e5c5793",
           "src": "audio/assets/92/9286cfe278d217488770818173ca9cd74ea130009b4108a20a87971294e1ff15.mp3",
@@ -2066,7 +2632,7 @@
           "durationMs": 5760
         },
         {
-          "sourcePath": "chapters/0/steps/3/explanation",
+          "sourcePath": "chapters/0/steps/4/explanation",
           "speech": "A later chapter adds a separate firing loop, so waiting for the Space key to be released never pauses movement.",
           "requestHash": "a1493aff364ba62bef370d99c59d1981ef65327cd8e5ab4f4d5983fb5b340c40",
           "src": "audio/assets/8e/8e61bb97ee8a36ed7d8f2d7eaf7de71b568c2fdc3578b56ed3ba745923eaf296.mp3",
@@ -2079,11 +2645,11 @@
     {
       "id": "launch-pad/reset-and-control-player/instruction/000",
       "sourcePaths": [
-        "chapters/0/steps/3/instructions/0"
+        "chapters/0/steps/4/instructions/0"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/3/instructions/0",
+          "sourcePath": "chapters/0/steps/4/instructions/0",
           "speech": "On the Stage, add the green-flag script.",
           "requestHash": "53fbac6b39fdb21c738888a7848db4bbb16b0e3c1504a80c1bf933dd47763285",
           "src": "audio/assets/e5/e545aa0871ed91e157386ca1c1b489dd96a0e2faeadcf9a3c822518ad20d0c1f.mp3",
@@ -2092,7 +2658,7 @@
           "durationMs": 3096
         },
         {
-          "sourcePath": "chapters/0/steps/3/instructions/0",
+          "sourcePath": "chapters/0/steps/4/instructions/0",
           "speech": "Every block is in the finished code section on this page.",
           "requestHash": "8735ef858d65bf576ec52a373b6099149b5c8a597b6fd23a5745229694ac93ab",
           "src": "audio/assets/b3/b3cadec97e2f4d193bf4fc0bd7631d285958a0e291a815bc6d617662c2cc537c.mp3",
@@ -2101,7 +2667,7 @@
           "durationMs": 3696
         },
         {
-          "sourcePath": "chapters/0/steps/3/instructions/0",
+          "sourcePath": "chapters/0/steps/4/instructions/0",
           "speech": "If that section is closed, click Show finished code.",
           "requestHash": "13c95229bb98b7c73c52c420425665253aa95ca3b6efc6e8f296e0127fdddcbb",
           "src": "audio/assets/60/60d0835f4593f6a109858dc234aff2f2f951ae3bf8fd51b63b7db41bbfac6f33.mp3",
@@ -2110,7 +2676,7 @@
           "durationMs": 3696
         },
         {
-          "sourcePath": "chapters/0/steps/3/instructions/0",
+          "sourcePath": "chapters/0/steps/4/instructions/0",
           "speech": "Use broadcast Reset Game and wait so all setup finishes before Game State becomes playing.",
           "requestHash": "9f9e0f15640ab175ddd66badad971d0cad201621ae37e5bb97972d5eb63e1705",
           "src": "audio/assets/3e/3e3d05a56ac95d64de62d40f4557d12eac751c12927245851fa977f0e6b1f107.mp3",
@@ -2123,11 +2689,11 @@
     {
       "id": "launch-pad/reset-and-control-player/instruction/001",
       "sourcePaths": [
-        "chapters/0/steps/3/instructions/1"
+        "chapters/0/steps/4/instructions/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/3/instructions/1",
+          "sourcePath": "chapters/0/steps/4/instructions/1",
           "speech": "Delete the temporary broadcast block from the last step.",
           "requestHash": "a88eea62b9cf6243cef439b5181b2cf3f23fca5bfce177fa065e554ba7aef54b",
           "src": "audio/assets/18/1872cfea1cf87c268143eea53a579a9a59e5e72fa7eabcef39865a775f841468.mp3",
@@ -2136,7 +2702,7 @@
           "durationMs": 3648
         },
         {
-          "sourcePath": "chapters/0/steps/3/instructions/1",
+          "sourcePath": "chapters/0/steps/4/instructions/1",
           "speech": "The startup script now uses both messages, so Scratch keeps them.",
           "requestHash": "7edfbd3e3ccd92e17aed705a1ac05c76673ab2405d7b42818af098521bf340cf",
           "src": "audio/assets/ff/ff89b16733b2b56450babb3e3425f1fa673a734867c3805b89f02dae8b6ba01f.mp3",
@@ -2149,28 +2715,28 @@
     {
       "id": "launch-pad/reset-and-control-player/instruction/002",
       "sourcePaths": [
-        "chapters/0/steps/3/instructions/2"
+        "chapters/0/steps/4/instructions/2"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/3/instructions/2",
-          "speech": "On Player, reset its position to x 0, y negative 150 and show it when Reset Game arrives.",
-          "requestHash": "f3e615dbc667633386e9c1dfae59c0a928fe6ae0f07196cd6e8e159eadd72c04",
-          "src": "audio/assets/cf/cf19fabd0192ff835f22e4c313037de9196b8f427be6dc928cc7ea5a0f55c3b0.mp3",
-          "sha256": "cf19fabd0192ff835f22e4c313037de9196b8f427be6dc928cc7ea5a0f55c3b0",
-          "bytes": 45648,
-          "durationMs": 7608
+          "sourcePath": "chapters/0/steps/4/instructions/2",
+          "speech": "On Player, reset its position to x 0, y negative 150, which is near the bottom of the Stage, and show it when Reset Game arrives.",
+          "requestHash": "30256ed116ce4462720b7d501ad22ee1859a3767ba1d4477a355219a246bd9d7",
+          "src": "audio/assets/12/1253d0497d4363f9fcea497c16f9c1b34426cdd87b50679f91844e1dd3808db4.mp3",
+          "sha256": "1253d0497d4363f9fcea497c16f9c1b34426cdd87b50679f91844e1dd3808db4",
+          "bytes": 58752,
+          "durationMs": 9792
         }
       ]
     },
     {
       "id": "launch-pad/reset-and-control-player/instruction/003",
       "sourcePaths": [
-        "chapters/0/steps/3/instructions/3"
+        "chapters/0/steps/4/instructions/3"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/3/instructions/3",
+          "sourcePath": "chapters/0/steps/4/instructions/3",
           "speech": "On Alien, Player Laser, Enemy Shot, Bunker, and Mothership, add a when I receive Reset Game script with hide.",
           "requestHash": "fa26e38f8b6469ad8dd7de089b2d1abc779ef53c1e32940b93d70252a168e433",
           "src": "audio/assets/e5/e5a16cb5e88fec252d8a2dd22c164a8dc838cd033899517bf8a0ef59944ac012.mp3",
@@ -2179,7 +2745,7 @@
           "durationMs": 7056
         },
         {
-          "sourcePath": "chapters/0/steps/3/instructions/3",
+          "sourcePath": "chapters/0/steps/4/instructions/3",
           "speech": "In later chapters, add each sprite's other reset blocks to this same script.",
           "requestHash": "2afa7c034c76174164237bae69c34cc5ea02d350b3699c5e79c59be1341a62dc",
           "src": "audio/assets/d2/d23e9b9e6f6eb9055b17e526c486c9bee9e5c330a74e6b539a3530a53b23de55.mp3",
@@ -2192,11 +2758,11 @@
     {
       "id": "launch-pad/reset-and-control-player/instruction/004",
       "sourcePaths": [
-        "chapters/0/steps/3/instructions/4"
+        "chapters/0/steps/4/instructions/4"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/3/instructions/4",
+          "sourcePath": "chapters/0/steps/4/instructions/4",
           "speech": "On Player, start a movement script when Start Game arrives.",
           "requestHash": "7fc13b2203cc4988744a6876dcb9e837f8549ff52a23b06b2de2b324bbd50421",
           "src": "audio/assets/7a/7aacd59bd4483f26e09fc2ff712a46be3c16359100915246d13a816a2e78314b.mp3",
@@ -2205,7 +2771,7 @@
           "durationMs": 4152
         },
         {
-          "sourcePath": "chapters/0/steps/3/instructions/4",
+          "sourcePath": "chapters/0/steps/4/instructions/4",
           "speech": "Add repeat until, and for its condition put Game State equals playing inside a not block.",
           "requestHash": "deefd98b114641434b509804c0ee0ac5ddcd3ede6895f9d343c0ab433f0b972a",
           "src": "audio/assets/51/51676c8ddb1717ec933de4da859d852ca00a5bc73b15712c2cdb9674b1658b8a.mp3",
@@ -2214,7 +2780,7 @@
           "durationMs": 5496
         },
         {
-          "sourcePath": "chapters/0/steps/3/instructions/4",
+          "sourcePath": "chapters/0/steps/4/instructions/4",
           "speech": "Movement then stops when the game ends.",
           "requestHash": "6929bbce3f8a55f36cc24332b61ca6e7a4461d3719b149a87606216a528595f0",
           "src": "audio/assets/ba/ba64db528698138022b4d6692d763f9280011560b324a9b6c6fa794fabf0eaf9.mp3",
@@ -2227,62 +2793,89 @@
     {
       "id": "launch-pad/reset-and-control-player/instruction/005",
       "sourcePaths": [
-        "chapters/0/steps/3/instructions/5"
+        "chapters/0/steps/4/instructions/5"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/3/instructions/5",
+          "sourcePath": "chapters/0/steps/4/instructions/5",
           "speech": "Move left or right by 6 while the matching arrow key is pressed.",
           "requestHash": "6252bf738a3b72b32a51820ebe1dcdb472e27f997109366c779ea167ec7a61e1",
           "src": "audio/assets/a3/a3703285132fda8b47820986673784a9b3dbe01916d77cb68ab093224a28536e.mp3",
           "sha256": "a3703285132fda8b47820986673784a9b3dbe01916d77cb68ab093224a28536e",
           "bytes": 25488,
           "durationMs": 4248
+        },
+        {
+          "sourcePath": "chapters/0/steps/4/instructions/5",
+          "speech": "Player moves 6 pixels each time the loop runs, so a bigger number would make it faster.",
+          "requestHash": "e8ce2a7899ca8ffc8670e8d34b528f58451665fb1bae2bbfbbd1751e8036cc8f",
+          "src": "audio/assets/e3/e30df7cd3f39343e3471e3ea4a35cb7edf572c42386c3c97a1035b2a1776b886.mp3",
+          "sha256": "e30df7cd3f39343e3471e3ea4a35cb7edf572c42386c3c97a1035b2a1776b886",
+          "bytes": 31536,
+          "durationMs": 5256
         }
       ]
     },
     {
       "id": "launch-pad/reset-and-control-player/instruction/006",
       "sourcePaths": [
-        "chapters/0/steps/3/instructions/6"
+        "chapters/0/steps/4/instructions/6"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/3/instructions/6",
-          "speech": "Keep Player between x negative 210 and x 210 so it cannot leave the Stage.",
-          "requestHash": "9a1bd87f02e77fdb1813d2c2099c38bf1e87aa79d3a6a90b3b8176621613f820",
-          "src": "audio/assets/ee/ee91eeb067be94c1bca13b786feacba7e8bdce352baacd4a070634e9769c1cdc.mp3",
-          "sha256": "ee91eeb067be94c1bca13b786feacba7e8bdce352baacd4a070634e9769c1cdc",
-          "bytes": 34992,
-          "durationMs": 5832
+          "sourcePath": "chapters/0/steps/4/instructions/6",
+          "speech": "Keep Player between x negative 210 and x 210.",
+          "requestHash": "d8e2c6f8fe823babe1989f9309465c0485a07d68bd9aae9e0f597d020220e95c",
+          "src": "audio/assets/f3/f3b003b7bacf71a066a120623cbf79155d4c6d2334dbea71b6dd053a755e0dc6.mp3",
+          "sha256": "f3b003b7bacf71a066a120623cbf79155d4c6d2334dbea71b6dd053a755e0dc6",
+          "bytes": 28368,
+          "durationMs": 4728
+        },
+        {
+          "sourcePath": "chapters/0/steps/4/instructions/6",
+          "speech": "The edges of the Stage are at x negative 240 and x 240, so Player stays fully on the Stage.",
+          "requestHash": "19c4553b278e118adc1e113ff367cde3717e795f594c0dfd1cbe7e7146ad860e",
+          "src": "audio/assets/34/34d2c4b75271095b19975f1494511a946ad968714259f1e6625f037a1fb975c8.mp3",
+          "sha256": "34d2c4b75271095b19975f1494511a946ad968714259f1e6625f037a1fb975c8",
+          "bytes": 44640,
+          "durationMs": 7440
         }
       ]
     },
     {
       "id": "launch-pad/reset-and-control-player/instruction/007",
       "sourcePaths": [
-        "chapters/0/steps/3/instructions/7"
+        "chapters/0/steps/4/instructions/7"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/3/instructions/7",
-          "speech": "Click the green flag and test both edges.",
-          "requestHash": "beabba1e52c277eaf80ad175573cce17ffb976073b830c43d7732cbf93139ded",
-          "src": "audio/assets/0d/0dbc77ae6712e1f41dde6e3c0d12936af0813b53448c5693aa7fb9e0d0a5f2eb.mp3",
-          "sha256": "0dbc77ae6712e1f41dde6e3c0d12936af0813b53448c5693aa7fb9e0d0a5f2eb",
+          "sourcePath": "chapters/0/steps/4/instructions/7",
+          "speech": "Click the green flag and move to both sides.",
+          "requestHash": "2ee273e79b83d730c81551293b972814c364047de6ef0d3bc10c60572ba8623c",
+          "src": "audio/assets/87/8760bf357ac44a2e516a7c3382d8035c8c161e1df4057a5cf579a434b75b4164.mp3",
+          "sha256": "8760bf357ac44a2e516a7c3382d8035c8c161e1df4057a5cf579a434b75b4164",
           "bytes": 17856,
           "durationMs": 2976
+        },
+        {
+          "sourcePath": "chapters/0/steps/4/instructions/7",
+          "speech": "With Player selected, the x box under the Stage should stop at -210 and 210.",
+          "requestHash": "22be439ecff60e3b63f65c9e6e26f02f4702deebbce88fb977f3d38549839335",
+          "src": "audio/assets/1a/1a8cfde7d31d261b3ee562b673b41e9e28a3bdcd17e25bcb0783076d5506a536.mp3",
+          "sha256": "1a8cfde7d31d261b3ee562b673b41e9e28a3bdcd17e25bcb0783076d5506a536",
+          "bytes": 41040,
+          "durationMs": 6840
         }
       ]
     },
     {
       "id": "launch-pad/reset-and-control-player/hint/000",
       "sourcePaths": [
-        "chapters/0/steps/3/hints/0"
+        "chapters/0/steps/4/hints/0"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/3/hints/0",
+          "sourcePath": "chapters/0/steps/4/hints/0",
           "speech": "Put the two edge checks inside the movement loop, after the movement blocks.",
           "requestHash": "94b6f92e985052d63ba5cb171bea8c214c06b05793953a140afb98ce088ae8c6",
           "src": "audio/assets/06/067067443368874560c2e9c7cdd641b8c2095c53a80750d9741533d749d31e4f.mp3",
@@ -2295,11 +2888,11 @@
     {
       "id": "launch-pad/reset-and-control-player/hint/001",
       "sourcePaths": [
-        "chapters/0/steps/3/hints/1"
+        "chapters/0/steps/4/hints/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/3/hints/1",
+          "sourcePath": "chapters/0/steps/4/hints/1",
           "speech": "The Stage uses broadcast Reset Game and wait, so it does not send Start Game until every when I receive Reset Game script has finished.",
           "requestHash": "905dd2d4257ba71be5d30d9f2d68549ff8ef8f7a3cd09dd8650b51a59a449ab9",
           "src": "audio/assets/62/622eaea02131794ec1065a1770e1f5e7869a258dda454c81fde98d46819e77e3.mp3",
@@ -2312,13 +2905,13 @@
     {
       "id": "launch-pad/reset-and-control-player/debug/000",
       "sourcePaths": [
-        "chapters/0/steps/3/debuggingTips/0/symptom",
-        "chapters/0/steps/3/debuggingTips/0/checks/0",
-        "chapters/0/steps/3/debuggingTips/0/checks/1"
+        "chapters/0/steps/4/debuggingTips/0/symptom",
+        "chapters/0/steps/4/debuggingTips/0/checks/0",
+        "chapters/0/steps/4/debuggingTips/0/checks/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/3/debuggingTips/0/symptom",
+          "sourcePath": "chapters/0/steps/4/debuggingTips/0/symptom",
           "speech": "Player moves once and stops.",
           "requestHash": "0509f7104ae3e26ce5700e761d2440e88b25324aadc611be5c7b6bb4ab5b8bfd",
           "src": "audio/assets/1f/1f3430498830e3f3ae39610c8ebf7d76723f38831006d3e4dd1ff8a35dedd27b.mp3",
@@ -2327,7 +2920,7 @@
           "durationMs": 2304
         },
         {
-          "sourcePath": "chapters/0/steps/3/debuggingTips/0/checks/0",
+          "sourcePath": "chapters/0/steps/4/debuggingTips/0/checks/0",
           "speech": "Put all key and edge checks inside the repeat until Game State is not playing loop.",
           "requestHash": "ba177268d0f17fb4bb019f381c729c15979ed9efef65f7813b74f677c27e1d50",
           "src": "audio/assets/aa/aa25995fa32988a41924f0adb75a1fed2445cdc371f0ffe1411abf037b57d954.mp3",
@@ -2336,7 +2929,7 @@
           "durationMs": 5040
         },
         {
-          "sourcePath": "chapters/0/steps/3/debuggingTips/0/checks/1",
+          "sourcePath": "chapters/0/steps/4/debuggingTips/0/checks/1",
           "speech": "Use sensing blocks key left arrow pressed and key right arrow pressed.",
           "requestHash": "af4f4d6a905fbadefb519e432a87d71fdad609e7343a53029439792f2c5b84fc",
           "src": "audio/assets/a3/a3127dab4e86b77c6da80668e30a34198ad20db7c529660f1eb60d61bc5ef1b5.mp3",
@@ -2349,13 +2942,13 @@
     {
       "id": "launch-pad/reset-and-control-player/debug/001",
       "sourcePaths": [
-        "chapters/0/steps/3/debuggingTips/1/symptom",
-        "chapters/0/steps/3/debuggingTips/1/checks/0",
-        "chapters/0/steps/3/debuggingTips/1/checks/1"
+        "chapters/0/steps/4/debuggingTips/1/symptom",
+        "chapters/0/steps/4/debuggingTips/1/checks/0",
+        "chapters/0/steps/4/debuggingTips/1/checks/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/3/debuggingTips/1/symptom",
+          "sourcePath": "chapters/0/steps/4/debuggingTips/1/symptom",
           "speech": "Old values remain after another play.",
           "requestHash": "e54e957d5b1c53c1ea09f0133fd91bfa2c05ddac00065e8a78fb1e76a8c69674",
           "src": "audio/assets/f0/f0a256c33fb2487de8bc0fab3378aa0c328b8a2d05e969d7152109f5407af0a5.mp3",
@@ -2364,7 +2957,7 @@
           "durationMs": 2856
         },
         {
-          "sourcePath": "chapters/0/steps/3/debuggingTips/1/checks/0",
+          "sourcePath": "chapters/0/steps/4/debuggingTips/1/checks/0",
           "speech": "Make sure all reset blocks are directly under the Stage green-flag event.",
           "requestHash": "6904d4755a75ee916e35a945641eeb3322b449ad9bc4b06b0b0ade4c9328982c",
           "src": "audio/assets/1e/1e3186b095ef449bb6eaefc9112f327f05b1fcd78bb48ed88b685677df399181.mp3",
@@ -2373,7 +2966,7 @@
           "durationMs": 4656
         },
         {
-          "sourcePath": "chapters/0/steps/3/debuggingTips/1/checks/1",
+          "sourcePath": "chapters/0/steps/4/debuggingTips/1/checks/1",
           "speech": "Restart only with the green flag.",
           "requestHash": "9a11fc1637b337b415cd1bbb9fcef515f906447d09f1e4fa4ef8c213c25e0fe5",
           "src": "audio/assets/98/983290e041d8b6e218a7eae73aa8be141a30b676a2c00a3da66e0683806e8a6e.mp3",
@@ -2386,16 +2979,16 @@
     {
       "id": "launch-pad/reset-and-control-player/checkpoint",
       "sourcePaths": [
-        "chapters/0/steps/3/checkpoint/task",
-        "chapters/0/steps/3/checkpoint/expectedResult",
-        "chapters/0/steps/3/checkpoint/completeWhen/0",
-        "chapters/0/steps/3/checkpoint/completeWhen/1",
-        "chapters/0/steps/3/checkpoint/completeWhen/2",
-        "chapters/0/steps/3/checkpoint/completeWhen/3"
+        "chapters/0/steps/4/checkpoint/task",
+        "chapters/0/steps/4/checkpoint/expectedResult",
+        "chapters/0/steps/4/checkpoint/completeWhen/0",
+        "chapters/0/steps/4/checkpoint/completeWhen/1",
+        "chapters/0/steps/4/checkpoint/completeWhen/2",
+        "chapters/0/steps/4/checkpoint/completeWhen/3"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/3/checkpoint/task",
+          "sourcePath": "chapters/0/steps/4/checkpoint/task",
           "speech": "Start twice and move Player against both side boundaries.",
           "requestHash": "e60c5f9ad20af57207552b4d2fbda92bec623b726bfd0ca1a33b26f0bf52bd3e",
           "src": "audio/assets/74/7454df49e830f0e59c3954c7d82cb72a1149922c700a25ea7bbc959efa267d15.mp3",
@@ -2404,7 +2997,7 @@
           "durationMs": 3624
         },
         {
-          "sourcePath": "chapters/0/steps/3/checkpoint/expectedResult",
+          "sourcePath": "chapters/0/steps/4/checkpoint/expectedResult",
           "speech": "Each green-flag click shows the Space backdrop, resets all shared values, and places a controllable Player at the bottom.",
           "requestHash": "a0c68c8ccb134c39c206c840fe04a0806e8b49a9d4bffd5333280e3dd84e2310",
           "src": "audio/assets/4f/4f07338717fe910e7234cab8667d0fea57e76bd861f9b434d0ed0abed7b2bb03.mp3",
@@ -2413,7 +3006,7 @@
           "durationMs": 8040
         },
         {
-          "sourcePath": "chapters/0/steps/3/checkpoint/completeWhen/0",
+          "sourcePath": "chapters/0/steps/4/checkpoint/completeWhen/0",
           "speech": "Score and Aliens Left both display 0 for now.",
           "requestHash": "3e49b66f971661d104337e40a792893fa1279e072d3d0c69ceaa8649b2ee3fc4",
           "src": "audio/assets/f0/f07657ad7cbcff32104274a356cdefb9af6220d8c7c000c7b3d55b8696abeb20.mp3",
@@ -2422,7 +3015,7 @@
           "durationMs": 3504
         },
         {
-          "sourcePath": "chapters/0/steps/3/checkpoint/completeWhen/1",
+          "sourcePath": "chapters/0/steps/4/checkpoint/completeWhen/1",
           "speech": "Game State becomes playing after reset.",
           "requestHash": "10294ddae3272cdb5b028238ca9bda074436961b0c97714657541e231a47b177",
           "src": "audio/assets/e4/e4d9669e84c55ab2406e83fbec8b95a9bf1e5a088f717399fe29c2d5b1b00cf6.mp3",
@@ -2431,7 +3024,7 @@
           "durationMs": 2856
         },
         {
-          "sourcePath": "chapters/0/steps/3/checkpoint/completeWhen/2",
+          "sourcePath": "chapters/0/steps/4/checkpoint/completeWhen/2",
           "speech": "Every non-Player sprite is hidden during setup.",
           "requestHash": "d901fc99ee733b350d653df0946f99f0c643f17601e017cd053eb4be1a1aacdf",
           "src": "audio/assets/b2/b252e87891ad5f696556b72ef5f4a8bf0f43da6dac5e99ab00f50c57f89c507c.mp3",
@@ -2440,7 +3033,7 @@
           "durationMs": 3264
         },
         {
-          "sourcePath": "chapters/0/steps/3/checkpoint/completeWhen/3",
+          "sourcePath": "chapters/0/steps/4/checkpoint/completeWhen/3",
           "speech": "Player never moves past x negative 210 or x 210.",
           "requestHash": "714493aed7134ada0a4b415772f411539a8ee48a983580626543d93f3ed49a13",
           "src": "audio/assets/8b/8bd600e81647db9b73de3e46977830d5e8b44591df135f40b4df5250b9276081.mp3",
@@ -2453,11 +3046,11 @@
     {
       "id": "launch-pad/launch-pad-checkpoint/overview",
       "sourcePaths": [
-        "chapters/0/steps/4/explanation"
+        "chapters/0/steps/5/explanation"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/4/explanation",
+          "sourcePath": "chapters/0/steps/5/explanation",
           "speech": "This checkpoint prevents problems in later chapters.",
           "requestHash": "b7ab042ef614a04ae2f64d0698b12686042f4b2d7b49badbba006abb9d5ac8d5",
           "src": "audio/assets/7e/7e1dacb494a56fbb149a7746461eba0667d6c2afbd5b5a53bd295d72e17ee242.mp3",
@@ -2466,7 +3059,7 @@
           "durationMs": 3528
         },
         {
-          "sourcePath": "chapters/0/steps/4/explanation",
+          "sourcePath": "chapters/0/steps/5/explanation",
           "speech": "The green flag must be the only reset, and all names must be exact before you add clones and shots.",
           "requestHash": "63c6ec6165fe678039def52b331e85053d5797ba75872216ee86cd332aea4aca",
           "src": "audio/assets/d1/d15f2fe2569587058bc284e720f58cf1560771bed9dde1d76ec2745f2ace0a4e.mp3",
@@ -2479,11 +3072,11 @@
     {
       "id": "launch-pad/launch-pad-checkpoint/instruction/000",
       "sourcePaths": [
-        "chapters/0/steps/4/instructions/0"
+        "chapters/0/steps/5/instructions/0"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/4/instructions/0",
+          "sourcePath": "chapters/0/steps/5/instructions/0",
           "speech": "Choose File > Save now.",
           "requestHash": "9a29adf15409100b352b1d99f9e7539bac9f68042eb18e564a655c8eed7fa422",
           "src": "audio/assets/27/2799d2b52ca2b8aee5b92e8851bcaeeeb4c9c80887a57752ed400a3b425962be.mp3",
@@ -2496,11 +3089,11 @@
     {
       "id": "launch-pad/launch-pad-checkpoint/instruction/001",
       "sourcePaths": [
-        "chapters/0/steps/4/instructions/1"
+        "chapters/0/steps/5/instructions/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/4/instructions/1",
+          "sourcePath": "chapters/0/steps/5/instructions/1",
           "speech": "Click My Stuff at the top of the page, then click See inside on Space Invaders.",
           "requestHash": "35467cdd3ff6ac7328ace6f114773bb1d692f1065513777715d5f81af7f245bd",
           "src": "audio/assets/14/14e1830cf00b91149aaab4d7b178a75d49884c9df42b3a74c73630dc032a10b7.mp3",
@@ -2509,7 +3102,7 @@
           "durationMs": 5280
         },
         {
-          "sourcePath": "chapters/0/steps/4/instructions/1",
+          "sourcePath": "chapters/0/steps/5/instructions/1",
           "speech": "Open a broadcast menu and check that it shows Reset Game and Start Game but no unused message1.",
           "requestHash": "b1bce9eefc70ec65c6c47135f8860c064dedba8dc2d459eda5e5e5f742ea0046",
           "src": "audio/assets/55/5528c6451b761137ad757fcdf1e55ba872e94dc0364ba538a70e29c9830a181b.mp3",
@@ -2522,11 +3115,11 @@
     {
       "id": "launch-pad/launch-pad-checkpoint/instruction/002",
       "sourcePaths": [
-        "chapters/0/steps/4/instructions/2"
+        "chapters/0/steps/5/instructions/2"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/4/instructions/2",
+          "sourcePath": "chapters/0/steps/5/instructions/2",
           "speech": "Click the green flag, move Player, then click the green flag again while Player is moving.",
           "requestHash": "1e8643558340dd73ca1114e683e8953bb15a25f0cf686cd28ebda7898bd66138",
           "src": "audio/assets/15/15b22d31d7054d98d1e73235a5775585b8a562fad017e4a5181b429a1afe55e4.mp3",
@@ -2539,28 +3132,28 @@
     {
       "id": "launch-pad/launch-pad-checkpoint/instruction/003",
       "sourcePaths": [
-        "chapters/0/steps/4/instructions/3"
+        "chapters/0/steps/5/instructions/3"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/4/instructions/3",
-          "speech": "Confirm Player returns to x 0, y negative 150 and the Space backdrop returns.",
-          "requestHash": "354520fd38fe9f2c4b43d6fbfbee407c6ec4ac2ec21330779c90ccf240e16f2e",
-          "src": "audio/assets/e6/e6b2ae44c2feb84030d149a91c83f451a9bf7ec3870ef61514393e012f575f20.mp3",
-          "sha256": "e6b2ae44c2feb84030d149a91c83f451a9bf7ec3870ef61514393e012f575f20",
-          "bytes": 36432,
-          "durationMs": 6072
+          "sourcePath": "chapters/0/steps/5/instructions/3",
+          "speech": "With Player selected, check that the boxes under the Stage show x 0, y negative 150, and that the Space backdrop returns.",
+          "requestHash": "dc070ad72b6e2739a13ad48460fec2e5f35fa8e1dfc47a26fc7ca07607b5f54c",
+          "src": "audio/assets/8b/8bba189df5ae00b8167946df5b2823938b54018672dec6a055dae07c8726e7da.mp3",
+          "sha256": "8bba189df5ae00b8167946df5b2823938b54018672dec6a055dae07c8726e7da",
+          "bytes": 55728,
+          "durationMs": 9288
         }
       ]
     },
     {
       "id": "launch-pad/launch-pad-checkpoint/instruction/004",
       "sourcePaths": [
-        "chapters/0/steps/4/instructions/4"
+        "chapters/0/steps/5/instructions/4"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/4/instructions/4",
+          "sourcePath": "chapters/0/steps/5/instructions/4",
           "speech": "Compare your Stage and Player scripts with the complete Chapter 1 code in the finished code section on this page.",
           "requestHash": "390fedb05bb85594920f8e5a1993f8e6ab2eb7e58a162a3af3719c2abc66552f",
           "src": "audio/assets/b0/b0d3798de97a96eeabe4e25600f6310f85f046d57adf41bd0caacb4ce5764ece.mp3",
@@ -2573,11 +3166,11 @@
     {
       "id": "launch-pad/launch-pad-checkpoint/instruction/005",
       "sourcePaths": [
-        "chapters/0/steps/4/instructions/5"
+        "chapters/0/steps/5/instructions/5"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/4/instructions/5",
+          "sourcePath": "chapters/0/steps/5/instructions/5",
           "speech": "Do not continue until every required sprite, variable, message, and backdrop name matches.",
           "requestHash": "ff2d69bd1d14844bbb30608728d28138eda0e23926e96a3ca9ed85c67b1d873c",
           "src": "audio/assets/43/4340159d78f6aa2d8c575d85cb3dbe73258f892904359d01bf9928f9574ca7de.mp3",
@@ -2590,11 +3183,11 @@
     {
       "id": "launch-pad/launch-pad-checkpoint/hint/000",
       "sourcePaths": [
-        "chapters/0/steps/4/hints/0"
+        "chapters/0/steps/5/hints/0"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/4/hints/0",
+          "sourcePath": "chapters/0/steps/5/hints/0",
           "speech": "Click a variable block in the blocks list to check its current value without leaving its visible display turned on.",
           "requestHash": "292b44566a3df9380951db33b13a951b9275447fdcea0d59bf6574835a29fe3c",
           "src": "audio/assets/eb/eb0993b26f77536af812faf397de69868202f7f01d3b346ec8f5d1944ab82790.mp3",
@@ -2607,11 +3200,11 @@
     {
       "id": "launch-pad/launch-pad-checkpoint/hint/001",
       "sourcePaths": [
-        "chapters/0/steps/4/hints/1"
+        "chapters/0/steps/5/hints/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/4/hints/1",
+          "sourcePath": "chapters/0/steps/5/hints/1",
           "speech": "A second green-flag click safely stops old scripts before starting fresh ones.",
           "requestHash": "ad12700be652b0e3b014f934097acd4e40f66e623c374420aa62c51ad5f56e9d",
           "src": "audio/assets/5b/5b8cb4a1d849463d5b5d9788599dd64a6e2a44102d0f084aed745904d29ad7e8.mp3",
@@ -2624,13 +3217,13 @@
     {
       "id": "launch-pad/launch-pad-checkpoint/debug/000",
       "sourcePaths": [
-        "chapters/0/steps/4/debuggingTips/0/symptom",
-        "chapters/0/steps/4/debuggingTips/0/checks/0",
-        "chapters/0/steps/4/debuggingTips/0/checks/1"
+        "chapters/0/steps/5/debuggingTips/0/symptom",
+        "chapters/0/steps/5/debuggingTips/0/checks/0",
+        "chapters/0/steps/5/debuggingTips/0/checks/1"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/4/debuggingTips/0/symptom",
+          "sourcePath": "chapters/0/steps/5/debuggingTips/0/symptom",
           "speech": "Some sprite appears before the game starts.",
           "requestHash": "177558285884b7f5decc27e0bedc20e3f038ff8f7c77c0b9a9c586c190e10364",
           "src": "audio/assets/2b/2b595693ecd7a98305a5070f591f16cc90a33ae1b402c2b744d2bee8d723ad81.mp3",
@@ -2639,7 +3232,7 @@
           "durationMs": 3048
         },
         {
-          "sourcePath": "chapters/0/steps/4/debuggingTips/0/checks/0",
+          "sourcePath": "chapters/0/steps/5/debuggingTips/0/checks/0",
           "speech": "Confirm Alien, Player Laser, Enemy Shot, Bunker, and Mothership each receive Reset Game and hide.",
           "requestHash": "b34592515f492d5dea6b243f7859c15b5093dc269518892e6e7b1753c992b878",
           "src": "audio/assets/e8/e85a598467e73983a7f0621226408b1975e7cc10f7eb908769bbce2d7fb85eb2.mp3",
@@ -2648,7 +3241,7 @@
           "durationMs": 6552
         },
         {
-          "sourcePath": "chapters/0/steps/4/debuggingTips/0/checks/1",
+          "sourcePath": "chapters/0/steps/5/debuggingTips/0/checks/1",
           "speech": "Do not rely on manually hiding a sprite in the editor; the reset scripts must create the clean setup.",
           "requestHash": "d8df67f7f16b48cae5a4e393d843f26f5f0c395e9f6f07bb77967cab7f5ac04c",
           "src": "audio/assets/60/6094b63168be7d1f7bd9ecdb533b0fbaf7eda41116fb254e83246a03293e1051.mp3",
@@ -2661,15 +3254,15 @@
     {
       "id": "launch-pad/launch-pad-checkpoint/checkpoint",
       "sourcePaths": [
-        "chapters/0/steps/4/checkpoint/task",
-        "chapters/0/steps/4/checkpoint/expectedResult",
-        "chapters/0/steps/4/checkpoint/completeWhen/0",
-        "chapters/0/steps/4/checkpoint/completeWhen/1",
-        "chapters/0/steps/4/checkpoint/completeWhen/2"
+        "chapters/0/steps/5/checkpoint/task",
+        "chapters/0/steps/5/checkpoint/expectedResult",
+        "chapters/0/steps/5/checkpoint/completeWhen/0",
+        "chapters/0/steps/5/checkpoint/completeWhen/1",
+        "chapters/0/steps/5/checkpoint/completeWhen/2"
       ],
       "sentences": [
         {
-          "sourcePath": "chapters/0/steps/4/checkpoint/task",
+          "sourcePath": "chapters/0/steps/5/checkpoint/task",
           "speech": "Pass the Chapter 1 launch test.",
           "requestHash": "8a0341b2e98492e4b9c111eae7eeb43471e34b2f4941e9d0c60739dec44b2cd5",
           "src": "audio/assets/10/100ec2aa7a9f25992a21970ab16cb977fc7afe4d35b2381822af999b46123d10.mp3",
@@ -2678,7 +3271,7 @@
           "durationMs": 2400
         },
         {
-          "sourcePath": "chapters/0/steps/4/checkpoint/expectedResult",
+          "sourcePath": "chapters/0/steps/5/checkpoint/expectedResult",
           "speech": "The project always reaches the same clean starting state, and Player cannot move past either edge.",
           "requestHash": "7428e13d581824b70a0083a005bb5de79011641d41bad3017963d7873653ae4a",
           "src": "audio/assets/e8/e82f98f55ad5ccfea25bf7f42b2270d0f23fd98a06fc28c861a13963aa55e4d6.mp3",
@@ -2687,7 +3280,7 @@
           "durationMs": 6048
         },
         {
-          "sourcePath": "chapters/0/steps/4/checkpoint/completeWhen/0",
+          "sourcePath": "chapters/0/steps/5/checkpoint/completeWhen/0",
           "speech": "Two green-flag starts produce identical values and positions.",
           "requestHash": "dc864ed9b9a71fa3529b83d13222ed3c5aa11264cca62a3464bc4c4650379247",
           "src": "audio/assets/e8/e852ae604df7bca9c01dcab833ab0abe22355f5b91911dc8a3f57ec9d4e5bf86.mp3",
@@ -2696,7 +3289,7 @@
           "durationMs": 4464
         },
         {
-          "sourcePath": "chapters/0/steps/4/checkpoint/completeWhen/1",
+          "sourcePath": "chapters/0/steps/5/checkpoint/completeWhen/1",
           "speech": "There is no Restart sprite, message, key, or button.",
           "requestHash": "58de9c8973655969d8a36835d2945d30b911c37f3cc41747ebf99b65fdfe17ae",
           "src": "audio/assets/e4/e4d73c22bdc153dc2c28f564202ab242ff9d45b77ab47463f6d462b12476752f.mp3",
@@ -2705,7 +3298,7 @@
           "durationMs": 4536
         },
         {
-          "sourcePath": "chapters/0/steps/4/checkpoint/completeWhen/2",
+          "sourcePath": "chapters/0/steps/5/checkpoint/completeWhen/2",
           "speech": "The project has been saved after the test.",
           "requestHash": "3fee1e67cfb58f50528ff63f83ca51af288964df163924376eda788951d75c8e",
           "src": "audio/assets/5c/5cb9d4f015dd5d9f7b2faaac6fe0cc9ceed5caf100161f9e16c04eb6f266635a.mp3",
@@ -2775,12 +3368,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/1/steps/0/instructions/1",
-          "speech": "Confirm the centered Alien costume is no larger than 32 pixels wide by 18 pixels high so rows and columns cannot overlap.",
-          "requestHash": "fbde3e2bc4a1e74f2a6a45feae630724d5156515a08b1d95840bc1f1cdadbad4",
-          "src": "audio/assets/e3/e3b3e0ed74f91b6f606d2db9c4f04df57d929a26e41d94c0af4de26c1289fa4a.mp3",
-          "sha256": "e3b3e0ed74f91b6f606d2db9c4f04df57d929a26e41d94c0af4de26c1289fa4a",
-          "bytes": 49104,
-          "durationMs": 8184
+          "speech": "On Alien's Costumes tab, check that the centered costume is no larger than 32 x 18.",
+          "requestHash": "01fbc500a5c71b45fd65db67167634ae14110fcd70d4d8d9303a0acc95f22534",
+          "src": "audio/assets/01/01d747c823bb7a3d3b864e10cdc1dcaa1fe4c2067bc3974ac2ac722939bb26bb.mp3",
+          "sha256": "01d747c823bb7a3d3b864e10cdc1dcaa1fe4c2067bc3974ac2ac722939bb26bb",
+          "bytes": 37152,
+          "durationMs": 6192
+        },
+        {
+          "sourcePath": "chapters/1/steps/0/instructions/1",
+          "speech": "Those are the width and height in pixels, and they stop rows and columns from overlapping.",
+          "requestHash": "f79df0b938f36be06806d808314d12df7bd3091958e7cdb4ff6568cb9a6617d0",
+          "src": "audio/assets/c6/c63140a9703bc7a433b6558713d3834d3dc890fdb7955c5995bf4c3fde4906a8.mp3",
+          "sha256": "c63140a9703bc7a433b6558713d3834d3dc890fdb7955c5995bf4c3fde4906a8",
+          "bytes": 32400,
+          "durationMs": 5400
         }
       ]
     },
@@ -3016,6 +3618,15 @@
         },
         {
           "sourcePath": "chapters/1/steps/1/explanation",
+          "speech": "An Alien is at most 32 pixels wide and 18 pixels high, so there is always a gap between them.",
+          "requestHash": "b75400d1e5aa6e35eb8ebda893c825d72ea0f6055de83a1b74d022207506489a",
+          "src": "audio/assets/72/726c3ff61ec8d5a32ecfa650fa79c9cff090d0ce07424ab9c96ffa0bbaac5bd2.mp3",
+          "sha256": "726c3ff61ec8d5a32ecfa650fa79c9cff090d0ce07424ab9c96ffa0bbaac5bd2",
+          "bytes": 37584,
+          "durationMs": 6264
+        },
+        {
+          "sourcePath": "chapters/1/steps/1/explanation",
           "speech": "The same formula keeps working when the Stage changes Fleet X and Fleet Y.",
           "requestHash": "eb3878afbf299b055580e7228716d54cfab2164c1d69c94ff248ba4da1a1f709",
           "src": "audio/assets/35/3515cfdc13a2a6ed2fc54db83fe599c567eab45690c109a847e2b97a20fc19ca.mp3",
@@ -3162,12 +3773,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/1/steps/1/hints/1",
-          "speech": "Row zero is at Fleet Y; rows one and two are lower.",
-          "requestHash": "7805d7daeb66740cae02f77db74fe6de8766102b6023e667e85cdcda93e7f75a",
-          "src": "audio/assets/2d/2d265cd2824c486677a114ae156fa3c7010d375a9ede490015f43baf3ddbfd27.mp3",
-          "sha256": "2d265cd2824c486677a114ae156fa3c7010d375a9ede490015f43baf3ddbfd27",
-          "bytes": 26208,
-          "durationMs": 4368
+          "speech": "Row zero is at Fleet Y, which starts at 130, near the top of the Stage.",
+          "requestHash": "019cf068b39179662712d66ae3e9243d3312382867b042f2eaf67e62b2ceccb1",
+          "src": "audio/assets/23/238a30b06f61cf07cc327265acb47f95fa3514ebe7e1cc8ff0b5b63fb6c8b0ad.mp3",
+          "sha256": "238a30b06f61cf07cc327265acb47f95fa3514ebe7e1cc8ff0b5b63fb6c8b0ad",
+          "bytes": 38016,
+          "durationMs": 6336
+        },
+        {
+          "sourcePath": "chapters/1/steps/1/hints/1",
+          "speech": "Rows one and two are lower.",
+          "requestHash": "72a5918033cdcf27d5725a0ec66b7acecb85f658637982fa12e832d00137567f",
+          "src": "audio/assets/7a/7ab4d5f5a469b9fc0e9b9835dc4c20dafe291318cdc8f5809284931dfeb14041.mp3",
+          "sha256": "7ab4d5f5a469b9fc0e9b9835dc4c20dafe291318cdc8f5809284931dfeb14041",
+          "bytes": 13104,
+          "durationMs": 2184
         }
       ]
     },
@@ -3462,6 +4082,15 @@
           "sha256": "a2b86d65ff59b3a949d82ab10636a50468df59389bcbc2ea4a807885127aa1fa",
           "bytes": 40176,
           "durationMs": 6696
+        },
+        {
+          "sourcePath": "chapters/1/steps/2/instructions/5",
+          "speech": "y negative 60 is the height of your invasion line, so y position less than negative 60 means the Alien is lower than the line.",
+          "requestHash": "5c350acda408d671b7da634b3e3ebdc4ca7ef0dedc159e1003e9b661548a3a1e",
+          "src": "audio/assets/98/988cf031e199f56d57e034b904eb0ee5613aef478b61c34db17cf5c26aaca66b.mp3",
+          "sha256": "988cf031e199f56d57e034b904eb0ee5613aef478b61c34db17cf5c26aaca66b",
+          "bytes": 45792,
+          "durationMs": 7632
         }
       ]
     },
@@ -3586,12 +4215,12 @@
         },
         {
           "sourcePath": "chapters/1/steps/2/instructions/10",
-          "speech": "Every Alien should jump 10 pixels to the right.",
-          "requestHash": "cbd34b05c95a87c1fbce6a4b84aa583cf90566e2f872df95552f4b95e3302ba2",
-          "src": "audio/assets/27/278579f9c90f38f38f8d24a6f9c7341704c21e448b016ff0aba7eec4f6be7b16.mp3",
-          "sha256": "278579f9c90f38f38f8d24a6f9c7341704c21e448b016ff0aba7eec4f6be7b16",
-          "bytes": 19296,
-          "durationMs": 3216
+          "speech": "Every Alien should take a small jump to the right, and the gaps between them should stay the same.",
+          "requestHash": "24b74e5014db35a706ef2f1f9220d38caa5e0bef8ac5ba6b0e927237ea6ee4eb",
+          "src": "audio/assets/08/0801f2adf9f40d9ddcf4afc252ceffe0ad2647ee3efd12df32b0f3cee23f1718.mp3",
+          "sha256": "0801f2adf9f40d9ddcf4afc252ceffe0ad2647ee3efd12df32b0f3cee23f1718",
+          "bytes": 33408,
+          "durationMs": 5568
         },
         {
           "sourcePath": "chapters/1/steps/2/instructions/10",
@@ -3782,6 +4411,15 @@
           "sha256": "9c232bd2213b9b847a6efe7e76ac14992cd5f666b030ef88cf0300231df25a34",
           "bytes": 41040,
           "durationMs": 6840
+        },
+        {
+          "sourcePath": "chapters/1/steps/3/explanation",
+          "speech": "Each move changes the fleet's position by 10 pixels.",
+          "requestHash": "b8c468d9813658614054de0ead38d17d205c3535bb9bf32c08709043a7435a37",
+          "src": "audio/assets/24/2487f9319c50370f6853b7db496d32602447fa28bbd38c702494deb45fce9e2c.mp3",
+          "sha256": "2487f9319c50370f6853b7db496d32602447fa28bbd38c702494deb45fce9e2c",
+          "bytes": 22176,
+          "durationMs": 3696
         },
         {
           "sourcePath": "chapters/1/steps/3/explanation",
@@ -4211,12 +4849,12 @@
         },
         {
           "sourcePath": "chapters/1/steps/3/checkpoint/expectedResult",
-          "speech": "All 24 aliens move as one shape, step down only at an edge, and set Game State to lost once an alien drops below y negative 60.",
-          "requestHash": "9fcf833bb472295b6328e0c334e92a286ab388c1244d53b1bc1b64b89676acb1",
-          "src": "audio/assets/80/80c8613393ea23479d0530e578b932c4d319b092e8170a0f41059fd1940ed574.mp3",
-          "sha256": "80c8613393ea23479d0530e578b932c4d319b092e8170a0f41059fd1940ed574",
-          "bytes": 54576,
-          "durationMs": 9096
+          "speech": "All 24 aliens move as one shape, step down only at an edge, and set Game State to lost once an alien drops below the invasion line.",
+          "requestHash": "f2481b4e2958ffa6255c2ebd8f523c8255345bcfa8852bd6dffb2061561a4335",
+          "src": "audio/assets/8f/8fc5721c842c4215431c9ba626c7765d5261827c5506b8cbedee02fb6fb5caeb.mp3",
+          "sha256": "8fc5721c842c4215431c9ba626c7765d5261827c5506b8cbedee02fb6fb5caeb",
+          "bytes": 54288,
+          "durationMs": 9048
         },
         {
           "sourcePath": "chapters/1/steps/3/checkpoint/completeWhen/0",
@@ -4504,12 +5142,12 @@
         },
         {
           "sourcePath": "chapters/1/steps/4/checkpoint/completeWhen/2",
-          "speech": "A clone below y negative 60 changes Game State to lost.",
-          "requestHash": "affaa0218206e9584e9d398f28218d6d10caa2b1003480050db3bd43d80ac76e",
-          "src": "audio/assets/0b/0bdba31e49eea0fa73854e3ceb4d90b3a43808e59291ec38bb2642faeec5d3eb.mp3",
-          "sha256": "0bdba31e49eea0fa73854e3ceb4d90b3a43808e59291ec38bb2642faeec5d3eb",
-          "bytes": 24624,
-          "durationMs": 4104
+          "speech": "An alien below the invasion line changes Game State to lost.",
+          "requestHash": "c251fed37d013d66f71004f986edc5b30266556ee742d51c8a576814ef1ba642",
+          "src": "audio/assets/3f/3fb7f584b91cbf767ebf9212219d3c2494de798c477463a47962e40e8316f911.mp3",
+          "sha256": "3fb7f584b91cbf767ebf9212219d3c2494de798c477463a47962e40e8316f911",
+          "bytes": 24768,
+          "durationMs": 4128
         }
       ]
     },
@@ -4608,12 +5246,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/2/steps/0/instructions/2",
-          "speech": "Confirm Player Laser is centered and no larger than 4 pixels wide by 10 pixels high.",
-          "requestHash": "8cb42404c625f9ff0d4c08fae022a3da7c5ddfd17b3b745fa3967fa5fbf38eb1",
-          "src": "audio/assets/6d/6dfe046812481bd9d6d4c15f7a507ac12796ff72c221ae789a16faf815ba1d26.mp3",
-          "sha256": "6dfe046812481bd9d6d4c15f7a507ac12796ff72c221ae789a16faf815ba1d26",
-          "bytes": 33840,
-          "durationMs": 5640
+          "speech": "On Player Laser's Costumes tab, check that it is centered and no larger than 4 x 10.",
+          "requestHash": "f44cae56a506a47466477b24a0577cc1d0fc7c0d822c5714ed0d2f3b50f2d4a1",
+          "src": "audio/assets/c9/c95b5ad2b86628976790fff3df4329c8ef5850d12e185889d80c0e843622f36a.mp3",
+          "sha256": "c95b5ad2b86628976790fff3df4329c8ef5850d12e185889d80c0e843622f36a",
+          "bytes": 34992,
+          "durationMs": 5832
         },
         {
           "sourcePath": "chapters/2/steps/0/instructions/2",
@@ -4999,12 +5637,21 @@
         },
         {
           "sourcePath": "chapters/2/steps/1/instructions/1",
-          "speech": "Inside it, use go to Player, then change y by 15 so the shot begins above the ship costume.",
-          "requestHash": "70697f88720c2de41b64b75976acbf43022ae65d86e0fcecae9f42096d6a3db0",
-          "src": "audio/assets/c7/c7280f02b8a08b46d4e46f7e7763a259559e4dc8b12a1b2d4b8ecc8295a7b8a5.mp3",
-          "sha256": "c7280f02b8a08b46d4e46f7e7763a259559e4dc8b12a1b2d4b8ecc8295a7b8a5",
-          "bytes": 38016,
-          "durationMs": 6336
+          "speech": "Inside it, use go to Player, then change y by 15.",
+          "requestHash": "6177faf960e00cc3cf248c6a2a27cf80a7413d1886ff026422bd370d1abf1909",
+          "src": "audio/assets/08/081bac0c4db9432a3cc7298b65515be25b94cfa15e1fc94562c73d45d8ab8ed1.mp3",
+          "sha256": "081bac0c4db9432a3cc7298b65515be25b94cfa15e1fc94562c73d45d8ab8ed1",
+          "bytes": 22320,
+          "durationMs": 3720
+        },
+        {
+          "sourcePath": "chapters/2/steps/1/instructions/1",
+          "speech": "That starts the shot 15 pixels higher, just above the ship.",
+          "requestHash": "da44d2f3fd45a13d2e0e0e7675a8e6d3b6de56082eb3ebff961d963f0425a553",
+          "src": "audio/assets/e7/e71f332325828ec7b9ba709e9aa3a76624f481f8f481b1cf11d7bf6de8c51553.mp3",
+          "sha256": "e71f332325828ec7b9ba709e9aa3a76624f481f8f481b1cf11d7bf6de8c51553",
+          "bytes": 27072,
+          "durationMs": 4512
         }
       ]
     },
@@ -5025,12 +5672,12 @@
         },
         {
           "sourcePath": "chapters/2/steps/1/instructions/2",
-          "speech": "It stops when Laser Active equals 0, when y position is over 175, or when Game State is not playing.",
-          "requestHash": "4a58bd5942f797236bb9898621e1c1602113c186091e04b9e1a38c56eae3cdef",
-          "src": "audio/assets/29/29726b642d8dc0fd13afcb034884cb5e8fff774e8cf1c4dde0e6e8a030e11dbb.mp3",
-          "sha256": "29726b642d8dc0fd13afcb034884cb5e8fff774e8cf1c4dde0e6e8a030e11dbb",
-          "bytes": 48816,
-          "durationMs": 8136
+          "speech": "It stops when Laser Active equals 0, when y position is over 175, just below the top edge at y 180, or when Game State is not playing.",
+          "requestHash": "8840bd3800b8336a3d12cecb0938108c7e30dd936fd7edaf8ea8837341dbfaf0",
+          "src": "audio/assets/6a/6a66fec9962f09205bc6e3234d7d17f83a3e9047aa28559cd973ebcd507488f8.mp3",
+          "sha256": "6a66fec9962f09205bc6e3234d7d17f83a3e9047aa28559cd973ebcd507488f8",
+          "bytes": 63072,
+          "durationMs": 10512
         }
       ]
     },
@@ -5042,12 +5689,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/2/steps/1/instructions/3",
-          "speech": "Move upward by 10 and wait 0.02 seconds each loop pass.",
-          "requestHash": "694150fc21ce8dfc23b24d859a8d1067ec1cb94f0ed1e0e1f25244a10fc4058a",
-          "src": "audio/assets/4f/4f135386e782dc9ad14b80772ef30f27fe8808b1eb44a9fa2694fbbfd1b6b643.mp3",
-          "sha256": "4f135386e782dc9ad14b80772ef30f27fe8808b1eb44a9fa2694fbbfd1b6b643",
-          "bytes": 28656,
-          "durationMs": 4776
+          "speech": "Inside the loop, change y by 10 and wait 0.02 seconds.",
+          "requestHash": "12586eed35abe24a782ea79952e01a5fb869d281c70e8e32032ce95e919d9d5d",
+          "src": "audio/assets/33/335224773a9f16be2bf3c21e73877196d4d10888e67bfee85b1d2fb901cdd8cd.mp3",
+          "sha256": "335224773a9f16be2bf3c21e73877196d4d10888e67bfee85b1d2fb901cdd8cd",
+          "bytes": 30528,
+          "durationMs": 5088
+        },
+        {
+          "sourcePath": "chapters/2/steps/1/instructions/3",
+          "speech": "Each time the loop runs, the laser moves up 10 pixels.",
+          "requestHash": "c708934b2ea4aa835b5beb96010252af20c9861424bcb44c5022cc87653c0fef",
+          "src": "audio/assets/67/67f8a05a7c1052140a715d1aa0cdb41520ff1a1faa62c374944d69c9ca98c649.mp3",
+          "sha256": "67f8a05a7c1052140a715d1aa0cdb41520ff1a1faa62c374944d69c9ca98c649",
+          "bytes": 22320,
+          "durationMs": 3720
         }
       ]
     },
@@ -5259,12 +5915,12 @@
         },
         {
           "sourcePath": "chapters/2/steps/1/checkpoint/completeWhen/1",
-          "speech": "The laser starts 15 pixels above Player.",
-          "requestHash": "136c157b046d3da47d3f8a4a6c9a1148e44cce5444464f158a2ea69bbaaddf66",
-          "src": "audio/assets/38/38a647909f2f74dcda2b355afb8d0580d2e3f1fcd402aa7051cd1b3248ab217f.mp3",
-          "sha256": "38a647909f2f74dcda2b355afb8d0580d2e3f1fcd402aa7051cd1b3248ab217f",
-          "bytes": 19872,
-          "durationMs": 3312
+          "speech": "The laser appears just above the ship, not on top of it.",
+          "requestHash": "85805c5e969c26c922433e35066e8b404808ac904060f05d6ee1de66bf426ef5",
+          "src": "audio/assets/bf/bf101f6e255ce20ee452b84268e42a0aa451963b13d28b6d7460b6e9d4371209.mp3",
+          "sha256": "bf101f6e255ce20ee452b84268e42a0aa451963b13d28b6d7460b6e9d4371209",
+          "bytes": 26064,
+          "durationMs": 4344
         },
         {
           "sourcePath": "chapters/2/steps/1/checkpoint/completeWhen/2",
@@ -6326,6 +6982,15 @@
           "sha256": "aef2f7752d2a4ccc22b16e039e4b07fb1cf53adace0ac1cc51f413a38fcf4ba4",
           "bytes": 24768,
           "durationMs": 4128
+        },
+        {
+          "sourcePath": "chapters/3/steps/0/instructions/5",
+          "speech": "Click once on the edge for each chunk.",
+          "requestHash": "7fae76058ea0fcae0a47360d7147ee159cb1f86ef70bd6e2f5d00f2a48667e1d",
+          "src": "audio/assets/b6/b61062bcb195cc4264413398619193ba43c99d7bac7a9718792e785c85350d23.mp3",
+          "sha256": "b61062bcb195cc4264413398619193ba43c99d7bac7a9718792e785c85350d23",
+          "bytes": 16560,
+          "durationMs": 2760
         }
       ]
     },
@@ -6343,6 +7008,15 @@
           "sha256": "571450d2bea73520a7b7f796f0e3d050cdf793b25f2dd42a135d84412f48a703",
           "bytes": 23472,
           "durationMs": 3912
+        },
+        {
+          "sourcePath": "chapters/3/steps/0/instructions/6",
+          "speech": "Click once on the edge for each chunk.",
+          "requestHash": "7fae76058ea0fcae0a47360d7147ee159cb1f86ef70bd6e2f5d00f2a48667e1d",
+          "src": "audio/assets/b6/b61062bcb195cc4264413398619193ba43c99d7bac7a9718792e785c85350d23.mp3",
+          "sha256": "b61062bcb195cc4264413398619193ba43c99d7bac7a9718792e785c85350d23",
+          "bytes": 16560,
+          "durationMs": 2760
         }
       ]
     },
@@ -6371,21 +7045,21 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/0/instructions/8",
-          "speech": "Click each costume thumbnail and check the size printed beside its name.",
-          "requestHash": "34928ddc5ce8bc38126220d2aee62506474f4b8bf4d5ce866f31fa4d78b9f8e9",
-          "src": "audio/assets/52/52798812c65d394b4c3f1afb1d129799ff70a31749a8d143e8bd15919534962d.mp3",
-          "sha256": "52798812c65d394b4c3f1afb1d129799ff70a31749a8d143e8bd15919534962d",
-          "bytes": 27216,
-          "durationMs": 4536
+          "speech": "Check the two size numbers on each costume thumbnail.",
+          "requestHash": "6ecc23e84ea5dae794994e7c62c7bba21e0ddd2ba3d95ab667cf988b16605fdd",
+          "src": "audio/assets/46/461c4f3379e11fb13913a862abf1825dd37a570995a3541bca57e44474d74d6b.mp3",
+          "sha256": "461c4f3379e11fb13913a862abf1825dd37a570995a3541bca57e44474d74d6b",
+          "bytes": 21168,
+          "durationMs": 3528
         },
         {
           "sourcePath": "chapters/3/steps/0/instructions/8",
-          "speech": "Full, Damaged, and Critical must each stay centered and no larger than 56 pixels wide by 18 pixels high.",
-          "requestHash": "e4ef43e52a39d325df3a2a4a355c7e59136cb45da1c238782b5432678ce31ce1",
-          "src": "audio/assets/7a/7a256ba0b590c8060dde61ee1284410a72eda7b63ec002c1474306166ffd7cf8.mp3",
-          "sha256": "7a256ba0b590c8060dde61ee1284410a72eda7b63ec002c1474306166ffd7cf8",
-          "bytes": 45216,
-          "durationMs": 7536
+          "speech": "Full, Damaged, and Critical must each stay centered and no larger than 56 x 18.",
+          "requestHash": "51d59ac5f6f01b90651cdc529848d69e155677aa5417e39a6efd43ceba3e4b07",
+          "src": "audio/assets/e0/e08b982743a84e3ea95f2c6723526520fbc8a50daf9fb8773225194de36b2b50.mp3",
+          "sha256": "e08b982743a84e3ea95f2c6723526520fbc8a50daf9fb8773225194de36b2b50",
+          "bytes": 35136,
+          "durationMs": 5856
         }
       ]
     },
@@ -6712,12 +7386,12 @@
         },
         {
           "sourcePath": "chapters/3/steps/0/checkpoint/completeWhen/1",
-          "speech": "All three costumes keep the same centered 56-by-18-or-smaller outside shape.",
-          "requestHash": "f76b8c38da83de1d820a23ced4f221c7d71ab537606cfcf2fbb9e5d428200ff9",
-          "src": "audio/assets/18/18d4ccc9108035b41724a418ab41165b2001f7b2bba6ea97d16ff48e24d1b8c5.mp3",
-          "sha256": "18d4ccc9108035b41724a418ab41165b2001f7b2bba6ea97d16ff48e24d1b8c5",
-          "bytes": 34704,
-          "durationMs": 5784
+          "speech": "All three costumes are centered and no larger than 56 x 18.",
+          "requestHash": "19280f659013ca68d486bb5905aef20103812a9c77dd04f2a3a5d54b366df730",
+          "src": "audio/assets/dc/dc1afb49027cc06883de1ac73459f547f8d318a21f00556ca7334d845846958b.mp3",
+          "sha256": "dc1afb49027cc06883de1ac73459f547f8d318a21f00556ca7334d845846958b",
+          "bytes": 27360,
+          "durationMs": 4560
         },
         {
           "sourcePath": "chapters/3/steps/0/checkpoint/completeWhen/2",
@@ -6774,12 +7448,21 @@
         },
         {
           "sourcePath": "chapters/3/steps/1/explanation",
-          "speech": "This calculated launch point overlaps the bottom fleet row vertically, which makes the shot appear to come from the fleet.",
-          "requestHash": "c1e11df126e4e410bb5b732f755906edc8a6a7bbd8cbfd9d9b9673bfa7e5574b",
-          "src": "audio/assets/6b/6b08d0c7093710f4cfee4ac2ec5236e56fb74f34039d1f9fb017bb54f3be7aa6.mp3",
-          "sha256": "6b08d0c7093710f4cfee4ac2ec5236e56fb74f34039d1f9fb017bb54f3be7aa6",
-          "bytes": 41616,
-          "durationMs": 6936
+          "speech": "Columns are 45 pixels apart, so each lane lines up with a column.",
+          "requestHash": "860301d4f85225863e77c0e64917b369ab6cce0f0e7aef5daf002ed508afdc14",
+          "src": "audio/assets/34/34ff3ad65ab7e6b63a1e84eed3229634f11cc46533bbcf19bada969d7ac41c7e.mp3",
+          "sha256": "34ff3ad65ab7e6b63a1e84eed3229634f11cc46533bbcf19bada969d7ac41c7e",
+          "bytes": 30672,
+          "durationMs": 5112
+        },
+        {
+          "sourcePath": "chapters/3/steps/1/explanation",
+          "speech": "The bottom row is 70 pixels below Fleet Y, so 75 starts the shot at about that height, and it looks like the fleet fired it.",
+          "requestHash": "deb323a3db683f952195ee70b46db7338a456836613717f1a04a71c27bbce102",
+          "src": "audio/assets/b5/b5661e6ae6d2ea2ec64092c2cb1eeff761d04d0ad85ef92551e4c664ef856e24.mp3",
+          "sha256": "b5661e6ae6d2ea2ec64092c2cb1eeff761d04d0ad85ef92551e4c664ef856e24",
+          "bytes": 45216,
+          "durationMs": 7536
         },
         {
           "sourcePath": "chapters/3/steps/1/explanation",
@@ -7219,6 +7902,15 @@
           "sha256": "3125720f4ae2884ca256a52694b655168030ca3e039a01159dc50b59ef7b4aa7",
           "bytes": 43920,
           "durationMs": 7320
+        },
+        {
+          "sourcePath": "chapters/3/steps/1/instructions/19",
+          "speech": "Each time the loop runs, the shot moves down 7 pixels.",
+          "requestHash": "05d028c66a26e5b48b2f4af7246344690b8b514d105178ea23385b2979eb5edf",
+          "src": "audio/assets/61/6135e93f584b20582b8eebd87ec70f1e33c703f49baaf88f149792e0ee8ddb0e.mp3",
+          "sha256": "6135e93f584b20582b8eebd87ec70f1e33c703f49baaf88f149792e0ee8ddb0e",
+          "bytes": 23328,
+          "durationMs": 3888
         }
       ]
     },
@@ -7454,12 +8146,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/1/hints/3",
-          "speech": "The inner or handles Enemy Shot Active equals 0 and y position less than negative 175.",
-          "requestHash": "95d1e6026e05dab8b8d5328a07dd02a9a5c8cbb46195e7242cc5ca22879c8ff5",
-          "src": "audio/assets/6e/6e8ece04b6b7ebe6616ca31bb39906718b533e7b76074ff44fddf65f51478661.mp3",
-          "sha256": "6e8ece04b6b7ebe6616ca31bb39906718b533e7b76074ff44fddf65f51478661",
-          "bytes": 42048,
-          "durationMs": 7008
+          "speech": "The inner or handles Enemy Shot Active equals 0 and y position less than negative 175, which is just above the bottom edge at y negative 180.",
+          "requestHash": "006659d4d8dfc63869846ff7bb102a49626d222d74a4618404971e538251aaf5",
+          "src": "audio/assets/f3/f3b25028bed9d7e6bf2a79bdc84f7035f0b1db9b901b4945599c46747fcf64f2.mp3",
+          "sha256": "f3b25028bed9d7e6bf2a79bdc84f7035f0b1db9b901b4945599c46747fcf64f2",
+          "bytes": 66672,
+          "durationMs": 11112
         },
         {
           "sourcePath": "chapters/3/steps/1/hints/3",
@@ -8515,12 +9207,12 @@
         },
         {
           "sourcePath": "chapters/3/steps/3/instructions/4",
-          "speech": "Set y to -105.",
-          "requestHash": "56dc848f5a8cb29ac71b8753287292c028bd7318844b44b161a6ae8e864e2cac",
-          "src": "audio/assets/b9/b9868df40ff18aff61bdfd89d6c767ea02e4037f60324a2cbacba993f215de3e.mp3",
-          "sha256": "b9868df40ff18aff61bdfd89d6c767ea02e4037f60324a2cbacba993f215de3e",
-          "bytes": 16416,
-          "durationMs": 2736
+          "speech": "Set y to -105, which is below the invasion line and above Player.",
+          "requestHash": "900d288e804eaf1984ad3769aa19cb90ff620bc05c84f7712d4af3d8f113a3e0",
+          "src": "audio/assets/04/04c1f01d38a2d5fd2ad27620c90323540b26945d92642bb11d8b5a65ae2e061b.mp3",
+          "sha256": "04c1f01d38a2d5fd2ad27620c90323540b26945d92642bb11d8b5a65ae2e061b",
+          "bytes": 32400,
+          "durationMs": 5400
         }
       ]
     },
@@ -8808,12 +9500,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/3/steps/3/instructions/17",
-          "speech": "Click the green flag and confirm exactly three Full bunkers appear at x negative 130, 0, and 130.",
-          "requestHash": "a2c9068ac9a2665985621303f7440210a3a89f767fc8bd6173345ee7ad80b59f",
-          "src": "audio/assets/09/09d0ab1209b60621cb3136ddf7b5ac97641db91d4d2cf6da035a159d9f8ca8a2.mp3",
-          "sha256": "09d0ab1209b60621cb3136ddf7b5ac97641db91d4d2cf6da035a159d9f8ca8a2",
-          "bytes": 51840,
-          "durationMs": 8640
+          "speech": "Click the green flag and confirm exactly three Full bunkers appear: one on the left, one in the middle, and one on the right, evenly spaced.",
+          "requestHash": "93ab946529f3445b35e9430863c99beb1e394bce2dbe753e29db3c4ef1d7f6a8",
+          "src": "audio/assets/d2/d20e27dc63e2170a76e91ce513738afbcd5ec5bcb30f01b8f0a7b4de7c9b23e4.mp3",
+          "sha256": "d20e27dc63e2170a76e91ce513738afbcd5ec5bcb30f01b8f0a7b4de7c9b23e4",
+          "bytes": 52992,
+          "durationMs": 8832
         },
         {
           "sourcePath": "chapters/3/steps/3/instructions/17",
@@ -9379,12 +10071,12 @@
         },
         {
           "sourcePath": "chapters/3/steps/3/checkpoint/completeWhen/0",
-          "speech": "Exactly three Bunker clones appear at x negative 130, 0, and 130.",
-          "requestHash": "c7bd6818fa564b869222dd87ecf0dfc947f8e16a02c4926a84e4beef11faee80",
-          "src": "audio/assets/e3/e3ec3ac9bb57a6abbc9fd28b817f06502d8bd597f0b642e432f453c5969860fe.mp3",
-          "sha256": "e3ec3ac9bb57a6abbc9fd28b817f06502d8bd597f0b642e432f453c5969860fe",
-          "bytes": 41328,
-          "durationMs": 6888
+          "speech": "Exactly three Bunker clones appear, on the left, in the middle, and on the right.",
+          "requestHash": "1d9d797e2700cf67fc900717aa66635de7d5d1fbb867e1d3dd146471f5865626",
+          "src": "audio/assets/49/4922852d2788cc1eec12179fc60dbc0a966d64785fc4f05f7a120a436f72c58a.mp3",
+          "sha256": "4922852d2788cc1eec12179fc60dbc0a966d64785fc4f05f7a120a436f72c58a",
+          "bytes": 28512,
+          "durationMs": 4752
         },
         {
           "sourcePath": "chapters/3/steps/3/checkpoint/completeWhen/1",
@@ -9766,12 +10458,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/4/steps/0/instructions/1",
-          "speech": "Confirm its centered costume is no larger than 40 pixels wide by 12 pixels high so it cannot overlap the 18-pixel Alien costume below it.",
-          "requestHash": "cef38921665527dc44789af9928112fca1eb7cf6bea100bbe8a20133f7b3515d",
-          "src": "audio/assets/ca/ca1071bc3b81a92a45abbc1259e899dc3ac29893077e0f8e01dea3a27c7eb22c.mp3",
-          "sha256": "ca1071bc3b81a92a45abbc1259e899dc3ac29893077e0f8e01dea3a27c7eb22c",
-          "bytes": 53136,
-          "durationMs": 8856
+          "speech": "On Mothership's Costumes tab, check that its centered costume is no larger than 40 x 12, so it stays clear of the top row of Aliens.",
+          "requestHash": "b4521c14156989398d04f8e09faaa26d5b1ebcc69957c27effdf80a2470d4ecf",
+          "src": "audio/assets/e6/e6437cfb5dc7f3604b964a51864777c0640356e4b1ed8608e07690e42247ba42.mp3",
+          "sha256": "e6437cfb5dc7f3604b964a51864777c0640356e4b1ed8608e07690e42247ba42",
+          "bytes": 51840,
+          "durationMs": 8640
         }
       ]
     },
@@ -9860,12 +10552,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/4/steps/0/hints/2",
-          "speech": "The sprite will cross at y 160, above the starting fleet.",
-          "requestHash": "09503e6b9cffef5e43b1c1fa0171bf5a51fcec80a685e0bee8e2741de64f4252",
-          "src": "audio/assets/ce/ce42ab0f7b1728cee56a6d1da72893045cd333dd29db33a44aa4403840774be1.mp3",
-          "sha256": "ce42ab0f7b1728cee56a6d1da72893045cd333dd29db33a44aa4403840774be1",
-          "bytes": 30240,
-          "durationMs": 5040
+          "speech": "The sprite will cross at y 160, near the top edge at y 180 and above the starting fleet.",
+          "requestHash": "c5de624d0422142266f34a9df1e468ef379bc6cc01d798a1da1fa641c357b264",
+          "src": "audio/assets/7a/7a15631d7285a79e7b49c98f26b8a20da853bd48c0638c826dccbe2286974366.mp3",
+          "sha256": "7a15631d7285a79e7b49c98f26b8a20da853bd48c0638c826dccbe2286974366",
+          "bytes": 42768,
+          "durationMs": 7128
         }
       ]
     },
@@ -10082,6 +10774,15 @@
           "sha256": "ff60e66563bf9c32cbaebd48c1c368329e8f84b68aa9317b48ebed1bbdc3844a",
           "bytes": 40464,
           "durationMs": 6744
+        },
+        {
+          "sourcePath": "chapters/4/steps/1/instructions/2",
+          "speech": "x negative 230 is at the far left of the Stage, so the Mothership flies in from the side.",
+          "requestHash": "69269e0f9cfe3b3082ccd70aa4f238f732ede65d37d9154032eda86031c3f9e3",
+          "src": "audio/assets/07/071fae1039f91ba1b5e461eff5aa10d016a73f6af6db5d68998e48f6b11715de.mp3",
+          "sha256": "071fae1039f91ba1b5e461eff5aa10d016a73f6af6db5d68998e48f6b11715de",
+          "bytes": 37728,
+          "durationMs": 6288
         }
       ]
     },
@@ -10125,6 +10826,15 @@
           "sha256": "839ffff4a34ea9d31e5f3c0510f83adddc2b028d6fe12a8e4bf0fd74381b0fe0",
           "bytes": 20304,
           "durationMs": 3384
+        },
+        {
+          "sourcePath": "chapters/4/steps/1/instructions/4",
+          "speech": "Each time the loop runs, the Mothership moves 5 pixels to the right.",
+          "requestHash": "b81d367df996cb420567f9a55be0c7f6537a200ec321006a61d4b1aab1607501",
+          "src": "audio/assets/f1/f1376a13069a8385d09e277f695091b25406447ce7dfb684e059bf3efb67a23e.mp3",
+          "sha256": "f1376a13069a8385d09e277f695091b25406447ce7dfb684e059bf3efb67a23e",
+          "bytes": 26208,
+          "durationMs": 4368
         }
       ]
     },
@@ -12546,12 +13256,12 @@
       "sentences": [
         {
           "sourcePath": "chapters/5/steps/3/instructions/6",
-          "speech": "Invasion test: let a live Alien pass y negative 60.",
-          "requestHash": "4cd1e490a5cf9a53d866fa1e02dc16f93949489b29f384cc1fe285c47dd2d6dd",
-          "src": "audio/assets/d1/d1f6561bd93af79105f1ac9415f4f240ff8229e724f3f30abc2b857f9aa0c8dc.mp3",
-          "sha256": "d1f6561bd93af79105f1ac9415f4f240ff8229e724f3f30abc2b857f9aa0c8dc",
-          "bytes": 27792,
-          "durationMs": 4632
+          "speech": "Invasion test: let a live Alien pass the invasion line.",
+          "requestHash": "92500a008694a8e29707ab732d43b4e9c2940312ce5dbdb6e729a69f09fac77b",
+          "src": "audio/assets/6e/6e345d4112eb2b764ca228143e16affa24d222a134e5a92555c63d58f7743db5.mp3",
+          "sha256": "6e345d4112eb2b764ca228143e16affa24d222a134e5a92555c63d58f7743db5",
+          "bytes": 27072,
+          "durationMs": 4512
         },
         {
           "sourcePath": "chapters/5/steps/3/instructions/6",
