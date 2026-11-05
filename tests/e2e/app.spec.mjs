@@ -189,7 +189,7 @@ test('plays, pauses, advances, and resets a sentence narration queue', async ({ 
   await expect(control).toHaveAccessibleName('Pause narration: Watch the Finished Game overview');
 
   await page.getByRole('button', { name: /Next step/ }).click();
-  await expect(page.getByRole('heading', { name: 'Create the Sprites, Backdrops, and Shared Data' })).toBeFocused();
+  await expect(page.getByRole('heading', { name: "Learn the Stage's Numbers" })).toBeFocused();
   expect(await page.evaluate(() => window.__narrationAudio[0].getAttribute('src'))).toBeNull();
 });
 
@@ -519,7 +519,7 @@ test('the sidebar folds other chapters and shows overall progress', async ({ pag
   await second.click();
   await page.locator('.step-button[data-step-id="setup-singleton-ball"]').click();
   await page.getByRole('button', { name: 'Mark step complete' }).click();
-  await expect(page.locator('.course-progress-label')).toHaveText('1 of 24 steps done');
+  await expect(page.locator('.course-progress-label')).toHaveText('1 of 25 steps done');
   await expect(page.locator('.step-button[data-step-id="setup-singleton-ball"]')).toHaveClass(/is-complete/);
   await expect(page.locator('#steps-list').getByRole('progressbar')).toHaveAttribute('aria-valuenow', '1');
 
@@ -542,7 +542,7 @@ test('instruction ticks are remembered and finishing a chapter is celebrated', a
   await page.locator('.step-button[data-step-id="build-stage-and-paddle"]').click();
   await expect(page.getByRole('checkbox', { name: 'Done: instruction 1' })).toBeChecked();
 
-  for (const stepId of ['observe-complete-game', 'setup-sprites-and-data', 'build-stage-and-paddle', 'checkpoint-foundations']) {
+  for (const stepId of ['observe-complete-game', 'learn-stage-numbers', 'setup-sprites-and-data', 'build-stage-and-paddle', 'checkpoint-foundations']) {
     await page.locator(`.step-button[data-step-id="${stepId}"]`).click();
     await expect(page.locator('.celebration')).toHaveCount(0);
     await page.getByRole('button', { name: 'Mark step complete' }).click();

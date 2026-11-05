@@ -5,10 +5,10 @@
   "description": "Build a complete Brick Breaker game in Scratch 3. This self-guided course is for ages 10-14 with some Scratch experience. Across six chapters, you will control a paddle, move one Ball, create 50 bricks that each take two hits, drop Apple power-ups, track three lives, and end the game when every brick is gone.",
   "objectives": [
     "Use coordinates, loops, conditions, variables, costumes, clones, and broadcasts in Scratch 3.",
-    "Build a reliable game loop in which miss detection happens before edge bouncing.",
+    "Build a game loop that checks for a missed Ball before it bounces off the edges.",
     "Make Ball the only sprite that checks for touching a brick, and use `broadcast Hit Brick and wait` so exactly one Brick clone reacts.",
     "Create 50 bricks that always change from Healthy to Cracked before breaking.",
-    "Use Lives and Bricks Left to produce clear lose and win states that reset only with the green flag.",
+    "Use Lives and Bricks Left to decide when the player loses or wins, and restart only with the green flag.",
     "Test a multi-sprite project by checking one game rule at a time."
   ],
   "prerequisites": [
@@ -18,24 +18,23 @@
   ],
   "requirements": [
     "Use Scratch online at scratch.mit.edu, signed in to your Scratch account. You will not download or upload project files.",
-    "Complete all six chapters in order; there are no optional branches.",
-    "Plan for 90-120 minutes per chapter.",
-    "Create exactly four sprites named Paddle, Ball, Brick, and Apple.",
-    "Keep Ball as one original sprite and never create Ball clones.",
-    "Create exactly 50 Brick clones in five rows of ten.",
-    "Give every Brick clone the costumes Healthy and Cracked, in that order, so every brick requires two hits.",
-    "Start each Apple clone by going to Ball. Ball is still paused by `broadcast Hit Brick and wait`, so the Apple appears where the brick broke.",
-    "Create exactly three variables for all sprites named Lives, Bricks Left, and Hit Claimed, plus the Brick-only variable Is Clone.",
-    "Create exactly six messages named Build Bricks, Start Ball, Hit Brick, Apple Caught, Win, and Game Over.",
-    "Start every game with Lives set to 3, Bricks Left set to 50, and Hit Claimed set to 0.",
-    "Have only the Stage send Build Bricks and Start Ball at startup: wait for Build Bricks to finish before sending Start Ball.",
-    "Use Bricks Left, not score, to decide when the player wins.",
+    "Complete all six chapters in order.",
+    "Plan for 90-120 minutes per chapter. Scratch saves your project to your account; also choose File > Save now at each chapter checkpoint. To continue later, sign in, open My Stuff, and click See inside on your project.",
+    "Use the exact sprite, variable, costume, backdrop, and message names shown so your code matches the lesson.",
     "Use the green flag as the only way to start or restart the game."
   ],
   "vocabulary": [
     {
+      "term": "pixel",
+      "meaning": "One of the tiny dots that make up the screen. The Stage is 480 pixels wide and 360 pixels high."
+    },
+    {
       "term": "coordinate",
-      "meaning": "A number that describes a position. In Scratch, x moves left and right while y moves down and up."
+      "meaning": "A number that says where a sprite is. x goes from -240 on the left to 240 on the right. y goes from -180 at the bottom to 180 at the top. The middle of the Stage is x 0, y 0."
+    },
+    {
+      "term": "direction",
+      "meaning": "The way a sprite points. 0 is up, 90 is right, -90 is left, and 180 is down."
     },
     {
       "term": "variable",
@@ -51,7 +50,7 @@
     },
     {
       "term": "collision",
-      "meaning": "An event that happens when two game objects touch."
+      "meaning": "When two sprites touch."
     },
     {
       "term": "broadcast-and-wait",
@@ -111,7 +110,7 @@
             }
           ],
           "checkpoint": {
-            "task": "Describe the required game path before opening the editor.",
+            "task": "Explain how the game works before you open Scratch.",
             "expectedResult": "You can explain the two-hit brick rule, the three-life rule, and the win rule without guessing.",
             "completeWhen": [
               "You know there will be exactly 50 bricks.",
@@ -122,23 +121,67 @@
           "youtubeID": "wbfSNfJtPOo"
         },
         {
-          "id": "setup-sprites-and-data",
+          "id": "learn-stage-numbers",
           "kind": "setup",
-          "title": "Create the Sprites, Backdrops, and Shared Data",
-          "explanation": "Exact names make later menus and code easy to follow. Lives and Bricks Left decide whether play continues. The shared Hit Claimed variable makes sure only one Brick clone reacts when Ball touches the bricks. Messages let the Stage run setup in order and let sprites work together.",
+          "title": "Learn the Stage's Numbers",
+          "explanation": "Scratch uses numbers to say where a sprite is and which way it points. These numbers count pixels, the tiny dots that make up the screen. The Stage is 480 pixels wide and 360 pixels high. An 80-pixel Paddle is small: about 6 of them fit side by side across the Stage. Try the numbers with the Cat now, because every later step uses them.",
           "instructions": [
-            "Sign in to Scratch, click Create, and delete the Cat.",
+            "Sign in to Scratch and click Create. A new project opens with the Cat on the Stage.",
             "Type Brick Breaker in the project title box at the top of the editor.",
-            "Add or paint four sprites and name them exactly Paddle, Ball, Brick, and Apple.",
-            "Make Ball round and no wider than 20 pixels. Paint Paddle about 80 pixels wide and 10 pixels tall. Paint Brick about 40 pixels wide and 18 pixels tall.",
-            "Create three Stage backdrops named Play, You Win, and Game Over. Keep the ending backdrops simple and readable.",
-            "Make three variables for all sprites named Lives, Bricks Left, and Hit Claimed.",
-            "Create six messages named Build Bricks, Start Ball, Hit Brick, Apple Caught, Win, and Game Over.",
-            "Do not make a Restart sprite, Restart message, restart key, or Ball clone."
+            "Drag the Cat around the Stage and watch the x and y boxes under the Stage change.",
+            "Use those boxes to move the Cat to x 0, y 0. The Cat jumps to the middle of the Stage.",
+            "Drag the Cat right, then left. x gets bigger going right. Left of the middle, x has a minus sign.",
+            "Drag the Cat up, then down. y gets bigger going up. Below the middle, y has a minus sign.",
+            "Use the y box to move the Cat to y -60, then to y -120. The bigger the number after the minus sign, the lower the Cat goes.",
+            "Click the Direction box under the Stage and drag the arrow around the dial. 0 points up, 90 points right, -90 points left, and 180 points down.",
+            "Set Direction to 90. Then drag a `move 10 steps` block into the Code area and click it a few times. x changes by 10 on each click, because one step is one pixel.",
+            "Delete the `move 10 steps` block, then delete the Cat by clicking the trash can on its thumbnail in the sprite list."
           ],
           "hints": [
-            "Use the paint editor if a library sprite is too large or detailed.",
-            "Variable and message names must include the spaces shown here.",
+            "The edges of the Stage are x -240 on the left, x 240 on the right, y -180 at the bottom, and y 180 at the top.",
+            "Press Enter after you type in a box."
+          ],
+          "debuggingTips": [
+            {
+              "symptom": "The Cat does not move when you type a number.",
+              "checks": [
+                "Press Enter after typing.",
+                "Make sure the Cat is selected in the sprite list."
+              ]
+            }
+          ],
+          "checkpoint": {
+            "task": "Without looking back, say where each of these is: x 0, y 0; x -200; y -145; and direction 0.",
+            "expectedResult": "x 0, y 0 is the middle of the Stage. x -200 is near the left side. y -145 is near the bottom. Direction 0 points up.",
+            "completeWhen": [
+              "You can explain what a minus sign means for x and for y.",
+              "You know that one step is one pixel.",
+              "The project is named Brick Breaker and the Cat is deleted."
+            ]
+          }
+        },
+        {
+          "id": "setup-sprites-and-data",
+          "kind": "setup",
+          "title": "Create the Sprites, Backdrops, and Variables",
+          "explanation": "Exact names make later menus and code easy to follow. Lives and Bricks Left decide whether play continues. The shared Hit Claimed variable makes sure only one Brick clone reacts when Ball touches the bricks. You will create each message later, when a script first needs it.",
+          "instructions": [
+            "To make each sprite, point at the cat button in the bottom right of the editor and click Paint. Rename the sprite in the Sprite box under the Stage. Make four sprites named exactly Paddle, Ball, Brick, and Apple.",
+            "Paint each shape near the small center mark in the middle of the canvas. Set the Outline number to 0 so an outline does not add to the size. Use the zoom buttons below the canvas to see tiny shapes.",
+            "Make Ball round and no wider than 20 pixels. Paint Paddle about 80 pixels wide and 10 pixels tall.",
+            "Paint Brick about 40 pixels wide and 18 pixels tall. Paint Apple about 20 pixels wide.",
+            "Check each size on the sprite's Costumes tab. The thumbnail shows two numbers, such as 80 x 10. The first is the width and the second is the height.",
+            "If a shape is too big, select it with the arrow tool and drag a corner to shrink it. Do not use the Size box under the Stage for this, because Paddle's script sets its size back to 100.",
+            "Click the Stage in the bottom right of the editor, then click the Backdrops tab. Fill the blank backdrop with a color and rename it Play.",
+            "Right-click the Play thumbnail and choose duplicate. Do this twice, then name the two copies You Win and Game Over.",
+            "Use the Text tool to type the result in large letters on You Win and on Game Over. Choose a color that shows up on your background.",
+            "Select Play again. In small letters, type: Move the mouse to move the Paddle. Click the green flag to start or restart.",
+            "Make three variables for all sprites named Lives, Bricks Left, and Hit Claimed.",
+            "Do not make a Restart sprite, restart key, or Ball clone. The green flag is the only way to restart."
+          ],
+          "hints": [
+            "Simple shapes are easier to resize than detailed art.",
+            "Variable names must include the spaces shown here.",
             "Keep Ball no wider than 20 pixels. A bigger Ball touches the bottom edge and bounces before the miss check can see it."
           ],
           "debuggingTips": [
@@ -151,12 +194,12 @@
             }
           ],
           "checkpoint": {
-            "task": "Check the sprite list, backdrop list, Variables category, and message menus.",
-            "expectedResult": "The project contains only the four required sprites, three named backdrops, three shared variables, and six named messages.",
+            "task": "Check the sprite list, the backdrop list, and the Variables category.",
+            "expectedResult": "The project contains only the four required sprites, three named backdrops, and three shared variables.",
             "completeWhen": [
-              "All sprite, backdrop, variable, and message names match the instructions exactly.",
-              "There is no restart control.",
-              "Ball has no clones or clone-making script."
+              "All sprite, backdrop, and variable names match the instructions exactly.",
+              "Each sprite's costume size is close to the size in the instructions.",
+              "Play shows the instructions for the player."
             ]
           }
         },
@@ -166,16 +209,17 @@
           "title": "Set Up the Game and Control the Paddle",
           "explanation": "The Stage sets the starting values because they belong to the whole game. It resets all three shared variables, tells Brick to build the grid, waits for that to finish, and only then tells Ball to start. Paddle follows only mouse x, so it moves sideways but stays at the same height near the bottom.",
           "instructions": [
-            "On the Stage, add a green-flag script that switches to Play, sets Lives to 3, sets Bricks Left to 50, and sets Hit Claimed to 0.",
-            "Next, broadcast Build Bricks and wait. After that block, broadcast Start Ball without adding a wait.",
+            "On the Stage, add a green-flag script that switches to Play, sets Lives to 3, sets Bricks Left to 50, and sets Hit Claimed to 0. If you get stuck on any build step, every block is in the finished code section on this page. If that section is closed, click Show finished code.",
+            "Add a `broadcast and wait` block. Open its message menu, choose New message, and create Build Bricks.",
+            "Under it, add a `broadcast` block. Choose New message and create Start Ball. Do not add a wait after this one.",
             "On Paddle, add a green-flag script that shows Paddle and sets its size to 100 percent.",
-            "Next, go to x 0, y -145. Then add a forever loop that sets x to mouse x.",
+            "Next, go to x 0, y -145, which is near the bottom of the Stage. Then add a forever loop that sets x to mouse x.",
             "Drag the mouse left and right while the project runs.",
-            "Keep Paddle's y fixed. Do not use a forever block to change y."
+            "Check that nothing inside the forever loop changes y, so Paddle stays at the same height."
           ],
           "hints": [
             "The `mouse x` block is in Sensing.",
-            "Using `set x to (mouse x)` makes movement direct and beginner-friendly."
+            "Using `set x to (mouse x)` makes Paddle follow the mouse exactly."
           ],
           "debuggingTips": [
             {
@@ -223,7 +267,7 @@
             "In the Variables category, choose Lives in the `set to` block, type 9, and click the block. Lives now shows 9. Do the same for Bricks Left and Hit Claimed.",
             "Click the green flag once.",
             "Confirm the backdrop, variables, Paddle position, and Paddle size all reset.",
-            "Compare your scripts with the complete code so far, shown below, before continuing.",
+            "Compare your scripts with the complete code so far in the finished code section on this page.",
             "Choose File > Save now."
           ],
           "hints": [
@@ -267,7 +311,7 @@
       "estimatedMinutes": 105,
       "objectives": [
         "Keep Ball as one original sprite.",
-        "Order miss detection before edge bouncing.",
+        "Check for a missed Ball before the edge bounce.",
         "Reset Ball after a miss and lose after three misses.",
         "Bounce Ball upward from Paddle."
       ],
@@ -276,14 +320,14 @@
           "id": "setup-singleton-ball",
           "kind": "setup",
           "title": "Prepare One Ball",
-          "explanation": "Ball is one sprite and never makes clones. Its main script starts only when it receives Start Ball. The Stage sends that message after Build Bricks has finished, so Ball never needs a guessed wait.",
+          "explanation": "Ball is one sprite and never makes clones. Its main script starts only when it receives Start Ball. The Stage sends that message after Build Bricks has finished, so Ball does not need a wait block to time its start.",
           "instructions": [
             "Select Ball and remove any clone blocks if you experimented with them.",
-            "Keep Ball no wider than 20 pixels. If you chose the library Ball, a size of about 25-35 percent works.",
+            "On Ball's Costumes tab, check that it is no wider than 20 pixels. The first number on the thumbnail is the width.",
             "Add a short green-flag script that hides Ball while the Stage builds the bricks.",
             "Begin Ball's main script with `when I receive Start Ball`, then set rotation style to all around.",
-            "Go to x 0 y -100, point in a random direction from -45 to 45, and show.",
-            "Do not add a second Ball sprite or any `create clone of Ball` block."
+            "Go to x 0, y -100. Then point in a random direction from -45 to 45, using `pick random`, and show. Those directions all point mostly up.",
+            "Check that there is only one Ball sprite and no `create clone of Ball` block."
           ],
           "hints": [
             "In Scratch, direction 0 points up. Directions from -45 to 45 launch Ball upward.",
@@ -322,18 +366,18 @@
           "id": "build-ordered-ball-loop",
           "kind": "build",
           "title": "Move, Detect a Miss, Then Bounce",
-          "explanation": "The order of these checks is a game rule. Each loop pass first moves Ball. Next it checks whether Ball fell below y -165. Only after that check does `if on edge, bounce` run. If the edge bounce came first, the bottom edge could send Ball back up and the player would never lose a life.",
+          "explanation": "The order of these checks is a game rule. Each loop pass first moves Ball. Next it checks whether Ball fell below y -165, just above the bottom edge of the Stage at y -180. Only after that check does `if on edge, bounce` run. If the edge bounce came first, the bottom edge could send Ball back up and the player would never lose a life.",
           "instructions": [
             "After `show` in the Start Ball script, add a forever loop and move 8 steps.",
             "Immediately after moving, check whether y position is less than -165.",
-            "On a miss, change Lives by -1.",
-            "If Lives equals 0, broadcast Game Over and wait, then stop all.",
-            "Otherwise, hide Ball and go to x 0, y -100.",
-            "Then point in a random direction from -45 to 45, wait 1 second, and show.",
+            "Inside that `if`, change Lives by -1. Under that, add an `if then else` that checks whether Lives equals 0.",
+            "In the top space, add `broadcast and wait`, choose New message, and create Game Over. Then add `stop all`.",
+            "In the `else` space, hide Ball and go to x 0, y -100.",
+            "Still in the `else` space, point in a random direction from -45 to 45, wait 1 second, and show.",
             "Place `if on edge, bounce` after the complete miss condition, never before it."
           ],
           "hints": [
-            "Use an `if then else` inside the miss condition to separate the last life from a normal reset.",
+            "The `if then else` separates losing your last life from losing one of your other lives.",
             "The 1-second pause gives the player time to move Paddle under the new launch."
           ],
           "debuggingTips": [
@@ -347,7 +391,7 @@
             {
               "symptom": "Lives keeps falling rapidly after one miss.",
               "checks": [
-                "Reset Ball to y -100 inside the else branch.",
+                "Move Ball back to y -100 inside the `else` space.",
                 "Make sure the reset happens before the loop repeats."
               ]
             }
@@ -376,17 +420,17 @@
           "id": "build-paddle-bounce",
           "kind": "build",
           "title": "Return Ball from Paddle",
-          "explanation": "Touching Paddle should always send Ball upward. Moving Ball forward immediately after changing direction separates the sprites, preventing repeated collision checks while they overlap.",
+          "explanation": "Touching Paddle should always send Ball upward. Ball also moves forward right after it turns. That lifts it off Paddle, so the next pass through the loop does not count the same touch again.",
           "instructions": [
             "In Ball's forever loop, add a Paddle-touch condition after `if on edge, bounce`.",
             "When touching Paddle, point in a random direction from -60 to 60.",
             "Move 12 steps immediately so Ball leaves Paddle before the next loop.",
             "Test catches near the left edge, center, and right edge of Paddle.",
-            "Keep this collision in Ball. Paddle should not contain a Ball-touch loop."
+            "Check that Paddle has no script that checks for touching Ball. Ball does that job."
           ],
           "hints": [
             "A wider random range creates more varied shots while still pointing upward.",
-            "If Ball is wider than 20 pixels, shrink it instead of increasing the separation move."
+            "If Ball is wider than 20 pixels, shrink its costume. Do not change the 12."
           ],
           "debuggingTips": [
             {
@@ -400,7 +444,7 @@
               "symptom": "Ball passes through Paddle.",
               "checks": [
                 "Confirm the sensing menu says Paddle.",
-                "Reduce Ball speed from 8 if your Paddle costume is extremely thin."
+                "On Paddle's Costumes tab, check that it is about 10 pixels tall."
               ]
             }
           ],
@@ -409,8 +453,8 @@
             "expectedResult": "Each Paddle touch sends Ball upward once at a varied angle without sticking.",
             "completeWhen": [
               "Paddle catches work across its width.",
-              "Ball separates after each catch.",
-              "Paddle has no collision script."
+              "Ball moves clear of Paddle after each catch.",
+              "Paddle has no script that checks for touching Ball."
             ]
           },
           "finishedCode": [
@@ -428,13 +472,13 @@
           "id": "checkpoint-ball-and-lives",
           "kind": "checkpoint",
           "title": "Checkpoint: Three Lives and One Ball",
-          "explanation": "This checkpoint shows that the main loop runs in a steady order. Ball moves, a miss is handled, edges bounce, and Paddle sends Ball back up. Only Ball makes these decisions.",
+          "explanation": "This checkpoint shows that Ball's forever loop does its jobs in the same order every time. Ball moves, a miss is handled, edges bounce, and Paddle sends Ball back up. Only Ball makes these decisions.",
           "instructions": [
             "Click the green flag and catch Ball twice.",
             "Let Ball miss three separate times.",
             "Confirm Lives reads 2, then 1, then 0 and all scripts stop at 0.",
             "Click the green flag to restart; do not add or use any other restart action.",
-            "Compare your Stage, Paddle, and Ball code with the complete code below.",
+            "Compare your Stage, Paddle, and Ball code with the complete code in the finished code section on this page.",
             "Choose File > Save now."
           ],
           "hints": [
@@ -494,23 +538,23 @@
           "id": "setup-brick-costumes-and-grid",
           "kind": "setup",
           "title": "Paint Healthy and Cracked, Then Build the Grid",
-          "explanation": "The hidden original Brick creates all 50 clones when it receives Build Bricks. A repeat inside a repeat makes ten clones across each row and five rows down. The `For this sprite only` variable Is Clone is 1 in clones and 0 in the original. Each clone starts in the Healthy costume, so no brick starts damaged.",
+          "explanation": "The hidden original Brick creates all 50 clones when it receives Build Bricks. One `repeat` inside another makes ten clones across each row and five rows down. The `For this sprite only` variable Is Clone is 1 in clones and 0 in the original. Each clone starts in the Healthy costume, so no brick starts damaged.",
           "instructions": [
             "In Brick's Costumes tab, name the first costume Healthy.",
-            "Duplicate it, draw obvious crack lines without changing its outer size, and name the copy Cracked.",
-            "On Brick, make a variable named Is Clone for this sprite only.",
+            "Right-click the Healthy thumbnail and choose duplicate. On the copy, draw obvious crack lines inside the shape, without making it bigger, and name it Cracked.",
+            "On Brick, make a variable named Is Clone and choose For this sprite only. Untick its checkbox so it does not show on the Stage.",
             "Add a green-flag script on Brick that hides the original.",
             "Add `when I receive Build Bricks`. Hide the original and set Is Clone to 0.",
-            "Then switch to Healthy and go to x -216, y 150.",
-            "Use an outer repeat 5 and inner repeat 10. Create a clone, then change x by 48 inside the inner repeat.",
-            "After each row, set x to -216 and change y by -30.",
-            "After all rows, move the hidden original to x 240, y 180.",
+            "Then switch to Healthy and go to x -216, y 150. That is the top-left brick.",
+            "Add `repeat 5` with `repeat 10` inside it. Inside `repeat 10`, create a clone of myself, then change x by 48. Each brick is 40 pixels wide, so this leaves an 8-pixel gap.",
+            "Under `repeat 10`, but still inside `repeat 5`, set x to -216 and change y by -30. This starts the next row lower down.",
+            "Below `repeat 5`, move the hidden original to x 240, y 180, the top-right corner of the Stage.",
             "Then add `wait 0 seconds`. This short pause lets every clone run its start script before Build Bricks finishes.",
             "Under `when I start as a clone`, set Is Clone to 1, switch to Healthy, and show."
           ],
           "hints": [
             "Ten positions from -216 through 216 fit across the Stage.",
-            "The original moves away so it cannot be confused with a clone during sensing."
+            "The original moves away so that it cannot be mistaken for a clone when Ball checks for touching."
           ],
           "debuggingTips": [
             {
@@ -559,14 +603,14 @@
           "explanation": "Only Ball checks whether it is touching Brick. On a touch, Ball sets Hit Claimed to 0, then sends Hit Brick with `broadcast and wait`. In the next step, the first touching clone will set Hit Claimed to 1, so the clones next to it do nothing. While Ball waits, it stays paused at the brick. Then Ball checks for a win, turns around, and moves away from the brick.",
           "instructions": [
             "In Ball's forever loop, add a touching-Brick condition after the Paddle condition.",
-            "Inside it, set Hit Claimed to 0, then use `broadcast Hit Brick and wait`, not ordinary broadcast.",
-            "After the message returns, check whether Bricks Left equals 0. If so, broadcast Win and wait, then stop all.",
-            "If play continues, point in direction `direction + 180 + pick random -20 to 20` and move 12 steps to separate from the brick.",
-            "Do not put the broadcast in its own forever script. Only broadcast when Ball is touching Brick."
+            "Inside it, set Hit Claimed to 0. Then add `broadcast and wait`, not plain `broadcast`, choose New message, and create Hit Brick.",
+            "Under that block, add an `if` that checks whether Bricks Left equals 0. Inside it, add `broadcast and wait`, choose New message, and create Win. Then add `stop all`.",
+            "Below that `if`, point in direction `direction + 180 + pick random -20 to 20` and move 12 steps to get clear of the brick.",
+            "Check that the broadcast is inside the touching-Brick `if`, not in a forever script of its own."
           ],
           "hints": [
             "The `direction` block is in Motion. Put it in the `+` block. Scratch keeps the result between -180 and 180.",
-            "The receiver built next must end quickly so broadcast-and-wait can return.",
+            "The script you build next must finish quickly, so that `broadcast and wait` can continue.",
             "The small random turn changes Ball's path after each brick, so it does not fly straight back to the same spot on Paddle."
           ],
           "debuggingTips": [
@@ -614,9 +658,9 @@
             "On Brick, add `when I receive Hit Brick` as a separate script.",
             "Add an `if` block. Put an `and` block in its condition, then put a second `and` block in the left side of the first one.",
             "Fill the three spaces with `Is Clone = 1`, `touching Ball?`, and `Hit Claimed = 0`. The clone does nothing unless all three are true.",
-            "As the first block inside the condition, set Hit Claimed to 1. Then compare costume name with Healthy.",
-            "If the costume name is Healthy, switch costume to Cracked.",
-            "Otherwise, change Bricks Left by -1 and delete this clone.",
+            "As the first block inside that `if`, set Hit Claimed to 1. Under it, add an `if then else` that checks whether `costume name` equals Healthy.",
+            "In the top space, switch costume to Cracked.",
+            "In the `else` space, change Bricks Left by -1 and delete this clone.",
             "Do not add forever, repeat, wait, or a Ball-touch script under `when I start as a clone`."
           ],
           "hints": [
@@ -627,26 +671,26 @@
             {
               "symptom": "A Healthy brick disappears on the first hit.",
               "checks": [
-                "Check that the then branch switches to Cracked.",
-                "Put Bricks Left change and deletion only in the else branch."
+                "Check that the top space of `if then else` switches to Cracked.",
+                "Put the Bricks Left change and `delete this clone` only in the `else` space."
               ]
             },
             {
               "symptom": "Bricks Left decreases on the first hit.",
               "checks": [
-                "Move `change Bricks Left by -1` into the else branch.",
+                "Move `change Bricks Left by -1` into the `else` space.",
                 "Confirm each clone starts with Healthy."
               ]
             }
           ],
           "checkpoint": {
-            "task": "Watch one brick through two separate Ball contacts.",
-            "expectedResult": "The first contact changes Healthy to Cracked without changing Bricks Left; the second removes it and changes 50 to 49.",
+            "task": "Keep Ball in play and watch one brick get hit twice.",
+            "expectedResult": "The first hit changes Healthy to Cracked without changing Bricks Left; the second removes it and changes 50 to 49.",
             "completeWhen": [
               "No brick breaks while Healthy.",
               "Every broken brick subtracts exactly one.",
-              "Exactly one touching clone changes on each contact.",
-              "The Hit Brick receiver contains no loop."
+              "Exactly one brick changes on each hit.",
+              "The `when I receive Hit Brick` script contains no loop."
             ]
           },
           "finishedCode": [
@@ -662,11 +706,11 @@
           "title": "Checkpoint: Ball and Bricks Cooperate",
           "explanation": "Ball and Brick now work together. Ball is the only sprite that checks for touching a brick and decides when to wait. Each Brick clone only changes its costume or deletes itself. Bricks Left counts the bricks still on the Stage, not hits or points.",
           "instructions": [
-            "Click the green flag and confirm Stage finishes Build Bricks before it sends Start Ball.",
-            "Observe at least three first hits and three second hits.",
-            "Confirm one clone responds per contact, first hits never change Bricks Left, and second hits always reduce it by one.",
+            "Click the green flag and confirm the whole grid of bricks appears before Ball starts moving.",
+            "Keep Ball in play and watch at least three first hits and three second hits.",
+            "Confirm one brick changes on each hit, first hits never change Bricks Left, and second hits always lower it by 1.",
             "Check that no Brick script has a forever loop around its hit code.",
-            "Compare Ball and Brick with the complete code so far.",
+            "Compare Ball and Brick with the complete code so far in the finished code section on this page.",
             "Choose File > Save now."
           ],
           "hints": [
@@ -674,7 +718,7 @@
           ],
           "debuggingTips": [
             {
-              "symptom": "Several hits happen during one overlap.",
+              "symptom": "One touch counts as several hits.",
               "checks": [
                 "Confirm Ball sets Hit Claimed to 0 immediately before broadcast-and-wait.",
                 "Confirm the touching Brick clone sets Hit Claimed to 1 before changing costume or deleting itself.",
@@ -688,7 +732,7 @@
             "expectedResult": "A Healthy grid of five rows of ten appears before Ball starts. Exactly one brick changes on each hit, and every brick cracks before it breaks.",
             "completeWhen": [
               "The grid has exactly 50 clones.",
-              "Exactly one clone responds per Ball contact.",
+              "Exactly one brick changes each time Ball hits.",
               "All first hits produce Cracked.",
               "Bricks Left counts only second hits."
             ]
@@ -736,14 +780,14 @@
         {
           "id": "setup-apple-at-paused-ball",
           "kind": "setup",
-          "title": "Start Apple Clones at the Collision Point",
+          "title": "Start Apple Clones at the Ball",
           "explanation": "When Brick creates an Apple clone, the clone starts where the hidden original Apple is, not at the brick. So every Apple clone first goes to Ball. This works because there is only one Ball, and `broadcast Hit Brick and wait` keeps it paused at the brick while Brick creates the Apple.",
           "instructions": [
             "On Apple, add a green-flag script that hides the original.",
-            "Add `when I start as a clone` and make its very first motion block `go to Ball`.",
+            "Add `when I start as a clone` and make `go to Ball` the very first block under it.",
             "Show the clone only after it has gone to Ball.",
-            "Keep Ball as one original sprite. Do not create Ball clones.",
-            "Do not replace `broadcast Hit Brick and wait` with ordinary broadcast."
+            "Check that Ball is still one sprite with no clones.",
+            "Check that Ball still uses `broadcast Hit Brick and wait`, not plain `broadcast`."
           ],
           "hints": [
             "The Ball does not need to stop with a separate wait block; broadcast-and-wait already pauses its script.",
@@ -766,8 +810,8 @@
             }
           ],
           "checkpoint": {
-            "task": "Read the first blocks of Apple's clone script and of Ball's brick check.",
-            "expectedResult": "An Apple clone will go to the one paused Ball before becoming visible.",
+            "task": "Look at the first blocks of Apple's clone script and of Ball's brick check.",
+            "expectedResult": "An Apple clone goes to Ball before it shows.",
             "completeWhen": [
               "Apple's first clone action is `go to Ball`.",
               "Ball still uses broadcast-and-wait.",
@@ -791,21 +835,21 @@
           "title": "Create Apples Only on Second Hits",
           "explanation": "Apples come only from bricks that break, so the chance runs only in the Cracked branch, just before the clone deletes itself. Picking a random number from 1 to 5 and checking for 1 gives each broken brick a one-in-five chance. After creating the Apple, `wait 0 seconds` gives the new Apple clone a moment to run `go to Ball` while Ball is still paused.",
           "instructions": [
-            "Return to Brick's Hit Brick receiver and find its else branch. That branch runs on a brick's second hit.",
-            "In the else branch, before changing Bricks Left, test whether `pick random 1 to 5` equals 1.",
-            "If true, create a clone of Apple, then wait 0 seconds so its start script can go to the paused Ball.",
-            "After the chance, change Bricks Left by -1 and delete the Brick clone.",
-            "Never create an Apple when Healthy merely changes to Cracked."
+            "Return to Brick's `when I receive Hit Brick` script and find its `else` space. That part runs on a brick's second hit.",
+            "At the top of the `else` space, above `change Bricks Left by -1`, add an `if` that checks whether `pick random 1 to 5` equals 1.",
+            "Inside that `if`, create a clone of Apple, then wait 0 seconds so the new Apple can go to Ball while Ball is still paused.",
+            "Check that `change Bricks Left by -1` and `delete this clone` come after that `if`.",
+            "Check that the top space, which switches Healthy to Cracked, does not create an Apple."
           ],
           "hints": [
-            "Order in the else branch is Apple chance and its zero-second wait, Bricks Left change, then clone deletion.",
+            "To see Apples sooner while testing, change `pick random 1 to 5` to `pick random 1 to 1`. Change it back to 1 to 5 afterward.",
             "Random results mean several broken bricks may pass before an Apple appears."
           ],
           "debuggingTips": [
             {
               "symptom": "Apples appear on first hits.",
               "checks": [
-                "Move the random condition into the else branch.",
+                "Move the `pick random` check into the `else` space.",
                 "The Healthy branch should contain only `switch costume to Cracked`."
               ]
             },
@@ -819,9 +863,9 @@
           ],
           "checkpoint": {
             "task": "Break enough Cracked bricks to observe at least one Apple clone.",
-            "expectedResult": "Some second hits create an Apple at Ball's collision position; first hits never do.",
+            "expectedResult": "Some second hits create an Apple where Ball is. First hits never do.",
             "completeWhen": [
-              "The random check is only in the Cracked else branch.",
+              "The `pick random` check is only in the `else` space.",
               "Apple creation happens before Brick deletion.",
               "Bricks Left still decreases exactly once."
             ]
@@ -837,14 +881,14 @@
           "id": "build-apple-fall-and-catch",
           "kind": "build",
           "title": "Fall, Catch, Widen, and Clean Up",
-          "explanation": "Each Apple clone falls until Paddle catches it or it leaves the Stage. A caught Apple broadcasts Apple Caught, then deletes itself. Paddle handles that message once and grows by 10 percent up to a maximum of 160 percent. The green flag later restores 100 percent.",
+          "explanation": "Each Apple clone falls until Paddle catches it or it leaves the Stage. A caught Apple broadcasts Apple Caught, then deletes itself. Paddle reacts once and grows by 10 percent, up to a maximum of 160 percent. The green flag later restores 100 percent.",
           "instructions": [
             "After Apple's `show`, add a forever loop that changes y by -5.",
-            "If touching Paddle, broadcast Apple Caught, delete this clone, and let deletion end that clone's script.",
-            "Also check whether y position is less than -175 and delete the clone if it was missed.",
+            "Inside the loop, add an `if` that checks for touching Paddle. Inside it, add `broadcast`, choose New message, and create Apple Caught. Then add `delete this clone`.",
+            "Below that `if`, add another that checks whether y position is less than -175, just above the bottom of the Stage. Inside it, add `delete this clone`.",
             "On Paddle, add a `when I receive Apple Caught` script.",
             "If Paddle's size is less than 160, change size by 10.",
-            "Do not add a forever loop to the Paddle message receiver."
+            "Check that this Paddle script has no forever loop."
           ],
           "hints": [
             "The `size` block is in Looks.",
@@ -889,15 +933,15 @@
         {
           "id": "checkpoint-apple-power-up",
           "kind": "checkpoint",
-          "title": "Checkpoint: Safe Clone Handoff",
+          "title": "Checkpoint: Apples Start at the Ball",
           "explanation": "The power-up depends on timing. Ball pauses at the brick, one Brick clone handles the hit and may create an Apple on a second hit, the Apple starts at Ball, and Paddle grows when it catches the Apple. Every message script finishes.",
           "instructions": [
             "Run the game until you see an Apple created.",
-            "Watch whether it begins at the brick collision instead of at a fixed corner.",
+            "Check that it starts where the brick broke, not in a corner of the Stage.",
             "Select Paddle and tick the `size` checkbox in Looks. Each caught Apple adds 10 to size.",
             "To test the limit quickly, type 150 into Paddle's size box during play, then catch two more Apples. Size reaches 160 and stays there.",
-            "Click the green flag and confirm Paddle returns to 100 percent and old Apple clones disappear.",
-            "Compare Paddle, Apple, and Brick's Hit Brick script with the code below. Ball, the Stage, and Brick's other scripts have not changed since Chapter 3.",
+            "Click the green flag and confirm Paddle returns to 100 percent and old Apples disappear. Then untick the `size` checkbox.",
+            "Compare Paddle, Apple, and Brick's Hit Brick script with the finished code section on this page. Ball, the Stage, and Brick's other scripts have not changed since Chapter 3.",
             "Choose File > Save now."
           ],
           "hints": [
@@ -908,13 +952,13 @@
               "symptom": "Ball moves before Apple reaches the collision point.",
               "checks": [
                 "Use `broadcast Hit Brick and wait` in Ball.",
-                "Create Apple inside Brick's Hit Brick receiver, not in an unrelated script."
+                "Create Apple inside Brick's `when I receive Hit Brick` script, not anywhere else."
               ]
             }
           ],
           "checkpoint": {
             "task": "Follow one Apple clone from the moment it appears until it is deleted.",
-            "expectedResult": "A broken brick may create an Apple at paused Ball; the Apple falls, is caught or missed, and is deleted.",
+            "expectedResult": "A broken brick may create an Apple where Ball is paused. The Apple falls, is caught or missed, and then disappears.",
             "completeWhen": [
               "First hits create no Apples.",
               "Every Apple starts by going to Ball.",
@@ -965,12 +1009,12 @@
           "instructions": [
             "On the Stage, add `when I receive Win` and switch backdrop to You Win.",
             "Add `when I receive Game Over` and switch backdrop to Game Over.",
-            "Each receiver script needs only one switch-backdrop block and no loop.",
-            "Do not add restart code to either ending backdrop or receiver.",
-            "Keep the Stage green-flag script switching back to Play, resetting all three shared variables, waiting for Build Bricks, and then sending Start Ball."
+            "Check that each of these two scripts has only its one `switch backdrop` block and no loop.",
+            "Do not add restart code to either script.",
+            "Check that the green-flag script on the Stage still switches back to Play, resets all three variables, waits for Build Bricks, and then sends Start Ball."
           ],
           "hints": [
-            "Ending receivers do not need `stop all`; Ball does that after broadcast-and-wait returns.",
+            "These two scripts do not need `stop all`; Ball does that after broadcast-and-wait returns.",
             "The backdrop only shows the result. Bricks Left and Lives decide it."
           ],
           "debuggingTips": [
@@ -1008,10 +1052,10 @@
           "title": "Check the Two Ending Rules",
           "explanation": "Only one check decides each ending. `Lives = 0` loses. `Bricks Left = 0` wins. A score variable, number of hits, backdrop, or costume must not decide the result.",
           "instructions": [
-            "Read Ball's miss branch and confirm Game Over is sent only when Lives equals 0.",
-            "Read Ball's brick branch and confirm Win is checked right after Hit Brick finishes.",
+            "Look at the part of Ball's script that handles a miss and confirm Game Over is sent only when Lives equals 0.",
+            "Look at the part of Ball's script that handles a brick and confirm Win is checked right after Hit Brick finishes.",
             "Confirm that check says Bricks Left equals 0.",
-            "Search every sprite's scripts visually for a second win or loss test and remove duplicates.",
+            "Look through every sprite's scripts for a second win or loss check. Remove any you find.",
             "Do not create a Score variable for deciding the winner."
           ],
           "hints": [
@@ -1053,7 +1097,7 @@
             "Confirm there is no Restart sprite, Restart message, click-to-restart script, or key-to-restart script.",
             "After Game Over, click the Stage and press several keys. Nothing should restart.",
             "Click the green flag and confirm Build Bricks creates one new 50-brick grid, and only then Start Ball launches Ball.",
-            "Confirm Paddle size returns to 100, Apple original hides, Brick original hides, and one Ball resets.",
+            "Confirm Paddle is back to its normal size and that you can see one Ball and no extra Apple or Brick.",
             "Repeat the same green-flag test after a Win."
           ],
           "hints": [
@@ -1066,7 +1110,7 @@
               "symptom": "A stopped game starts when a key or sprite is clicked.",
               "checks": [
                 "Remove event scripts that rebuild or relaunch the game.",
-                "Keep the green flag as the only restart entry; only the Stage may send Build Bricks and Start Ball during startup."
+                "The green flag must be the only way to restart. Only the Stage may send Build Bricks and Start Ball, when the game starts."
               ]
             },
             {
@@ -1078,8 +1122,8 @@
             }
           ],
           "checkpoint": {
-            "task": "End a game, try invalid restart actions, then use the green flag.",
-            "expectedResult": "Only the green flag restarts, and it recreates the exact initial state without leftover clones.",
+            "task": "End a game, try clicking the Stage and pressing keys, then click the green flag.",
+            "expectedResult": "Only the green flag restarts the game, and it starts exactly as it did the first time, with no leftover clones.",
             "completeWhen": [
               "Keys and sprite clicks do not restart play.",
               "Lives returns to 3, Bricks Left to 50, and Hit Claimed to 0.",
@@ -1097,11 +1141,11 @@
             "Complete a game by breaking every brick twice and observe You Win.",
             "Confirm Bricks Left reads 0 at Win.",
             "Use the green flag again and check every starting value and costume.",
-            "Compare the Stage and Ball code below with your project.",
+            "Compare your Stage and Ball code with the finished code section on this page.",
             "Choose File > Save now."
           ],
           "hints": [
-            "A full win test takes time because all 50 bricks need two hits. Do it anyway: it is the only way to see the win work."
+            "A full win test takes time because all 50 bricks need two hits. To avoid running out of lives, temporarily change `set Lives to 3` to `set Lives to 99`. Change it back to 3 after the test."
           ],
           "debuggingTips": [
             {
@@ -1160,7 +1204,7 @@
         {
           "id": "debug-collision-ownership",
           "kind": "debug",
-          "title": "Trace One Frame of Collision Work",
+          "title": "Check Which Sprite Reacts to Each Touch",
           "explanation": "Games often break when two scripts react to the same touch. In this project, each touch has one job: Ball checks for Paddle and Brick, Hit Claimed lets one touching Brick clone react, Apple checks for Paddle to see if it was caught, and Paddle only reacts to Apple Caught.",
           "instructions": [
             "Check that Ball has one forever loop for movement and collision checks.",
@@ -1168,19 +1212,19 @@
             "Check that Brick's Hit Brick script needs Is Clone = 1, touching Ball, and Hit Claimed = 0, and then sets Hit Claimed to 1 first.",
             "Check that Paddle never checks touching Ball or Brick.",
             "Check that only Apple clones check touching Paddle.",
-            "Run contacts near the border between two bricks and watch exactly one clone change costume or delete.",
-            "Confirm Ball points in direction `direction + 180 + pick random -20 to 20` and moves 12 steps after each hit response."
+            "Keep Ball in play and watch it hit the place where two bricks meet. Exactly one brick should change.",
+            "Confirm Ball points in direction `direction + 180 + pick random -20 to 20` and moves 12 steps after each hit."
           ],
           "hints": [
             "A script with `if` blocks still finishes. Only a `forever` loop, or a repeat that never ends, keeps it from finishing.",
-            "The turn of about 180 degrees and the 12-step move send Ball back out the way it came in, so it leaves the brick from any impact direction. The random part is at most 20 degrees, so the move still clears the brick."
+            "The turn of about 180 degrees and the 12-step move send Ball back out the way it came in, so it leaves the brick whichever way it hit. The random part is at most 20 degrees, so the move still clears the brick."
           ],
           "debuggingTips": [
             {
               "symptom": "Ball freezes at a brick.",
               "checks": [
-                "Remove loops and long waits from every Hit Brick receiver.",
-                "Check that Brick's receiver can end even when that clone is not touching Ball."
+                "Remove loops and long waits from every `when I receive Hit Brick` script.",
+                "Check that Brick's `when I receive Hit Brick` script can finish even when that clone is not touching Ball."
               ]
             },
             {
@@ -1205,7 +1249,7 @@
               "Ball alone senses Brick.",
               "Hit Claimed allows exactly one clone to react.",
               "Brick's Hit Brick script has no loop.",
-              "Healthy always survives one response."
+              "A Healthy brick always survives its first hit."
             ]
           }
         },
@@ -1213,7 +1257,7 @@
           "id": "debug-counts-and-cleanup",
           "kind": "debug",
           "title": "Check Counters, Clones, and Restarts",
-          "explanation": "Counts expose hidden clone bugs. Bricks Left begins at 50 and falls once per deleted Brick clone. Apple clones do not affect that count. Green flag removes all old clones, and the Stage sends one Build Bricks request before Start Ball, preventing stacked grids and abandoned Apples.",
+          "explanation": "Counting helps you find clone bugs you cannot see. Bricks Left begins at 50 and falls once per deleted Brick clone. Apple clones do not affect that count. The green flag removes all old clones. The Stage then sends Build Bricks once before Start Ball, so you never get two grids on top of each other or leftover Apples.",
           "instructions": [
             "Start a game and confirm five rows of ten match Bricks Left 50.",
             "Watch a first hit and confirm the count stays unchanged.",
@@ -1223,27 +1267,27 @@
           ],
           "hints": [
             "Scratch automatically deletes clones on green flag; the original sprites then run their setup scripts.",
-            "Bricks Left is a surviving-brick count, not a hit count."
+            "Bricks Left counts the bricks still on the Stage, not the hits."
           ],
           "debuggingTips": [
             {
               "symptom": "Bricks Left becomes negative.",
               "checks": [
-                "Change it only in the Cracked else branch.",
+                "Change it only in the `else` space of Brick's `when I receive Hit Brick` script.",
                 "Delete the Brick clone immediately after changing it."
               ]
             },
             {
               "symptom": "More than 50 bricks appear after restart.",
               "checks": [
-                "Do not send Build Bricks from an in-game restart control; only Stage sends it during green-flag startup.",
+                "Do not send Build Bricks from a restart button or key. Only the Stage sends it, when the green flag is clicked.",
                 "Confirm only Brick's Build Bricks receiver creates the grid.",
                 "Confirm only the Stage broadcasts Build Bricks at startup."
               ]
             }
           ],
           "checkpoint": {
-            "task": "Account for every change to Lives and Bricks Left during a short test.",
+            "task": "Play for a short time and watch every change to Lives and Bricks Left.",
             "expectedResult": "Only a miss changes Lives, only a second brick hit changes Bricks Left, and restart restores 3 and 50.",
             "completeWhen": [
               "No Apple changes either counter.",
@@ -1260,18 +1304,18 @@
           "instructions": [
             "Click the green flag. Check that Lives is 3, Bricks Left is 50, Hit Claimed is 0, and Paddle size is 100.",
             "Check that one Ball and 50 Healthy bricks appear, and that Ball launches only after the grid is complete.",
-            "Check that Ball's y below -165 check comes before `if on edge, bounce`, and that each miss loses exactly one life.",
+            "Check that Ball's `y position < -165` check comes before `if on edge, bounce`, and that each miss loses exactly one life.",
             "Check that Paddle sends Ball back up, and that exactly one brick reacts to each hit.",
             "Check that a first hit changes Healthy to Cracked and a second hit removes the brick.",
             "Check that Ball turns around after each brick and moves 12 steps away.",
-            "Check that some broken bricks drop Apples from Ball, and that caught Apples grow Paddle no bigger than 160.",
+            "Check that some broken bricks drop Apples where Ball is, and that caught Apples grow Paddle no bigger than 160.",
             "Check that Lives 0 shows Game Over and Bricks Left 0 shows You Win.",
             "Check that keys, sprite clicks, and ending messages cannot restart. Use only the green flag.",
             "Do not add optional levels, score, extra balls, restart controls, or one-hit brick types."
           ],
           "hints": [
             "Fix the first failed check before continuing because later behavior may depend on it.",
-            "Keep the required path small and reliable instead of adding extensions."
+            "Finish this game first. You can add your own ideas in a new copy later."
           ],
           "debuggingTips": [
             {
@@ -1284,10 +1328,10 @@
           ],
           "checkpoint": {
             "task": "Complete the checklist from a fresh green-flag start without skipping a rule.",
-            "expectedResult": "All required systems work together through a win, a loss, and clean restarts.",
+            "expectedResult": "All the parts of the game work together through a win, a loss, and a clean restart after each.",
             "completeWhen": [
               "Every checklist item passes.",
-              "There are no optional paths or extra restart methods.",
+              "The green flag is the only way to restart.",
               "Another player can start and play the game without your help."
             ]
           }
@@ -1296,17 +1340,18 @@
           "id": "checkpoint-systematic-debugging",
           "kind": "checkpoint",
           "title": "Checkpoint: The Finished Game",
-          "explanation": "The code below is the complete game. Compare it sprite by sprite. Scripts that start with different event blocks stay separate, even when they belong to the same sprite.",
+          "explanation": "The complete game is in the finished code section on this page. Compare it sprite by sprite. Scripts that start with different event blocks stay separate, even when they belong to the same sprite.",
           "instructions": [
-            "Compare every script with the complete code below.",
-            "Correct names, values, nesting, and block order one script at a time.",
+            "Compare every script with the finished code section on this page.",
+            "Fix any names, numbers, or blocks that do not match, one script at a time.",
             "Run one final loss test and one final win test.",
+            "In the Variables list, untick the Hit Claimed checkbox so only Lives and Bricks Left show on the Stage.",
             "Restart each stopped game only with the green flag.",
             "Ask another learner to play without explaining the controls. If they get stuck, improve only the artwork or the instructions on the Stage.",
             "Choose File > Save now."
           ],
           "hints": [
-            "Separate code entries with the same target represent separate Scratch stacks.",
+            "Two entries with the same sprite name are two separate scripts on that sprite.",
             "Do not join scripts that start with different event blocks, such as two message scripts or a message script and a green-flag script."
           ],
           "debuggingTips": [
@@ -1314,7 +1359,7 @@
               "symptom": "Your code looks similar but behaves differently.",
               "checks": [
                 "Compare the nesting of every if, else, and forever block.",
-                "Compare message type: ordinary broadcast for Start Ball and Apple Caught, broadcast-and-wait for Build Bricks, Hit Brick, Win, and Game Over.",
+                "Compare the broadcast blocks: plain `broadcast` for Start Ball and Apple Caught, and `broadcast and wait` for Build Bricks, Hit Brick, Win, and Game Over.",
                 "Compare the order of the startup messages, the Hit Claimed blocks, the miss check, and the edge bounce."
               ]
             }
@@ -1323,7 +1368,7 @@
             "task": "Check your finished Brick Breaker project against the complete code.",
             "expectedResult": "Someone new can start, play, win, lose, and restart the game with the green flag, and every game rule still works.",
             "completeWhen": [
-              "All 24 curriculum steps are complete.",
+              "All 25 steps in this course are complete.",
               "Every script matches the complete code.",
               "Both ending tests and the green-flag restart test pass."
             ]
