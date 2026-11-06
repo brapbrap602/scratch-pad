@@ -204,3 +204,87 @@ test('Chapters 4 and 5 open with a clone warm-up and end every step with somethi
     assert.ok(stage?.code.includes(`broadcast [${message} v] and wait`), `${id} should show the Stage sending ${message}`);
   }
 });
+
+test('learners meet the Stage numbers and a sizing method before painting to measure', async () => {
+  const lesson = JSON.parse(await readFile(new URL('../../curriculum/tower-defense.json', import.meta.url), 'utf8'));
+  const [first, numbers, battlefield] = lesson.chapters[0].steps;
+  assert.doesNotMatch(first.instructions.join(' '), /delete the Cat/i);
+  assert.equal(numbers.id, 'learn-stage-numbers');
+  assert.match(numbers.explanation, /480 pixels wide and 360 pixels high/);
+  assert.match(numbers.instructions.join(' '), /bigger the number after the minus sign, the lower/);
+  assert.match(numbers.instructions.at(-1), /delete the Cat/);
+  // The paint editor shows no coordinates, so Enemy guides the roads and must be painted first.
+  assertInstructionsInOrder(battlefield.instructions, [
+    /Paint/,
+    /costume thumbnail/,
+    /Size box.*does not change/,
+    /move it to x 0, y 90/,
+    /Stage preview.*middle of Enemy/,
+    /x -210.*Line tool/,
+  ]);
+});
+
+test('Empty spots and buttons stay clickable, because Scratch only counts clicks on painted pixels', async () => {
+  const lesson = JSON.parse(await readFile(new URL('../../curriculum/tower-defense.json', import.meta.url), 'utf8'));
+  const steps = lesson.chapters.flatMap(({ steps }) => steps);
+  const instructions = (id) => steps.find((step) => step.id === id).instructions.join(' ');
+  assert.match(instructions('paint-a-build-spot'), /`Empty`: a small, filled/);
+  assert.doesNotMatch(instructions('paint-a-build-spot'), /outlined/);
+  assert.match(instructions('start-wave-button'), /filled rectangle/);
+  assert.match(instructions('next-level-control'), /filled rectangle/);
+});
+
+test('sprite-only displays are never offered as a way to check a clone', async () => {
+  const lesson = JSON.parse(await readFile(new URL('../../curriculum/tower-defense.json', import.meta.url), 'utf8'));
+  const steps = lesson.chapters.flatMap(({ steps }) => steps);
+  const spots = steps.find((step) => step.id === 'number-the-spots');
+  assert.doesNotMatch(spots.instructions.join(' '), /[Ss]howing it helps/);
+  assert.ok(spots.hints.some((hint) => /shows the original sprite's value/.test(hint)));
+});
+
+test('timing claims match the measured update length, not one frame per update', async () => {
+  // Measured in the real editor: 18 updates took 1.1 to 1.8 seconds, so about 60 to 100 ms per update.
+  const lesson = JSON.parse(await readFile(new URL('../../curriculum/tower-defense.json', import.meta.url), 'utf8'));
+  const text = JSON.stringify(lesson.chapters);
+  assert.doesNotMatch(text, /about one second|about a second|half a second/);
+  const settings = lesson.chapters.flatMap(({ steps }) => steps).find((step) => step.id === 'put-settings-together');
+  assert.ok(settings.hints.some((hint) => /Reload Time 30 is about 2 to 3 seconds/.test(hint)));
+});
+
+test('tests show what they check and give the slow Level 2 replay a shortcut that is undone', async () => {
+  const lesson = JSON.parse(await readFile(new URL('../../curriculum/tower-defense.json', import.meta.url), 'utf8'));
+  const steps = lesson.chapters.flatMap(({ steps }) => steps);
+  const step = (id) => steps.find((entry) => entry.id === id);
+  assert.match(step('paint-a-build-spot').instructions.join(' '), /Built.*Tick its checkbox/);
+  assert.match(step('start-wave-button').instructions.at(-1), /Tick Start Requested/);
+  assert.match(step('spawn-and-finish-waves').instructions.at(-1), /Untick Start Requested/);
+  assertInstructionsInOrder(step('verify-level-transition').instructions, [
+    /change `set Level to 1`.*`set Level to 2`/,
+    /only one tower in each lane/,
+    /back to `set Level to 1`/,
+    /fresh Level 1/,
+  ]);
+  assert.match(step('make-six-shot-displays').checkpoint.task, /top road last/);
+});
+
+test('finished code is referred to by section name, because its position depends on screen width', async () => {
+  const lesson = JSON.parse(await readFile(new URL('../../curriculum/tower-defense.json', import.meta.url), 'utf8'));
+  for (const step of lesson.chapters.flatMap(({ steps }) => steps)) {
+    const prose = JSON.stringify([step.explanation, step.instructions, step.hints, step.debuggingTips, step.checkpoint]);
+    assert.doesNotMatch(prose, /(script|code|definitions?|version|shown) below|code panel/i, step.id);
+  }
+});
+
+test('only Shot and Enemy store Lane, because towers pick their shot by ID', async () => {
+  const lesson = JSON.parse(await readFile(new URL('../../curriculum/tower-defense.json', import.meta.url), 'utf8'));
+  const towerCode = lesson.chapters.flatMap(({ steps }) => steps)
+    .flatMap((step) => step.finishedCode ?? [])
+    .filter(({ code }) => code.includes('define Make spot'));
+  assert.ok(towerCode.length > 0);
+  for (const { target, code } of towerCode) {
+    assert.match(code, /define Make spot \(number\) \(height\)/, target);
+    assert.doesNotMatch(code, /\[Lane v\]|\(Lane\)|\(lane\)/, target);
+  }
+  const numbering = lesson.chapters.flatMap(({ steps }) => steps).find((step) => step.id === 'number-the-spots');
+  assert.doesNotMatch(numbering.instructions.join(' '), /On Tower, create `Lane`/);
+});

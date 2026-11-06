@@ -213,3 +213,29 @@ A later audit found that every recorded playthrough ended at full health: a towe
 `tests/unit/tower-defense-curriculum.test.mjs` replays the finished update order with these settings: one tower per lane keeps full health on Level 1, barely survives Level 2, filling extra spots keeps full health, and leaving a lane open loses Level 2.
 
 The editor-built `.sb3` files, reports, and curriculum hashes above predate this change. They were not rebuilt in the Scratch editor, so the reload rule and Level 2 numbers are checked only by that unit-test model.
+
+## 2026-11-05: learner-language and measurement review
+
+A review for self-guided, advanced-beginner preteens changed the prose only. All 48 `finishedCode` entries, chapter IDs, existing step IDs, and project names are unchanged. One step was added: `learn-stage-numbers`, in Chapter 1. Narration inventory is now **1,293 sections, 2,795 sentence references, and 2,673 unique requests**, including 465 Tower Defense sections.
+
+Focused read-only probes used the saved `tower-defense-two-levels-release.sb3` in the real unsigned editor. That file predates the reload rule, which does not affect these results.
+
+| Question | Observed result |
+| --- | --- |
+| How long is one update? | `Spawned` changes every 18 updates: 1.1 to 1.2 seconds with no shots flying, about 1.7 seconds with three towers firing. An undefended enemy's 215 updates took about 14 seconds. One update is about 60 to 100 ms, not one 33 ms frame. |
+| Can a hollow `Empty` costume be bought? | No. On a scratch copy with the fill removed, clicking the center and then the thin outline both left Coins at 90. The filled reference costume bought normally. |
+| What does a sprite-only display show when clones exist? | The original's value. After buying spot 3, the displays read `ID 0`, `Lane 3`, and `Built 0`. |
+
+The prose was corrected to match: "about one second" is now "about 2 to 3 seconds", costumes that must be clicked are filled, and the Lane display claim was removed.
+
+Not checked in the real editor: the new Chapter 1 and backdrop guide instructions, the thumbnail size numbers, the Costumes tab Paint button, and the signed-in `File > Save now`, `My Stuff`, `See inside`, and `Save as a copy` flows. The audit's editor runs were unsigned guests. The Level 2 replay shortcut was traced from the scripts, not run.
+
+Changed prose makes the committed Tower Defense narration manifest stale, so `npm run audio:check` and the real-MP3 browser test fail until `npm run audio:generate` is run. No audio was generated for this review.
+
+### Follow-up: Tower's `Lane` removed
+
+Tower stored `Lane` but never read it: in the saved two-level release, the only Tower block touching that variable is the one `set`. Towers choose their shot by `ID`. The lesson no longer creates it, and `Make spot` now takes `number` and `height`. Shot and Enemy keep their own `Lane`, which they read.
+
+The saved `.sb3` files still contain Tower's `Lane` and the three-input `Make spot`, so they now differ from the published code by that unused variable and input. The change was checked by reading the scripts and by unit tests, not by rebuilding the project in the real editor.
+
+`Base Health` needs no lower limit. Each update spawns at most one enemy and every enemy moves `change x by (-2)`, so no two enemies reach the base in the same update, and `Combat step` ends the game as soon as Base Health is below 1. It stops at 0.
